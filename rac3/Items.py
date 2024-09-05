@@ -87,7 +87,7 @@ progressive_weapons = {
     "Progressive Lava Gun": ItemData(50001436, ItemClassification.useful, 4),
     "Progressive Tesla Barrier": ItemData(50001437, ItemClassification.useful, 4),
     "Progressive Bouncer": ItemData(50001438, ItemClassification.useful, 4),
-    "Progressive Plasma Coil": ItemData(50001439, ItemClassification.useful, 4),
+    "Progressive Plasma Coil": ItemData(50001439, ItemClassification.useful, 4)
 }
 gadget_items = {
     "Hacker" :ItemData(50001440, ItemClassification.progression, 1),
@@ -99,7 +99,7 @@ gadget_items = {
     "Map-O-Matic": ItemData(50001446, ItemClassification.useful, 1),
     "Nano Pak": ItemData(50001447, ItemClassification.useful, 1),
     "Warp Pad": ItemData(50001448, ItemClassification.progression, 1),
-    "Gadgetron PDU": ItemData(50001449, ItemClassification.useful, 1),
+    "Gadgetron PDU": ItemData(50001449, ItemClassification.useful, 1)
 
 }
 
@@ -120,19 +120,19 @@ post_planets = {
     "Post-Zeldrin": ItemData(50001465, ItemClassification.progression, 1),
     "Post-Aridia": ItemData(50001466, ItemClassification.progression, 1),
     "Post-Quarks Hideout": ItemData(50001467, ItemClassification.progression, 1),
-    "Post-Koros": ItemData(50001468, ItemClassification.progression, 1),
+    "Post-Koros": ItemData(50001468, ItemClassification.progression, 1)
 }
 progressive_armor = {
     "Progressive Armor": ItemData(50001480, ItemClassification.useful, 4)
 }
 
 t_bolts = {
-    "Titanium Bolt": ItemData(50001490, ItemClassification.junk, 35),
+    "Titanium Bolt": ItemData(50001490, ItemClassification.filler, 35)
 }
 
 junk_items = {
-    "Bolts":ItemData(50001491, ItemClassification.junk, 0),
-    "Weapon EXP": ItemData(50001492, ItemClassification.junk, 0),
+    "Bolts":ItemData(50001491, ItemClassification.filler, 0),
+    "Weapon EXP": ItemData(50001492, ItemClassification.filler, 0)
 }
 
 

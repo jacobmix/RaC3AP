@@ -9,26 +9,26 @@ class RaC3Item(Item):
     game = "Ratchet and Clank 3 Up your Arsenal"
 
 class WeaponType(IntEnum):
-    SB:1
-    NL:2
-    N60:3
-    PW:4
-    INF:5
-    SC:6
-    SH:7
-    AoD:8
-    FR:9
-    ANH:10
-    HSG:11
-    DBL:12
-    RI:13
-    QoR:14
-    RY3N0:15
-    MTG:16
-    LG:17
-    TB:18
-    HB:19
-    PC:20
+    SB=1
+    NL=2
+    N60=3
+    PW=4
+    INF=5
+    SC=6
+    SH=7
+    AoD=8
+    FR=9
+    ANH=10
+    HSG=11
+    DBL=12
+    RI=13
+    QoR=14
+    RY3N0=15
+    MTG=16
+    LG=17
+    TB=18
+    HB=19
+    PC=20
 
 weapon_type_to_name={
     WeaponType.SB:      "Shock Blaster",
