@@ -18,9 +18,9 @@ def create_regions(world: "RaC3World"):
     #----- Regions within the game -----#
     marcadia = create_region(world, "Marcadia")
     annihilation_nation = create_region(world, "Annihilation Nation")
-    aquatos = create_region(world, "Aquatos")
+    aquatos_first_half = create_region(world, "Aquatos Region 1")
     tyhrranosis = create_region(world, "Tyhrranosis")
-    daxx = create_region(world, "Daxx")
+    daxx_first_half = create_region(world, "Daxx")
     obani_gemini = create_region(world, "Obani Gemini")
     rilgar = create_region(world, "Rilgar")
     obani_draco = create_region(world, "Obani Draco")
@@ -29,16 +29,16 @@ def create_regions(world: "RaC3World"):
     metropolis = create_region(world, "Metropolis")
     zeldrin = create_region(world, "Zeldrin")
     aridia = create_region(world, "Aridia")
-    quarks_hideout = create_region(world, "Quarks Hideout")
+    qwarks_hideout = create_region(world, "Qwarks Hideout")
     koros = create_region(world, "Koros")
     mylon = create_region(world, "Mylon") #Victory Location
 
-    #---- Connecting everything to Starship Phoenix -----#
+    #----- Connecting everything to Starship Phoenix -----#
     starship_phoenix.connect(marcadia, "Starship Phoenix -> Marcadia")
     starship_phoenix.connect(annihilation_nation, "Starship Phoenix -> Annihilation Nation")
-    starship_phoenix.connect(aquatos, "Starship Phoenix -> Aquatos")
+    starship_phoenix.connect(aquatos_first_half, "Starship Phoenix -> Aquatos")
     starship_phoenix.connect(tyhrranosis, "Starship Phoenix -> Tyhrranosis")
-    starship_phoenix.connect(daxx, "Starship Phoenix -> Daxx")
+    starship_phoenix.connect(daxx_first_half, "Starship Phoenix -> Daxx")
     starship_phoenix.connect(obani_gemini, "Starship Phoenix -> Obani Gemini")
     starship_phoenix.connect(rilgar, "Starship Phoenix -> Rilgar")
     starship_phoenix.connect(obani_draco, "Starship Phoenix -> Obani Draco")
@@ -47,9 +47,85 @@ def create_regions(world: "RaC3World"):
     starship_phoenix.connect(metropolis, "Starship Phoenix -> Metropolis")
     starship_phoenix.connect(zeldrin, "Starship Phoenix -> Zeldrin")
     starship_phoenix.connect(aridia, "Starship Phoenix -> Aridia")
-    starship_phoenix.connect(quarks_hideout, "Starship Phoenix -> Quarks Hideout")
+    starship_phoenix.connect(qwarks_hideout, "Starship Phoenix -> Qwarks Hideout")
     starship_phoenix.connect(koros, "Starship Phoenix -> Koros")
     starship_phoenix.connect(mylon, "Starship Phoenix -> Mylon")
+
+    #----- Split planet connections for gadget reasons -----#
+
+    #You can get to Slim Cognito's and one titanium bolt without the tyhrra-guise
+    aquatos_second_half = create_region(world, "Aquatos Region 2")
+    aquatos_first_half.connect(aquatos_second_half, rule=lambda state: state.has("Tyhrra-Guise", world.player)),
+
+
+    #You can get the charge boots without hacker or hypershot
+    daxx_second_half = create_region(world, "Daxx Region 2")
+    daxx_first_half.connect(daxx_second_half, rule=lambda state: state.has("Hypershot", world.player) and state.has("Hacker", world.player)),
+
+
+
+    #----- Dummy regions for weapon upgrade organization -----#
+
+    shock_blaster_upgrades = create_region(world, "Shock Blaster Upgrades")
+    menu.connect(shock_blaster_upgrades, rule=lambda state: state.has("Shock Blaster", world.player)),
+
+    nitro_launcher_upgrades = create_region(world, "Nitro Launcher Upgrades")
+    menu.connect(nitro_launcher_upgrades, rule=lambda state: state.has("Nitro Launcher", world.player)),
+
+    n60_storm_upgrades = create_region(world, "N60 Storm Upgrades")
+    menu.connect(n60_storm_upgrades, rule=lambda state: state.has("N60 Storm", world.player)),
+
+    plasma_whip_upgrades = create_region(world, "Plasma Whip Upgrades")
+    menu.connect(plasma_whip_upgrades, rule=lambda state: state.has("Plasma Whip", world.player)),
+
+    infector_upgrades = create_region(world, "Infector Upgrades")
+    menu.connect(infector_upgrades, rule=lambda state: state.has("Infector", world.player)),
+
+    suck_cannon_upgrades = create_region(world, "Suck Cannon Upgrades")
+    menu.connect(suck_cannon_upgrades, rule=lambda state: state.has("Suck Cannon", world.player)),
+
+    spitting_hydra_upgrades = create_region(world, "Spitting Hydra Upgrades")
+    menu.connect(spitting_hydra_upgrades, rule=lambda state: state.has("Spitting Hydra", world.player)),
+
+    agents_of_doom_upgrades = create_region(world, "Agents of Doom Upgrades")
+    menu.connect(agents_of_doom_upgrades, rule=lambda state: state.has("Agents of Doom", world.player)),
+
+    flux_rifle_upgrades = create_region(world, "Flux Rifle Upgrades")
+    menu.connect(flux_rifle_upgrades, rule=lambda state: state.has("Flux Rifle", world.player)),
+
+    annihilator_upgrades = create_region(world, "Annihilator Upgrades")
+    menu.connect(annihilator_upgrades, rule=lambda state: state.has("Annihilator", world.player)),
+
+    holo_shield_glove_upgrades = create_region(world, "Holo-Shield Glove Upgrades")
+    menu.connect(holo_shield_glove_upgrades, rule=lambda state: state.has("Holo-Shield Glove", world.player)),
+
+    disk_blade_gun_upgrades = create_region(world, "Disk-Blade Gun Upgrades")
+    menu.connect(disk_blade_gun_upgrades, rule=lambda state: state.has("Disk-Blade Gun", world.player)),
+
+    rift_inducer_upgrades = create_region(world, "Rift Inducer Upgrades")
+    menu.connect(rift_inducer_upgrades, rule=lambda state: state.has("Rift Inducer", world.player)),
+
+    qwack_o_ray_upgrades = create_region(world, "Qwack-O-Ray Upgrades")
+    menu.connect(qwack_o_ray_upgrades, rule=lambda state: state.has("Qwack-O-Ray", world.player)),
+
+    RY3N0_upgrades = create_region(world, "RY3N0 Upgrades")
+    menu.connect(RY3N0_upgrades, rule=lambda state: state.has("RY3N0", world.player)),
+
+    mega_turret_glove_upgrades = create_region(world, "Mega-Turret Glove Upgrades")
+    menu.connect(mega_turret_glove_upgrades, rule=lambda state: state.has("Mega-Turret Glove", world.player)),
+
+    lava_gun_upgrades = create_region(world, "Lava Gun Upgrades")
+    menu.connect(lava_gun_upgrades, rule=lambda state: state.has("Lava Gun", world.player)),
+
+    tesla_barrier_upgrades = create_region(world, "Tesla Barrier Upgrades")
+    menu.connect(tesla_barrier_upgrades, rule=lambda state: state.has("Tesla Barrier", world.player)),
+
+    bouncer_upgrades = create_region(world, "Bouncer Upgrades")
+    menu.connect(bouncer_upgrades, rule=lambda state: state.has("Bouncer", world.player)),
+
+    plasma_coil_upgrades = create_region(world, "Plasma Coil Upgrades")
+    menu.connect(plasma_coil_upgrades, rule=lambda state: state.has("Plasma Coil", world.player))
+
 
 
 def create_region(world: "RaC3World", name: str) -> Region:

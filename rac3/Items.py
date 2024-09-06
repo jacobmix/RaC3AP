@@ -16,7 +16,7 @@ def create_itempool(world: "RaC3World") -> List[Item]:
 
         itempool += create_multiple_items(world, name, item_amount, item_type)
 
-    victory = create_item(world, "Victory")
+    victory = create_item(world, "Dr. Nefarious Defeated!")
     world.multiworld.get_location("Dr. Nefarious Defeated!", world.player).place_locked_item(victory)
 
     itempool += create_junk_items(world, get_total_locations(world) - len(itempool) - 1)
@@ -104,13 +104,24 @@ gadget_items = {
 }
 
 post_planets = {
-    "Post-Starship Phoenix 1": ItemData(50001452, ItemClassification.progression, 1),
-    "Post-Starship Phoenix 2": ItemData(50001453, ItemClassification.progression, 1),
-    "Post-Marcadia": ItemData(50001454, ItemClassification.progression, 1),
+
+
+    "Infobot: Marcadia": ItemData(50001452, ItemClassification.progression, 1), # Post Starship Phoenix Visit 1
+
+
+    '''
+    "Infobot: Annihilation Nation": ItemData(50001453, ItemClassification.progression, 1),
+    "Infobot: Aquatos": ItemData(50001453, ItemClassification.progression, 1),
+    "Infobot: Tyhrranosis": ItemData(50001454, ItemClassification.progression, 1),
+    "Infobot: Daxx": ItemData(50001455, ItemClassification.progression, 1),
+    "Infobot: Metropolis": ItemData(50001456, ItemClassification.progression, 1),
+    "Infobot: Koros": ItemData(50001457, ItemClassification.progression, 1),
+    "Infobot: Qwarks Hideout": ItemData(50001458, ItemClassification.progression, 1),
+    "Marcadia: Qwark Vidcomic 1": ItemData(50001454, ItemClassification.progression, 1),
     "Post-Aquatos": ItemData(50001455, ItemClassification.progression, 1),
     "Post-Tyhrranosis": ItemData(50001456, ItemClassification.progression, 1),
-    "Post-Daxx 1": ItemData(50001457, ItemClassification.progression, 1),
-    "Post-Daxx 2": ItemData(50001458, ItemClassification.progression, 1),
+    "Post-Daxx: Obani Gemini": ItemData(50001457, ItemClassification.progression, 1),
+    "Post-Daxx: Annihilation Nation": ItemData(50001458, ItemClassification.progression, 1),
     "Post-Obani Gemini": ItemData(50001459, ItemClassification.progression, 1),
     "Post-Rilgar": ItemData(50001460, ItemClassification.progression, 1),
     "Post-Obani Draco": ItemData(50001461, ItemClassification.progression, 1),
@@ -119,20 +130,27 @@ post_planets = {
     "Post-Metropolis": ItemData(50001464, ItemClassification.progression, 1),
     "Post-Zeldrin": ItemData(50001465, ItemClassification.progression, 1),
     "Post-Aridia": ItemData(50001466, ItemClassification.progression, 1),
-    "Post-Quarks Hideout": ItemData(50001467, ItemClassification.progression, 1),
+    "Post-Qwarks Hideout": ItemData(50001467, ItemClassification.progression, 1),
     "Post-Koros": ItemData(50001468, ItemClassification.progression, 1)
+    '''
+
 }
 progressive_armor = {
     "Progressive Armor": ItemData(50001480, ItemClassification.useful, 4)
 }
+
 
 t_bolts = {
     "Titanium Bolt": ItemData(50001490, ItemClassification.filler, 35)
 }
 
 junk_items = {
-    "Bolts":ItemData(50001491, ItemClassification.filler, 0),
+    "Bolts": ItemData(50001491, ItemClassification.filler, 0),
     "Weapon EXP": ItemData(50001492, ItemClassification.filler, 0)
+}
+
+victory_item = {
+    "Dr. Nefarious Defeated!": ItemData(50001481, ItemClassification.progression, 0)
 }
 
 
@@ -142,5 +160,8 @@ item_table ={
     **gadget_items,
     **post_planets,
     **progressive_armor,
-    **t_bolts
+    **t_bolts,
+    **junk_items,
+    **victory_item
+
 }
