@@ -46,14 +46,21 @@ rac3_locations = {
     "Infobot: Koros": LocData(50001020, "Starship Phoenix"),
     "Infobot: Annihilation Nation": LocData(50001021, "Starship Phoenix"),
     "Infobot: Aquatos": LocData(50001022, "Starship Phoenix"),
+    "Infobot: Tyhrranosis": LocData(50001023, "Starship Phoenix"),
+    "Infobot: Daxx": LocData(50001024, "Starship Phoenix"),
+    "Infobot: Obani Gemini": LocData(50001025, "Starship Phoenix"),
+    "Infobot: Zeldrin": LocData(50001026, "Starship Phoenix"),
+    "Infobot: Qwarks Hideout": LocData(50001027, "Starship Phoenix"),
+    "Qwark Vidcomic 4": LocData(50001413, "Starship Phoenix"),
+    "Qwark Vidcomic 5": LocData(50001414, "Starship Phoenix"),
 
     #----- Planet Marcadia -----#
-    "Received Spitting Hydra": LocData(50001030, "Marcadia"),
-    "Received Refractor": LocData(50001031, "Marcadia"),
-    "T-Bolt: After Pool of Water": LocData(50001032, "Marcadia"),
-    "T-Bolt: Last Refractor Room": LocData(50001033, "Marcadia"),
-    "T-Bolt: Ceiling just before Al": LocData(50001034, "Marcadia"),
-    "Qwark Vidcomic 1": LocData(50001035, "Marcadia"),
+    "Received Spitting Hydra": LocData(50001030, "Marcadia Region 1"),
+    "Received Refractor": LocData(50001031, "Marcadia Region 1"),
+    "T-Bolt: After Pool of Water": LocData(50001032, "Marcadia Region 1"),
+    "T-Bolt: Last Refractor Room": LocData(50001033, "Marcadia Region 2"),
+    "T-Bolt: Ceiling just before Al": LocData(50001034, "Marcadia Region 2"),
+    "Qwark Vidcomic 1": LocData(50001035, "Marcadia Region 2"),
 
     #----- Annihilation Nation -----#
     "Received Agents of Doom": LocData(50001040, "Annihilation Nation"),
@@ -83,6 +90,8 @@ rac3_locations = {
     "The Other White Meat": LocData(50001064, "Annihilation Nation"),
     "Championship Bout II": LocData(50001065, "Annihilation Nation"),
     "Qwarktastic Battle": LocData(50001066, "Annihilation Nation"),
+    "Qwark Vidcomic 2": LocData(50001067, "Annihilation Nation"),
+    "Qwark Vidcomic 3": LocData(50001068, "Annihilation Nation"),
 
     #----- Planet Aquatos -----#
     "Received Flux Rifle": LocData(50001090, "Aquatos"),
@@ -95,77 +104,71 @@ rac3_locations = {
     "5 Sewer Crystals Traded": LocData(50001097, "Aquatos"),
     "10 Sewer Crystals Traded": LocData(50001098, "Aquatos"),
     "20 Sewer Crystals Traded": LocData(50001099, "Aquatos"),
-    "Post-Aquatos": LocData(50001100, "Aquatos"),
 
     #----- Planet Tyhrranosis -----#
     "Received Annihilator": LocData(50001300, "Tyhrranosis"),
     "Received Holo-Shield Glove": LocData(50001301, "Tyhrranosis"),
     "T-Bolt: South East Cannon": LocData(50001302, "Tyhrranosis"),
     "T-Bolt: Underground Cave Bolt": LocData(50001303, "Tyhrranosis"),
-    "Post-Tyhrranosis": LocData(50001304, "Tyhrranosis"),
 
     #----- Planet Daxx -----#
-    "T-Bolt: Right of the Taxi": LocData(50001320, "Daxx"),
-    "T-Bolt: Time Sensitive Door": LocData(50001321, "Daxx"),
-    "Received Charge Boots": LocData(50001322, "Daxx"),
-    "Post-Daxx 1": LocData(50001323, "Daxx"),
-    "Post-Daxx 2": LocData(50001324, "Daxx"),
+    "T-Bolt: Right of the Taxi": LocData(50001320, "Daxx Region 2"),
+    "T-Bolt: Time Sensitive Door": LocData(50001321, "Daxx Region 2"),
+    "Received Charge Boots": LocData(50001322, "Daxx Region 1"),
+    "Post-Daxx": LocData(50001323, "Daxx Region 2"),
 
     #----- Obani Gemini -----#
     "Received Disk Blade Gun": LocData(50001340, "Obani Gemini"),
     "T-Bolt: Follow the Lava": LocData(50001341, "Obani Gemini"),
     "T-Bolt: Between the Twin Towers": LocData(50001342, "Obani Gemini"),
-    "Post-Obani Gemini": LocData(50001343, "Obani Gemini"),
+    "Infobot: Rilgar": LocData(50001343, "Obani Gemini"),
 
     #----- Planet Rilgar -----#
     "Received Grav Boots": LocData(50001360, "Rilgar"),
-    "Post-Rilgar": LocData(50001361, "Rilgar"),
+    "Infobot: Holostar Studios": LocData(50001361, "Rilgar"),
 
-    #----- Obani Draco (lol) -----#
-    "Post-Obani Draco": LocData(50001370, "Obani Draco"),
-
-    #----- Holostar Studios -----#
+    # ----- Holostar Studios -----#
     "Received Rift Inducer": LocData(50001390, "Holostar Studios"),
     "T-Bolt: Atop the Chairs": LocData(50001391, "Holostar Studios"),
     "T-Bolt: Lot 42's Grav Ramp": LocData(50001392, "Holostar Studios"),
     "T-Bolt: Kamikaze Noids": LocData(50001393, "Holostar Studios"),
-    "Post-Holostar Studios": LocData(50001394, "Holostar Studios"),
+    "Infobot: Obani Draco": LocData(50001394, "Holostar Studios"),
+
+    #----- Obani Draco (lol) -----#
+    "Infobot: Zeldrin Starport": LocData(50001370, "Obani Draco"),
 
     #----- Zeldrin Starport -----#
-    "Received Bolt Grabber V2": LocData(50001410, "Zeldrin Starport"),
-    "T-Bolt: Inside the Second Ship": LocData(50001411, "Zeldrin Starport"),
-    "T-Bolt: Atop the Twin Shooters": LocData(50001412, "Zeldrin Starport"),
-    "Post-Zeldrin Starport": LocData(50001413, "Zeldrin Starport"),
+    "Received Bolt Grabber V2": LocData(50001410, "Zeldrin Starport Region 2"),
+    "T-Bolt: Inside the Second Ship": LocData(50001411, "Zeldrin Starport Region 2"),
+    "T-Bolt: Atop the Twin Shooters": LocData(50001412, "Zeldrin Starport Region 2"),
+
 
     #----- Planet Metropolis -----#
-    "Received Map-O-Matic": LocData(50001430, "Metropolis"),
-    "T-Bolt: Across the Gap": LocData(50001431, "Metropolis"),
-    "T-Bolt: Right of the Balcony": LocData(50001432, "Metropolis"),
-    "T-Bolt: Tall Tower (Hovership)": LocData(50001433, "Metropolis"),
-    "Metal-Noids": LocData(50001434, "Metropolis"),
-    "Post-Metropolis": LocData(50001435, "Metropolis"),
+    "Received Map-O-Matic": LocData(50001430, "Metropolis Region 2"),
+    "T-Bolt: Across the Gap": LocData(50001431, "Metropolis Region 2"),
+    "T-Bolt: Right of the Balcony": LocData(50001432, "Metropolis Region 2"),
+    "T-Bolt: Tall Tower (Hovership)": LocData(50001433, "Metropolis Region 2"),
+    "Metal-Noids": LocData(50001434, "Metropolis Region 1"),
 
     #----- Planet Zeldrin -----#
     "Received Nano-Pak": LocData(50001450, "Zeldrin"),
     "T-Bolt: Turn Around": LocData(50001451, "Zeldrin"),
-    "Post-Zeldrin": LocData(50001452, "Zeldrin"),
+    "Infobot: Aridia": LocData(50001452, "Zeldrin"),
 
     #----- Planet Aridia -----#
     "Received Warp Pad": LocData(50001470, "Aridia"),
     "Received Qwack-O-Ray": LocData(50001471, "Aridia"),
     "T-Bolt: Under the Bridge (Assassionation)": LocData(50001472, "Aridia"),
     "T-Bolt: Behind the Base (X12 Endgame)": LocData(50001473, "Aridia"),
-    "Post-Aridia": LocData(50001474, "Aridia"),
 
     #----- Qwark's Hideout -----#
     "Received Gadgetron PDU": LocData(50001490, "Qwarks Hideout"),
     "T-Bolt: Glide from the Ramp": LocData(50001491, "Qwarks Hideout"),
-    "Post-Qwarks Hideout": LocData(50001492, "Qwarks Hideout"),
 
     #----- Planet Koros -----#
     "T-Bolt: Behind the Metal Fence": LocData(50001493, "Koros"),
     "T-Bolt: Pair of Towers": LocData(50001494, "Koros"),
-    "Post-Koros": LocData(50001495, "Koros"),
+    "Infobot: Mylon": LocData(50001495, "Koros"),
 
     #----- Planet Mylon -----#
     "T-Bolt: Behind the Forcefield": LocData(50001496, "Mylon"),

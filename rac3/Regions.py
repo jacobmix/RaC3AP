@@ -16,17 +16,17 @@ def create_regions(world: "RaC3World"):
     starship_phoenix.connect(florana, "Starship Phoenix -> Florana")
 
     #----- Regions within the game -----#
-    marcadia = create_region(world, "Marcadia")
+    marcadia_first_half = create_region(world, "Marcadia Region 1")
     annihilation_nation = create_region(world, "Annihilation Nation")
-    aquatos_first_half = create_region(world, "Aquatos Region 1")
+    aquatos = create_region(world, "Aquatos")
     tyhrranosis = create_region(world, "Tyhrranosis")
-    daxx_first_half = create_region(world, "Daxx")
+    daxx_first_half = create_region(world, "Daxx Region 1")
     obani_gemini = create_region(world, "Obani Gemini")
     rilgar = create_region(world, "Rilgar")
     obani_draco = create_region(world, "Obani Draco")
     holostar_studios = create_region(world, "Holostar Studios")
-    zeldrin_starport = create_region(world, "Zeldrin Starport")
-    metropolis = create_region(world, "Metropolis")
+    zeldrin_starport_first_half = create_region(world, "Zeldrin Starport Region 1")
+    metropolis_first_half = create_region(world, "Metropolis Region 1")
     zeldrin = create_region(world, "Zeldrin")
     aridia = create_region(world, "Aridia")
     qwarks_hideout = create_region(world, "Qwarks Hideout")
@@ -34,17 +34,17 @@ def create_regions(world: "RaC3World"):
     mylon = create_region(world, "Mylon") #Victory Location
 
     #----- Connecting everything to Starship Phoenix -----#
-    starship_phoenix.connect(marcadia, "Starship Phoenix -> Marcadia")
+    starship_phoenix.connect(marcadia_first_half, "Starship Phoenix -> Marcadia")
     starship_phoenix.connect(annihilation_nation, "Starship Phoenix -> Annihilation Nation")
-    starship_phoenix.connect(aquatos_first_half, "Starship Phoenix -> Aquatos")
+    starship_phoenix.connect(aquatos, "Starship Phoenix -> Aquatos")
     starship_phoenix.connect(tyhrranosis, "Starship Phoenix -> Tyhrranosis")
     starship_phoenix.connect(daxx_first_half, "Starship Phoenix -> Daxx")
     starship_phoenix.connect(obani_gemini, "Starship Phoenix -> Obani Gemini")
     starship_phoenix.connect(rilgar, "Starship Phoenix -> Rilgar")
     starship_phoenix.connect(obani_draco, "Starship Phoenix -> Obani Draco")
     starship_phoenix.connect(holostar_studios, "Starship Phoenix -> Holostar Studios")
-    starship_phoenix.connect(zeldrin_starport, "Starship Phoenix -> Zeldrin Starport")
-    starship_phoenix.connect(metropolis, "Starship Phoenix -> Metropolis")
+    starship_phoenix.connect(zeldrin_starport_first_half, "Starship Phoenix -> Zeldrin Starport")
+    starship_phoenix.connect(metropolis_first_half, "Starship Phoenix -> Metropolis")
     starship_phoenix.connect(zeldrin, "Starship Phoenix -> Zeldrin")
     starship_phoenix.connect(aridia, "Starship Phoenix -> Aridia")
     starship_phoenix.connect(qwarks_hideout, "Starship Phoenix -> Qwarks Hideout")
@@ -53,14 +53,22 @@ def create_regions(world: "RaC3World"):
 
     #----- Split planet connections for gadget reasons -----#
 
-    #You can get to Slim Cognito's and one titanium bolt without the tyhrra-guise
-    aquatos_second_half = create_region(world, "Aquatos Region 2")
-    aquatos_first_half.connect(aquatos_second_half, rule=lambda state: state.has("Tyhrra-Guise", world.player)),
-
+    #Marcadia later part requires Grav Boots for titan bolts
+    marcadia_second_half = create_region(world, "Marcadia Region 2")
+    marcadia_first_half.connect(marcadia_second_half, rule=lambda state: state.has("Refractor", world.player) and state.has("Grav-Boots", world.player)),
 
     #You can get the charge boots without hacker or hypershot
     daxx_second_half = create_region(world, "Daxx Region 2")
     daxx_first_half.connect(daxx_second_half, rule=lambda state: state.has("Hypershot", world.player) and state.has("Hacker", world.player)),
+
+
+    #You can do the Qwark half of Zeldrin Starport with no other requirements
+    zeldrin_starport_second_half = create_region(world, "Zeldrin Starport Region 2")
+    zeldrin_starport_first_half.connect(zeldrin_starport_second_half, rule=lambda state: state.has("Hypershot", world.player)),
+
+    #You can get Metal-Noids in metropolis with no other requirements
+    metropolis_second_half = create_region(world, "Metropolis Region 2")
+    metropolis_first_half.connect(metropolis_second_half, rule=lambda state: state.has("Grav-Boots", world.player) and state.has("Refractor", world.player)),
 
 
 
@@ -82,7 +90,7 @@ def create_regions(world: "RaC3World"):
     menu.connect(infector_upgrades, rule=lambda state: state.has("Infector", world.player)),
 
     suck_cannon_upgrades = create_region(world, "Suck Cannon Upgrades")
-    menu.connect(suck_cannon_upgrades, rule=lambda state: state.has("Suck Cannon", world.player)),
+    menu.connect(suck_cannon_upgrades, rule=lambda state: state.has("SUCC Cannon", world.player)),
 
     spitting_hydra_upgrades = create_region(world, "Spitting Hydra Upgrades")
     menu.connect(spitting_hydra_upgrades, rule=lambda state: state.has("Spitting Hydra", world.player)),
