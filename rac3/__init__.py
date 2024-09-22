@@ -5,7 +5,7 @@ from .Items import item_table, create_itempool, create_item, weapon_items, progr
 from .Locations import get_location_names, get_total_locations
 from .Options import RaC3Options
 from .Regions import create_regions
-from .Types import WeaponType, weapon_type_to_name, RaC3Item
+from .Types import WeaponType, weapon_type_to_name, RaC3Item, multiplier_to_name, Multiplier
 from .Rules import set_rules
 
 class RaC3Web(WebWorld):
@@ -56,7 +56,8 @@ class RaC3World(World):
     def fill_slot_data(self) -> Dict[str, object]:
         slot_data: Dict[str, object] = {
             "options": {
-                "StartingEpisode": weapon_type_to_name[WeaponType(self.options.StartingWeapon)],
+                "StartingWeapon": weapon_type_to_name[WeaponType(self.options.StartingWeapon)],
+                "BoltandXPMultiplier": multiplier_to_name[Multiplier(self.options.BoltandXPMultiplier)]
             },
             "Seed": self.multiworld.seed_name,  # to verify the server's multiworld
             "Slot": self.multiworld.player_name[self.player],  # to connect to server

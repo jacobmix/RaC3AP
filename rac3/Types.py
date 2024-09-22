@@ -30,6 +30,22 @@ class WeaponType(IntEnum):
     HB=19
     PC=20
 
+class Multiplier(IntEnum):
+    x1 = 1
+    x2 = 2
+    x4 = 3
+    x6 = 4
+    x8 = 5
+    x10 = 6
+
+multiplier_to_name ={
+    Multiplier.x1: "x1",
+    Multiplier.x2: "x2",
+    Multiplier.x4: "x4",
+    Multiplier.x6: "x6",
+    Multiplier.x8: "x8",
+    Multiplier.x10: "x10",
+}
 weapon_type_to_name={
     WeaponType.SB:      "Shock Blaster",
     WeaponType.NL:      "Nitro Launcher",
@@ -37,7 +53,7 @@ weapon_type_to_name={
     WeaponType.PW:      "Plasma Whip",
     WeaponType.INF:     "Infector",
     WeaponType.SC:      "Suck Cannon",
-    WeaponType.SH:      "Seeking Hydra",
+    WeaponType.SH:      "Spitting Hydra",
     WeaponType.AoD:     "Agents of Doom",
     WeaponType.FR:      "Flux Rifle",
     WeaponType.ANH:     "Annihilator",

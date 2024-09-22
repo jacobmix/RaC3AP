@@ -62,7 +62,7 @@ weapon_items = {
     "RY3N0": ItemData(50001414, ItemClassification.progression, 1),
     "Mega-Turret Glove": ItemData(50001415, ItemClassification.progression, 1),
     "Lava Gun": ItemData(50001416, ItemClassification.progression, 1),
-    "Tesla Barrier": ItemData(50001417, ItemClassification.progression, 1),
+    "Shield Charger": ItemData(50001417, ItemClassification.progression, 1),
     "Bouncer": ItemData(50001418, ItemClassification.progression, 1),
     "Plasma Coil": ItemData(50001419, ItemClassification.progression, 1)
 }
@@ -85,7 +85,7 @@ progressive_weapons = {
     "Progressive RY3N0": ItemData(50001434, ItemClassification.useful, 4),
     "Progressive Mega-Turret Glove": ItemData(50001435, ItemClassification.useful, 4),
     "Progressive Lava Gun": ItemData(50001436, ItemClassification.useful, 4),
-    "Progressive Tesla Barrier": ItemData(50001437, ItemClassification.useful, 4),
+    "Progressive Shield Charger": ItemData(50001437, ItemClassification.useful, 4),
     "Progressive Bouncer": ItemData(50001438, ItemClassification.useful, 4),
     "Progressive Plasma Coil": ItemData(50001439, ItemClassification.useful, 4)
 }
@@ -106,27 +106,27 @@ gadget_items = {
 post_planets = {
     "Infobot: Marcadia": ItemData(50001452, ItemClassification.progression, 1), # Post Starship Phoenix Visit 1
     "Infobot: Annihilation Nation": ItemData(50001453, ItemClassification.progression, 1), # Post Starship Phoenix Visit 2 + Qwark Vidcomic 1
-    "Infobot: Aquatos": ItemData(50001453, ItemClassification.progression, 1), # Post Starship Phoenix Visit 3
-    "Infobot: Tyhrranosis": ItemData(50001454, ItemClassification.progression, 1), # Post Starship Phoenix Visit 4
-    "Infobot: Daxx": ItemData(50001455, ItemClassification.progression, 1), # Post Starship Phoenix Visit 5
-    "Infobot: Obani Gemini": ItemData(50001456, ItemClassification.progression, 1), # Post Starship Phoenix Visit 6 + Qwark Vidcomic 3
-    "Infobot: Rilgar": ItemData(50001457, ItemClassification.progression, 1), # Post Obani Gemini
-    "Infobot: Holostar Studios": ItemData(50001458, ItemClassification.progression, 1), # Post Rilgar + Annihilation Nation Challenges
-    "Infobot: Obani Draco": ItemData(50001459, ItemClassification.progression, 1), # Post Holostar Studios
-    "Infobot: Zeldrin Starport": ItemData(50001460, ItemClassification.progression, 1), # Post Obani Draco
-    "Infobot: Metropolis": ItemData(50001461, ItemClassification.progression, 1), # Post Zeldrin Starport + Qwark Vidcomic 4
-    "Infobot: Zeldrin": ItemData(50001462, ItemClassification.progression, 1), # Post Starship Phoenix Visit 7
-    "Infobot: Aridia": ItemData(50001463, ItemClassification.progression, 1), # Post Zeldrin
-    "Infobot: Qwarks Hideout": ItemData(50001464, ItemClassification.progression, 1), # Post Starship Phoenix Visit 8 + Qwark Vidcomic 5
-    "Infobot: Koros": ItemData(50001465, ItemClassification.progression, 1), # Post Starship Phoenix Visit 9
-    "Infobot: Mylon": ItemData(50001466, ItemClassification.progression, 1), # Post-Koros
+    "Infobot: Aquatos": ItemData(50001454, ItemClassification.progression, 1), # Post Starship Phoenix Visit 3
+    "Infobot: Tyhrranosis": ItemData(50001455, ItemClassification.progression, 1), # Post Starship Phoenix Visit 4
+    "Infobot: Daxx": ItemData(50001456, ItemClassification.progression, 1), # Post Starship Phoenix Visit 5
+    "Infobot: Obani Gemini": ItemData(50001457, ItemClassification.progression, 1), # Post Starship Phoenix Visit 6 + Qwark Vidcomic 3
+    "Infobot: Rilgar": ItemData(50001458, ItemClassification.progression, 1), # Post Obani Gemini
+    "Infobot: Holostar Studios": ItemData(50001459, ItemClassification.progression, 1), # Post Rilgar + Annihilation Nation Challenges
+    "Infobot: Obani Draco": ItemData(50001460, ItemClassification.progression, 1), # Post Holostar Studios
+    "Infobot: Zeldrin Starport": ItemData(50001461, ItemClassification.progression, 1), # Post Obani Draco
+    "Infobot: Metropolis": ItemData(50001462, ItemClassification.progression, 1), # Post Zeldrin Starport + Qwark Vidcomic 4
+    "Infobot: Zeldrin": ItemData(50001463, ItemClassification.progression, 1), # Post Starship Phoenix Visit 7
+    "Infobot: Aridia": ItemData(50001464, ItemClassification.progression, 1), # Post Zeldrin
+    "Infobot: Qwarks Hideout": ItemData(50001465, ItemClassification.progression, 1), # Post Starship Phoenix Visit 8 + Qwark Vidcomic 5
+    "Infobot: Koros": ItemData(50001466, ItemClassification.progression, 1), # Post Starship Phoenix Visit 9
+    "Infobot: Mylon": ItemData(50001467, ItemClassification.progression, 1), # Post-Koros
 }
 qwark_vidcomics = {
-    "Qwark Vidcomic 1": ItemData(50001447, ItemClassification.progression, 1),
-    "Qwark Vidcomic 2": ItemData(50001448, ItemClassification.progression, 1),
-    "Qwark Vidcomic 3": ItemData(50001447, ItemClassification.progression, 1),
-    "Qwark Vidcomic 4": ItemData(50001448, ItemClassification.progression, 1),
-    "Qwark Vidcomic 5": ItemData(50001447, ItemClassification.progression, 1),
+    "Qwark Vidcomic 1": ItemData(50001468, ItemClassification.progression, 1),
+    "Qwark Vidcomic 2": ItemData(50001469, ItemClassification.progression, 1),
+    "Qwark Vidcomic 3": ItemData(50001470, ItemClassification.progression, 1),
+    "Qwark Vidcomic 4": ItemData(50001471, ItemClassification.progression, 1),
+    "Qwark Vidcomic 5": ItemData(50001472, ItemClassification.progression, 1),
 }
 
 

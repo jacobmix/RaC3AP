@@ -37,14 +37,30 @@ class StartingWeapon(Choice):
     option_plasma_coil = 20
     default = 1
 
+class BoltandXPMultiplier(Choice):
+    """
+    Determines what your bolts and xp will be multiplied by, recommended to go with x6 if you hate grinding, x10 if you're looking to do a sync
+    """
+    display_name = "BoltandXPMultiplier"
+    option_x1 = 1
+    option_x2 = 2
+    option_x4 = 3
+    option_x6 = 4
+    option_x8 = 5
+    option_x10 = 6
+    default = 1
+
 @dataclass
 class RaC3Options(PerGameCommonOptions):
     StartingWeapon:            StartingWeapon
+    BoltandXPMultiplier:    BoltandXPMultiplier
+
 
 rac3_option_groups: Dict[str, List[Any]] = {
-    "General Options": [StartingWeapon]
+    "General Options": [StartingWeapon, BoltandXPMultiplier]
 }
 
 slot_data_options: List[str] = {
+    "BoltandXPMultiplier",
     "StartingWeapon"
 }

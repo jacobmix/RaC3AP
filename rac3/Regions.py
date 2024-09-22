@@ -125,8 +125,8 @@ def create_regions(world: "RaC3World"):
     lava_gun_upgrades = create_region(world, "Lava Gun Upgrades")
     menu.connect(lava_gun_upgrades, rule=lambda state: state.has("Lava Gun", world.player)),
 
-    tesla_barrier_upgrades = create_region(world, "Tesla Barrier Upgrades")
-    menu.connect(tesla_barrier_upgrades, rule=lambda state: state.has("Tesla Barrier", world.player)),
+    tesla_barrier_upgrades = create_region(world, "Shield Charger Upgrades")
+    menu.connect(tesla_barrier_upgrades, rule=lambda state: state.has("Shield Charger", world.player)),
 
     bouncer_upgrades = create_region(world, "Bouncer Upgrades")
     menu.connect(bouncer_upgrades, rule=lambda state: state.has("Bouncer", world.player)),
