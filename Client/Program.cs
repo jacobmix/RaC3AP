@@ -10,10 +10,11 @@ using Archipelago.Core.Models;
 using Archipelago.Core.Util;
 using Archipelago.MultiClient.Net.Packets;
 using Archipelago.PCSX2;
-using Sly1AP.Models;
+using Newtonsoft.Json;
+using RaC3AP.Models;
 using static System.Reflection.Metadata.BlobBuilder;
 
-namespace Sly1AP
+namespace RaC3AP
 {
     public static class Program
     {   
@@ -27,26 +28,26 @@ namespace Sly1AP
         public static ulong[] QuickSelect = [QuickSelectSlots.oneOne, QuickSelectSlots.oneTwo, QuickSelectSlots.oneThree, QuickSelectSlots.oneFour, QuickSelectSlots.oneFive, QuickSelectSlots.oneSix, QuickSelectSlots.oneSeven, QuickSelectSlots.oneEight, QuickSelectSlots.twoOne, QuickSelectSlots.twoTwo, QuickSelectSlots.twoThree, QuickSelectSlots.twoFour, QuickSelectSlots.twoFive, QuickSelectSlots.twoSix, QuickSelectSlots.twoSeven, QuickSelectSlots.twoEight];
         public static ulong[] lastUsed = [0x20142670, 0x20142674, 0x20142678];
         public static int currentMultiplier = 2;
-        public static Weapon ShockBlaster = new Weapon(WeaponVersionData.ADDexpShockBlaster, WeaponVersionData.ADDversionShockBlaster, Addresses.unlockShockBlaster, DummyEXPAddresses.ShockBlaster);
-        public static Weapon NitroLauncher = new Weapon(WeaponVersionData.ADDexpNitroLauncher, WeaponVersionData.ADDversionNitroLauncher, Addresses.unlockNitroLauncher, DummyEXPAddresses.NitroLauncher);
-        public static Weapon N60Storm = new Weapon(WeaponVersionData.ADDexpN60Storm, WeaponVersionData.ADDversionN60Storm, Addresses.unlockN60Storm, DummyEXPAddresses.N60Storm);
-        public static Weapon PlasmaWhip = new Weapon(WeaponVersionData.ADDexpPlasmaWhip, WeaponVersionData.ADDversionPlasmaWhip, Addresses.unlockPlasmaWhip, DummyEXPAddresses.PlasmaWhip);
-        public static Weapon Infector = new Weapon(WeaponVersionData.ADDexpInfector, WeaponVersionData.ADDversionInfector, Addresses.unlockInfector, DummyEXPAddresses.Infector);
-        public static Weapon SuckCannon = new Weapon(WeaponVersionData.ADDexpSuckCannon, WeaponVersionData.ADDversionSuccCannon, Addresses.unlockSuckCannon, DummyEXPAddresses.SuckCannon);
-        public static Weapon SpittingHydra = new Weapon(WeaponVersionData.ADDexpSpittingHydra, WeaponVersionData.ADDversionSpittingHydra, Addresses.unlockSpittingHydra, DummyEXPAddresses.SpittingHydra);
-        public static Weapon AgentsOfDoom = new Weapon(WeaponVersionData.ADDexpAgentsOfDoom,WeaponVersionData.ADDversionAgentsOfDoom, Addresses.unlockAgentsOfDoom, DummyEXPAddresses.AgentsOfDoom);
-        public static Weapon FluxRifle = new Weapon(WeaponVersionData.ADDexpFluxRifle, WeaponVersionData.ADDversionFluxRifle, Addresses.unlockFluxRifle, DummyEXPAddresses.FluxRifle);
-        public static Weapon Annihilator = new Weapon(WeaponVersionData.ADDexpAnnihilator,WeaponVersionData.ADDversionAnnihilator, Addresses.unlockAnnihilator, DummyEXPAddresses.Annihilator);
-        public static Weapon HoloShieldGlove = new Weapon(WeaponVersionData.ADDexpHoloShieldGlove, WeaponVersionData.ADDversionHoloShieldGlove, Addresses.unlockHoloShieldGlove, DummyEXPAddresses.HoloShieldGlove);
-        public static Weapon DiskBladeGun = new Weapon(WeaponVersionData.ADDexpDiskBladeGun, WeaponVersionData.ADDversionDiskBladeGun, Addresses.unlockDiskBladeGun, DummyEXPAddresses.DiskBladeGun);
-        public static Weapon RiftInducer = new Weapon(WeaponVersionData.ADDexpRiftInducer, WeaponVersionData.ADDversionRiftInducer, Addresses.unlockRiftInducer, DummyEXPAddresses.RiftInducer);
-        public static Weapon QwackORay = new Weapon(WeaponVersionData.ADDexpQwackORay, WeaponVersionData.ADDversionQwackORay, Addresses.unlockQwackORay, DummyEXPAddresses.QwackORay);
-        public static Weapon RY3N0 = new Weapon(WeaponVersionData.ADDexpRY3N0, WeaponVersionData.ADDversionRY3N0, Addresses.unlockRY3N0, DummyEXPAddresses.RY3N0);
-        public static Weapon MegaTurretGlove = new Weapon(WeaponVersionData.ADDexpMegaTurretGlove, WeaponVersionData.ADDversionMegaTurretGlove, Addresses.unlockMegaTurretGlove, DummyEXPAddresses.MegaTurretGlove);
-        public static Weapon LavaGun = new Weapon(WeaponVersionData.ADDexpLavaGun, WeaponVersionData.ADDversionLavaGun, Addresses.unlockLavaGun, DummyEXPAddresses.LavaGun);
-        public static Weapon ShieldCharger = new Weapon(WeaponVersionData.ADDexpShieldCharger,WeaponVersionData.ADDversionShieldCharger, Addresses.unlockShieldCharger, DummyEXPAddresses.ShieldCharger);
-        public static Weapon Bouncer = new Weapon(WeaponVersionData.ADDexpBouncer, WeaponVersionData.ADDversionBouncer, Addresses.unlockBouncer, DummyEXPAddresses.Bouncer);
-        public static Weapon PlasmaCoil = new Weapon(WeaponVersionData.ADDexpPlasmaCoil, WeaponVersionData.ADDversionPlasmaCoil, Addresses.unlockPlasmaCoil, DummyEXPAddresses.PlasmaCoil);
+        public static Weapon ShockBlaster = new Weapon("Shock Blaster", WeaponVersionData.ADDexpShockBlaster, WeaponVersionData.ADDversionShockBlaster, Addresses.unlockShockBlaster, DummyEXPAddresses.ShockBlaster);
+        public static Weapon NitroLauncher = new Weapon("Nitro Launcher", WeaponVersionData.ADDexpNitroLauncher, WeaponVersionData.ADDversionNitroLauncher, Addresses.unlockNitroLauncher, DummyEXPAddresses.NitroLauncher);
+        public static Weapon N60Storm = new Weapon("N60 Storm", WeaponVersionData.ADDexpN60Storm, WeaponVersionData.ADDversionN60Storm, Addresses.unlockN60Storm, DummyEXPAddresses.N60Storm);
+        public static Weapon PlasmaWhip = new Weapon("Plasma Whip", WeaponVersionData.ADDexpPlasmaWhip, WeaponVersionData.ADDversionPlasmaWhip, Addresses.unlockPlasmaWhip, DummyEXPAddresses.PlasmaWhip);
+        public static Weapon Infector = new Weapon("Infector", WeaponVersionData.ADDexpInfector, WeaponVersionData.ADDversionInfector, Addresses.unlockInfector, DummyEXPAddresses.Infector);
+        public static Weapon SuckCannon = new Weapon("Suck Cannon", WeaponVersionData.ADDexpSuckCannon, WeaponVersionData.ADDversionSuccCannon, Addresses.unlockSuckCannon, DummyEXPAddresses.SuckCannon);
+        public static Weapon SpittingHydra = new Weapon("Spitting Hydra", WeaponVersionData.ADDexpSpittingHydra, WeaponVersionData.ADDversionSpittingHydra, Addresses.unlockSpittingHydra, DummyEXPAddresses.SpittingHydra);
+        public static Weapon AgentsOfDoom = new Weapon("Agents Of Doom", WeaponVersionData.ADDexpAgentsOfDoom,WeaponVersionData.ADDversionAgentsOfDoom, Addresses.unlockAgentsOfDoom, DummyEXPAddresses.AgentsOfDoom);
+        public static Weapon FluxRifle = new Weapon("Flux Rifle", WeaponVersionData.ADDexpFluxRifle, WeaponVersionData.ADDversionFluxRifle, Addresses.unlockFluxRifle, DummyEXPAddresses.FluxRifle);
+        public static Weapon Annihilator = new Weapon("Annihilator", WeaponVersionData.ADDexpAnnihilator,WeaponVersionData.ADDversionAnnihilator, Addresses.unlockAnnihilator, DummyEXPAddresses.Annihilator);
+        public static Weapon HoloShieldGlove = new Weapon("Holo Shield Glove", WeaponVersionData.ADDexpHoloShieldGlove, WeaponVersionData.ADDversionHoloShieldGlove, Addresses.unlockHoloShieldGlove, DummyEXPAddresses.HoloShieldGlove);
+        public static Weapon DiskBladeGun = new Weapon("Disk Blade Gun", WeaponVersionData.ADDexpDiskBladeGun, WeaponVersionData.ADDversionDiskBladeGun, Addresses.unlockDiskBladeGun, DummyEXPAddresses.DiskBladeGun);
+        public static Weapon RiftInducer = new Weapon("Rift Inducer", WeaponVersionData.ADDexpRiftInducer, WeaponVersionData.ADDversionRiftInducer, Addresses.unlockRiftInducer, DummyEXPAddresses.RiftInducer);
+        public static Weapon QwackORay = new Weapon("Qwack-O-Ray", WeaponVersionData.ADDexpQwackORay, WeaponVersionData.ADDversionQwackORay, Addresses.unlockQwackORay, DummyEXPAddresses.QwackORay);
+        public static Weapon RY3N0 = new Weapon("RY3N0", WeaponVersionData.ADDexpRY3N0, WeaponVersionData.ADDversionRY3N0, Addresses.unlockRY3N0, DummyEXPAddresses.RY3N0);
+        public static Weapon MegaTurretGlove = new Weapon("Mega Turret Glove", WeaponVersionData.ADDexpMegaTurretGlove, WeaponVersionData.ADDversionMegaTurretGlove, Addresses.unlockMegaTurretGlove, DummyEXPAddresses.MegaTurretGlove);
+        public static Weapon LavaGun = new Weapon("Lava Gun", WeaponVersionData.ADDexpLavaGun, WeaponVersionData.ADDversionLavaGun, Addresses.unlockLavaGun, DummyEXPAddresses.LavaGun);
+        public static Weapon ShieldCharger = new Weapon("Shield Charger", WeaponVersionData.ADDexpShieldCharger,WeaponVersionData.ADDversionShieldCharger, Addresses.unlockShieldCharger, DummyEXPAddresses.ShieldCharger);
+        public static Weapon Bouncer = new Weapon("Bouncer", WeaponVersionData.ADDexpBouncer, WeaponVersionData.ADDversionBouncer, Addresses.unlockBouncer, DummyEXPAddresses.Bouncer);
+        public static Weapon PlasmaCoil = new Weapon("Plasma Coil", WeaponVersionData.ADDexpPlasmaCoil, WeaponVersionData.ADDversionPlasmaCoil, Addresses.unlockPlasmaCoil, DummyEXPAddresses.PlasmaCoil);
         public static Weapon[] allWeapons = { ShockBlaster, NitroLauncher, N60Storm, PlasmaWhip, Infector, SuckCannon, SpittingHydra, AgentsOfDoom, FluxRifle, Annihilator, HoloShieldGlove, DiskBladeGun, RiftInducer, QwackORay, RY3N0, MegaTurretGlove, LavaGun, ShieldCharger, Bouncer, PlasmaCoil };
         public static Planet Marcadia = new Planet(PlanetValues.Marcadia);
         public static Planet Daxx = new Planet(PlanetValues.Daxx);
@@ -128,7 +129,8 @@ namespace Sly1AP
             UpdateStart();
             ConfigureOptions(Client.Options);
 
-            //Client.GameState.CustomValues.Add("Shock Blaster EXP", Memory.ReadInt(DummyEXPAddresses.ShockBlaster));
+
+            
 
             var SentLocations = Client.GameState.CompletedLocations;
             var ItemsReceived = Client.GameState.ReceivedItems;
@@ -157,32 +159,6 @@ namespace Sly1AP
                     UpdateArmor();
                 }
             }
-            /*
-            foreach (var loc in NewLocations)
-            {
-                if (loc.Name == "Paris Files")
-                {
-                    GameCompletion += 1;
-                }
-                if (loc.Name == "Eye of the Storm")
-                {
-                    GameCompletion += 32;
-                }
-                if (loc.Name == "Last Call")
-                {
-                    GameCompletion += 128;
-                }
-                if (loc.Name == "Deadly Dance")
-                {
-                    GameCompletion += 512;
-                }
-                if (loc.Name == "Flame-Fu!")
-                {
-                    GameCompletion += 2048;
-                }
-
-            }
-            */
             Client.ItemReceived += (e, args) =>
             {
                 Console.WriteLine($"Received: " + args.Item.Name);
@@ -397,7 +373,7 @@ namespace Sly1AP
                 }
             }
         }
-        public static void UpdatePlanets(int id)
+        public static void UpdatePlanets(long id)
         {
             Memory.WriteByte(AvailableSlots[0], 1);
             Memory.WriteByte(AvailableSlots[1], 2);
@@ -418,6 +394,7 @@ namespace Sly1AP
                     }
                 case 50001454:
                     {
+                        Aquatos.Unlock = 1;
                         Memory.Write(0x20143064, Aquatos.Number);
                         break;
                     }
@@ -502,7 +479,7 @@ namespace Sly1AP
             }
 
         }
-        public static void UpdateWeapons(int id)
+        public static void UpdateWeapons(long id)
         {
 
             //Sets the unlock property in the weapon to 1
@@ -592,7 +569,7 @@ namespace Sly1AP
                     break;
             }
         } 
-        public static void UpdateUpgrades(int id)
+        public static void UpdateUpgrades(long id)
         {
             //Increments the pointer value in the given weapon, then uses that value as an array pointer for version number + exp value
             //Then writes those values to the memory
@@ -741,7 +718,7 @@ namespace Sly1AP
 
             }
         }
-        public static void UpdateGadgets(int id)
+        public static void UpdateGadgets(long id)
         {
             switch (id)
             {
@@ -807,7 +784,7 @@ namespace Sly1AP
             int i = Memory.ReadInt(Addresses.currentArmor) + 1;
             Memory.Write(Addresses.currentArmor, i);
         }
-        public static void UpdateJunk(int id)
+        public static void UpdateJunk(long id)
         {
             //Junk
             //Don't continuously update these or else they'll never go down!
@@ -836,22 +813,6 @@ namespace Sly1AP
         }
         public static void UpdateValues()
         {
-
-            //This foreach loop checks ratchet's ship travel slots for any duplicates by moving the integer values from AvailableSlots to the Hashset values
-            //hashset values then gets copied back to an array final
-            //final then gets written back to the Memory Addresses in AvailableSlots but without the duplicates
-            /*
-            HashSet<int> values = new HashSet<int>();
-            int[] final = new int[18];
-            foreach( var value in AvailableSlots)
-            {
-                int i = 0;
-                values.Append(Memory.ReadByte(value));
-                values.CopyTo(final);
-                Memory.Write(AvailableSlots[i], final[i]);
-                i++;
-            }
-            */
             Memory.WriteByte(Addresses.armorEquipped, Addresses.currentArmor);
             foreach (var weapon in allWeapons)
             {
@@ -970,6 +931,17 @@ namespace Sly1AP
                 weapon.Unlock = 0;
                 weapon.EXP = 0;
                 weapon.Pointer = 0;
+                if (CurrentGameState.CustomValues.ContainsKey(weapon.weaponName))
+                {
+                    Memory.Write(weapon.expAddressDumb, Convert.ToInt32(CurrentGameState.CustomValues[weapon.weaponName]));
+                    Console.WriteLine("Testing to See if it gets here or not");
+
+                }
+                else
+                {
+                    CurrentGameState.CustomValues.Add(weapon.weaponName, 0);
+                    Console.WriteLine("Only show this in the Else Statement");
+                }
             }
         }
         public static void UpdateStart()
@@ -983,7 +955,7 @@ namespace Sly1AP
         
         
         //Below are all helper functions
-
+        
         public static void EXPController()
         {
             foreach(var weapon in allWeapons)
@@ -991,6 +963,8 @@ namespace Sly1AP
                 int j = Memory.ReadInt(weapon.expAddress);                                              // int J gets initialized to whatever the current EXP value is for the weapon
                 j = (j - weapon.EXP)*(currentMultiplier + 1) + Memory.ReadInt(weapon.expAddressDumb);   // It then gets the breakpoint value removed from it to give the raw amount gained, which then gets multiplied by the current multiplier then adds the current value of expAddressDumb
                 Memory.Write(weapon.expAddressDumb, j);                                                 // J gets written to the dummy address for locations checks for whichever weapon it is
+                CurrentGameState.CustomValues[weapon.weaponName] = j;                                   // J then gets added to the CustomValues within the GameState to save in between loads
+                Console.WriteLine(Convert.ToInt32(CurrentGameState.CustomValues[weapon.weaponName]));
                 Memory.Write(weapon.expAddress, weapon.EXP);                                            // Current EXP value then gets reset back to whatever weapon.EXP is set to
             }
         }
@@ -1443,5 +1417,14 @@ namespace Sly1AP
 
         }
     }
+
+
+    //Pattern series of hex addresses that always remain static throughout the games lifecycle
+    //Mask is an array of shit you're looking for, x is for what you want, ? is for what you don't want
+    //FindSignature() gets BaseAddress(), the Length of the Search, Pattern and Mask as parameters
+    //Length of search determined by MODULEINFO.SizeOfImage (not exposed yet), Function is called GetModuleInfo() and takes moduleName as parameter which is the name of the executable without .exe on the end
+
+
+
 }
 

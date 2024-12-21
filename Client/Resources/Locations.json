@@ -135,7 +135,7 @@
   {
     "Name": "Infobot: Koros",
     "Id": 50001020,
-    "Address": "0x200000AA",
+    "Address": "0x201D553E",
     "CheckType": 0,
     "AddressBit": 0
   },
@@ -149,35 +149,35 @@
   {
     "Name": "Infobot: Aquatos",
     "Id": 50001022,
-    "Address": "0x200000AA",
+    "Address": "0x201426F6",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Infobot: Tyhrranosis",
     "Id": 50001023,
-    "Address": "0x200000AA",
+    "Address": "0x20142C1B",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Infobot: Daxx",
     "Id": 50001024,
-    "Address": "0x200000AA",
+    "Address": "0x20142765",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Infobot: Obani Gemini",
     "Id": 50001025,
-    "Address": "0x200000AA",
+    "Address": "0x2014553B",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Infobot: Zeldrin",
     "Id": 50001026,
-    "Address": "0x200000AA",
+    "Address": "0x201D5541",
     "CheckType": 0,
     "AddressBit": 0
   },
@@ -627,7 +627,7 @@
   {
     "Name": "Post-Daxx",
     "Id": 50001323,
-    "Address": "0x200000AA",
+    "Address": "0x20143B39",
     "CheckType": 0,
     "AddressBit": 0
   },
@@ -662,7 +662,7 @@
   {
     "Name": "Received Grav Boots",
     "Id": 50001360,
-    "Address": "0x20142705",
+    "Address": "0x20142CAD",
     "CheckType": 0,
     "AddressBit": 0
   },
@@ -761,6 +761,13 @@
     "Name": "T-Bolt: Tall Tower (Hovership)",
     "Id": 50001433,
     "Address": "0x201BBBE9",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Infobot: Metropolis",
+    "Id": 50001434,
+    "Address": "0x201D5550",
     "CheckType": 0,
     "AddressBit": 0
   },

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sly1AP.Models
+namespace RaC3AP.Models
 {
     public class Planet(byte number)
     {

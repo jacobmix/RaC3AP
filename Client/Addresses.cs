@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sly1AP
+namespace RaC3AP
 {
     public class Addresses
     {
@@ -153,10 +153,10 @@ namespace Sly1AP
     public class DummyEXPAddresses
     {
         //Refer to EXP Controller
-        public const int ShockBlaster = 0x20100004;
-        public const int NitroLauncher = 0x20100008;
-        public const int N60Storm = 0x2010000C;
-        public const int PlasmaWhip = 0x20100010;
+        public const int ShockBlaster = 0x2500B000;
+        public const int NitroLauncher = 0x2500B004;
+        public const int N60Storm = 0x2500B008;
+        public const int PlasmaWhip = 0x2500B00C;
         public const int Infector = 0x20100014;
         public const int SuckCannon = 0x20100018;
         public const int SpittingHydra = 0x2010001C;

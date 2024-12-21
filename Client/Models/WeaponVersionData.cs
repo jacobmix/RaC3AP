@@ -5,7 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sly1AP.Models
+namespace RaC3AP.Models
 {
     public class WeaponVersionData
     {

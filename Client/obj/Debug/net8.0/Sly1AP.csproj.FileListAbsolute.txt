@@ -81,3 +81,6 @@ C:\Users\Breadstick\Desktop\Client\obj\Debug\net8.0\refint\Sly1AP.dll
 C:\Users\Breadstick\Desktop\Client\obj\Debug\net8.0\Sly1AP.pdb
 C:\Users\Breadstick\Desktop\Client\obj\Debug\net8.0\Sly1AP.genruntimeconfig.cache
 C:\Users\Breadstick\Desktop\Client\obj\Debug\net8.0\ref\Sly1AP.dll
+C:\Users\Breadstick\Desktop\Client\bin\Debug\net8.0\Serilog.dll
+C:\Users\Breadstick\Desktop\Client\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\Breadstick\Desktop\Client\bin\Debug\net8.0\Serilog.Sinks.File.dll
