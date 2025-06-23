@@ -11,13 +11,13 @@ using System.IO;
 using Archipelago.Core.Util;
 using System.Security.Cryptography.X509Certificates;
 
-namespace Sly1AP
+namespace RaC3AP
 {
     class Helpers
     {
         public static List<Location> GetLocations()
         {
-            var json = OpenEmbeddedResource("Sly1AP.Resources.Locations.json");
+            var json = OpenEmbeddedResource("RaC3AP.Resources.Locations.json");
             var list = JsonConvert.DeserializeObject<List<Location>>(json);
             return list;
         }

@@ -1,5 +1,0 @@
-C:\Users\Breadstick\Desktop\Client\obj\Debug\net8.0\RaC3AP.csproj.AssemblyReference.cache
-C:\Users\Breadstick\Desktop\Client\obj\Debug\net8.0\RaC3AP.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Breadstick\Desktop\Client\obj\Debug\net8.0\RaC3AP.AssemblyInfoInputs.cache
-C:\Users\Breadstick\Desktop\Client\obj\Debug\net8.0\RaC3AP.AssemblyInfo.cs
-C:\Users\Breadstick\Desktop\Client\obj\Debug\net8.0\RaC3AP.csproj.CoreCompileInputs.cache
