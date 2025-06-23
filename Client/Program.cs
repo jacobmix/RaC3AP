@@ -1054,27 +1054,27 @@ namespace RaC3AP
                     Memory.WriteByte(slot, 0);
                     break;
                 }
-                if (address == 21 || address == 162 || address == 168 || address == 169 || address == 170 && MegaTurretGlove.Unlock == 0 && Memory.ReadByte(slot) == 21)
+                if (address == 21 && MegaTurretGlove.Unlock == 0 && Memory.ReadByte(slot) == 21)
                 {
                     Memory.WriteByte(slot, 0);
                     break;
                 }
-                if (address == 17 || address == 161 || address == 174 || address == 175 || address == 176 && LavaGun.Unlock == 0 && Memory.ReadByte(slot) == 17)
+                if (address == 17 && LavaGun.Unlock == 0 && Memory.ReadByte(slot) == 17)
                 {
                     Memory.WriteByte(slot, 0);
                     break;
                 }
-                if (address == 22 || address == 167 || address == 192 || address == 193 || address == 194 && ShieldCharger.Unlock == 0 && Memory.ReadByte(slot) == 22)
+                if (address == 22 && ShieldCharger.Unlock == 0 && Memory.ReadByte(slot) == 22)
                 {
                     Memory.WriteByte(slot, 0);
                     break;
                 }
-                if (address == 19 || address == 166 || address == 180 || address == 181 || address == 182 && Bouncer.Unlock == 0 && Memory.ReadByte(slot) == 19)
+                if (address == 19 && Bouncer.Unlock == 0 && Memory.ReadByte(slot) == 19)
                 {
                     Memory.WriteByte(slot, 0);
                     break;
                 }
-                if (address == 16 || address == 160 || address == 186 || address == 187 || address == 188 && PlasmaCoil.Unlock == 0 && Memory.ReadByte(slot) == 16)
+                if (address == 16 && PlasmaCoil.Unlock == 0 && Memory.ReadByte(slot) == 16)
                 {
                     Memory.WriteByte(slot, 0);
                     break;
@@ -1253,27 +1253,27 @@ namespace RaC3AP
                     Memory.WriteByte(slot, 0);
                     break;
                 }
-                if (m == 21 || m == 162 || m == 168 || m == 169 || m == 170 && MegaTurretGlove.Unlock == 0 && Memory.ReadByte(slot) == 21)
+                if (m == 21 && MegaTurretGlove.Unlock == 0 && Memory.ReadByte(slot) == 21)
                 {
                     Memory.WriteByte(slot, 0);
                     break;
                 }
-                if (m == 17 || m == 161 || m == 174 || m == 175 || m == 176 && LavaGun.Unlock == 0 && Memory.ReadByte(slot) == 17)
+                if (m == 17 && LavaGun.Unlock == 0 && Memory.ReadByte(slot) == 17)
                 {
                     Memory.WriteByte(slot, 0);
                     break;
                 }
-                if (m == 22 || m == 167 || m == 192 || m == 193 || m == 194 && ShieldCharger.Unlock == 0 && Memory.ReadByte(slot) == 22)
+                if (m == 22 && ShieldCharger.Unlock == 0 && Memory.ReadByte(slot) == 22)
                 {
                     Memory.WriteByte(slot, 0);
                     break;
                 }
-                if (m == 19 || m == 166 || m == 180 || m == 181 || m == 182 && Bouncer.Unlock == 0 && Memory.ReadByte(slot) == 19)
+                if (m == 19 && Bouncer.Unlock == 0 && Memory.ReadByte(slot) == 19)
                 {
                     Memory.WriteByte(slot, 0);
                     break;
                 }
-                if (m == 16 || m == 160 || m == 186 || m == 187 || m == 188 && PlasmaCoil.Unlock == 0 && Memory.ReadByte(slot) == 16)
+                if (m == 16 && PlasmaCoil.Unlock == 0 && Memory.ReadByte(slot) == 16)
                 {
                     Memory.WriteByte(slot, 0);
                     break;
