@@ -161,3 +161,15 @@ item_table ={
     **victory_item
 
 }
+
+#class ItemData(NamedTuple):
+#    ap_code: Optional[int]
+#    classification: ItemClassification
+#    count: Optional[int] = 1
+
+def filter_items(classification):
+    return filter(lambda l: l[1].classification == (classification), item_table.items())
+
+def filter_item_names(classification):
+    return map(lambda entry: entry[0], filter_items(classification))
+

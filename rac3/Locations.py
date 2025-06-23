@@ -18,7 +18,6 @@ def get_location_names() -> Dict[str, int]:
 
 
 rac3_locations = {
-
     #----- Planet Veldin -----#
     "Veldin: Received Shock Cannon": LocData(50001000, "Veldin"),
     "Veldin: Received Nitro Launcher": LocData(50001001, "Veldin"),
@@ -289,5 +288,18 @@ weapon_upgrades = {
 
 location_table = {
     **rac3_locations,
-    **weapon_upgrades
+    # **weapon_upgrades
 }
+
+#class EventData(NamedTuple):
+#    name:       str
+#    ap_code:    Optional[int] = None
+#class LocData(NamedTuple):
+#    ap_code: Optional[int]
+#    region: Optional[str]
+def get_level_locations(region):
+    return map(lambda l: l[0], get_level_location_data(region))
+
+def get_level_location_data(region):
+    return filter(lambda l: l[1].region == (region), location_table.items())
+
