@@ -922,7 +922,7 @@ namespace RaC3AP
             VerifyLastUsed();
             PlanetCycler();
             WeaponCycler();
-            EXPController();
+            //EXPController();
         }
         public static void GetValues()
         {
