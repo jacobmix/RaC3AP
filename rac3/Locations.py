@@ -288,7 +288,7 @@ weapon_upgrades = {
 
 location_table = {
     **rac3_locations,
-    **weapon_upgrades
+    # **weapon_upgrades
 }
 
 #class EventData(NamedTuple):

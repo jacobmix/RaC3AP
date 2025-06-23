@@ -151,7 +151,7 @@ victory_item = {
 
 item_table ={
     **weapon_items,
-    **progressive_weapons,
+    # **progressive_weapons,
     **gadget_items,
     **post_planets,
     **qwark_vidcomics,
