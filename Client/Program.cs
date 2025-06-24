@@ -99,12 +99,18 @@ namespace RaC3AP
 
         private static async Task Initialise()
         {
+#if DEBUG
+            string Address = "192.168.20.150:38281";
+            string SlotName = "Player1";
+            string Password = "";
+#else
             Console.Write("Enter Address: ");
             string Address = Console.ReadLine();
             Console.Write("Enter Slot Name: ");
             string SlotName = Console.ReadLine();
             Console.Write("Enter Password: ");
             string Password = Console.ReadLine();
+#endif
             IsConnected = await ConnectAsync(Address, SlotName, Password);
         }
 
