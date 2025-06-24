@@ -1,17 +1,20 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using System.Net;
-using System.Numerics;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
 using Archipelago.Core;
 using Archipelago.Core.Models;
 using Archipelago.Core.Util;
 using Archipelago.MultiClient.Net.Packets;
 using Archipelago.PCSX2;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using RaC3AP.Models;
+using System.Net;
+using System.Numerics;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Xml.Linq;
 using static System.Reflection.Metadata.BlobBuilder;
 
 namespace RaC3AP
@@ -26,28 +29,28 @@ namespace RaC3AP
         
         public static ulong[] AvailableSlots = [PlanetSlots.slotOne, PlanetSlots.slotTwo, PlanetSlots.slotThree, PlanetSlots.slotFour, PlanetSlots.slotFive, PlanetSlots.slotSix, PlanetSlots.slotSeven, PlanetSlots.slotEight, PlanetSlots.slotNine, PlanetSlots.slotTen, PlanetSlots.slotEleven, PlanetSlots.slotTwelve, PlanetSlots.slotThirteen, PlanetSlots.slotFourteen, PlanetSlots.slotFifteen, PlanetSlots.slotSixteen, PlanetSlots.slotSeventeen, PlanetSlots.slotEighteen, PlanetSlots.slotNineteen];
         public static ulong[] QuickSelect = [QuickSelectSlots.oneOne, QuickSelectSlots.oneTwo, QuickSelectSlots.oneThree, QuickSelectSlots.oneFour, QuickSelectSlots.oneFive, QuickSelectSlots.oneSix, QuickSelectSlots.oneSeven, QuickSelectSlots.oneEight, QuickSelectSlots.twoOne, QuickSelectSlots.twoTwo, QuickSelectSlots.twoThree, QuickSelectSlots.twoFour, QuickSelectSlots.twoFive, QuickSelectSlots.twoSix, QuickSelectSlots.twoSeven, QuickSelectSlots.twoEight];
-        public static ulong[] lastUsed = [0x20142670, 0x20142674, 0x20142678];
+        public static ulong[] lastUsed = [Addresses.lastUsedWeaponOne, Addresses.lastUsedWeaponTwo, Addresses.lastUsedWeaponThree];
         public static int currentMultiplier = 2;
-        public static Weapon ShockBlaster = new Weapon("Shock Blaster", WeaponVersionData.ADDexpShockBlaster, WeaponVersionData.ADDversionShockBlaster, Addresses.unlockShockBlaster, DummyEXPAddresses.ShockBlaster);
-        public static Weapon NitroLauncher = new Weapon("Nitro Launcher", WeaponVersionData.ADDexpNitroLauncher, WeaponVersionData.ADDversionNitroLauncher, Addresses.unlockNitroLauncher, DummyEXPAddresses.NitroLauncher);
-        public static Weapon N60Storm = new Weapon("N60 Storm", WeaponVersionData.ADDexpN60Storm, WeaponVersionData.ADDversionN60Storm, Addresses.unlockN60Storm, DummyEXPAddresses.N60Storm);
-        public static Weapon PlasmaWhip = new Weapon("Plasma Whip", WeaponVersionData.ADDexpPlasmaWhip, WeaponVersionData.ADDversionPlasmaWhip, Addresses.unlockPlasmaWhip, DummyEXPAddresses.PlasmaWhip);
-        public static Weapon Infector = new Weapon("Infector", WeaponVersionData.ADDexpInfector, WeaponVersionData.ADDversionInfector, Addresses.unlockInfector, DummyEXPAddresses.Infector);
-        public static Weapon SuckCannon = new Weapon("Suck Cannon", WeaponVersionData.ADDexpSuckCannon, WeaponVersionData.ADDversionSuccCannon, Addresses.unlockSuckCannon, DummyEXPAddresses.SuckCannon);
-        public static Weapon SpittingHydra = new Weapon("Spitting Hydra", WeaponVersionData.ADDexpSpittingHydra, WeaponVersionData.ADDversionSpittingHydra, Addresses.unlockSpittingHydra, DummyEXPAddresses.SpittingHydra);
-        public static Weapon AgentsOfDoom = new Weapon("Agents Of Doom", WeaponVersionData.ADDexpAgentsOfDoom,WeaponVersionData.ADDversionAgentsOfDoom, Addresses.unlockAgentsOfDoom, DummyEXPAddresses.AgentsOfDoom);
-        public static Weapon FluxRifle = new Weapon("Flux Rifle", WeaponVersionData.ADDexpFluxRifle, WeaponVersionData.ADDversionFluxRifle, Addresses.unlockFluxRifle, DummyEXPAddresses.FluxRifle);
-        public static Weapon Annihilator = new Weapon("Annihilator", WeaponVersionData.ADDexpAnnihilator,WeaponVersionData.ADDversionAnnihilator, Addresses.unlockAnnihilator, DummyEXPAddresses.Annihilator);
-        public static Weapon HoloShieldGlove = new Weapon("Holo Shield Glove", WeaponVersionData.ADDexpHoloShieldGlove, WeaponVersionData.ADDversionHoloShieldGlove, Addresses.unlockHoloShieldGlove, DummyEXPAddresses.HoloShieldGlove);
-        public static Weapon DiskBladeGun = new Weapon("Disk Blade Gun", WeaponVersionData.ADDexpDiskBladeGun, WeaponVersionData.ADDversionDiskBladeGun, Addresses.unlockDiskBladeGun, DummyEXPAddresses.DiskBladeGun);
-        public static Weapon RiftInducer = new Weapon("Rift Inducer", WeaponVersionData.ADDexpRiftInducer, WeaponVersionData.ADDversionRiftInducer, Addresses.unlockRiftInducer, DummyEXPAddresses.RiftInducer);
-        public static Weapon QwackORay = new Weapon("Qwack-O-Ray", WeaponVersionData.ADDexpQwackORay, WeaponVersionData.ADDversionQwackORay, Addresses.unlockQwackORay, DummyEXPAddresses.QwackORay);
-        public static Weapon RY3N0 = new Weapon("RY3N0", WeaponVersionData.ADDexpRY3N0, WeaponVersionData.ADDversionRY3N0, Addresses.unlockRY3N0, DummyEXPAddresses.RY3N0);
-        public static Weapon MegaTurretGlove = new Weapon("Mega Turret Glove", WeaponVersionData.ADDexpMegaTurretGlove, WeaponVersionData.ADDversionMegaTurretGlove, Addresses.unlockMegaTurretGlove, DummyEXPAddresses.MegaTurretGlove);
-        public static Weapon LavaGun = new Weapon("Lava Gun", WeaponVersionData.ADDexpLavaGun, WeaponVersionData.ADDversionLavaGun, Addresses.unlockLavaGun, DummyEXPAddresses.LavaGun);
-        public static Weapon ShieldCharger = new Weapon("Shield Charger", WeaponVersionData.ADDexpShieldCharger,WeaponVersionData.ADDversionShieldCharger, Addresses.unlockShieldCharger, DummyEXPAddresses.ShieldCharger);
-        public static Weapon Bouncer = new Weapon("Bouncer", WeaponVersionData.ADDexpBouncer, WeaponVersionData.ADDversionBouncer, Addresses.unlockBouncer, DummyEXPAddresses.Bouncer);
-        public static Weapon PlasmaCoil = new Weapon("Plasma Coil", WeaponVersionData.ADDexpPlasmaCoil, WeaponVersionData.ADDversionPlasmaCoil, Addresses.unlockPlasmaCoil, DummyEXPAddresses.PlasmaCoil);
+        public static Weapon ShockBlaster = new Weapon("Shock Blaster", WeaponVersionData.ADDexpShockBlaster, WeaponVersionData.ADDversionShockBlaster, WeaponUnlocks.unlockShockBlaster, DummyEXPAddresses.ShockBlaster);
+        public static Weapon NitroLauncher = new Weapon("Nitro Launcher", WeaponVersionData.ADDexpNitroLauncher, WeaponVersionData.ADDversionNitroLauncher, WeaponUnlocks.unlockNitroLauncher, DummyEXPAddresses.NitroLauncher);
+        public static Weapon N60Storm = new Weapon("N60 Storm", WeaponVersionData.ADDexpN60Storm, WeaponVersionData.ADDversionN60Storm, WeaponUnlocks.unlockN60Storm, DummyEXPAddresses.N60Storm);
+        public static Weapon PlasmaWhip = new Weapon("Plasma Whip", WeaponVersionData.ADDexpPlasmaWhip, WeaponVersionData.ADDversionPlasmaWhip, WeaponUnlocks.unlockPlasmaWhip, DummyEXPAddresses.PlasmaWhip);
+        public static Weapon Infector = new Weapon("Infector", WeaponVersionData.ADDexpInfector, WeaponVersionData.ADDversionInfector, WeaponUnlocks.unlockInfector, DummyEXPAddresses.Infector);
+        public static Weapon SuckCannon = new Weapon("Suck Cannon", WeaponVersionData.ADDexpSuckCannon, WeaponVersionData.ADDversionSuccCannon, WeaponUnlocks.unlockSuckCannon, DummyEXPAddresses.SuckCannon);
+        public static Weapon SpittingHydra = new Weapon("Spitting Hydra", WeaponVersionData.ADDexpSpittingHydra, WeaponVersionData.ADDversionSpittingHydra, WeaponUnlocks.unlockSpittingHydra, DummyEXPAddresses.SpittingHydra);
+        public static Weapon AgentsOfDoom = new Weapon("Agents Of Doom", WeaponVersionData.ADDexpAgentsOfDoom,WeaponVersionData.ADDversionAgentsOfDoom, WeaponUnlocks.unlockAgentsOfDoom, DummyEXPAddresses.AgentsOfDoom);
+        public static Weapon FluxRifle = new Weapon("Flux Rifle", WeaponVersionData.ADDexpFluxRifle, WeaponVersionData.ADDversionFluxRifle, WeaponUnlocks.unlockFluxRifle, DummyEXPAddresses.FluxRifle);
+        public static Weapon Annihilator = new Weapon("Annihilator", WeaponVersionData.ADDexpAnnihilator,WeaponVersionData.ADDversionAnnihilator, WeaponUnlocks.unlockAnnihilator, DummyEXPAddresses.Annihilator);
+        public static Weapon HoloShieldGlove = new Weapon("Holo Shield Glove", WeaponVersionData.ADDexpHoloShieldGlove, WeaponVersionData.ADDversionHoloShieldGlove, WeaponUnlocks.unlockHoloShieldGlove, DummyEXPAddresses.HoloShieldGlove);
+        public static Weapon DiskBladeGun = new Weapon("Disk Blade Gun", WeaponVersionData.ADDexpDiskBladeGun, WeaponVersionData.ADDversionDiskBladeGun, WeaponUnlocks.unlockDiskBladeGun, DummyEXPAddresses.DiskBladeGun);
+        public static Weapon RiftInducer = new Weapon("Rift Inducer", WeaponVersionData.ADDexpRiftInducer, WeaponVersionData.ADDversionRiftInducer, WeaponUnlocks.unlockRiftInducer, DummyEXPAddresses.RiftInducer);
+        public static Weapon QwackORay = new Weapon("Qwack-O-Ray", WeaponVersionData.ADDexpQwackORay, WeaponVersionData.ADDversionQwackORay, WeaponUnlocks.unlockQwackORay, DummyEXPAddresses.QwackORay);
+        public static Weapon RY3N0 = new Weapon("RY3N0", WeaponVersionData.ADDexpRY3N0, WeaponVersionData.ADDversionRY3N0, WeaponUnlocks.unlockRY3N0, DummyEXPAddresses.RY3N0);
+        public static Weapon MegaTurretGlove = new Weapon("Mega Turret Glove", WeaponVersionData.ADDexpMegaTurretGlove, WeaponVersionData.ADDversionMegaTurretGlove, WeaponUnlocks.unlockMegaTurretGlove, DummyEXPAddresses.MegaTurretGlove);
+        public static Weapon LavaGun = new Weapon("Lava Gun", WeaponVersionData.ADDexpLavaGun, WeaponVersionData.ADDversionLavaGun, WeaponUnlocks.unlockLavaGun, DummyEXPAddresses.LavaGun);
+        public static Weapon ShieldCharger = new Weapon("Shield Charger", WeaponVersionData.ADDexpShieldCharger,WeaponVersionData.ADDversionShieldCharger, WeaponUnlocks.unlockShieldCharger, DummyEXPAddresses.ShieldCharger);
+        public static Weapon Bouncer = new Weapon("Bouncer", WeaponVersionData.ADDexpBouncer, WeaponVersionData.ADDversionBouncer, WeaponUnlocks.unlockBouncer, DummyEXPAddresses.Bouncer);
+        public static Weapon PlasmaCoil = new Weapon("Plasma Coil", WeaponVersionData.ADDexpPlasmaCoil, WeaponVersionData.ADDversionPlasmaCoil, WeaponUnlocks.unlockPlasmaCoil, DummyEXPAddresses.PlasmaCoil);
         public static Weapon[] allWeapons = { ShockBlaster, NitroLauncher, N60Storm, PlasmaWhip, Infector, SuckCannon, SpittingHydra, AgentsOfDoom, FluxRifle, Annihilator, HoloShieldGlove, DiskBladeGun, RiftInducer, QwackORay, RY3N0, MegaTurretGlove, LavaGun, ShieldCharger, Bouncer, PlasmaCoil };
         public static Planet Marcadia = new Planet(PlanetValues.Marcadia);
         public static Planet Daxx = new Planet(PlanetValues.Daxx);
@@ -117,12 +120,24 @@ namespace RaC3AP
             Console.WriteLine($"Connected to PCSX2.");
 
             //Set the game completion flag to 0, so boss locations won't be sent unintentionally.
-            Memory.Write(0x2027DC18, 0);
+            Memory.Write(GlobalConfig.DefeatNefarious, 0); 
 
             Console.WriteLine($"Connecting to Archipelago.");
             ArchipelagoClient Client = new(client);
             await Client.Connect(address, "Ratchet and Clank 3 Up your Arsenal");
             var locations = Helpers.GetLocations();
+            // Fix location Address for JP version
+            var _i = 0;
+            foreach (var location in locations)
+            {
+                var tmp = (long)location.Address + GlobalConfig.AddressOffset;
+                locations[_i].Address = (ulong)tmp;
+                _i++;
+            }
+            Console.WriteLine($"0x{locations[0].Address:X}");
+            Console.WriteLine($"0x{locations[1].Address:X}");
+            Console.WriteLine($"0x{locations[2].Address:X}");
+
             await Client.Login(playerName, password);
             Client.PopulateLocations(locations);
             //On startup, set all values to 0. That way, the game won't overwrite Archipelago's values with the loaded game's values.
@@ -197,138 +212,138 @@ namespace RaC3AP
             {
                 string StartingWeapon = Convert.ToString(options["StartingWeapon"]);
 
-                if (StartingWeapon == "Shock Blaster" & Memory.ReadInt(Addresses.unlockShockBlaster) == 0)
+                if (StartingWeapon == "Shock Blaster" & Memory.ReadInt(WeaponUnlocks.unlockShockBlaster) == 0)
                 {
                     ShockBlaster.Unlock = 1;
-                    Memory.Write(Addresses.unlockShockBlaster, ShockBlaster.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockShockBlaster, ShockBlaster.Unlock);
                     Memory.Write(Addresses.ammoShockBlaster, 30);
                 }
-                if (StartingWeapon == "Nitro Launcher" & Memory.ReadInt(Addresses.unlockNitroLauncher) == 0)
+                if (StartingWeapon == "Nitro Launcher" & Memory.ReadInt(WeaponUnlocks.unlockNitroLauncher) == 0)
                 {
                     NitroLauncher.Unlock = 1;
-                    Memory.Write(Addresses.unlockNitroLauncher, NitroLauncher.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockNitroLauncher, NitroLauncher.Unlock);
                     Memory.Write(Addresses.ammoNitroLauncher, 8);
                 }
-                if (StartingWeapon == "N60 Storm" & Memory.ReadInt(Addresses.unlockN60Storm) == 0)
+                if (StartingWeapon == "N60 Storm" & Memory.ReadInt(WeaponUnlocks.unlockN60Storm) == 0)
                 {
                     N60Storm.Unlock = 1;
-                    Memory.Write(Addresses.unlockN60Storm, N60Storm.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockN60Storm, N60Storm.Unlock);
                     Memory.Write(Addresses.ammoN60Storm, 150);
                 }
-                if (StartingWeapon == "Plasma Whip" & Memory.ReadInt(Addresses.unlockPlasmaWhip) == 0)
+                if (StartingWeapon == "Plasma Whip" & Memory.ReadInt(WeaponUnlocks.unlockPlasmaWhip) == 0)
                 {
                     PlasmaWhip.Unlock = 1;
-                    Memory.Write(Addresses.unlockPlasmaWhip, PlasmaWhip.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockPlasmaWhip, PlasmaWhip.Unlock);
                     Memory.Write(Addresses.ammoPlasmaWhip, 25);
 
                 }
-                if (StartingWeapon == "Infector" & Memory.ReadInt(Addresses.unlockInfector) == 0)
+                if (StartingWeapon == "Infector" & Memory.ReadInt(WeaponUnlocks.unlockInfector) == 0)
                 {
                     Infector.Unlock = 1;
-                    Memory.Write(Addresses.unlockInfector, Infector.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockInfector, Infector.Unlock);
                     Memory.Write(Addresses.ammoInfector, 15);
 
                 }
-                if (StartingWeapon == "Suck Cannon" & Memory.ReadInt(Addresses.unlockSuckCannon) == 0)
+                if (StartingWeapon == "Suck Cannon" & Memory.ReadInt(WeaponUnlocks.unlockSuckCannon) == 0)
                 {
                     SuckCannon.Unlock = 1;
-                    Memory.Write(Addresses.unlockSuckCannon, SuckCannon.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockSuckCannon, SuckCannon.Unlock);
 
                 }
-                if (StartingWeapon == "Spitting Hydra" & Memory.ReadInt(Addresses.unlockSpittingHydra) == 0)
+                if (StartingWeapon == "Spitting Hydra" & Memory.ReadInt(WeaponUnlocks.unlockSpittingHydra) == 0)
                 {
                     SpittingHydra.Unlock = 1;
-                    Memory.Write(Addresses.unlockSpittingHydra, SpittingHydra.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockSpittingHydra, SpittingHydra.Unlock);
                     Memory.Write(Addresses.ammoSpittingHydra, 15);
 
                 }
-                if (StartingWeapon == "Agents Of Doom" & Memory.ReadInt(Addresses.unlockAgentsOfDoom) == 0)
+                if (StartingWeapon == "Agents Of Doom" & Memory.ReadInt(WeaponUnlocks.unlockAgentsOfDoom) == 0)
                 {
                     AgentsOfDoom.Unlock = 1;
-                    Memory.Write(Addresses.unlockAgentsOfDoom, AgentsOfDoom.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockAgentsOfDoom, AgentsOfDoom.Unlock);
                     Memory.Write(Addresses.ammoAgentsOfDoom, 6);
 
                 }
-                if (StartingWeapon == "Flux Rifle" & Memory.ReadInt(Addresses.unlockFluxRifle) == 0)
+                if (StartingWeapon == "Flux Rifle" & Memory.ReadInt(WeaponUnlocks.unlockFluxRifle) == 0)
                 {
                     FluxRifle.Unlock = 1;
-                    Memory.Write(Addresses.unlockFluxRifle, FluxRifle.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockFluxRifle, FluxRifle.Unlock);
                     Memory.Write(Addresses.ammoFluxRifle, 10);
 
                 }
-                if (StartingWeapon == "Annihilator" & Memory.ReadInt(Addresses.unlockAnnihilator) == 0)
+                if (StartingWeapon == "Annihilator" & Memory.ReadInt(WeaponUnlocks.unlockAnnihilator) == 0)
                 {
                     Annihilator.Unlock = 1;
-                    Memory.Write(Addresses.unlockAnnihilator, Annihilator.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockAnnihilator, Annihilator.Unlock);
                     Memory.Write(Addresses.ammoAnnihilator, 20);
 
                 }
-                if (StartingWeapon == "Holo Shield Glove" & Memory.ReadInt(Addresses.unlockHoloShieldGlove) == 0)
+                if (StartingWeapon == "Holo Shield Glove" & Memory.ReadInt(WeaponUnlocks.unlockHoloShieldGlove) == 0)
                 {
                     HoloShieldGlove.Unlock = 1;
-                    Memory.Write(Addresses.unlockHoloShieldGlove, HoloShieldGlove.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockHoloShieldGlove, HoloShieldGlove.Unlock);
                     Memory.Write(Addresses.ammoHoloShieldGlove, 8);
 
                 }
-                if (StartingWeapon == "Disk Blade Gun" & Memory.ReadInt(Addresses.unlockDiskBladeGun) == 0)
+                if (StartingWeapon == "Disk Blade Gun" & Memory.ReadInt(WeaponUnlocks.unlockDiskBladeGun) == 0)
                 {
                     DiskBladeGun.Unlock = 1;
-                    Memory.Write(Addresses.unlockDiskBladeGun, DiskBladeGun.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockDiskBladeGun, DiskBladeGun.Unlock);
                     Memory.Write(Addresses.ammoDiskBladeGun, 25);
 
                 }
-                if (StartingWeapon == "Rift Inducer" & Memory.ReadInt(Addresses.unlockRiftInducer) == 0)
+                if (StartingWeapon == "Rift Inducer" & Memory.ReadInt(WeaponUnlocks.unlockRiftInducer) == 0)
                 {
                     RiftInducer.Unlock = 1;
-                    Memory.Write(Addresses.unlockRiftInducer, RiftInducer.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockRiftInducer, RiftInducer.Unlock);
                     Memory.Write(Addresses.ammoRiftInducer, 8);
 
                 }
-                if (StartingWeapon == "Qwack O Ray" & Memory.ReadInt(Addresses.unlockQwackORay) == 0)
+                if (StartingWeapon == "Qwack O Ray" & Memory.ReadInt(WeaponUnlocks.unlockQwackORay) == 0)
                 {
                     QwackORay.Unlock = 1;
-                    Memory.Write(Addresses.unlockQwackORay, QwackORay.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockQwackORay, QwackORay.Unlock);
 
                 }
-                if (StartingWeapon == "RY3N0" & Memory.ReadInt(Addresses.unlockRY3N0) == 0)
+                if (StartingWeapon == "RY3N0" & Memory.ReadInt(WeaponUnlocks.unlockRY3N0) == 0)
                 {
                     RY3N0.Unlock = 1;
-                    Memory.Write(Addresses.unlockRY3N0, RY3N0.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockRY3N0, RY3N0.Unlock);
                     Memory.Write(Addresses.ammoRY3N0, 25);
 
                 }
-                if (StartingWeapon == "Mega Turret Glove" & Memory.ReadInt(Addresses.unlockMegaTurretGlove) == 0)
+                if (StartingWeapon == "Mega Turret Glove" & Memory.ReadInt(WeaponUnlocks.unlockMegaTurretGlove) == 0)
                 {
                     MegaTurretGlove.Unlock = 1;
-                    Memory.Write(Addresses.unlockMegaTurretGlove, MegaTurretGlove.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockMegaTurretGlove, MegaTurretGlove.Unlock);
                     Memory.Write(Addresses.ammoMegaTurretGlove, 10);
 
                 }
-                if (StartingWeapon == "Lava Gun" & Memory.ReadInt(Addresses.unlockLavaGun) == 0)
+                if (StartingWeapon == "Lava Gun" & Memory.ReadInt(WeaponUnlocks.unlockLavaGun) == 0)
                 {
                     LavaGun.Unlock = 1;
-                    Memory.Write(Addresses.unlockLavaGun, LavaGun.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockLavaGun, LavaGun.Unlock);
                     Memory.Write(Addresses.ammoLavaGun, 150);
 
                 }
-                if (StartingWeapon == "Shield Charger" & Memory.ReadInt(Addresses.unlockShieldCharger) == 0)
+                if (StartingWeapon == "Shield Charger" & Memory.ReadInt(WeaponUnlocks.unlockShieldCharger) == 0)
                 {
                     ShieldCharger.Unlock = 1;
-                    Memory.Write(Addresses.unlockShieldCharger, ShieldCharger.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockShieldCharger, ShieldCharger.Unlock);
                     Memory.Write(Addresses.ammoShieldCharger, 3);
 
                 }
-                if (StartingWeapon == "Bouncer" & Memory.ReadInt(Addresses.unlockBouncer) == 0)
+                if (StartingWeapon == "Bouncer" & Memory.ReadInt(WeaponUnlocks.unlockBouncer) == 0)
                 {
                     Bouncer.Unlock = 1;
-                    Memory.Write(Addresses.unlockBouncer, Bouncer.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockBouncer, Bouncer.Unlock);
                     Memory.Write(Addresses.ammoBouncer, 10);
 
                 }
-                if (StartingWeapon == "Plasma Coil" & Memory.ReadInt(Addresses.unlockPlasmaCoil) == 0)
+                if (StartingWeapon == "Plasma Coil" & Memory.ReadInt(WeaponUnlocks.unlockPlasmaCoil) == 0)
                 {
                     PlasmaCoil.Unlock = 1;
-                    Memory.Write(Addresses.unlockPlasmaCoil, PlasmaCoil.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockPlasmaCoil, PlasmaCoil.Unlock);
                     Memory.Write(Addresses.ammoPlasmaCoil, 15);
 
                 }
@@ -383,97 +398,97 @@ namespace RaC3AP
                 case 50001452:
                     {
                         Marcadia.Unlock = 1;
-                        Memory.WriteByte(0x2014305C, Marcadia.Number);
+                        Memory.WriteByte(AvailableSlots[3], Marcadia.Number);
                         break;
                     }
                 case 50001453:
                     {
                         AnnihilationNation.Unlock = 1;
-                        Memory.WriteByte(0x20143060, AnnihilationNation.Number);
+                        Memory.WriteByte(AvailableSlots[4], AnnihilationNation.Number);
                         break;
                     }
                 case 50001454:
                     {
                         Aquatos.Unlock = 1;
-                        Memory.Write(0x20143064, Aquatos.Number);
+                        Memory.Write(AvailableSlots[5], Aquatos.Number);
                         break;
                     }
                 case 50001455:
                     {
                         Tyhrranosis.Unlock = 1;
-                        Memory.WriteByte(0x20143068, Tyhrranosis.Number);
+                        Memory.WriteByte(AvailableSlots[6], Tyhrranosis.Number);
                         break;
                     }
                 case 50001456:
                     {
                         Daxx.Unlock = 1;
-                        Memory.WriteByte(0x2014306C, Daxx.Number);
+                        Memory.WriteByte(AvailableSlots[7], Daxx.Number);
                         break;
                     }
                 case 50001457:
                     {
                         ObaniGemini.Unlock = 1;
-                        Memory.WriteByte(0x20143070, ObaniGemini.Number);
+                        Memory.WriteByte(AvailableSlots[8], ObaniGemini.Number);
                         break;
                     }
                 case 50001458:
                     {
                         Rilgar.Unlock = 1;
-                        Memory.WriteByte(0x20143074, Rilgar.Number); 
+                        Memory.WriteByte(AvailableSlots[9], Rilgar.Number); 
                         break;
                     }
                 case 50001459:
                     {
                         HolostarStudios.Unlock = 1;
-                        Memory.WriteByte(0x20143078, HolostarStudios.Number);
+                        Memory.WriteByte(AvailableSlots[10], HolostarStudios.Number);
                         break;
                     }
                 case 50001460:
                     {
                         ObaniDraco.Unlock = 1;
-                        Memory.WriteByte(0x2014307C, ObaniDraco.Number);
+                        Memory.WriteByte(AvailableSlots[11], ObaniDraco.Number);
                         break;
                     }
                 case 50001461:
                     {
                         ZeldrinStarport.Unlock = 1;
-                        Memory.WriteByte(0x20143080, ZeldrinStarport.Number);
+                        Memory.WriteByte(AvailableSlots[12], ZeldrinStarport.Number);
                         break;
                     }
                 case 50001462:
                     {
                         Metropolis.Unlock = 1;
-                        Memory.WriteByte(0x20143084, Metropolis.Number);
+                        Memory.WriteByte(AvailableSlots[13], Metropolis.Number);
                         break;
                     }
                 case 50001463:
                     {
                         Zeldrin.Unlock = 1;                                            
-                        Memory.WriteByte(0x20143088, Zeldrin.Number);
+                        Memory.WriteByte(AvailableSlots[14], Zeldrin.Number);
                         break;
                     }
                 case 50001464:
                     {
                         Aridia.Unlock = 1;
-                        Memory.WriteByte(0x2014308C, Aridia.Number);
+                        Memory.WriteByte(AvailableSlots[15], Aridia.Number);
                         break;
                     }
                 case 50001465:
                     {
                         QwarksHideout.Unlock = 1;
-                        Memory.WriteByte(0x20143090, QwarksHideout.Number);
+                        Memory.WriteByte(AvailableSlots[16], QwarksHideout.Number);
                         break;
                     }
                 case 50001466:
                     {
                         Koros.Unlock = 1;
-                        Memory.WriteByte(0x20143094, Koros.Number);
+                        Memory.WriteByte(AvailableSlots[17], Koros.Number);
                         break;
                     }
                 case 50001467:
                     {
                         Mylon.Unlock = 1;
-                        Memory.WriteByte(0x20143098, Mylon.Number);
+                        Memory.WriteByte(AvailableSlots[18], Mylon.Number);
                         break;
                     }
             }
@@ -481,91 +496,90 @@ namespace RaC3AP
         }
         public static void UpdateWeapons(long id)
         {
-
             //Sets the unlock property in the weapon to 1
             //Then writes the value to the memory
 
-            switch(id)
+            switch (id)
                 {
                 case 50001400:
                     ShockBlaster.Unlock = 1;
-                    Memory.Write(Addresses.unlockShockBlaster, ShockBlaster.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockShockBlaster, ShockBlaster.Unlock);
                     break;
                 case 50001401:
                     NitroLauncher.Unlock = 1;
-                    Memory.Write(Addresses.unlockNitroLauncher, NitroLauncher.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockNitroLauncher, NitroLauncher.Unlock);
                     break;
                 case 50001402:
                     N60Storm.Unlock = 1;
-                    Memory.Write(Addresses.unlockN60Storm, N60Storm.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockN60Storm, N60Storm.Unlock);
                     break;
                 case 50001403:
                     PlasmaWhip.Unlock = 1;
-                    Memory.Write(Addresses.unlockPlasmaWhip, PlasmaWhip.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockPlasmaWhip, PlasmaWhip.Unlock);
                     break;
                 case 50001404:
                     Infector.Unlock = 1;
-                    Memory.Write(Addresses.unlockInfector, Infector.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockInfector, Infector.Unlock);
                     break;
                 case 50001405:
                     SuckCannon.Unlock = 1;
-                    Memory.Write(Addresses.unlockSuckCannon, SuckCannon.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockSuckCannon, SuckCannon.Unlock);
                     break;
                 case 50001406:
                     SpittingHydra.Unlock = 1;
-                    Memory.Write(Addresses.unlockSpittingHydra, SpittingHydra.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockSpittingHydra, SpittingHydra.Unlock);
                     break;
                 case 50001407:
                     AgentsOfDoom.Unlock = 1;
-                    Memory.Write(Addresses.unlockAgentsOfDoom, AgentsOfDoom.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockAgentsOfDoom, AgentsOfDoom.Unlock);
                     break;
                 case 50001408:
                     FluxRifle.Unlock = 1;
-                    Memory.Write(Addresses.unlockFluxRifle, FluxRifle.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockFluxRifle, FluxRifle.Unlock);
                     break;
                 case 50001409:
                     Annihilator.Unlock = 1;
-                    Memory.Write(Addresses.unlockAnnihilator, Annihilator.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockAnnihilator, Annihilator.Unlock);
                     break;
                 case 50001410:
                     HoloShieldGlove.Unlock = 1;
-                    Memory.Write(Addresses.unlockHoloShieldGlove, HoloShieldGlove.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockHoloShieldGlove, HoloShieldGlove.Unlock);
                     break;
                 case 50001411:
                     DiskBladeGun.Unlock = 1;
-                    Memory.Write(Addresses.unlockDiskBladeGun, DiskBladeGun.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockDiskBladeGun, DiskBladeGun.Unlock);
                     break;
                 case 50001412:
                     RiftInducer.Unlock = 1;
-                    Memory.Write(Addresses.unlockRiftInducer, RiftInducer.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockRiftInducer, RiftInducer.Unlock);
                     break;
                 case 50001413:
                     QwackORay.Unlock = 1;
-                    Memory.Write(Addresses.unlockQwackORay, QwackORay.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockQwackORay, QwackORay.Unlock);
                     break;
                 case 50001414:
                     RY3N0.Unlock = 1;
-                    Memory.Write(Addresses.unlockRY3N0, RY3N0.Unlock);
+                    Memory.Write(WeaponUnlocks.unlockRY3N0, RY3N0.Unlock);
                     break;
                 case 50001415:
                     MegaTurretGlove.Unlock = 1;
-                    Memory.WriteBit(Addresses.unlockMegaTurretGlove, 5, Convert.ToBoolean(MegaTurretGlove.Unlock));
+                    Memory.WriteBit(WeaponUnlocks.unlockMegaTurretGlove, 5, Convert.ToBoolean(MegaTurretGlove.Unlock));
                     break;
                 case 50001416:
                     LavaGun.Unlock = 1;
-                    Memory.WriteBit(Addresses.unlockLavaGun, 1, Convert.ToBoolean(LavaGun.Unlock));
+                    Memory.WriteBit(WeaponUnlocks.unlockLavaGun, 1, Convert.ToBoolean(LavaGun.Unlock));
                     break;
                 case 50001417:
                     ShieldCharger.Unlock = 1;
-                    Memory.WriteBit(Addresses.unlockShieldCharger, 6, Convert.ToBoolean(LavaGun.Unlock));
+                    Memory.WriteBit(WeaponUnlocks.unlockShieldCharger, 6, Convert.ToBoolean(LavaGun.Unlock));
                     break;
                 case 50001418:
                     Bouncer.Unlock = 1;
-                    Memory.WriteBit(Addresses.unlockBouncer, 3, Convert.ToBoolean(Bouncer.Unlock));
+                    Memory.WriteBit(WeaponUnlocks.unlockBouncer, 3, Convert.ToBoolean(Bouncer.Unlock));
                     break;
                 case 50001419:
                     PlasmaCoil.Unlock = 1;
-                    Memory.WriteBit(Addresses.unlockPlasmaCoil, 0, Convert.ToBoolean(PlasmaCoil.Unlock));
+                    Memory.WriteBit(WeaponUnlocks.unlockPlasmaCoil, 0, Convert.ToBoolean(PlasmaCoil.Unlock));
                     break;
             }
         } 
@@ -790,23 +804,23 @@ namespace RaC3AP
             //Don't continuously update these or else they'll never go down!
             if (id == 10020020)
             {
-                var Lives = Memory.ReadInt(0x2027DC00);
+                var Lives = Memory.ReadInt(Addresses.junkAddr1);
                 Lives += 1;
-                Memory.Write(0x2027DC00, Lives);
+                Memory.Write(Addresses.junkAddr1, Lives);
             }
             if (id == 10020019)
             {
-                var Charms = Memory.ReadInt(0x2027DC04);
+                var Charms = Memory.ReadInt(Addresses.junkAddr2);
                 if (Charms < 2)
                 {
                     Charms += 1;
-                    Memory.Write(0x2027DC04, Charms);
+                    Memory.Write(Addresses.junkAddr2, Charms);
                 }
                 else
                 {
-                    var Lives = Memory.ReadInt(0x2027DC00);
+                    var Lives = Memory.ReadInt(Addresses.junkAddr1);
                     Lives += 1;
-                    Memory.Write(0x2027DC00, Lives);
+                    Memory.Write(Addresses.junkAddr1, Lives);
                 }
             }
             return;
@@ -1180,7 +1194,7 @@ namespace RaC3AP
         }
         public static void VerifyLastUsed()
         {
-            byte m = Memory.ReadByte(0x20142674);
+            byte m = Memory.ReadByte(lastUsed[1]);
             foreach (ulong slot in lastUsed)
             {
                 if (m >= 39 && m <= 43 && ShockBlaster.Unlock == 0 && Memory.ReadByte(slot) == 39)
@@ -1298,123 +1312,60 @@ namespace RaC3AP
 
         public static void unlockAllWeapons()
         {
-
             // Sets all weapon unlock addresses to 1
-            Memory.Write(0x20142CC7, 1);
-            Memory.Write(0x20142D17, 1);
-            Memory.Write(0x20142CCF, 1);
-            Memory.Write(0x20142D1F, 1);
-            Memory.Write(0x20142CD7, 1);
-            Memory.Write(0x20142D27, 1);
-            Memory.Write(0x20142CE7, 1);
-            Memory.Write(0x20142CF7, 1);
-            Memory.Write(0x20142D0F, 1);
-            Memory.Write(0x20142CDF, 1);
-            Memory.Write(0x20142D07, 1);
-            Memory.Write(0x20142CEF, 1);
-            Memory.Write(0x20142CFF, 1);
-            Memory.Write(0x20142D2F, 1);
-            Memory.Write(0x20142D37, 1);
-            Memory.WriteBit(0x20142CB5, 5, true);
-            Memory.WriteBit(0x20142CB1, 1, true);
-            Memory.WriteBit(0x20142CB6, 6, true);
-            Memory.WriteBit(0x20142CB3, 3, true);
-            Memory.WriteBit(0x20142CB0, 0, true);
-
+            foreach (var field in typeof(WeaponUnlocks).GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy))
+            {
+                if (field.IsLiteral && !field.IsInitOnly) // const fields only
+                {
+                    int value = (int)field.GetRawConstantValue();
+                    Memory.Write((ulong)value, 1);
+                }
+            }
         }
         public static void removeAllWeapons()
         {
-
-            // Sets all weapon unlock addresses to 1
-
-            Memory.Write(0x20142CC7, 0);
-            Memory.Write(0x20142D17, 0);
-            Memory.Write(0x20142CCF, 0);
-            Memory.Write(0x20142D1F, 0);
-            Memory.Write(0x20142CD7, 0);
-            Memory.Write(0x20142D27, 0);
-            Memory.Write(0x20142CE7, 0);
-            Memory.Write(0x20142CF7, 0);
-            Memory.Write(0x20142D0F, 0);
-            Memory.Write(0x20142CDF, 0);
-            Memory.Write(0x20142D07, 0);
-            Memory.Write(0x20142CEF, 0);
-            Memory.Write(0x20142CFF, 0);
-            Memory.Write(0x20142D2F, 0);
-            Memory.Write(0x20142D37, 0);
-            Memory.WriteBit(0x20142CB5, 5, false);
-            Memory.WriteBit(0x20142CB1, 1, false);
-            Memory.WriteBit(0x20142CB6, 6, false);
-            Memory.WriteBit(0x20142CB3, 3, false);
-            Memory.WriteBit(0x20142CB0, 0, false);
+            // Sets all weapon unlock addresses to 0
+            foreach (var field in typeof(WeaponUnlocks).GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy))
+            {
+                if (field.IsLiteral && !field.IsInitOnly) // const fields only
+                {
+                    int value = (int)field.GetRawConstantValue();
+                    Memory.Write((ulong)value, 0);
+                }
+            }
         }
         public static void unlockAllGadgets()
         {
 
-            // Sets all gadget unlock addresses to 0
-
-            Memory.Write(0x20142CAB, 1); //Hypershot
-            Memory.Write(0x20142CB2, 1); //Refractor
-            Memory.Write(0x20142CBE, 1); //Tyhrra-Guise
-            Memory.Write(0x20142CBF, 1); //WarpPad
-            Memory.Write(0x20142CC3, 1); //PDA
-            Memory.Write(0x20142CBD, 1); //Charge Boots
-            Memory.Write(0x20142CAD, 1); //Grav-Boots
-            Memory.Write(0x20142CB4, 1); //Hacker
-            Memory.Write(0x20142CA7, 1); //Bolt Grabber V2
-            Memory.Write(0x20142CA5, 1); //Map O Matic
-            Memory.Write(0x20142CC0, 1); //NanoPak
-            Memory.WriteBit(0x201D554F, 8, true); //Vidcomic 1
-            Memory.WriteBit(0x201D5551, 1, true); //Vidcomic 2
-            Memory.WriteBit(0x201D5552, 2, true); //Vidcomic 3
-            Memory.WriteBit(0x201D5550, 0, true); //Vidcomic 4
-            Memory.WriteBit(0x201D5553, 3, true); //Vidcomic 5
-
+            // Sets all gadget unlock addresses to 1
+            foreach (var field in typeof(GadgetAddresses).GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy))
+            {
+                if (field.IsLiteral && !field.IsInitOnly) // const fields only
+                {
+                    int value = (int)field.GetRawConstantValue();
+                    Memory.Write((ulong)value, 1);
+                }
+            }
         }
         public static void removeAllGadgets()
         {
 
             // Sets all gadget unlock addresses to 0
-
-            Memory.Write(0x20142CAB, 0); //Hypershot
-            Memory.Write(0x20142CB2, 0); //Refractor
-            Memory.Write(0x20142CBE, 0); //Tyhrra-Guise
-            Memory.Write(0x20142CBF, 0); //WarpPad
-            Memory.Write(0x20142CC3, 0); //PDA
-            Memory.Write(0x20142CBD, 0); //Charge Boots
-            Memory.Write(0x20142CAD, 0); //Grav-Boots
-            Memory.Write(0x20142CB4, 0); //Hacker
-            Memory.Write(0x20142CA7, 0); //Bolt Grabber V2
-            Memory.Write(0x20142CA5, 0); //Map O Matic
-            Memory.Write(0x20142CC0, 0); //NanoPak
-            Memory.WriteBit(0x201D554F, 7, false); //Vidcomic 1
-            Memory.WriteBit(0x201D5551, 1, false); //Vidcomic 2
-            Memory.WriteBit(0x201D5552, 2, false); //Vidcomic 3
-            Memory.WriteBit(0x201D5550, 0, false); //Vidcomic 4
-            Memory.WriteBit(0x201D5553, 3, false); //Vidcomic 5
-
+            foreach (var field in typeof(GadgetAddresses).GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy))
+            {
+                if (field.IsLiteral && !field.IsInitOnly) // const fields only
+                {
+                    int value = (int)field.GetRawConstantValue();
+                    Memory.Write((ulong)value, 0);
+                }
+            }
         }
         public static void removeAllPlanets()
         {
-            Memory.WriteByte(AvailableSlots[0], 0);
-            Memory.WriteByte(AvailableSlots[1], 0);
-            Memory.WriteByte(AvailableSlots[2], 0);
-            Memory.WriteByte(AvailableSlots[3], 0);
-            Memory.WriteByte(AvailableSlots[4], 0);
-            Memory.WriteByte(AvailableSlots[5], 0);
-            Memory.WriteByte(AvailableSlots[6], 0);
-            Memory.WriteByte(AvailableSlots[7], 0);
-            Memory.WriteByte(AvailableSlots[8], 0);
-            Memory.WriteByte(AvailableSlots[9], 0);
-            Memory.WriteByte(AvailableSlots[10], 0);
-            Memory.WriteByte(AvailableSlots[11], 0);
-            Memory.WriteByte(AvailableSlots[12], 0);
-            Memory.WriteByte(AvailableSlots[13], 0);
-            Memory.WriteByte(AvailableSlots[14], 0);
-            Memory.WriteByte(AvailableSlots[15], 0);
-            Memory.WriteByte(AvailableSlots[16], 0);
-            Memory.WriteByte(AvailableSlots[17], 0);
-
+            foreach (var address in AvailableSlots)
+            {
+                Memory.WriteByte(address, 0);
+            }
         }
     }
 
