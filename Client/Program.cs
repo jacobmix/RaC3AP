@@ -1090,82 +1090,24 @@ namespace RaC3AP
         {
             foreach(var slot in AvailableSlots)
             {
-                if(number == 4 && Marcadia.Unlock == 0 && Memory.ReadByte(slot) == 4)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if(number == 5 && Daxx.Unlock == 0 && Memory.ReadByte(slot) == 5)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if(number == 7 && AnnihilationNation.Unlock == 0 && Memory.ReadByte(slot) == 7)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if(number == 8 && Aquatos.Unlock == 0 && Memory.ReadByte(slot) == 8)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (number == 9 && Tyhrranosis.Unlock == 0 && Memory.ReadByte(slot) == 9)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (number == 10 && ZeldrinStarport.Unlock == 0 && Memory.ReadByte(slot) == 10)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (number == 11 && ObaniGemini.Unlock == 0 && Memory.ReadByte(slot) == 11)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (number == 12 && Rilgar.Unlock == 0 && Memory.ReadByte(slot) == 12)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (number == 13 && HolostarStudios.Unlock == 0 && Memory.ReadByte(slot) == 13)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (number == 14 && Koros.Unlock == 0 && Memory.ReadByte(slot) == 14)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (number == 16 && Metropolis.Unlock == 0 && Memory.ReadByte(slot) == 16)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (number == 17 && Zeldrin.Unlock == 0 && Memory.ReadByte(slot) == 17)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (number == 18 && Aridia.Unlock == 0 && Memory.ReadByte(slot) == 18)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (number == 19 && QwarksHideout.Unlock == 0 && Memory.ReadByte(slot) == 19)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (number == 20 && ObaniDraco.Unlock == 0 && Memory.ReadByte(slot) == 20)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (number == 21 && Mylon.Unlock == 0 && Memory.ReadByte(slot) == 21)
+                if (
+                    (number == 4 && Marcadia.Unlock == 0 && Memory.ReadByte(slot) == 4) ||
+                    (number == 5 && Daxx.Unlock == 0 && Memory.ReadByte(slot) == 5) ||
+                    (number == 7 && AnnihilationNation.Unlock == 0 && Memory.ReadByte(slot) == 7) ||
+                    (number == 8 && Aquatos.Unlock == 0 && Memory.ReadByte(slot) == 8) ||
+                    (number == 9 && Tyhrranosis.Unlock == 0 && Memory.ReadByte(slot) == 9) ||
+                    (number == 10 && ZeldrinStarport.Unlock == 0 && Memory.ReadByte(slot) == 10) ||
+                    (number == 11 && ObaniGemini.Unlock == 0 && Memory.ReadByte(slot) == 11) ||
+                    (number == 12 && Rilgar.Unlock == 0 && Memory.ReadByte(slot) == 12) ||
+                    (number == 13 && HolostarStudios.Unlock == 0 && Memory.ReadByte(slot) == 13) ||
+                    (number == 14 && Koros.Unlock == 0 && Memory.ReadByte(slot) == 14) ||
+                    (number == 16 && Metropolis.Unlock == 0 && Memory.ReadByte(slot) == 16) ||
+                    (number == 17 && Zeldrin.Unlock == 0 && Memory.ReadByte(slot) == 17) ||
+                    (number == 18 && Aridia.Unlock == 0 && Memory.ReadByte(slot) == 18) ||
+                    (number == 19 && QwarksHideout.Unlock == 0 && Memory.ReadByte(slot) == 19) ||
+                    (number == 20 && ObaniDraco.Unlock == 0 && Memory.ReadByte(slot) == 20) ||
+                    (number == 21 && Mylon.Unlock == 0 && Memory.ReadByte(slot) == 21)
+                )
                 {
                     Memory.WriteByte(slot, 0);
                     break;
