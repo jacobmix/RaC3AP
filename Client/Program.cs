@@ -1,8 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Archipelago.Core;
+using Archipelago.Core.GameClients;
 using Archipelago.Core.Models;
 using Archipelago.Core.Util;
-using Archipelago.Core.GameClients;
 using Archipelago.MultiClient.Net.Packets;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -15,6 +15,7 @@ using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Reflection.Metadata.BlobBuilder;
 
 public class cPCSX2Client : IGameClient
@@ -168,9 +169,9 @@ namespace RaC3AP
             foreach (var location in locations)
             {
                 var offset = 0;
-                if (0x001BBB29 <= location.Address && location.Address <= 0x001BBB50) // Titanium Bolt
+                if (location.Name.Contains("T-Bolt:")) // Titanium Bolt
                     offset = GlobalConfig.TitaniumOffset;
-                else if (0x001D554F <= location.Address && location.Address <= 0x001D5553) // VidComic
+                else if (location.Name.Contains("Qwark Vidcomic")) // VidComic
                     offset = GlobalConfig.VidComicOffset;
                 else if (0x00100004 <= location.Address && location.Address <= 0x0010004C) // Weapon Dummy EXP
                     offset = 0;
