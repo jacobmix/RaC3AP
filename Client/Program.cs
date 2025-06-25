@@ -2,8 +2,8 @@
 using Archipelago.Core;
 using Archipelago.Core.Models;
 using Archipelago.Core.Util;
+using Archipelago.Core.GameClients;
 using Archipelago.MultiClient.Net.Packets;
-using Archipelago.PCSX2;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RaC3AP.Models;
@@ -16,6 +16,32 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Xml.Linq;
 using static System.Reflection.Metadata.BlobBuilder;
+
+public class cPCSX2Client : IGameClient
+{
+    public bool IsConnected { get; set; }
+    public int ProcId { get; set; }
+    public string ProcessName { get; set; }
+    public cPCSX2Client()
+    {
+
+        ProcessName = "pcsx2-qt";
+
+        ProcId = Memory.GetProcessID(ProcessName);
+    }
+    public bool Connect()
+    {
+        Console.WriteLine($"Connecting to {ProcessName}");
+        if (ProcId == 0)
+        {
+            Console.WriteLine($"{ProcessName} not found.");
+            return false;
+        }
+        IsConnected = true;
+        return true;
+    }
+}
+
 
 namespace RaC3AP
 {
@@ -116,7 +142,10 @@ namespace RaC3AP
 
         static async Task<bool> ConnectAsync(string address, string playerName, string password)
         {
-            PCSX2Client client = new PCSX2Client();
+            // Avoid Bug of Archipelago.Core v0.3.25, which is "System.ArgumentException: 'CurrentProcId has not been set'"
+            //var client = new PCSX2Client();
+            var client = new cPCSX2Client();
+
             var pcsx2Connected = client.Connect();
             if (!pcsx2Connected)
             {
@@ -125,11 +154,13 @@ namespace RaC3AP
             }
             Console.WriteLine($"Connected to PCSX2.");
 
-            //Set the game completion flag to 0, so boss locations won't be sent unintentionally.
-            Memory.Write(GlobalConfig.DefeatNefarious, 0); 
-
             Console.WriteLine($"Connecting to Archipelago.");
             ArchipelagoClient Client = new(client);
+            Memory.GlobalOffset = Memory.GetPCSX2Offset();
+
+            //Set the game completion flag to 0, so boss locations won't be sent unintentionally.
+            Memory.Write(GlobalConfig.DefeatNefarious, 0);
+
             await Client.Connect(address, "Ratchet and Clank 3 Up your Arsenal");
             var locations = Helpers.GetLocations();
             // Fix location Address for JP version
@@ -137,11 +168,11 @@ namespace RaC3AP
             foreach (var location in locations)
             {
                 var offset = 0;
-                if (0x201BBB29 <= location.Address && location.Address <= 0x201BBB50) // Titanium Bolt
+                if (0x001BBB29 <= location.Address && location.Address <= 0x001BBB50) // Titanium Bolt
                     offset = GlobalConfig.TitaniumOffset;
-                else if (0x201D554F <= location.Address && location.Address <= 0x201D5553) // VidComic
+                else if (0x001D554F <= location.Address && location.Address <= 0x001D5553) // VidComic
                     offset = GlobalConfig.VidComicOffset;
-                else if (0x20100004 <= location.Address && location.Address <= 0x2010004C) // Weapon Dummy EXP
+                else if (0x00100004 <= location.Address && location.Address <= 0x0010004C) // Weapon Dummy EXP
                     offset = 0;
                 else // Others
                     offset = GlobalConfig.AddressOffset;
