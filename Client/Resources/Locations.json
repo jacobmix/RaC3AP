@@ -877,6 +877,41 @@
     "AddressBit": 0
   },
   {
+    "Name": "T-Bolt: VidComic 1",
+    "Id": 50001201,
+    "Address": "0x201BBB32",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "T-Bolt: VidComic 2",
+    "Id": 50001202,
+    "Address": "0x201BBB33",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "T-Bolt: VidComic 3",
+    "Id": 50001203,
+    "Address": "0x201BBB34",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "T-Bolt: VidComic 4",
+    "Id": 50001204,
+    "Address": "0x201BBB35",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "T-Bolt: VidComic 5",
+    "Id": 50001205,
+    "Address": "0x201BBB36",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
     "Name": "Shock Blaster: V2",
     "Id": 50001500,
     "Address": "0x20100004",
