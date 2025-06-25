@@ -1046,99 +1046,29 @@ namespace RaC3AP
         {
             // Cycles through the quick select menu, checking every slot for the weapon version value inside
             // If the value matches the weapon's version, and the weapon is currently not unlocked, it will remove that weapon
-            foreach(var slot in QuickSelect)
+            foreach (var slot in QuickSelect)
             {
-                if (address >= 39 && address <= 43 && ShockBlaster.Unlock == 0 && Memory.ReadByte(slot) == 39)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (address >= 119 && address <= 123 && NitroLauncher.Unlock == 0 && Memory.ReadByte(slot) == 119)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (address >= 47 && address <= 51 && N60Storm.Unlock == 0 && Memory.ReadByte(slot) == 47)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (address >= 127 && address <= 131 && PlasmaWhip.Unlock == 0 && Memory.ReadByte(slot) == 127)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (address >= 55 && address <= 59 && Infector.Unlock == 0 && Memory.ReadByte(slot) == 55)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (address >= 135 && address <= 139 && SuckCannon.Unlock == 0 && Memory.ReadByte(slot) == 135)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (address >= 71 && address <= 72 && SpittingHydra.Unlock == 0 && Memory.ReadByte(slot) == 71)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (address >= 87 && address <= 91 && AgentsOfDoom.Unlock == 0 && Memory.ReadByte(slot) == 87)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (address >= 111 && address <= 115 && FluxRifle.Unlock == 0 && Memory.ReadByte(slot) == 111)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (address >= 63 && address <= 67 && Annihilator.Unlock == 0 && Memory.ReadByte(slot) == 63)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (address >= 103 && address <= 107 && HoloShieldGlove.Unlock == 0 && Memory.ReadByte(slot) == 103)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (address >= 95 && address <= 99 && RiftInducer.Unlock == 0 && Memory.ReadByte(slot) == 95)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (address >= 143 && address <= 147 && QwackORay.Unlock == 0 && Memory.ReadByte(slot) == 143)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (address >= 151 && address <= 155 && RY3N0.Unlock == 0 && Memory.ReadByte(slot) == 151)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (address == 21 && MegaTurretGlove.Unlock == 0 && Memory.ReadByte(slot) == 21)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (address == 17 && LavaGun.Unlock == 0 && Memory.ReadByte(slot) == 17)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (address == 22 && ShieldCharger.Unlock == 0 && Memory.ReadByte(slot) == 22)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (address == 19 && Bouncer.Unlock == 0 && Memory.ReadByte(slot) == 19)
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-                if (address == 16 && PlasmaCoil.Unlock == 0 && Memory.ReadByte(slot) == 16)
+                if (
+                   (address >= 39 && address <= 43 && ShockBlaster.Unlock == 0 && Memory.ReadByte(slot) == 39) ||
+                   (address >= 119 && address <= 123 && NitroLauncher.Unlock == 0 && Memory.ReadByte(slot) == 119) ||
+                   (address >= 47 && address <= 51 && N60Storm.Unlock == 0 && Memory.ReadByte(slot) == 47) ||
+                   (address >= 127 && address <= 131 && PlasmaWhip.Unlock == 0 && Memory.ReadByte(slot) == 127) ||
+                   (address >= 55 && address <= 59 && Infector.Unlock == 0 && Memory.ReadByte(slot) == 55) ||
+                   (address >= 135 && address <= 139 && SuckCannon.Unlock == 0 && Memory.ReadByte(slot) == 135) ||
+                   (address >= 71 && address <= 72 && SpittingHydra.Unlock == 0 && Memory.ReadByte(slot) == 71) ||
+                   (address >= 87 && address <= 91 && AgentsOfDoom.Unlock == 0 && Memory.ReadByte(slot) == 87) ||
+                   (address >= 111 && address <= 115 && FluxRifle.Unlock == 0 && Memory.ReadByte(slot) == 111) ||
+                   (address >= 63 && address <= 67 && Annihilator.Unlock == 0 && Memory.ReadByte(slot) == 63) ||
+                   (address >= 103 && address <= 107 && HoloShieldGlove.Unlock == 0 && Memory.ReadByte(slot) == 103) ||
+                   (address >= 95 && address <= 99 && RiftInducer.Unlock == 0 && Memory.ReadByte(slot) == 95) ||
+                   (address >= 143 && address <= 147 && QwackORay.Unlock == 0 && Memory.ReadByte(slot) == 143) ||
+                   (address >= 151 && address <= 155 && RY3N0.Unlock == 0 && Memory.ReadByte(slot) == 151) ||
+                   (address == 21 && MegaTurretGlove.Unlock == 0 && Memory.ReadByte(slot) == 21) ||
+                   (address == 17 && LavaGun.Unlock == 0 && Memory.ReadByte(slot) == 17) ||
+                   (address == 22 && ShieldCharger.Unlock == 0 && Memory.ReadByte(slot) == 22) ||
+                   (address == 19 && Bouncer.Unlock == 0 && Memory.ReadByte(slot) == 19) ||
+                   (address == 16 && PlasmaCoil.Unlock == 0 && Memory.ReadByte(slot) == 16)
+                   )
                 {
                     Memory.WriteByte(slot, 0);
                     break;
