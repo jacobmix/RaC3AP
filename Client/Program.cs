@@ -882,101 +882,33 @@ namespace RaC3AP
             {
                 ulong k = Addresses.currentlyEquippedWeapon;
                 byte m = Memory.ReadByte(Addresses.currentlyEquippedWeapon);
+                /* When weapon is enabled, if it is not unlocked, disable that weapon. */
                 if (weapon.Unlock == 0 && weapon.Unlock != Memory.ReadInt(weapon.unlockAddress))
                 {
                     Memory.WriteBit(weapon.unlockAddress, 0, false);
                 }
-                if (m >= 39 && m <= 43 && ShockBlaster.Unlock == 0 && Memory.ReadByte(k) == 39)
-                {
-                    Memory.WriteByte(k, 9);
-                    break;
-                }
-                if (m >= 119 && m <= 123 && NitroLauncher.Unlock == 0 && Memory.ReadByte(k) == 119)
-                {
-                    Memory.WriteByte(k, 9);
-                    break;
-                }
-                if (m >= 47 && m <= 51 && N60Storm.Unlock == 0 && Memory.ReadByte(k) == 47)
-                {
-                    Memory.WriteByte(k, 9);
-                    break;
-                }
-                if (m >= 127 && m <= 131 && PlasmaWhip.Unlock == 0 && Memory.ReadByte(k) == 127)
-                {
-                    Memory.WriteByte(k, 9);
-                    break;
-                }
-                if (m >= 55 && m <= 59 && Infector.Unlock == 0 && Memory.ReadByte(k) == 55)
-                {
-                    Memory.WriteByte(k, 9);
-                    break;
-                }
-                if (m >= 135 && m <= 139 && SuckCannon.Unlock == 0 && Memory.ReadByte(k) == 135)
-                {
-                    Memory.WriteByte(k, 9);
-                    break;
-                }
-                if (m >= 71 && m <= 72 && SpittingHydra.Unlock == 0 && Memory.ReadByte(k) == 71)
-                {
-                    Memory.WriteByte(k, 9);
-                    break;
-                }
-                if (m >= 87 && m <= 91 && AgentsOfDoom.Unlock == 0 && Memory.ReadByte(k) == 87)
-                {
-                    Memory.WriteByte(k, 9);
-                    break;
-                }
-                if (m >= 111 && m <= 115 && FluxRifle.Unlock == 0 && Memory.ReadByte(k) == 111)
-                {
-                    Memory.WriteByte(k, 9);
-                    break;
-                }
-                if (m >= 63 && m <= 67 && Annihilator.Unlock == 0 && Memory.ReadByte(k) == 63)
-                {
-                    Memory.WriteByte(k, 9);
-                    break;
-                }
-                if (m >= 103 && m <= 107 && HoloShieldGlove.Unlock == 0 && Memory.ReadByte(k) == 103)
-                {
-                    Memory.WriteByte(k, 9);
-                    break;
-                }
-                if (m >= 95 && m <= 99 && RiftInducer.Unlock == 0 && Memory.ReadByte(k) == 95)
-                {
-                    Memory.WriteByte(k, 9);
-                    break;
-                }
-                if (m >= 143 && m <= 147 && QwackORay.Unlock == 0 && Memory.ReadByte(k) == 143)
-                {
-                    Memory.WriteByte(k, 9);
-                    break;
-                }
-                if (m >= 151 && m <= 155 && RY3N0.Unlock == 0 && Memory.ReadByte(k) == 151)
-                {
-                    Memory.WriteByte(k, 9);
-                    break;
-                }
-                if (m == 21 && MegaTurretGlove.Unlock == 0 && Memory.ReadByte(k) == 21)
-                {
-                    Memory.WriteByte(k, 9);
-                    break;
-                }
-                if (m == 17 && LavaGun.Unlock == 0 && Memory.ReadByte(k) == 17)
-                {
-                    Memory.WriteByte(k, 9);
-                    break;
-                }
-                if (m == 22 && ShieldCharger.Unlock == 0 && Memory.ReadByte(k) == 22)
-                {
-                    Memory.WriteByte(k, 9);
-                    break;
-                }
-                if (m == 19 && Bouncer.Unlock == 0 && Memory.ReadByte(k) == 19)
-                {
-                    Memory.WriteByte(k, 9);
-                    break;
-                }
-                if (m == 16 && PlasmaCoil.Unlock == 0 && Memory.ReadByte(k) == 16)
+                /* Remove currentWeapon when it is not unlocked */
+                if (
+                    (m >= 39 && m <= 43 && ShockBlaster.Unlock == 0 && Memory.ReadByte(k) == 39) ||
+                    (m >= 119 && m <= 123 && NitroLauncher.Unlock == 0 && Memory.ReadByte(k) == 119) ||
+                    (m >= 47 && m <= 51 && N60Storm.Unlock == 0 && Memory.ReadByte(k) == 47) ||
+                    (m >= 127 && m <= 131 && PlasmaWhip.Unlock == 0 && Memory.ReadByte(k) == 127) ||
+                    (m >= 55 && m <= 59 && Infector.Unlock == 0 && Memory.ReadByte(k) == 55) ||
+                    (m >= 135 && m <= 139 && SuckCannon.Unlock == 0 && Memory.ReadByte(k) == 135) ||
+                    (m >= 71 && m <= 72 && SpittingHydra.Unlock == 0 && Memory.ReadByte(k) == 71) ||
+                    (m >= 87 && m <= 91 && AgentsOfDoom.Unlock == 0 && Memory.ReadByte(k) == 87) ||
+                    (m >= 111 && m <= 115 && FluxRifle.Unlock == 0 && Memory.ReadByte(k) == 111) ||
+                    (m >= 63 && m <= 67 && Annihilator.Unlock == 0 && Memory.ReadByte(k) == 63) ||
+                    (m >= 103 && m <= 107 && HoloShieldGlove.Unlock == 0 && Memory.ReadByte(k) == 103) ||
+                    (m >= 95 && m <= 99 && RiftInducer.Unlock == 0 && Memory.ReadByte(k) == 95) ||
+                    (m >= 143 && m <= 147 && QwackORay.Unlock == 0 && Memory.ReadByte(k) == 143) ||
+                    (m >= 151 && m <= 155 && RY3N0.Unlock == 0 && Memory.ReadByte(k) == 151) ||
+                    (m == 21 && MegaTurretGlove.Unlock == 0 && Memory.ReadByte(k) == 21) ||
+                    (m == 17 && LavaGun.Unlock == 0 && Memory.ReadByte(k) == 17) ||
+                    (m == 22 && ShieldCharger.Unlock == 0 && Memory.ReadByte(k) == 22) ||
+                    (m == 19 && Bouncer.Unlock == 0 && Memory.ReadByte(k) == 19) ||
+                    (m == 16 && PlasmaCoil.Unlock == 0 && Memory.ReadByte(k) == 16)
+                )
                 {
                     Memory.WriteByte(k, 9);
                     break;
