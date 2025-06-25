@@ -18,8 +18,26 @@ using System.Threading.Tasks;
  * English  : 20 1D4C40
  * Japanese : 20 1DDF00
  * diff: 92C0
+ *
+ * Skillpoint
+ * English  : 20 1D54B0 ~ CF ( B0 and CF is not used in game)
+ * Japanese : 20 1DE7B0 ~ CF ( CE and CF is not used and B0 is used for 22th skip point)
+ * diff: 9300
+ *
+ * Titanium bolt
+ * English  : 20 1BBB29 ~ 40(0x28)byte ( Spreadsheet is 1BBB18, but location file is 1BBB29)
+ * Japanese : 20 1C4DC1 ~ 40(0x28)byte
+ * diff: 9298
+ * 
+ * Story Flag
+ * English  : 20 1426E0 ~ xx(0xXX)byte
+ * Japanese : 20 142660 ~ xx(0xXX)byte
+ * diff: 0x80
  */
-
+/*
+ * Marcadia Mission 1426B8 - BA
+ * 
+ */
 namespace RaC3AP
 {
     public static class GlobalConfig
@@ -27,6 +45,8 @@ namespace RaC3AP
         public const int AddressOffset = -0x80; // EN: 0x00, JP: -0x80
         public const int QuicksetOffset = 0xCDE0; // EN: 0x00, JP: 0xCDE0
         public const int CurrentEquipmentOffset = 0x92C0; // EN: 0x00, JP: 0x92C0
+        public const int VidComicOffset = 0x9300; // EN: 0x00, JP: 0x9300
+        public const int TitaniumOffset = 0x9298; // EN: 0x00, JP: 0x9300
         /*
         public const int AddressOffset = 0x0; // EN: 0x00, JP: -0x80
         public const int QuicksetOffset = 0x0; // EN: 0x00, JP: 0xCDE0
@@ -112,11 +132,11 @@ namespace RaC3AP
         public const int mapOMatic = 0x20142CA5 + GlobalConfig.AddressOffset;
         public const int nanoPak = 0x20142CC0 + GlobalConfig.AddressOffset;
 
-        public const int vidComic1 = 0x201D554F + GlobalConfig.AddressOffset;
-        public const int vidComic2 = 0x201D5551 + GlobalConfig.AddressOffset;
-        public const int vidComic3 = 0x201D5552 + GlobalConfig.AddressOffset;
-        public const int vidComic4 = 0x201D5550 + GlobalConfig.AddressOffset;
-        public const int vidComic5 = 0x201D5553 + GlobalConfig.AddressOffset;
+        public const int vidComic1 = 0x201D554F + GlobalConfig.VidComicOffset;
+        public const int vidComic2 = 0x201D5551 + GlobalConfig.VidComicOffset;
+        public const int vidComic3 = 0x201D5552 + GlobalConfig.VidComicOffset;
+        public const int vidComic4 = 0x201D5550 + GlobalConfig.VidComicOffset;
+        public const int vidComic5 = 0x201D5553 + GlobalConfig.VidComicOffset;
     }
     public class PlanetSlots
     {
@@ -186,10 +206,10 @@ namespace RaC3AP
     public class DummyEXPAddresses
     {
         //Refer to EXP Controller
-        public const int ShockBlaster = 0x2500B000;
-        public const int NitroLauncher = 0x2500B004;
-        public const int N60Storm = 0x2500B008;
-        public const int PlasmaWhip = 0x2500B00C;
+        public const int ShockBlaster = 0x20100004;
+        public const int NitroLauncher = 0x20100008;
+        public const int N60Storm = 0x201000C;
+        public const int PlasmaWhip = 0x2010010;
         public const int Infector = 0x20100014;
         public const int SuckCannon = 0x20100018;
         public const int SpittingHydra = 0x2010001C;

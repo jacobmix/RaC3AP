@@ -136,7 +136,16 @@ namespace RaC3AP
             var _i = 0;
             foreach (var location in locations)
             {
-                var tmp = (long)location.Address + GlobalConfig.AddressOffset;
+                var offset = 0;
+                if (0x201BBB29 <= location.Address && location.Address <= 0x201BBB50) // Titanium Bolt
+                    offset = GlobalConfig.TitaniumOffset;
+                else if (0x201D554F <= location.Address && location.Address <= 0x201D5553) // VidComic
+                    offset = GlobalConfig.VidComicOffset;
+                else if (0x20100004 <= location.Address && location.Address <= 0x2010004C) // Weapon Dummy EXP
+                    offset = 0;
+                else // Others
+                    offset = GlobalConfig.AddressOffset;
+                var tmp = (long)location.Address + offset;
                 locations[_i].Address = (ulong)tmp;
                 _i++;
             }
