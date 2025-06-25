@@ -10,9 +10,9 @@ using System.Threading.Tasks;
  * diff: -0x80
  * 
  * Quicksetting:
- * English  : 20 1D4C50
+ * English  : 20 1D4C60
  * Japanese : 20 1E1A30
- * diff: CDE0
+ * diff: CDD0
  * 
  * CurrentEquipment:
  * English  : 20 1D4C40
@@ -43,7 +43,7 @@ namespace RaC3AP
     public static class GlobalConfig
     {
         public const int AddressOffset = -0x80; // EN: 0x00, JP: -0x80
-        public const int QuicksetOffset = 0xCDE0; // EN: 0x00, JP: 0xCDE0
+        public const int QuicksetOffset = 0xCDD0; // EN: 0x00, JP: 0xCDE0
         public const int CurrentEquipmentOffset = 0x92C0; // EN: 0x00, JP: 0x92C0
         public const int VidComicOffset = 0x9300; // EN: 0x00, JP: 0x9300
         public const int TitaniumOffset = 0x9298; // EN: 0x00, JP: 0x9300
