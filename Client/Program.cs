@@ -211,7 +211,7 @@ namespace RaC3AP
                 {
                     UpdateUpgrades(item.Id);
                 }
-                if (item.Id >= 50001440 & item.Id <= 50001449 || item.Id >= 50001467 && item.Id <= 50001471)
+                if (item.Id >= 50001440 & item.Id <= 50001449 || item.Id >= 50001475 && item.Id <= 50001479)
                 {
                     UpdateGadgets(item.Id);
                 }
@@ -235,7 +235,7 @@ namespace RaC3AP
                 {
                     UpdateUpgrades(args.Item.Id);
                 }
-                if (args.Item.Id >= 50001440 & args.Item.Id <= 50001449 || args.Item.Id >= 50001467 && args.Item.Id <= 50001471)
+                if (args.Item.Id >= 50001440 & args.Item.Id <= 50001449 || args.Item.Id >= 50001475 && args.Item.Id <= 50001479)
                 {
                     UpdateGadgets(args.Item.Id);
                 }
@@ -812,27 +812,27 @@ namespace RaC3AP
                 case 50001449:
                     Memory.WriteBit(GadgetAddresses.pda, 1, true);
                     break;
-                case 50001467:
+                case 50001475:
                     {
                         Memory.WriteBit(GadgetAddresses.vidComic1, 1, true);
                         break;
                     }
-                case 50001468:
+                case 50001476:
                     {
                         Memory.WriteBit(GadgetAddresses.vidComic2, 1, true);
                         break;
                     }
-                case 50001469:
+                case 50001477:
                     {
                         Memory.WriteBit(GadgetAddresses.vidComic3, 1, true);
                         break;
                     }
-                case 50001470:
+                case 50001478:
                     {
                         Memory.WriteBit(GadgetAddresses.vidComic4, 1, true);
                         break;
                     }
-                case 50001471:
+                case 50001479:
                     {
                         Memory.WriteBit(GadgetAddresses.vidComic5, 1, true);
                         break;

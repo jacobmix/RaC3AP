@@ -122,11 +122,11 @@ post_planets = {
     "Infobot: Mylon": ItemData(50001467, ItemClassification.progression, 1), # Post-Koros
 }
 qwark_vidcomics = {
-    "Qwark Vidcomic 1": ItemData(50001468, ItemClassification.progression, 1),
-    "Qwark Vidcomic 2": ItemData(50001469, ItemClassification.progression, 1),
-    "Qwark Vidcomic 3": ItemData(50001470, ItemClassification.progression, 1),
-    "Qwark Vidcomic 4": ItemData(50001471, ItemClassification.progression, 1),
-    "Qwark Vidcomic 5": ItemData(50001472, ItemClassification.progression, 1),
+    "Qwark Vidcomic 1": ItemData(50001475, ItemClassification.progression, 1),
+    "Qwark Vidcomic 2": ItemData(50001476, ItemClassification.progression, 1),
+    "Qwark Vidcomic 3": ItemData(50001477, ItemClassification.progression, 1),
+    "Qwark Vidcomic 4": ItemData(50001478, ItemClassification.progression, 1),
+    "Qwark Vidcomic 5": ItemData(50001479, ItemClassification.progression, 1),
 }
 
 
