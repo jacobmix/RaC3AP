@@ -884,8 +884,14 @@ namespace RaC3AP
                 byte m = Memory.ReadByte(Addresses.currentlyEquippedWeapon);
                 if (weapon.Unlock == 0 && weapon.Unlock != Memory.ReadInt(weapon.unlockAddress))
                 {
-                    Memory.WriteBit(weapon.unlockAddress, 0, false);
+                    /* HACK: Wait for Location get is detected */
+                    if (weapon.unlockWait > 0)
+                        Memory.WriteBit(weapon.unlockAddress, 0, false);
+                    weapon.unlockWait++;
                 }
+                else
+                    weapon.unlockWait = 0;
+
                 if (m >= 39 && m <= 43 && ShockBlaster.Unlock == 0 && Memory.ReadByte(k) == 39)
                 {
                     Memory.WriteByte(k, 9);

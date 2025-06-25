@@ -25,5 +25,6 @@ namespace RaC3AP.Models
         public ulong expAddress = expAddress;
         public ulong versionAddress = versionAddress;
         public ulong unlockAddress = unlockAddress;
+        public int unlockWait = 0;
     }
 }
