@@ -9,10 +9,10 @@ using System.Threading.Tasks;
  * Japanese : 20 1425E0
  * diff: -0x80
  * 
- * Quicksetting:
+ * Quicksetting(CurrentEquipment + 0x20):
  * English  : 20 1D4C60
- * Japanese : 20 1E1A30
- * diff: CDD0
+ * Japanese : 20 1DDF20
+ * diff: 92C0
  * 
  * CurrentEquipment:
  * English  : 20 1D4C40
@@ -43,8 +43,7 @@ namespace RaC3AP
     public static class GlobalConfig
     {
         public const int AddressOffset = -0x80; // EN: 0x00, JP: -0x80
-        public const int QuicksetOffset = 0xCDD0; // EN: 0x00, JP: 0xCDE0
-        public const int CurrentEquipmentOffset = 0x92C0; // EN: 0x00, JP: 0x92C0
+        public const int EquipmentOffset = 0x92C0; // EN: 0x00, JP: 0x92C0
         public const int VidComicOffset = 0x9300; // EN: 0x00, JP: 0x9300
         public const int TitaniumOffset = 0x9298; // EN: 0x00, JP: 0x9300
         /*
@@ -115,7 +114,7 @@ namespace RaC3AP
         public const int junkAddr1 = 0x0027DC00 + GlobalConfig.AddressOffset;
         public const int junkAddr2 = 0x0027DC04 + GlobalConfig.AddressOffset;
 
-        public const int currentlyEquippedWeapon = 0x001D4C40 + GlobalConfig.CurrentEquipmentOffset;
+        public const int currentlyEquippedWeapon = 0x001D4C40 + GlobalConfig.EquipmentOffset;
     }
     public class GadgetAddresses
     {
@@ -184,23 +183,23 @@ namespace RaC3AP
     
     public class QuickSelectSlots
     {
-        public const ulong oneOne = 0x001D4C60 + GlobalConfig.QuicksetOffset;
-        public const ulong oneTwo = 0x001D4C64 + GlobalConfig.QuicksetOffset;
-        public const ulong oneThree = 0x001D4C68 + GlobalConfig.QuicksetOffset;
-        public const ulong oneFour = 0x001D4C6C + GlobalConfig.QuicksetOffset;
-        public const ulong oneFive = 0x001D4C70 + GlobalConfig.QuicksetOffset;
-        public const ulong oneSix = 0x001D4C74 + GlobalConfig.QuicksetOffset;
-        public const ulong oneSeven = 0x001D4C78 + GlobalConfig.QuicksetOffset;
-        public const ulong oneEight = 0x001D4C7C + GlobalConfig.QuicksetOffset;
+        public const ulong oneOne = 0x001D4C60 + GlobalConfig.EquipmentOffset;
+        public const ulong oneTwo = 0x001D4C64 + GlobalConfig.EquipmentOffset;
+        public const ulong oneThree = 0x001D4C68 + GlobalConfig.EquipmentOffset;
+        public const ulong oneFour = 0x001D4C6C + GlobalConfig.EquipmentOffset;
+        public const ulong oneFive = 0x001D4C70 + GlobalConfig.EquipmentOffset;
+        public const ulong oneSix = 0x001D4C74 + GlobalConfig.EquipmentOffset;
+        public const ulong oneSeven = 0x001D4C78 + GlobalConfig.EquipmentOffset;
+        public const ulong oneEight = 0x001D4C7C + GlobalConfig.EquipmentOffset;
 
-        public const ulong twoOne = 0x001D4C80 + GlobalConfig.QuicksetOffset;
-        public const ulong twoTwo = 0x001D4C84 + GlobalConfig.QuicksetOffset;
-        public const ulong twoThree = 0x001D4C88 + GlobalConfig.QuicksetOffset;
-        public const ulong twoFour = 0x001D4C8C + GlobalConfig.QuicksetOffset;
-        public const ulong twoFive = 0x001D4C90 + GlobalConfig.QuicksetOffset;
-        public const ulong twoSix = 0x001D4C94 + GlobalConfig.QuicksetOffset;
-        public const ulong twoSeven = 0x001D4C98 + GlobalConfig.QuicksetOffset;
-        public const ulong twoEight = 0x001D4C9C + GlobalConfig.QuicksetOffset;
+        public const ulong twoOne = 0x001D4C80 + GlobalConfig.EquipmentOffset;
+        public const ulong twoTwo = 0x001D4C84 + GlobalConfig.EquipmentOffset;
+        public const ulong twoThree = 0x001D4C88 + GlobalConfig.EquipmentOffset;
+        public const ulong twoFour = 0x001D4C8C + GlobalConfig.EquipmentOffset;
+        public const ulong twoFive = 0x001D4C90 + GlobalConfig.EquipmentOffset;
+        public const ulong twoSix = 0x001D4C94 + GlobalConfig.EquipmentOffset;
+        public const ulong twoSeven = 0x001D4C98 + GlobalConfig.EquipmentOffset;
+        public const ulong twoEight = 0x001D4C9C + GlobalConfig.EquipmentOffset;
     }
     
     public class DummyEXPAddresses
