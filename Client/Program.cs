@@ -58,6 +58,7 @@ namespace RaC3AP
         public static ulong[] QuickSelect = [QuickSelectSlots.oneOne, QuickSelectSlots.oneTwo, QuickSelectSlots.oneThree, QuickSelectSlots.oneFour, QuickSelectSlots.oneFive, QuickSelectSlots.oneSix, QuickSelectSlots.oneSeven, QuickSelectSlots.oneEight, QuickSelectSlots.twoOne, QuickSelectSlots.twoTwo, QuickSelectSlots.twoThree, QuickSelectSlots.twoFour, QuickSelectSlots.twoFive, QuickSelectSlots.twoSix, QuickSelectSlots.twoSeven, QuickSelectSlots.twoEight];
         public static ulong[] lastUsed = [Addresses.lastUsedWeaponOne, Addresses.lastUsedWeaponTwo, Addresses.lastUsedWeaponThree];
         public static int currentMultiplier = 2;
+        public static byte currentArmor = 0;
         public static Weapon ShockBlaster = new Weapon("Shock Blaster", WeaponVersionData.ADDexpShockBlaster, WeaponVersionData.ADDversionShockBlaster, WeaponUnlocks.unlockShockBlaster, DummyEXPAddresses.ShockBlaster);
         public static Weapon NitroLauncher = new Weapon("Nitro Launcher", WeaponVersionData.ADDexpNitroLauncher, WeaponVersionData.ADDversionNitroLauncher, WeaponUnlocks.unlockNitroLauncher, DummyEXPAddresses.NitroLauncher);
         public static Weapon N60Storm = new Weapon("N60 Storm", WeaponVersionData.ADDexpN60Storm, WeaponVersionData.ADDversionN60Storm, WeaponUnlocks.unlockN60Storm, DummyEXPAddresses.N60Storm);
@@ -842,8 +843,7 @@ namespace RaC3AP
         }
         public static void UpdateArmor()
         {
-            int i = Memory.ReadInt(Addresses.currentArmor) + 1;
-            Memory.Write(Addresses.currentArmor, i);
+            currentArmor += 1;
         }
         public static void UpdateJunk(long id)
         {
@@ -874,7 +874,7 @@ namespace RaC3AP
         }
         public static void UpdateValues()
         {
-            Memory.WriteByte(Addresses.armorEquipped, Addresses.currentArmor);
+            Memory.WriteByte(Addresses.armorEquipped, currentArmor);
 
             // Fix Bolt mulipiler
             Memory.Write(Addresses.boltXPMultiplier, currentMultiplier);
