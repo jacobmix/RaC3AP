@@ -165,7 +165,6 @@ namespace RaC3AP
             await Client.Connect(address, "Ratchet and Clank 3 Up your Arsenal");
             var locations = Helpers.GetLocations();
             // Fix location Address for JP version
-            var _i = 0;
             foreach (var location in locations)
             {
                 var offset = 0;
@@ -177,13 +176,8 @@ namespace RaC3AP
                     offset = 0;
                 else // Others
                     offset = GlobalConfig.AddressOffset;
-                var tmp = (long)location.Address + offset;
-                locations[_i].Address = (ulong)tmp;
-                _i++;
+                location.Address = location.Address + (ulong)offset;
             }
-            Console.WriteLine($"0x{locations[0].Address:X}");
-            Console.WriteLine($"0x{locations[1].Address:X}");
-            Console.WriteLine($"0x{locations[2].Address:X}");
 
             await Client.Login(playerName, password);
             Client.PopulateLocations(locations);
