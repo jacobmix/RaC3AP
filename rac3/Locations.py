@@ -179,7 +179,8 @@ rac3_locations = {
 
     #----- Planet Mylon -----#
     "Mylon: T-Bolt: Behind the Forcefield": LocData(50001496, "Mylon"),
-    "Mylon: Dr. Nefarious Defeated!": LocData(50001497, "Mylon")
+    "Mylon: Dr. Nefarious Defeated!": LocData(50001497, "Mylon"),
+    "Mylon: Biobliterator Defeated!": LocData(50001498, "Mylon")
 }
 
 weapon_upgrades = {

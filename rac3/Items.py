@@ -16,8 +16,8 @@ def create_itempool(world: "RaC3World") -> List[Item]:
 
         itempool += create_multiple_items(world, name, item_amount, item_type)
 
-    victory = create_item(world, "Dr. Nefarious Defeated!")
-    world.multiworld.get_location("Mylon: Dr. Nefarious Defeated!", world.player).place_locked_item(victory)
+    victory = create_item(world, "Biobliterator Defeated!")
+    world.multiworld.get_location("Mylon: Biobliterator Defeated!", world.player).place_locked_item(victory)
 
     itempool += create_junk_items(world, get_total_locations(world) - len(itempool) - 1)
     return itempool
@@ -145,7 +145,8 @@ junk_items = {
 }
 
 victory_item = {
-    "Dr. Nefarious Defeated!": ItemData(50001481, ItemClassification.progression, 0)
+    "Dr. Nefarious Defeated!": ItemData(50001481, ItemClassification.progression, 0),
+    "Biobliterator Defeated!": ItemData(50001482, ItemClassification.progression, 0)
 }
 
 

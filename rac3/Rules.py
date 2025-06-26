@@ -88,4 +88,6 @@ def set_rules(world: "RaC3World"):
              and state.has("Grav-Boots", world.player))
 
 
-    world.multiworld.completion_condition[world.player] = lambda state: state.has("Dr. Nefarious Defeated!", world.player)
+    #world.multiworld.completion_condition[world.player] = lambda state: state.has("Dr. Nefarious Defeated!", world.player)
+    world.multiworld.completion_condition[world.player] = lambda state: state.has("Biobliterator Defeated!", world.player)
+

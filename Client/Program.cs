@@ -187,11 +187,15 @@ namespace RaC3AP
             ConfigureOptions(Client.Options);
 #if DEBUG
             // For debugging
-            Memory.Write(GlobalConfig.NanotecExp, 700000); // 22310720=>200
+            Memory.Write(GlobalConfig.NanotecExp, 1000000); // 22310720=>200
             RY3N0.Unlock = 1;
             Memory.Write(WeaponUnlocks.unlockRY3N0, RY3N0.Unlock);
-            Memory.Write(RY3N0.expAddress, WeaponVersionData.ARRexpRY3N0[2]); //Lv3
+            Memory.Write(RY3N0.expAddress, WeaponVersionData.ARRexpRY3N0[3]); //Lv3
             Memory.Write(Addresses.ammoRY3N0, 100);
+            Memory.Write(Addresses.armorEquipped, 4);
+            // Unlock Myron
+            Mylon.Unlock = 1;
+            Memory.WriteByte(AvailableSlots[18], Mylon.Number);
 #endif
             var SentLocations = Client.GameState.CompletedLocations;
             var ItemsReceived = Client.GameState.ReceivedItems;
@@ -222,7 +226,7 @@ namespace RaC3AP
             }
             Client.ItemReceived += (e, args) =>
             {
-                Console.WriteLine($"Received: " + args.Item.Name);
+                Console.WriteLine($"Received: " + args.Item.Name +  $" ({args.Item.Id})");
                 if (args.Item.Id >= 50001452 & args.Item.Id <= 50001466)
                 {
                     UpdatePlanets(args.Item.Id);
@@ -242,6 +246,10 @@ namespace RaC3AP
                 if (args.Item.Id == 50001480)
                 {
                     UpdateArmor();
+                }
+                if (args.Item.Id == 50001481 || args.Item.Id == 50001482)// Victory
+                { 
+                    Client.SendGoalCompletion();
                 }
             };
             return true;

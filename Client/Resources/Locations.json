@@ -655,9 +655,9 @@
   {
     "Name": "Infobot: Rilgar",
     "Id": 50001343,
-    "Address": "0x000000AA",
+    "Address": "0x00142BB2",
     "CheckType": 0,
-    "AddressBit": 0
+    "AddressBit": 3 // 08: 0000_X000
   },
   {
     "Name": "Received Grav Boots",
@@ -795,9 +795,9 @@
   {
     "Name": "Infobot: Aridia",
     "Id": 50001452,
-    "Address": "0x000000AA",
+    "Address": "0x00142722",
     "CheckType": 0,
-    "AddressBit": 0
+    "AddressBit": 1 /// 0x02: 0000_00X0
   },
   {
     "Name": "Received Warp Pad",
@@ -858,9 +858,9 @@
   {
     "Name": "Infobot: Mylon",
     "Id": 50001495,
-    "Address": "0x000000AA",
+    "Address": "0x00142C49",
     "CheckType": 0,
-    "AddressBit": 0
+    "AddressBit": 3 // 04 -> 0C: 0000_X000
   },
   {
     "Name": "T-Bolt: Behind the Forcefield",
@@ -872,7 +872,7 @@
   {
     "Name": "Dr. Nefarious Defeated!",
     "Id": 50001497,
-    "Address": "0x00142709",
+    "Address": "0x0014270F",
     "CheckType": 0,
     "AddressBit": 0
   },

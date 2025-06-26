@@ -35,8 +35,24 @@ using System.Threading.Tasks;
  * diff: 0x80
  */
 /*
+ * Challenge mode flag:  EN:142692 JP:142612
+ * VR Training JP: 1426E6 - ED + last clear flag
+ * Anihilation JP: 1426EE -70B + last clear flag
  * Marcadia Mission JP: 1426B8 - BC
- * BlackWater Mission JP: 1426BD - BE ?
+ * BlackWater Mission JP: 1426BD - BF ?
+ * Metrostorm Mission JP: 1426C7 - CB 
+ * 
+ * VidComic Clear flag JP
+ * 0x001426B4 xx54_231x
+ *   ALL clear: 3E
+ *   1-4 clear: 1E
+ *   1-3 clear: 0E
+ *   1-2 clear: 0A
+ *   1-1 clear: 02
+ *   Not clear: 00
+ * 
+ * Boss:
+ * Giant Crank: 0x00142708 
  */
 namespace RaC3AP
 {
