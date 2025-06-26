@@ -35,8 +35,8 @@ using System.Threading.Tasks;
  * diff: 0x80
  */
 /*
- * Marcadia Mission 1426B8 - BA
- * 
+ * Marcadia Mission JP: 1426B8 - BC
+ * BlackWater Mission JP: 1426BD - BE ?
  */
 namespace RaC3AP
 {
@@ -51,6 +51,7 @@ namespace RaC3AP
         public const int QuicksetOffset = 0x0; // EN: 0x00, JP: 0xCDE0
         public const int CurrentEquipmentOffset = 0x0; // EN: 0x00, JP: 0x92C0
         */
+        public const int NanotecExp = 0x00142694 + GlobalConfig.AddressOffset; //
 
         public const int DefeatNefarious = 0x0027DC18 + GlobalConfig.AddressOffset;
     }

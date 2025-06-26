@@ -190,10 +190,14 @@ namespace RaC3AP
             //On startup, set all values to 0. That way, the game won't overwrite Archipelago's values with the loaded game's values.
             UpdateStart();
             ConfigureOptions(Client.Options);
-
-
-            
-
+#if DEBUG
+            // For debugging
+            Memory.Write(GlobalConfig.NanotecExp, 700000); // 22310720=>200
+            RY3N0.Unlock = 1;
+            Memory.Write(WeaponUnlocks.unlockRY3N0, RY3N0.Unlock);
+            Memory.Write(RY3N0.expAddress, WeaponVersionData.ARRexpRY3N0[2]); //Lv3
+            Memory.Write(Addresses.ammoRY3N0, 100);
+#endif
             var SentLocations = Client.GameState.CompletedLocations;
             var ItemsReceived = Client.GameState.ReceivedItems;
             var NewItems = new List<Item>(ItemsReceived);
