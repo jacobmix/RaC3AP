@@ -843,6 +843,7 @@ namespace RaC3AP
         {
             byte nextArmor = Memory.ReadByte(Addresses.armorEquipped);
             nextArmor++;
+            if (nextArmor > 4) nextArmor = 4;
             Memory.WriteByte(Addresses.armorEquipped, nextArmor);
         }
         public static void UpdateJunk(long id)
