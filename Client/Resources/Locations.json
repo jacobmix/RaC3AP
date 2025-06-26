@@ -184,9 +184,9 @@
   {
     "Name": "Infobot: Qwarks Hideout",
     "Id": 50001027,
-    "Address": "0x000000AA",
+    "Address": "0x00142734",
     "CheckType": 0,
-    "AddressBit": 0
+    "AddressBit": 5 // 3E 00X0_0000
   },
   {
     "Name": "Qwark Vidcomic 4",
