@@ -872,9 +872,16 @@
   {
     "Name": "Dr. Nefarious Defeated!",
     "Id": 50001497,
-    "Address": "0x000000AA",
+    "Address": "0x00142709",
     "CheckType": 0,
     "AddressBit": 0
+  },
+  {
+    "Name": "Biobliterator Defeated!",
+    "Id": 50001498,
+    "Address": "0x00142BB6",
+    "CheckType": 0,
+    "AddressBit": 6 // 40: 0X00_0000
   },
   {
     "Name": "T-Bolt: VidComic 1",

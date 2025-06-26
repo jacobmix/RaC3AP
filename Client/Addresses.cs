@@ -53,7 +53,8 @@ namespace RaC3AP
         */
         public const int NanotecExp = 0x00142694 + GlobalConfig.AddressOffset; //
 
-        public const int DefeatNefarious = 0x0027DC18 + GlobalConfig.AddressOffset;
+        public const int DefeatNefarious = 0x0014270F + GlobalConfig.AddressOffset; // Nefariuos
+        public const int DefeatBiobliterator = 0x00142BB6 + GlobalConfig.AddressOffset; // Biobliterator
     }
 
     public class WeaponUnlocks

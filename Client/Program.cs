@@ -161,6 +161,7 @@ namespace RaC3AP
 
             //Set the game completion flag to 0, so boss locations won't be sent unintentionally.
             Memory.Write(GlobalConfig.DefeatNefarious, 0);
+            Memory.Write(GlobalConfig.DefeatBiobliterator, 0);
 
             await Client.Connect(address, "Ratchet and Clank 3 Up your Arsenal");
             var locations = Helpers.GetLocations();
