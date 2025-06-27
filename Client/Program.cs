@@ -141,6 +141,30 @@ namespace RaC3AP
             IsConnected = await ConnectAsync(Address, SlotName, Password);
         }
 
+        public static void UpdateItems(Item item)
+        {
+            if (item.Id >= 50001452 & item.Id <= 50001466)
+            {
+                UpdatePlanets(item.Id);
+            }
+            if (item.Id >= 50001400 & item.Id <= 50001419)
+            {
+                UpdateWeapons(item.Id);
+            }
+            if (item.Id >= 50001420 & item.Id <= 50001439)
+            {
+                UpdateUpgrades(item.Id);
+            }
+            if (item.Id >= 50001440 & item.Id <= 50001449 || item.Id >= 50001475 && item.Id <= 50001479)
+            {
+                UpdateGadgets(item.Id);
+            }
+            if (item.Id == 50001480)
+            {
+                UpdateArmor();
+            }
+        }
+
         static async Task<bool> ConnectAsync(string address, string playerName, string password)
         {
             // Avoid Bug of Archipelago.Core v0.3.25, which is "System.ArgumentException: 'CurrentProcId has not been set'"
@@ -204,65 +228,26 @@ namespace RaC3AP
             var ArmorValue = 0;
             foreach (var item in ItemsReceived)
             {
-                Console.WriteLine(item.Name);
-                if (item.Name == "Progressive Armor")
-                    ArmorValue++;
+                Console.WriteLine($"{item.Name}: {item.Id}");
+                UpdateItems(item);
             }
-            Memory.WriteByte(Addresses.armorEquipped, (byte)ArmorValue);
-
             Console.WriteLine("-------------------------------");
+
             var NewItems = new List<Item>(ItemsReceived);
             var NewLocations = new List<Location>(SentLocations);
             foreach (var item in NewItems)
             {
-                if (item.Id >= 50001452 & item.Id <= 50001466)
-                {
-                    UpdatePlanets(item.Id);
-                }
-                if (item.Id >= 50001400 & item.Id <= 50001419)
-                {
-                    UpdateWeapons(item.Id);
-                }
-                if (item.Id >= 50001420 & item.Id <= 50001439)
-                {
-                    UpdateUpgrades(item.Id);
-                }
-                if (item.Id >= 50001440 & item.Id <= 50001449 || item.Id >= 50001475 && item.Id <= 50001479)
-                {
-                    UpdateGadgets(item.Id);
-                }
-                if (item.Id == 50001480)
-                {
-                    UpdateArmor();
-                }
+                UpdateItems(item);
             }
             Client.ItemReceived += (e, args) =>
             {
                 Console.WriteLine($"Received: " + args.Item.Name +  $" ({args.Item.Id})");
-                if (args.Item.Id >= 50001452 & args.Item.Id <= 50001466)
-                {
-                    UpdatePlanets(args.Item.Id);
-                }
-                if (args.Item.Id >= 50001400 & args.Item.Id <= 50001419)
-                {
-                    UpdateWeapons(args.Item.Id);
-                }
-                if (args.Item.Id >= 50001420 & args.Item.Id <= 50001439)
-                {
-                    UpdateUpgrades(args.Item.Id);
-                }
-                if (args.Item.Id >= 50001440 & args.Item.Id <= 50001449 || args.Item.Id >= 50001475 && args.Item.Id <= 50001479)
-                {
-                    UpdateGadgets(args.Item.Id);
-                }
-                if (args.Item.Id == 50001480)
-                {
-                    UpdateArmor();
-                }
+                UpdateItems(args.Item);
                 if (args.Item.Id == 50001481 || args.Item.Id == 50001482)// Victory
-                { 
+                {
                     Client.SendGoalCompletion();
                 }
+
             };
             return true;
         }
@@ -861,10 +846,11 @@ namespace RaC3AP
         }
         public static void UpdateArmor()
         {
-            byte nextArmor = Memory.ReadByte(Addresses.armorEquipped);
-            nextArmor++;
-            if (nextArmor > 4) nextArmor = 4;
-            Memory.WriteByte(Addresses.armorEquipped, nextArmor);
+            int i = Addresses.currentArmor + 1;
+            if (i > 4) i = 4;
+            Addresses.currentArmor = i;
+            Memory.Write(Addresses.armorEquipped, Addresses.currentArmor);
+            Console.WriteLine($"ArmorValue is {i}");
         }
         public static void UpdateJunk(long id)
         {
@@ -897,6 +883,9 @@ namespace RaC3AP
         {
             // Fix Bolt mulipiler
             Memory.Write(Addresses.boltXPMultiplier, currentMultiplier);
+
+            // Keep Armor
+            Memory.Write(Addresses.armorEquipped, Addresses.currentArmor);
 
             foreach (var weapon in allWeapons)
             {

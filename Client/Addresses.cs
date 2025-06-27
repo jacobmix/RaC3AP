@@ -122,6 +122,7 @@ namespace RaC3AP
 
         public const int boltXPMultiplier = 0x001426BA + GlobalConfig.AddressOffset;
         public const int armorEquipped = 0x001426A0 + GlobalConfig.AddressOffset;
+        public static int currentArmor = 0;
         public const int weaponDisplay = 0x001A5E08 + GlobalConfig.AddressOffset;
         public const int boltIncrementDisplay = 0x001E0440 + GlobalConfig.AddressOffset;
         public const int lastUsedWeaponOne = 0x00142670 + GlobalConfig.AddressOffset;
