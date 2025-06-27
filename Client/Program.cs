@@ -216,7 +216,7 @@ namespace RaC3AP
             Memory.Write(WeaponUnlocks.unlockRY3N0, RY3N0.Unlock);
             Memory.Write(RY3N0.expAddress, WeaponVersionData.ARRexpRY3N0[3]); //Lv3
             Memory.Write(Addresses.ammoRY3N0, 100);
-            Memory.Write(Addresses.armorEquipped, 4);
+            Memory.WriteByte(Addresses.armorEquipped, 4);
             // Unlock Myron
             Mylon.Unlock = 1;
             Memory.WriteByte(AvailableSlots[18], Mylon.Number);
@@ -838,8 +838,8 @@ namespace RaC3AP
         {
             int i = Addresses.currentArmor + 1;
             if (i > 4) i = 4;
-            Addresses.currentArmor = i;
-            Memory.Write(Addresses.armorEquipped, Addresses.currentArmor);
+            Addresses.currentArmor = (byte)i;
+            Memory.WriteByte(Addresses.armorEquipped, Addresses.currentArmor);
         }
         public static void UpdateJunk(long id)
         {
@@ -874,7 +874,7 @@ namespace RaC3AP
             Memory.Write(Addresses.boltXPMultiplier, currentMultiplier);
 
             // Keep Armor
-            Memory.Write(Addresses.armorEquipped, Addresses.currentArmor);
+            Memory.WriteByte(Addresses.armorEquipped, Addresses.currentArmor);
 
             foreach (var weapon in allWeapons)
             {
