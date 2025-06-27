@@ -223,16 +223,6 @@ namespace RaC3AP
 #endif
             var SentLocations = Client.GameState.CompletedLocations;
             var ItemsReceived = Client.GameState.ReceivedItems;
-            Console.WriteLine("Checking Already recieved Items");
-            Console.WriteLine("-------------------------------");
-            var ArmorValue = 0;
-            foreach (var item in ItemsReceived)
-            {
-                Console.WriteLine($"{item.Name}: {item.Id}");
-                UpdateItems(item);
-            }
-            Console.WriteLine("-------------------------------");
-
             var NewItems = new List<Item>(ItemsReceived);
             var NewLocations = new List<Location>(SentLocations);
             foreach (var item in NewItems)
@@ -850,7 +840,6 @@ namespace RaC3AP
             if (i > 4) i = 4;
             Addresses.currentArmor = i;
             Memory.Write(Addresses.armorEquipped, Addresses.currentArmor);
-            Console.WriteLine($"ArmorValue is {i}");
         }
         public static void UpdateJunk(long id)
         {
