@@ -106,7 +106,7 @@
   },
   {
     "Name": "Received Infernox Armor",
-    "Id": 500001016,
+    "Id": 50001016,
     "Address": "0x001426A0",
     "CheckValue": "4",
     "CheckType": 3
