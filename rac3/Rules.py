@@ -6,8 +6,7 @@ if TYPE_CHECKING:
     from . import RaC3World
 
 
-def set_rules(world: "RaC3World"):
-
+def set_rules_planets(world):
     # Getting to Marcadia
     add_rule(world.multiworld.get_entrance("Starship Phoenix -> Marcadia", world.player),
              lambda state: state.has("Infobot: Marcadia", world.player)
@@ -87,6 +86,17 @@ def set_rules(world: "RaC3World"):
              and state.has("Hypershot", world.player)
              and state.has("Grav-Boots", world.player))
 
+
+def set_rules_hard_location(world):
+    pass
+
+def set_rules(world: "RaC3World"):
+
+    # Rules for planets connection
+    set_rules_planets(world)
+    
+    # Rules for hard to get Location
+    set_rules_hard_location(world)
 
     #world.multiworld.completion_condition[world.player] = lambda state: state.has("Dr. Nefarious Defeated!", world.player)
     world.multiworld.completion_condition[world.player] = lambda state: state.has("Biobliterator Defeated!", world.player)
