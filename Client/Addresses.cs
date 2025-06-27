@@ -89,7 +89,7 @@ namespace RaC3AP
         public const int unlockHoloShieldGlove = 0x00142D07 + GlobalConfig.AddressOffset;
         public const int unlockDiskBladeGun = 0x00142CEF + GlobalConfig.AddressOffset;
         public const int unlockRiftInducer = 0x00142CFF + GlobalConfig.AddressOffset;
-        public const int unlockQwackORay = 0x020142D2F + GlobalConfig.AddressOffset;
+        public const int unlockQwackORay = 0x000142D2F + GlobalConfig.AddressOffset;
         public const int unlockRY3N0 = 0x00142D37 + GlobalConfig.AddressOffset;
         public const int unlockMegaTurretGlove = 0x00142CB5 + GlobalConfig.AddressOffset;
         public const int unlockLavaGun = 0x00142CB1 + GlobalConfig.AddressOffset;
