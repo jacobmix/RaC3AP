@@ -843,6 +843,7 @@ namespace RaC3AP
             if (i > 4) i = 4;
             Addresses.currentArmor = (byte)i;
             Memory.WriteByte(Addresses.armorEquipped, Addresses.currentArmor);
+            Console.WriteLine($"Update armor {Addresses.currentArmor}");
         }
         public static void UpdateJunk(long id)
         {
