@@ -873,9 +873,6 @@ namespace RaC3AP
             // Fix Bolt mulipiler
             Memory.Write(Addresses.boltXPMultiplier, currentMultiplier);
 
-            // Keep Armor
-            Memory.WriteByte(Addresses.armorEquipped, Addresses.currentArmor);
-
             foreach (var weapon in allWeapons)
             {
                 ulong k = Addresses.currentlyEquippedWeapon;
