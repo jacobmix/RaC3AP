@@ -155,7 +155,7 @@ namespace RaC3AP
             {
                 UpdateUpgrades(item.Id);
             }
-            if (item.Id >= 50001440 & item.Id <= 50001449 || item.Id >= 50001475 && item.Id <= 50001479)
+            if (item.Id >= 50001440 & item.Id <= 50001450 || item.Id >= 50001475 && item.Id <= 50001479)
             {
                 UpdateGadgets(item.Id);
             }
@@ -806,6 +806,9 @@ namespace RaC3AP
                     break;
                 case 50001449:
                     Memory.WriteBit(GadgetAddresses.pda, 1, true);
+                    break;
+                case 50001450:
+                    Memory.WriteBit(GadgetAddresses.chargeBoots, 1, true);
                     break;
                 case 50001475:
                     {
