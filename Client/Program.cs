@@ -612,7 +612,7 @@ namespace RaC3AP
                     break;
                 case 50001417:
                     ShieldCharger.Unlock = 1;
-                    Memory.WriteBit(WeaponUnlocks.unlockShieldCharger, 6, Convert.ToBoolean(LavaGun.Unlock));
+                    Memory.WriteBit(WeaponUnlocks.unlockShieldCharger, 6, Convert.ToBoolean(ShieldCharger.Unlock));
                     break;
                 case 50001418:
                     Bouncer.Unlock = 1;
