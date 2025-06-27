@@ -545,36 +545,38 @@
     "CheckType": 0,
     "AddressBit": 0
   },
-  /*
   {
     "Name": "1 Sewer Crystal Traded",
     "Id": 50001096,
-    "Address":,
-    "CheckType": ,
-    "AddressBit":
-  }
+    "Address": "0x0014275E", // JP: 1426DE,
+    "CompareType": 1, // Greater than
+    "CheckType": 1, // Int type
+    "CheckValue": "0"
+  },
   {
     "Name": "5 Sewer Crystals Traded",
     "Id": 50001097,
-    "Address":,
-    "CheckType": ,
-    "AddressBit":
-  }
+    "Address": "0x0014275E", // JP: 1426DE,
+    "CheckType": 1, // Int type
+    "CompareType": 1, // Greater than
+    "CheckValue": "4"
+  },
   {
     "Name": "10 Sewer Crystals Traded",
     "Id": 50001098,
-    "Address":,
-    "CheckType": ,
-    "AddressBit":
-  }
+    "Address": "0x0014275E", // JP: 1426DE,
+    "CheckType": 1, // Int type
+    "CompareType": 1, // Greater than
+    "CheckValue": "9" // 0x9
+  },
   {
     "Name": "20 Sewer Crystals Traded",
     "Id": 50001099,
-    "Address":,
-    "CheckType": ,
-    "AddressBit":
-  }
-  */
+    "Address": "0x0014275E", // JP: 1426DE,
+    "CheckType": 1, // Int type
+    "CompareType": 1, // Greater than
+    "CheckValue": "19" // 0x13
+  },
   {
     "Name": "Received Annihilator",
     "Id": 50001300,
