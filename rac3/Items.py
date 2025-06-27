@@ -99,8 +99,8 @@ gadget_items = {
     "Map-O-Matic": ItemData(50001446, ItemClassification.useful, 1),
     "Nano Pak": ItemData(50001447, ItemClassification.useful, 1),
     "Warp Pad": ItemData(50001448, ItemClassification.progression, 1),
-    "Gadgetron PDU": ItemData(50001449, ItemClassification.useful, 1)
-
+    "Gadgetron PDU": ItemData(50001449, ItemClassification.useful, 1),
+    "Charge-Boots": ItemData(50001450, ItemClassification.useful, 1)
 }
 
 post_planets = {
