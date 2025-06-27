@@ -1035,6 +1035,9 @@ namespace RaC3AP
                 if (planet.Unlock == 0)
                 {
                     VerifyPlanetSlots(planet.Number);
+                } else // Unloked
+                {
+                    EnablePlanetSlots(planet.Number);
                 }
             }
         }
@@ -1066,6 +1069,26 @@ namespace RaC3AP
                 }
             }
         }
+        public static void EnablePlanetSlots(int number)
+        {
+            foreach (var slot in AvailableSlots)
+            {
+                if (Memory.ReadByte(slot) == number) // if exist
+                {
+                    return;
+                }
+            }
+            // if not exist in slot
+            foreach (var slot in AvailableSlots)
+            {
+                if (Memory.ReadByte(slot) == 0) // if exist
+                {
+                    Memory.WriteByte(slot, (byte)number);
+                    return;
+                }
+            }
+        }
+
         public static void VerifyLastUsed()
         {
             foreach (ulong slot in lastUsed)
