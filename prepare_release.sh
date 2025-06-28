@@ -9,5 +9,7 @@ rm -rf $OUTPUT $OUTPUT.zip
 mkdir -p $OUTPUT
 cp -f ./rac3.apworld ${OUTPUT}
 cp -r ./Client/bin/Release/net8.0/ ${OUTPUT}/rac3_jp_client
+zip -r ./rac3-ap-poptracker{.zip,}
+mv rac3-ap-poptracker.zip $OUTPUT
 zip -r $OUTPUT{.zip,}
 
