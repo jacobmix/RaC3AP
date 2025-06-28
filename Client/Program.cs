@@ -79,22 +79,22 @@ namespace RaC3AP
         public static Weapon Bouncer = new Weapon("Bouncer", WeaponVersionData.ADDexpBouncer, WeaponVersionData.ADDversionBouncer, WeaponUnlocks.unlockBouncer, DummyEXPAddresses.Bouncer);
         public static Weapon PlasmaCoil = new Weapon("Plasma Coil", WeaponVersionData.ADDexpPlasmaCoil, WeaponVersionData.ADDversionPlasmaCoil, WeaponUnlocks.unlockPlasmaCoil, DummyEXPAddresses.PlasmaCoil);
         public static Weapon[] allWeapons = { ShockBlaster, NitroLauncher, N60Storm, PlasmaWhip, Infector, SuckCannon, SpittingHydra, AgentsOfDoom, FluxRifle, Annihilator, HoloShieldGlove, DiskBladeGun, RiftInducer, QwackORay, RY3N0, MegaTurretGlove, LavaGun, ShieldCharger, Bouncer, PlasmaCoil };
-        public static Planet Marcadia = new Planet(PlanetValues.Marcadia);
-        public static Planet Daxx = new Planet(PlanetValues.Daxx);
-        public static Planet AnnihilationNation = new Planet(PlanetValues.AnnihilationNation);
-        public static Planet Aquatos = new Planet(PlanetValues.Aquatos);
-        public static Planet Tyhrranosis = new Planet(PlanetValues.Tyhrranosis);
-        public static Planet ZeldrinStarport = new Planet(PlanetValues.ZeldrinStarport);
-        public static Planet ObaniGemini = new Planet(PlanetValues.ObaniGemini);
-        public static Planet Rilgar = new Planet (PlanetValues.Rilgar);
-        public static Planet HolostarStudios = new Planet(PlanetValues.HolostarStudios);
-        public static Planet Koros = new Planet(PlanetValues.Koros);
-        public static Planet Metropolis = new Planet(PlanetValues.Metropolis);
-        public static Planet Zeldrin = new Planet(PlanetValues.Zeldrin);
-        public static Planet Aridia = new Planet(PlanetValues.Aridia);
-        public static Planet QwarksHideout = new Planet(PlanetValues.QwarksHideout);
-        public static Planet ObaniDraco = new Planet(PlanetValues.ObaniDraco);
-        public static Planet Mylon = new Planet(PlanetValues.Mylon);
+        public static Planet Marcadia = new Planet(PlanetValues.Marcadia, 3);
+        public static Planet Daxx = new Planet(PlanetValues.Daxx, 4);
+        public static Planet AnnihilationNation = new Planet(PlanetValues.AnnihilationNation, 5);
+        public static Planet Aquatos = new Planet(PlanetValues.Aquatos, 6);
+        public static Planet Tyhrranosis = new Planet(PlanetValues.Tyhrranosis, 7);
+        public static Planet ZeldrinStarport = new Planet(PlanetValues.ZeldrinStarport, 8);
+        public static Planet ObaniGemini = new Planet(PlanetValues.ObaniGemini, 9);
+        public static Planet Rilgar = new Planet (PlanetValues.Rilgar, 10);
+        public static Planet HolostarStudios = new Planet(PlanetValues.HolostarStudios, 11);
+        public static Planet Koros = new Planet(PlanetValues.Koros, 12);
+        public static Planet Metropolis = new Planet(PlanetValues.Metropolis, 13);
+        public static Planet Zeldrin = new Planet(PlanetValues.Zeldrin, 14);
+        public static Planet Aridia = new Planet(PlanetValues.Aridia, 15);
+        public static Planet QwarksHideout = new Planet(PlanetValues.QwarksHideout, 16);
+        public static Planet ObaniDraco = new Planet(PlanetValues.ObaniDraco, 17);
+        public static Planet Mylon = new Planet(PlanetValues.Mylon, 18);
         public static Planet[] allPlanets = { Marcadia, Daxx, AnnihilationNation, Aquatos, Tyhrranosis, ZeldrinStarport, ObaniGemini, Rilgar, HolostarStudios, Koros, Metropolis, Zeldrin, Aridia, QwarksHideout, ObaniDraco, Mylon };
 
         public static int GameCompletion { get; set; } = 0;
@@ -219,7 +219,6 @@ namespace RaC3AP
             Memory.WriteByte(Addresses.armorEquipped, 4);
             // Unlock Myron
             Mylon.Unlock = 1;
-            Memory.WriteByte(AvailableSlots[18], Mylon.Number);
 #endif
             var SentLocations = Client.GameState.CompletedLocations;
             var ItemsReceived = Client.GameState.ReceivedItems;
@@ -431,109 +430,57 @@ namespace RaC3AP
         }
         public static void UpdatePlanets(long id)
         {
-            Memory.WriteByte(AvailableSlots[0], 1);
-            Memory.WriteByte(AvailableSlots[1], 2);
-            Memory.WriteByte(AvailableSlots[2], 3);
             switch (id)
             {
                 case 50001452:
-                    {
-                        Marcadia.Unlock = 1;
-                        Memory.WriteByte(AvailableSlots[3], Marcadia.Number);
-                        break;
-                    }
+                    Marcadia.Unlock = 1;
+                    break;
                 case 50001453:
-                    {
-                        AnnihilationNation.Unlock = 1;
-                        Memory.WriteByte(AvailableSlots[4], AnnihilationNation.Number);
-                        break;
-                    }
+                    AnnihilationNation.Unlock = 1;
+                    break;
                 case 50001454:
-                    {
-                        Aquatos.Unlock = 1;
-                        Memory.Write(AvailableSlots[5], Aquatos.Number);
-                        break;
-                    }
+                    Aquatos.Unlock = 1;
+                    break;
                 case 50001455:
-                    {
-                        Tyhrranosis.Unlock = 1;
-                        Memory.WriteByte(AvailableSlots[6], Tyhrranosis.Number);
-                        break;
-                    }
+                    Tyhrranosis.Unlock = 1;
+                    break;
                 case 50001456:
-                    {
-                        Daxx.Unlock = 1;
-                        Memory.WriteByte(AvailableSlots[7], Daxx.Number);
-                        break;
-                    }
+                    Daxx.Unlock = 1;
+                    break;
                 case 50001457:
-                    {
-                        ObaniGemini.Unlock = 1;
-                        Memory.WriteByte(AvailableSlots[8], ObaniGemini.Number);
-                        break;
-                    }
+                    ObaniGemini.Unlock = 1;
+                    break;
                 case 50001458:
-                    {
-                        Rilgar.Unlock = 1;
-                        Memory.WriteByte(AvailableSlots[9], Rilgar.Number); 
-                        break;
-                    }
+                    Rilgar.Unlock = 1;
+                    break;
                 case 50001459:
-                    {
-                        HolostarStudios.Unlock = 1;
-                        Memory.WriteByte(AvailableSlots[10], HolostarStudios.Number);
-                        break;
-                    }
+                    HolostarStudios.Unlock = 1;
+                    break;
                 case 50001460:
-                    {
-                        ObaniDraco.Unlock = 1;
-                        Memory.WriteByte(AvailableSlots[11], ObaniDraco.Number);
-                        break;
-                    }
+                    ObaniDraco.Unlock = 1;
+                    break;
                 case 50001461:
-                    {
-                        ZeldrinStarport.Unlock = 1;
-                        Memory.WriteByte(AvailableSlots[12], ZeldrinStarport.Number);
-                        break;
-                    }
+                    ZeldrinStarport.Unlock = 1;
+                    break;
                 case 50001462:
-                    {
-                        Metropolis.Unlock = 1;
-                        Memory.WriteByte(AvailableSlots[13], Metropolis.Number);
-                        break;
-                    }
+                    Metropolis.Unlock = 1;
+                    break;
                 case 50001463:
-                    {
-                        Zeldrin.Unlock = 1;                                            
-                        Memory.WriteByte(AvailableSlots[14], Zeldrin.Number);
-                        break;
-                    }
+                    Zeldrin.Unlock = 1;
+                    break;
                 case 50001464:
-                    {
-                        Aridia.Unlock = 1;
-                        Memory.WriteByte(AvailableSlots[15], Aridia.Number);
-                        break;
-                    }
+                    Aridia.Unlock = 1;
+                    break;
                 case 50001465:
-                    {
-                        QwarksHideout.Unlock = 1;
-                        Memory.WriteByte(AvailableSlots[16], QwarksHideout.Number);
-                        break;
-                    }
+                    QwarksHideout.Unlock = 1;
+                    break;
                 case 50001466:
-                    {
-                        Koros.Unlock = 1;
-                        Memory.WriteByte(AvailableSlots[17], Koros.Number);
-                        break;
-                    }
+                    Koros.Unlock = 1;
+                    break;
                 case 50001467:
-                    {
-                        Mylon.Unlock = 1;
-                        Memory.WriteByte(AvailableSlots[18], Mylon.Number);
-                        break;
-                    }
+                    Mylon.Unlock = 1;
+                    break;
             }
-
         }
         public static void UpdateWeapons(long id)
         {
@@ -1014,60 +961,10 @@ namespace RaC3AP
         {
             foreach (var planet in allPlanets)
             {
-                if (planet.Unlock == 0)
-                {
-                    VerifyPlanetSlots(planet.Number);
-                } else // Unloked
-                {
-                    EnablePlanetSlots(planet.Number);
-                }
-            }
-        }
-        public static void VerifyPlanetSlots(int number)
-        {
-            foreach(var slot in AvailableSlots)
-            {
-                if (
-                    (number == 4 && Marcadia.Unlock == 0 && Memory.ReadByte(slot) == 4) ||
-                    (number == 5 && Daxx.Unlock == 0 && Memory.ReadByte(slot) == 5) ||
-                    (number == 7 && AnnihilationNation.Unlock == 0 && Memory.ReadByte(slot) == 7) ||
-                    (number == 8 && Aquatos.Unlock == 0 && Memory.ReadByte(slot) == 8) ||
-                    (number == 9 && Tyhrranosis.Unlock == 0 && Memory.ReadByte(slot) == 9) ||
-                    (number == 10 && ZeldrinStarport.Unlock == 0 && Memory.ReadByte(slot) == 10) ||
-                    (number == 11 && ObaniGemini.Unlock == 0 && Memory.ReadByte(slot) == 11) ||
-                    (number == 12 && Rilgar.Unlock == 0 && Memory.ReadByte(slot) == 12) ||
-                    (number == 13 && HolostarStudios.Unlock == 0 && Memory.ReadByte(slot) == 13) ||
-                    (number == 14 && Koros.Unlock == 0 && Memory.ReadByte(slot) == 14) ||
-                    (number == 16 && Metropolis.Unlock == 0 && Memory.ReadByte(slot) == 16) ||
-                    (number == 17 && Zeldrin.Unlock == 0 && Memory.ReadByte(slot) == 17) ||
-                    (number == 18 && Aridia.Unlock == 0 && Memory.ReadByte(slot) == 18) ||
-                    (number == 19 && QwarksHideout.Unlock == 0 && Memory.ReadByte(slot) == 19) ||
-                    (number == 20 && ObaniDraco.Unlock == 0 && Memory.ReadByte(slot) == 20) ||
-                    (number == 21 && Mylon.Unlock == 0 && Memory.ReadByte(slot) == 21)
-                )
-                {
-                    Memory.WriteByte(slot, 0);
-                    break;
-                }
-            }
-        }
-        public static void EnablePlanetSlots(int number)
-        {
-            foreach (var slot in AvailableSlots)
-            {
-                if (Memory.ReadByte(slot) == number) // if exist
-                {
-                    return;
-                }
-            }
-            // if not exist in slot
-            foreach (var slot in AvailableSlots)
-            {
-                if (Memory.ReadByte(slot) == 0) // if exist
-                {
-                    Memory.WriteByte(slot, (byte)number);
-                    return;
-                }
+                if (planet.Unlock == 1)
+                    Memory.WriteByte(AvailableSlots[planet.Slot], planet.Number);
+                else
+                    Memory.WriteByte(AvailableSlots[planet.Slot], 0);
             }
         }
 
@@ -1175,6 +1072,10 @@ namespace RaC3AP
             {
                 Memory.WriteByte(address, 0);
             }
+            // Default Planets
+            Memory.WriteByte(AvailableSlots[0], 1);
+            Memory.WriteByte(AvailableSlots[1], 2);
+            Memory.WriteByte(AvailableSlots[2], 3);
         }
     }
 
