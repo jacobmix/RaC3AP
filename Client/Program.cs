@@ -7,7 +7,9 @@ using Archipelago.MultiClient.Net.Packets;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RaC3AP.Models;
+using System.Linq;
 using System.Net;
+using System.Net.Http.Headers;
 using System.Numerics;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -96,6 +98,24 @@ namespace RaC3AP
         public static Planet ObaniDraco = new Planet(PlanetValues.ObaniDraco, 17);
         public static Planet Mylon = new Planet(PlanetValues.Mylon, 18);
         public static Planet[] allPlanets = { Marcadia, Daxx, AnnihilationNation, Aquatos, Tyhrranosis, ZeldrinStarport, ObaniGemini, Rilgar, HolostarStudios, Koros, Metropolis, Zeldrin, Aridia, QwarksHideout, ObaniDraco, Mylon };
+        // Gadget
+        public static Gadget HyperShot = new Gadget("HyperShot", GadgetAddresses.hyperShot);
+        public static Gadget Refractor = new Gadget("Refractor", GadgetAddresses.refractor);
+        public static Gadget TyhrraGuise = new Gadget("TyhrraGuise", GadgetAddresses.tyhrraGuise);
+        public static Gadget WarpPad = new Gadget("WarpPad", GadgetAddresses.warpPad);
+        public static Gadget Pda = new Gadget("Pda", GadgetAddresses.pda);
+        public static Gadget ChargeBoots = new Gadget("ChargeBoots", GadgetAddresses.chargeBoots);
+        public static Gadget GravBoots = new Gadget("gravBoots", GadgetAddresses.gravBoots);
+        public static Gadget Hacker = new Gadget("Hacker", GadgetAddresses.hacker);
+        public static Gadget BoltGrabberV2 = new Gadget("BoltGrabberV2", GadgetAddresses.boltGrabberV2);
+        public static Gadget MapOMatic = new Gadget("MapOMatic", GadgetAddresses.mapOMatic);
+        public static Gadget NanoPak = new Gadget("NanoPak", GadgetAddresses.nanoPak);
+        public static Gadget VidComic1 = new Gadget("VidComic1", GadgetAddresses.vidComic1);
+        public static Gadget VidComic2 = new Gadget("VidComic2", GadgetAddresses.vidComic2);
+        public static Gadget VidComic3 = new Gadget("VidComic3", GadgetAddresses.vidComic3);
+        public static Gadget VidComic4 = new Gadget("VidComic4", GadgetAddresses.vidComic4);
+        public static Gadget VidComic5 = new Gadget("VidComic5", GadgetAddresses.vidComic5);
+        public static Gadget[] allGadget = { HyperShot, Refractor, TyhrraGuise, WarpPad, Pda, ChargeBoots, GravBoots, Hacker, BoltGrabberV2, MapOMatic, NanoPak, VidComic1, VidComic2, VidComic3, VidComic4, VidComic5 };
 
         public static int GameCompletion { get; set; } = 0;
         public static async Task Main()
@@ -725,52 +745,52 @@ namespace RaC3AP
             switch (id)
             {
                 case 50001440:
-                    Memory.WriteBit(GadgetAddresses.hacker, 1, true);
+                    Hacker.Unlock = 1;
                     break;
                 case 50001441:
-                    Memory.WriteBit(GadgetAddresses.hyperShot, 1, true);
+                    HyperShot.Unlock = 1;
                     break;
                 case 50001442:
-                    Memory.WriteBit(GadgetAddresses.refractor, 1, true);
+                    Refractor.Unlock = 1;
                     break;
                 case 50001443:
-                    Memory.WriteBit(GadgetAddresses.tyhrraGuise, 1, true);
+                    TyhrraGuise.Unlock = 1;
                     break;
                 case 50001444:
-                    Memory.WriteBit(GadgetAddresses.gravBoots, 1, true);
+                    GravBoots.Unlock = 1;
                     break;
                 case 50001445:
-                    Memory.WriteBit(GadgetAddresses.boltGrabberV2, 1, true);
+                    BoltGrabberV2.Unlock = 1;
                     break;
                 case 50001446:
-                    Memory.WriteBit(GadgetAddresses.mapOMatic, 1, true);
+                    MapOMatic.Unlock = 1;
                     break;
                 case 50001447:
-                    Memory.WriteBit(GadgetAddresses.nanoPak, 1, true);
+                    NanoPak.Unlock = 1;
                     break;
                 case 50001448:
-                    Memory.WriteBit(GadgetAddresses.warpPad, 1, true);
+                    WarpPad.Unlock = 1;
                     break;
                 case 50001449:
-                    Memory.WriteBit(GadgetAddresses.pda, 1, true);
+                    Pda.Unlock = 1;
                     break;
                 case 50001450:
-                    Memory.WriteBit(GadgetAddresses.chargeBoots, 1, true);
+                    ChargeBoots.Unlock = 1;
                     break;
                 case 50001475:
-                    Memory.WriteBit(GadgetAddresses.vidComic1, 1, true);
+                    VidComic1.Unlock = 1;
                     break;
                 case 50001476:
-                    Memory.WriteBit(GadgetAddresses.vidComic2, 1, true);
+                    VidComic2.Unlock = 1;
                     break;
                 case 50001477:
-                    Memory.WriteBit(GadgetAddresses.vidComic3, 1, true);
+                    VidComic3.Unlock = 1;
                     break;
                 case 50001478:
-                    Memory.WriteBit(GadgetAddresses.vidComic4, 1, true);
+                    VidComic4.Unlock = 1;
                     break;
                 case 50001479:
-                    Memory.WriteBit(GadgetAddresses.vidComic5, 1, true);
+                    VidComic5.Unlock = 1;
                     break;
             }
         }
@@ -857,6 +877,7 @@ namespace RaC3AP
             VerifyLastUsed();
             PlanetCycler();
             WeaponCycler();
+            GadgetCycler();
             //EXPController();
         }
         public static void GetValues()
@@ -955,6 +976,16 @@ namespace RaC3AP
                     Memory.WriteByte(AvailableSlots[planet.Slot], planet.Number);
                 else
                     Memory.WriteByte(AvailableSlots[planet.Slot], 0);
+            }
+        }
+        public static void GadgetCycler()
+        {
+            foreach (var gadget in allGadget)
+            {
+                if (gadget.Unlock == 0)
+                    Memory.WriteBit(gadget.unlockAddress, 1, false);
+                else
+                    Memory.WriteBit(gadget.unlockAddress, 1, true);
             }
         }
 

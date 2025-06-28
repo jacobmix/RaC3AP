@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\Gadjet.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Resources\Locations.json" />
   </ItemGroup>
 
