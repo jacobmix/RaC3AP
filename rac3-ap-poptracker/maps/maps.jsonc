@@ -1,0 +1,154 @@
+[
+  //more info: https://github.com/black-sliver/PopTracker/blob/master/doc/PACKS.md#maps
+  {
+    "name": "Frorana",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/Frorana.png"
+  },
+  {
+    "name": "Phoenix1",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/Phoenix1.png"
+  },
+  {
+    "name": "Phoenix2",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/Phoenix2.png"
+  },
+  {
+    "name": "Marcadia",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/Marcadia.png"
+  },
+  {
+    "name": "Annihilation",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/Annihilation.png"
+  },
+  {
+    "name": "Aquatos1",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/Aquatos1.png"
+  },
+  {
+    "name": "Aquatos2",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/Aquatos2.png"
+  },
+  {
+    "name": "Aquatos3",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/Aquatos3.png"
+  },
+  {
+    "name": "Tyhrranosis1",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/Tyhrranosis1.png"
+  },
+  {
+    "name": "Tyhrranosis2",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/Tyhrranosis2.png"
+  },
+  {
+    "name": "Daxx",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/Daxx.png"
+  },
+  {
+    "name": "Holostar",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/Holostar.png"
+  },
+  {
+    "name": "HolostarCrank",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/HolostarCrank.png"
+  },
+  {
+    "name": "Rilgar",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/Rilgar.png"
+  },
+  {
+    "name": "ObaniDraco",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/ObaniDraco.png"
+  },
+  {
+    "name": "ZeldrinStarport",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/ZeldrinStarport.png"
+  },
+  {
+    "name": "Metropolis",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/Metropolis.png"
+  },
+  {
+    "name": "MetropolisMission",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/MetropolisMission.png"
+  },
+  {
+    "name": "Zeldrin",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/Zeldrin.png"
+  },
+  {
+    "name": "Aridia",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/Aridia.png"
+  },
+  {
+    "name": "QwarksHideout",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/QwarksHideout.png"
+  },
+  {
+    "name": "Koros",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/Koros.png"
+  },
+  {
+    "name": "Mylon",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/Mylon.png"
+  },
+  {
+    "name": "last1",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/last1.png"
+  },
+  {
+    "name": "last2",
+    "location_size": 48,
+    "location_border_thickness": 4,
+    "img": "images/maps/last2.png"
+  },
+
+]
