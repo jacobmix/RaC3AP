@@ -983,7 +983,7 @@ namespace RaC3AP
             foreach (var gadget in allGadget)
             {
                 if (gadget.Unlock == 0)
-                    Memory.WriteBit(gadget.unlockAddress, 1, false);
+                    Memory.WriteByte(gadget.unlockAddress, 0);
                 else
                     Memory.WriteBit(gadget.unlockAddress, 1, true);
             }
