@@ -187,6 +187,10 @@ namespace RaC3AP
             {
                 IncrementBolt();
             }
+            if (item.Id == 50001492)
+            {
+                IncrementWeaponLevel();
+            }
         }
 
         static async Task<bool> ConnectAsync(string address, string playerName, string password)
@@ -812,6 +816,126 @@ namespace RaC3AP
             var currentBolt = Memory.ReadInt(GlobalConfig.Bolt);
             currentBolt += 50000;
             Memory.Write(GlobalConfig.Bolt, currentBolt);
+        }
+        public static void IncrementWeaponLevel()
+        {
+            int[] expArr = {0,0,0,0,0};
+            var currentExp = 0;
+            ulong expAddr = 0;
+            var currentWeapon = Memory.ReadByte(Addresses.currentlyEquippedWeapon);
+            if (currentWeapon == 39)
+            {
+                expArr = WeaponVersionData.ARRexpShockBlaster;
+                expAddr = WeaponVersionData.ADDexpShockBlaster;
+            }
+            if (currentWeapon == 119)
+            {
+                expArr = WeaponVersionData.ARRexpNitroLauncher;
+                expAddr = WeaponVersionData.ADDexpNitroLauncher;
+            }
+            if (currentWeapon == 47)
+            {
+                expArr = WeaponVersionData.ARRexpN60Storm;
+                expAddr = WeaponVersionData.ADDexpN60Storm;
+            }
+
+            if (currentWeapon == 47)
+            {
+                expArr = WeaponVersionData.ARRexpN60Storm;
+                expAddr = WeaponVersionData.ADDexpN60Storm;
+            }
+            if (currentWeapon == 127)
+            {
+                expArr = WeaponVersionData.ARRexpPlasmaWhip;
+                expAddr = WeaponVersionData.ADDexpPlasmaWhip;
+            }
+            if (currentWeapon == 55)
+            {
+                expArr = WeaponVersionData.ARRexpInfector;
+                expAddr = WeaponVersionData.ADDexpInfector;
+            }
+            if (currentWeapon == 135)
+            {
+                expArr = WeaponVersionData.ARRexpSuckCannon;
+                expAddr = WeaponVersionData.ADDexpSuckCannon;
+            }
+            if (currentWeapon == 71)
+            {
+                expArr = WeaponVersionData.ARRexpSpittingHydra;
+                expAddr = WeaponVersionData.ADDexpSpittingHydra;
+            }
+            if (currentWeapon == 87)
+            {
+                expArr = WeaponVersionData.ARRexpAgentsOfDoom;
+                expAddr = WeaponVersionData.ADDexpAgentsOfDoom;
+            }
+            if (currentWeapon == 111)
+            {
+                expArr = WeaponVersionData.ARRexpFluxRifle;
+                expAddr = WeaponVersionData.ADDexpFluxRifle;
+            }
+            if (currentWeapon == 63)
+            {
+                expArr = WeaponVersionData.ARRexpAnnihilator;
+                expAddr = WeaponVersionData.ADDexpAnnihilator;
+            }
+            if (currentWeapon == 103)
+            {
+                expArr = WeaponVersionData.ARRexpHoloShieldGlove;
+                expAddr = WeaponVersionData.ADDexpHoloShieldGlove;
+            }
+            if (currentWeapon == 79)
+            {
+                expArr = WeaponVersionData.ARRexpDiskBladeGun;
+                expAddr = WeaponVersionData.ADDexpDiskBladeGun;
+            }
+            if (currentWeapon == 95)
+            {
+                expArr = WeaponVersionData.ARRexpRiftInducer;
+                expAddr = WeaponVersionData.ADDexpRiftInducer;
+            }
+            if (currentWeapon == 143)
+            {
+                expArr = WeaponVersionData.ARRexpQwackORay;
+                expAddr = WeaponVersionData.ADDexpQwackORay;
+            }
+            if (currentWeapon == 151)
+            {
+                expArr = WeaponVersionData.ARRexpRY3N0;
+                expAddr = WeaponVersionData.ADDexpRY3N0;
+            }
+            if (currentWeapon == 21)
+            {
+                expArr = WeaponVersionData.ARRexpMegaTurretGlove;
+                expAddr = WeaponVersionData.ADDexpMegaTurretGlove;
+            }
+            if (currentWeapon == 17)
+            {
+                expArr = WeaponVersionData.ARRexpLavaGun;
+                expAddr = WeaponVersionData.ADDexpLavaGun;
+            }
+            if (currentWeapon == 22)
+            {
+                expArr = WeaponVersionData.ARRexpShieldCharger;
+                expAddr = WeaponVersionData.ADDexpShieldCharger;
+            }
+            if (currentWeapon == 19)
+            {
+                expArr = WeaponVersionData.ARRexpShieldCharger;
+                expAddr = WeaponVersionData.ADDexpShieldCharger;
+            }
+
+            currentExp = Memory.ReadInt(expAddr);
+            for (int i = 0; i < 5; i++)
+            {
+                // Check Next level exp
+                if (currentExp < expArr[i])
+                {
+                    currentExp = expArr[i];
+                    Memory.Write(expAddr, currentExp);
+                    return;
+                }
+            }
         }
 
         public static void UpdateJunk(long id)
