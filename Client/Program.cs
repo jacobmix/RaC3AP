@@ -216,7 +216,7 @@ namespace RaC3AP
             Memory.Write(WeaponUnlocks.unlockRY3N0, RY3N0.Unlock);
             Memory.Write(RY3N0.expAddress, WeaponVersionData.ARRexpRY3N0[3]); //Lv3
             Memory.Write(Addresses.ammoRY3N0, 100);
-            Memory.WriteByte(Addresses.armorEquipped, 4);
+            //Memory.WriteByte(Addresses.armorEquipped, 4);
             // Unlock Myron
             Mylon.Unlock = 1;
 #endif
