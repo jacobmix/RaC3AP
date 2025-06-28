@@ -550,14 +550,14 @@
     "Id": 50001096,
     "Address": "0x0014275E", // JP: 1426DE,
     "CompareType": 1, // Greater than
-    "CheckType": 1, // Int type
+    "CheckType": 3, // Byte type
     "CheckValue": "0"
   },
   {
     "Name": "5 Sewer Crystals Traded",
     "Id": 50001097,
     "Address": "0x0014275E", // JP: 1426DE,
-    "CheckType": 1, // Int type
+    "CheckType": 3, // Byte type
     "CompareType": 1, // Greater than
     "CheckValue": "4"
   },
@@ -565,7 +565,7 @@
     "Name": "10 Sewer Crystals Traded",
     "Id": 50001098,
     "Address": "0x0014275E", // JP: 1426DE,
-    "CheckType": 1, // Int type
+    "CheckType": 3, // Byte type
     "CompareType": 1, // Greater than
     "CheckValue": "9" // 0x9
   },
@@ -573,7 +573,7 @@
     "Name": "20 Sewer Crystals Traded",
     "Id": 50001099,
     "Address": "0x0014275E", // JP: 1426DE,
-    "CheckType": 1, // Int type
+    "CheckType": 3, // Byte type
     "CompareType": 1, // Greater than
     "CheckValue": "19" // 0x13
   },
