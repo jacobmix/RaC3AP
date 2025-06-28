@@ -158,31 +158,56 @@ def set_rules_hard_location(world):
     # "Annihilation: The Terrible Two": LocData(50001045, "Annihilation Nation"),
     # "Annihilation: Two Minute Warning": LocData(50001047, "Annihilation Nation"),
     # "Annihilation: Championship Bout": LocData(50001052, "Annihilation Nation"),
-
-    # "Annihilation: Meet Courtney - Arena": LocData(50001053, "Annihilation Nation"), # Post-Dax
-    # "Annihilation: Ninja Challenge": LocData(50001054, "Annihilation Nation"),
-    # "Annihilation: Counting Ducks": LocData(50001055, "Annihilation Nation"),
-    # "Annihilation: Cycling Weapons": LocData(50001056, "Annihilation Nation"),
-    # "Annihilation: One Hit Wonder": LocData(50001057, "Annihilation Nation"),
-    # "Annihilation: Time to SUCC": LocData(50001058, "Annihilation Nation"),
-    # "Annihilation: Naptime": LocData(50001059, "Annihilation Nation"),
-    # "Annihilation: More Cycling Weapons": LocData(50001060, "Annihilation Nation"),
-    # "Annihilation: Dodge the Twins": LocData(50001061, "Annihilation Nation"),
-    # "Annihilation: Chop Chop": LocData(50001062, "Annihilation Nation"),
-    # "Annihilation: Sleep Inducer": LocData(50001063, "Annihilation Nation"),
-    # "Annihilation: The Other White Meat": LocData(50001064, "Annihilation Nation"),
-    # "Annihilation: Championship Bout II": LocData(50001065, "Annihilation Nation"),
-    # "Annihilation: Qwarktastic Battle": LocData(50001066, "Annihilation Nation"),
-    # "Annihilation: Crispy Critter": LocData(50001068, "Annihilation Nation"),
-    # "Annihilation: Pyro Playground": LocData(50001069, "Annihilation Nation"),
-    # "Annihilation: Suicide Run": LocData(50001070, "Annihilation Nation"),
-    # "Annihilation: BBQ Boulevard": LocData(50001071, "Annihilation Nation"),
-    # "Annihilation: T-Bolt: Maze of Blaze": LocData(50001043, "Annihilation Nation"),
-    # "Annihilation: Maze of Blaze": LocData(50001072, "Annihilation Nation"),
-    # "Annihilation: Cremation Station": LocData(50001073, "Annihilation Nation"),
-    # "Annihilation: The Annihilator (Gauntlet)": LocData(50001074, "Annihilation Nation"),
     # "Annihilation: Qwark Vidcomic 2": LocData(50001075, "Annihilation Nation"),
+    
+    # Second visit: Post-Dax
+    # "Annihilation: BBQ Boulevard": LocData(50001071, "Annihilation Nation"),
+    # "Annihilation: Meet Courtney - Arena": LocData(50001053, "Annihilation Nation"),
     # "Annihilation: Qwark Vidcomic 3": LocData(50001076, "Annihilation Nation"),
+    
+    # After Courtney
+    add_rule(world.get_location("Annihilation: Ninja Challenge"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+    add_rule(world.get_location("Annihilation: Counting Ducks"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+    add_rule(world.get_location("Annihilation: Cycling Weapons"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+    add_rule(world.get_location("Annihilation: One Hit Wonder"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+    add_rule(world.get_location("Annihilation: Time to SUCC"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+    add_rule(world.get_location("Annihilation: Naptime"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+    add_rule(world.get_location("Annihilation: More Cycling Weapons"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+    add_rule(world.get_location("Annihilation: Dodge the Twins"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+    add_rule(world.get_location("Annihilation: Chop Chop"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+    add_rule(world.get_location("Annihilation: Sleep Inducer"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+    add_rule(world.get_location("Annihilation: The Other White Meat"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+    add_rule(world.get_location("Annihilation: Crispy Critter"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+    add_rule(world.get_location("Annihilation: Pyro Playground"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+    add_rule(world.get_location("Annihilation: Suicide Run"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+    add_rule(world.get_location("Annihilation: T-Bolt: Maze of Blaze"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+    add_rule(world.get_location("Annihilation: Maze of Blaze"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+
+    # Maybe difficult
+    add_rule(world.get_location("Annihilation: Championship Bout II"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+    add_rule(world.get_location("Annihilation: Qwarktastic Battle"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+    add_rule(world.get_location("Annihilation: Qwarktastic Battle"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+    add_rule(world.get_location("Annihilation: The Annihilator (Gauntlet)"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player))
 
     #----- Planet Aquatos -----#
     add_rule(world.get_location("Aquatos: T-Bolt: Top Left Bolt"),
