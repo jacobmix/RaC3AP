@@ -758,30 +758,20 @@ namespace RaC3AP
                     Memory.WriteBit(GadgetAddresses.chargeBoots, 1, true);
                     break;
                 case 50001475:
-                    {
-                        Memory.WriteBit(GadgetAddresses.vidComic1, 1, true);
-                        break;
-                    }
+                    Memory.WriteBit(GadgetAddresses.vidComic1, 1, true);
+                    break;
                 case 50001476:
-                    {
-                        Memory.WriteBit(GadgetAddresses.vidComic2, 1, true);
-                        break;
-                    }
+                    Memory.WriteBit(GadgetAddresses.vidComic2, 1, true);
+                    break;
                 case 50001477:
-                    {
-                        Memory.WriteBit(GadgetAddresses.vidComic3, 1, true);
-                        break;
-                    }
+                    Memory.WriteBit(GadgetAddresses.vidComic3, 1, true);
+                    break;
                 case 50001478:
-                    {
-                        Memory.WriteBit(GadgetAddresses.vidComic4, 1, true);
-                        break;
-                    }
+                    Memory.WriteBit(GadgetAddresses.vidComic4, 1, true);
+                    break;
                 case 50001479:
-                    {
-                        Memory.WriteBit(GadgetAddresses.vidComic5, 1, true);
-                        break;
-                    }
+                    Memory.WriteBit(GadgetAddresses.vidComic5, 1, true);
+                    break;
             }
         }
         public static void UpdateArmor()
