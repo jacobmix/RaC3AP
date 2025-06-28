@@ -68,6 +68,7 @@ namespace RaC3AP
         public const int QuicksetOffset = 0x0; // EN: 0x00, JP: 0xCDE0
         public const int CurrentEquipmentOffset = 0x0; // EN: 0x00, JP: 0x92C0
         */
+        public const int Bolt = 0x00142660 + GlobalConfig.AddressOffset;
         public const int NanotecExp = 0x00142694 + GlobalConfig.AddressOffset; //
 
         public const int DefeatNefarious = 0x0014270F + GlobalConfig.AddressOffset; // Nefariuos

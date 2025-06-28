@@ -183,6 +183,10 @@ namespace RaC3AP
             {
                 UpdateArmor();
             }
+            if (item.Id == 50001491)
+            {
+                IncrementBolt();
+            }
         }
 
         static async Task<bool> ConnectAsync(string address, string playerName, string password)
@@ -802,6 +806,14 @@ namespace RaC3AP
             Memory.WriteByte(Addresses.armorEquipped, Addresses.currentArmor);
             Console.WriteLine($"Update armor {Addresses.currentArmor}");
         }
+        public static void IncrementBolt()
+        {
+            // No error check. Overflow of bolt count is not caused in general case.
+            var currentBolt = Memory.ReadInt(GlobalConfig.Bolt);
+            currentBolt += 50000;
+            Memory.Write(GlobalConfig.Bolt, currentBolt);
+        }
+
         public static void UpdateJunk(long id)
         {
             //Junk
