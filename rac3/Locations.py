@@ -33,7 +33,7 @@ rac3_locations = {
     #----- Starship Phoenix -----#
     "Phoenix: Received SUCC Cannon": LocData(50001009, "Starship Phoenix"),
     "Phoenix: Received Infector": LocData(50001010, "Starship Phoenix"),
-    "Phoenix: T-Bolt: All VR Deck Challenges": LocData(50001011, "Starship Phoenix"),
+    "Phoenix: T-Bolt: Last VR Deck Challenges": LocData(50001011, "Starship Phoenix"),
     "Phoenix: T-Bolt: Complete VR Training": LocData(50001012, "Starship Phoenix"),
     "Phoenix: Received Magna Plate Armor":LocData(50001013, "Starship Phoenix"),
     "Phoenix: Received Adamantine Armor": LocData(50001014, "Starship Phoenix"),

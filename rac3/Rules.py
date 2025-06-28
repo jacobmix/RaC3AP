@@ -1,6 +1,8 @@
 from worlds.generic.Rules import add_rule, set_rule
 from .Types import weapon_type_to_shortened_name
 from typing import TYPE_CHECKING
+from .Locations import rac3_locations
+from .Items import gadget_items
 
 if TYPE_CHECKING:
     from . import RaC3World
@@ -43,7 +45,8 @@ def set_rules_planets(world):
     #Getting to Holostar Studios
     add_rule(world.multiworld.get_entrance("Starship Phoenix -> Holostar Studios", world.player),
              lambda state: state.has("Infobot: Holostar Studios", world.player)
-             and state.has("Hacker", world.player))
+             and state.has("Hacker", world.player)
+             and state.has("Hypershot", world.player))
 
     #Getting to Obani Draco (lol)
     add_rule(world.multiworld.get_entrance("Starship Phoenix -> Obani Draco", world.player),
@@ -88,6 +91,178 @@ def set_rules_planets(world):
 
 
 def set_rules_hard_location(world):
+    #----- Planet Veldin -----# # Nothing
+    #----- Planet Florana -----# # Nothing
+
+    #----- Starship Phoenix -----#
+    # "Phoenix: Received SUCC Cannon": LocData(50001009, "Starship Phoenix"),
+    # "Phoenix: Received Infector": LocData(50001010, "Starship Phoenix"),
+    # "Phoenix: T-Bolt: Last VR Deck Challenges": LocData(50001011, "Starship Phoenix"),
+    add_rule(world.get_location("Phoenix: T-Bolt: Complete VR Training"),
+                lambda state: state.can_reach("Tyhrranosis", player=world.player))
+    add_rule(world.get_location("Phoenix: Received Adamantine Armor"),
+                lambda state: state.can_reach("Tyhrranosis", player=world.player))
+    add_rule(world.get_location("Phoenix: Received Aegis Mark V Armor"),
+                lambda state: state.can_reach("Zeldrin Starport Region 2", player=world.player))
+    add_rule(world.get_location("Phoenix: Received Infernox Armor"),
+                lambda state: state.can_reach("Koros", player=world.player))
+    add_rule(world.get_location("Phoenix: Received Hacker"),
+                lambda state: state.can_reach("Tyhrranosis", player=world.player))
+    add_rule(world.get_location("Phoenix: Received Hypershot"),
+                lambda state: state.can_reach("Tyhrranosis", player=world.player))
+    #"Phoenix: Infobot: Marcadia": LocData(50001019, "Starship Phoenix"),
+    add_rule(world.get_location("Phoenix: Infobot: Koros"),
+            lambda state: state.can_reach("Qwarks Hideout", player=world.player))
+    add_rule(world.get_location("Phoenix: Infobot: Annihilation Nation"),
+            lambda state: state.has("Qwark Vidcomic 1", world.player))
+    add_rule(world.get_location("Phoenix: Infobot: Aquatos"),
+            lambda state: state.has("Tyhrra-Guise", world.player))
+    add_rule(world.get_location("Phoenix: Infobot: Tyhrranosis"),
+                lambda state: state.can_reach("Aquatos", player=world.player))
+    add_rule(world.get_location("Phoenix: Infobot: Daxx"),
+                lambda state: state.can_reach("Tyhrranosis", player=world.player))
+    add_rule(world.get_location("Phoenix: Infobot: Obani Gemini"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+    # "Phoenix: Infobot: Obani Gemini": LocData(50001025, "Starship Phoenix"),
+    add_rule(world.get_location("Phoenix: Infobot: Zeldrin"),
+                lambda state: state.can_reach("Metropolis Region 2", player=world.player))
+    add_rule(world.get_location("Phoenix: Infobot: Qwarks Hideout"),
+            lambda state: state.has("Qwark Vidcomic 1", world.player)
+            and state.has("Qwark Vidcomic 2", world.player)
+            and state.has("Qwark Vidcomic 3", world.player)
+            and state.has("Qwark Vidcomic 4", world.player)
+            and state.has("Qwark Vidcomic 5", world.player))
+    add_rule(world.get_location("Phoenix: Qwark Vidcomic 4"),
+                lambda state: state.can_reach("Zeldrin Starport Region 2", player=world.player))
+    add_rule(world.get_location("Phoenix: Qwark Vidcomic 5"),
+                lambda state: state.can_reach("Zeldrin", player=world.player))
+
+    #----- Planet Marcadia -----#
+    add_rule(world.get_location("Marcadia: T-Bolt: Last Refractor Room"),
+                lambda state: state.has("Refractor", world.player)
+                and state.has("Grav-Boots", world.player))
+    add_rule(world.get_location("Marcadia: T-Bolt: Ceiling just before Al"),
+                lambda state: state.has("Refractor", world.player)
+                and state.has("Grav-Boots", world.player))
+
+    #----- Annihilation Nation -----#
+    # First visit (when getting Tyhrra-Guise")
+    # "Annihilation: Heat Street": LocData(50001067, "Annihilation Nation"),
+    # "Annihilation: T-Bolt: Heat Street": LocData(50001042, "Annihilation Nation"),
+    # "Annihilation: Grand Prize Bout": LocData(50001044, "Annihilation Nation"),
+    # "Annihilation: Robot Rampage": LocData(50001046, "Annihilation Nation"),
+    # "Annihilation: 90 Seconds of Carnage": LocData(50001048, "Annihilation Nation"),
+    # "Annihilation: Onslaught": LocData(50001049, "Annihilation Nation"),
+    # "Annihilation: Whip it Good": LocData(50001050, "Annihilation Nation"),
+    # "Annihilation: Hydra'n Seek": LocData(50001051, "Annihilation Nation"),
+    # "Annihilation: The Terrible Two": LocData(50001045, "Annihilation Nation"),
+    # "Annihilation: Two Minute Warning": LocData(50001047, "Annihilation Nation"),
+    # "Annihilation: Championship Bout": LocData(50001052, "Annihilation Nation"),
+
+    # "Annihilation: Meet Courtney - Arena": LocData(50001053, "Annihilation Nation"), # Post-Dax
+    # "Annihilation: Ninja Challenge": LocData(50001054, "Annihilation Nation"),
+    # "Annihilation: Counting Ducks": LocData(50001055, "Annihilation Nation"),
+    # "Annihilation: Cycling Weapons": LocData(50001056, "Annihilation Nation"),
+    # "Annihilation: One Hit Wonder": LocData(50001057, "Annihilation Nation"),
+    # "Annihilation: Time to SUCC": LocData(50001058, "Annihilation Nation"),
+    # "Annihilation: Naptime": LocData(50001059, "Annihilation Nation"),
+    # "Annihilation: More Cycling Weapons": LocData(50001060, "Annihilation Nation"),
+    # "Annihilation: Dodge the Twins": LocData(50001061, "Annihilation Nation"),
+    # "Annihilation: Chop Chop": LocData(50001062, "Annihilation Nation"),
+    # "Annihilation: Sleep Inducer": LocData(50001063, "Annihilation Nation"),
+    # "Annihilation: The Other White Meat": LocData(50001064, "Annihilation Nation"),
+    # "Annihilation: Championship Bout II": LocData(50001065, "Annihilation Nation"),
+    # "Annihilation: Qwarktastic Battle": LocData(50001066, "Annihilation Nation"),
+    # "Annihilation: Crispy Critter": LocData(50001068, "Annihilation Nation"),
+    # "Annihilation: Pyro Playground": LocData(50001069, "Annihilation Nation"),
+    # "Annihilation: Suicide Run": LocData(50001070, "Annihilation Nation"),
+    # "Annihilation: BBQ Boulevard": LocData(50001071, "Annihilation Nation"),
+    # "Annihilation: T-Bolt: Maze of Blaze": LocData(50001043, "Annihilation Nation"),
+    # "Annihilation: Maze of Blaze": LocData(50001072, "Annihilation Nation"),
+    # "Annihilation: Cremation Station": LocData(50001073, "Annihilation Nation"),
+    # "Annihilation: The Annihilator (Gauntlet)": LocData(50001074, "Annihilation Nation"),
+    # "Annihilation: Qwark Vidcomic 2": LocData(50001075, "Annihilation Nation"),
+    # "Annihilation: Qwark Vidcomic 3": LocData(50001076, "Annihilation Nation"),
+
+    #----- Planet Aquatos -----#
+    add_rule(world.get_location("Aquatos: T-Bolt: Top Left Bolt"),
+                lambda state: state.has("Hypershot", world.player)
+                and state.has("Grav-Boots", world.player))
+    add_rule(world.get_location("Aquatos: T-Bolt: Swinging Bolt"),
+                lambda state: state.has("Hypershot", world.player)
+                and state.has("Grav-Boots", world.player))
+    add_rule(world.get_location("Aquatos: T-Bolt: Behind the Locked Gate"),
+                lambda state: state.has("Hacker", world.player))
+    
+    #----- Planet Tyhrranosis -----#
+    add_rule(world.get_location("Tyhrranosis: T-Bolt: Underground Cave Bolt"),
+                lambda state: state.has("Hypershot", world.player))
+    
+    #----- Planet Daxx -----#
+    add_rule(world.get_location("Daxx: T-Bolt: Right of the Taxi"),
+                lambda state: state.has("Hypershot", world.player))
+    add_rule(world.get_location("Daxx: T-Bolt: Time Sensitive Door"), # これだけなぜか条件を満たせない。
+                lambda state: state.has("Hypershot", world.player)
+                and state.has("Charge-Boots", world.player)
+                and state.has("Hacker", world.player))
+
+    #----- Obani Gemini -----#
+    add_rule(world.get_location("Obani_Gemini: T-Bolt: Follow the Lava"),
+                lambda state: state.has("Hypershot", world.player))
+
+    #----- Planet Rilgar -----# # Nothing
+    
+    # ----- Holostar Studios -----#
+    add_rule(world.get_location("Holostar: T-Bolt: Atop the Chairs"),
+                lambda state: state.has("Hacker", world.player))
+    add_rule(world.get_location("Holostar: T-Bolt: Lot 42's Grav Ramp"),
+                lambda state: state.has("Hacker", world.player)
+                and state.has("Hypershot", world.player))
+    add_rule(world.get_location("Holostar: T-Bolt: Kamikaze Noids"),
+                lambda state: state.has("Hacker", world.player)
+                and state.has("Hypershot", world.player))
+
+    #----- Obani Draco (lol) -----# # Nothing
+    
+    #----- Zeldrin Starport -----#
+    add_rule(world.get_location("Zeldrin_Starport: Received Bolt Grabber V2"),
+                lambda state: state.has("Hypershot", world.player))
+    add_rule(world.get_location("Zeldrin_Starport: T-Bolt: Atop the Twin Shooters"),
+                lambda state: state.has("Hypershot", world.player))
+
+    #----- Planet Metropolis -----#
+    add_rule(world.get_location("Metropolis: T-Bolt: Across the Gap"),
+                lambda state: state.has("Hypershot", world.player))
+    add_rule(world.get_location("Metropolis: Received Map-O-Matic"),
+                lambda state: state.has("Hypershot", world.player)
+                and state.has("Grav-Boots", world.player))
+    add_rule(world.get_location("Metropolis: T-Bolt: Tall Tower (Hovership)"),
+                lambda state: state.has("Hypershot", world.player)
+                and state.has("Grav-Boots", world.player))
+
+    #----- Planet Zeldrin -----#
+    add_rule(world.get_location("Zeldrin: T-Bolt: Turn Around"),
+                lambda state: state.has("Grav-Boots", world.player))
+    add_rule(world.get_location("Zeldrin: Received Nano-Pak"),
+                lambda state: state.has("Hypershot", world.player)
+                and state.has("Grav-Boots", world.player))
+    add_rule(world.get_location("Zeldrin: Infobot: Aridia"),
+                lambda state: state.has("Hypershot", world.player)
+                and state.has("Grav-Boots", world.player))
+    
+    #----- Planet Aridia -----#
+    add_rule(world.get_location("Aridia: T-Bolt: Under the Bridge (Assassionation)"),
+                lambda state: state.has("Grav-Boots", world.player))
+    add_rule(world.get_location("Aridia: T-Bolt: Behind the Base (X12 Endgame)"),
+                lambda state: state.has("Grav-Boots", world.player))
+
+    #----- Qwark's Hideout -----#
+    add_rule(world.get_location("Qwark's_Hideout: T-Bolt: Glide from the Ramp"),
+                lambda state: state.has("Grav-Boots", world.player))
+    
+    #----- Planet Koros -----# # Nothing
+    #----- Planet Mylon -----# # Nothing
+
     pass
 
 def set_rules(world: "RaC3World"):
