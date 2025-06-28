@@ -131,7 +131,7 @@ qwark_vidcomics = {
 
 
 progressive_armor = {
-    "Progressive Armor": ItemData(50001480, ItemClassification.useful, 4)
+    "Progressive Armor": ItemData(50001480, ItemClassification.useful, 6)
 }
 
 
