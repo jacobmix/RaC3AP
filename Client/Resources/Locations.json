@@ -338,98 +338,98 @@
   {
     "Name": "Ninja Challenge",
     "Id": 50001054,
-    "Address": "0x000000AA",
+    "Address": "0x0014277D",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Counting Ducks",
     "Id": 50001055,
-    "Address": "0x000000AA",
+    "Address": "0x0014277E",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Cycling Weapons",
     "Id": 50001056,
-    "Address": "0x000000AA",
+    "Address": "0x0014277F",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "One Hit Wonder",
     "Id": 50001057,
-    "Address": "0x000000AA",
+    "Address": "0x00142780",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Time to SUCC",
     "Id": 50001058,
-    "Address": "0x000000AA",
+    "Address": "0x00142781",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Naptime",
     "Id": 50001059,
-    "Address": "0x000000AA",
+    "Address": "0x00142782",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Meet Courtney - Arena",
     "Id": 50001053,
-    "Address": "0x000000AA",
+    "Address": "0x00142771",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "More Cycling Weapons",
     "Id": 50001060,
-    "Address": "0x000000AA",
+    "Address": "0x00142783",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Dodge the Twins",
     "Id": 50001061,
-    "Address": "0x000000AA",
+    "Address": "0x00142784",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Chop Chop",
     "Id": 50001062,
-    "Address": "0x000000AA",
+    "Address": "0x00142785",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Sleep Inducer",
     "Id": 50001063,
-    "Address": "0x000000AA",
+    "Address": "0x00142786",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "The Other White Meat",
     "Id": 50001064,
-    "Address": "0x000000AA",
+    "Address": "0x00142787",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Championship Bout II",
     "Id": 50001065,
-    "Address": "0x000000AA",
+    "Address": "0x00142788",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Qwarktastic Battle",
     "Id": 50001066,
-    "Address": "0x000000AA",
+    "Address": "0x00142789",
     "CheckType": 0,
     "AddressBit": 0
   },
@@ -462,30 +462,30 @@
     "AddressBit": 0
   },
   {
-    "Name": "BBQ Boulevard",
+    "Name": "BBQ Boulevard", // (Meet Courtney - Gauntlet) 
     "Id": 50001071,
-    "Address": "0x000000AA",
+    "Address": "0x00142770",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Maze of Blaze",
     "Id": 50001072,
-    "Address": "0x000000AA",
+    "Address": "0x0014278A",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Cremation Station",
     "Id": 50001073,
-    "Address": "0x000000AA",
+    "Address": "0x0014278B",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "The Annihilator (Gauntlet)",
     "Id": 50001074,
-    "Address": "0x000000AA",
+    "Address": "0x0014278C",
     "CheckType": 0,
     "AddressBit": 0
   },
