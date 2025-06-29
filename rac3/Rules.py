@@ -112,19 +112,19 @@ def set_rules_hard_location(world):
     add_rule(world.get_location("Phoenix: Received Hypershot"),
                 lambda state: state.can_reach("Tyhrranosis", player=world.player))
     #"Phoenix: Infobot: Marcadia": LocData(50001019, "Starship Phoenix"),
-    add_rule(world.get_location("Phoenix: Infobot: Koros"),
-            lambda state: state.can_reach("Qwarks Hideout", player=world.player))
     add_rule(world.get_location("Phoenix: Infobot: Annihilation Nation"),
             lambda state: state.has("Qwark Vidcomic 1", world.player))
     add_rule(world.get_location("Phoenix: Infobot: Aquatos"),
-            lambda state: state.has("Tyhrra-Guise", world.player))
+            lambda state: state.has("Tyhrra-Guise", world.player)
+            and state.can_reach("Annihilation Nation", player=world.player))
     add_rule(world.get_location("Phoenix: Infobot: Tyhrranosis"),
-                lambda state: state.can_reach("Aquatos", player=world.player))
+            lambda state: state.can_reach("Aquatos", player=world.player)
+            and state.can_reach("Aquatos", player=world.player))
     add_rule(world.get_location("Phoenix: Infobot: Daxx"),
                 lambda state: state.can_reach("Tyhrranosis", player=world.player))
     add_rule(world.get_location("Phoenix: Infobot: Obani Gemini"),
-            lambda state:  state.has("Qwark Vidcomic 3", world.player))
-    # "Phoenix: Infobot: Obani Gemini": LocData(50001025, "Starship Phoenix"),
+            lambda state: state.can_reach("Holostar Studios", player=world.player)
+            and state.can_reach("Rilgar", player=world.player))
     add_rule(world.get_location("Phoenix: Infobot: Zeldrin"),
                 lambda state: state.can_reach("Metropolis Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: Infobot: Qwarks Hideout"),
@@ -132,7 +132,10 @@ def set_rules_hard_location(world):
             and state.has("Qwark Vidcomic 2", world.player)
             and state.has("Qwark Vidcomic 3", world.player)
             and state.has("Qwark Vidcomic 4", world.player)
-            and state.has("Qwark Vidcomic 5", world.player))
+            and state.has("Qwark Vidcomic 5", world.player)
+            and state.can_reach("Zeldrin", player=world.player))
+    add_rule(world.get_location("Phoenix: Infobot: Koros"),
+            lambda state: state.can_reach("Qwarks Hideout", player=world.player))
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 4"),
                 lambda state: state.can_reach("Zeldrin Starport Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 5"),
