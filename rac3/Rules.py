@@ -153,8 +153,12 @@ def set_rules_hard_location(world):
     # "Annihilation: Robot Rampage": LocData(50001046, "Annihilation Nation"),
     # "Annihilation: 90 Seconds of Carnage": LocData(50001048, "Annihilation Nation"),
     # "Annihilation: Onslaught": LocData(50001049, "Annihilation Nation"),
-    # "Annihilation: Whip it Good": LocData(50001050, "Annihilation Nation"),
-    # "Annihilation: Hydra'n Seek": LocData(50001051, "Annihilation Nation"),
+    add_rule(world.get_location("Annihilation: Whip it Good"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player)
+            and state.has("Plasma Whip", world.player))
+    add_rule(world.get_location("Annihilation: Hydra'n Seek"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player)
+            and state.has("Spitting Hydra", world.player))
     # "Annihilation: The Terrible Two": LocData(50001045, "Annihilation Nation"),
     # "Annihilation: Two Minute Warning": LocData(50001047, "Annihilation Nation"),
     # "Annihilation: Championship Bout": LocData(50001052, "Annihilation Nation"),
@@ -175,7 +179,8 @@ def set_rules_hard_location(world):
     add_rule(world.get_location("Annihilation: One Hit Wonder"),
             lambda state:  state.has("Qwark Vidcomic 3", world.player))
     add_rule(world.get_location("Annihilation: Time to SUCC"),
-            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+            lambda state:  state.has("Qwark Vidcomic 3", world.player)
+            and state.has("SUCC Cannon", world.player))
     add_rule(world.get_location("Annihilation: Naptime"),
             lambda state:  state.has("Qwark Vidcomic 3", world.player))
     add_rule(world.get_location("Annihilation: More Cycling Weapons"),
@@ -183,11 +188,14 @@ def set_rules_hard_location(world):
     add_rule(world.get_location("Annihilation: Dodge the Twins"),
             lambda state:  state.has("Qwark Vidcomic 3", world.player))
     add_rule(world.get_location("Annihilation: Chop Chop"),
-            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+            lambda state:  state.has("Qwark Vidcomic 3", world.player)
+            and state.has("Disk-Blade Gun", world.player))
     add_rule(world.get_location("Annihilation: Sleep Inducer"),
-            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+            lambda state:  state.has("Qwark Vidcomic 3", world.player)
+            and state.has("Rift Inducer", world.player))
     add_rule(world.get_location("Annihilation: The Other White Meat"),
-            lambda state:  state.has("Qwark Vidcomic 3", world.player))
+            lambda state:  state.has("Qwark Vidcomic 3", world.player)
+            and state.has("Qwack-O-Ray", world.player))
     add_rule(world.get_location("Annihilation: Crispy Critter"),
             lambda state:  state.has("Qwark Vidcomic 3", world.player))
     add_rule(world.get_location("Annihilation: Pyro Playground"),
@@ -198,16 +206,22 @@ def set_rules_hard_location(world):
             lambda state:  state.has("Qwark Vidcomic 3", world.player))
     add_rule(world.get_location("Annihilation: Maze of Blaze"),
             lambda state:  state.has("Qwark Vidcomic 3", world.player))
-
-    # Maybe difficult
-    add_rule(world.get_location("Annihilation: Championship Bout II"),
-            lambda state:  state.has("Qwark Vidcomic 3", world.player))
-    add_rule(world.get_location("Annihilation: Qwarktastic Battle"),
-            lambda state:  state.has("Qwark Vidcomic 3", world.player))
-    add_rule(world.get_location("Annihilation: Qwarktastic Battle"),
-            lambda state:  state.has("Qwark Vidcomic 3", world.player))
     add_rule(world.get_location("Annihilation: The Annihilator (Gauntlet)"),
             lambda state:  state.has("Qwark Vidcomic 3", world.player))
+    add_rule(world.get_location("Annihilation: Championship Bout II"),
+            lambda state:  state.has("Qwark Vidcomic 3", world.player)),
+
+    # Maybe difficult and long(100 rounds ...)
+    add_rule(world.get_location("Annihilation: Qwarktastic Battle"),
+            lambda state: state.has("Qwark Vidcomic 1", world.player)
+            and state.has("Qwark Vidcomic 2", world.player)
+            and state.has("Qwark Vidcomic 3", world.player)
+            and state.has("Qwark Vidcomic 4", world.player)
+            and state.has("Qwark Vidcomic 5", world.player)
+            and state.has("Hacker", world.player)
+            and state.has("Tyhrra-Guise", world.player)
+            and state.has("Hypershot", world.player)
+            and state.has("Grav-Boots", world.player)),
 
     #----- Planet Aquatos -----#
     add_rule(world.get_location("Aquatos: T-Bolt: Top Left Bolt"),
@@ -226,7 +240,7 @@ def set_rules_hard_location(world):
     #----- Planet Daxx -----#
     add_rule(world.get_location("Daxx: T-Bolt: Right of the Taxi"),
                 lambda state: state.has("Hypershot", world.player))
-    add_rule(world.get_location("Daxx: T-Bolt: Time Sensitive Door"), # これだけなぜか条件を満たせない。
+    add_rule(world.get_location("Daxx: T-Bolt: Time Sensitive Door"),
                 lambda state: state.has("Hypershot", world.player)
                 and state.has("Charge-Boots", world.player)
                 and state.has("Hacker", world.player))
