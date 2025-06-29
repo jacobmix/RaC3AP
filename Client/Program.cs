@@ -252,7 +252,7 @@ namespace RaC3AP
             Memory.Write(RY3N0.expAddress, WeaponVersionData.ARRexpRY3N0[3]); //Lv3
             //Memory.WriteByte(Addresses.armorEquipped, 4);
             // Unlock Myron
-            Mylon.Unlock = 1;
+            //Mylon.Unlock = 1;
 #endif
             var SentLocations = Client.GameState.CompletedLocations;
             var ItemsReceived = Client.GameState.ReceivedItems;
