@@ -1142,14 +1142,17 @@ namespace RaC3AP
                     unlockBit = 0;
                 // WA: Anihilation proceeding after Goal
                 if (gadget.unlockAddress == VidComic2.unlockAddress)
-                    waitCount = 15;
+                    waitCount = 30;
                 else
                     waitCount = 1;
 
                 if (gadget.Unlock == 0)
                 {
                     if (gadget.unlockWait > waitCount)
+                    {
                         Memory.WriteByte(gadget.unlockAddress, 0);
+                        gadget.unlockWait = 0;
+                    }
                     else
                         gadget.unlockWait++;
                 }
