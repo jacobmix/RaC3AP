@@ -1136,6 +1136,10 @@ namespace RaC3AP
                 // unlock bit setting: if there is event, second bit is used for unlock.
                 if (gadget.unlockAddress == Hacker.unlockAddress ||
                     gadget.unlockAddress == HyperShot.unlockAddress ||
+                    gadget.unlockAddress == WarpPad.unlockAddress ||
+                    gadget.unlockAddress == MapOMatic.unlockAddress ||
+                    gadget.unlockAddress == Pda.unlockAddress ||
+                    gadget.unlockAddress == GravBoots.unlockAddress ||
                     gadget.unlockAddress == TyhrraGuise.unlockAddress)
                     unlockBit = 1;
                 else
