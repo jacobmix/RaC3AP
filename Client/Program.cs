@@ -56,7 +56,7 @@ namespace RaC3AP
         public static ArchipelagoClient Client { get; set; }
         public static GameState CurrentGameState = new GameState();
         
-        public static ulong[] AvailableSlots = [PlanetSlots.slotOne, PlanetSlots.slotTwo, PlanetSlots.slotThree, PlanetSlots.slotFour, PlanetSlots.slotFive, PlanetSlots.slotSix, PlanetSlots.slotSeven, PlanetSlots.slotEight, PlanetSlots.slotNine, PlanetSlots.slotTen, PlanetSlots.slotEleven, PlanetSlots.slotTwelve, PlanetSlots.slotThirteen, PlanetSlots.slotFourteen, PlanetSlots.slotFifteen, PlanetSlots.slotSixteen, PlanetSlots.slotSeventeen, PlanetSlots.slotEighteen, PlanetSlots.slotNineteen];
+        public static ulong[] AvailableSlots = [PlanetSlots.slotOne, PlanetSlots.slotTwo, PlanetSlots.slotThree, PlanetSlots.slotFour, PlanetSlots.slotFive, PlanetSlots.slotSix, PlanetSlots.slotSeven, PlanetSlots.slotEight, PlanetSlots.slotNine, PlanetSlots.slotTen, PlanetSlots.slotEleven, PlanetSlots.slotTwelve, PlanetSlots.slotThirteen, PlanetSlots.slotFourteen, PlanetSlots.slotFifteen, PlanetSlots.slotSixteen, PlanetSlots.slotSeventeen, PlanetSlots.slotEighteen, PlanetSlots.slotNineteen, PlanetSlots.slotTwenty];
         public static ulong[] QuickSelect = [QuickSelectSlots.oneOne, QuickSelectSlots.oneTwo, QuickSelectSlots.oneThree, QuickSelectSlots.oneFour, QuickSelectSlots.oneFive, QuickSelectSlots.oneSix, QuickSelectSlots.oneSeven, QuickSelectSlots.oneEight, QuickSelectSlots.twoOne, QuickSelectSlots.twoTwo, QuickSelectSlots.twoThree, QuickSelectSlots.twoFour, QuickSelectSlots.twoFive, QuickSelectSlots.twoSix, QuickSelectSlots.twoSeven, QuickSelectSlots.twoEight];
         public static ulong[] lastUsed = [Addresses.lastUsedWeaponOne, Addresses.lastUsedWeaponTwo, Addresses.lastUsedWeaponThree];
         public static int currentMultiplier = 2;
@@ -1241,7 +1241,7 @@ namespace RaC3AP
             Memory.WriteByte(AvailableSlots[0], PlanetValues.Veldin);
             Memory.WriteByte(AvailableSlots[1], PlanetValues.Florana);
             Memory.WriteByte(AvailableSlots[2], PlanetValues.StarshipPhoenix);
-            Memory.WriteByte(AvailableSlots[20], PlanetValues.Museum);
+            Memory.WriteByte(AvailableSlots[19], PlanetValues.Museum);
         }
     }
 

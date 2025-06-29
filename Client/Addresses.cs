@@ -178,9 +178,11 @@ namespace RaC3AP
         public const int slotSeventeen = 0x00143090 + GlobalConfig.AddressOffset;
         public const int slotEighteen = 0x00143094 + GlobalConfig.AddressOffset;
         public const int slotNineteen = 0x00143098 + GlobalConfig.AddressOffset;
+        public const int slotTwenty = 0x0014309C + GlobalConfig.AddressOffset;
     }
     public class PlanetValues
     {
+        public const int Veldin = 1;
         public const int Florana = 2;
         public const int StarshipPhoenix = 3;
         public const int Marcadia = 4;
