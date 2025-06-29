@@ -1080,34 +1080,35 @@ namespace RaC3AP
             // If the value matches the weapon's version, and the weapon is currently not unlocked, it will remove that weapon
             foreach (var slot in QuickSelect)
             {
+                var slotValue = Memory.ReadByte(slot);
                 if (
                    // weapon
-                   (ShockBlaster.Unlock == 0 && Memory.ReadByte(slot) == 39) ||
-                   (NitroLauncher.Unlock == 0 && Memory.ReadByte(slot) == 119) ||
-                   (N60Storm.Unlock == 0 && Memory.ReadByte(slot) == 47) ||
-                   (PlasmaWhip.Unlock == 0 && Memory.ReadByte(slot) == 127) ||
-                   (Infector.Unlock == 0 && Memory.ReadByte(slot) == 55) ||
-                   (SuckCannon.Unlock == 0 && Memory.ReadByte(slot) == 135) ||
-                   (SpittingHydra.Unlock == 0 && Memory.ReadByte(slot) == 71) ||
-                   (AgentsOfDoom.Unlock == 0 && Memory.ReadByte(slot) == 87) ||
-                   (FluxRifle.Unlock == 0 && Memory.ReadByte(slot) == 111) ||
-                   (Annihilator.Unlock == 0 && Memory.ReadByte(slot) == 63) ||
-                   (HoloShieldGlove.Unlock == 0 && Memory.ReadByte(slot) == 103) ||
-                   (DiskBladeGun.Unlock == 0 && Memory.ReadByte(slot) == 79) ||
-                   (RiftInducer.Unlock == 0 && Memory.ReadByte(slot) == 95) ||
-                   (QwackORay.Unlock == 0 && Memory.ReadByte(slot) == 143) ||
-                   (RY3N0.Unlock == 0 && Memory.ReadByte(slot) == 151) ||
-                   (MegaTurretGlove.Unlock == 0 && Memory.ReadByte(slot) == 21) ||
-                   (LavaGun.Unlock == 0 && Memory.ReadByte(slot) == 17) ||
-                   (ShieldCharger.Unlock == 0 && Memory.ReadByte(slot) == 22) ||
-                   (Bouncer.Unlock == 0 && Memory.ReadByte(slot) == 19) ||
-                   (PlasmaCoil.Unlock == 0 && Memory.ReadByte(slot) == 16) ||
+                   (ShockBlaster.Unlock == 0 && slotValue == 39) ||
+                   (NitroLauncher.Unlock == 0 && slotValue == 119) ||
+                   (N60Storm.Unlock == 0 && slotValue == 47) ||
+                   (PlasmaWhip.Unlock == 0 && slotValue == 127) ||
+                   (Infector.Unlock == 0 && slotValue == 55) ||
+                   (SuckCannon.Unlock == 0 && slotValue == 135) ||
+                   (SpittingHydra.Unlock == 0 && slotValue == 71) ||
+                   (AgentsOfDoom.Unlock == 0 && slotValue == 87) ||
+                   (FluxRifle.Unlock == 0 && slotValue == 111) ||
+                   (Annihilator.Unlock == 0 && slotValue == 63) ||
+                   (HoloShieldGlove.Unlock == 0 && slotValue == 103) ||
+                   (DiskBladeGun.Unlock == 0 && slotValue == 79) ||
+                   (RiftInducer.Unlock == 0 && slotValue == 95) ||
+                   (QwackORay.Unlock == 0 && slotValue == 143) ||
+                   (RY3N0.Unlock == 0 && slotValue == 151) ||
+                   (MegaTurretGlove.Unlock == 0 && slotValue == 21) ||
+                   (LavaGun.Unlock == 0 && slotValue == 17) ||
+                   (ShieldCharger.Unlock == 0 && slotValue == 22) ||
+                   (Bouncer.Unlock == 0 && slotValue == 19) ||
+                   (PlasmaCoil.Unlock == 0 && slotValue == 16) ||
                    // Gadget
-                   (HyperShot.Unlock == 0 && Memory.ReadByte(slot) == 11) ||
-                   (Refractor.Unlock == 0 && Memory.ReadByte(slot) == 18) ||
-                   (WarpPad.Unlock == 0 && Memory.ReadByte(slot) == 31) ||
-                   (Pda.Unlock == 0 && Memory.ReadByte(slot) == 35) ||
-                   (TyhrraGuise.Unlock == 0 && Memory.ReadByte(slot) == 30)
+                   (HyperShot.Unlock == 0 && slotValue == 11) ||
+                   (Refractor.Unlock == 0 && slotValue == 18) ||
+                   (WarpPad.Unlock == 0 && slotValue == 31) ||
+                   (Pda.Unlock == 0 && slotValue == 35) ||
+                   (TyhrraGuise.Unlock == 0 && slotValue == 30)
                    )
                 {
                     Memory.WriteByte(slot, 0);
