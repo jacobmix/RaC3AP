@@ -254,7 +254,7 @@
   {
     "Name": "Received Tyhrra-Guise",
     "Id": 50001041,
-    "Address": "0x001426F5",
+    "Address": "0x0014276F", // Same as Grand Prize Bout(Thyrra-Guise Getting event)
     "CheckType": 0,
     "AddressBit": 0
   },
@@ -436,7 +436,7 @@
   {
     "Name": "Heat Street",
     "Id": 50001067,
-    "Address": "0x001426F6",
+    "Address": "0x0014276E",
     "CheckType": 0,
     "AddressBit": 0
   },
