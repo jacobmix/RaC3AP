@@ -633,9 +633,10 @@
   {
     "Name": "Post-Daxx",
     "Id": 50001323,
-    "Address": "0x00143B39",
+    //"Address": "0x00143B39", // ??
+    "Address": "0x00142C2D", // Daxx Courtney Room
     "CheckType": 0,
-    "AddressBit": 0
+    "AddressBit": 6 // 0x60: 0XX0_0000
   },
   {
     "Name": "Received Disk Blade Gun",
@@ -668,9 +669,10 @@
   {
     "Name": "Received Grav Boots",
     "Id": 50001360,
-    "Address": "0x00142CAD",
+    // "Address": "0x00142CAD",
+    "Address": "0x00142C49",
     "CheckType": 0,
-    "AddressBit": 0
+    "AddressBit": 3 // 0x06 -> 0x0E: 0000_X110
   },
   {
     "Name": "Infobot: Holostar Studios",
@@ -746,9 +748,10 @@
   {
     "Name": "Received Map-O-Matic",
     "Id": 50001430,
-    "Address": "0x00142CA5",
+    // "Address": "0x00142CA5", // item flag
+    "Address": "0x00142C64", // Metropolice Mission Clear
     "CheckType": 0,
-    "AddressBit": 0
+    "AddressBit": 5 // 0x20 : 00X0_0000 
   },
   {
     "Name": "T-Bolt: Across the Gap",
@@ -809,9 +812,10 @@
   {
     "Name": "Received Warp Pad",
     "Id": 50001470,
-    "Address": "0x00142CBF",
+    //"Address": "0x00142CBF", // Item flag
+    "Address": "0x00142C56", // Clear Aridia
     "CheckType": 0,
-    "AddressBit": 0
+    "AddressBit": 4 // 0x10: 000X_0000
   },
   {
     "Name": "Received Qwack-O-Ray",
