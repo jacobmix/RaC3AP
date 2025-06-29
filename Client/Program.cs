@@ -1130,16 +1130,25 @@ namespace RaC3AP
         public static void GadgetCycler()
         {
             int unlockBit = 0;
+            int waitCount = 1;
             foreach (var gadget in allGadget)
             {
-                // unlock bit setting
+                // unlock bit setting: if there is event, second bit is used for unlock.
                 if (gadget.unlockAddress == Hacker.unlockAddress ||
-                    gadget.unlockAddress == HyperShot.unlockAddress)
+                    gadget.unlockAddress == HyperShot.unlockAddress ||
+                    gadget.unlockAddress == TyhrraGuise.unlockAddress)
                     unlockBit = 1;
+                else
+                    unlockBit = 0;
+                // WA: Anihilation proceeding after Goal
+                if (gadget.unlockAddress == VidComic2.unlockAddress)
+                    waitCount = 15;
+                else
+                    waitCount = 1;
 
                 if (gadget.Unlock == 0)
                 {
-                    if (gadget.unlockWait > 1)
+                    if (gadget.unlockWait > waitCount)
                         Memory.WriteByte(gadget.unlockAddress, 0);
                     else
                         gadget.unlockWait++;
