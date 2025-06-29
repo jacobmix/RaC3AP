@@ -967,13 +967,11 @@ namespace RaC3AP
             // Fix Bolt mulipiler
             Memory.Write(Addresses.boltXPMultiplier, currentMultiplier);
 
-            // Keep Armor
-            Memory.WriteByte(Addresses.armorEquipped, Addresses.currentArmor);
-
             VerifyLastUsed();
             PlanetCycler();
             WeaponCycler();
             GadgetCycler();
+            ArmorCycler();
             VerifyQuickSelect();
             //EXPController();
         }
@@ -1156,6 +1154,20 @@ namespace RaC3AP
                 }
                 else
                     Memory.WriteBit(gadget.unlockAddress, unlockBit, true); 
+            }
+        }
+
+        public static void ArmorCycler()
+        {
+            var currentArmorValue = Memory.ReadByte(Addresses.armorEquipped);
+            if (currentArmorValue != Addresses.currentArmor) {
+                if (Addresses.armorUnlockWait > 1) // Wait 1 cycle to detect Location.
+                {
+                    Memory.WriteByte(Addresses.armorEquipped, Addresses.currentArmor);
+                    Addresses.armorUnlockWait = 0;
+                }
+                else
+                    Addresses.armorUnlockWait++;
             }
         }
 
