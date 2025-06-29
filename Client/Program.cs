@@ -1132,12 +1132,23 @@ namespace RaC3AP
         }
         public static void GadgetCycler()
         {
+            int unlockBit = 1;
             foreach (var gadget in allGadget)
             {
+                // unlock bit setting
+                if (gadget.unlockAddress == Hacker.unlockAddress ||
+                    gadget.unlockAddress == HyperShot.unlockAddress)
+                    unlockBit = 0;
+
                 if (gadget.Unlock == 0)
-                    Memory.WriteByte(gadget.unlockAddress, 0);
+                {
+                    if (gadget.unlockWait > 1)
+                        Memory.WriteByte(gadget.unlockAddress, 0);
+                    else
+                        gadget.unlockWait++;
+                }
                 else
-                    Memory.WriteBit(gadget.unlockAddress, 1, true);
+                    Memory.WriteBit(gadget.unlockAddress, unlockBit, true); 
             }
         }
 

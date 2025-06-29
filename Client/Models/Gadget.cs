@@ -11,5 +11,6 @@ namespace RaC3AP.Models
         public int Unlock { get; set; } = 0;
         public string name = name;
         public ulong unlockAddress = unlockAddress;
+        public int unlockWait = 0;
     }
 }
