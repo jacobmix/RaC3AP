@@ -163,7 +163,7 @@ namespace RaC3AP
 
         public static void UpdateItems(Item item)
         {
-            if (item.Id >= 50001452 & item.Id <= 50001466)
+            if (item.Id >= 50001452 & item.Id <= 50001467)
             {
                 UpdatePlanets(item.Id);
             }
