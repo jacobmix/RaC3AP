@@ -819,14 +819,14 @@
   {
     "Name": "T-Bolt: Under the Bridge (Assassination)",
     "Id": 50001472,
-    "Address": "0x001BBBA9",
+    "Address": "0x001BBBAA",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "T-Bolt: Behind the Base (X12 Endgame)",
     "Id": 50001473,
-    "Address": "0x001BBBAA",
+    "Address": "0x001BBBA9",
     "CheckType": 0,
     "AddressBit": 0
   },
