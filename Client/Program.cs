@@ -1033,7 +1033,15 @@ namespace RaC3AP
                 /* When weapon is enabled, if it is not unlocked, disable that weapon. */
                 if (weapon.Unlock == 0 && weapon.Unlock != Memory.ReadInt(weapon.unlockAddress))
                 {
-                    Memory.WriteBit(weapon.unlockAddress, 0, false);
+                    // But, client checks this bit for founding Location,
+                    // So, wait for several minute to remove weapon
+                    if (weapon.unlockWait > 1)
+                    {
+                        Memory.WriteBit(weapon.unlockAddress, 0, false);
+                        weapon.Unlock = 0;
+                    }
+                    else
+                        weapon.unlockWait++;
                 }
                 /* Remove currentWeapon when it is not unlocked */
                 if (
