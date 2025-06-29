@@ -1126,6 +1126,9 @@ namespace RaC3AP
                 else
                     Memory.WriteByte(AvailableSlots[planet.Slot], 0);
             }
+            // Prevent HolostarStudios to avoid deadlock the game
+            if (Hacker.Unlock == 0 || HyperShot.Unlock == 0)
+                Memory.WriteByte(AvailableSlots[HolostarStudios.Slot], 0);
         }
         public static void GadgetCycler()
         {
