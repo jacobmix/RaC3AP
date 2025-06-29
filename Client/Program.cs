@@ -1166,21 +1166,6 @@ namespace RaC3AP
                 }
             }
         }
-        public static int ShipSlots()
-        {
-            foreach(var slot in AvailableSlots)
-            {
-                int i = 3;
-                if(Memory.ReadByte(slot) == 0)
-                {
-                    return i;
-                }
-                i++;
-            }
-            // This should never happen, but if it does please fix later
-            return 0;
-        }
-
 
         public static void unlockAllWeapons()
         {
