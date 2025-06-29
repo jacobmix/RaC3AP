@@ -175,75 +175,75 @@ def set_rules_hard_location(world):
     
     # Second visit: Post-Dax
     add_rule(world.get_location("Annihilation: BBQ Boulevard"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx")))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player))
     add_rule(world.get_location("Annihilation: Meet Courtney - Arena"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx")))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player))
     add_rule(world.get_location("Annihilation: Qwark Vidcomic 3"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx")))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player))
 
     # After Courtney(post Daxx)
     add_rule(world.get_location("Annihilation: Ninja Challenge"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx"))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player)
             and state.has("Qwark Vidcomic 3", world.player))
     add_rule(world.get_location("Annihilation: Counting Ducks"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx"))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player)
             and state.has("Qwark Vidcomic 3", world.player))
     add_rule(world.get_location("Annihilation: Cycling Weapons"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx"))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player)
             and state.has("Qwark Vidcomic 3", world.player))
     add_rule(world.get_location("Annihilation: One Hit Wonder"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx"))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player)
             and state.has("Qwark Vidcomic 3", world.player))
     add_rule(world.get_location("Annihilation: Time to SUCC"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx"))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player)
             and state.has("Qwark Vidcomic 3", world.player)
             and state.has("SUCC Cannon", world.player))
     add_rule(world.get_location("Annihilation: Naptime"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx"))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player)
             and state.has("Qwark Vidcomic 3", world.player))
     add_rule(world.get_location("Annihilation: More Cycling Weapons"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx"))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player)
             and state.has("Qwark Vidcomic 3", world.player))
     add_rule(world.get_location("Annihilation: Dodge the Twins"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx"))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player)
             and state.has("Qwark Vidcomic 3", world.player))
     add_rule(world.get_location("Annihilation: Chop Chop"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx"))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player)
             and state.has("Qwark Vidcomic 3", world.player)
             and state.has("Disk-Blade Gun", world.player))
     add_rule(world.get_location("Annihilation: Sleep Inducer"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx"))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player)
             and state.has("Qwark Vidcomic 3", world.player)
             and state.has("Rift Inducer", world.player))
     add_rule(world.get_location("Annihilation: The Other White Meat"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx"))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player)
             and state.has("Qwark Vidcomic 3", world.player)
             and state.has("Qwack-O-Ray", world.player))
     add_rule(world.get_location("Annihilation: Crispy Critter"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx"))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player)
             and state.has("Qwark Vidcomic 3", world.player))
     add_rule(world.get_location("Annihilation: Pyro Playground"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx"))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player)
             and state.has("Qwark Vidcomic 3", world.player))
     add_rule(world.get_location("Annihilation: Suicide Run"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx"))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player)
             and state.has("Qwark Vidcomic 3", world.player))
     add_rule(world.get_location("Annihilation: T-Bolt: Maze of Blaze"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx"))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player)
             and state.has("Qwark Vidcomic 3", world.player))
     add_rule(world.get_location("Annihilation: Maze of Blaze"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx"))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player)
             and state.has("Qwark Vidcomic 3", world.player))
     add_rule(world.get_location("Annihilation: The Annihilator (Gauntlet)"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx"))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player)
             and state.has("Qwark Vidcomic 3", world.player))
     add_rule(world.get_location("Annihilation: Championship Bout II"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx"))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player)
             and state.has("Qwark Vidcomic 3", world.player))
 
     # Maybe difficult and long(100 rounds ...)
     add_rule(world.get_location("Annihilation: Qwarktastic Battle"),
-            lambda state: state.has(world.get_location("Daxx: Post-Daxx"))
+            lambda state: state.has(world.get_location("Daxx: Post-Daxx"), world.player)
             and state.has("Qwark Vidcomic 1", world.player)
             and state.has("Qwark Vidcomic 2", world.player)
             and state.has("Qwark Vidcomic 3", world.player)

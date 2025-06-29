@@ -131,9 +131,13 @@ qwark_vidcomics = {
 
 
 progressive_armor = {
-    "Progressive Armor": ItemData(50001480, ItemClassification.useful, 6)
+    "Progressive Armor1": ItemData(50001480, ItemClassification.useful, 1),
+    "Progressive Armor2": ItemData(50001481, ItemClassification.useful, 1),
+    "Progressive Armor3": ItemData(50001482, ItemClassification.useful, 1),
+    "Progressive Armor4": ItemData(50001483, ItemClassification.useful, 1),
+    "Progressive Armor5": ItemData(50001484, ItemClassification.useful, 1),
+    "Progressive Armor6": ItemData(50001485, ItemClassification.useful, 1),
 }
-
 
 t_bolts = {
     "Titanium Bolt": ItemData(50001490, ItemClassification.filler, 35)
@@ -145,8 +149,8 @@ junk_items = {
 }
 
 victory_item = {
-    "Dr. Nefarious Defeated!": ItemData(50001481, ItemClassification.progression, 0),
-    "Biobliterator Defeated!": ItemData(50001482, ItemClassification.progression, 0)
+    "Dr. Nefarious Defeated!": ItemData(50001500, ItemClassification.progression, 0),
+    "Biobliterator Defeated!": ItemData(50001501, ItemClassification.progression, 0)
 }
 
 

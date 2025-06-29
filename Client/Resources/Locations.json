@@ -157,14 +157,16 @@
   {
     "Name": "Infobot: Tyhrranosis",
     "Id": 50001023,
-    "Address": "0x00142C1B",
+    //"Address": "0x00142C1B",
+    "Address": "0x0014275E", // Same as 1 Sewer Crystal Traded
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Infobot: Daxx",
     "Id": 50001024,
-    "Address": "0x00142765",
+    // "Address": "0x00142765",
+    "Address": "0x00142765", // Same as T-Bolt: VR training
     "CheckType": 0,
     "AddressBit": 0
   },
@@ -178,7 +180,8 @@
   {
     "Name": "Infobot: Zeldrin",
     "Id": 50001026,
-    "Address": "0x001D5541",
+    // "Address": "0x001D5541",
+    "Address": "0x00142708", // Same as defeat Giant Cronk
     "CheckType": 0,
     "AddressBit": 0
   },
@@ -673,6 +676,7 @@
     "Name": "Infobot: Holostar Studios",
     "Id": 50001361,
     "Address": "0x00142705",
+    // "Address": "0x00142771", // WA: Same as Meet Courtney - Arena
     "CheckType": 0,
     "AddressBit": 0
   },

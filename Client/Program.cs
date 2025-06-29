@@ -179,7 +179,7 @@ namespace RaC3AP
             {
                 UpdateGadgets(item.Id);
             }
-            if (item.Id == 50001480)
+            if (item.Id >= 50001480 & item.Id <= 50001485)
             {
                 UpdateArmor();
             }
@@ -266,7 +266,7 @@ namespace RaC3AP
             {
                 Console.WriteLine($"Received: " + args.Item.Name +  $" ({args.Item.Id})");
                 UpdateItems(args.Item);
-                if (args.Item.Id == 50001481 || args.Item.Id == 50001482)// Victory
+                if (args.Item.Id == 50001500 || args.Item.Id == 50001501)// Victory
                 {
                     Client.SendGoalCompletion();
                 }
