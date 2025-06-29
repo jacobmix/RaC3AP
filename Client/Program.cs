@@ -1034,7 +1034,6 @@ namespace RaC3AP
         {
             foreach (var weapon in allWeapons)
             {
-                ulong k = Addresses.currentlyEquippedWeapon;
                 byte m = Memory.ReadByte(Addresses.currentlyEquippedWeapon);
                 /* When weapon is enabled, if it is not unlocked, disable that weapon. */
                 if (weapon.Unlock == 0 && weapon.Unlock != Memory.ReadInt(weapon.unlockAddress))
@@ -1042,38 +1041,35 @@ namespace RaC3AP
                     // But, client checks this bit for founding Location,
                     // So, wait for several minute to remove weapon
                     if (weapon.unlockWait > 1)
-                    {
-                        Memory.WriteBit(weapon.unlockAddress, 0, false);
-                        weapon.Unlock = 0;
-                    }
+                        Memory.WriteByte(weapon.unlockAddress, 0);
                     else
                         weapon.unlockWait++;
                 }
                 /* Remove currentWeapon when it is not unlocked */
                 if (
-                    (m >= 39 && m <= 43 && ShockBlaster.Unlock == 0 && Memory.ReadByte(k) == 39) ||
-                    (m >= 119 && m <= 123 && NitroLauncher.Unlock == 0 && Memory.ReadByte(k) == 119) ||
-                    (m >= 47 && m <= 51 && N60Storm.Unlock == 0 && Memory.ReadByte(k) == 47) ||
-                    (m >= 127 && m <= 131 && PlasmaWhip.Unlock == 0 && Memory.ReadByte(k) == 127) ||
-                    (m >= 55 && m <= 59 && Infector.Unlock == 0 && Memory.ReadByte(k) == 55) ||
-                    (m >= 135 && m <= 139 && SuckCannon.Unlock == 0 && Memory.ReadByte(k) == 135) ||
-                    (m >= 71 && m <= 72 && SpittingHydra.Unlock == 0 && Memory.ReadByte(k) == 71) ||
-                    (m >= 87 && m <= 91 && AgentsOfDoom.Unlock == 0 && Memory.ReadByte(k) == 87) ||
-                    (m >= 111 && m <= 115 && FluxRifle.Unlock == 0 && Memory.ReadByte(k) == 111) ||
-                    (m >= 63 && m <= 67 && Annihilator.Unlock == 0 && Memory.ReadByte(k) == 63) ||
-                    (m >= 103 && m <= 107 && HoloShieldGlove.Unlock == 0 && Memory.ReadByte(k) == 103) ||
-                    (m >= 79 && m <= 83 && DiskBladeGun.Unlock == 0 && Memory.ReadByte(k) == 79) ||
-                    (m >= 95 && m <= 99 && RiftInducer.Unlock == 0 && Memory.ReadByte(k) == 95) ||
-                    (m >= 143 && m <= 147 && QwackORay.Unlock == 0 && Memory.ReadByte(k) == 143) ||
-                    (m >= 151 && m <= 155 && RY3N0.Unlock == 0 && Memory.ReadByte(k) == 151) ||
-                    (m == 21 && MegaTurretGlove.Unlock == 0 && Memory.ReadByte(k) == 21) ||
-                    (m == 17 && LavaGun.Unlock == 0 && Memory.ReadByte(k) == 17) ||
-                    (m == 22 && ShieldCharger.Unlock == 0 && Memory.ReadByte(k) == 22) ||
-                    (m == 19 && Bouncer.Unlock == 0 && Memory.ReadByte(k) == 19) ||
-                    (m == 16 && PlasmaCoil.Unlock == 0 && Memory.ReadByte(k) == 16)
+                    (m >= 39 && m <= 43 && ShockBlaster.Unlock == 0) ||
+                    (m >= 119 && m <= 123 && NitroLauncher.Unlock == 0) ||
+                    (m >= 47 && m <= 51 && N60Storm.Unlock == 0) ||
+                    (m >= 127 && m <= 131 && PlasmaWhip.Unlock == 0) ||
+                    (m >= 55 && m <= 59 && Infector.Unlock == 0) ||
+                    (m >= 135 && m <= 139 && SuckCannon.Unlock == 0) ||
+                    (m >= 71 && m <= 72 && SpittingHydra.Unlock == 0) ||
+                    (m >= 87 && m <= 91 && AgentsOfDoom.Unlock == 0) ||
+                    (m >= 111 && m <= 115 && FluxRifle.Unlock == 0) ||
+                    (m >= 63 && m <= 67 && Annihilator.Unlock == 0) ||
+                    (m >= 103 && m <= 107 && HoloShieldGlove.Unlock == 0) ||
+                    (m >= 79 && m <= 83 && DiskBladeGun.Unlock == 0) ||
+                    (m >= 95 && m <= 99 && RiftInducer.Unlock == 0) ||
+                    (m >= 143 && m <= 147 && QwackORay.Unlock == 0) ||
+                    (m >= 151 && m <= 155 && RY3N0.Unlock == 0) ||
+                    (m == 21 && MegaTurretGlove.Unlock == 0) ||
+                    (m == 17 && LavaGun.Unlock == 0) ||
+                    (m == 22 && ShieldCharger.Unlock == 0) ||
+                    (m == 19 && Bouncer.Unlock == 0) ||
+                    (m == 16 && PlasmaCoil.Unlock == 0)
                 )
                 {
-                    Memory.WriteByte(k, 9);
+                    Memory.WriteByte(Addresses.currentlyEquippedWeapon, 9);
                     break;
                 }
             }
