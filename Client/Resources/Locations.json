@@ -149,7 +149,8 @@
   {
     "Name": "Infobot: Aquatos",
     "Id": 50001022,
-    "Address": "0x001426F6",
+    //" Address": 0x001426F6, // Correct Infobot address
+    "Address": "0x0014276F", // Same as Thyrra-Guise Getting event. This event behinds Phoenix Ship event.
     "CheckType": 0,
     "AddressBit": 0
   },
