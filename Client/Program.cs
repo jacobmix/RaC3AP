@@ -1241,9 +1241,10 @@ namespace RaC3AP
                 Memory.WriteByte(address, 0);
             }
             // Default Planets
-            Memory.WriteByte(AvailableSlots[0], 1);
-            Memory.WriteByte(AvailableSlots[1], 2);
-            Memory.WriteByte(AvailableSlots[2], 3);
+            Memory.WriteByte(AvailableSlots[0], PlanetValues.Veldin);
+            Memory.WriteByte(AvailableSlots[1], PlanetValues.Florana);
+            Memory.WriteByte(AvailableSlots[2], PlanetValues.StarshipPhoenix);
+            Memory.WriteByte(AvailableSlots[20], PlanetValues.Museum);
         }
     }
 

@@ -199,8 +199,9 @@ namespace RaC3AP
         public const int QwarksHideout = 19;
         public const int ObaniDraco = 21;
         public const int Mylon = 22;
+        public const int Museum = 24;
     }
-    
+
     public class QuickSelectSlots
     {
         public const ulong oneOne = 0x001D4C60 + GlobalConfig.EquipmentOffset;
