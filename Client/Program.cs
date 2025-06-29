@@ -183,6 +183,10 @@ namespace RaC3AP
             {
                 UpdateArmor();
             }
+            if (item.Id == 50001012) // Workaround
+            {
+                GetHackerHypershot();
+            }
             if (item.Id == 50001491)
             {
                 IncrementBolt();
@@ -191,6 +195,11 @@ namespace RaC3AP
             {
                 IncrementWeaponLevel();
             }
+        }
+        public static void GetHackerHypershot()
+        {
+            Memory.WriteBit(Hacker.unlockAddress, 0, true);
+            Memory.WriteBit(HyperShot.unlockAddress, 0, true);
         }
 
         static async Task<bool> ConnectAsync(string address, string playerName, string password)
