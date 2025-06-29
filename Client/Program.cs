@@ -835,12 +835,6 @@ namespace RaC3AP
                 expArr = WeaponVersionData.ARRexpN60Storm;
                 expAddr = WeaponVersionData.ADDexpN60Storm;
             }
-
-            if (currentWeapon == 47)
-            {
-                expArr = WeaponVersionData.ARRexpN60Storm;
-                expAddr = WeaponVersionData.ADDexpN60Storm;
-            }
             if (currentWeapon == 127)
             {
                 expArr = WeaponVersionData.ARRexpPlasmaWhip;
