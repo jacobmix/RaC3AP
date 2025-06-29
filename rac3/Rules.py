@@ -97,7 +97,8 @@ def set_rules_hard_location(world):
     #----- Starship Phoenix -----#
     # "Phoenix: Received SUCC Cannon": LocData(50001009, "Starship Phoenix"),
     # "Phoenix: Received Infector": LocData(50001010, "Starship Phoenix"),
-    # "Phoenix: T-Bolt: Last VR Deck Challenges": LocData(50001011, "Starship Phoenix"),
+    add_rule(world.get_location("Phoenix: T-Bolt: Last VR Deck Challenges"),
+                lambda state: state.has("Shock Blaster", world.player))
     add_rule(world.get_location("Phoenix: T-Bolt: Complete VR Training"),
                 lambda state: state.can_reach("Tyhrranosis", player=world.player))
     add_rule(world.get_location("Phoenix: Received Adamantine Armor"),
