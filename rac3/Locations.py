@@ -16,6 +16,12 @@ def get_location_names() -> Dict[str, int]:
     names = {name: data.ap_code for name, data in location_table.items()}
     return names
 
+def get_location_name_by_apcode(apcode) -> int:
+    items = {data.ap_code: name for name, data in location_table.items()}
+    if "apcode" in items.keys():
+        return items[f"{apcode}"]
+    return "Nothing"
+
 
 rac3_locations = {
     #----- Planet Veldin -----#
