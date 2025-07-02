@@ -8,6 +8,16 @@ from .Regions import create_regions
 from .Types import WeaponType, weapon_type_to_name, RaC3Item, multiplier_to_name, Multiplier
 from .Rules import set_rules
 
+from typing import Dict, Optional, Mapping, Any
+from worlds.LauncherComponents import Component, SuffixIdentifier, Type, components, launch_subprocess
+def run_client(_url: Optional[str] = None):
+    from .Rac3Client import launch_client
+    launch_subprocess(launch_client, name="Rac3Client")
+
+components.append(
+    Component("Ratchet & Clank 3 Client", func=run_client, component_type=Type.CLIENT,
+              file_identifier=SuffixIdentifier(".aprac3"))
+)
 class RaC3Web(WebWorld):
     theme = "ocean"
     tutorials = [Tutorial(
@@ -19,7 +29,6 @@ class RaC3Web(WebWorld):
         "setup/en",
         ["Bread"]
     )]
-
 
 class RaC3World(World):
     """

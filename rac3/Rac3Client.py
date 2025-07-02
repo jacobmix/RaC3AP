@@ -1,0 +1,196 @@
+# Common import
+from typing import Optional, Dict
+import asyncio
+import multiprocessing
+import traceback
+from CommonClient import ClientCommandProcessor, CommonContext, get_base_parser, logger, server_loop, gui_enabled
+import Utils
+
+# Game title dedicated
+from . import Locations, Items
+#from .data.Constants import EPISODES
+from .Rac3Interface import Rac3Interface, Dummy
+from .Rac3Callbacks import init, update
+
+GAME_TITLE="Rac3"
+GAME_TITLE_FULL="Ratchet and Clank 3 Up your Arsenal"
+CLIENT_INIT_LOG=f"{GAME_TITLE} Client"
+
+class CommandProcessor(ClientCommandProcessor):
+    # This is not mandatory for the game. Just a client command implementation.
+    # def _cmd_kill(self):
+    #     """Kill the game."""
+    #     if isinstance(self.ctx, Rac3Context):
+    #         self.ctx.game_interface.kill_player()
+    def _cmd_weapon_exp_test(self):
+        if isinstance(self.ctx, Rac3Context):
+            self.ctx.game_interface.ReceivedOthers(50001492)
+
+    def _cmd_bolt_test(self):
+        if isinstance(self.ctx, Rac3Context):
+            self.ctx.game_interface.ReceivedOthers(50001491)
+
+
+class Rac3Context(CommonContext):
+    # Client variables
+    command_processor = CommandProcessor
+    game_interface: Rac3Interface
+    game = f"{GAME_TITLE_FULL}"
+    pcsx2_sync_task: Optional[asyncio.Task] = None
+    is_connected_to_game: bool = False
+    is_connected_to_server: bool = False
+    slot_data: Optional[dict[str, Utils.Any]] = None
+    last_error_message: Optional[str] = None
+    notification_queue: list[str] = []
+    notification_timestamp: float = 0
+    showing_notification: bool = False
+    deathlink_timestamp: float = 0
+    death_link_enabled = False
+    queued_deaths: int = 0
+    
+    items_handling = 0b111 # This is mandatory
+
+    def __init__(self, server_address, password):
+        super().__init__(server_address, password)
+        self.game_interface = Rac3Interface(logger)
+
+    def notification(self, text: str):
+        self.notification_queue.append(text)
+
+    def on_deathlink(self, data: Utils.Dict[str, Utils.Any]) -> None:
+        super().on_deathlink(data)
+        if self.death_link_enabled:
+            self.queued_deaths += 1
+            cause = data.get("cause", "")
+            if cause:
+                self.notification(f"DeathLink: {cause}")
+            else:
+                self.notification(f"DeathLink: Received from {data['source']}")
+
+    async def server_auth(self, password_requested: bool = False) -> None:
+        if password_requested and not self.password:
+            await super(Rac3Context, self).server_auth(password_requested)
+        await self.get_username()
+        await self.send_connect()
+
+    def on_package(self, cmd: str, args: dict):
+        if cmd == "Connected":
+            self.slot_data = args["slot_data"]
+            # logger.info(f"Received data: {args}")
+            self.location_table = self.server_locations # list
+            self.game_interface.proc_option(self.slot_data)
+
+            # Set death link tag if it was requested in options
+            if "death_link" in args["slot_data"]:
+                self.death_link_enabled = bool(args["slot_data"]["death_link"])
+                Utils.async_start(self.update_death_link(
+                    bool(args["slot_data"]["death_link"])))
+                Utils.async_start(self.send_msgs([{
+                    "cmd": "LocationScouts",
+                    "locations": [
+                        Locations.location_dict[location].code
+                        for location in Locations.location_groups["Purchase"]
+                    ]
+                }]))
+
+def update_connection_status(ctx: Rac3Context, status: bool):
+    if ctx.is_connected_to_game == status:
+        return
+
+    if status:
+        logger.info(f"Connected to {GAME_TITLE}")
+    else:
+        logger.info("Unable to connect to the PCSX2 instance, attempting to reconnect...")
+
+    ctx.is_connected_to_game = status
+
+async def pcsx2_sync_task(ctx: Rac3Context):
+    logger.info(f"Starting {GAME_TITLE} Connector, attempting to connect to emulator...")
+    ctx.game_interface.connect_to_game()
+    while not ctx.exit_event.is_set():
+        try:
+            is_connected = ctx.game_interface.get_connection_state()
+            update_connection_status(ctx, is_connected)
+            if is_connected:
+                await _handle_game_ready(ctx)
+            else:
+                await _handle_game_not_ready(ctx)
+        except ConnectionError:
+            logger.info(f"ConnectionError")
+            ctx.game_interface.disconnect_from_game()
+        except Exception as e:
+            logger.info(f"ExceptionError")
+            if isinstance(e, RuntimeError):
+                logger.error(str(e))
+            else:
+                logger.error(traceback.format_exc())
+            await asyncio.sleep(3)
+            continue
+
+async def _handle_game_ready(ctx: Rac3Context) -> None:
+    connected_to_server = (ctx.server is not None) and (ctx.slot is not None)
+
+    new_connection = ctx.is_connected_to_server != connected_to_server
+    if new_connection:
+        await init(ctx, connected_to_server)
+        ctx.is_connected_to_server = connected_to_server
+    
+    await update(ctx, connected_to_server)
+
+    if ctx.server:
+        ctx.last_error_message = None
+        if not ctx.slot:
+            await asyncio.sleep(1)
+            return
+    else:
+        message = "Waiting for player to connect to server"
+        if ctx.last_error_message is not message:
+            logger.info("Waiting for player to connect to server")
+            ctx.last_error_message = message
+        await asyncio.sleep(1)
+    
+    await asyncio.sleep(1)
+
+
+async def _handle_game_not_ready(ctx: Rac3Context):
+    """If the game is not connected, this will attempt to retry connecting to the game."""
+    ctx.game_interface.connect_to_game()
+    await asyncio.sleep(3)
+
+def launch_client():
+    Utils.init_logging(CLIENT_INIT_LOG)
+
+    async def main():
+        multiprocessing.freeze_support()
+        logger.info("main")
+        parser = get_base_parser()
+        args = parser.parse_args()
+        ctx = Rac3Context(args.connect, args.password)
+
+        logger.info("Connecting to server...")
+        ctx.server_task = asyncio.create_task(server_loop(ctx), name="Server Loop")
+        if gui_enabled:
+            ctx.run_gui()
+        ctx.run_cli()
+
+        logger.info("Running game...")
+        ctx.pcsx2_sync_task = asyncio.create_task(pcsx2_sync_task(ctx), name="PCSX2 Sync")
+
+        await ctx.exit_event.wait()
+        ctx.server_address = None
+
+        await ctx.shutdown()
+
+        if ctx.pcsx2_sync_task:
+            await asyncio.sleep(3)
+            await ctx.pcsx2_sync_task
+
+    import colorama
+
+    colorama.init()
+
+    asyncio.run(main())
+    colorama.deinit()
+
+if __name__ == "__main__":
+    launch_client()
