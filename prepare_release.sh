@@ -2,7 +2,7 @@
 
 SCRIPT_DIR=$(cd `dirname $0` && pwd)
 cd $SCRIPT_DIR
-./build_apworld.sh
+zip -qo -r ./rac3.apworld ./rac3
 
 OUTPUT=rac3jp_ap
 rm -rf $OUTPUT $OUTPUT.zip

@@ -3,7 +3,7 @@ from BaseClasses import MultiWorld, Item, ItemClassification, Tutorial
 from worlds.AutoWorld import World, CollectionState, WebWorld
 from .Items import item_table, create_itempool, create_item, weapon_items, progressive_weapons, gadget_items, post_planets, progressive_armor, t_bolts, filter_item_names
 from .Locations import get_location_names, get_total_locations, rac3_locations, get_level_locations
-from .Options import RaC3Options
+from .Rac3Options import RaC3Options
 from .Regions import create_regions
 from .Types import WeaponType, weapon_type_to_name, RaC3Item, multiplier_to_name, Multiplier
 from .Rules import set_rules
