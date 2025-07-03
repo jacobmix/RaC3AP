@@ -39,6 +39,9 @@ class RaC3World(World):
     game = "Ratchet and Clank 3 Up your Arsenal"
     item_name_to_id = {name: data.ap_code for name, data in item_table.items()}
     location_name_to_id = get_location_names()
+    # Config for Universal Tracker
+    ut_can_gen_without_yaml = False
+    disable_ut = False
 
     item_name_groups = {
         "Progression": set(filter_item_names(ItemClassification.progression)),
@@ -110,3 +113,10 @@ class RaC3World(World):
 
     def remove(self, state: "CollectionState", item: "Item") -> bool:
         return super().remove(state, item)
+
+    # For Univesal Tracker integration
+    @staticmethod
+    def interpret_slot_data(slot_data: dict[str, Any]) -> dict[str, Any]:
+        # Trigger a regen in UT
+        return slot_data
+
