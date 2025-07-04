@@ -370,10 +370,17 @@ def set_rules_hard_location(world):
     add_rule(world.get_location("Mylon: Dr. Nefarious Defeated!"),
             lambda state: state.has("Infobot: Mylon", world.player)
              and state.has("Hacker", world.player)
+             and state.has("Refractor", world.player)
              and state.has("Tyhrra-Guise", world.player)
              and state.has("Hypershot", world.player)
              and state.has("Grav-Boots", world.player))
-    # "Mylon: Biobliterator Defeated!": LocData(50001498, "Mylon")
+    add_rule(world.get_location("Mylon: Biobliterator Defeated!"),
+            lambda state: state.has("Infobot: Mylon", world.player)
+             and state.has("Hacker", world.player)
+             and state.has("Refractor", world.player)
+             and state.has("Tyhrra-Guise", world.player)
+             and state.has("Hypershot", world.player)
+             and state.has("Grav-Boots", world.player))
 
 
     pass
