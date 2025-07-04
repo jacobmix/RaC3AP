@@ -115,6 +115,8 @@ class Rac3Interface(GameInterface):
         addr = ADDRESSES[self.current_game]["boltXPMultiplier"]
         addr = self.AddressConvert(addr)
         self._write8(addr, self.boltandXPMultiplierValue)
+        # Logic Fixes
+        self.LogicFixes()
 
 
     def get_victory_code(self):
@@ -264,6 +266,18 @@ class Rac3Interface(GameInterface):
         self.UnlockPlanets["Florana"]["status"] = 1
         self.UnlockPlanets["Starship Phoenix"]["status"] = 1
         self.UnlockPlanets["Museum"]["status"] = 1
+
+    # Logic Fixes
+    def LogicFixes(self):
+        current_planet_addr = ADDRESSES[self.current_game]["CurrentPlanet"]
+        current_planet_addr = self.AddressConvert(current_planet_addr)
+        current_planet = self._read8(current_planet_addr)
+
+        # Fix can't play Qwark VidComics in some case which first event is skipped 
+        addr = ADDRESSES[self.current_game]["EventFlags"]["FirstVisitingMyRoom"]
+        addr = self.AddressConvert(addr)
+        if current_planet == ADDRESSES[self.current_game]["PlanetValues"]["Starship Phoenix"]:
+            self._write8(addr, 1)
 
     # interval update function: Check unlock/lock status of items
     def WeaponCycler(self):
@@ -433,3 +447,5 @@ class Rac3Interface(GameInterface):
                     if current_exp < int(target_exp, 0):
                         self._write32(addr, int(target_exp, 0))
                         break
+
+        

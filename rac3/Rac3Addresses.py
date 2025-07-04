@@ -102,6 +102,9 @@ ADDRESSES = {
     "Bolt": 0x00142660,
     "NanotechExp": 0x00142694,
     "CurrentPlanet": 0x001D545C,
+    "EventFlags": {
+      "FirstVisitingMyRoom": 0x001426E8,
+    }
   }
 }
 
