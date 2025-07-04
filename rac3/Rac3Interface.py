@@ -297,7 +297,8 @@ class Rac3Interface(GameInterface):
             if unlock_status == 0:
                 self.UnlockGadgets[name]["unlockDelay"] += 1
                 if dict_data["unlockDelay"] > 1:
-                    self._write8(addr, 0)
+                    val = self._read8(addr)
+                    self._write8(addr,  (val & 0xfe) )
                     self.UnlockGadgets[name]["unlockDelay"] = 0
             else:
                 # Get Gadget in event
