@@ -101,6 +101,7 @@ ADDRESSES = {
     "boltXPMultiplier": 0x001426BA,
     "Bolt": 0x00142660,
     "NanotechExp": 0x00142694,
+    "CurrentPlanet": 0x001D545C,
   }
 }
 
@@ -234,9 +235,12 @@ LOCATIONS = [
   {
     "Name": "Infobot: Marcadia",
     "Id": 50001019,
-    "Address": "0x001426E9",
-    "CheckType": 0,
-    "AddressBit": 0
+    # "Address": "0x001426E9",
+    # "CheckType": 0,
+    # "AddressBit": 0
+    "Address": "0x001D545C", # When first visiting to Starship Phoenix
+    "CheckType": 3,
+    "CheckValue": "3",
   },
   {
     "Name": "Infobot: Koros",

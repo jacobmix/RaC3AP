@@ -230,7 +230,7 @@ class Rac3Interface(GameInterface):
             _addr = int(address, 0)
         if 0x001BBB00 <= _addr and _addr <= 0x001BBBFF: # T-Bolt
             _addr += 0x9298
-        elif 0x001D554F <= _addr and _addr <= 0x001D55543: # VidComic
+        elif 0x001D545C <= _addr and _addr <= 0x001D5553: # Current Location + VidComic
             _addr += 0x9300
         elif 0x00100000 <= _addr and _addr <= 0x00100050: # DummyEXP
             _addr += 0
