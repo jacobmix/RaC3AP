@@ -336,7 +336,8 @@ LOCATIONS = [
   {
     "Name": "Received Refractor",
     "Id": 50001031,
-    "Address": "0x00142CB2",
+    # "Address": "0x00142CB2", # item flag
+    "Address": "0x00142C29", # Marcadia Mission event Flag
     "CheckType": 0,
     "AddressBit": 0
   },
@@ -1681,6 +1682,41 @@ LOCATIONS = [
     "CompareType": 1,
     "CheckType": 1,
     "CheckValue": "1408000"
+  },
+  {
+    "Name": "Marcadia Mission 01",
+    "Id": 50001036,
+    "Address": "0x00142738",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Marcadia Mission 02",
+    "Id": 50001037,
+    "Address": "0x00142739",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Marcadia Mission 03",
+    "Id": 50001038,
+    "Address": "0x0014273A",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Marcadia Mission 04",
+    "Id": 50001039,
+    "Address": "0x0014273B",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Marcadia Mission 05",
+    "Id": 50001365,
+    "Address": "0x0014273C",
+    "CheckType": 0,
+    "AddressBit": 0
   },
   {
     "Name": "Rilgar Mission 01",

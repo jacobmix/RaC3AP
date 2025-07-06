@@ -316,7 +316,7 @@ class Rac3Interface(GameInterface):
                     self.UnlockGadgets[name]["unlockDelay"] = 0
             else:
                 # Get Gadget in event
-                if name in ["Hacker", "Hypershot", "Tyhrra-Guise", "Grav-Boots", "Map-O-Matic", "Warp Pad"]: 
+                if name in ["Hacker", "Hypershot", "Refractor", "Tyhrra-Guise", "Grav-Boots", "Map-O-Matic", "Warp Pad"]: 
                     self._write8(addr, 2) # 0x2=0b0010
                 # Get Gadget in field
                 else:
