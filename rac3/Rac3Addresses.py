@@ -790,9 +790,9 @@ LOCATIONS = [
     "Name": "Received Grav Boots",
     "Id": 50001360,
     #  "Address": "0x00142CAD",
-    "Address": "0x00142C49",
+    "Address": "0x00142C40",
     "CheckType": 0,
-    "AddressBit": 3 #  0x06 -> 0x0E: 0000_X110
+    "AddressBit": 3 #  0x08: 0000_X000
   },
   {
     "Name": "Infobot: Holostar Studios",
@@ -918,7 +918,7 @@ LOCATIONS = [
   {
     "Name": "Infobot: Aridia",
     "Id": 50001452,
-    "Address": "0x00142722",
+    "Address": "0x00142722", # Correct Address: 0x00142C52(4bit: 0x07->0x0f) (US), but Event is not happenned in some case.
     "CheckType": 0,
     "AddressBit": 1 # / 0x02: 0000_00X0
   },
@@ -1681,5 +1681,26 @@ LOCATIONS = [
     "CompareType": 1,
     "CheckType": 1,
     "CheckValue": "1408000"
-  }
+  },
+  {
+    "Name": "Rilgar Mission 01",
+    "Id": 50001365,
+    "Address": "0x0014273D",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Rilgar Mission 02",
+    "Id": 50001366,
+    "Address": "0x0014273E",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Rilgar Mission 03",
+    "Id": 50001367,
+    "Address": "0x00142C40", # As same as Grav-boots event
+    "CheckType": 0,
+    "AddressBit": 3
+  },
 ]
