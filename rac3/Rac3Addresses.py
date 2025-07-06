@@ -1739,4 +1739,75 @@ LOCATIONS = [
     "CheckType": 0,
     "AddressBit": 3
   },
+  {
+    "Name": "Metro Storm Mission 01",
+    "Id": 50001435,
+    "Address": "0x00142747",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Metro Storm Mission 02",
+    "Id": 50001436,
+    "Address": "0x00142748",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Metro Storm Mission 03",
+    "Id": 50001437,
+    "Address": "0x00142749",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Metro Storm Mission 04",
+    "Id": 50001438,
+    "Address": "0x0014274A",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Metro Storm Mission 05",
+    "Id": 50001439,
+    "Address": "0x0014274B", 
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Alidia Mission 01",
+    "Id": 50001475,
+    "Address": "0x00142742",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Alidia Mission 02",
+    "Id": 50001476,
+    "Address": "0x00142743",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Alidia Mission 03",
+    "Id": 50001477,
+    "Address": "0x00142744",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Alidia Mission 04",
+    "Id": 50001478,
+    "Address": "0x00142745",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Alidia Mission 05",
+    "Id": 50001479,
+    "Address": "0x00142746",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+
 ]
