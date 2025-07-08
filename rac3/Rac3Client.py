@@ -20,9 +20,8 @@ from . import Locations, Items
 #from .data.Constants import EPISODES
 from .Rac3Interface import Rac3Interface, Dummy
 from .Rac3Callbacks import init, update
+from .Rac3Options import GAME_TITLE, GAME_TITLE_FULL
 
-GAME_TITLE="Rac3"
-GAME_TITLE_FULL="Ratchet and Clank 3 Up your Arsenal"
 CLIENT_INIT_LOG=f"{GAME_TITLE} Client"
 CLIENT_VERSION="v0.1.0"
 

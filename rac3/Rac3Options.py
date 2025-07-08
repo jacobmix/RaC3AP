@@ -3,6 +3,9 @@ from dataclasses import dataclass
 from worlds.AutoWorld import PerGameCommonOptions
 from Options import Choice, OptionGroup, Toggle, DefaultOnToggle
 
+# Common variable
+GAME_TITLE="Rac3"
+GAME_TITLE_FULL="RatchetAndClank3"
 
 def create_option_groups() -> List[OptionGroup]:
     option_group_list: List[OptionGroup] = []
