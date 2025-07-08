@@ -6,11 +6,8 @@ if TYPE_CHECKING:
 
 
 def get_total_locations(world: "RaC3World") -> int:
-    total = 0
-    for name in location_table:
-            total += 1
-
-    return total
+    locations = [ l for l in world.multiworld.get_locations() if l.player == world.player ]
+    return len(locations)
 
 def get_location_names() -> Dict[str, int]:
     names = {name: data.ap_code for name, data in location_table.items()}
