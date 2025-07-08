@@ -36,7 +36,7 @@ class RaC3World(World):
     Blast your enemies with over the top weaponry and save the galaxy from total disaster.
     """
 
-    game = "Ratchet and Clank 3 Up your Arsenal"
+    game = "RatchetAndClank3"
     item_name_to_id = {name: data.ap_code for name, data in item_table.items()}
     location_name_to_id = get_location_names()
     # Config for Universal Tracker
