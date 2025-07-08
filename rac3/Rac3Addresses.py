@@ -371,259 +371,259 @@ LOCATIONS = [
   },
   {
     "Name": "Received Agents of Doom",
-    "Id": 50001040,
+    "Id": 50001140,
     "Address": "0x00142CF7",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Received Tyhrra-Guise",
-    "Id": 50001041,
+    "Id": 50001141,
     "Address": "0x0014276F", #  Same as Grand Prize Bout(Thyrra-Guise Getting event)
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "T-Bolt: Heat Street",
-    "Id": 50001042,
+    "Id": 50001142,
     "Address": "0x001BBB51",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "T-Bolt: Maze of Blaze",
-    "Id": 50001043,
+    "Id": 50001143,
     "Address": "0x001BBB52",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Grand Prize Bout",
-    "Id": 50001044,
+    "Id": 50001144,
     "Address": "0x0014276F",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "The Terrible Two",
-    "Id": 50001045,
+    "Id": 50001145,
     "Address": "0x00142772",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Robot Rampage",
-    "Id": 50001046,
+    "Id": 50001146,
     "Address": "0x00142773",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Two Minute Warning",
-    "Id": 50001047,
+    "Id": 50001147,
     "Address": "0x00142774",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "90 Seconds of Carnage",
-    "Id": 50001048,
+    "Id": 50001148,
     "Address": "0x00142775",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Onslaught",
-    "Id": 50001049,
+    "Id": 50001149,
     "Address": "0x00142776",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Whip It Good",
-    "Id": 50001050,
+    "Id": 50001150,
     "Address": "0x00142777",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Hydra N' Seek",
-    "Id": 50001051,
+    "Id": 50001151,
     "Address": "0x00142778",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Championship Bout",
-    "Id": 50001052,
+    "Id": 50001152,
     "Address": "0x00142779",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Ninja Challenge",
-    "Id": 50001054,
+    "Id": 50001154,
     "Address": "0x0014277D",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Counting Ducks",
-    "Id": 50001055,
+    "Id": 50001155,
     "Address": "0x0014277E",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Cycling Weapons",
-    "Id": 50001056,
+    "Id": 50001156,
     "Address": "0x0014277F",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "One Hit Wonder",
-    "Id": 50001057,
+    "Id": 50001157,
     "Address": "0x00142780",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Time to SUCC",
-    "Id": 50001058,
+    "Id": 50001158,
     "Address": "0x00142781",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Naptime",
-    "Id": 50001059,
+    "Id": 50001159,
     "Address": "0x00142782",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Meet Courtney - Arena",
-    "Id": 50001053,
+    "Id": 50001153,
     "Address": "0x00142771",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "More Cycling Weapons",
-    "Id": 50001060,
+    "Id": 50001160,
     "Address": "0x00142783",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Dodge the Twins",
-    "Id": 50001061,
+    "Id": 50001161,
     "Address": "0x00142784",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Chop Chop",
-    "Id": 50001062,
+    "Id": 50001162,
     "Address": "0x00142785",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Sleep Inducer",
-    "Id": 50001063,
+    "Id": 50001163,
     "Address": "0x00142786",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "The Other White Meat",
-    "Id": 50001064,
+    "Id": 50001164,
     "Address": "0x00142787",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Championship Bout II",
-    "Id": 50001065,
+    "Id": 50001165,
     "Address": "0x00142788",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Qwarktastic Battle",
-    "Id": 50001066,
+    "Id": 50001166,
     "Address": "0x00142789",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Heat Street",
-    "Id": 50001067,
+    "Id": 50001167,
     "Address": "0x0014276E",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Crispy Critter",
-    "Id": 50001068,
+    "Id": 50001168,
     "Address": "0x0014277A",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Pyro Playground",
-    "Id": 50001069,
+    "Id": 50001169,
     "Address": "0x0014277B",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Suicide Run",
-    "Id": 50001070,
+    "Id": 50001170,
     "Address": "0x0014277C",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "BBQ Boulevard", #  (Meet Courtney - Gauntlet) 
-    "Id": 50001071,
+    "Id": 50001171,
     "Address": "0x00142770",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Maze of Blaze",
-    "Id": 50001072,
+    "Id": 50001172,
     "Address": "0x0014278A",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Cremation Station",
-    "Id": 50001073,
+    "Id": 50001173,
     "Address": "0x0014278B",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "The Annihilator (Gauntlet)",
-    "Id": 50001074,
+    "Id": 50001174,
     "Address": "0x0014278C",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Qwark Vidcomic 2",
-    "Id": 50001075,
+    "Id": 50001175,
     "Address": "0x001D5551",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Qwark Vidcomic 3",
-    "Id": 50001076,
+    "Id": 50001176,
     "Address": "0x001D5552",
     "CheckType": 0,
     "AddressBit": 0
@@ -1713,7 +1713,7 @@ LOCATIONS = [
   },
   {
     "Name": "Marcadia Mission 05",
-    "Id": 50001365,
+    "Id": 50001040,
     "Address": "0x0014273C",
     "CheckType": 0,
     "AddressBit": 0
