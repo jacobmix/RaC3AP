@@ -1809,5 +1809,39 @@ LOCATIONS = [
     "CheckType": 0,
     "AddressBit": 0
   },
-
+  {
+    "Name": "Qwark Vidcomic 1 Clear",
+    "Id": 50001600,
+    "Address": "0x00142734",
+    "CheckType": 0,
+    "AddressBit": 1
+  },
+  {
+    "Name": "Qwark Vidcomic 2 Clear",
+    "Id": 50001601,
+    "Address": "0x00142734",
+    "CheckType": 0,
+    "AddressBit": 3
+  },
+  {
+    "Name": "Qwark Vidcomic 3 Clear",
+    "Id": 50001602,
+    "Address": "0x00142734",
+    "CheckType": 0,
+    "AddressBit": 2
+  },
+  {
+    "Name": "Qwark Vidcomic 4 Clear",
+    "Id": 50001603,
+    "Address": "0x00142734",
+    "CheckType": 0,
+    "AddressBit": 4
+  },
+  {
+    "Name": "Qwark Vidcomic 5 Clear",
+    "Id": 50001604,
+    "Address": "0x00142734",
+    "CheckType": 0,
+    "AddressBit": 5
+  },
 ]

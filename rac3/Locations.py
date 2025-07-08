@@ -52,6 +52,11 @@ rac3_locations = {
     "Phoenix: Infobot: Qwarks Hideout": LocData(50001027, "Starship Phoenix"),
     "Phoenix: Qwark Vidcomic 4": LocData(50001413, "Starship Phoenix"),
     "Phoenix: Qwark Vidcomic 5": LocData(50001414, "Starship Phoenix"),
+    "Phoenix: Qwark Vidcomic 1 Clear": LocData(50001600, "Starship Phoenix"),
+    "Phoenix: Qwark Vidcomic 2 Clear": LocData(50001601, "Starship Phoenix"),
+    "Phoenix: Qwark Vidcomic 3 Clear": LocData(50001602, "Starship Phoenix"),
+    "Phoenix: Qwark Vidcomic 4 Clear": LocData(50001603, "Starship Phoenix"),
+    "Phoenix: Qwark Vidcomic 5 Clear": LocData(50001604, "Starship Phoenix"),
 
     #----- Planet Marcadia -----#
     "Marcadia: Received Spitting Hydra": LocData(50001030, "Marcadia Region 1"),
