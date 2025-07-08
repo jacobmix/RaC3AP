@@ -75,7 +75,8 @@ class RaC3World(World):
             "options": {
                 "StartingWeapon": weapon_type_to_name[WeaponType(self.options.StartingWeapon)],
                 "BoltandXPMultiplier": multiplier_to_name[Multiplier(self.options.BoltandXPMultiplier)],
-                "EnableWeaponLevelAsItem": self.options.EnableWeaponLevelAsItem.value
+                "EnableWeaponLevelAsItem": self.options.EnableWeaponLevelAsItem.value,
+                "ExtraArmorUpgrade": self.options.ExtraArmorUpgrade.value,
             },
             "Seed": self.multiworld.seed_name,  # to verify the server's multiworld
             "Slot": self.multiworld.player_name[self.player],  # to connect to server

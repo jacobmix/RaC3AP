@@ -62,20 +62,34 @@ class EnableWeaponLevelAsItem(Choice):
     option_enable = 1
     default = 0
 
+class ExtraArmorUpgrade(Choice):
+    """
+    Determines Which extra number of ArmorUpgrade items contains in itempool. 1~2 is recommended.
+    """
+    display_name = "ExtraArmorUpgrade"
+    option_no_extra = 0
+    option_extra_1 = 1
+    option_extra_2 = 2
+    option_extra_3 = 3
+    option_extra_4 = 4
+    default = 0
+
 
 @dataclass
 class RaC3Options(PerGameCommonOptions):
     StartingWeapon:            StartingWeapon
     BoltandXPMultiplier:    BoltandXPMultiplier
     EnableWeaponLevelAsItem: EnableWeaponLevelAsItem
+    ExtraArmorUpgrade: ExtraArmorUpgrade
 
 
 rac3_option_groups: Dict[str, List[Any]] = {
-    "General Options": [StartingWeapon, BoltandXPMultiplier, EnableWeaponLevelAsItem]
+    "General Options": [StartingWeapon, BoltandXPMultiplier, EnableWeaponLevelAsItem, ExtraArmorUpgrade]
 }
 
 slot_data_options: List[str] = {
     "BoltandXPMultiplier",
     "StartingWeapon",
     "EnableWeaponLevelAsItem",
+    "ExtraArmorUpgrade",
 }

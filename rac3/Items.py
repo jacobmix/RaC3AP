@@ -18,12 +18,17 @@ def create_itempool(world: "RaC3World") -> List[Item]:
     for name in item_table.keys():
         item_type: ItemClassification = item_table.get(name).classification
         item_amount: int = item_table.get(name).count
+        # WeaponLevelAsItem option
         if options.EnableWeaponLevelAsItem.value == EnableWeaponLevelAsItem.option_disable:
             if name in progressive_weapons.keys():
                 continue
         else: # options.EnableWeaponLevelAsItem.value == EnableWeaponLevelAsItem.option_enable:
             if name in weapon_items.keys():
                 continue
+        # ExtraArmorUpgrade option
+        if name == "Progressive Armor":
+            item_amount += options.ExtraArmorUpgrade.value
+        
         itempool += create_multiple_items(world, name, item_amount, item_type)
 
     victory = create_item(world, "Biobliterator Defeated!")
@@ -140,7 +145,7 @@ qwark_vidcomics = {
 
 
 progressive_armor = {
-    "Progressive Armor": ItemData(50001480, ItemClassification.useful, 6),
+    "Progressive Armor": ItemData(50001480, ItemClassification.useful, 4),
 }
 
 t_bolts = {
