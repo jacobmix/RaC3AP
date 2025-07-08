@@ -139,6 +139,21 @@ def set_rules_hard_location(world):
             lambda state: state.can_reach("Zeldrin Starport Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 5"),
             lambda state: state.can_reach("Zeldrin", player=world.player))
+    # Vidcomi clear locations
+    add_rule(world.get_location("Phoenix: Qwark Vidcomic 1 Clear"),
+            lambda state: state.has("Qwark Vidcomic 1", world.player))
+    add_rule(world.get_location("Phoenix: Qwark Vidcomic 2 Clear"),
+            lambda state: state.has("Phoenix: Qwark Vidcomic 1 Clear", player=world.player)
+            and state.has("Qwark Vidcomic 2", world.player))
+    add_rule(world.get_location("Phoenix: Qwark Vidcomic 3 Clear"),
+            lambda state: state.has("Phoenix: Qwark Vidcomic 2 Clear", player=world.player)
+            and state.has("Qwark Vidcomic 3", world.player))
+    add_rule(world.get_location("Phoenix: Qwark Vidcomic 4 Clear"),
+            lambda state: state.has("Phoenix: Qwark Vidcomic 3 Clear", player=world.player)
+            and state.has("Qwark Vidcomic 4", world.player))
+    add_rule(world.get_location("Phoenix: Qwark Vidcomic 5 Clear"),
+            lambda state: state.has("Phoenix: Qwark Vidcomic 4 Clear", player=world.player)
+            and state.has("Qwark Vidcomic 5", world.player))
 
     #----- Planet Marcadia -----#
     # "Marcadia: Received Spitting Hydra": LocData(50001030, "Marcadia Region 1"),
