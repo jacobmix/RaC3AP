@@ -16,6 +16,9 @@ def get_location_names() -> Dict[str, int]:
     names = {name: data.ap_code for name, data in location_table.items()}
     return names
 
+def get_regions() -> list:
+    regions = [data.region for _, data in location_table.items()]
+    return regions
 
 rac3_locations = {
     #----- Planet Veldin -----#

@@ -2,7 +2,7 @@ from typing import Dict
 from BaseClasses import MultiWorld, Item, ItemClassification, Tutorial
 from worlds.AutoWorld import World, CollectionState, WebWorld
 from .Items import item_table, create_itempool, create_item, weapon_items, progressive_weapons, gadget_items, post_planets, progressive_armor, t_bolts, filter_item_names
-from .Locations import get_location_names, get_total_locations, rac3_locations, get_level_locations
+from .Locations import get_location_names, get_total_locations, rac3_locations, get_level_locations, get_regions
 from .Rac3Options import RaC3Options
 from .Regions import create_regions
 from .Types import WeaponType, weapon_type_to_name, RaC3Item, multiplier_to_name, Multiplier
@@ -43,31 +43,10 @@ class RaC3World(World):
     ut_can_gen_without_yaml = False
     disable_ut = False
 
-    location_name_groups =  {
-        "Veldin": set(get_level_locations("Veldin")),
-        "Florana": set(get_level_locations("Florana")),
-        "Phoenix": set(get_level_locations("Starship Phoenix")),
-        "Marcadia1": set(get_level_locations("Marcadia Region 1")),
-        "Marcadia2": set(get_level_locations("Marcadia Region 2")),
-        "Annihilation1": set(get_level_locations("Annihilation Nation")),
-        "Annihilation2": set(get_level_locations("Annihilation Nation 2")),
-        "Aquatos": set(get_level_locations("Aquatos")),
-        "Tyhrranosis": set(get_level_locations("Tyhrranosis")),
-        "Daxx1": set(get_level_locations("Daxx Region 1")),
-        "Daxx2": set(get_level_locations("Daxx Region 2")),
-        "Obani Gemini": set(get_level_locations("Obani Gemini")),
-        "Rilgar": set(get_level_locations("Rilgar")),
-        "Holostar": set(get_level_locations("Holostar Studios")),
-        "Obani Draco": set(get_level_locations("Obani Draco")),
-        "Zeldrin Starport": set(get_level_locations("Zeldrin Starport Region 2")),
-        "Metropolis1": set(get_level_locations("Metropolis Region 1")),
-        "Metropolis2": set(get_level_locations("Metropolis Region 2")),
-        "Zeldrin": set(get_level_locations("Zeldrin")),
-        "Aridia": set(get_level_locations("Aridia")),
-        "Qwarks Hideout": set(get_level_locations("Qwarks Hideout")),
-        "Koros": set(get_level_locations("Koros")),
-        "Mylon": set(get_level_locations("Mylon")),
-    }
+    location_name_groups = {}
+    for region in get_regions():
+        location_name_groups[region] = set(get_level_locations(region))
+
     options_dataclass = RaC3Options
     options = RaC3Options
     web = RaC3Web()
