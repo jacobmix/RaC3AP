@@ -43,11 +43,6 @@ class RaC3World(World):
     ut_can_gen_without_yaml = False
     disable_ut = False
 
-    item_name_groups = {
-        "Progression": set(filter_item_names(ItemClassification.progression)),
-        "Useful": set(filter_item_names(ItemClassification.useful)),
-        "Filter": set(filter_item_names(ItemClassification.filler)),
-    }
     location_name_groups =  {
         "Veldin": set(get_level_locations("Veldin")),
         "Florana": set(get_level_locations("Florana")),
