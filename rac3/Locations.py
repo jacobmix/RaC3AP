@@ -152,7 +152,7 @@ rac3_locations = {
 
     #----- Planet Metropolis -----#
     "Metropolis: Received Map-O-Matic": LocData(50001430, "Metropolis Region 2"),
-    "Metropolis: T-Bolt: Across the Gap": LocData(50001431, "Metropolis Region 2"),
+    "Metropolis: T-Bolt: Across the Gap": LocData(50001431, "Metropolis Region 1"),
     "Metropolis: T-Bolt: Right of the Balcony": LocData(50001432, "Metropolis Region 2"),
     "Metropolis: T-Bolt: Tall Tower (Hovership)": LocData(50001433, "Metropolis Region 2"),
     "Metropolis: Metal-Noids": LocData(50001434, "Metropolis Region 1"),

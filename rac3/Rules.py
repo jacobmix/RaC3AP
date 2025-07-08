@@ -34,9 +34,8 @@ def set_rules_planets(world):
 
     #Getting to Obani Gemini
     add_rule(world.multiworld.get_entrance("Starship Phoenix -> Obani Gemini", world.player),
-             lambda state: state.has("Refractor", world.player)
-             and state.has("Infobot: Obani Gemini", world.player)
-             and state.has("Qwark Vidcomic 3", world.player))
+             lambda state: state.has("Infobot: Obani Gemini", world.player)
+             and state.has("Refractor", world.player))
 
     #Getting to Rilgar
     add_rule(world.multiworld.get_entrance("Starship Phoenix -> Rilgar", world.player),
@@ -215,59 +214,26 @@ def set_rules_hard_location(world):
             lambda state: state.has("Hypershot", world.player))
 
     #----- Obani Gemini -----#
-    # "Obani_Gemini: Received Disk Blade Gun": LocData(50001340, "Obani Gemini"),
     add_rule(world.get_location("Obani_Gemini: T-Bolt: Follow the Lava"),
-            lambda state: state.has("Hypershot", world.player)
-            and state.has("Refractor", world.player))
-    add_rule(world.get_location("Obani_Gemini: T-Bolt: Between the Twin Towers"),
-            lambda state: state.has("Refractor", world.player))
-    add_rule(world.get_location("Obani_Gemini: Infobot: Rilgar"),
-            lambda state: state.has("Refractor", world.player))
+            lambda state: state.has("Hypershot", world.player))
 
     #----- Planet Rilgar -----# # Nothing
-    # "Rilgar: Received Grav Boots": LocData(50001360, "Rilgar"),
-    # "Rilgar: Infobot: Holostar Studios": LocData(50001361, "Rilgar"),
 
-    # ----- Holostar Studios -----#
-    # "Holostar: Received Rift Inducer": LocData(50001390, "Holostar Studios"),
-    add_rule(world.get_location("Holostar: T-Bolt: Atop the Chairs"),
-            lambda state: state.has("Hacker", world.player))
-    add_rule(world.get_location("Holostar: T-Bolt: Lot 42's Grav Ramp"),
-            lambda state: state.has("Hacker", world.player)
-            and state.has("Hypershot", world.player))
-    add_rule(world.get_location("Holostar: T-Bolt: Kamikaze Noids"),
-            lambda state: state.has("Hacker", world.player)
-            and state.has("Hypershot", world.player))
-    # "Holostar: Infobot: Obani Draco": LocData(50001394, "Holostar Studios"),
+    # ----- Holostar Studios -----# # Nothing
 
     #----- Obani Draco (lol) -----# # Nothing
-        # "Obani_Draco: Infobot: Zeldrin Starport": LocData(50001370, "Obani Draco"),
 
-    #----- Zeldrin Starport -----#
-    add_rule(world.get_location("Zeldrin_Starport: Received Bolt Grabber V2"),
-            lambda state: state.has("Hypershot", world.player))
-    add_rule(world.get_location("Zeldrin_Starport: T-Bolt: Atop the Twin Shooters"),
-            lambda state: state.has("Hypershot", world.player))
+    #----- Zeldrin Starport -----# # Nothing
 
     #----- Planet Metropolis -----#
     add_rule(world.get_location("Metropolis: T-Bolt: Across the Gap"),
             lambda state: state.has("Hypershot", world.player))
-    add_rule(world.get_location("Metropolis: Received Map-O-Matic"),
-            lambda state: state.has("Hypershot", world.player)
-            and state.has("Grav-Boots", world.player))
-    add_rule(world.get_location("Metropolis: T-Bolt: Tall Tower (Hovership)"),
-            lambda state: state.has("Hypershot", world.player)
-            and state.has("Grav-Boots", world.player))
 
     #----- Planet Zeldrin -----#
     add_rule(world.get_location("Zeldrin: T-Bolt: Turn Around"),
             lambda state: state.has("Grav-Boots", world.player))
     add_rule(world.get_location("Zeldrin: Received Nano-Pak"),
-            lambda state: state.has("Hypershot", world.player)
-            and state.has("Grav-Boots", world.player))
-    add_rule(world.get_location("Zeldrin: Infobot: Aridia"),
-            lambda state: state.has("Hypershot", world.player)
-            and state.has("Grav-Boots", world.player))
+            lambda state: state.has("Grav-Boots", world.player))
     
     #----- Planet Aridia -----#
     add_rule(world.get_location("Aridia: T-Bolt: Under the Bridge (Assassionation)"),
@@ -277,39 +243,14 @@ def set_rules_hard_location(world):
 
     #----- Qwark's Hideout -----#
     add_rule(world.get_location("Qwark's_Hideout: Received Gadgetron PDU"),
-            lambda state: state.has("Hypershot", world.player)
-            and state.has("Grav-Boots", world.player))
+            lambda state: state.has("Grav-Boots", world.player))
     add_rule(world.get_location("Qwark's_Hideout: T-Bolt: Glide from the Ramp"),
-            lambda state: state.has("Hypershot", world.player)
-            and state.has("Grav-Boots", world.player))
+            lambda state: state.has("Grav-Boots", world.player))
     
     #----- Planet Koros -----# # Nothing
-    # "Koros: T-Bolt: Behind the Metal Fence": LocData(50001493, "Koros"),
-    # "Koros: T-Bolt: Pair of Towers": LocData(50001494, "Koros"),
-    # "Koros: Infobot: Mylon": LocData(50001495, "Koros"),
 
-    #----- Planet Mylon -----#
-    add_rule(world.get_location("Mylon: T-Bolt: Behind the Forcefield"),
-            lambda state: state.has("Hypershot", world.player)
-            and state.has("Tyhrra-Guise", world.player)
-            and state.has("Grav-Boots", world.player))
-    add_rule(world.get_location("Mylon: Dr. Nefarious Defeated!"),
-            lambda state: state.has("Infobot: Mylon", world.player)
-             and state.has("Hacker", world.player)
-             and state.has("Refractor", world.player)
-             and state.has("Tyhrra-Guise", world.player)
-             and state.has("Hypershot", world.player)
-             and state.has("Grav-Boots", world.player))
-    add_rule(world.get_location("Mylon: Biobliterator Defeated!"),
-            lambda state: state.has("Infobot: Mylon", world.player)
-             and state.has("Hacker", world.player)
-             and state.has("Refractor", world.player)
-             and state.has("Tyhrra-Guise", world.player)
-             and state.has("Hypershot", world.player)
-             and state.has("Grav-Boots", world.player))
+    #----- Planet Mylon -----# # Nothing
 
-
-    pass
 
 def set_rules(world: "RaC3World"):
 
