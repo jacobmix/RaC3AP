@@ -1268,7 +1268,7 @@ LOCATIONS = [
     "CheckValue": "96000"
   },
   {
-    "Name": "Agents Of Doom: V2",
+    "Name": "Agents of Doom: V2",
     "Id": 50001528,
     "Address": "0x00142F3C",
     "CompareType": 1,
@@ -1276,7 +1276,7 @@ LOCATIONS = [
     "CheckValue": "12800"
   },
   {
-    "Name": "Agents Of Doom: V3",
+    "Name": "Agents of Doom: V3",
     "Id": 50001529,
     "Address": "0x00142F3C",
     "CompareType": 1,
@@ -1284,7 +1284,7 @@ LOCATIONS = [
     "CheckValue": "32000"
   },
   {
-    "Name": "Agents Of Doom: V4",
+    "Name": "Agents of Doom: V4",
     "Id": 50001530,
     "Address": "0x00142F3C",
     "CompareType": 1,
@@ -1292,7 +1292,7 @@ LOCATIONS = [
     "CheckValue": "96000"
   },
   {
-    "Name": "Agents Of Doom: V5",
+    "Name": "Agents of Doom: V5",
     "Id": 50001531,
     "Address": "0x00142F3C",
     "CompareType": 1,

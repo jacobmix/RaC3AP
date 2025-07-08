@@ -2,24 +2,33 @@ from BaseClasses import Item, ItemClassification
 from .Types import ItemData, RaC3Item, weapon_type_to_shortened_name, WeaponType, EventData
 from .Locations import get_total_locations
 from typing import List, Dict, TYPE_CHECKING
-
+from .Rac3Options import EnableWeaponLevelAsItem
 if TYPE_CHECKING:
     from . import RaC3World
 
 
 def create_itempool(world: "RaC3World") -> List[Item]:
     itempool: List[Item] = []
+    options = world.options
+
+    junk_dict = junk_items
+    if options.EnableWeaponLevelAsItem.value == EnableWeaponLevelAsItem.option_disable:
+        junk_dict.update(junk_weapon_exp)
 
     for name in item_table.keys():
         item_type: ItemClassification = item_table.get(name).classification
         item_amount: int = item_table.get(name).count
-
+        if options.EnableWeaponLevelAsItem.value == EnableWeaponLevelAsItem.option_disable:
+            if name in progressive_weapons.keys():
+                continue
+        else: # options.EnableWeaponLevelAsItem.value == EnableWeaponLevelAsItem.option_enable:
+            if name in weapon_items.keys():
+                continue
         itempool += create_multiple_items(world, name, item_amount, item_type)
 
     victory = create_item(world, "Biobliterator Defeated!")
     world.multiworld.get_location("Mylon: Biobliterator Defeated!", world.player).place_locked_item(victory)
-
-    itempool += create_junk_items(world, get_total_locations(world) - len(itempool) - 1)
+    itempool += create_junk_items(world, get_total_locations(world) - len(itempool) - 1, junk_dict)
     return itempool
 
 def create_multiple_items(world: "RaC3World", name: str, count: int = 1,
@@ -36,11 +45,11 @@ def create_item(world: "RaC3World", name: str) -> Item:
     data = item_table[name]
     return RaC3Item(name, data.classification, data.ap_code, world.player)
 
-def create_junk_items(world: "RaC3World", count: int) -> List[Item]:
+def create_junk_items(world: "RaC3World", count: int, junk_dict: Dict[str, object]) -> List[Item]:
     junk_pool: List[Item] = []
     # For now, all junk has equal weights
     for i in range(count):
-        junk_pool.append(world.create_item(world.random.choices(list(junk_items.keys()), k=1)[0]))
+        junk_pool.append(world.create_item(world.random.choices(list(junk_dict.keys()), k=1)[0]))
     return junk_pool
 
 
@@ -68,26 +77,26 @@ weapon_items = {
 }
 
 progressive_weapons = {
-    "Progressive Shock Blaster": ItemData(50001420, ItemClassification.useful, 4),
-    "Progressive Nitro Launcher": ItemData(50001421, ItemClassification.useful, 4),
-    "Progressive N60 Storm": ItemData(50001422, ItemClassification.useful, 4),
-    "Progressive Plasma Whip": ItemData(50001423, ItemClassification.useful, 4),
-    "Progressive Infector": ItemData(50001424, ItemClassification.useful, 4),
-    "Progressive SUCC Cannon": ItemData(50001425, ItemClassification.useful, 4),
-    "Progressive Spitting Hydra": ItemData(50001426, ItemClassification.useful, 4),
-    "Progressive Agents of Doom": ItemData(50001427, ItemClassification.useful, 4),
-    "Progressive Flux Rifle": ItemData(50001428, ItemClassification.useful, 4),
-    "Progressive Annihilator": ItemData(50001429, ItemClassification.useful, 4),
-    "Progressive Holo-Shield Glove": ItemData(50001430, ItemClassification.useful, 4),
-    "Progressive Disk-Blade Gun": ItemData(50001431, ItemClassification.useful, 4),
-    "Progressive Rift Inducer": ItemData(50001432, ItemClassification.useful, 4),
-    "Progressive Qwack-O-Ray": ItemData(50001433, ItemClassification.useful, 4),
-    "Progressive RY3N0": ItemData(50001434, ItemClassification.useful, 4),
-    "Progressive Mega-Turret Glove": ItemData(50001435, ItemClassification.useful, 4),
-    "Progressive Lava Gun": ItemData(50001436, ItemClassification.useful, 4),
-    "Progressive Shield Charger": ItemData(50001437, ItemClassification.useful, 4),
-    "Progressive Bouncer": ItemData(50001438, ItemClassification.useful, 4),
-    "Progressive Plasma Coil": ItemData(50001439, ItemClassification.useful, 4)
+    "Progressive Shock Blaster": ItemData(50001420, ItemClassification.useful, 5),
+    "Progressive Nitro Launcher": ItemData(50001421, ItemClassification.useful, 5),
+    "Progressive N60 Storm": ItemData(50001422, ItemClassification.useful, 5),
+    "Progressive Plasma Whip": ItemData(50001423, ItemClassification.useful, 5),
+    "Progressive Infector": ItemData(50001424, ItemClassification.useful, 5),
+    "Progressive SUCC Cannon": ItemData(50001425, ItemClassification.useful, 5),
+    "Progressive Spitting Hydra": ItemData(50001426, ItemClassification.useful, 5),
+    "Progressive Agents of Doom": ItemData(50001427, ItemClassification.useful, 5),
+    "Progressive Flux Rifle": ItemData(50001428, ItemClassification.useful, 5),
+    "Progressive Annihilator": ItemData(50001429, ItemClassification.useful, 5),
+    "Progressive Holo-Shield Glove": ItemData(50001430, ItemClassification.useful, 5),
+    "Progressive Disk-Blade Gun": ItemData(50001431, ItemClassification.useful, 5),
+    "Progressive Rift Inducer": ItemData(50001432, ItemClassification.useful, 5),
+    "Progressive Qwack-O-Ray": ItemData(50001433, ItemClassification.useful, 5),
+    "Progressive RY3N0": ItemData(50001434, ItemClassification.useful, 5),
+    "Progressive Mega-Turret Glove": ItemData(50001435, ItemClassification.useful, 5),
+    "Progressive Lava Gun": ItemData(50001436, ItemClassification.useful, 5),
+    "Progressive Shield Charger": ItemData(50001437, ItemClassification.useful, 5),
+    "Progressive Bouncer": ItemData(50001438, ItemClassification.useful, 5),
+    "Progressive Plasma Coil": ItemData(50001439, ItemClassification.useful, 5)
 }
 gadget_items = {
     "Hacker" :ItemData(50001440, ItemClassification.progression, 1),
@@ -140,12 +149,15 @@ progressive_armor = {
 }
 
 t_bolts = {
-    "Titanium Bolt": ItemData(50001490, ItemClassification.filler, 35)
+    "Titanium Bolt": ItemData(50001490, ItemClassification.filler, 0)
+}
+
+junk_weapon_exp = {
+    "Weapon EXP": ItemData(50001492, ItemClassification.filler, 0)    
 }
 
 junk_items = {
     "Bolts": ItemData(50001491, ItemClassification.filler, 0),
-    "Weapon EXP": ItemData(50001492, ItemClassification.filler, 0)
 }
 
 victory_item = {
@@ -156,15 +168,15 @@ victory_item = {
 
 item_table ={
     **weapon_items,
-    # **progressive_weapons,
+    **progressive_weapons,
     **gadget_items,
     **post_planets,
     **qwark_vidcomics,
     **progressive_armor,
     **t_bolts,
     **junk_items,
+    **junk_weapon_exp,
     **victory_item
-
 }
 
 #class ItemData(NamedTuple):

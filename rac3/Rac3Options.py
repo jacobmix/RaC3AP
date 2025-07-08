@@ -53,17 +53,29 @@ class BoltandXPMultiplier(Choice):
     option_x10 = 6
     default = 1
 
+class EnableWeaponLevelAsItem(Choice):
+    """
+    Determines weapon level is unlocked items or not.
+    """
+    display_name = "EnableWeaponLevelAsItem"
+    option_disable = 0
+    option_enable = 1
+    default = 0
+
+
 @dataclass
 class RaC3Options(PerGameCommonOptions):
     StartingWeapon:            StartingWeapon
     BoltandXPMultiplier:    BoltandXPMultiplier
+    EnableWeaponLevelAsItem: EnableWeaponLevelAsItem
 
 
 rac3_option_groups: Dict[str, List[Any]] = {
-    "General Options": [StartingWeapon, BoltandXPMultiplier]
+    "General Options": [StartingWeapon, BoltandXPMultiplier, EnableWeaponLevelAsItem]
 }
 
 slot_data_options: List[str] = {
     "BoltandXPMultiplier",
-    "StartingWeapon"
+    "StartingWeapon",
+    "EnableWeaponLevelAsItem",
 }

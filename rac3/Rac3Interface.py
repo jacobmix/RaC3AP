@@ -112,11 +112,15 @@ class Rac3Interface(GameInterface):
         self.WeaponCycler()
         self.ArmorCycler()
         self.VerifyQuickSelectAndLastUsed()
+        # Proc Options
         addr = ADDRESSES[self.current_game]["boltXPMultiplier"]
         addr = self.AddressConvert(addr)
         self._write8(addr, self.boltandXPMultiplierValue)
+        if self.weaponLevelLockFlag:
+            self.WeaponExpCycler()
         # Logic Fixes
         self.LogicFixes()
+        
 
 
     def get_victory_code(self):
@@ -127,6 +131,7 @@ class Rac3Interface(GameInterface):
         self.logger.info(f"{slot_data}")
         self.startingWeapon = slot_data["options"]["StartingWeapon"]
         self.boltandXPMultiplier = slot_data["options"]["BoltandXPMultiplier"]
+        self.weaponLevelLockFlag = slot_data["options"]["EnableWeaponLevelAsItem"]
 
     def item_received(self, item_code, processed_items_count = 0):
         # self.logger.info(f"{item_code}")
@@ -224,6 +229,7 @@ class Rac3Interface(GameInterface):
         ### Bolt and XPMultiplier
         val = int(self.boltandXPMultiplier[1:])
         self.boltandXPMultiplierValue = val - 1 # 0 = x1, 1 = x2, 3 = x4 ...
+        ### EnableWeaponLevelAsItem: if enabled, EXP disabler is running.
 
     # Address conversion from str to int(with US to JP)
     def AddressConvert(self, address):
@@ -379,14 +385,47 @@ class Rac3Interface(GameInterface):
                     self._write8(addr, 0)
                     continue
 
+    def WeaponExpCycler(self):
+        weapon_names = [name for name, data in self.UnlockWeapons.items()]
+        for weapon_name in weapon_names:
+            # Get weapon information
+            target_weapon_data = [data for data in LOCATIONS if f"{weapon_name}: V" in data["Name"]]
+            exp_list = ["0"] + [data["CheckValue"] for data in target_weapon_data] # Exp for v1(=0) + Exp for v2~v5
+            addr = target_weapon_data[0]["Address"]
+            addr = self.AddressConvert(addr)
+            # Check Current Weapon level and set Exp.
+            correct_version = self.UnlockWeapons[weapon_name]["status"] # 1 ~ 5
+            if correct_version != 0:
+                self.WeaponLevelUp(weapon_name, version=correct_version)
+                
+
     def ReceivedWeapon(self, ap_code):
         for name, item_data in Items.weapon_items.items():
             if item_data.ap_code == ap_code:
                 self.UnlockWeapons[name]["status"] = 1
 
-    def ReceivedWeaponProgressive(self, ap_code): # Not implemented as of now
-        pass
+    def ReceivedWeaponProgressive(self, ap_code):
+        weapon_name = ""
+        for name, data in Items.progressive_weapons.items():
+            if data.ap_code == ap_code:
+                weapon_name = name.replace("Progressive ", "")
+                break
+        self.UnlockWeapons[weapon_name]["status"] += 1
 
+    def WeaponLevelUp(self, weapon_name, version=0):
+        target_weapon_data = [data for data in LOCATIONS if f"{weapon_name}: V" in data["Name"]]
+        exp_list = ["0"] + [data["CheckValue"] for data in target_weapon_data] # Exp for v1~v5
+        addr = target_weapon_data[0]["Address"]
+        addr = self.AddressConvert(addr)
+        if version == 0:
+            current_exp = self._read32(addr)
+            for target_exp in exp_list:
+                if current_exp < int(target_exp, 0):
+                    self._write32(addr, int(target_exp, 0))
+                    break
+        else: # version = 1~5:
+            self._write32(addr, int(exp_list[version-1], 0))
+            
     def ReceivedGadget(self, ap_code):
         for name, item_data in Items.gadget_items.items():
             if item_data.ap_code == ap_code:
@@ -438,14 +477,4 @@ class Rac3Interface(GameInterface):
             if len(unlocked_weapon_names) > 0:
                 weapon_num = random.randint(0, len(unlocked_weapon_names)-1)
                 weapon_name = unlocked_weapon_names[weapon_num]
-                target_weapon_data = [data for data in LOCATIONS if f"{weapon_name}: V" in data["Name"]]
-                exp_list = [data["CheckValue"] for data in target_weapon_data] # Exp for v2~v5
-                addr = target_weapon_data[0]["Address"]
-                addr = self.AddressConvert(addr)
-                current_exp = self._read32(addr)
-                for target_exp in exp_list:    
-                    if current_exp < int(target_exp, 0):
-                        self._write32(addr, int(target_exp, 0))
-                        break
-
-        
+                self.WeaponLevelUp(weapon_name)
