@@ -140,12 +140,7 @@ qwark_vidcomics = {
 
 
 progressive_armor = {
-    "Progressive Armor1": ItemData(50001480, ItemClassification.useful, 1),
-    "Progressive Armor2": ItemData(50001481, ItemClassification.useful, 1),
-    "Progressive Armor3": ItemData(50001482, ItemClassification.useful, 1),
-    "Progressive Armor4": ItemData(50001483, ItemClassification.useful, 1),
-    "Progressive Armor5": ItemData(50001484, ItemClassification.useful, 1),
-    "Progressive Armor6": ItemData(50001485, ItemClassification.useful, 1),
+    "Progressive Armor": ItemData(50001480, ItemClassification.useful, 6),
 }
 
 t_bolts = {
