@@ -1,11 +1,27 @@
 # Ratchet and Clank 3 Up your Arsenal Guide
 
-## Required Software
+This guide is meant to help you get up and running with Ratchet & Clank 3 in your Archipelago run.
 
-- A legally obtained NTSC ISO of Ratchet and Clank 3 Up your Arsenal
-- [v1.6.0 of PCSX2](https://pcsx2.net/downloads)
-    - Select show previous versions and choose v1.6.0
-- The built-in Archipelago client, which can be installed [here](https://github.com/ArchipelagoMW/Archipelago/releases).
+## Requirements
+
+The following are required in order to play Ratchet & Clank 3 in Archipelago
+
+- Installed [Archipelago](https://github.com/ArchipelagoMW/Archipelago/releases) v0.5.0 or higher.\
+   **Make sure to install the Generator if you intend to generate multiworlds.**
+- The latest version of the [Ratchet & Clank 3 apworld](https://github.com/Taoshix/RaC3AP/releases).
+- [PCSX2 Emulator](https://pcsx2.net/downloads/). Must be v1.7 or higher for the required PINE support.
+- A Ratchet & Clank 3 US ISO (`SCUS-97353`) or Japan ISO (`SCPS-15084`)
+
+## AP World Installation
+
+1. Unzip the downloaded Ratchet & Clank 3 apworld zip file
+2. Double-click the `rac3.apworld` to install it to your local Archipelago instance
+
+## PCSX2 Settings
+- Enable PINE in PCSX2
+  - In PCSX2, Under Tools, **Check** Show Advanced Settings
+  - In PCSX2, System -> Settings -> Advanced tab -> PINE Settings,
+    **Check** Enable and ensure Slot is set to 28011
 
 ## Configuring your YAML file
 
@@ -22,8 +38,9 @@ the [Ratchet and Clank 3 Options Page](/games/Ratchet%20and%20Clank%203%20Up%20y
 
 ### Connect to the MultiServer
 
-1. Launch PCSX2 and boot your copy of RaC3
+1. Launch PCSX2 boot your copy of RaC3
 
-2. Launch RaC3AP.exe from the client folder
+2. Launch Ratchet and Clank 3 client in the Archipelago Launcher
     - Under address input your archipelago connection address (ie: archipelago.gg:51780)
     - PCSX2 must be open before the RaC3 client is opened or it will give an error
+
