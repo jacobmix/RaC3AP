@@ -156,23 +156,49 @@ class Rac3Interface(GameInterface):
         elif processed_items_count >= 0: # To avoid duplicated items sending when reconnection, First attempt is skipped.
             self.ReceivedOthers(item_code)
 
-
     def is_location_checked(self, ap_code):
-        target_location = {}
-        # search target location
-        for location in LOCATIONS:
-            if location["Id"] == ap_code:
-                target_location = location
-                break
+        # Find the location
+        target_location = next((loc for loc in LOCATIONS if loc["Id"] == ap_code), None)
+        if not target_location:
+            return False  # not found
 
-        # Check location flag
-        _value = 0
-        addr = target_location["Address"]
-        addr = self.AddressConvert(addr)
-        if target_location["CheckType"] == CHECK_TYPE["bit"] or \
-            target_location["CheckType"] == CHECK_TYPE["falseBit"]:
+        # --- NEW: if this location has multiple checks ---
+        if "Checks" in target_location:
+            for check in target_location["Checks"]:
+                addr = self.AddressConvert(check["Address"])
+
+                if check["CheckType"] in (CHECK_TYPE["bit"], CHECK_TYPE["falseBit"]):
+                    _value = self._read8(addr)
+                    _value = (_value >> check.get("AddressBit", 0)) & 0x01
+                elif check["CheckType"] == CHECK_TYPE["byte"]:
+                    _value = self._read8(addr)
+                elif check["CheckType"] == CHECK_TYPE["short"]:
+                    _value = self._read16(addr)
+                else:
+                    _value = self._read32(addr)
+
+                if check["CheckType"] == CHECK_TYPE["bit"]:
+                    _compare_value = 0x01
+                elif check["CheckType"] == CHECK_TYPE["falseBit"]:
+                    _compare_value = 0x00
+                else:
+                    _compare_value = int(check.get("CheckValue", "0"), 0)
+
+                _compare_type = check.get("CompareType", COMPARE_TYPE["Match"])
+
+                if _compare_type == COMPARE_TYPE["Match"] and not (_value == _compare_value):
+                    return False
+                if _compare_type == COMPARE_TYPE["GreaterThan"] and not (_value > _compare_value):
+                    return False
+                if _compare_type == COMPARE_TYPE["LessThan"] and not (_value < _compare_value):
+                    return False
+            return True  # <-- RETURN HERE so fallback doesn't run
+
+        # --- OLD: single-check format (only for locations WITHOUT "Checks") ---
+        addr = self.AddressConvert(target_location["Address"])
+        if target_location["CheckType"] in (CHECK_TYPE["bit"], CHECK_TYPE["falseBit"]):
             _value = self._read8(addr)
-            _value = (_value >> target_location["AddressBit"]) & 0x01
+            _value = (_value >> target_location.get("AddressBit", 0)) & 0x01
         elif target_location["CheckType"] == CHECK_TYPE["byte"]:
             _value = self._read8(addr)
         elif target_location["CheckType"] == CHECK_TYPE["short"]:
@@ -180,24 +206,22 @@ class Rac3Interface(GameInterface):
         else:
             _value = self._read32(addr)
 
-        _compare_value = 0
         if target_location["CheckType"] == CHECK_TYPE["bit"]:
             _compare_value = 0x01
         elif target_location["CheckType"] == CHECK_TYPE["falseBit"]:
             _compare_value = 0x00
         else:
-            _compare_value = int(target_location["CheckValue"], 0)
+            _compare_value = int(target_location.get("CheckValue", "0"), 0)
 
-        _compare_type = COMPARE_TYPE["Match"]
-        if 'CompareType' in target_location:
-            _compare_type = target_location["CompareType"]
+        _compare_type = target_location.get("CompareType", COMPARE_TYPE["Match"])
 
         if _compare_type == COMPARE_TYPE["Match"]:
-            return (_value == _compare_value)
-        elif _compare_type == COMPARE_TYPE["GreaterThan"]:
-            return (_value > _compare_value)
-        elif _compare_type == COMPARE_TYPE["LessThan"]:
-            return (_value < _compare_value)
+            return _value == _compare_value
+        if _compare_type == COMPARE_TYPE["GreaterThan"]:
+            return _value > _compare_value
+        if _compare_type == COMPARE_TYPE["LessThan"]:
+            return _value < _compare_value
+        return False
 
     ###################################
     # Game dedicated functions        #
