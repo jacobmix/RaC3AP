@@ -30,7 +30,7 @@ rac3_locations = {
     "Florana: T-Bolt: Path of Death": LocData(50001007, "Florana"),
     "Florana: Infobot: Starship Phoenix": LocData(50001008, "Florana"),
     "Florana: Stay Squaky Clean": LocData(50001605, "Florana"),
-    
+
     #----- Starship Phoenix -----#
     "Phoenix: Received SUCC Cannon": LocData(50001009, "Starship Phoenix"),
     "Phoenix: Received Infector": LocData(50001010, "Starship Phoenix"),
@@ -58,6 +58,7 @@ rac3_locations = {
     "Phoenix: Qwark Vidcomic 3 Clear": LocData(50001602, "Starship Phoenix"),
     "Phoenix: Qwark Vidcomic 4 Clear": LocData(50001603, "Starship Phoenix"),
     "Phoenix: Qwark Vidcomic 5 Clear": LocData(50001604, "Starship Phoenix"),
+    "Phoenix: Turn Up The Heat!": LocData(50001606, "Starship Phoenix"),
 
     #----- Planet Marcadia -----#
     "Marcadia: Received Spitting Hydra": LocData(50001030, "Marcadia Region 1"),

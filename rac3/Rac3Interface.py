@@ -261,16 +261,17 @@ class Rac3Interface(GameInterface):
         if isinstance(address, str):
             _addr = int(address, 0)
         if 0x001BBB00 <= _addr and _addr <= 0x001BBBFF: # T-Bolt
-            _addr += 0x9298
+            _addr += 0
         elif 0x001D545C <= _addr and _addr <= 0x001D5553: # Current Location + VidComic
-            _addr += 0x9300
+            _addr += 0
         elif 0x00100000 <= _addr and _addr <= 0x00100050: # DummyEXP
             _addr += 0
         elif 0x001D4C00 <= _addr and _addr <= 0x001D4CFF : # Equipped garamecha
-            _addr += 0x92C0
+            _addr += 0
         else:
-            _addr -= 0x80
+            _addr
         return _addr
+    #TO-DO: fixing this syntax KEKW
 
     # initialization
     def removeAllWeapons(self):

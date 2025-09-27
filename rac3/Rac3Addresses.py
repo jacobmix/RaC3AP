@@ -110,16 +110,123 @@ ADDRESSES = {
         "Take Qwark to Cage": 0x001426E8,
         "Meet Sasha bridge": 0x001426E9 
     }
+  },
+"SCUS-97353": {
+    "Weapons": {
+      "Shock Blaster":     {"unlockAddress": 0x00142CC7, "id": 39,  "ammoAddress": 0x0014288C, "lv1Ammo": 30, },
+      "Nitro Launcher":    {"unlockAddress": 0x00142D17, "id": 119, "ammoAddress": 0x001429CC, "lv1Ammo": 8, },
+      "N60 Storm":         {"unlockAddress": 0x00142CCF, "id": 47,  "ammoAddress": 0x001428AC, "lv1Ammo": 150, },
+      "Plasma Whip":       {"unlockAddress": 0x00142D1F, "id": 127, "ammoAddress": 0x001429EC, "lv1Ammo": 25, },
+      "Infector":          {"unlockAddress": 0x00142CD7, "id": 55,  "ammoAddress": 0x001428CC, "lv1Ammo": 15, },
+      "SUCC Cannon":       {"unlockAddress": 0x00142D27, "id": 135, "ammoAddress": 0x00000000, "lv1Ammo": 0, },
+      "Spitting Hydra":    {"unlockAddress": 0x00142CE7, "id": 71,  "ammoAddress": 0x0014290C, "lv1Ammo": 15, },
+      "Agents of Doom":    {"unlockAddress": 0x00142CF7, "id": 87,  "ammoAddress": 0x0014294C, "lv1Ammo": 6, },
+      "Flux Rifle":        {"unlockAddress": 0x00142D0F, "id": 111, "ammoAddress": 0x001429AC, "lv1Ammo": 10, },
+      "Annihilator":       {"unlockAddress": 0x00142CDF, "id": 63,  "ammoAddress": 0x001428EC, "lv1Ammo": 20, },
+      "Holo-Shield Glove": {"unlockAddress": 0x00142D07, "id": 103, "ammoAddress": 0x0014298C, "lv1Ammo": 8, },
+      "Disk-Blade Gun":    {"unlockAddress": 0x00142CEF, "id": 79,  "ammoAddress": 0x0014292C, "lv1Ammo": 25, },
+      "Rift Inducer":      {"unlockAddress": 0x00142CFF, "id": 95,  "ammoAddress": 0x0014296C, "lv1Ammo": 8, },
+      "Qwack-O-Ray":       {"unlockAddress": 0x00142D2F, "id": 143, "ammoAddress": 0x00000000, "lv1Ammo": 0, },
+      "RY3N0":             {"unlockAddress": 0x00142D37, "id": 151, "ammoAddress": 0x00142A4C, "lv1Ammo": 25, },
+      "Mega-Turret Glove": {"unlockAddress": 0x00142CB5, "id": 21,  "ammoAddress": 0x00142844, "lv1Ammo": 10, },
+      "Lava Gun":          {"unlockAddress": 0x00142CB1, "id": 17,  "ammoAddress": 0x00142834, "lv1Ammo": 150, },
+      "Shield Charger":    {"unlockAddress": 0x00142CB6, "id": 22,  "ammoAddress": 0x00142848, "lv1Ammo": 3, },
+      "Bouncer":           {"unlockAddress": 0x00142CB3, "id": 19,  "ammoAddress": 0x0014283C, "lv1Ammo": 10, },
+      "Plasma Coil":       {"unlockAddress": 0x00142CB0, "id": 16,  "ammoAddress": 0x00142830, "lv1Ammo": 15, },
+    },
+    "Gadgets": {
+      "Hacker" :         {"unlockAddress": 0x00142CB4, "id": 0,    },
+      "Hypershot":       {"unlockAddress": 0x00142CAB, "id": 11,    },
+      "Refractor":       {"unlockAddress": 0x00142CB2, "id": 18,    },
+      "Tyhrra-Guise":    {"unlockAddress": 0x00142CBE, "id": 30,    },
+      "Grav-Boots":      {"unlockAddress": 0x00142CAD, "id": 0,    },
+      "Bolt Grabber V2": {"unlockAddress": 0x00142CA7, "id": 0,    },
+      "Map-O-Matic":     {"unlockAddress": 0x00142CA5, "id": 0,    },
+      "Nano Pak":        {"unlockAddress": 0x00142CC0, "id": 0,    },
+      "Warp Pad":        {"unlockAddress": 0x00142CBF, "id": 31,    },
+      "Gadgetron PDU":   {"unlockAddress": 0x00142CC3, "id": 35,    },
+      "Charge-Boots":    {"unlockAddress": 0x00142CBD, "id": 0,    },
+    },
+    "VidComics": {
+      "Qwark Vidcomic 1": {"unlockAddress": 0x001D554F },
+      "Qwark Vidcomic 2": {"unlockAddress": 0x001D5551 },
+      "Qwark Vidcomic 3": {"unlockAddress": 0x001D5552 },
+      "Qwark Vidcomic 4": {"unlockAddress": 0x001D5550 },
+      "Qwark Vidcomic 5": {"unlockAddress": 0x001D5553 },
+    },
+    "PlanetSlots": [
+      0x00143050, 0x00143054, 0x00143058, 0x0014305C, 
+      0x00143060, 0x00143064, 0x00143068, 0x0014306C ,
+      0x00143070, 0x00143074, 0x00143078, 0x0014307C ,
+      0x00143080, 0x00143084, 0x00143088, 0x0014308C ,
+      0x00143090, 0x00143094, 0x00143098, 0x0014309C ,
+    ],
+    "PlanetValues": {
+      "Veldin": 1,
+      "Florana" : 2,
+      "Starship Phoenix" : 3,
+      "Marcadia" : 4,
+      "Daxx" : 5,
+      "Annihilation Nation" : 7,
+      "Aquatos" : 8,
+      "Tyhrranosis" : 9,
+      "Zeldrin Starport" : 10,
+      "Obani Gemini" : 11,
+      "Rilgar" : 12,
+      "Holostar Studios" : 13,
+      "Koros" : 14,
+      "Metropolis" : 16,
+      "Zeldrin" : 17,
+      "Aridia" : 18,
+      "Qwarks Hideout" : 19,
+      "Obani Draco" : 21,
+      "Mylon" : 22,
+      "Museum" : 24,
+    },
+    "QuickSelectSlots": [
+      # Slot 1
+      0x001D4C60, 0x001D4C64, 0x001D4C68, 0x001D4C6C,
+      0x001D4C70, 0x001D4C74, 0x001D4C78, 0x001D4C7C,
+      # Slot 2(With R1 button)
+      0x001D4C80, 0x001D4C84, 0x001D4C88, 0x001D4C8C,
+      0x001D4C90, 0x001D4C94, 0x001D4C98, 0x001D4C9C,
+    ],
+    "CurrentEquipped": 0x001D4C40,
+    "HoldingWeapon": 0x001A5E08,
+    "LastUsed": [0x00142670, 0x00142674, 0x00142678],
+    "ArmorVersion": 0x001426A0,
+    "boltXPMultiplier": 0x001426BA,
+    "Bolt": 0x00142660,
+    "InfernoTimer": 0x001A4E14,
+    "NanotechExp": 0x00142694,
+    "CurrentPlanet": 0x001D545C,
+    "Skill Points": {
+        "Stay Squaky Clean": 0x001D54B1,
+        "Turn Up The Heat": 0x001D54B4
+    },
+    "Missions": {
+        "Take Qwark to Cage": 0x001426E8,
+        "Meet Sasha bridge": 0x001426E9 
+    }
   }
 }
 
 LOCATIONS = [
   {
-    "Name": "Received Shock Cannon",
+    "Name": "Received the Shock Cannon",
     "Id": 50001000,
-    "Address": "0x00142CC7",
-    "CheckType": 0,
-    "AddressBit": 0
+   "Checks": [
+      {
+        "Address": "0x00142CC7",
+        "CheckType": 0,
+        "AddressBit": 0
+      },
+      {
+        "Address": "0x001A5E08",
+        "CheckValue": "27",
+        "CheckType": 3
+      }
+    ]
   },
   {
     "Name": "Received Nitro Launcher",
@@ -222,9 +329,18 @@ LOCATIONS = [
   {
     "Name": "Received Infernox Armor",
     "Id": 50001016,
-    "Address": "0x001426A0",
-    "CheckValue": "4",
-    "CheckType": 3
+    "Checks": [
+      {
+        "Address": "0x001D54B4",
+        "CheckType": 0,
+        "AddressBit": 0
+      },
+      {
+        "Address": "0x001D545C",
+        "CheckValue": "3",
+        "CheckType": 0
+      }
+    ]
   },
   {
     "Name": "Received Hacker",
@@ -1081,10 +1197,10 @@ LOCATIONS = [
   {
     "Name": "Shock Blaster: V5",
     "Id": 50001503,
-    "Address": "0x00142E7C",
-    "CompareType": 1,
-    "CheckType": 1,
-    "CheckValue": "32000"
+    "Address": "0x001425E7",
+    "CompareType": 0,
+    "CheckType": 0,
+    "CheckValue": "43"
   },
   {
     "Name": "Nitro Launcher: V2",
@@ -1859,6 +1975,13 @@ LOCATIONS = [
     "Name": "Stay Squaky Clean",
     "Id": 50001605,
     "Address" :"0x001D54B1",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Turn Up The Heat",
+    "Id": 50001606,
+    "Address" :"0x001D54B4",
     "CheckType": 0,
     "AddressBit": 0
   }
