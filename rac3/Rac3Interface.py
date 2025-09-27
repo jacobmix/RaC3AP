@@ -304,7 +304,7 @@ class Rac3Interface(GameInterface):
         current_planet = self._read8(current_planet_addr)
 
         # Fix can't play Qwark VidComics in some case which first event is skipped 
-        addr = ADDRESSES[self.current_game]["EventFlags"]["FirstVisitingMyRoom"]
+        addr = ADDRESSES[self.current_game]["Missions"]["Take Qwark to Cage"]
         addr = self.AddressConvert(addr)
         if current_planet == ADDRESSES[self.current_game]["PlanetValues"]["Starship Phoenix"]:
             self._write8(addr, 1)
