@@ -485,7 +485,7 @@ class Rac3Interface(GameInterface):
 
         # Little buggy, but it works in general.
         # ToDo Fix this function
-        if ap_code == Items.junk_items["Weapon EXP"].ap_code: # Random Weapon Upgrade
+        if ap_code == Items.junk_weapon_exp["Weapon EXP"].ap_code: # Random Weapon Upgrade
             unlocked_weapon_names = [name for name, data in self.UnlockWeapons.items() if data["status"] == 1]
             # Avoid LevelMax weapon
             for weapon_name in unlocked_weapon_names:
