@@ -102,8 +102,13 @@ ADDRESSES = {
     "Bolt": 0x00142660,
     "NanotechExp": 0x00142694,
     "CurrentPlanet": 0x001D545C,
-    "EventFlags": {
-      "FirstVisitingMyRoom": 0x001426E8,
+    "InfernoTimer": 0x001A4E14,
+    "Skill Points": {
+        "Stay Squaky Clean": 0x001D54B1 
+    },
+    "Missions": {
+        "Take Qwark to Cage": 0x001426E8,
+        "Meet Sasha bridge": 0x001426E9 
     }
   }
 }
@@ -238,12 +243,18 @@ LOCATIONS = [
   {
     "Name": "Infobot: Marcadia",
     "Id": 50001019,
-    # "Address": "0x001426E9",
-    # "CheckType": 0,
-    # "AddressBit": 0
-    "Address": "0x001D545C", # When first visiting to Starship Phoenix
-    "CheckType": 3,
-    "CheckValue": "3",
+    "Checks": [
+      {
+        "Address": "0x001426E9",
+        "CheckValue": "1",
+        "CheckType": 0
+      },
+      {
+        "Address": "0x001D545C",
+        "CheckValue": "3",
+        "CheckType": 0
+      }
+    ]
   },
   {
     "Name": "Infobot: Koros",
@@ -1844,4 +1855,11 @@ LOCATIONS = [
     "CheckType": 0,
     "AddressBit": 5
   },
+  {
+    "Name": "Stay Squaky Clean",
+    "Id": 50001605,
+    "Address" :"0x001D54B1",
+    "CheckType": 0,
+    "AddressBit": 0
+  }
 ]

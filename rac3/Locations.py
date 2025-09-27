@@ -29,7 +29,8 @@ rac3_locations = {
     "Florana: T-Bolt: Below Gadgetron Vendor": LocData(50001006, "Florana"),
     "Florana: T-Bolt: Path of Death": LocData(50001007, "Florana"),
     "Florana: Infobot: Starship Phoenix": LocData(50001008, "Florana"),
-
+    "Florana: Stay Squaky Clean": LocData(50001605, "Florana"),
+    
     #----- Starship Phoenix -----#
     "Phoenix: Received SUCC Cannon": LocData(50001009, "Starship Phoenix"),
     "Phoenix: Received Infector": LocData(50001010, "Starship Phoenix"),
