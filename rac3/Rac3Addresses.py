@@ -233,6 +233,7 @@ ADDRESSES = {
         "The Shaming of the Q - set a new record for qwark": 0x001D54CD
     },
     "Missions": {
+        "Defeat Qwark": 0x001426E7,
         "Take Qwark to Cage": 0x001426E8,
         "Meet Sasha bridge": 0x001426E9 
     }
@@ -302,7 +303,7 @@ LOCATIONS = [
   {
     "Name": "Infobot: Starship Phoenix",
     "Id": 50001008,
-    "Address": "0x001426E6",
+    "Address": "0x001426E7",
     "CheckType": 0,
     "AddressBit": 0
   },
