@@ -197,6 +197,8 @@ ADDRESSES = {
     "ArmorVersion": 0x001426A0,
     "boltXPMultiplier": 0x001426BA,
     "Bolt": 0x00142660,
+    "JackpotActive": 0x001A74A8,
+    "JackpotTimer": 0x001A4E10,
     "InfernoTimer": 0x001A4E14,
     "NanotechExp": 0x00142694,
     "CurrentPlanet": 0x001D545C,
