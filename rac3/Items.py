@@ -158,6 +158,7 @@ junk_weapon_exp = {
 
 junk_items = {
     "Bolts": ItemData(50001491, ItemClassification.filler, 0),
+    "Inferno Timer": ItemData(50001493, ItemClassification.filler, 0)
 }
 
 victory_item = {

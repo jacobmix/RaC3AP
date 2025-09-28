@@ -482,6 +482,12 @@ class Rac3Interface(GameInterface):
             addr = self.AddressConvert(addr)
             bolt = self._read32(addr)
             self._write32(addr, bolt + 1000 * random.randint(1, 100))
+            
+        if ap_code == Items.junk_items["Inferno Timer"].ap_code: # Random get Inferno
+            addr = ADDRESSES[self.current_game]["InfernoTimer"]
+            addr = self.AddressConvert(addr)
+            timer = self._read32(addr)
+            self._write32(addr, timer + 1000 + random.randint(1, 100))       
 
         # Little buggy, but it works in general.
         # ToDo Fix this function

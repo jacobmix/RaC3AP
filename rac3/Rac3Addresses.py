@@ -223,8 +223,9 @@ LOCATIONS = [
       },
       {
         "Address": "0x001A5E08",
-        "CheckValue": "27",
-        "CheckType": 3
+        "CompareType": 0,
+        "CheckType": 1,
+        "CheckValue": "39"
       }
     ]
   },
@@ -1199,7 +1200,7 @@ LOCATIONS = [
     "Id": 50001503,
     "Address": "0x001425E7",
     "CompareType": 0,
-    "CheckType": 0,
+    "CheckType": 1,
     "CheckValue": "43"
   },
   {
