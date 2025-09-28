@@ -79,6 +79,9 @@ def set_rules_planets(world):
     #Getting to Koros
     add_rule(world.multiworld.get_entrance("Starship Phoenix -> Koros", world.player),
              lambda state: state.has("Infobot: Koros", world.player))
+    
+    add_rule(world.multiworld.get_location("Koros: You break it, you win it", world.player),
+             lambda state: state.has("Hyperstrike Smash", world.player))
 
     #Getting to Mylon
     add_rule(world.multiworld.get_entrance("Starship Phoenix -> Mylon", world.player),
