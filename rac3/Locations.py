@@ -129,6 +129,10 @@ rac3_locations = {
     "Tyhrranosis: Received Holo-Shield Glove": LocData(50001301, "Tyhrranosis"),
     "Tyhrranosis: T-Bolt: South East Cannon": LocData(50001302, "Tyhrranosis"),
     "Tyhrranosis: T-Bolt: Underground Cave Bolt": LocData(50001303, "Tyhrranosis"),
+    "Tyhrranosis: Kavu Island Mission 1": LocData(50001605, "Tyhrranosis"),
+    "Tyhrranosis: Kavu Island Mission 2": LocData(50001606, "Tyhrranosis"),
+    "Tyhrranosis: Kavu Island Mission 3": LocData(50001607, "Tyhrranosis"),
+    "Tyhrranosis: Kavu Island Mission 4": LocData(50001608, "Tyhrranosis"),
 
     #----- Planet Daxx -----#
     "Daxx: T-Bolt: Right of the Taxi": LocData(50001320, "Daxx Region 2"),

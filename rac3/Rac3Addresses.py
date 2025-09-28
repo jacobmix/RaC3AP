@@ -1973,15 +1973,43 @@ LOCATIONS = [
     "AddressBit": 5
   },
   {
-    "Name": "Stay Squaky Clean",
+    "Name": "Kavu Island Mission 1",
     "Id": 50001605,
+    "Address": "0x0014274C",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Kavu Island Mission 2",
+    "Id": 50001606,
+    "Address": "0x0014274D",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Kavu Island Mission 3",
+    "Id": 50001607,
+    "Address": "0x0014274F",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Kavu Island Mission 4",
+    "Id": 50001608,
+    "Address": "0x00142750",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Stay Squaky Clean",
+    "Id": 50001609,
     "Address" :"0x001D54B1",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
     "Name": "Turn Up The Heat",
-    "Id": 50001606,
+    "Id": 50001610,
     "Address" :"0x001D54B4",
     "CheckType": 0,
     "AddressBit": 0
