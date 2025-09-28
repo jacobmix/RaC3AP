@@ -145,10 +145,10 @@ rac3_locations = {
     "Tyhrranosis: T-Bolt: South East Cannon": LocData(50001302, "Tyhrranosis"),
     "Tyhrranosis: T-Bolt: Underground Cave Bolt": LocData(50001303, "Tyhrranosis"),
     "Tyhrranosis: Destroy the Momma Tyhrranoid": LocData(50001605, "Tyhrranosis"),
-    "Tyhrranosis: Kavu Island Mission 1": LocData(50001606, "Tyhrranosis"),
-    "Tyhrranosis: Kavu Island Mission 2": LocData(50001607, "Tyhrranosis"),
-    "Tyhrranosis: Kavu Island Mission 3": LocData(50001608, "Tyhrranosis"),
-    "Tyhrranosis: Kavu Island Mission 4": LocData(50001609, "Tyhrranosis"),
+    "Tyhrranosis: Kavu Island Mission 1": LocData(50001606, "Tyhrranosis Region 2"),
+    "Tyhrranosis: Kavu Island Mission 2": LocData(50001607, "Tyhrranosis Region 2"),
+    "Tyhrranosis: Kavu Island Mission 3": LocData(50001608, "Tyhrranosis Region 2"),
+    "Tyhrranosis: Kavu Island Mission 4": LocData(50001609, "Tyhrranosis Region 2"),
     "Tyhrranosis: Be a Sharpshooter": LocData(50001622, "Tyhrranosis"),
 
     #----- Planet Daxx -----#

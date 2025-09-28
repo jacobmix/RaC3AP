@@ -61,6 +61,9 @@ def create_regions(world: "RaC3World"):
     annihilation_nation_second_half = create_region(world, "Annihilation Nation 2")
     annihilation_nation.connect(annihilation_nation_second_half, rule=lambda state: state.can_reach("Daxx Region 2", player=world.player)),
 
+    tyhrranosis_second_half = create_region(world, "Tyhrranosis Region 2")
+    tyhrranosis.connect(tyhrranosis_second_half, rule=lambda state: state.can_reach("Tyhrranosis", player=world.player)),
+
     #You can get the charge boots without hacker or hypershot
     daxx_second_half = create_region(world, "Daxx Region 2")
     daxx_first_half.connect(daxx_second_half, rule=lambda state: state.has("Hypershot", world.player) and state.has("Hacker", world.player)),
