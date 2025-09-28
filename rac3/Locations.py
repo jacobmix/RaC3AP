@@ -29,7 +29,7 @@ rac3_locations = {
     "Florana: T-Bolt: Below Gadgetron Vendor": LocData(50001006, "Florana"),
     "Florana: T-Bolt: Path of Death": LocData(50001007, "Florana"),
     "Florana: Infobot: Starship Phoenix": LocData(50001008, "Florana"),
-    "Florana: Stay Squaky Clean": LocData(50001609, "Florana"),
+    "Florana: Stay Squaky Clean": LocData(50001610, "Florana"),
 
     #----- Starship Phoenix -----#
     "Phoenix: Received SUCC Cannon": LocData(50001009, "Starship Phoenix"),
@@ -58,7 +58,7 @@ rac3_locations = {
     "Phoenix: Qwark Vidcomic 3 Clear": LocData(50001602, "Starship Phoenix"),
     "Phoenix: Qwark Vidcomic 4 Clear": LocData(50001603, "Starship Phoenix"),
     "Phoenix: Qwark Vidcomic 5 Clear": LocData(50001604, "Starship Phoenix"),
-    "Phoenix: Turn Up The Heat!": LocData(50001610, "Starship Phoenix"),
+    "Phoenix: Turn Up The Heat!": LocData(50001611, "Starship Phoenix"),
 
     #----- Planet Marcadia -----#
     "Marcadia: Received Spitting Hydra": LocData(50001030, "Marcadia Region 1"),
@@ -129,10 +129,11 @@ rac3_locations = {
     "Tyhrranosis: Received Holo-Shield Glove": LocData(50001301, "Tyhrranosis"),
     "Tyhrranosis: T-Bolt: South East Cannon": LocData(50001302, "Tyhrranosis"),
     "Tyhrranosis: T-Bolt: Underground Cave Bolt": LocData(50001303, "Tyhrranosis"),
-    "Tyhrranosis: Kavu Island Mission 1": LocData(50001605, "Tyhrranosis"),
-    "Tyhrranosis: Kavu Island Mission 2": LocData(50001606, "Tyhrranosis"),
-    "Tyhrranosis: Kavu Island Mission 3": LocData(50001607, "Tyhrranosis"),
-    "Tyhrranosis: Kavu Island Mission 4": LocData(50001608, "Tyhrranosis"),
+    "Tyhrranosis: Destroy the Momma Tyhrranoid": LocData(50001605, "Tyhrranosis"),
+    "Tyhrranosis: Kavu Island Mission 1": LocData(50001606, "Tyhrranosis"),
+    "Tyhrranosis: Kavu Island Mission 2": LocData(50001607, "Tyhrranosis"),
+    "Tyhrranosis: Kavu Island Mission 3": LocData(50001608, "Tyhrranosis"),
+    "Tyhrranosis: Kavu Island Mission 4": LocData(50001609, "Tyhrranosis"),
 
     #----- Planet Daxx -----#
     "Daxx: T-Bolt: Right of the Taxi": LocData(50001320, "Daxx Region 2"),
