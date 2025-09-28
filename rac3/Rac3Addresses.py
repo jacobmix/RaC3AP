@@ -235,6 +235,9 @@ ADDRESSES = {
         "The Shaming of the Q - set a new record for qwark": 0x001D54CD
     },
     "Missions": {
+        "Get the Shock Blaster": 0x001426E0,
+        "Get the Nitro Launcher": 0x001426E1,
+        "Save Veldin": 0x001426E3,
         "Defeat Qwark": 0x001426E7,
         "Take Qwark to Cage": 0x001426E8,
         "Meet Sasha bridge": 0x001426E9 
