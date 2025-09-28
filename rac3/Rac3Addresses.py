@@ -201,8 +201,36 @@ ADDRESSES = {
     "NanotechExp": 0x00142694,
     "CurrentPlanet": 0x001D545C,
     "Skill Points": {
+        "Go for hang time": 0x001D54B0,
         "Stay Squaky Clean": 0x001D54B1,
-        "Turn Up The Heat": 0x001D54B4
+        "Strive for arcade perfection": 0x001D54B2,
+        "Beat Helga's best time": 0x001D54B3,
+        "Turn Up The Heat": 0x001D54B4,
+        "Monkeying around": 0x001D54B5,
+        "Reflect on how to score": 0x001D54B6,
+        "Bugs to Birdie": 0x001D54B7,
+        "Bash the bug": 0x001D54B8,
+        "Be an eight time champ": 0x001D54B9,
+        "Flee Flawlessly": 0x001D54BA,
+        "Lights, camera action!": 0x001D54BB,
+        "Search for sunken treasure": 0x001D54BC,
+        "Be a Sharpshooter": 0x001D54BD,
+        "Get to the belt": 0x001D54BE,
+        "Bash the party": 0x001D54BF,
+        "Feeling Lucky": 0x001D54C0,
+        "You break it, you win it": 0x001D54C1,
+        "2002 was a good year in the city": 0x001D54C2,
+        "Suck it up!": 0x001D54C3,
+        "Aim High": 0x001D54C4,
+        "Zap back at ya'": 0x001D54C5,
+        "Break the Dan": 0x001D54C6,
+        "Spread your germs": 0x001D54C7,
+        "Hit the motherload": 0x001D54C8,
+        "Pirate booty - set a new record for qwark": 0x001D54C9,
+        "Deja Q All over Again - set a new record for qwark": 0x001D54CA,
+        "Arriba Amoeba! - set a new record for qwark": 0x001D54CB,
+        "Shadow of the robot - set a new record for qwark": 0x001D54CC,
+        "The Shaming of the Q - set a new record for qwark": 0x001D54CD
     },
     "Missions": {
         "Take Qwark to Cage": 0x001426E8,
@@ -2020,5 +2048,202 @@ LOCATIONS = [
     "Address" :"0x001D54B4",
     "CheckType": 0,
     "AddressBit": 0
-  }
+  },
+  {
+    "Name": "Strive for arcade perfection",
+    "Id": 50001612,
+    "Address": "0x001D54B2",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Beat Helga's best time",
+    "Id": 50001613,
+    "Address": "0x001D54B3",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Monkeying around",
+    "Id": 50001614,
+    "Address": "0x001D54B5",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Reflect on how to score",
+    "Id": 50001615,
+    "Address": "0x001D54B6",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Bugs to Birdie",
+    "Id": 50001616,
+    "Address": "0x001D54B7",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Bash the bug",
+    "Id": 50001617,
+    "Address": "0x001D54B8",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Be an eight time champ",
+    "Id": 50001618,
+    "Address": "0x001D54B9",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Flee Flawlessly",
+    "Id": 50001619,
+    "Address": "0x001D54BA",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Lights, camera action!",
+    "Id": 50001620,
+    "Address": "0x001D54BB",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Search for sunken treasure",
+    "Id": 50001621,
+    "Address": "0x001D54BC",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Be a Sharpshooter",
+    "Id": 50001622,
+    "Address": "0x001D54BD",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Get to the belt",
+    "Id": 50001623,
+    "Address": "0x001D54BE",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Bash the party",
+    "Id": 50001624,
+    "Address": "0x001D54BF",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Feeling Lucky",
+    "Id": 50001625,
+    "Address": "0x001D54C0",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "You break it, you win it",
+    "Id": 50001626,
+    "Address": "0x001D54C1",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "2002 was a good year in the city",
+    "Id": 50001627,
+    "Address": "0x001D54C2",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Suck it up!",
+    "Id": 50001628,
+    "Address": "0x001D54C3",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Aim High",
+    "Id": 50001629,
+    "Address": "0x001D54C4",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Go for hang time",
+    "Id": 50001630,
+    "Address": "0x001D54B0",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Zap back at ya'",
+    "Id": 50001631,
+    "Address": "0x001D54C5",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Break the Dan",
+    "Id": 50001632,
+    "Address": "0x001D54C6",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Spread your germs",
+    "Id": 50001633,
+    "Address": "0x001D54C7",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Hit the motherload",
+    "Id": 50001634,
+    "Address": "0x001D54C8",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Pirate booty - set a new record for qwark",
+    "Id": 50001635,
+    "Address": "0x001D54C9",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Deja Q All over Again - set a new record for qwark",
+    "Id": 50001636,
+    "Address": "0x001D54CA",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Arriba Amoeba! - set a new record for qwark",
+    "Id": 50001637,
+    "Address": "0x001D54CB",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Shadow of the robot - set a new record for qwark",
+    "Id": 50001638,
+    "Address": "0x001D54CC",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "The Shaming of the Q - set a new record for qwark",
+    "Id": 50001639,
+    "Address": "0x001D54CD",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+
 ]

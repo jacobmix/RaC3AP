@@ -59,6 +59,14 @@ rac3_locations = {
     "Phoenix: Qwark Vidcomic 4 Clear": LocData(50001603, "Starship Phoenix"),
     "Phoenix: Qwark Vidcomic 5 Clear": LocData(50001604, "Starship Phoenix"),
     "Phoenix: Turn Up The Heat!": LocData(50001611, "Starship Phoenix"),
+    "Phoenix: Strive for Arcade Perfection": LocData(50001612, "Starship Phoenix"),
+    "Phoenix: Beat Helga's Best Time": LocData(50001613, "Starship Phoenix"),
+    "Phoenix: Monkeying Around": LocData(50001614, "Starship Phoenix"),
+    "Phoenix: Pirate booty - set a new record for qwark": LocData(50001615, "Starship Phoenix"),
+    "Phoenix: Deja Q All over Again - set a new record for qwark": LocData(50001616, "Starship Phoenix"),
+    "Phoenix: Arriba Amoeba! - set a new record for qwark": LocData(50001617, "Starship Phoenix"),
+    "Phoenix: Shadow of the robot - set a new record for qwark": LocData(50001618, "Starship Phoenix"),
+    "Phoenix: The Shaming of the Q - set a new record for qwark": LocData(50001619, "Starship Phoenix"),
 
     #----- Planet Marcadia -----#
     "Marcadia: Received Spitting Hydra": LocData(50001030, "Marcadia Region 1"),
@@ -72,6 +80,7 @@ rac3_locations = {
     "Marcadia: Marcadia Mission 03": LocData(50001038, "Marcadia Region 1"),
     "Marcadia: Marcadia Mission 04": LocData(50001039, "Marcadia Region 1"),
     "Marcadia: Marcadia Mission 05": LocData(50001040, "Marcadia Region 1"),
+    "Marcadia: Reflect on how to score": LocData(50001620, "Marcadia Region 2"),
 
     #----- Annihilation Nation -----#
     "Annihilation: Received Agents of Doom": LocData(50001140, "Annihilation Nation"),
@@ -111,6 +120,10 @@ rac3_locations = {
     "Annihilation: The Annihilator (Gauntlet)": LocData(50001174, "Annihilation Nation 2"),
     "Annihilation: Qwark Vidcomic 2": LocData(50001175, "Annihilation Nation"),
     "Annihilation: Qwark Vidcomic 3": LocData(50001176, "Annihilation Nation 2"),
+    "Annihilation: Bash the bug": LocData(50001617, "Annihilation Nation 2"),
+    "Annihilation: Be an eight time champ": LocData(50001618, "Annihilation Nation 2"),
+    "Annihilation: Flee Flawlessly": LocData(50001619, "Annihilation Nation"),
+    "Annihilation: Lights, camera action!": LocData(50001620, "Annihilation Nation"),
 
     #----- Planet Aquatos -----#
     "Aquatos: Received Flux Rifle": LocData(50001090, "Aquatos"),
@@ -123,6 +136,8 @@ rac3_locations = {
     "Aquatos: 5 Sewer Crystals Traded": LocData(50001097, "Aquatos"),
     "Aquatos: 10 Sewer Crystals Traded": LocData(50001098, "Aquatos"),
     "Aquatos: 20 Sewer Crystals Traded": LocData(50001099, "Aquatos"),
+    "Aquatos: Search for sunken treasure": LocData(50001621, "Aquatos"),
+    "Aquatos: Hit the motherload": LocData(50001634, "Aquatos"),
 
     #----- Planet Tyhrranosis -----#
     "Tyhrranosis: Received Annihilator": LocData(50001300, "Tyhrranosis"),
@@ -134,18 +149,21 @@ rac3_locations = {
     "Tyhrranosis: Kavu Island Mission 2": LocData(50001607, "Tyhrranosis"),
     "Tyhrranosis: Kavu Island Mission 3": LocData(50001608, "Tyhrranosis"),
     "Tyhrranosis: Kavu Island Mission 4": LocData(50001609, "Tyhrranosis"),
+    "Tyhrranosis: Be a Sharpshooter": LocData(50001622, "Tyhrranosis"),
 
     #----- Planet Daxx -----#
     "Daxx: T-Bolt: Right of the Taxi": LocData(50001320, "Daxx Region 2"),
     "Daxx: T-Bolt: Time Sensitive Door": LocData(50001321, "Daxx Region 2"),
     "Daxx: Received Charge Boots": LocData(50001322, "Daxx Region 1"),
     "Daxx: Post-Daxx": LocData(50001323, "Daxx Region 2"),
+    "Daxx: Bugs to Birdie" : LocData(50001616, "Aridia"), # In the vanilla game you get the quack o ray on Aridia, but the skill point is done on Daxx
 
     #----- Obani Gemini -----#
     "Obani_Gemini: Received Disk Blade Gun": LocData(50001340, "Obani Gemini"),
     "Obani_Gemini: T-Bolt: Follow the Lava": LocData(50001341, "Obani Gemini"),
     "Obani_Gemini: T-Bolt: Between the Twin Towers": LocData(50001342, "Obani Gemini"),
     "Obani_Gemini: Infobot: Rilgar": LocData(50001343, "Obani Gemini"),
+    "Obani_Gemini: Get to the belt": LocData(50001623, "Obani Gemini"),
 
     #----- Planet Rilgar -----#
     "Rilgar: Received Grav Boots": LocData(50001360, "Rilgar"),
@@ -153,6 +171,7 @@ rac3_locations = {
     "Rilgar: Rilgar Mission 01": LocData(50001365, "Rilgar"),
     "Rilgar: Rilgar Mission 02": LocData(50001366, "Rilgar"),
     "Rilgar: Rilgar Mission 03": LocData(50001367, "Rilgar"),
+    "Rilgar: Bash the party": LocData(50001624, "Rilgar"),
 
     # ----- Holostar Studios -----#
     "Holostar: Received Rift Inducer": LocData(50001390, "Holostar Studios"),
@@ -160,6 +179,7 @@ rac3_locations = {
     "Holostar: T-Bolt: Lot 42's Grav Ramp": LocData(50001392, "Holostar Studios"),
     "Holostar: T-Bolt: Kamikaze Noids": LocData(50001393, "Holostar Studios"),
     "Holostar: Infobot: Obani Draco": LocData(50001394, "Holostar Studios"),
+    "Holostar: Feeling Lucky": LocData(50001625, "Holostar Studios"),
 
     #----- Obani Draco (lol) -----#
     "Obani_Draco: Infobot: Zeldrin Starport": LocData(50001370, "Obani Draco"),
@@ -181,11 +201,14 @@ rac3_locations = {
     "Metropolis: Metro Storm Mission 03": LocData(50001437, "Metropolis Region 2"),
     "Metropolis: Metro Storm Mission 04": LocData(50001438, "Metropolis Region 2"),
     "Metropolis: Metro Storm Mission 05": LocData(50001439, "Metropolis Region 2"),
+    "Metropolis: 2002 was a good year in the city": LocData(50001627, "Metropolis Region 1"),
 
     #----- Planet Zeldrin -----#
     "Zeldrin: Received Nano-Pak": LocData(50001450, "Zeldrin"),
     "Zeldrin: T-Bolt: Turn Around": LocData(50001451, "Zeldrin"),
     "Zeldrin: Infobot: Aridia": LocData(50001452, "Zeldrin"),
+    "Zeldrin: Suck it up!": LocData(50001628, "Zeldrin"),
+    "Zeldrin: Aim High": LocData(50001629, "Zeldrin"),
 
     #----- Planet Aridia -----#
     "Aridia: Received Warp Pad": LocData(50001470, "Aridia"),
@@ -197,20 +220,25 @@ rac3_locations = {
     "Alidia: Alidia Mission 03": LocData(50001477, "Alidia"),
     "Alidia: Alidia Mission 04": LocData(50001478, "Alidia"),
     "Alidia: Alidia Mission 05": LocData(50001479, "Alidia"),
+    "Aridia: Go for hang time": LocData(50001630, "Aridia"),
+    "Aridia: Zap back at ya'": LocData(50001631, "Aridia"),
 
     #----- Qwark's Hideout -----#
     "Qwark's_Hideout: Received Gadgetron PDU": LocData(50001490, "Qwarks Hideout"),
     "Qwark's_Hideout: T-Bolt: Glide from the Ramp": LocData(50001491, "Qwarks Hideout"),
+    "Qwark's_Hideout: Break the Dan": LocData(50001632, "Qwarks Hideout"),
 
     #----- Planet Koros -----#
     "Koros: T-Bolt: Behind the Metal Fence": LocData(50001493, "Koros"),
     "Koros: T-Bolt: Pair of Towers": LocData(50001494, "Koros"),
     "Koros: Infobot: Mylon": LocData(50001495, "Koros"),
+    "Koros: You break it, you win it": LocData(50001626, "Koros"),
 
     #----- Planet Mylon -----#
     "Mylon: T-Bolt: Behind the Forcefield": LocData(50001496, "Mylon"),
     "Mylon: Dr. Nefarious Defeated!": LocData(50001497, "Mylon"),
-    "Mylon: Biobliterator Defeated!": LocData(50001498, "Mylon")
+    "Mylon: Biobliterator Defeated!": LocData(50001498, "Mylon"),
+    "Mylon: Spread your germs": LocData(50001633, "Mylon")
 }
 
 weapon_upgrades = {
