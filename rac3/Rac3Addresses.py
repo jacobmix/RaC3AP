@@ -2069,9 +2069,18 @@ LOCATIONS = [
   {
     "Name": "Monkeying around",
     "Id": 50001614,
-    "Address": "0x001D54B5",
-    "CheckType": 0,
-    "AddressBit": 0
+    "Checks": [
+      {
+        "Address": "0x001D54B5",
+        "CheckType": 0,
+        "AddressBit": 0
+      },
+      {
+        "Address": "0x001426EB",
+        "CheckType": 0,
+        "CheckValue": "1"
+      }
+    ]
   },
   {
     "Name": "Reflect on how to score",
