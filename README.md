@@ -15,7 +15,7 @@ Weapons, Planets, Gadgets, Titanium bolts, Weapon upgrades are all randomized
 
 ## What items and locations get shuffled?
 
-20 different weapons, 4 progressive upgrades per weapon are available, 10 different gadgets, 17 post-planet completions that unlock other planets, 4 progressive armors, 35 titanium bolts, and Bolts/Weapon EXP get shuffled in as filler
+20 different weapons, 4 progressive upgrades per weapon are available, 10 different gadgets, 17 post-planet completions that unlock other planets, 4 progressive armors, 35 titanium bolts, and Bolts/Weapon EXP along with Inferno Mode and Jackpot get shuffled in as filler
 
 ## Which items can be in another player's world?
 
