@@ -2257,5 +2257,68 @@ LOCATIONS = [
     "CheckType": 0,
     "AddressBit": 0
   },
+  {
+    "Name": "VR Gadget Training",
+    "Id": 50001640,
+    "Address": "0x00142765",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Warm Up",
+    "Id": 50001641,
+    "Address": "0x00142766",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Don't Look Down",
+    "Id": 50001642,
+    "Address": "0x00142767",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Speed Round",
+    "Id": 50001643,
+    "Address": "0x00142768",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Hot Stepper",
+    "Id": 50001644,
+    "Address": "0x00142769",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "90 Second Slayer",
+    "Id": 50001645,
+    "Address": "0x0014276A",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "The Shocker",
+    "Id": 50001646,
+    "Address": "0x0014276B",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Wrench Beatdown",
+    "Id": 50001647,
+    "Address": "0x0014276C",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Nerves of Titanium",
+    "Id": 50001648,
+    "Address": "0x0014276D",
+    "CheckType": 0,
+    "AddressBit": 0
+  }
 
 ]
