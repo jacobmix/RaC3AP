@@ -489,7 +489,7 @@ class Rac3Interface(GameInterface):
             timer = self._read32(addr)
             self._write32(addr, timer + 1000 + random.randint(1, 100))       
             
-        if ap_code == Items.junk_items["Jackpot Timer"].ap_code: # Random get Jackpot
+        if ap_code == Items.junk_items["Jackpot Mode"].ap_code: # Random get Jackpot
             addr = ADDRESSES[self.current_game]["JackpotTimer"]
             addr = self.AddressConvert(addr)
             timer = self._read32(addr)
