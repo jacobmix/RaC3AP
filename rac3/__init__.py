@@ -1,23 +1,29 @@
 from typing import Dict
 from BaseClasses import MultiWorld, Item, ItemClassification, Tutorial
 from worlds.AutoWorld import World, CollectionState, WebWorld
-from .Items import item_table, create_itempool, create_item, weapon_items, progressive_weapons, gadget_items, post_planets, progressive_armor, t_bolts, filter_item_names
+from .Items import (item_table, create_itempool, create_item, weapon_items, progressive_weapons, gadget_items,
+                    post_planets, progressive_armor, t_bolts, filter_item_names)
 from .Locations import get_location_names, get_total_locations, rac3_locations, get_level_locations, get_regions
-from .Rac3Options import RaC3Options, GAME_TITLE_FULL
+from .Rac3Options import EnableWeaponLevelAsItem, RaC3Options, GAME_TITLE_FULL
 from .Regions import create_regions
 from .Types import WeaponType, weapon_type_to_name, RaC3Item, multiplier_to_name, Multiplier
 from .Rules import set_rules
 
 from typing import Dict, Optional, Mapping, Any
 from worlds.LauncherComponents import Component, SuffixIdentifier, Type, components, launch_subprocess
+
+
 def run_client(_url: Optional[str] = None):
     from .Rac3Client import launch_client
     launch_subprocess(launch_client, name="Rac3Client")
+
 
 components.append(
     Component("Ratchet & Clank 3 Client", func=run_client, component_type=Type.CLIENT,
               file_identifier=SuffixIdentifier(".aprac3"))
 )
+
+
 class RaC3Web(WebWorld):
     theme = "ocean"
     tutorials = [Tutorial(
@@ -29,6 +35,7 @@ class RaC3Web(WebWorld):
         "setup/en",
         ["Bread"]
     )]
+
 
 class RaC3World(World):
     """
@@ -55,7 +62,9 @@ class RaC3World(World):
         super().__init__(multiworld, player)
 
     def generate_early(self):
-        starting_weapon = (weapon_type_to_name[WeaponType(self.options.StartingWeapon)])
+        starting_weapon = (weapon_type_to_name[WeaponType(self.options.StartingWeapon.value)])
+        if self.options.EnableWeaponLevelAsItem.value == EnableWeaponLevelAsItem.option_enable:
+            starting_weapon = f"Progressive {starting_weapon}"
         self.multiworld.push_precollected(self.create_item(starting_weapon))
 
     def create_regions(self):
@@ -97,3 +106,8 @@ class RaC3World(World):
         # Trigger a regen in UT
         return slot_data
 
+    # def post_fill(self) -> None:
+    #    from Utils import visualize_regions
+    #    visualize_regions(self.multiworld.get_region("Menu", self.player), f"{self.player_name}_world.puml",
+    #                      regions_to_highlight=self.multiworld.get_all_state(False).reachable_regions[
+    #                          self.player])

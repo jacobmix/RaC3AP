@@ -12,7 +12,7 @@ def create_regions(world: "RaC3World"):
     menu = create_region(world, "Menu")
     veldin = create_region_and_connect(world, "Veldin", "Menu -> Veldin", menu)
     florana = create_region_and_connect(world, "Florana", "Veldin -> Florana", veldin)
-    starship_phoenix = create_region_and_connect(world, "Starship Phoenix", "Florana -> Starship Phoenix", veldin)
+    starship_phoenix = create_region_and_connect(world, "Starship Phoenix", "Florana -> Starship Phoenix", florana)
     starship_phoenix.connect(florana, "Starship Phoenix -> Florana")
 
     #----- Regions within the game -----#
