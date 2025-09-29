@@ -125,7 +125,7 @@ gadget_items = {
     "Warp Pad": ItemData(50001448, ItemClassification.progression, 1),
     "Gadgetron PDA": ItemData(50001449, ItemClassification.useful, 1),
     "Charge-Boots": ItemData(50001450, ItemClassification.progression, 1),
-    "Hyperstrike Smash": ItemData(50001451, ItemClassification.useful, 1)
+    "Hyperstrike Smash": ItemData(50001451, ItemClassification.progression, 1)
 }
 
 post_planets = {

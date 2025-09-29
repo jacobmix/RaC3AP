@@ -79,9 +79,6 @@ def set_rules_planets(world):
     # Getting to Koros
     add_rule(world.multiworld.get_entrance("Starship Phoenix -> Koros", world.player),
              lambda state: state.has("Infobot: Koros", world.player))
-    
-    add_rule(world.multiworld.get_location("Koros: You break it, you win it", world.player),
-             lambda state: state.has("Hyperstrike Smash", world.player))
 
     # Getting to Mylon
     add_rule(world.multiworld.get_entrance("Starship Phoenix -> Mylon", world.player),
@@ -150,17 +147,17 @@ def set_rules_hard_location(world):
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 1 Clear"),
              lambda state: state.has("Qwark Vidcomic 1", world.player))
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 2 Clear"),
-            lambda state: state.has("Phoenix: Qwark Vidcomic 1 Clear", player=world.player)
-            and state.has("Qwark Vidcomic 2", world.player))
+             lambda state: state.can_reach_location("Phoenix: Qwark Vidcomic 1 Clear", player=world.player)
+                           and state.has("Qwark Vidcomic 2", world.player))
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 3 Clear"),
-            lambda state: state.has("Phoenix: Qwark Vidcomic 2 Clear", player=world.player)
-            and state.has("Qwark Vidcomic 3", world.player))
+             lambda state: state.can_reach_location("Phoenix: Qwark Vidcomic 2 Clear", player=world.player)
+                           and state.has("Qwark Vidcomic 3", world.player))
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 4 Clear"),
-            lambda state: state.has("Phoenix: Qwark Vidcomic 3 Clear", player=world.player)
-            and state.has("Qwark Vidcomic 4", world.player))
+             lambda state: state.can_reach_location("Phoenix: Qwark Vidcomic 3 Clear", player=world.player)
+                           and state.has("Qwark Vidcomic 4", world.player))
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 5 Clear"),
-            lambda state: state.has("Phoenix: Qwark Vidcomic 4 Clear", player=world.player)
-            and state.has("Qwark Vidcomic 5", world.player))
+             lambda state: state.can_reach_location("Phoenix: Qwark Vidcomic 4 Clear", player=world.player)
+                           and state.has("Qwark Vidcomic 5", world.player))
 
     # ----- Planet Marcadia -----#
     # "Marcadia: Received Spitting Hydra": LocData(50001030, "Marcadia Region 1"),
@@ -273,9 +270,11 @@ def set_rules_hard_location(world):
     add_rule(world.get_location("Qwark's_Hideout: Received Gadgetron PDA"),
              lambda state: state.has("Gravity-Boots", world.player))
     add_rule(world.get_location("Qwark's_Hideout: T-Bolt: Glide from the Ramp"),
-            lambda state: state.has("Gravity-Boots", world.player))
-    
-    #----- Planet Koros -----# # Nothing
+             lambda state: state.has("Gravity-Boots", world.player))
+
+    # ----- Planet Koros -----#
+    add_rule(world.multiworld.get_location("Koros: You break it, you win it", world.player),
+             lambda state: state.has("Hyperstrike Smash", world.player))
 
     # ----- Planet Mylon -----# # Nothing
 
