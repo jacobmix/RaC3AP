@@ -1,8 +1,9 @@
 from BaseClasses import Item, ItemClassification
-from .Types import ItemData, RaC3Item, weapon_type_to_shortened_name, WeaponType, EventData
+from .Types import ItemData, RaC3Item, weapon_type_to_name, WeaponType, EventData
 from .Locations import get_total_locations
 from typing import List, Dict, TYPE_CHECKING
 from .Rac3Options import EnableWeaponLevelAsItem
+
 if TYPE_CHECKING:
     from . import RaC3World
 
@@ -10,7 +11,8 @@ if TYPE_CHECKING:
 def create_itempool(world: "RaC3World") -> List[Item]:
     itempool: List[Item] = []
     options = world.options
-
+    starting_weapon = weapon_type_to_name[WeaponType(options.StartingWeapon)]
+    progressive_starting_weapon = f"Progressive {starting_weapon}"
     junk_dict = junk_items
     if options.EnableWeaponLevelAsItem.value == EnableWeaponLevelAsItem.option_disable:
         junk_dict.update(junk_weapon_exp)
@@ -22,19 +24,25 @@ def create_itempool(world: "RaC3World") -> List[Item]:
         if options.EnableWeaponLevelAsItem.value == EnableWeaponLevelAsItem.option_disable:
             if name in progressive_weapons.keys():
                 continue
-        else: # options.EnableWeaponLevelAsItem.value == EnableWeaponLevelAsItem.option_enable:
+            elif name == starting_weapon:  # Don't add starting weapon
+                continue
+        else:  # options.EnableWeaponLevelAsItem.value == EnableWeaponLevelAsItem.option_enable:
             if name in weapon_items.keys():
                 continue
+            elif name == progressive_starting_weapon:
+                item_amount -= 1  # remove one from the pool as the player starts with it
+
         # ExtraArmorUpgrade option
         if name == "Progressive Armor":
             item_amount += options.ExtraArmorUpgrade.value
-        
+
         itempool += create_multiple_items(world, name, item_amount, item_type)
 
     victory = create_item(world, "Biobliterator Defeated!")
     world.multiworld.get_location("Mylon: Biobliterator Defeated!", world.player).place_locked_item(victory)
     itempool += create_junk_items(world, get_total_locations(world) - len(itempool) - 1, junk_dict)
     return itempool
+
 
 def create_multiple_items(world: "RaC3World", name: str, count: int = 1,
                           item_type: ItemClassification = ItemClassification.progression) -> List[Item]:
@@ -46,9 +54,11 @@ def create_multiple_items(world: "RaC3World", name: str, count: int = 1,
 
     return itemlist
 
+
 def create_item(world: "RaC3World", name: str) -> Item:
     data = item_table[name]
     return RaC3Item(name, data.classification, data.ap_code, world.player)
+
 
 def create_junk_items(world: "RaC3World", count: int, junk_dict: Dict[str, object]) -> List[Item]:
     junk_pool: List[Item] = []
@@ -104,7 +114,7 @@ progressive_weapons = {
     "Progressive Plasma Coil": ItemData(50001439, ItemClassification.useful, 5)
 }
 gadget_items = {
-    "Hacker" :ItemData(50001440, ItemClassification.progression, 1),
+    "Hacker": ItemData(50001440, ItemClassification.progression, 1),
     "Hypershot": ItemData(50001441, ItemClassification.progression, 1),
     "Refractor": ItemData(50001442, ItemClassification.progression, 1),
     "Tyhrra-Guise": ItemData(50001443, ItemClassification.progression, 1),
@@ -119,22 +129,27 @@ gadget_items = {
 }
 
 post_planets = {
-    "Infobot: Marcadia": ItemData(50001452, ItemClassification.progression, 1), # Post Starship Phoenix Visit 1
-    "Infobot: Annihilation Nation": ItemData(50001453, ItemClassification.progression, 1), # Post Starship Phoenix Visit 2 + Qwark Vidcomic 1
-    "Infobot: Aquatos": ItemData(50001454, ItemClassification.progression, 1), # Post Starship Phoenix Visit 3
-    "Infobot: Tyhrranosis": ItemData(50001455, ItemClassification.progression, 1), # Post Starship Phoenix Visit 4
-    "Infobot: Daxx": ItemData(50001456, ItemClassification.progression, 1), # Post Starship Phoenix Visit 5
-    "Infobot: Obani Gemini": ItemData(50001457, ItemClassification.progression, 1), # Post Starship Phoenix Visit 6 + Qwark Vidcomic 3
-    "Infobot: Rilgar": ItemData(50001458, ItemClassification.progression, 1), # Post Obani Gemini
-    "Infobot: Holostar Studios": ItemData(50001459, ItemClassification.progression, 1), # Post Rilgar + Annihilation Nation Challenges
-    "Infobot: Obani Draco": ItemData(50001460, ItemClassification.progression, 1), # Post Holostar Studios
-    "Infobot: Zeldrin Starport": ItemData(50001461, ItemClassification.progression, 1), # Post Obani Draco
-    "Infobot: Metropolis": ItemData(50001462, ItemClassification.progression, 1), # Post Zeldrin Starport + Qwark Vidcomic 4
-    "Infobot: Zeldrin": ItemData(50001463, ItemClassification.progression, 1), # Post Starship Phoenix Visit 7
-    "Infobot: Aridia": ItemData(50001464, ItemClassification.progression, 1), # Post Zeldrin
-    "Infobot: Qwarks Hideout": ItemData(50001465, ItemClassification.progression, 1), # Post Starship Phoenix Visit 8 + Qwark Vidcomic 5
-    "Infobot: Koros": ItemData(50001466, ItemClassification.progression, 1), # Post Starship Phoenix Visit 9
-    "Infobot: Mylon": ItemData(50001467, ItemClassification.progression, 1), # Post-Koros
+    "Infobot: Marcadia": ItemData(50001452, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 1
+    "Infobot: Annihilation Nation": ItemData(50001453, ItemClassification.progression, 1),
+    # Post Starship Phoenix Visit 2 + Qwark Vidcomic 1
+    "Infobot: Aquatos": ItemData(50001454, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 3
+    "Infobot: Tyhrranosis": ItemData(50001455, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 4
+    "Infobot: Daxx": ItemData(50001456, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 5
+    "Infobot: Obani Gemini": ItemData(50001457, ItemClassification.progression, 1),
+    # Post Starship Phoenix Visit 6 + Qwark Vidcomic 3
+    "Infobot: Rilgar": ItemData(50001458, ItemClassification.progression, 1),  # Post Obani Gemini
+    "Infobot: Holostar Studios": ItemData(50001459, ItemClassification.progression, 1),
+    # Post Rilgar + Annihilation Nation Challenges
+    "Infobot: Obani Draco": ItemData(50001460, ItemClassification.progression, 1),  # Post Holostar Studios
+    "Infobot: Zeldrin Starport": ItemData(50001461, ItemClassification.progression, 1),  # Post Obani Draco
+    "Infobot: Metropolis": ItemData(50001462, ItemClassification.progression, 1),
+    # Post Zeldrin Starport + Qwark Vidcomic 4
+    "Infobot: Zeldrin": ItemData(50001463, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 7
+    "Infobot: Aridia": ItemData(50001464, ItemClassification.progression, 1),  # Post Zeldrin
+    "Infobot: Qwarks Hideout": ItemData(50001465, ItemClassification.progression, 1),
+    # Post Starship Phoenix Visit 8 + Qwark Vidcomic 5
+    "Infobot: Koros": ItemData(50001466, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 9
+    "Infobot: Mylon": ItemData(50001467, ItemClassification.progression, 1),  # Post-Koros
 }
 qwark_vidcomics = {
     "Qwark Vidcomic 1": ItemData(50001475, ItemClassification.progression, 1),
@@ -143,7 +158,6 @@ qwark_vidcomics = {
     "Qwark Vidcomic 4": ItemData(50001478, ItemClassification.progression, 1),
     "Qwark Vidcomic 5": ItemData(50001479, ItemClassification.progression, 1),
 }
-
 
 progressive_armor = {
     "Progressive Armor": ItemData(50001480, ItemClassification.useful, 4),
@@ -154,7 +168,7 @@ t_bolts = {
 }
 
 junk_weapon_exp = {
-    "Weapon EXP": ItemData(50001492, ItemClassification.filler, 0)    
+    "Weapon EXP": ItemData(50001492, ItemClassification.filler, 0)
 }
 
 junk_items = {
@@ -168,8 +182,7 @@ victory_item = {
     "Biobliterator Defeated!": ItemData(50001501, ItemClassification.progression, 0)
 }
 
-
-item_table ={
+item_table = {
     **weapon_items,
     **progressive_weapons,
     **gadget_items,
@@ -182,7 +195,8 @@ item_table ={
     **victory_item
 }
 
-#class ItemData(NamedTuple):
+
+# class ItemData(NamedTuple):
 #    ap_code: Optional[int]
 #    classification: ItemClassification
 #    count: Optional[int] = 1
@@ -190,6 +204,6 @@ item_table ={
 def filter_items(classification):
     return filter(lambda l: l[1].classification == (classification), item_table.items())
 
+
 def filter_item_names(classification):
     return map(lambda entry: entry[0], filter_items(classification))
-
