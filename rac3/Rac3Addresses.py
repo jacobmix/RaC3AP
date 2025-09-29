@@ -2358,6 +2358,22 @@ LOCATIONS = [
     "Address": "0x00142CB0",
     "CheckType": 0,
     "AddressBit": 0
-  }
-
+  },
+  {
+    "Name": "Nanotech Level Up - 11",
+    "Id": 50001000,
+   "Checks": [
+      {
+        "Address": "0x001A4E18",
+        "CheckType": 0,
+        "AddressBit": 0
+      },
+      {
+        "Address": "0x001A7430",
+        "CompareType": 0,
+        "CheckType": 1,
+        "CheckValue": "11"
+      }
+    ]
+  },
 ]
