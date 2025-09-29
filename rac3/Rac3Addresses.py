@@ -32,7 +32,7 @@ ADDRESSES = {
       "Rift Inducer":      {"unlockAddress": 0x00142CFF, "id": 95,  "ammoAddress": 0x0014296C, "lv1Ammo": 8, },
       "Qwack-O-Ray":       {"unlockAddress": 0x00142D2F, "id": 143, "ammoAddress": 0x00000000, "lv1Ammo": 0, },
       "RY3N0":             {"unlockAddress": 0x00142D37, "id": 151, "ammoAddress": 0x00142A4C, "lv1Ammo": 25, },
-      "Mega-Turret Glove": {"unlockAddress": 0x00142CB5, "id": 21,  "ammoAddress": 0x00142844, "lv1Ammo": 10, },
+      "Mini-Turret Glove": {"unlockAddress": 0x00142CB5, "id": 21,  "ammoAddress": 0x00142844, "lv1Ammo": 10, },
       "Lava Gun":          {"unlockAddress": 0x00142CB1, "id": 17,  "ammoAddress": 0x00142834, "lv1Ammo": 150, },
       "Shield Charger":    {"unlockAddress": 0x00142CB6, "id": 22,  "ammoAddress": 0x00142848, "lv1Ammo": 3, },
       "Bouncer":           {"unlockAddress": 0x00142CB3, "id": 19,  "ammoAddress": 0x0014283C, "lv1Ammo": 10, },
@@ -48,7 +48,7 @@ ADDRESSES = {
       "Map-O-Matic":     {"unlockAddress": 0x00142CA5, "id": 0,    },
       "Nano Pak":        {"unlockAddress": 0x00142CC0, "id": 0,    },
       "Warp Pad":        {"unlockAddress": 0x00142CBF, "id": 31,    },
-      "Gadgetron PDU":   {"unlockAddress": 0x00142CC3, "id": 35,    },
+      "Gadgetron PDA":   {"unlockAddress": 0x00142CC3, "id": 35,    },
       "Charge-Boots":    {"unlockAddress": 0x00142CBD, "id": 0,    },
     },
     "VidComics": {
@@ -104,7 +104,7 @@ ADDRESSES = {
     "CurrentPlanet": 0x001D545C,
     "InfernoTimer": 0x001A4E14,
     "Skill Points": {
-        "Stay Squaky Clean": 0x001D54B1 
+        "Stay Squeaky Clean": 0x001D54B1 
     },
     "Missions": {
         "Take Qwark to Cage": 0x001426E8,
@@ -128,7 +128,7 @@ ADDRESSES = {
       "Rift Inducer":      {"unlockAddress": 0x00142CFF, "id": 95,  "ammoAddress": 0x0014296C, "lv1Ammo": 8, },
       "Qwack-O-Ray":       {"unlockAddress": 0x00142D2F, "id": 143, "ammoAddress": 0x00000000, "lv1Ammo": 0, },
       "RY3N0":             {"unlockAddress": 0x00142D37, "id": 151, "ammoAddress": 0x00142A4C, "lv1Ammo": 25, },
-      "Mega-Turret Glove": {"unlockAddress": 0x00142CB5, "id": 21,  "ammoAddress": 0x00142844, "lv1Ammo": 10, },
+      "Mini-Turret Glove": {"unlockAddress": 0x00142CB5, "id": 21,  "ammoAddress": 0x00142844, "lv1Ammo": 10, },
       "Lava Gun":          {"unlockAddress": 0x00142CB1, "id": 17,  "ammoAddress": 0x00142834, "lv1Ammo": 150, },
       "Shield Charger":    {"unlockAddress": 0x00142CB6, "id": 22,  "ammoAddress": 0x00142848, "lv1Ammo": 3, },
       "Bouncer":           {"unlockAddress": 0x00142CB3, "id": 19,  "ammoAddress": 0x0014283C, "lv1Ammo": 10, },
@@ -145,7 +145,7 @@ ADDRESSES = {
       "Map-O-Matic":       {"unlockAddress": 0x00142CA5, "id": 0,    },
       "Nano Pak":          {"unlockAddress": 0x00142CC0, "id": 0,    },
       "Warp Pad":          {"unlockAddress": 0x00142CBF, "id": 31,    },
-      "Gadgetron PDU":     {"unlockAddress": 0x00142CC3, "id": 35,    },
+      "Gadgetron PDA":     {"unlockAddress": 0x00142CC3, "id": 35,    },
       "Charge-Boots":      {"unlockAddress": 0x00142CBD, "id": 0,    },
     },
     "VidComics": {
@@ -205,7 +205,7 @@ ADDRESSES = {
     "CurrentPlanet": 0x001D545C,
     "Skill Points": {
         "Go for hang time": 0x001D54B0,
-        "Stay Squaky Clean": 0x001D54B1,
+        "Stay Squeaky Clean": 0x001D54B1,
         "Strive for arcade perfection": 0x001D54B2,
         "Beat Helga's best time": 0x001D54B3,
         "Turn Up The Heat": 0x001D54B4,
@@ -1116,7 +1116,7 @@ LOCATIONS = [
     "AddressBit": 0
   },
   {
-    "Name": "Received Gadgetron PDU",
+    "Name": "Received Gadgetron PDA",
     "Id": 50001490,
     "Address": "0x00142CC3",
     "CheckType": 0,
@@ -1687,7 +1687,7 @@ LOCATIONS = [
     "CheckValue": "4480000"
   },
   {
-    "Name": "Mega-Turret Glove: V2",
+    "Name": "Mini-Turret Glove: V2",
     "Id": 50001560,
     "Address": "0x00142E34",
     "CompareType": 1,
@@ -1695,7 +1695,7 @@ LOCATIONS = [
     "CheckValue": "12800"
   },
   {
-    "Name": "Mega-Turret Glove: V3",
+    "Name": "Mini-Turret Glove: V3",
     "Id": 50001561,
     "Address": "0x00142E34",
     "CompareType": 1,
@@ -1703,7 +1703,7 @@ LOCATIONS = [
     "CheckValue": "32000"
   },
   {
-    "Name": "Mega-Turret Glove: V4",
+    "Name": "Mini-Turret Glove: V4",
     "Id": 50001562,
     "Address": "0x00142E34",
     "CompareType": 1,
@@ -1711,7 +1711,7 @@ LOCATIONS = [
     "CheckValue": "64000"
   },
   {
-    "Name": "Mega-Turret Glove: V5",
+    "Name": "Mini-Turret Glove: V5",
     "Id": 50001563,
     "Address": "0x00142E34",
     "CompareType": 1,
@@ -2043,7 +2043,7 @@ LOCATIONS = [
     "AddressBit": 0
   },
   {
-    "Name": "Stay Squaky Clean",
+    "Name": "Stay Squeaky Clean",
     "Id": 50001610,
     "Address" :"0x001D54B1",
     "CheckType": 0,
@@ -2321,6 +2321,41 @@ LOCATIONS = [
     "Name": "Nerves of Titanium",
     "Id": 50001648,
     "Address": "0x0014276D",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Received Mini-Turret Glove",
+    "Id": 50001649,
+    "Address": "0x00142CB5",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Received Lava Gun",
+    "Id": 50001650,
+    "Address": "0x00142CB1",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Received Shield Charger",
+    "Id": 50001651,
+    "Address": "0x00142CB6",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Received Bouncer",
+    "Id": 50001652,
+    "Address": "0x00142CB3",
+    "CheckType": 0,
+    "AddressBit": 0
+  },
+  {
+    "Name": "Received Plasma Coil",
+    "Id": 50001653,
+    "Address": "0x00142CB0",
     "CheckType": 0,
     "AddressBit": 0
   }

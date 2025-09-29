@@ -74,7 +74,7 @@ weapon_items = {
     "Rift Inducer": ItemData(50001412, ItemClassification.progression, 1),
     "Qwack-O-Ray": ItemData(50001413, ItemClassification.progression, 1),
     "RY3N0": ItemData(50001414, ItemClassification.progression, 1),
-    "Mega-Turret Glove": ItemData(50001415, ItemClassification.progression, 1),
+    "Mini-Turret Glove": ItemData(50001415, ItemClassification.progression, 1),
     "Lava Gun": ItemData(50001416, ItemClassification.progression, 1),
     "Shield Charger": ItemData(50001417, ItemClassification.progression, 1),
     "Bouncer": ItemData(50001418, ItemClassification.progression, 1),
@@ -97,7 +97,7 @@ progressive_weapons = {
     "Progressive Rift Inducer": ItemData(50001432, ItemClassification.useful, 5),
     "Progressive Qwack-O-Ray": ItemData(50001433, ItemClassification.useful, 5),
     "Progressive RY3N0": ItemData(50001434, ItemClassification.useful, 5),
-    "Progressive Mega-Turret Glove": ItemData(50001435, ItemClassification.useful, 5),
+    "Progressive Mini-Turret Glove": ItemData(50001435, ItemClassification.useful, 5),
     "Progressive Lava Gun": ItemData(50001436, ItemClassification.useful, 5),
     "Progressive Shield Charger": ItemData(50001437, ItemClassification.useful, 5),
     "Progressive Bouncer": ItemData(50001438, ItemClassification.useful, 5),
@@ -108,12 +108,12 @@ gadget_items = {
     "Hypershot": ItemData(50001441, ItemClassification.progression, 1),
     "Refractor": ItemData(50001442, ItemClassification.progression, 1),
     "Tyhrra-Guise": ItemData(50001443, ItemClassification.progression, 1),
-    "Grav-Boots": ItemData(50001444, ItemClassification.progression, 1),
+    "Gravity-Boots": ItemData(50001444, ItemClassification.progression, 1),
     "Bolt Grabber V2": ItemData(50001445, ItemClassification.useful, 1),
     "Map-O-Matic": ItemData(50001446, ItemClassification.useful, 1),
     "Nano Pak": ItemData(50001447, ItemClassification.useful, 1),
     "Warp Pad": ItemData(50001448, ItemClassification.progression, 1),
-    "Gadgetron PDU": ItemData(50001449, ItemClassification.useful, 1),
+    "Gadgetron PDA": ItemData(50001449, ItemClassification.useful, 1),
     "Charge-Boots": ItemData(50001450, ItemClassification.progression, 1),
     "Hyperstrike Smash": ItemData(50001451, ItemClassification.useful, 1)
 }
@@ -159,8 +159,8 @@ junk_weapon_exp = {
 
 junk_items = {
     "Bolts": ItemData(50001491, ItemClassification.filler, 0),
-    "Inferno Timer": ItemData(50001493, ItemClassification.filler, 0),
-    "Jackpot Timer": ItemData(50001494, ItemClassification.filler, 0)
+    "Inferno Mode": ItemData(50001493, ItemClassification.filler, 0),
+    "Jackpot Mode": ItemData(50001494, ItemClassification.filler, 0)
 }
 
 victory_item = {

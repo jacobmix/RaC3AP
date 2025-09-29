@@ -29,7 +29,7 @@ rac3_locations = {
     "Florana: T-Bolt: Below Gadgetron Vendor": LocData(50001006, "Florana"),
     "Florana: T-Bolt: Path of Death": LocData(50001007, "Florana"),
     "Florana: Infobot: Starship Phoenix": LocData(50001008, "Florana"),
-    "Florana: Stay Squaky Clean": LocData(50001610, "Florana"),
+    "Florana: Stay Squeaky Clean": LocData(50001610, "Florana"),
 
     #----- Starship Phoenix -----#
     "Phoenix: Received SUCC Cannon": LocData(50001009, "Starship Phoenix"),
@@ -147,6 +147,11 @@ rac3_locations = {
     "Aquatos: 20 Sewer Crystals Traded": LocData(50001099, "Aquatos"),
     "Aquatos: Search for sunken treasure": LocData(50001621, "Aquatos"),
     "Aquatos: Hit the motherload": LocData(50001634, "Aquatos"),
+    "Aquatos: Received Mini-Turret Glove": LocData(50001649, "Aquatos"),
+    "Aquatos: Received Lava Gun": LocData(50001650, "Aquatos"),
+    "Aquatos: Received Shield Charger": LocData(50001651, "Mylon"),
+    "Aquatos: Received Bouncer": LocData(50001652, "Quarks Hideout"),
+    "Aquatos: Received Plasma Coil": LocData(50001653, "Koros"),
 
     #----- Planet Tyhrranosis -----#
     "Tyhrranosis: Received Annihilator": LocData(50001300, "Tyhrranosis"),
@@ -224,16 +229,16 @@ rac3_locations = {
     "Aridia: Received Qwack-O-Ray": LocData(50001471, "Aridia"),
     "Aridia: T-Bolt: Under the Bridge (Assassionation)": LocData(50001472, "Aridia"),
     "Aridia: T-Bolt: Behind the Base (X12 Endgame)": LocData(50001473, "Aridia"),
-    "Alidia: Alidia Mission 01": LocData(50001475, "Alidia"),
-    "Alidia: Alidia Mission 02": LocData(50001476, "Alidia"),
-    "Alidia: Alidia Mission 03": LocData(50001477, "Alidia"),
-    "Alidia: Alidia Mission 04": LocData(50001478, "Alidia"),
-    "Alidia: Alidia Mission 05": LocData(50001479, "Alidia"),
+    "Aridia: Aridia Mission 01": LocData(50001475, "Aridia"),
+    "Aridia: Aridia Mission 02": LocData(50001476, "Aridia"),
+    "Aridia: Aridia Mission 03": LocData(50001477, "Aridia"),
+    "Aridia: Aridia Mission 04": LocData(50001478, "Aridia"),
+    "Aridia: Aridia Mission 05": LocData(50001479, "Aridia"),
     "Aridia: Go for hang time": LocData(50001630, "Aridia"),
     "Aridia: Zap back at ya'": LocData(50001631, "Aridia"),
 
     #----- Qwark's Hideout -----#
-    "Qwark's_Hideout: Received Gadgetron PDU": LocData(50001490, "Qwarks Hideout"),
+    "Qwark's_Hideout: Received Gadgetron PDA": LocData(50001490, "Qwarks Hideout"),
     "Qwark's_Hideout: T-Bolt: Glide from the Ramp": LocData(50001491, "Qwarks Hideout"),
     "Qwark's_Hideout: Break the Dan": LocData(50001632, "Qwarks Hideout"),
 
@@ -327,10 +332,10 @@ weapon_upgrades = {
     "RY3N0: V4": LocData(50001558, "RY3N0 Upgrades"),
     "RY3N0: V5": LocData(50001559, "RY3N0 Upgrades"),
 
-    "Mega-Turret Glove: V2": LocData(50001560, "Mega-Turret Glove Upgrades"),
-    "Mega-Turret Glove: V3": LocData(50001561, "Mega-Turret Glove Upgrades"),
-    "Mega-Turret Glove: V4": LocData(50001562, "Mega-Turret Glove Upgrades"),
-    "Mega-Turret Glove: V5": LocData(50001563, "Mega-Turret Glove Upgrades"),
+    "Mini-Turret Glove: V2": LocData(50001560, "Mini-Turret Glove Upgrades"),
+    "Mini-Turret Glove: V3": LocData(50001561, "Mini-Turret Glove Upgrades"),
+    "Mini-Turret Glove: V4": LocData(50001562, "Mini-Turret Glove Upgrades"),
+    "Mini-Turret Glove: V5": LocData(50001563, "Mini-Turret Glove Upgrades"),
 
     "Lava Gun: V2": LocData(50001564, "Lava Gun Upgrades"),
     "Lava Gun: V3": LocData(50001565, "Lava Gun Upgrades"),

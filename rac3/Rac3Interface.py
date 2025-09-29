@@ -347,7 +347,7 @@ class Rac3Interface(GameInterface):
                     self.UnlockGadgets[name]["unlockDelay"] = 0
             else:
                 # Get Gadget in event
-                if name in ["Hacker", "Hypershot", "Refractor", "Tyhrra-Guise", "Grav-Boots", "Map-O-Matic", "Warp Pad"]: 
+                if name in ["Hacker", "Hypershot", "Refractor", "Tyhrra-Guise", "Gravity-Boots", "Map-O-Matic", "Warp Pad"]: 
                     self._write8(addr, 2) # 0x2=0b0010
                 # Get Gadget in field
                 else:
@@ -483,7 +483,7 @@ class Rac3Interface(GameInterface):
             bolt = self._read32(addr)
             self._write32(addr, bolt + 1000 * random.randint(1, 100))
             
-        if ap_code == Items.junk_items["Inferno Timer"].ap_code: # Random get Inferno
+        if ap_code == Items.junk_items["Inferno Mode"].ap_code: # Random get Inferno
             addr = ADDRESSES[self.current_game]["InfernoTimer"]
             addr = self.AddressConvert(addr)
             timer = self._read32(addr)

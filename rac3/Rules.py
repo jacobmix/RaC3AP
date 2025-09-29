@@ -50,7 +50,7 @@ def set_rules_planets(world):
     #Getting to Obani Draco (lol)
     add_rule(world.multiworld.get_entrance("Starship Phoenix -> Obani Draco", world.player),
              lambda state: state.has("Infobot: Obani Draco", world.player)
-             and state.has("Grav-Boots", world.player))
+             and state.has("Gravity-Boots", world.player))
 
     #Getting to Zeldrin Starport
     add_rule(world.multiworld.get_entrance("Starship Phoenix -> Zeldrin Starport", world.player),
@@ -89,7 +89,7 @@ def set_rules_planets(world):
              and state.has("Hacker", world.player)
              and state.has("Tyhrra-Guise", world.player)
              and state.has("Hypershot", world.player)
-             and state.has("Grav-Boots", world.player))
+             and state.has("Gravity-Boots", world.player))
 
 
 def set_rules_hard_location(world):
@@ -166,10 +166,10 @@ def set_rules_hard_location(world):
     # "Marcadia: T-Bolt: After Pool of Water": LocData(50001032, "Marcadia Region 1"),
     add_rule(world.get_location("Marcadia: T-Bolt: Last Refractor Room"),
             lambda state: state.has("Refractor", world.player)
-            and state.has("Grav-Boots", world.player))
+            and state.has("Gravity-Boots", world.player))
     add_rule(world.get_location("Marcadia: T-Bolt: Ceiling just before Al"),
             lambda state: state.has("Refractor", world.player)
-            and state.has("Grav-Boots", world.player))
+            and state.has("Gravity-Boots", world.player))
     add_rule(world.get_location("Marcadia: Qwark Vidcomic 1"),
             lambda state: state.has("Refractor", world.player))
 
@@ -197,17 +197,17 @@ def set_rules_hard_location(world):
             and state.has("Hacker", world.player)
             and state.has("Tyhrra-Guise", world.player)
             and state.has("Hypershot", world.player)
-            and state.has("Grav-Boots", world.player)),
+            and state.has("Gravity-Boots", world.player)),
 
     #----- Planet Aquatos -----#
     # "Aquatos: Received Flux Rifle": LocData(50001090, "Aquatos"),
     # "Aquatos: T-Bolt: Under the Bridge": LocData(50001091, "Aquatos"),
     # "Aquatos: T-Bolt: Underwater Bolt": LocData(50001092, "Aquatos"),
     add_rule(world.get_location("Aquatos: T-Bolt: Top Left Bolt"),
-            lambda state: state.has("Grav-Boots", world.player))
+            lambda state: state.has("Gravity-Boots", world.player))
     add_rule(world.get_location("Aquatos: T-Bolt: Swinging Bolt"),
             lambda state: state.has("Hypershot", world.player)
-            and state.has("Grav-Boots", world.player))
+            and state.has("Gravity-Boots", world.player))
     add_rule(world.get_location("Aquatos: T-Bolt: Behind the Locked Gate"),
             lambda state: state.has("Hacker", world.player))
     # "Aquatos: 1 Sewer Crystal Traded": LocData(50001096, "Aquatos"),
@@ -251,21 +251,21 @@ def set_rules_hard_location(world):
 
     #----- Planet Zeldrin -----#
     add_rule(world.get_location("Zeldrin: T-Bolt: Turn Around"),
-            lambda state: state.has("Grav-Boots", world.player))
+            lambda state: state.has("Gravity-Boots", world.player))
     add_rule(world.get_location("Zeldrin: Received Nano-Pak"),
-            lambda state: state.has("Grav-Boots", world.player))
+            lambda state: state.has("Gravity-Boots", world.player))
     
     #----- Planet Aridia -----#
     add_rule(world.get_location("Aridia: T-Bolt: Under the Bridge (Assassionation)"),
-            lambda state: state.has("Grav-Boots", world.player))
+            lambda state: state.has("Gravity-Boots", world.player))
     add_rule(world.get_location("Aridia: T-Bolt: Behind the Base (X12 Endgame)"),
-            lambda state: state.has("Grav-Boots", world.player))
+            lambda state: state.has("Gravity-Boots", world.player))
 
     #----- Qwark's Hideout -----#
-    add_rule(world.get_location("Qwark's_Hideout: Received Gadgetron PDU"),
-            lambda state: state.has("Grav-Boots", world.player))
+    add_rule(world.get_location("Qwark's_Hideout: Received Gadgetron PDA"),
+            lambda state: state.has("Gravity-Boots", world.player))
     add_rule(world.get_location("Qwark's_Hideout: T-Bolt: Glide from the Ramp"),
-            lambda state: state.has("Grav-Boots", world.player))
+            lambda state: state.has("Gravity-Boots", world.player))
     
     #----- Planet Koros -----# # Nothing
 

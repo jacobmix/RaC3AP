@@ -33,7 +33,7 @@ class StartingWeapon(Choice):
     option_rift_inducer = 13
     option_qwack_o_ray = 14
     option_ry3n0 = 15
-    option_mega_turret_glove = 16
+    option_mini_turret_glove = 16
     option_lava_gun = 17
     option_tesla_barrier = 18
     option_bouncer = 19

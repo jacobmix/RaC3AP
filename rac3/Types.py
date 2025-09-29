@@ -62,7 +62,7 @@ weapon_type_to_name={
     WeaponType.RI:      "Rift Inducer",
     WeaponType.QoR:     "Qwack-O-Ray",
     WeaponType.RY3N0:   "RY3N0",
-    WeaponType.MTG:     "Mega-Turret Glove",
+    WeaponType.MTG:     "Mini-Turret Glove",
     WeaponType.LG:      "Lava Gun",
     WeaponType.TB:      "Shield Charger",
     WeaponType.HB:      "Bouncer",

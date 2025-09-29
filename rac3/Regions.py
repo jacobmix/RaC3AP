@@ -55,7 +55,7 @@ def create_regions(world: "RaC3World"):
 
     #Marcadia later part requires Grav Boots for titan bolts
     marcadia_second_half = create_region(world, "Marcadia Region 2")
-    marcadia_first_half.connect(marcadia_second_half, rule=lambda state: state.has("Refractor", world.player) and state.has("Grav-Boots", world.player)),
+    marcadia_first_half.connect(marcadia_second_half, rule=lambda state: state.has("Refractor", world.player) and state.has("Gravity-Boots", world.player)),
 
     # Anihilation mission is shown after Daxx Region2
     annihilation_nation_second_half = create_region(world, "Annihilation Nation 2")
@@ -75,7 +75,7 @@ def create_regions(world: "RaC3World"):
 
     #You can get Metal-Noids in metropolis with no other requirements
     metropolis_second_half = create_region(world, "Metropolis Region 2")
-    metropolis_first_half.connect(metropolis_second_half, rule=lambda state: state.has("Grav-Boots", world.player) and state.has("Refractor", world.player)),
+    metropolis_first_half.connect(metropolis_second_half, rule=lambda state: state.has("Gravity-Boots", world.player) and state.has("Refractor", world.player)),
 
 
 
@@ -126,8 +126,8 @@ def create_regions(world: "RaC3World"):
     RY3N0_upgrades = create_region(world, "RY3N0 Upgrades")
     menu.connect(RY3N0_upgrades, rule=lambda state: state.has("RY3N0", world.player)),
 
-    mega_turret_glove_upgrades = create_region(world, "Mega-Turret Glove Upgrades")
-    menu.connect(mega_turret_glove_upgrades, rule=lambda state: state.has("Mega-Turret Glove", world.player)),
+    mega_turret_glove_upgrades = create_region(world, "Mini-Turret Glove Upgrades")
+    menu.connect(mega_turret_glove_upgrades, rule=lambda state: state.has("Mini-Turret Glove", world.player)),
 
     lava_gun_upgrades = create_region(world, "Lava Gun Upgrades")
     menu.connect(lava_gun_upgrades, rule=lambda state: state.has("Lava Gun", world.player)),
