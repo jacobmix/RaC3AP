@@ -16,7 +16,7 @@ def set_rules_planets(world):
 
     # Getting to Annihilation Nation:
     add_rule(world.multiworld.get_entrance("Starship Phoenix -> Annihilation Nation", world.player),
-             lambda state: state.has("Qwark Vidcomic 1", world.player)
+             lambda state: state.has("Progressive Vidcomic", world.player, 1)
                            and state.has("Infobot: Annihilation Nation", world.player))
 
     # Getting to Aquatos
@@ -59,7 +59,7 @@ def set_rules_planets(world):
     # Getting to Metropolis
     add_rule(world.multiworld.get_entrance("Starship Phoenix -> Metropolis", world.player),
              lambda state: state.has("Infobot: Metropolis", world.player)
-                           and state.has("Qwark Vidcomic 4", world.player))
+                           and state.has("Progressive Vidcomic", world.player, 4))
 
     # Getting to Zeldrin
     add_rule(world.multiworld.get_entrance("Starship Phoenix -> Zeldrin", world.player),
@@ -116,7 +116,7 @@ def set_rules_hard_location(world):
              lambda state: state.can_reach("Tyhrranosis", player=world.player))
     # "Phoenix: Infobot: Marcadia": LocData(50001019, "Starship Phoenix"),
     add_rule(world.get_location("Phoenix: Infobot: Annihilation Nation"),
-             lambda state: state.has("Qwark Vidcomic 1", world.player))
+             lambda state: state.has("Progressive Vidcomic", world.player, 1))
     add_rule(world.get_location("Phoenix: Infobot: Aquatos"),
              lambda state: state.has("Tyhrra-Guise", world.player)
                            and state.can_reach("Annihilation Nation", player=world.player))
@@ -131,11 +131,7 @@ def set_rules_hard_location(world):
     add_rule(world.get_location("Phoenix: Infobot: Zeldrin"),
              lambda state: state.can_reach("Metropolis Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: Infobot: Qwarks Hideout"),
-             lambda state: state.has("Qwark Vidcomic 1", world.player)
-                           and state.has("Qwark Vidcomic 2", world.player)
-                           and state.has("Qwark Vidcomic 3", world.player)
-                           and state.has("Qwark Vidcomic 4", world.player)
-                           and state.has("Qwark Vidcomic 5", world.player)
+             lambda state: state.has("Progressive Vidcomic", world.player, 5)
                            and state.can_reach("Zeldrin", player=world.player))
     add_rule(world.get_location("Phoenix: Infobot: Koros"),
              lambda state: state.can_reach("Qwarks Hideout", player=world.player))
@@ -143,21 +139,31 @@ def set_rules_hard_location(world):
              lambda state: state.can_reach("Zeldrin Starport Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 5"),
              lambda state: state.can_reach("Zeldrin", player=world.player))
-    # Vidcomi clear locations
+    # Vidcomic clear locations
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 1 Clear"),
-             lambda state: state.has("Qwark Vidcomic 1", world.player))
+             lambda state: state.has("Progressive Vidcomic", world.player, 1))
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 2 Clear"),
-             lambda state: state.can_reach_location("Phoenix: Qwark Vidcomic 1 Clear", player=world.player)
-                           and state.has("Qwark Vidcomic 2", world.player))
+             lambda state: state.has("Progressive Vidcomic", world.player, 2))
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 3 Clear"),
-             lambda state: state.can_reach_location("Phoenix: Qwark Vidcomic 2 Clear", player=world.player)
-                           and state.has("Qwark Vidcomic 3", world.player))
+             lambda state: state.has("Progressive Vidcomic", world.player, 3))
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 4 Clear"),
-             lambda state: state.can_reach_location("Phoenix: Qwark Vidcomic 3 Clear", player=world.player)
-                           and state.has("Qwark Vidcomic 4", world.player))
+             lambda state: state.has("Progressive Vidcomic", world.player, 4))
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 5 Clear"),
-             lambda state: state.can_reach_location("Phoenix: Qwark Vidcomic 4 Clear", player=world.player)
-                           and state.has("Qwark Vidcomic 5", world.player))
+             lambda state: state.has("Progressive Vidcomic", world.player, 5))
+    # Skillpoints
+    add_rule(world.get_location("Phoenix: Strive for Arcade Perfection"),
+             lambda state: state.has("Progressive Vidcomic", world.player, 5))
+
+    add_rule(world.get_location("Phoenix: Pirate booty - set a new record for qwark"),
+             lambda state: state.has("Progressive Vidcomic", world.player, 1))
+    add_rule(world.get_location("Phoenix: Deja Q All over Again - set a new record for qwark"),
+             lambda state: state.has("Progressive Vidcomic", world.player, 2)),
+    add_rule(world.get_location("Phoenix: Arriba Amoeba! - set a new record for qwark"),
+             lambda state: state.has("Progressive Vidcomic", world.player, 3)),
+    add_rule(world.get_location("Phoenix: Shadow of the robot - set a new record for qwark"),
+             lambda state: state.has("Progressive Vidcomic", world.player, 4)),
+    add_rule(world.get_location("Phoenix: The Shaming of the Q - set a new record for qwark"),
+             lambda state: state.has("Progressive Vidcomic", world.player, 5)),
 
     # ----- Planet Marcadia -----#
     # "Marcadia: Received Spitting Hydra": LocData(50001030, "Marcadia Region 1"),
@@ -197,8 +203,7 @@ def set_rules_hard_location(world):
 
     # Maybe difficult and long(100 rounds ...), so it restrict after getting items for clear the game.
     add_rule(world.get_location("Annihilation: Qwarktastic Battle"),
-             lambda state: state.has("Qwark Vidcomic 4", world.player)
-                           and state.has("Qwark Vidcomic 5", world.player)
+             lambda state: state.has("Progressive Vidcomic", world.player, 5)
                            and state.has("Hacker", world.player)
                            and state.has("Tyhrra-Guise", world.player)
                            and state.has("Hypershot", world.player)

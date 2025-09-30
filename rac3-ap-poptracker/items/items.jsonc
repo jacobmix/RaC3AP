@@ -195,34 +195,30 @@
     "codes": "nanoPak"
   },
   {
-    "name": "vidComic1",
-    "type": "toggle",
-    "img": "images/items/gadget/vidComic1.png",
-    "codes": "vidComic1"
-  },
-  {
-    "name": "vidComic2",
-    "type": "toggle",
-    "img": "images/items/gadget/vidComic2.png",
-    "codes": "vidComic2"
-  },
-  {
-    "name": "vidComic3",
-    "type": "toggle",
-    "img": "images/items/gadget/vidComic3.png",
-    "codes": "vidComic3"
-  },
-  {
-    "name": "vidComic4",
-    "type": "toggle",
-    "img": "images/items/gadget/vidComic4.png",
-    "codes": "vidComic4"
-  },
-  {
-    "name": "vidComic5",
-    "type": "toggle",
-    "img": "images/items/gadget/vidComic5.png",
-    "codes": "vidComic5"
+    "name": "vidComic",
+    "type": "progressive",
+    "stages": [
+      {
+        "img": "images/items/gadget/vidComic1.png",
+        "codes": "vidComic"
+      },
+      {
+        "img": "images/items/gadget/vidComic2.png",
+        "codes": "vidComic2"
+      },
+      {
+        "img": "images/items/gadget/vidComic3.png",
+        "codes": "vidComic3"
+      },
+      {
+        "img": "images/items/gadget/vidComic4.png",
+        "codes": "vidComic4"
+      },
+      {
+        "img": "images/items/gadget/vidComic5.png",
+        "codes": "vidComic5"
+      }
+    ]
   },
   // Planets
   {
@@ -320,5 +316,5 @@
     "type": "toggle",
     "img": "images/items/planet/Mylon.png",
     "codes": "Mylon"
-  },
+  }
 ]

@@ -21,6 +21,15 @@
                 "type": "layout",
                 "key": "shared_item_grid"
               }
+            },
+            {
+              "type": "group",
+              "header": "Planets",
+              "dock": "top",
+              "content": {
+                "type": "layout",
+                "key": "shared_planet_grid"
+              }
             }
           ]
         },
@@ -51,7 +60,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Marcadia",
+                  "Marcadia"
                 ]
               }
             },
@@ -60,7 +69,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Annihilation",
+                  "Annihilation"
                 ]
               }
             },
@@ -71,7 +80,7 @@
                 "maps": [
                   "Aquatos1",
                   "Aquatos2",
-                  "Aquatos3",
+                  "Aquatos3"
                 ]
               }
             },
@@ -81,7 +90,7 @@
                 "type": "map",
                 "maps": [
                   "Tyhrranosis1",
-                  "Tyhrranosis2",
+                  "Tyhrranosis2"
                 ]
               }
             },
@@ -90,7 +99,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Daxx",
+                  "Daxx"
                 ]
               }
             },
@@ -100,7 +109,7 @@
                 "type": "map",
                 "maps": [
                   "Holostar",
-                  "HolostarCrank",
+                  "HolostarCrank"
                 ]
               }
             },
@@ -109,7 +118,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Rilgar",
+                  "Rilgar"
                 ]
               }
             },
@@ -118,7 +127,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "ObaniDraco",
+                  "ObaniDraco"
                 ]
               }
             },
@@ -127,7 +136,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "ZeldrinStarport",
+                  "ZeldrinStarport"
                 ]
               }
             },
@@ -137,7 +146,7 @@
                 "type": "map",
                 "maps": [
                   "Metropolis",
-                  "MetropolisMission",
+                  "MetropolisMission"
                 ]
               }
             },
@@ -146,7 +155,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Zeldrin",
+                  "Zeldrin"
                 ]
               }
             },
@@ -155,7 +164,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Aridia",
+                  "Aridia"
                 ]
               }
             },
@@ -164,7 +173,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "QwarksHideout",
+                  "QwarksHideout"
                 ]
               }
             },
@@ -173,7 +182,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Koros",
+                  "Koros"
                 ]
               }
             },
@@ -184,10 +193,10 @@
                 "maps": [
                   "Mylon",
                   "last1",
-                  "last2",
+                  "last2"
                 ]
               }
-            },
+            }
           ]
         }
       ]
@@ -215,6 +224,18 @@
                 "v_alignment": "center",
                 "key": "shared_item_grid"
               }
+            },
+            {
+              "type": "group",
+              "header": "Planets",
+              "dock": "left",
+              "margin": "0,0,3,0",
+              "content": {
+                "type": "layout",
+                "h_alignment": "center",
+                "v_alignment": "center",
+                "key": "shared_planet_grid"
+              }
             }
           ]
         },
@@ -245,7 +266,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Marcadia",
+                  "Marcadia"
                 ]
               }
             },
@@ -254,7 +275,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Annihilation",
+                  "Annihilation"
                 ]
               }
             },
@@ -265,7 +286,7 @@
                 "maps": [
                   "Aquatos1",
                   "Aquatos2",
-                  "Aquatos3",
+                  "Aquatos3"
                 ]
               }
             },
@@ -275,7 +296,7 @@
                 "type": "map",
                 "maps": [
                   "Tyhrranosis1",
-                  "Tyhrranosis2",
+                  "Tyhrranosis2"
                 ]
               }
             },
@@ -284,7 +305,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Daxx",
+                  "Daxx"
                 ]
               }
             },
@@ -294,7 +315,7 @@
                 "type": "map",
                 "maps": [
                   "Holostar",
-                  "HolostarCrank",
+                  "HolostarCrank"
                 ]
               }
             },
@@ -303,7 +324,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Rilgar",
+                  "Rilgar"
                 ]
               }
             },
@@ -312,7 +333,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "ObaniDraco",
+                  "ObaniDraco"
                 ]
               }
             },
@@ -321,7 +342,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "ZeldrinStarport",
+                  "ZeldrinStarport"
                 ]
               }
             },
@@ -331,7 +352,7 @@
                 "type": "map",
                 "maps": [
                   "Metropolis",
-                  "MetropolisMission",
+                  "MetropolisMission"
                 ]
               }
             },
@@ -340,7 +361,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Zeldrin",
+                  "Zeldrin"
                 ]
               }
             },
@@ -349,7 +370,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Aridia",
+                  "Aridia"
                 ]
               }
             },
@@ -358,7 +379,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "QwarksHideout",
+                  "QwarksHideout"
                 ]
               }
             },
@@ -367,7 +388,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Koros",
+                  "Koros"
                 ]
               }
             },
@@ -378,10 +399,10 @@
                 "maps": [
                   "Mylon",
                   "last1",
-                  "last2",
+                  "last2"
                 ]
               }
-            },
+            }
           ]
         }
       ]

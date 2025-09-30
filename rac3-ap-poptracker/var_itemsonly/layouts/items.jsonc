@@ -1,98 +1,86 @@
 {
-  // sets layouts for shadred items grids
+  // sets layouts for shared items grids
   // bigger example: https://github.com/Cyb3RGER/sm_ap_tracker/blob/main/layouts/items.json
   "shared_item_grid": {
-    "type": "array",
-    "orientation": "vertical",
-    "margin": "0,0",
-    "content": [
-      {
-        "type": "array",
-        "orientation": "vertical",
-        "margin": "0,0",
-        "content": [
-          {
-            "type": "itemgrid",
-            "item_margin": "10, 2",
-            "h_alignment": "left",
-            "item_size": "96",
-            "rows": [
-              [
-                "ShockBlaster",
-                "NitroLauncher",
-                "N60Storm",
-                "PlasmaWhip",
-                "Infector",
-                "SuckCannon",
-                "SpittingHydra",
-                "AgentsOfDoom",
-                "FluxRifle",
-                "Annihilator"
-              ],
-              [
-                "HoloShieldGlove",
-                "DiskBladeGun",
-                "RiftInducer",
-                "QwackORay",
-                "RY3N0",
-                "MegaTurretGlove",
-                "LavaGun",
-                "ShieldCharger",
-                "Bouncer",
-                "PlasmaCoil"
-              ],
-              [
-                "refractor",
-                "hyperShot",
-                "tyhrraGuise",
-                "warpPad",
-                "pda",
-                "gravBoots",
-                "chargeBoots"
-              ],
-              [
-                "hacker",
-                "boltGrabberV2",
-                "mapOMatic",
-                "nanoPak",
-                "vidComic1",
-                "vidComic2",
-                "vidComic3",
-                "vidComic4",
-                "vidComic5",
-              ],
-            ]
-          },
-          {
-            "type": "itemgrid",
-            "item_margin": "10, 2",
-            "h_alignment": "left",
-            "item_size": "128",
-            "rows": [
-              [
-                "Marcadia",
-                "Annihilation",
-                "Aquatos",
-                "Tyhrranosis",
-                "Daxx",
-                "ObaniGemini",
-                "Rilgar",
-                "Holostar",
-              ],
-              [
-                "ObaniDraco",
-                "ZeldrinStartport",
-                "Metropolis",
-                "Zeldrin",
-                "Aridia",
-                "QwarksHideout",
-                "Koros",
-                "Mylon",
-              ],
-            ]
-          }
+    "type": "container",
+    "content": {
+      "type": "itemgrid",
+      "item_margin": "10, 2",
+      "h_alignment": "left",
+      "item_size": "96",
+      "rows": [
+        [
+          "ShockBlaster",
+          "NitroLauncher",
+          "N60Storm",
+          "PlasmaWhip",
+          "Infector",
+          "SuckCannon",
+          "SpittingHydra",
+          "AgentsOfDoom",
+          "FluxRifle",
+          "Annihilator"
+        ],
+        [
+          "HoloShieldGlove",
+          "DiskBladeGun",
+          "RiftInducer",
+          "QwackORay",
+          "RY3N0",
+          "MegaTurretGlove",
+          "LavaGun",
+          "ShieldCharger",
+          "Bouncer",
+          "PlasmaCoil"
+        ],
+        [
+          "refractor",
+          "hyperShot",
+          "tyhrraGuise",
+          "warpPad",
+          "pda",
+          "gravBoots",
+          "chargeBoots"
+        ],
+        [
+          "hacker",
+          "boltGrabberV2",
+          "mapOMatic",
+          "nanoPak",
+          "vidComic"
         ]
-      }
-    ]
+      ]
+    }
+  },
+  "shared_planet_grid": {
+    "type": "container",
+    "content": {
+      "type": "itemgrid",
+      "item_margin": "10, 2",
+      "h_alignment": "left",
+      "item_size": "128",
+      "rows": [
+        [
+          "Marcadia",
+          "Annihilation",
+          "Aquatos",
+          "Tyhrranosis",
+          "Daxx",
+          "ObaniGemini",
+          "Rilgar",
+          "Holostar"
+        ],
+        [
+          "ObaniDraco",
+          "ZeldrinStartport",
+          "Metropolis",
+          "Zeldrin",
+          "Aridia",
+          "QwarksHideout",
+          "Koros",
+          "Mylon"
+        ]
+      ]
+    }
   }
 }

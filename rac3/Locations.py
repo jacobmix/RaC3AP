@@ -6,24 +6,27 @@ if TYPE_CHECKING:
 
 
 def get_total_locations(world: "RaC3World") -> int:
-    locations = [ l for l in world.multiworld.get_locations() if l.player == world.player ]
+    locations = [l for l in world.multiworld.get_locations() if l.player == world.player]
     return len(locations)
+
 
 def get_location_names() -> Dict[str, int]:
     names = {name: data.ap_code for name, data in location_table.items()}
     return names
 
+
 def get_regions() -> list:
     regions = [data.region for _, data in location_table.items()]
     return regions
 
+
 rac3_locations = {
-    #----- Planet Veldin -----#
+    # ----- Planet Veldin -----#
     "Veldin: Received Shock Cannon": LocData(50001000, "Veldin"),
     "Veldin: Received Nitro Launcher": LocData(50001001, "Veldin"),
     "Veldin: Infobot: Florana": LocData(50001003, "Veldin"),
 
-    #----- Planet Florana -----#
+    # ----- Planet Florana -----#
     "Florana: Received Plasma Whip": LocData(50001004, "Florana"),
     "Florana: Received N60 Storm": LocData(50001005, "Florana"),
     "Florana: T-Bolt: Below Gadgetron Vendor": LocData(50001006, "Florana"),
@@ -31,12 +34,12 @@ rac3_locations = {
     "Florana: Infobot: Starship Phoenix": LocData(50001008, "Florana"),
     "Florana: Stay Squeaky Clean": LocData(50001610, "Florana"),
 
-    #----- Starship Phoenix -----#
+    # ----- Starship Phoenix -----#
     "Phoenix: Received SUCC Cannon": LocData(50001009, "Starship Phoenix"),
     "Phoenix: Received Infector": LocData(50001010, "Starship Phoenix"),
     "Phoenix: T-Bolt: Last VR Deck Challenges": LocData(50001011, "Starship Phoenix"),
     "Phoenix: T-Bolt: Complete VR Training": LocData(50001012, "Starship Phoenix"),
-    "Phoenix: Received Magna Plate Armor":LocData(50001013, "Starship Phoenix"),
+    "Phoenix: Received Magna Plate Armor": LocData(50001013, "Starship Phoenix"),
     "Phoenix: Received Adamantine Armor": LocData(50001014, "Starship Phoenix"),
     "Phoenix: Received Aegis Mark V Armor": LocData(50001015, "Starship Phoenix"),
     "Phoenix: Received Infernox Armor": LocData(50001016, "Starship Phoenix"),
@@ -59,25 +62,25 @@ rac3_locations = {
     "Phoenix: Qwark Vidcomic 4 Clear": LocData(50001603, "Starship Phoenix"),
     "Phoenix: Qwark Vidcomic 5 Clear": LocData(50001604, "Starship Phoenix"),
     "Phoenix: Turn Up The Heat!": LocData(50001611, "Koros"),
-    "Phoenix: Strive for Arcade Perfection": LocData(50001612, "Qwarks Hideout"),
+    "Phoenix: Strive for Arcade Perfection": LocData(50001612, "Starship Phoenix"),
     "Phoenix: Beat Helga's Best Time": LocData(50001613, "Daxx Region 1"),
     "Phoenix: Monkeying Around": LocData(50001614, "Starship Phoenix"),
-    "Phoenix: Pirate booty - set a new record for qwark": LocData(50001615, "Marcadia"),
-    "Phoenix: Deja Q All over Again - set a new record for qwark": LocData(50001617, "Zeldrin"),
-    "Phoenix: Arriba Amoeba! - set a new record for qwark": LocData(50001618, "Annihilation Nation"),
-    "Phoenix: Shadow of the robot - set a new record for qwark": LocData(50001619, "Annihilitation Nation 2"),
-    "Phoenix: The Shaming of the Q - set a new record for qwark": LocData(50001636, "Zeldrin"),
-    "Phoenix: VR Gadget Training" : LocData(50001640, "Daxx Region 1"),
-    "Phoenix: Warm Up" : LocData(50001641, "Starship Phoenix"),
-    "Phoenix: Don't Look Down" : LocData(50001642, "Starship Phoenix"),
-    "Phoenix: Speed Round" : LocData(50001643, "Starship Phoenix"),
-    "Phoenix: Hot Stepper" : LocData(50001644, "Starship Phoenix"),
-    "Phoenix: 90 Second Slayer" : LocData(50001645, "Starship Phoenix"),
-    "Phoenix: The Shocker" : LocData(50001646, "Starship Phoenix"),
-    "Phoenix: Wrench Beatdown" : LocData(50001647, "Starship Phoenix"),
-    "Phoenix: Nerves of Titanium" : LocData(50001648, "Starship Phoenix"),
+    "Phoenix: Pirate booty - set a new record for qwark": LocData(50001615, "Starship Phoenix"),
+    "Phoenix: Deja Q All over Again - set a new record for qwark": LocData(50001617, "Starship Phoenix"),
+    "Phoenix: Arriba Amoeba! - set a new record for qwark": LocData(50001618, "Starship Phoenix"),
+    "Phoenix: Shadow of the robot - set a new record for qwark": LocData(50001619, "Starship Phoenix"),
+    "Phoenix: The Shaming of the Q - set a new record for qwark": LocData(50001636, "Starship Phoenix"),
+    "Phoenix: VR Gadget Training": LocData(50001640, "Daxx Region 1"),
+    "Phoenix: Warm Up": LocData(50001641, "Starship Phoenix"),
+    "Phoenix: Don't Look Down": LocData(50001642, "Starship Phoenix"),
+    "Phoenix: Speed Round": LocData(50001643, "Starship Phoenix"),
+    "Phoenix: Hot Stepper": LocData(50001644, "Starship Phoenix"),
+    "Phoenix: 90 Second Slayer": LocData(50001645, "Starship Phoenix"),
+    "Phoenix: The Shocker": LocData(50001646, "Starship Phoenix"),
+    "Phoenix: Wrench Beatdown": LocData(50001647, "Starship Phoenix"),
+    "Phoenix: Nerves of Titanium": LocData(50001648, "Starship Phoenix"),
 
-    #----- Planet Marcadia -----#
+    # ----- Planet Marcadia -----#
     "Marcadia: Received Spitting Hydra": LocData(50001030, "Marcadia Region 1"),
     "Marcadia: Received Refractor": LocData(50001031, "Marcadia Region 1"),
     "Marcadia: T-Bolt: After Pool of Water": LocData(50001032, "Marcadia Region 1"),
@@ -91,7 +94,7 @@ rac3_locations = {
     "Marcadia: Marcadia Mission 05": LocData(50001040, "Marcadia Region 1"),
     "Marcadia: Reflect on how to score": LocData(50001637, "Marcadia Region 2"),
 
-    #----- Annihilation Nation -----#
+    # ----- Annihilation Nation -----#
     "Annihilation: Received Agents of Doom": LocData(50001140, "Annihilation Nation"),
     "Annihilation: Received Tyhrra-Guise": LocData(50001141, "Annihilation Nation"),
     "Annihilation: T-Bolt: Heat Street": LocData(50001142, "Annihilation Nation"),
@@ -134,7 +137,7 @@ rac3_locations = {
     "Annihilation: Flee Flawlessly": LocData(50001621, "Annihilation Nation"),
     "Annihilation: Lights, camera action!": LocData(50001623, "Annihilation Nation"),
 
-    #----- Planet Aquatos -----#
+    # ----- Planet Aquatos -----#
     "Aquatos: Received Flux Rifle": LocData(50001090, "Aquatos"),
     "Aquatos: T-Bolt: Under the Bridge": LocData(50001091, "Aquatos"),
     "Aquatos: T-Bolt: Underwater Bolt": LocData(50001092, "Aquatos"),
@@ -153,7 +156,7 @@ rac3_locations = {
     "Aquatos: Received Bouncer": LocData(50001652, "Quarks Hideout"),
     "Aquatos: Received Plasma Coil": LocData(50001653, "Koros"),
 
-    #----- Planet Tyhrranosis -----#
+    # ----- Planet Tyhrranosis -----#
     "Tyhrranosis: Received Annihilator": LocData(50001300, "Tyhrranosis"),
     "Tyhrranosis: Received Holo-Shield Glove": LocData(50001301, "Tyhrranosis"),
     "Tyhrranosis: T-Bolt: South East Cannon": LocData(50001302, "Tyhrranosis"),
@@ -165,21 +168,22 @@ rac3_locations = {
     "Tyhrranosis: Kavu Island Mission 4": LocData(50001609, "Tyhrranosis Region 2"),
     "Tyhrranosis: Be a Sharpshooter": LocData(50001639, "Tyhrranosis"),
 
-    #----- Planet Daxx -----#
+    # ----- Planet Daxx -----#
     "Daxx: T-Bolt: Right of the Taxi": LocData(50001320, "Daxx Region 2"),
     "Daxx: T-Bolt: Time Sensitive Door": LocData(50001321, "Daxx Region 2"),
     "Daxx: Received Charge Boots": LocData(50001322, "Daxx Region 1"),
     "Daxx: Post-Daxx": LocData(50001323, "Daxx Region 2"),
-    "Daxx: Bugs to Birdie" : LocData(50001616, "Aridia"), # In the vanilla game you get the quack o ray on Aridia, but the skill point is done on Daxx
+    "Daxx: Bugs to Birdie": LocData(50001616, "Aridia"),
+    # In the vanilla game you get the quack o ray on Aridia, but the skill point is done on Daxx
 
-    #----- Obani Gemini -----#
+    # ----- Obani Gemini -----#
     "Obani_Gemini: Received Disk Blade Gun": LocData(50001340, "Obani Gemini"),
     "Obani_Gemini: T-Bolt: Follow the Lava": LocData(50001341, "Obani Gemini"),
     "Obani_Gemini: T-Bolt: Between the Twin Towers": LocData(50001342, "Obani Gemini"),
     "Obani_Gemini: Infobot: Rilgar": LocData(50001343, "Obani Gemini"),
     "Obani_Gemini: Get to the belt": LocData(50001628, "Obani Gemini"),
 
-    #----- Planet Rilgar -----#
+    # ----- Planet Rilgar -----#
     "Rilgar: Received Grav Boots": LocData(50001360, "Rilgar"),
     "Rilgar: Infobot: Holostar Studios": LocData(50001361, "Rilgar"),
     "Rilgar: Rilgar Mission 01": LocData(50001365, "Rilgar"),
@@ -195,16 +199,15 @@ rac3_locations = {
     "Holostar: Infobot: Obani Draco": LocData(50001394, "Holostar Studios"),
     "Holostar: Feeling Lucky": LocData(50001625, "Holostar Studios"),
 
-    #----- Obani Draco (lol) -----#
+    # ----- Obani Draco (lol) -----#
     "Obani_Draco: Infobot: Zeldrin Starport": LocData(50001370, "Obani Draco"),
 
-    #----- Zeldrin Starport -----#
+    # ----- Zeldrin Starport -----#
     "Zeldrin_Starport: Received Bolt Grabber V2": LocData(50001410, "Zeldrin Starport Region 2"),
     "Zeldrin_Starport: T-Bolt: Inside the Second Ship": LocData(50001411, "Zeldrin Starport Region 2"),
     "Zeldrin_Starport: T-Bolt: Atop the Twin Shooters": LocData(50001412, "Zeldrin Starport Region 2"),
 
-
-    #----- Planet Metropolis -----#
+    # ----- Planet Metropolis -----#
     "Metropolis: Received Map-O-Matic": LocData(50001430, "Metropolis Region 2"),
     "Metropolis: T-Bolt: Across the Gap": LocData(50001431, "Metropolis Region 1"),
     "Metropolis: T-Bolt: Right of the Balcony": LocData(50001432, "Metropolis Region 2"),
@@ -217,14 +220,14 @@ rac3_locations = {
     "Metropolis: Metro Storm Mission 05": LocData(50001439, "Metropolis Region 2"),
     "Metropolis: 2002 was a good year in the city": LocData(50001627, "Metropolis Region 1"),
 
-    #----- Planet Zeldrin -----#
+    # ----- Planet Zeldrin -----#
     "Zeldrin: Received Nano-Pak": LocData(50001450, "Zeldrin"),
     "Zeldrin: T-Bolt: Turn Around": LocData(50001451, "Zeldrin"),
     "Zeldrin: Infobot: Aridia": LocData(50001452, "Zeldrin"),
     "Zeldrin: Suck it up!": LocData(50001629, "Zeldrin"),
     "Zeldrin: Aim High": LocData(50001635, "Zeldrin"),
 
-    #----- Planet Aridia -----#
+    # ----- Planet Aridia -----#
     "Aridia: Received Warp Pad": LocData(50001470, "Aridia"),
     "Aridia: Received Qwack-O-Ray": LocData(50001471, "Aridia"),
     "Aridia: T-Bolt: Under the Bridge (Assassionation)": LocData(50001472, "Aridia"),
@@ -237,18 +240,18 @@ rac3_locations = {
     "Aridia: Go for hang time": LocData(50001630, "Aridia"),
     "Aridia: Zap back at ya'": LocData(50001631, "Aridia"),
 
-    #----- Qwark's Hideout -----#
+    # ----- Qwark's Hideout -----#
     "Qwark's_Hideout: Received Gadgetron PDA": LocData(50001490, "Qwarks Hideout"),
     "Qwark's_Hideout: T-Bolt: Glide from the Ramp": LocData(50001491, "Qwarks Hideout"),
     "Qwark's_Hideout: Break the Dan": LocData(50001632, "Qwarks Hideout"),
 
-    #----- Planet Koros -----#
+    # ----- Planet Koros -----#
     "Koros: T-Bolt: Behind the Metal Fence": LocData(50001493, "Koros"),
     "Koros: T-Bolt: Pair of Towers": LocData(50001494, "Koros"),
     "Koros: Infobot: Mylon": LocData(50001495, "Koros"),
     "Koros: You break it, you win it": LocData(50001626, "Koros"),
 
-    #----- Planet Mylon -----#
+    # ----- Planet Mylon -----#
     "Mylon: T-Bolt: Behind the Forcefield": LocData(50001496, "Mylon"),
     "Mylon: Dr. Nefarious Defeated!": LocData(50001497, "Mylon"),
     "Mylon: Biobliterator Defeated!": LocData(50001498, "Mylon"),
@@ -369,15 +372,16 @@ location_table = {
     # **weapon_upgrades
 }
 
-#class EventData(NamedTuple):
+
+# class EventData(NamedTuple):
 #    name:       str
 #    ap_code:    Optional[int] = None
-#class LocData(NamedTuple):
+# class LocData(NamedTuple):
 #    ap_code: Optional[int]
 #    region: Optional[str]
 def get_level_locations(region):
     return map(lambda l: l[0], get_level_location_data(region))
 
+
 def get_level_location_data(region):
     return filter(lambda l: l[1].region == (region), location_table.items())
-

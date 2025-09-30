@@ -6,16 +6,16 @@ from .Locations import location_table
 if TYPE_CHECKING:
     from . import RaC3World
 
-def create_regions(world: "RaC3World"):
 
-    #----- Introduction Sequence -----#
+def create_regions(world: "RaC3World"):
+    # ----- Introduction Sequence -----#
     menu = create_region(world, "Menu")
     veldin = create_region_and_connect(world, "Veldin", "Menu -> Veldin", menu)
     florana = create_region_and_connect(world, "Florana", "Veldin -> Florana", veldin)
     starship_phoenix = create_region_and_connect(world, "Starship Phoenix", "Florana -> Starship Phoenix", florana)
     starship_phoenix.connect(florana, "Starship Phoenix -> Florana")
 
-    #----- Regions within the game -----#
+    # ----- Regions within the game -----#
     marcadia_first_half = create_region(world, "Marcadia Region 1")
     annihilation_nation = create_region(world, "Annihilation Nation")
     aquatos = create_region(world, "Aquatos")
@@ -31,9 +31,9 @@ def create_regions(world: "RaC3World"):
     aridia = create_region(world, "Aridia")
     qwarks_hideout = create_region(world, "Qwarks Hideout")
     koros = create_region(world, "Koros")
-    mylon = create_region(world, "Mylon") #Victory Location
+    mylon = create_region(world, "Mylon")  # Victory Location
 
-    #----- Connecting everything to Starship Phoenix -----#
+    # ----- Connecting everything to Starship Phoenix -----#
     starship_phoenix.connect(marcadia_first_half, "Starship Phoenix -> Marcadia")
     starship_phoenix.connect(annihilation_nation, "Starship Phoenix -> Annihilation Nation")
     starship_phoenix.connect(aquatos, "Starship Phoenix -> Aquatos")
@@ -51,35 +51,41 @@ def create_regions(world: "RaC3World"):
     starship_phoenix.connect(koros, "Starship Phoenix -> Koros")
     starship_phoenix.connect(mylon, "Starship Phoenix -> Mylon")
 
-    #----- Split planet connections for gadget reasons -----#
+    # ----- Split planet connections for gadget reasons -----#
 
-    #Marcadia later part requires Grav Boots for titan bolts
+    # Marcadia later part requires Grav Boots for titan bolts
     marcadia_second_half = create_region(world, "Marcadia Region 2")
-    marcadia_first_half.connect(marcadia_second_half, rule=lambda state: state.has("Refractor", world.player) and state.has("Gravity-Boots", world.player)),
+    marcadia_first_half.connect(marcadia_second_half,
+                                rule=lambda state: state.has("Refractor", world.player)
+                                                   and state.has("Gravity-Boots", world.player)),
 
     # Anihilation mission is shown after Daxx Region2
     annihilation_nation_second_half = create_region(world, "Annihilation Nation 2")
-    annihilation_nation.connect(annihilation_nation_second_half, rule=lambda state: state.can_reach("Daxx Region 2", player=world.player)),
+    annihilation_nation.connect(annihilation_nation_second_half,
+                                rule=lambda state: state.can_reach("Daxx Region 2", player=world.player)),
 
     tyhrranosis_second_half = create_region(world, "Tyhrranosis Region 2")
-    tyhrranosis.connect(tyhrranosis_second_half, rule=lambda state: state.can_reach("Tyhrranosis", player=world.player)),
+    tyhrranosis.connect(tyhrranosis_second_half,
+                        rule=lambda state: state.can_reach("Tyhrranosis", player=world.player)),
 
-    #You can get the charge boots without hacker or hypershot
+    # You can get the charge boots without hacker or hypershot
     daxx_second_half = create_region(world, "Daxx Region 2")
-    daxx_first_half.connect(daxx_second_half, rule=lambda state: state.has("Hypershot", world.player) and state.has("Hacker", world.player)),
+    daxx_first_half.connect(daxx_second_half,
+                            rule=lambda state: state.has("Hypershot", world.player)
+                                               and state.has("Hacker", world.player)),
 
-
-    #You can do the Qwark half of Zeldrin Starport with no other requirements
+    # You can do the Qwark half of Zeldrin Starport with no other requirements
     zeldrin_starport_second_half = create_region(world, "Zeldrin Starport Region 2")
-    zeldrin_starport_first_half.connect(zeldrin_starport_second_half, rule=lambda state: state.has("Hypershot", world.player)),
+    zeldrin_starport_first_half.connect(zeldrin_starport_second_half,
+                                        rule=lambda state: state.has("Hypershot", world.player)),
 
-    #You can get Metal-Noids in metropolis with no other requirements
+    # You can get Metal-Noids in metropolis with no other requirements
     metropolis_second_half = create_region(world, "Metropolis Region 2")
-    metropolis_first_half.connect(metropolis_second_half, rule=lambda state: state.has("Gravity-Boots", world.player) and state.has("Refractor", world.player)),
+    metropolis_first_half.connect(metropolis_second_half,
+                                  rule=lambda state: state.has("Gravity-Boots", world.player)
+                                                     and state.has("Refractor", world.player)),
 
-
-
-    #----- Dummy regions for weapon upgrade organization -----#
+    # ----- Dummy regions for weapon upgrade organization -----#
 
     shock_blaster_upgrades = create_region(world, "Shock Blaster Upgrades")
     menu.connect(shock_blaster_upgrades, rule=lambda state: state.has("Shock Blaster", world.player)),
@@ -140,7 +146,6 @@ def create_regions(world: "RaC3World"):
 
     plasma_coil_upgrades = create_region(world, "Plasma Coil Upgrades")
     menu.connect(plasma_coil_upgrades, rule=lambda state: state.has("Plasma Coil", world.player))
-
 
 
 def create_region(world: "RaC3World", name: str) -> Region:

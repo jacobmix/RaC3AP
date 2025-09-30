@@ -151,12 +151,8 @@ post_planets = {
     "Infobot: Koros": ItemData(50001466, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 9
     "Infobot: Mylon": ItemData(50001467, ItemClassification.progression, 1),  # Post-Koros
 }
-qwark_vidcomics = {
-    "Qwark Vidcomic 1": ItemData(50001475, ItemClassification.progression, 1),
-    "Qwark Vidcomic 2": ItemData(50001476, ItemClassification.progression, 1),
-    "Qwark Vidcomic 3": ItemData(50001477, ItemClassification.progression, 1),
-    "Qwark Vidcomic 4": ItemData(50001478, ItemClassification.progression, 1),
-    "Qwark Vidcomic 5": ItemData(50001479, ItemClassification.progression, 1),
+progressive_vidcomics = {
+    "Progressive Vidcomic": ItemData(50001475, ItemClassification.progression, 5),
 }
 
 progressive_armor = {
@@ -187,7 +183,7 @@ item_table = {
     **progressive_weapons,
     **gadget_items,
     **post_planets,
-    **qwark_vidcomics,
+    **progressive_vidcomics,
     **progressive_armor,
     **t_bolts,
     **junk_items,
