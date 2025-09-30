@@ -1,0 +1,422 @@
+{
+  "tracker_default": {
+    "type": "container",
+    "background": "#604020",
+    "content": {
+      "type": "dock",
+      "dropshadow": true,
+      "content": [
+        {
+          "type": "dock",
+          "dock": "bottom",
+          "content": [
+            {
+              "type": "group",
+              "header": "Items",
+              "dock": "left",
+              "content": {
+                "type": "layout",
+                "key": "items_grid"
+              }
+            },
+            {
+              "type": "group",
+              "header": "Planets",
+              "dock": "left",
+              "content": {
+                "type": "layout",
+                "key": "planets_grid"
+              }
+            }
+          ]
+        },
+        {
+          "type": "tabbed",
+          "tabs": [
+            {
+              "title": "Veldin/Florana",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Veldin",
+                  "Florana"
+                ]
+              }
+            },
+            {
+              "title": "Phoenix",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Phoenix1",
+                  "Phoenix2"
+                ]
+              }
+            },
+            {
+              "title": "Marcadia",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Marcadia"
+                ]
+              }
+            },
+            {
+              "title": "Annihilation Nation",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Annihilation"
+                ]
+              }
+            },
+            {
+              "title": "Aquatos",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Aquatos1",
+                  "Aquatos2",
+                  "Aquatos3"
+                ]
+              }
+            },
+            {
+              "title": "Tyhrranosis",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Tyhrranosis1",
+                  "Tyhrranosis2"
+                ]
+              }
+            },
+            {
+              "title": "Daxx",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Daxx"
+                ]
+              }
+            },
+            {
+              "title": "Obani Gemini",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Gemini",
+                  "Pollux"
+                ]
+              }
+            },
+            {
+              "title": "Blackwater City",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Rilgar"
+                ]
+              }
+            },
+            {
+              "title": "Holostar Studios",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Holostar",
+                  "HolostarCrank"
+                ]
+              }
+            },
+            {
+              "title": "Obani Draco",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "ObaniDraco"
+                ]
+              }
+            },
+            {
+              "title": "Zeldrin Starport",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "ZeldrinStarport"
+                ]
+              }
+            },
+            {
+              "title": "Metropolis",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Metropolis",
+                  "MetropolisMission"
+                ]
+              }
+            },
+            {
+              "title": "Crash Site",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Zeldrin"
+                ]
+              }
+            },
+            {
+              "title": "Aridia",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Aridia"
+                ]
+              }
+            },
+            {
+              "title": "Qwark's Hideout",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "QwarksHideout"
+                ]
+              }
+            },
+            {
+              "title": "Koros",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Koros"
+                ]
+              }
+            },
+            {
+              "title": "Command Center",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Mylon",
+                  "last1"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "tracker_horizontal": {
+    "type": "container",
+    "background": "#604020",
+    "content": {
+      "type": "dock",
+      "dropshadow": true,
+      "content": [
+        {
+          "type": "dock",
+          "dock": "bottom",
+          "content": [
+            {
+              "type": "group",
+              "header": "Items",
+              "dock": "left",
+              "content": {
+                "type": "layout",
+                "key": "items_grid"
+              }
+            },
+            {
+              "type": "group",
+              "header": "Planets",
+              "dock": "left",
+              "content": {
+                "type": "layout",
+                "key": "planets_grid"
+              }
+            }
+          ]
+        },
+        {
+          "type": "tabbed",
+          "tabs": [
+            {
+              "title": "Veldin/Florana",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Veldin",
+                  "Florana"
+                ]
+              }
+            },
+            {
+              "title": "Phoenix",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Phoenix1",
+                  "Phoenix2"
+                ]
+              }
+            },
+            {
+              "title": "Marcadia",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Marcadia"
+                ]
+              }
+            },
+            {
+              "title": "Annihilation Nation",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Annihilation"
+                ]
+              }
+            },
+            {
+              "title": "Aquatos",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Aquatos1",
+                  "Aquatos2",
+                  "Aquatos3"
+                ]
+              }
+            },
+            {
+              "title": "Tyhrranosis",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Tyhrranosis1",
+                  "Tyhrranosis2"
+                ]
+              }
+            },
+            {
+              "title": "Daxx",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Daxx"
+                ]
+              }
+            },
+            {
+              "title": "Obani Gemini",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Gemini",
+                  "Pollux"
+                ]
+              }
+            },
+            {
+              "title": "Blackwater City",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Rilgar"
+                ]
+              }
+            },
+            {
+              "title": "Holostar Studios",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Holostar",
+                  "HolostarCrank"
+                ]
+              }
+            },
+            {
+              "title": "Obani Draco",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "ObaniDraco"
+                ]
+              }
+            },
+            {
+              "title": "Zeldrin Starport",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "ZeldrinStarport"
+                ]
+              }
+            },
+            {
+              "title": "Metropolis",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Metropolis",
+                  "MetropolisMission"
+                ]
+              }
+            },
+            {
+              "title": "Crash Site",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Zeldrin"
+                ]
+              }
+            },
+            {
+              "title": "Aridia",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Aridia"
+                ]
+              }
+            },
+            {
+              "title": "Qwark's Hideout",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "QwarksHideout"
+                ]
+              }
+            },
+            {
+              "title": "Koros",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Koros"
+                ]
+              }
+            },
+            {
+              "title": "Command Center",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Mylon",
+                  "last1"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

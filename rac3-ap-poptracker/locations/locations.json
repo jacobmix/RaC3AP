@@ -1,0 +1,1231 @@
+[
+  {"name": "Veldin",
+  "children":[
+    {
+      "name": "Recruitment",
+      "map_locations": [
+        {
+          "map": "Veldin",
+            "x": 365,
+            "y": 425
+
+        }
+      ],
+        "sections": [
+          {
+            "name": "Received Shock Blaster",
+            "item_count": 1
+          }
+        ]
+      },
+    {
+      "name": "Rangers",
+      "map_locations": [
+        {
+          "map": "Veldin",
+            "x": 364,
+            "y": 358
+
+        }
+      ],
+        "sections": [
+          {
+            "name": "Received Nitro Launcher",
+            "item_count": 1
+          }
+        ]
+      },
+    {
+      "name": "Save Veldin!",
+      "map_locations": [
+        {
+          "map": "Veldin",
+            "x": 178,
+            "y": 102
+
+        }
+      ],
+        "sections": [
+          {
+            "name": "Infobot: Florana",
+            "item_count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Florana",
+    "children": [
+      {
+        "name": "Vendor",
+        "map_locations": [
+          {
+            "map": "Florana",
+            "x": 137,
+            "y": 77
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Plasma Whip",
+            "item_count": 1
+          },
+          {
+            "name": "Received N60 Storm",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Below Vendor",
+        "map_locations": [
+          {
+            "map": "Florana",
+            "x": 228,
+            "y": 197
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Middle of Path of Death",
+        "map_locations": [
+          {
+            "map": "Florana",
+            "x": 335,
+            "y": 299
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Path of Death End",
+        "map_locations": [
+          {
+            "map": "Florana",
+            "x": 424,
+            "y": 425
+          }
+        ],
+        "sections": [
+          {
+            "name": "Stay Squeaky Clean (SP)",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Walk the PATH OF DEATH!",
+        "map_locations": [
+          {
+            "map": "Florana",
+            "x": 392,
+            "y": 460
+          }
+        ],
+        "sections": [
+          {
+            "name": "Infobot: Starship Phoenix",
+            "item_count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Phoenix",
+    "children": [
+      {
+        "name": "Vendor",
+        "map_locations": [
+          {
+            "map": "Phoenix1",
+            "x": 429,
+            "y": 400
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received SUCC Cannon",
+            "item_count": 1
+          },
+          {
+            "name": "Received Infector",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "VR Training",
+        "map_locations": [
+          {
+            "map": "Phoenix1",
+            "x": 310,
+            "y": 336
+          }
+        ],
+        "sections": [
+          {
+            "name": "Gadget Training Titanium Bolt",
+            "item_count": 1
+          },
+          {
+            "name": "Nerves Titanium Bolt",
+            "item_count": 1
+          },
+          {
+            "name": "Beat Helga's Best Time (SP)",
+            "item_count": 1
+          },
+          {
+            "name": "VR Gadget Training",
+            "item_count": 1
+          },
+          {
+            "name": "Received Hacker",
+            "item_count": 1
+          },
+          {
+            "name": "Received Hypershot",
+            "item_count": 1
+          },
+          {
+            "name": "Warm Up",
+            "item_count": 1
+          },
+          {
+            "name": "Don't Look Down",
+            "item_count": 1
+          },
+          {
+            "name": "Speed Round",
+            "item_count": 1
+          },
+          {
+            "name": "Hot Stepper",
+            "item_count": 1
+          },
+          {
+            "name": "90 Second Slayer",
+            "item_count": 1
+          },
+          {
+            "name": "The Shocker",
+            "item_count": 1
+          },
+          {
+            "name": "Wrench Beatdown",
+            "item_count": 1
+          },
+          {
+            "name": "Nerves of Titanium",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Armor Vendor",
+        "map_locations": [
+          {
+            "map": "Phoenix1",
+            "x": 429,
+            "y": 361
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Magna Plate Armor",
+            "item_count": 1
+          },
+          {
+            "name": "Received Adamantine Armor",
+            "item_count": 1
+          },
+          {
+            "name": "Received Aegis Mark V Armor",
+            "item_count": 1
+          },
+          {
+            "name": "Received Infernox Armor",
+            "item_count": 1
+          },
+          {
+            "name": "Turn Up The Heat! (SP)",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Phoenix Infobots",
+        "map_locations": [
+          {
+            "map": "Phoenix1",
+            "x": 382,
+            "y": 494
+          }
+        ],
+        "sections": [
+          {
+            "name": "Infobot: Marcadia",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Annihilation Nation",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Aquatos",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Tyhrranosis",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Daxx",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Kerwan",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Zeldrin",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Qwarks Hideout",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Received Vid Comics",
+        "map_locations": [
+          {
+            "map": "Phoenix1",
+            "x": 381,
+            "y": 315
+          }
+        ],
+        "sections": [
+          {
+            "name": "Qwark Vidcomic 4",
+            "item_count": 1
+          },
+          {
+            "name": "Qwark Vidcomic 4",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Quark Vid Comics",
+        "map_locations": [
+          {
+            "map": "Phoenix1",
+            "x": 241,
+            "y": 362
+          }
+        ],
+        "sections": [
+          {
+            "name": "Qwark Vidcomic 1 Clear",
+            "item_count": 1
+          },
+          {
+            "name": "Pirate booty - set a new record for qwark (SP)",
+            "item_count": 1
+          },
+          {
+            "name": "Qwark Vidcomic 2 Clear",
+            "item_count": 1
+          },
+          {
+            "name": "Arriba Amoeba! - set a new record for qwark (SP)",
+            "item_count": 1
+          },
+          {
+            "name": "Qwark Vidcomic 3 Clear",
+            "item_count": 1
+          },
+          {
+            "name": "Shadow of the robot - set a new record for qwark (SP)",
+            "item_count": 1
+          },
+          {
+            "name": "Qwark Vidcomic 4 Clear",
+            "item_count": 1
+          },
+          {
+            "name": "Deja Q All over Again - set a new record for qwark (SP)",
+            "item_count": 1
+          },
+          {
+            "name": "Qwark Vidcomic 5 Clear",
+            "item_count": 1
+          },
+          {
+            "name": "The Shaming of the Q - set a new record for qwark (SP)",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Bridge",
+        "map_locations": [
+          {
+            "map": "Phoenix1",
+            "x": 382,
+            "y": 40
+          }
+        ],
+        "sections": [
+          {
+            "name": "Monkeying Around (SP)",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Get to the Bridge",
+        "map_locations": [
+          {
+            "map": "Phoenix2",
+            "x": 382,
+            "y": 40
+          }
+        ],
+        "sections": [
+          {
+            "name": "Infobot: Koros",
+            "item_count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Marcadia",
+        "access_rules":[
+            "Marcadia"
+        ],
+    "children": [
+      {
+        "name": "Vendor",
+        "map_locations": [
+          {
+            "map": "Marcadia",
+            "x": 107,
+            "y": 386
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Spitting Hydra",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Laser Defense Facility",
+        "map_locations": [
+          {
+            "map": "Marcadia",
+            "x": 33,
+            "y": 30
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Refractor",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Repair the Laser Defense Shield",
+        "map_locations": [
+          {
+            "map": "Marcadia",
+            "x": 232,
+            "y": 74
+          }
+        ],
+        "sections": [
+          {
+            "name": "Qwark Vidcomic 1",
+            "item_count": 1
+          },
+          {
+            "name": "Reflect on how to score (SP)",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "After Pool of Water",
+        "map_locations": [
+          {
+            "map": "Marcadia",
+            "x": 443,
+            "y": 351
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Last Refractor Room",
+        "map_locations": [
+          {
+            "map": "Marcadia",
+            "x": 228,
+            "y": 180
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Ceiling just before Al",
+        "map_locations": [
+          {
+            "map": "Marcadia",
+            "x": 189,
+            "y": 94
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Operation: IRON SHIELD",
+        "map_locations": [
+          {
+            "map": "Marcadia",
+            "x": 403,
+            "y": 48
+          }
+        ],
+        "sections": [
+          {
+            "name": "Secure the Area",
+            "item_count": 1
+          },
+          {
+            "name": "Air Assault",
+            "item_count": 1
+          },
+          {
+            "name": "Turret Command",
+            "item_count": 1
+          },
+          {
+            "name": "Under the Gun",
+            "item_count": 1
+          },
+          {
+            "name": "Hit n' Run",
+            "item_count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Annihilation Nation",
+        "access_rules":[
+            "Annihilation"
+        ],
+    "children": [
+      
+    ]
+  },
+  {
+    "name": "Aquatos",
+        "access_rules":[
+            "Aquatos"
+        ],
+    "children": [
+      {
+        "name": "Vendor",
+        "map_locations": [
+          {
+            "map": "Aquatos1",
+            "x": 45,
+            "y": 371
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Flux Rifle",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Under the Bridge",
+        "map_locations": [
+          {
+            "map": "Aquatos1",
+            "x": 414,
+            "y": 316
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Underwater Bolt",
+        "map_locations": [
+          {
+            "map": "Aquatos1",
+            "x": 477,
+            "y": 279
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Search for sunken treasure",
+        "map_locations": [
+          {
+            "map": "Aquatos1",
+            "x": 446,
+            "y": 210
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Behind the Locked Gate",
+        "map_locations": [
+          {
+            "map": "Aquatos1",
+            "x": 222,
+            "y": 196
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Top Left Bolt",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 225,
+            "y": 64
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Swinging Bolt",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 358,
+            "y": 255
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Gather Sewer Crystals",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 39,
+            "y": 295
+          }
+        ],
+        "sections": [
+          {
+            "name": "1 Sewer Crystal Traded",
+            "item_count": 1
+          },
+          {
+            "name": "5 Sewer Crystals Traded",
+            "item_count": 1
+          },
+          {
+            "name": "10 Sewer Crystals Traded",
+            "item_count": 1
+          },
+          {
+            "name": "20 Sewer Crystals Traded",
+            "item_count": 1
+          },
+          {
+            "name": "Hit the motherload",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Slim Cognito",
+        "map_locations": [
+          {
+            "map": "Aquatos1",
+            "x": 347,
+            "y": 70
+          }
+        ],
+        "sections": [
+          {
+            "name": "Recieved MIniturret Glove",
+            "item_count": 1
+          },
+          {
+            "name": "Recieved Lava Gun",
+            "item_count": 1
+          },
+          {
+            "name": "Recieved Bouncer",
+            "item_count": 1
+          },
+          {
+            "name": "Recieved Plasma Coil",
+            "item_count": 1
+          },
+          {
+            "name": "Recieved Shield Charger",
+            "item_count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Tyhrranosis",
+        "access_rules":[
+            "Tyhrranosis"
+        ],
+    "children": [
+      {
+        "name": "Vendor",
+        "map_locations": [
+          {
+            "map": "Tyhrranosis1",
+            "x": 264,
+            "y": 326
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Annihilator",
+            "item_count": 1
+          },
+          {
+            "name": "Received Holo-Shield Glove",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Korgon Base",
+        "map_locations": [
+          {
+            "map": "Tyhrranosis1",
+            "x": 234,
+            "y": 172
+          }
+        ],
+        "sections": [
+          {
+            "name": "Be a Sharpshooter (SP)",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Destroy the Momma Tyhrranoid",
+        "map_locations": [
+          {
+            "map": "Tyhrranosis1",
+            "x": 210,
+            "y": 83
+          }
+        ],
+        "sections": [
+          {
+            "name": "IRON. HARD. ABS.",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "South East Cannon",
+        "map_locations": [
+          {
+            "map": "Tyhrranosis1",
+            "x": 465,
+            "y": 339
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Underground Cave Bolt",
+        "map_locations": [
+          {
+            "map": "Tyhrranosis1",
+            "x": 55,
+            "y": 110
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Operation: ISLAND STRIKE",
+        "map_locations": [
+          {
+            "map": "Tyhrranosis2",
+            "x": 250,
+            "y": 179
+          }
+        ],
+        "sections": [
+          {
+            "name": "Assault on Kavu Island",
+            "item_count": 1
+          },
+          {
+            "name": "Dogfight over Kavu Island",
+            "item_count": 1
+          },
+          {
+            "name": "Operation Thunderbolt",
+            "item_count": 1
+          },
+          {
+            "name": "The Final Battle",
+            "item_count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Obani Moons",
+        "access_rules":[
+            "Refractor, ObaniGemini"
+        ],
+    "children": [
+      {
+        "name": "Vendor",
+        "map_locations": [
+          {
+            "map": "Gemini",
+            "x": 383,
+            "y": 280
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Disk Blade Gun",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Follow the Lava",
+        "map_locations": [
+          {
+            "map": "Gemini",
+            "x": 365,
+            "y": 411
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ],
+          "access_rules":[
+            "Hypershot"
+        ]
+      },
+      {
+        "name": "Gemini Belt",
+        "map_locations": [
+          {
+            "map": "Gemini",
+            "x": 35,
+            "y": 110
+          }
+        ],
+        "sections": [
+          {
+            "name": "Get to the belt (SP)",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Between the Twin Towers",
+        "map_locations": [
+          {
+            "map": "Pollux",
+            "x": 384,
+            "y": 224
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Explore the Second Moon",
+        "map_locations": [
+          {
+            "map": "Pollux",
+            "x": 138,
+            "y": 471
+          }
+        ],
+        "sections": [
+          {
+            "name": "Infobot: Rilgar",
+            "item_count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Rilgar",
+        "access_rules":[
+            "Rilgar"
+        ],
+    "children": [
+      {
+        "name": "Blackwater City",
+        "map_locations": [
+          {
+            "map": "Rilgar",
+            "x": 256,
+            "y": 430
+          }
+        ],
+        "sections": [
+          {
+            "name": "Bash the party (SP)",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Save Blackwater City",
+        "map_locations": [
+          {
+            "map": "Rilgar",
+            "x": 256,
+            "y": 203
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Grav Boots",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Holostar Studios",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Operation: BLACK TIDE",
+        "map_locations": [
+          {
+            "map": "Rilgar",
+            "x": 256,
+            "y": 60
+          }
+        ],
+        "sections": [
+          {
+            "name": "The Battle of Blackwater City",
+            "item_count": 1
+          },
+          {
+            "name": "The Bridge",
+            "item_count": 1
+          },
+          {
+            "name": "Counterattack",
+            "item_count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Holostar Studios",
+        "access_rules":[
+            "Holostar"
+        ],
+    "children": [
+      {
+        "name": "Clank's New Pair of Shoes",
+        "map_locations": [
+          {
+            "map": "HolostarCrank",
+            "x": 22,
+            "y": 242
+          }
+        ],
+        "sections": [
+          {
+            "name": "Feeling Lucky (SP)",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Ratchet's New Pair of Shoes",
+        "map_locations": [
+          {
+            "map": "Holostar",
+            "x": 334,
+            "y": 234
+          }
+        ],
+        "sections": [
+          {
+            "name": "Feeling Lucky (SP)",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Vendor",
+        "map_locations": [
+          {
+            "map": "Holostar",
+            "x": 154,
+            "y": 156
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Rift Inducer",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Atop the Chairs",
+        "map_locations": [
+          {
+            "map": "Holostar",
+            "x": 298,
+            "y": 239
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Lot 42's Grav Ramp",
+        "map_locations": [
+          {
+            "map": "Holostar",
+            "x": 56,
+            "y": 186
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Kamikaze Noids",
+        "map_locations": [
+          {
+            "map": "Holostar",
+            "x": 117,
+            "y": 162
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Escape the Tyhrranoid Ambush",
+        "map_locations": [
+          {
+            "map": "Holostar",
+            "x": 122,
+            "y": 297
+          }
+        ],
+        "sections": [
+          {
+            "name": "Infobot: Obani Draco",
+            "item_count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Obani Draco",
+        "access_rules":[
+            "ObaniDraco"
+        ],
+    "children": [
+      {
+        "name": "Beat Courtney Gears",
+        "map_locations": [
+          {
+            "map": "ObaniDraco",
+            "x": 401,
+            "y": 191
+          }
+        ],
+        "sections": [
+          {
+            "name": "Infobot: Zeldrin Starport",
+            "item_count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Zeldrin Starport",
+        "access_rules":[
+            "ZeldrinStartport"
+        ],
+    "children": [
+      {
+        "name": "Go to the Zeldrin Starport",
+        "map_locations": [
+          {
+            "map": "ZeldrinStarport",
+            "x": 334,
+            "y": 352
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Bolt Grabber V2",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Inside the Second Ship",
+        "map_locations": [
+          {
+            "map": "ZeldrinStarport",
+            "x": 92,
+            "y": 165
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Atop the Twin Shooters",
+        "map_locations": [
+          {
+            "map": "ZeldrinStarport",
+            "x": 19,
+            "y": 339
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ]
+      }
+    ]
+  }
+]
