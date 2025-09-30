@@ -441,7 +441,7 @@ LOCATIONS = [
     "Id": 50001025,
     "Address": "0x00142C29",
     "CheckType": 0,
-    "AddressBit": 0
+    "AddressBit": 3 # 0x8 = 0b00001000
   },
   {
     "Name": "Infobot: Crash Site",
