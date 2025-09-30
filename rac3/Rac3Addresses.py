@@ -439,7 +439,7 @@ LOCATIONS = [
   {
     "Name": "Infobot: Obani Gemini",
     "Id": 50001025,
-    "Address": "0x0014553B",
+    "Address": "0x00142C29",
     "CheckType": 0,
     "AddressBit": 0
   },
@@ -908,9 +908,9 @@ LOCATIONS = [
     "Name": "Post-Daxx",
     "Id": 50001323,
     # "Address": "0x00143B39", #  ??
-    "Address": "0x00142C2D", #  Daxx Courtney Room
+    "Address": "0x0014275B", #  Daxx Courtney Room
     "CheckType": 0,
-    "AddressBit": 6 #  0x60: 0XX0_0000
+    "AddressBit": 0
   },
   {
     "Name": "Received Disk Blade Gun",
