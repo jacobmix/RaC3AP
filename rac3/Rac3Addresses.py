@@ -43,7 +43,7 @@ ADDRESSES = {
       "Hypershot":       {"unlockAddress": 0x00142CAB, "id": 11,    },
       "Refractor":       {"unlockAddress": 0x00142CB2, "id": 18,    },
       "Tyhrra-Guise":    {"unlockAddress": 0x00142CBE, "id": 30,    },
-      "Grav-Boots":      {"unlockAddress": 0x00142CAD, "id": 0,    },
+      "Gravity-Boots":      {"unlockAddress": 0x00142CAD, "id": 0,    },
       "Bolt Grabber V2": {"unlockAddress": 0x00142CA7, "id": 0,    },
       "Map-O-Matic":     {"unlockAddress": 0x00142CA5, "id": 0,    },
       "Nano Pak":        {"unlockAddress": 0x00142CC0, "id": 0,    },
@@ -139,7 +139,7 @@ ADDRESSES = {
       "Hypershot":         {"unlockAddress": 0x00142CAB, "id": 11,    },
       "Refractor":         {"unlockAddress": 0x00142CB2, "id": 18,    },
       "Tyhrra-Guise":      {"unlockAddress": 0x00142CBE, "id": 30,    },
-      "Grav-Boots":        {"unlockAddress": 0x00142CAD, "id": 0,    },
+      "Gravity-Boots":        {"unlockAddress": 0x00142CAD, "id": 0,    },
       "Bolt Grabber V2":   {"unlockAddress": 0x00142CA7, "id": 0,    },
       "Hyperstrike Smash": {"unlockAddress": 0x00142CBA, "id": 0,    },
       "Map-O-Matic":       {"unlockAddress": 0x00142CA5, "id": 0,    },
@@ -1888,7 +1888,7 @@ LOCATIONS = [
   {
     "Name": "Operation BLACK TIDE: Counterattack",
     "Id": 50001367,
-    "Address": "0x00142C40", # As same as Grav-boots event
+    "Address": "0x00142C40", # As same as Gravity-Boots event
     "CheckType": 0,
     "AddressBit": 3
   },
