@@ -192,6 +192,7 @@ ADDRESSES = {
       0x001D4C80, 0x001D4C84, 0x001D4C88, 0x001D4C8C,
       0x001D4C90, 0x001D4C94, 0x001D4C98, 0x001D4C9C,
     ],
+    "MainMenu": 0x0016C598,
     "CurrentEquipped": 0x001D4C40,
     "HoldingWeapon": 0x001A5E08,
     "LastUsed": [0x00142670, 0x00142674, 0x00142678],
@@ -202,7 +203,11 @@ ADDRESSES = {
     "JackpotTimer": 0x001A4E10,
     "InfernoTimer": 0x001A4E14,
     "NanotechExp": 0x00142694,
+    "CurrentHealth": 0x001A7430,
+    "MaxHealth": 0x001A7438,
     "CurrentPlanet": 0x001D545C,
+    "SewerCrystalsInPossession": 0x001426A2,
+    "Robonoids active": 0x0014275C,
     "Skill Points": {
         "Go for hang time": 0x001D54B0,
         "Stay Squeaky Clean": 0x001D54B1,
@@ -242,6 +247,10 @@ ADDRESSES = {
         "Defeat Qwark": 0x001426E7,
         "Take Qwark to Cage": 0x001426E8,
         "Meet Sasha bridge": 0x001426E9 
+    },
+    "Enemies":{
+        "First of two noids - Mylon Landing Point": 0x001C169E,
+        "Second of two noids - Mylon Landing Point": 0x001C16F4
     }
   }
 }
