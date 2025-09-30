@@ -84,22 +84,22 @@
     "img": "images/maps/Pollux.png"
   },
   {
-    "name": "Holostar",
+    "name": "Holostar1",
     "location_size": 28,
     "location_border_thickness": 4,
-    "img": "images/maps/Holostar.png"
+    "img": "images/maps/Holostar1.png"
   },
   {
-    "name": "HolostarCrank",
+    "name": "Holostar2",
     "location_size": 28,
     "location_border_thickness": 4,
-    "img": "images/maps/HolostarCrank.png"
+    "img": "images/maps/Holostar2.png"
   },
   {
-    "name": "Rilgar",
+    "name": "Blackwater",
     "location_size": 28,
     "location_border_thickness": 4,
-    "img": "images/maps/Rilgar.png"
+    "img": "images/maps/Blackwater.png"
   },
   {
     "name": "ObaniDraco",
@@ -114,22 +114,22 @@
     "img": "images/maps/ZeldrinStarport.png"
   },
   {
-    "name": "Metropolis",
+    "name": "Metropolis1",
     "location_size": 28,
     "location_border_thickness": 4,
-    "img": "images/maps/Metropolis.png"
+    "img": "images/maps/Metropolis1.png"
   },
   {
-    "name": "MetropolisMission",
+    "name": "Metropolis2",
     "location_size": 28,
     "location_border_thickness": 4,
-    "img": "images/maps/MetropolisMission.png"
+    "img": "images/maps/Metropolis2.png"
   },
   {
-    "name": "Zeldrin",
+    "name": "CrashSite",
     "location_size": 28,
     "location_border_thickness": 4,
-    "img": "images/maps/Zeldrin.png"
+    "img": "images/maps/CrashSite.png"
   },
   {
     "name": "Aridia",
@@ -150,15 +150,15 @@
     "img": "images/maps/Koros.png"
   },
   {
-    "name": "Mylon",
+    "name": "CommandCenter1",
     "location_size": 28,
     "location_border_thickness": 4,
-    "img": "images/maps/Mylon.png"
+    "img": "images/maps/CommandCenter1.png"
   },
   {
-    "name": "last1",
+    "name": "CommandCenter2",
     "location_size": 28,
     "location_border_thickness": 4,
-    "img": "images/maps/last1.png"
+    "img": "images/maps/CommandCenter2.png"
   }
 ]

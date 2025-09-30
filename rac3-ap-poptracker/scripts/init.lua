@@ -39,6 +39,37 @@ Tracker:AddLayouts("layouts/planets.json")
 Tracker:AddLayouts("layouts/tracker.json")
 Tracker:AddLayouts("layouts/broadcast.json")
 
+print("------------------------DEBUG-----------------------")
+-- Table of All Planets
+Planets = {
+    "Marcadia",
+    "Annihilation",
+    "Aquatos",
+    "Tyhrranosis",
+    "Daxx",
+    "ObaniGemini",
+    "Blackwater",
+    "Holostar",
+    "ObaniDraco",
+    "ZeldrinStartport",
+    "Metropolis",
+    "CrashSite",
+    "Aridia",
+    "QwarksHideout",
+    "Koros",
+    "CommandCenter"
+}
+print("Planet list: " .. Planets[1])
+for _, name in pairs(Planets) do
+	---@type JsonItem
+	---@diagnostic disable-next-line: assign-type-mismatch
+	local infobot = Tracker:FindObjectForCode(name)
+	print("Checking: " .. name)
+	infobot.BadgeText = string.sub(name, 1, 3)
+	infobot:SetOverlayFontSize(12)
+	infobot:SetOverlayAlign("center")
+end
+
 -- AutoTracking for Poptracker
 if PopVersion and PopVersion >= "0.18.0" then
     ScriptHost:LoadScript("scripts/autotracking.lua")
