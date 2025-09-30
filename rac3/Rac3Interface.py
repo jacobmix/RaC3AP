@@ -126,7 +126,7 @@ class Rac3Interface(GameInterface):
         self.LogicFixes()
 
     def get_victory_code(self):
-        victory_name = "Mylon: Biobliterator Defeated!"  # This must can be changed by option
+        victory_name = "Command Center: Biobliterator Defeated!"  # This must can be changed by option
         return Locations.location_table[victory_name].ap_code
 
     def proc_option(self, slot_data):

@@ -76,15 +76,15 @@ ADDRESSES = {
       "Tyhrranosis" : 9,
       "Zeldrin Starport" : 10,
       "Obani Gemini" : 11,
-      "Rilgar" : 12,
+      "Blackwater City" : 12,
       "Holostar Studios" : 13,
       "Koros" : 14,
       "Metropolis" : 16,
-      "Zeldrin" : 17,
+      "Crash Site" : 17,
       "Aridia" : 18,
       "Qwarks Hideout" : 19,
       "Obani Draco" : 21,
-      "Mylon" : 22,
+      "Command Center" : 22,
       "Museum" : 24,
     },
     "QuickSelectSlots": [
@@ -173,15 +173,15 @@ ADDRESSES = {
       "Tyhrranosis" : 9,
       "Zeldrin Starport" : 10,
       "Obani Gemini" : 11,
-      "Rilgar" : 12,
+      "Blackwater City" : 12,
       "Holostar Studios" : 13,
       "Koros" : 14,
       "Metropolis" : 16,
-      "Zeldrin" : 17,
+      "Crash Site" : 17,
       "Aridia" : 18,
       "Qwarks Hideout" : 19,
       "Obani Draco" : 21,
-      "Mylon" : 22,
+      "Command Center" : 22,
       "Museum" : 24,
     },
     "QuickSelectSlots": [
@@ -250,24 +250,14 @@ LOCATIONS = [
   {
     "Name": "Received the Shock Cannon",
     "Id": 50001000,
-   "Checks": [
-      {
-        "Address": "0x00142CC7",
-        "CheckType": 0,
-        "AddressBit": 0
-      },
-      {
-        "Address": "0x001A5E08",
-        "CompareType": 0,
-        "CheckType": 1,
-        "CheckValue": "39"
-      }
-    ]
+    "Address": "0x001426E0", # Use event flag rather than weapon unlock address to avoid issues with weapon randomizer
+    "CheckType": 0,
+    "AddressBit": 0
   },
   {
     "Name": "Received Nitro Launcher",
     "Id": 50001001,
-    "Address": "0x00142D17",
+    "Address": "0x001426E1", # Use event flag rather than weapon unlock address to avoid issues with weapon randomizer
     "CheckType": 0,
     "AddressBit": 0
   },
@@ -454,7 +444,7 @@ LOCATIONS = [
     "AddressBit": 0
   },
   {
-    "Name": "Infobot: Zeldrin",
+    "Name": "Infobot: Crash Site",
     "Id": 50001026,
     #  "Address": "0x001D5541",
     "Address": "0x00142708", #  Same as defeat Giant Cronk
@@ -944,7 +934,7 @@ LOCATIONS = [
     "AddressBit": 0
   },
   {
-    "Name": "Infobot: Rilgar",
+    "Name": "Infobot: Blackwater City",
     "Id": 50001343,
     "Address": "0x00142BB2",
     "CheckType": 0,
@@ -1144,7 +1134,7 @@ LOCATIONS = [
     "AddressBit": 0
   },
   {
-    "Name": "Infobot: Mylon",
+    "Name": "Infobot: Command Center",
     "Id": 50001495,
     "Address": "0x00142C49",
     "CheckType": 0,
@@ -1847,126 +1837,126 @@ LOCATIONS = [
     "CheckValue": "1408000"
   },
   {
-    "Name": "Marcadia Mission 01",
+    "Name": "Operation IRON SHIELD: Secure the Area",
     "Id": 50001036,
     "Address": "0x00142738",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Marcadia Mission 02",
+    "Name": "Operation IRON SHIELD: Air Assault",
     "Id": 50001037,
     "Address": "0x00142739",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Marcadia Mission 03",
+    "Name": "Operation IRON SHIELD: Turret Command",
     "Id": 50001038,
     "Address": "0x0014273A",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Marcadia Mission 04",
+    "Name": "Operation IRON SHIELD: Under the Gun",
     "Id": 50001039,
     "Address": "0x0014273B",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Marcadia Mission 05",
+    "Name": "Operation IRON SHIELD: Hit n' Run",
     "Id": 50001040,
     "Address": "0x0014273C",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Rilgar Mission 01",
+    "Name": "Operation BLACK TIDE: The Battle of Blackwater City",
     "Id": 50001365,
     "Address": "0x0014273D",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Rilgar Mission 02",
+    "Name": "Operation BLACK TIDE: The Bridge",
     "Id": 50001366,
     "Address": "0x0014273E",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Rilgar Mission 03",
+    "Name": "Operation BLACK TIDE: Counterattack",
     "Id": 50001367,
     "Address": "0x00142C40", # As same as Grav-boots event
     "CheckType": 0,
     "AddressBit": 3
   },
   {
-    "Name": "Metro Storm Mission 01",
+    "Name": "Operation URBAN STORM: Countdown",
     "Id": 50001435,
     "Address": "0x00142747",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Metro Storm Mission 02",
+    "Name": "Operation URBAN STORM: Urban Combat",
     "Id": 50001436,
     "Address": "0x00142748",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Metro Storm Mission 03",
+    "Name": "Operation URBAN STORM: Tower Attack",
     "Id": 50001437,
     "Address": "0x00142749",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Metro Storm Mission 04",
+    "Name": "Operation URBAN STORM: Air Superiority",
     "Id": 50001438,
     "Address": "0x0014274A",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Metro Storm Mission 05",
+    "Name": "Operation URBAN STORM: Turret Command",
     "Id": 50001439,
     "Address": "0x0014274B", 
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Alidia Mission 01",
+    "Name": "Operation DEATH VALLEY: The Tunnels of Outpost X12",
     "Id": 50001475,
     "Address": "0x00142742",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Alidia Mission 02",
+    "Name": "Operation DEATH VALLEY: Ambush in Red Rock Valley",
     "Id": 50001476,
     "Address": "0x00142743",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Alidia Mission 03",
+    "Name": "Operation DEATH VALLEY: Assassination",
     "Id": 50001477,
     "Address": "0x00142744",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Alidia Mission 04",
+    "Name": "Operation DEATH VALLEY: Reclaim the Valley",
     "Id": 50001478,
     "Address": "0x00142745",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Alidia Mission 05",
+    "Name": "Operation DEATH VALLEY: X12 Endgame",
     "Id": 50001479,
     "Address": "0x00142746",
     "CheckType": 0,
@@ -2015,63 +2005,63 @@ LOCATIONS = [
     "AddressBit": 0
   },
   {
-    "Name": "Kavu Island Mission 1",
+    "Name": "Operation ISLAND STRIKE: Assault on Kavu Island",
     "Id": 50001606,
     "Address": "0x0014274C",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Kavu Island Mission 2",
+    "Name": "Operation ISLAND STRIKE: Dogfight over Kavu Island",
     "Id": 50001607,
     "Address": "0x0014274D",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Kavu Island Mission 3",
+    "Name": "Operation ISLAND STRIKE: Operation Thunderbolt",
     "Id": 50001608,
     "Address": "0x0014274F",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Kavu Island Mission 4",
+    "Name": "Operation ISLAND STRIKE: The Final Battle",
     "Id": 50001609,
     "Address": "0x00142750",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Stay Squeaky Clean",
+    "Name": "Skill Point: Stay Squeaky Clean",
     "Id": 50001610,
     "Address" :"0x001D54B1",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Turn Up The Heat",
+    "Name": "Skill Point: Turn Up The Heat",
     "Id": 50001611,
     "Address" :"0x001D54B4",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Strive for arcade perfection",
+    "Name": "Skill Point: Strive for arcade perfection",
     "Id": 50001612,
     "Address": "0x001D54B2",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Beat Helga's best time",
+    "Name": "Skill Point: Beat Helga's best time",
     "Id": 50001613,
     "Address": "0x001D54B3",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Monkeying around",
+    "Name": "Skill Point: Monkeying around",
     "Id": 50001614,
     "Checks": [
       {
@@ -2087,175 +2077,175 @@ LOCATIONS = [
     ]
   },
   {
-    "Name": "Reflect on how to score",
+    "Name": "Skill Point: Reflect on how to score",
     "Id": 50001615,
     "Address": "0x001D54B6",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Bugs to Birdie",
+    "Name": "Skill Point: Bugs to Birdie",
     "Id": 50001616,
     "Address": "0x001D54B7",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Bash the bug",
+    "Name": "Skill Point: Bash the bug",
     "Id": 50001617,
     "Address": "0x001D54B8",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Be an eight time champ",
+    "Name": "Skill Point: Be an eight time champ",
     "Id": 50001618,
     "Address": "0x001D54B9",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Flee Flawlessly",
+    "Name": "Skill Point: Flee Flawlessly",
     "Id": 50001619,
     "Address": "0x001D54BA",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Lights, camera action!",
+    "Name": "Skill Point: Lights, camera action!",
     "Id": 50001620,
     "Address": "0x001D54BB",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Search for sunken treasure",
+    "Name": "Skill Point: Search for sunken treasure",
     "Id": 50001621,
     "Address": "0x001D54BC",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Be a Sharpshooter",
+    "Name": "Skill Point: Be a Sharpshooter",
     "Id": 50001622,
     "Address": "0x001D54BD",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Get to the belt",
+    "Name": "Skill Point: Get to the belt",
     "Id": 50001623,
     "Address": "0x001D54BE",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Bash the party",
+    "Name": "Skill Point: Bash the party",
     "Id": 50001624,
     "Address": "0x001D54BF",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Feeling Lucky",
+    "Name": "Skill Point: Feeling Lucky",
     "Id": 50001625,
     "Address": "0x001D54C0",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "You break it, you win it",
+    "Name": "Skill Point: You break it, you win it",
     "Id": 50001626,
     "Address": "0x001D54C1",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "2002 was a good year in the city",
+    "Name": "Skill Point: 2002 was a good year in the city",
     "Id": 50001627,
     "Address": "0x001D54C2",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Suck it up!",
+    "Name": "Skill Point: Suck it up!",
     "Id": 50001628,
     "Address": "0x001D54C3",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Aim High",
+    "Name": "Skill Point: Aim High",
     "Id": 50001629,
     "Address": "0x001D54C4",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Go for hang time",
+    "Name": "Skill Point: Go for hang time",
     "Id": 50001630,
     "Address": "0x001D54B0",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Zap back at ya'",
+    "Name": "Skill Point: Zap back at ya'",
     "Id": 50001631,
     "Address": "0x001D54C5",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Break the Dan",
+    "Name": "Skill Point: Break the Dan",
     "Id": 50001632,
     "Address": "0x001D54C6",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Spread your germs",
+    "Name": "Skill Point: Spread your germs",
     "Id": 50001633,
     "Address": "0x001D54C7",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Hit the motherload",
+    "Name": "Skill Point: Hit the motherload",
     "Id": 50001634,
     "Address": "0x001D54C8",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Pirate booty - set a new record for qwark",
+    "Name": "Skill Point: Pirate booty - set a new record for qwark",
     "Id": 50001635,
     "Address": "0x001D54C9",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Deja Q All over Again - set a new record for qwark",
+    "Name": "Skill Point: Deja Q All over Again - set a new record for qwark",
     "Id": 50001636,
     "Address": "0x001D54CA",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Arriba Amoeba! - set a new record for qwark",
+    "Name": "Skill Point: Arriba Amoeba! - set a new record for qwark",
     "Id": 50001637,
     "Address": "0x001D54CB",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Shadow of the robot - set a new record for qwark",
+    "Name": "Skill Point: Shadow of the robot - set a new record for qwark",
     "Id": 50001638,
     "Address": "0x001D54CC",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "The Shaming of the Q - set a new record for qwark",
+    "Name": "Skill Point: The Shaming of the Q - set a new record for qwark",
     "Id": 50001639,
     "Address": "0x001D54CD",
     "CheckType": 0,
@@ -2269,56 +2259,56 @@ LOCATIONS = [
     "AddressBit": 0
   },
   {
-    "Name": "Warm Up",
+    "Name": "VR: Warm Up",
     "Id": 50001641,
     "Address": "0x00142766",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Don't Look Down",
+    "Name": "VR: Don't Look Down",
     "Id": 50001642,
     "Address": "0x00142767",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Speed Round",
+    "Name": "VR: Speed Round",
     "Id": 50001643,
     "Address": "0x00142768",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Hot Stepper",
+    "Name": "VR: Hot Stepper",
     "Id": 50001644,
     "Address": "0x00142769",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "90 Second Slayer",
+    "Name": "VR: 90 Second Slayer",
     "Id": 50001645,
     "Address": "0x0014276A",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "The Shocker",
+    "Name": "VR: The Shocker",
     "Id": 50001646,
     "Address": "0x0014276B",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Wrench Beatdown",
+    "Name": "VR: Wrench Beatdown",
     "Id": 50001647,
     "Address": "0x0014276C",
     "CheckType": 0,
     "AddressBit": 0
   },
   {
-    "Name": "Nerves of Titanium",
+    "Name": "VR: Nerves of Titanium",
     "Id": 50001648,
     "Address": "0x0014276D",
     "CheckType": 0,

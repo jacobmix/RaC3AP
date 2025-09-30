@@ -39,7 +39,7 @@ def create_itempool(world: "RaC3World") -> List[Item]:
         itempool += create_multiple_items(world, name, item_amount, item_type)
 
     victory = create_item(world, "Biobliterator Defeated!")
-    world.multiworld.get_location("Mylon: Biobliterator Defeated!", world.player).place_locked_item(victory)
+    world.multiworld.get_location("Command Center: Biobliterator Defeated!", world.player).place_locked_item(victory)
     itempool += create_junk_items(world, get_total_locations(world) - len(itempool) - 1, junk_dict)
     return itempool
 
@@ -137,19 +137,19 @@ post_planets = {
     "Infobot: Daxx": ItemData(50001456, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 5
     "Infobot: Obani Gemini": ItemData(50001457, ItemClassification.progression, 1),
     # Post Starship Phoenix Visit 6 + Qwark Vidcomic 3
-    "Infobot: Rilgar": ItemData(50001458, ItemClassification.progression, 1),  # Post Obani Gemini
+    "Infobot: Blackwater City": ItemData(50001458, ItemClassification.progression, 1),  # Post Obani Gemini
     "Infobot: Holostar Studios": ItemData(50001459, ItemClassification.progression, 1),
-    # Post Rilgar + Annihilation Nation Challenges
+    # Post Blackwater City + Annihilation Nation Challenges
     "Infobot: Obani Draco": ItemData(50001460, ItemClassification.progression, 1),  # Post Holostar Studios
     "Infobot: Zeldrin Starport": ItemData(50001461, ItemClassification.progression, 1),  # Post Obani Draco
     "Infobot: Metropolis": ItemData(50001462, ItemClassification.progression, 1),
     # Post Zeldrin Starport + Qwark Vidcomic 4
-    "Infobot: Zeldrin": ItemData(50001463, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 7
-    "Infobot: Aridia": ItemData(50001464, ItemClassification.progression, 1),  # Post Zeldrin
+    "Infobot: Crash Site": ItemData(50001463, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 7
+    "Infobot: Aridia": ItemData(50001464, ItemClassification.progression, 1),  # Post Crash Site
     "Infobot: Qwarks Hideout": ItemData(50001465, ItemClassification.progression, 1),
     # Post Starship Phoenix Visit 8 + Qwark Vidcomic 5
     "Infobot: Koros": ItemData(50001466, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 9
-    "Infobot: Mylon": ItemData(50001467, ItemClassification.progression, 1),  # Post-Koros
+    "Infobot: Command Center": ItemData(50001467, ItemClassification.progression, 1),  # Post-Koros
 }
 progressive_vidcomics = {
     "Progressive Vidcomic": ItemData(50001475, ItemClassification.progression, 5),

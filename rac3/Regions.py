@@ -22,16 +22,16 @@ def create_regions(world: "RaC3World"):
     tyhrranosis = create_region(world, "Tyhrranosis")
     daxx_first_half = create_region(world, "Daxx Region 1")
     obani_gemini = create_region(world, "Obani Gemini")
-    rilgar = create_region(world, "Rilgar")
+    blackwater_city = create_region(world, "Blackwater City")
     obani_draco = create_region(world, "Obani Draco")
     holostar_studios = create_region(world, "Holostar Studios")
     zeldrin_starport_first_half = create_region(world, "Zeldrin Starport Region 1")
     metropolis_first_half = create_region(world, "Metropolis Region 1")
-    zeldrin = create_region(world, "Zeldrin")
+    crash_site = create_region(world, "Crash Site")
     aridia = create_region(world, "Aridia")
     qwarks_hideout = create_region(world, "Qwarks Hideout")
     koros = create_region(world, "Koros")
-    mylon = create_region(world, "Mylon")  # Victory Location
+    command_center = create_region(world, "Command Center")  # Victory Location
 
     # ----- Connecting everything to Starship Phoenix -----#
     starship_phoenix.connect(marcadia_first_half, "Starship Phoenix -> Marcadia")
@@ -40,16 +40,16 @@ def create_regions(world: "RaC3World"):
     starship_phoenix.connect(tyhrranosis, "Starship Phoenix -> Tyhrranosis")
     starship_phoenix.connect(daxx_first_half, "Starship Phoenix -> Daxx")
     starship_phoenix.connect(obani_gemini, "Starship Phoenix -> Obani Gemini")
-    starship_phoenix.connect(rilgar, "Starship Phoenix -> Rilgar")
+    starship_phoenix.connect(blackwater_city, "Starship Phoenix -> Blackwater City")
     starship_phoenix.connect(obani_draco, "Starship Phoenix -> Obani Draco")
     starship_phoenix.connect(holostar_studios, "Starship Phoenix -> Holostar Studios")
     starship_phoenix.connect(zeldrin_starport_first_half, "Starship Phoenix -> Zeldrin Starport")
     starship_phoenix.connect(metropolis_first_half, "Starship Phoenix -> Metropolis")
-    starship_phoenix.connect(zeldrin, "Starship Phoenix -> Zeldrin")
+    starship_phoenix.connect(crash_site, "Starship Phoenix -> Crash Site")
     starship_phoenix.connect(aridia, "Starship Phoenix -> Aridia")
     starship_phoenix.connect(qwarks_hideout, "Starship Phoenix -> Qwarks Hideout")
     starship_phoenix.connect(koros, "Starship Phoenix -> Koros")
-    starship_phoenix.connect(mylon, "Starship Phoenix -> Mylon")
+    starship_phoenix.connect(command_center, "Starship Phoenix -> Command Center")
 
     # ----- Split planet connections for gadget reasons -----#
 
