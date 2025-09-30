@@ -1,16 +1,18 @@
 [
-  {"name": "Veldin",
-  "children":[
-    {
-      "name": "Recruitment",
-      "map_locations": [
-        {
-          "map": "Veldin",
+  {
+    "name": "Veldin",
+    "chest_unopened_img": "images/Question.png",
+    "chest_opened_img": "images/Q_Force.png",
+    "children": [
+      {
+        "name": "Recruitment",
+        "map_locations": [
+          {
+            "map": "Veldin",
             "x": 365,
             "y": 425
-
-        }
-      ],
+          }
+        ],
         "sections": [
           {
             "name": "Received Shock Blaster",
@@ -18,16 +20,15 @@
           }
         ]
       },
-    {
-      "name": "Rangers",
-      "map_locations": [
-        {
-          "map": "Veldin",
+      {
+        "name": "Rangers",
+        "map_locations": [
+          {
+            "map": "Veldin",
             "x": 364,
             "y": 358
-
-        }
-      ],
+          }
+        ],
         "sections": [
           {
             "name": "Received Nitro Launcher",
@@ -35,16 +36,15 @@
           }
         ]
       },
-    {
-      "name": "Save Veldin!",
-      "map_locations": [
-        {
-          "map": "Veldin",
+      {
+        "name": "Save Veldin!",
+        "map_locations": [
+          {
+            "map": "Veldin",
             "x": 178,
             "y": 102
-
-        }
-      ],
+          }
+        ],
         "sections": [
           {
             "name": "Infobot: Florana",
@@ -56,6 +56,8 @@
   },
   {
     "name": "Florana",
+    "chest_unopened_img": "images/Question.png",
+    "chest_opened_img": "images/Q_Force.png",
     "children": [
       {
         "name": "Vendor",
@@ -145,6 +147,8 @@
   },
   {
     "name": "Phoenix",
+    "chest_unopened_img": "images/Question.png",
+    "chest_opened_img": "images/Q_Force.png",
     "children": [
       {
         "name": "Vendor",
@@ -301,7 +305,7 @@
             "item_count": 1
           },
           {
-            "name": "Infobot: Zeldrin",
+            "name": "Infobot: Crash Site",
             "item_count": 1
           },
           {
@@ -418,9 +422,11 @@
   },
   {
     "name": "Marcadia",
-        "access_rules":[
-            "Marcadia"
-        ],
+    "chest_unopened_img": "images/Question.png",
+    "chest_opened_img": "images/Q_Force.png",
+    "access_rules": [
+      "Marcadia"
+    ],
     "children": [
       {
         "name": "Vendor",
@@ -558,18 +564,21 @@
   },
   {
     "name": "Annihilation Nation",
-        "access_rules":[
-            "Annihilation"
-        ],
+    "chest_unopened_img": "images/Question.png",
+    "chest_opened_img": "images/Q_Force.png",
+    "access_rules": [
+      "Annihilation"
+    ],
     "children": [
-      
     ]
   },
   {
     "name": "Aquatos",
-        "access_rules":[
-            "Aquatos"
-        ],
+    "chest_unopened_img": "images/Question.png",
+    "chest_opened_img": "images/Q_Force.png",
+    "access_rules": [
+      "Aquatos"
+    ],
     "children": [
       {
         "name": "Vendor",
@@ -751,9 +760,11 @@
   },
   {
     "name": "Tyhrranosis",
-        "access_rules":[
-            "Tyhrranosis"
-        ],
+    "chest_unopened_img": "images/Question.png",
+    "chest_opened_img": "images/Q_Force.png",
+    "access_rules": [
+      "Tyhrranosis"
+    ],
     "children": [
       {
         "name": "Vendor",
@@ -871,9 +882,11 @@
   },
   {
     "name": "Obani Moons",
-        "access_rules":[
-            "Refractor, ObaniGemini"
-        ],
+    "chest_unopened_img": "images/Question.png",
+    "chest_opened_img": "images/Q_Force.png",
+    "access_rules": [
+      "Refractor, ObaniGemini"
+    ],
     "children": [
       {
         "name": "Vendor",
@@ -906,8 +919,8 @@
             "item_count": 1
           }
         ],
-          "access_rules":[
-            "Hypershot"
+        "access_rules": [
+          "Hypershot"
         ]
       },
       {
@@ -953,7 +966,7 @@
         ],
         "sections": [
           {
-            "name": "Infobot: Rilgar",
+            "name": "Infobot: Blackwater City",
             "item_count": 1
           }
         ]
@@ -961,16 +974,18 @@
     ]
   },
   {
-    "name": "Rilgar",
-        "access_rules":[
-            "Rilgar"
-        ],
+    "name": "Blackwater",
+    "chest_unopened_img": "images/Question.png",
+    "chest_opened_img": "images/Q_Force.png",
+    "access_rules": [
+      "Blackwater"
+    ],
     "children": [
       {
         "name": "Blackwater City",
         "map_locations": [
           {
-            "map": "Rilgar",
+            "map": "Blackwater",
             "x": 256,
             "y": 430
           }
@@ -986,7 +1001,7 @@
         "name": "Save Blackwater City",
         "map_locations": [
           {
-            "map": "Rilgar",
+            "map": "Blackwater",
             "x": 256,
             "y": 203
           }
@@ -1006,7 +1021,7 @@
         "name": "Operation: BLACK TIDE",
         "map_locations": [
           {
-            "map": "Rilgar",
+            "map": "Blackwater",
             "x": 256,
             "y": 60
           }
@@ -1030,15 +1045,17 @@
   },
   {
     "name": "Holostar Studios",
-        "access_rules":[
-            "Holostar"
-        ],
+    "chest_unopened_img": "images/Question.png",
+    "chest_opened_img": "images/Q_Force.png",
+    "access_rules": [
+      "Holostar"
+    ],
     "children": [
       {
         "name": "Clank's New Pair of Shoes",
         "map_locations": [
           {
-            "map": "HolostarCrank",
+            "map": "Holostar2",
             "x": 22,
             "y": 242
           }
@@ -1054,7 +1071,7 @@
         "name": "Ratchet's New Pair of Shoes",
         "map_locations": [
           {
-            "map": "Holostar",
+            "map": "Holostar1",
             "x": 334,
             "y": 234
           }
@@ -1070,7 +1087,7 @@
         "name": "Vendor",
         "map_locations": [
           {
-            "map": "Holostar",
+            "map": "Holostar1",
             "x": 154,
             "y": 156
           }
@@ -1086,7 +1103,7 @@
         "name": "Atop the Chairs",
         "map_locations": [
           {
-            "map": "Holostar",
+            "map": "Holostar1",
             "x": 298,
             "y": 239
           }
@@ -1102,7 +1119,7 @@
         "name": "Lot 42's Grav Ramp",
         "map_locations": [
           {
-            "map": "Holostar",
+            "map": "Holostar1",
             "x": 56,
             "y": 186
           }
@@ -1118,7 +1135,7 @@
         "name": "Kamikaze Noids",
         "map_locations": [
           {
-            "map": "Holostar",
+            "map": "Holostar1",
             "x": 117,
             "y": 162
           }
@@ -1134,7 +1151,7 @@
         "name": "Escape the Tyhrranoid Ambush",
         "map_locations": [
           {
-            "map": "Holostar",
+            "map": "Holostar1",
             "x": 122,
             "y": 297
           }
@@ -1150,9 +1167,11 @@
   },
   {
     "name": "Obani Draco",
-        "access_rules":[
-            "ObaniDraco"
-        ],
+    "chest_unopened_img": "images/Question.png",
+    "chest_opened_img": "images/Q_Force.png",
+    "access_rules": [
+      "ObaniDraco"
+    ],
     "children": [
       {
         "name": "Beat Courtney Gears",
@@ -1174,9 +1193,11 @@
   },
   {
     "name": "Zeldrin Starport",
-        "access_rules":[
-            "ZeldrinStartport"
-        ],
+    "chest_unopened_img": "images/Question.png",
+    "chest_opened_img": "images/Q_Force.png",
+    "access_rules": [
+      "ZeldrinStartport"
+    ],
     "children": [
       {
         "name": "Go to the Zeldrin Starport",

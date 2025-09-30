@@ -59,7 +59,7 @@ def create_regions(world: "RaC3World"):
                                 rule=lambda state: state.has("Refractor", world.player)
                                                    and state.has("Gravity-Boots", world.player)),
 
-    # Anihilation mission is shown after Daxx Region2
+    # Annihilation mission is shown after Daxx Region2
     annihilation_nation_second_half = create_region(world, "Annihilation Nation 2")
     annihilation_nation.connect(annihilation_nation_second_half,
                                 rule=lambda state: state.can_reach("Daxx Region 2", player=world.player)),

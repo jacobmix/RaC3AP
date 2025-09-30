@@ -219,98 +219,306 @@
   },
   {
     "name": "Marcadia",
-    "type": "toggle",
-    "img": "images/items/planet/Marcadia.png",
-    "codes": "Marcadia"
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "img": "images/items/planet/Marcadia.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/items/planet/Marcadia.png",
+        "codes": "Marcadia"
+      }
+    ]
   },
   {
     "name": "Annihilation",
-    "type": "toggle",
-    "img": "images/items/planet/Annihilation.png",
-    "codes": "Annihilation"
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "img": "images/items/planet/Annihilation.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/items/planet/Annihilation.png",
+        "codes": "Annihilation"
+      }
+    ]
   },
   {
     "name": "Aquatos",
-    "type": "toggle",
-    "img": "images/items/planet/Aquatos.png",
-    "codes": "Aquatos"
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "img": "images/items/planet/Aquatos.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/items/planet/Aquatos.png",
+        "codes": "Aquatos"
+      }
+    ]
   },
   {
     "name": "Tyhrranosis",
-    "type": "toggle",
-    "img": "images/items/planet/Tyhrranosis.png",
-    "codes": "Tyhrranosis"
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "img": "images/items/planet/Aquatos.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/items/planet/Aquatos.png",
+        "codes": "Tyhrranosis"
+      }
+    ]
   },
   {
     "name": "Daxx",
-    "type": "toggle",
-    "img": "images/items/planet/Daxx.png",
-    "codes": "Daxx"
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "img": "images/items/planet/Daxx.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/items/planet/Daxx.png",
+        "codes": "Daxx"
+      }
+    ]
   },
   {
     "name": "ObaniGemini",
-    "type": "toggle",
-    "img": "images/items/planet/ObaniGemini.png",
-    "codes": "ObaniGemini"
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "img": "images/items/planet/ObaniGemini.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/items/planet/ObaniGemini.png",
+        "codes": "ObaniGemini"
+      }
+    ]
   },
   {
-    "name": "Rilgar",
-    "type": "toggle",
-    "img": "images/items/planet/Rilgar.png",
-    "codes": "Rilgar"
+    "name": "Blackwater",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "img": "images/items/planet/Blackwater.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/items/planet/Blackwater.png",
+        "codes": "Blackwater"
+      }
+    ]
   },
   {
     "name": "Holostar",
-    "type": "toggle",
-    "img": "images/items/planet/Holostar.png",
-    "codes": "Holostar"
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "img": "images/items/planet/Holostar.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/items/planet/Holostar.png",
+        "codes": "Holostar"
+      }
+    ]
   },
   {
     "name": "ObaniDraco",
-    "type": "toggle",
-    "img": "images/items/planet/ObaniDraco.png",
-    "codes": "ObaniDraco"
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "img": "images/items/planet/ObaniDraco.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/items/planet/ObaniDraco.png",
+        "codes": "ObaniDraco"
+      }
+    ]
   },
   {
     "name": "ZeldrinStartport",
-    "type": "toggle",
-    "img": "images/items/planet/ZeldrinStartport.png",
-    "codes": "ZeldrinStartport"
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "img": "images/items/planet/ZeldrinStartport.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/items/planet/ZeldrinStartport.png",
+        "codes": "ZeldrinStartport"
+      }
+    ]
   },
   {
     "name": "Metropolis",
-    "type": "toggle",
-    "img": "images/items/planet/Metropolis.png",
-    "codes": "Metropolis"
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "img": "images/items/planet/Metropolis.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/items/planet/Metropolis.png",
+        "codes": "Metropolis"
+      }
+    ]
   },
   {
-    "name": "Zeldrin",
-    "type": "toggle",
-    "img": "images/items/planet/Zeldrin.png",
-    "codes": "Zeldrin"
+    "name": "CrashSite",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "img": "images/items/planet/CrashSite.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/items/planet/CrashSite.png",
+        "codes": "CrashSite"
+      }
+    ]
   },
   {
     "name": "Aridia",
-    "type": "toggle",
-    "img": "images/items/planet/Aridia.png",
-    "codes": "Aridia"
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "img": "images/items/planet/Aridia.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/items/planet/Aridia.png",
+        "codes": "Aridia"
+      }
+    ]
   },
   {
     "name": "QwarksHideout",
-    "type": "toggle",
-    "img": "images/items/planet/QwarksHideout.png",
-    "codes": "QwarksHideout"
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "img": "images/items/planet/QwarksHideout.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/items/planet/QwarksHideout.png",
+        "codes": "QwarksHideout"
+      }
+    ]
   },
   {
     "name": "Koros",
-    "type": "toggle",
-    "img": "images/items/planet/Koros.png",
-    "codes": "Koros"
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "img": "images/items/planet/Koros.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/items/planet/Koros.png",
+        "codes": "Koros"
+      }
+    ]
   },
   {
-    "name": "Mylon",
-    "type": "toggle",
-    "img": "images/items/planet/Mylon.png",
-    "codes": "Mylon"
+    "name": "CommandCenter",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "img": "images/items/planet/CommandCenter.png",
+        "inherit_codes": false,
+        "img_mods": "@disabled",
+        "codes": ""
+      },
+      {
+        "img": "images/items/planet/CommandCenter.png",
+        "codes": "CommandCenter"
+      }
+    ]
   }
 ]

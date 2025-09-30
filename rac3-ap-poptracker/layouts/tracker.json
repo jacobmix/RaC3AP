@@ -116,7 +116,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Rilgar"
+                  "Blackwater"
                 ]
               }
             },
@@ -125,8 +125,8 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Holostar",
-                  "HolostarCrank"
+                  "Holostar1",
+                  "Holostar2"
                 ]
               }
             },
@@ -153,8 +153,8 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Metropolis",
-                  "MetropolisMission"
+                  "Metropolis1",
+                  "Metropolis2"
                 ]
               }
             },
@@ -163,7 +163,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Zeldrin"
+                  "CrashSite"
                 ]
               }
             },
@@ -199,8 +199,8 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Mylon",
-                  "last1"
+                  "CommandCenter1",
+                  "CommandCenter2"
                 ]
               }
             }
@@ -326,7 +326,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Rilgar"
+                  "Blackwater"
                 ]
               }
             },
@@ -335,8 +335,8 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Holostar",
-                  "HolostarCrank"
+                  "Holostar1",
+                  "Holostar2"
                 ]
               }
             },
@@ -363,8 +363,8 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Metropolis",
-                  "MetropolisMission"
+                  "Metropolis1",
+                  "Metropolis2"
                 ]
               }
             },
@@ -373,7 +373,7 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Zeldrin"
+                  "CrashSite"
                 ]
               }
             },
@@ -409,8 +409,8 @@
               "content": {
                 "type": "map",
                 "maps": [
-                  "Mylon",
-                  "last1"
+                  "CommandCenter1",
+                  "CommandCenter2"
                 ]
               }
             }
