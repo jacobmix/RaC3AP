@@ -384,7 +384,7 @@ class Rac3Interface(GameInterface):
         for name in range(5):
             if name + 1 > unlock_status:
                 break
-            addr = ADDRESSES[self.current_game]["VidComics"][name]["unlockAddress"]
+            addr = ADDRESSES[self.current_game]["VidComics"][f'Qwark Vidcomic {name + 1}']["unlockAddress"]
             addr = self.AddressConvert(addr)
             if self._read8(addr) == 0 and name + 1 == unlock_status:
                 unlockDelayCount = 1
