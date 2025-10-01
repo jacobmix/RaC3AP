@@ -1632,7 +1632,7 @@
     "chest_unopened_img": "images/Question.png",
     "chest_opened_img": "images/Q_Force.png",
     "access_rules": [
-      "ZeldrinStartport"
+      "ZeldrinStarport"
     ],
     "children": [
       {
