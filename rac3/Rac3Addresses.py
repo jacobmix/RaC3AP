@@ -1999,18 +1999,9 @@ LOCATIONS = [
     {
         "Name": "Skill Point: Monkeying around",
         "Id": 50001614,
-        "Checks": [
-            {
-                "Address": "0x001D54B5",
-                "CheckType": 0,
-                "AddressBit": 0
-            },
-            {
-                "Address": "0x001426EB",
-                "CheckType": 0,
-                "CheckValue": "1"
-            }
-        ]
+        "Address": "0x001D54B5",
+        "CheckType": 0,
+        "AddressBit": 0
     },
     {
         "Name": "Skill Point: Reflect on how to score",
