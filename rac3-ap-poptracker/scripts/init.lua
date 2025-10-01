@@ -51,7 +51,7 @@ Planets = {
     "Blackwater",
     "Holostar",
     "ObaniDraco",
-    "ZeldrinStartport",
+    "ZeldrinStarport",
     "Metropolis",
     "CrashSite",
     "Aridia",

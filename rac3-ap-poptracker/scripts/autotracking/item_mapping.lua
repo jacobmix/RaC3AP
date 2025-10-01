@@ -52,14 +52,14 @@ ITEM_MAPPING = {
 	[PLANET_ITEM_ID + 00008] = { { "Blackwater" } },
 	[PLANET_ITEM_ID + 00009] = { { "Holostar" } },
 	[PLANET_ITEM_ID + 00010] = { { "ObaniDraco" } },
-	[PLANET_ITEM_ID + 00011] = { { "ZeldrinStartport" } },
+	[PLANET_ITEM_ID + 00011] = { { "ZeldrinStarport" } },
 	[PLANET_ITEM_ID + 00012] = { { "Metropolis" } },
 	[PLANET_ITEM_ID + 00013] = { { "CrashSite" } },
 	[PLANET_ITEM_ID + 00014] = { { "Aridia" } },
 	[PLANET_ITEM_ID + 00015] = { { "QwarksHideout" } },
 	[PLANET_ITEM_ID + 00016] = { { "Koros" } },
 	[PLANET_ITEM_ID + 00017] = { { "CommandCenter" } },
-
+	
 	-- -- handle progressive_toggle as toggle, only changing it's active state
 	-- [BASE_ITEM_ID + 00003] = { { "progressive_toggle", "toggle" } },
 	-- -- multiple items on this id, add the consumable 3 times
