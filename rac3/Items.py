@@ -1,8 +1,8 @@
 from BaseClasses import Item, ItemClassification
+
 from .Types import ItemData, RaC3Item, weapon_type_to_name, WeaponType, EventData
 from .Locations import get_total_locations
 from typing import List, Dict, TYPE_CHECKING
-from .Rac3Options import EnableWeaponLevelAsItem
 
 if TYPE_CHECKING:
     from . import RaC3World
@@ -11,26 +11,28 @@ if TYPE_CHECKING:
 def create_itempool(world: "RaC3World") -> List[Item]:
     itempool: List[Item] = []
     options = world.options
-    starting_weapon = weapon_type_to_name[WeaponType(options.StartingWeapon)]
-    progressive_starting_weapon = f"Progressive {starting_weapon}"
     junk_dict = junk_items
-    if options.EnableWeaponLevelAsItem.value == EnableWeaponLevelAsItem.option_disable:
+    if not options.EnableWeaponLevelAsItem.value:
         junk_dict.update(junk_weapon_exp)
 
     for name in item_table.keys():
         item_type: ItemClassification = item_table.get(name).classification
         item_amount: int = item_table.get(name).count
+
+        # Already placed items (Starting items and vanilla)
+        if name in world.preplaced_items:
+            if item_amount == 1:
+                continue
+            else:
+                item_amount -= 1  # remove one from the pool as it has already been placed
+
         # WeaponLevelAsItem option
-        if options.EnableWeaponLevelAsItem.value == EnableWeaponLevelAsItem.option_disable:
+        if not options.EnableWeaponLevelAsItem.value:
             if name in progressive_weapons.keys():
                 continue
-            elif name == starting_weapon:  # Don't add starting weapon
-                continue
-        else:  # options.EnableWeaponLevelAsItem.value == EnableWeaponLevelAsItem.option_enable:
+        else:  # options.EnableWeaponLevelAsItem.value:
             if name in weapon_items.keys():
                 continue
-            elif name == progressive_starting_weapon:
-                item_amount -= 1  # remove one from the pool as the player starts with it
 
         # ExtraArmorUpgrade option
         if name == "Progressive Armor":
@@ -40,7 +42,8 @@ def create_itempool(world: "RaC3World") -> List[Item]:
 
     victory = create_item(world, "Biobliterator Defeated!")
     world.multiworld.get_location("Command Center: Biobliterator Defeated!", world.player).place_locked_item(victory)
-    itempool += create_junk_items(world, get_total_locations(world) - len(itempool) - 1, junk_dict)
+    itempool += create_junk_items(world, get_total_locations(world) - len(world.preplaced_items) - len(itempool) - 1,
+                                  junk_dict)
     return itempool
 
 
@@ -129,14 +132,15 @@ gadget_items = {
 }
 
 post_planets = {
+    "Infobot: Florana": ItemData(50001468, ItemClassification.progression, 1),
+    "Infobot: Starship Phoenix": ItemData(50001469, ItemClassification.progression, 1),
     "Infobot: Marcadia": ItemData(50001452, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 1
     "Infobot: Annihilation Nation": ItemData(50001453, ItemClassification.progression, 1),
     # Post Starship Phoenix Visit 2 + Qwark Vidcomic 1
     "Infobot: Aquatos": ItemData(50001454, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 3
     "Infobot: Tyhrranosis": ItemData(50001455, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 4
     "Infobot: Daxx": ItemData(50001456, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 5
-    "Infobot: Obani Gemini": ItemData(50001457, ItemClassification.progression, 1),
-    # Post Starship Phoenix Visit 6 + Qwark Vidcomic 3
+    "Infobot: Obani Gemini": ItemData(50001457, ItemClassification.progression, 1),  # Post Daxx
     "Infobot: Blackwater City": ItemData(50001458, ItemClassification.progression, 1),  # Post Obani Gemini
     "Infobot: Holostar Studios": ItemData(50001459, ItemClassification.progression, 1),
     # Post Blackwater City + Annihilation Nation Challenges
@@ -191,11 +195,13 @@ item_table = {
     **victory_item
 }
 
-
 # class ItemData(NamedTuple):
 #    ap_code: Optional[int]
 #    classification: ItemClassification
 #    count: Optional[int] = 1
+
+default_starting_weapons = {name: 1 for name in weapon_items.keys()}
+
 
 def filter_items(classification):
     return filter(lambda l: l[1].classification == (classification), item_table.items())
@@ -203,3 +209,18 @@ def filter_items(classification):
 
 def filter_item_names(classification):
     return map(lambda entry: entry[0], filter_items(classification))
+
+
+def starting_weapons(world, weapon_dict: dict[str, int]) -> list[str]:
+    weapon_list: list[str] = []
+    for name in weapon_dict:
+        count = weapon_dict[name]
+        if count == 0:
+            continue
+        if world.options.EnableWeaponLevelAsItem.value:
+            for i in range(count):
+                weapon_list.append(f"Progressive {name}")
+        else:
+            weapon_list.append(name)
+    world.random.shuffle(weapon_list)
+    return [weapon_list[0], weapon_list[1]]

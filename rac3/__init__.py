@@ -13,7 +13,7 @@ from .Rules import set_rules
 from typing import Dict, Optional, Mapping, Any
 from worlds.LauncherComponents import Component, SuffixIdentifier, Type, components, launch_subprocess
 
-rac3_logger = logging.getLogger("Ratchet & Clank 3")
+rac3_logger = logging.getLogger("RatchetAndClank3")
 rac3_logger.setLevel(logging.DEBUG)
 
 
@@ -50,6 +50,7 @@ class RaC3World(World):
     game = GAME_TITLE_FULL
     item_name_to_id = {name: data.ap_code for name, data in item_table.items()}
     location_name_to_id = get_location_names()
+    preplaced_items: list[str] = []
     # Config for Universal Tracker
     ut_can_gen_without_yaml = False
     disable_ut = False
@@ -71,13 +72,16 @@ class RaC3World(World):
             self.player_name)
         rac3_logger.warning("INCOMPLETE WORLD! Slot '%s' may require send_location/send_item for completion!",
                             self.player_name)
-        starting_weapon = (weapon_type_to_name[WeaponType(self.options.StartingWeapon.value)])
-        if self.options.EnableWeaponLevelAsItem.value == EnableWeaponLevelAsItem.option_enable:
-            starting_weapon = f"Progressive {starting_weapon}"
-        self.multiworld.push_precollected(self.create_item(starting_weapon))
-
-    def create_regions(self):
+        self.preplaced_items = []
+        starting_weapons = Items.starting_weapons(self, self.options.StartingWeapons.value)
+        starting_planets = ["Infobot: Florana", "Infobot: Starship Phoenix"]
         create_regions(self)
+        self.get_location("Veldin: First Ranger").place_locked_item(self.create_item(starting_weapons[0]))
+        self.get_location("Veldin: Second Ranger").place_locked_item(self.create_item(starting_weapons[1]))
+        self.get_location("Veldin: Save Veldin").place_locked_item(self.create_item(starting_planets[0]))
+        self.get_location("Florana: Defeat Qwark").place_locked_item(self.create_item(starting_planets[1]))
+        self.preplaced_items.extend(starting_weapons)
+        self.preplaced_items.extend(starting_planets)
 
     def create_items(self):
         self.multiworld.itempool += create_itempool(self)
@@ -91,7 +95,7 @@ class RaC3World(World):
     def fill_slot_data(self) -> Dict[str, object]:
         slot_data: Dict[str, object] = {
             "options": {
-                "StartingWeapon": weapon_type_to_name[WeaponType(self.options.StartingWeapon)],
+                "StartingWeapons": [self.preplaced_items[0], self.preplaced_items[1]],
                 "BoltandXPMultiplier": multiplier_to_name[Multiplier(self.options.BoltandXPMultiplier)],
                 "EnableWeaponLevelAsItem": self.options.EnableWeaponLevelAsItem.value,
                 "ExtraArmorUpgrade": self.options.ExtraArmorUpgrade.value,

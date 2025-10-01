@@ -11,8 +11,11 @@ def create_regions(world: "RaC3World"):
     # ----- Introduction Sequence -----#
     menu = create_region(world, "Menu")
     veldin = create_region_and_connect(world, "Veldin", "Menu -> Veldin", menu)
-    florana = create_region_and_connect(world, "Florana", "Veldin -> Florana", veldin)
-    starship_phoenix = create_region_and_connect(world, "Starship Phoenix", "Florana -> Starship Phoenix", florana)
+    florana = create_region(world, "Florana")
+    veldin.connect(florana, "Veldin -> Florana", rule=lambda state: state.has("Infobot: Florana", world.player))
+    starship_phoenix = create_region(world, "Starship Phoenix")
+    florana.connect(starship_phoenix, "Florana -> Starship Phoenix",
+                    rule=lambda state: state.has("Infobot: Starship Phoenix", world.player))
     starship_phoenix.connect(florana, "Starship Phoenix -> Florana")
 
     # ----- Regions within the game -----#

@@ -131,7 +131,7 @@ class Rac3Interface(GameInterface):
 
     def proc_option(self, slot_data):
         self.logger.info(f"{slot_data}")
-        self.startingWeapon = slot_data["options"]["StartingWeapon"]
+        self.startingWeapon = slot_data["options"]["StartingWeapons"]
         self.boltandXPMultiplier = slot_data["options"]["BoltandXPMultiplier"]
         self.weaponLevelLockFlag = slot_data["options"]["EnableWeaponLevelAsItem"]
 

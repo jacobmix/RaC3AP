@@ -22,16 +22,16 @@ def get_regions() -> list:
 
 rac3_locations = {
     # ----- Planet Veldin -----#
-    "Veldin: Received Shock Cannon": LocData(50001000, "Veldin"),
-    "Veldin: Received Nitro Launcher": LocData(50001001, "Veldin"),
-    "Veldin: Infobot: Florana": LocData(50001003, "Veldin"),
+    "Veldin: First Ranger": LocData(50001000, "Veldin"),
+    "Veldin: Second Ranger": LocData(50001001, "Veldin"),
+    "Veldin: Save Veldin": LocData(50001003, "Veldin"),
 
     # ----- Planet Florana -----#
     "Florana: Received Plasma Whip": LocData(50001004, "Florana"),
     "Florana: Received N60 Storm": LocData(50001005, "Florana"),
     "Florana: T-Bolt: Below Gadgetron Vendor": LocData(50001006, "Florana"),
     "Florana: T-Bolt: Path of Death": LocData(50001007, "Florana"),
-    "Florana: Infobot: Starship Phoenix": LocData(50001008, "Florana"),
+    "Florana: Defeat Qwark": LocData(50001008, "Florana"),
     "Florana: Skill Point: Stay Squeaky Clean": LocData(50001610, "Florana"),
 
     # ----- Starship Phoenix -----#
