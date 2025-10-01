@@ -354,7 +354,7 @@ LOCATIONS = [
   {
     "Name": "Infobot: Obani Gemini",
     "Id": 50001025,
-    "Address": "0x00142C29",
+    "Address": "0x001D553B",
     "CheckType": 0,
     "AddressBit": 3 # 0x8 = 0b00001000
   },
