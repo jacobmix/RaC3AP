@@ -313,7 +313,7 @@
     ]
   },
   {
-    "name": "ObaniGemini",
+    "name": "Obani Gemini",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
@@ -370,7 +370,7 @@
     ]
   },
   {
-    "name": "ObaniDraco",
+    "name": "Obani Draco",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
@@ -389,21 +389,21 @@
     ]
   },
   {
-    "name": "ZeldrinStartport",
+    "name": "Zeldrin Starport",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
     "initial_stage_idx": 0,
     "stages": [
       {
-        "img": "images/items/planet/ZeldrinStartport.png",
+        "img": "images/items/planet/ZeldrinStarport.png",
         "inherit_codes": false,
         "img_mods": "@disabled",
         "codes": ""
       },
       {
-        "img": "images/items/planet/ZeldrinStartport.png",
-        "codes": "ZeldrinStartport"
+        "img": "images/items/planet/ZeldrinStarport.png",
+        "codes": "ZeldrinStarport"
       }
     ]
   },
@@ -427,7 +427,7 @@
     ]
   },
   {
-    "name": "CrashSite",
+    "name": "Crash Site",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
@@ -465,7 +465,7 @@
     ]
   },
   {
-    "name": "QwarksHideout",
+    "name": "Qwark's Hideout",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
@@ -503,7 +503,7 @@
     ]
   },
   {
-    "name": "CommandCenter",
+    "name": "Command Center",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
