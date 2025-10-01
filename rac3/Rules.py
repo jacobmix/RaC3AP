@@ -220,6 +220,8 @@ def set_rules_hard_location(world):
                            and state.has("Gravity-Boots", world.player))
     add_rule(world.get_location("Aquatos: T-Bolt: Behind the Locked Gate"),
              lambda state: state.has("Hacker", world.player))
+    add_rule(world.get_location("Aquatos: Skill Point: Hit the motherload"),
+             lambda state: state.has("Gravity-Boots", world.player))
     # "Aquatos: 1 Sewer Crystal Traded": LocData(50001096, "Aquatos"),
     # "Aquatos: 5 Sewer Crystals Traded": LocData(50001097, "Aquatos"),
     # "Aquatos: 10 Sewer Crystals Traded": LocData(50001098, "Aquatos"),
@@ -230,6 +232,9 @@ def set_rules_hard_location(world):
     # "Tyhrranosis: Received Holo-Shield Glove": LocData(50001301, "Tyhrranosis"),
     add_rule(world.get_location("Tyhrranosis: T-Bolt: Underground Cave Bolt"),
              lambda state: state.has("Hypershot", world.player))
+    add_rule(world.get_location("Tyhrranosis: Skill Point: Be a Sharpshooter"),
+             lambda state: state.has("Flux Rifle", world.player) 
+                           or state.has("Progressive Flux Rifle", world.player))
     # "Tyhrranosis: T-Bolt: South East Cannon": LocData(50001302, "Tyhrranosis"),
 
     # ----- Planet Daxx -----#
@@ -261,18 +266,29 @@ def set_rules_hard_location(world):
     # ----- Planet Metropolis -----#
     add_rule(world.get_location("Metropolis: T-Bolt: Across the Gap"),
              lambda state: state.has("Hypershot", world.player))
+    add_rule(world.get_location("Metropolis: Skill Point: 2002 was a good year in the city"),
+             lambda state: state.has("Flux Rifle", world.player) 
+                           or state.has("Progressive Flux Rifle", world.player))
 
     # ----- Planet Crash Site -----#
     add_rule(world.get_location("Crash Site: T-Bolt: Turn Around"),
              lambda state: state.has("Gravity-Boots", world.player))
     add_rule(world.get_location("Crash Site: Received Nano-Pak"),
              lambda state: state.has("Gravity-Boots", world.player))
+    add_rule(world.get_location("Crash Site: Skill Point: Suck it up!"),
+             lambda state: state.has("Suck Cannon", world.player) 
+                           or state.has("Progressive Suck Cannon", world.player))
+    add_rule(world.get_location("Crash Site: Skill Point: Aim High"),
+             lambda state: state.has("Flux Rifle", world.player) 
+                           or state.has("Progressive Flux Rifle", world.player))
 
     # ----- Planet Aridia -----#
     add_rule(world.get_location("Aridia: T-Bolt: Under the Bridge (Assassionation)"),
              lambda state: state.has("Gravity-Boots", world.player))
     add_rule(world.get_location("Aridia: T-Bolt: Behind the Base (X12 Endgame)"),
              lambda state: state.has("Gravity-Boots", world.player))
+    add_rule(world.get_location("Aridia: Skill Point: Zap back at ya'"),
+             lambda state: state.has("Refractor", world.player))
 
     # ----- Qwark's Hideout -----#
     add_rule(world.get_location("Qwark's_Hideout: Received Gadgetron PDA"),
