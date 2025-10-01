@@ -50,7 +50,7 @@ function resetItem(item_code, item_type)
 		elseif item_type == "consumable" then
 			obj.AcquiredCount = 0
 		elseif item_type == "custom" then
-			-- your code for your custom lua items goes here
+		-- your code for your custom lua items goes here
 		elseif item_type == "static" and AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
 			print(string.format("resetItem: tried to reset static item %s", item_code))
 		elseif item_type == "composite_toggle" and AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
@@ -84,7 +84,7 @@ function incrementItem(item_code, item_type, multiplier)
 		elseif item_type == "consumable" then
 			obj.AcquiredCount = obj.AcquiredCount + obj.Increment * multiplier
 		elseif item_type == "custom" then
-			-- your code for your custom lua items goes here
+		-- your code for your custom lua items goes here
 		elseif item_type == "static" and AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
 			print(string.format("incrementItem: tried to increment static item %s", item_code))
 		elseif item_type == "composite_toggle" and AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
@@ -101,12 +101,12 @@ end
 
 -- apply everything needed from slot_data, called from onClear
 function apply_slot_data(slot_data)
-	-- put any code here that slot_data should affect (toggling setting items for example)
+-- put any code here that slot_data should affect (toggling setting items for example)
 end
 
 -- called right after an AP slot is connected
 function onClear(slot_data)
-	-- use bulk update to pause logic updates until we are done resetting all items/locations
+-- use bulk update to pause logic updates until we are done resetting all items/locations
 	Tracker.BulkUpdate = true
 	if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
 		print(string.format("called onClear, slot_data:\n%s", dump_table(slot_data)))
@@ -132,7 +132,7 @@ function onClear(slot_data)
 							print(string.format("onClear: could not find location object for code %s", location_code))
 						end
 					else
-						-- reset hosted item
+					-- reset hosted item
 						local item_type = location_table[2]
 						resetItem(location_code, item_type)
 					end
@@ -165,7 +165,7 @@ function onClear(slot_data)
 	GLOBAL_ITEMS = {}
 	-- manually run snes interface functions after onClear in case we need to update them (i.e. because they need slot_data)
 	if PopVersion < "0.20.1" or AutoTracker:GetConnectionState("SNES") == 3 then
-		-- add snes interface functions here
+	-- add snes interface functions here
 	end
 	-- setup data storage tracking for hint tracking
 	local data_strorage_keys = {}
@@ -235,7 +235,7 @@ function onItem(index, item_id, item_name, player_number)
 	end
 	-- track local items via snes interface
 	if PopVersion < "0.20.1" or AutoTracker:GetConnectionState("SNES") == 3 then
-		-- add snes interface functions for local item tracking here
+	-- add snes interface functions for local item tracking here
 	end
 end
 
@@ -263,7 +263,7 @@ function onLocation(location_id, location_name)
 					if location_code:sub(1, 1) == "@" then
 						obj.AvailableChestCount = obj.AvailableChestCount - 1
 					else
-						-- increment hosted item
+					-- increment hosted item
 						local item_type = location_table[2]
 						incrementItem(location_code, item_type)
 					end
@@ -285,7 +285,7 @@ function onScout(location_id, location_name, item_id, item_name, item_player)
 		print(string.format("called onScout: %s, %s, %s, %s, %s", location_id, location_name, item_id, item_name,
 			item_player))
 	end
-	-- not implemented yet :(
+-- not implemented yet :(
 end
 
 -- called when a bounce message is received
@@ -293,14 +293,14 @@ function onBounce(json)
 	if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
 		print(string.format("called onBounce: %s", dump_table(json)))
 	end
-	-- your code goes here
+-- your code goes here
 end
 
 -- called whenever Archipelago:Get returns data from the data storage or
 -- whenever a subscribed to (via Archipelago:SetNotify) key in data storgae is updated
 -- oldValue might be nil (always nil for "_read" prefixed keys and via retrieved handler (from Archipelago:Get))
 function onDataStorageUpdate(key, value, oldValue)
-	--if you plan to only use the hints key, you can remove this if
+--if you plan to only use the hints key, you can remove this if
 	if key == getHintDataStorageKey() then
 		onHintsUpdate(value)
 	end
@@ -311,7 +311,7 @@ end
 --       if you only map sections 1 to 1 you can simplfy this. for an example see
 --       https://github.com/Cyb3RGER/sm_ap_tracker/blob/main/scripts/autotracking/archipelago.lua
 function onHintsUpdate(hints)
-	-- Highlight is only supported since version 0.32.0
+-- Highlight is only supported since version 0.32.0
 	if PopVersion < "0.32.0" or not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
 		return
 	end
@@ -319,14 +319,14 @@ function onHintsUpdate(hints)
 	-- get all new highlight values per section
 	local sections_to_update = {}
 	for _, hint in ipairs(hints) do
-		-- we only care about hints in our world
+	-- we only care about hints in our world
 		if hint.finding_player == player_number then
 			updateHint(hint, sections_to_update)
 		end
 	end
 	-- update the sections
 	for location_code, highlight_code in pairs(sections_to_update) do
-		-- find the location object
+	-- find the location object
 		local obj = Tracker:FindObjectForCode(location_code)
 		-- check if we got the location and if it supports Highlight
 		if obj and obj.Highlight then
@@ -337,7 +337,7 @@ end
 
 -- update section highlight based on the hint
 function updateHint(hint, sections_to_update)
-	-- get the highlight enum value for the hint status
+-- get the highlight enum value for the hint status
 	local hint_status = hint.status
 	local highlight_code = nil
 	if hint_status then
@@ -371,12 +371,12 @@ function updateHint(hint, sections_to_update)
 			local location_code = location_table[1]
 			-- skip hosted items, they don't support Highlight
 			if location_code and location_code:sub(1, 1) == "@" then
-				-- see if we already set a Highlight for this section
+			-- see if we already set a Highlight for this section
 				local existing_highlight_code = sections_to_update[location_code]
 				if existing_highlight_code then
-					-- make sure we only replace None or "increase" the highlight but never overwrite with None
-					-- this so sections with mulitple mapped locations show the "highest" Highlight and
-					-- only show no Highlight when all hints are found
+				-- make sure we only replace None or "increase" the highlight but never overwrite with None
+				-- this so sections with mulitple mapped locations show the "highest" Highlight and
+				-- only show no Highlight when all hints are found
 					if existing_highlight_code == Highlight.None or (existing_highlight_code < highlight_code and highlight_code ~= Highlight.None) then
 						sections_to_update[location_code] = highlight_code
 					end

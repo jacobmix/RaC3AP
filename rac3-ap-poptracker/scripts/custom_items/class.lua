@@ -13,7 +13,8 @@
 Class = {}
 
 -- default (empty) constructor
-function Class:init(...) end
+function Class:init(...)
+end
 
 -- create a subclass
 function Class:extend(obj)
@@ -77,7 +78,9 @@ function Class:extend(obj)
 				end
 			end
 			val.value = v
-			if val and val.afterSet then val.afterSet(table, v) end
+			if val and val.afterSet then
+				val.afterSet(table, v)
+			end
 		else
 			table._[key] = value
 		end
@@ -102,7 +105,9 @@ end
 -- create an instance of an object with constructor parameters
 function Class:new(...)
 	local obj = self:extend({})
-	if obj.init then obj:init(...) end
+	if obj.init then
+		obj:init(...)
+	end
 	return obj
 end
 

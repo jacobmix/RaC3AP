@@ -59,7 +59,7 @@ ITEM_MAPPING = {
 	[PLANET_ITEM_ID + 00015] = { { "QwarksHideout" } },
 	[PLANET_ITEM_ID + 00016] = { { "Koros" } },
 	[PLANET_ITEM_ID + 00017] = { { "CommandCenter" } },
-	
+
 	-- -- handle progressive_toggle as toggle, only changing it's active state
 	-- [BASE_ITEM_ID + 00003] = { { "progressive_toggle", "toggle" } },
 	-- -- multiple items on this id, add the consumable 3 times

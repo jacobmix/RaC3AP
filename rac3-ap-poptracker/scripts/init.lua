@@ -9,7 +9,7 @@ IS_ITEMS_ONLY = variant:find("itemsonly")
 print("-- Example Tracker --")
 print("Loaded variant: ", variant)
 if ENABLE_DEBUG_LOG then
-    print("Debug logging is enabled!")
+	print("Debug logging is enabled!")
 end
 
 -- Utility Script for helper functions etc.
@@ -27,10 +27,10 @@ ScriptHost:LoadScript("scripts/custom_items/progressiveTogglePlusWrapper.lua")
 Tracker:AddItems("items/items.json")
 
 if not IS_ITEMS_ONLY then -- <--- use variant info to optimize loading
-    -- Maps
-    Tracker:AddMaps("maps/maps.json")
-    -- Locations
-    Tracker:AddLocations("locations/locations.json")
+-- Maps
+	Tracker:AddMaps("maps/maps.json")
+	-- Locations
+	Tracker:AddLocations("locations/locations.json")
 end
 
 -- Layout
@@ -42,27 +42,27 @@ Tracker:AddLayouts("layouts/broadcast.json")
 print("------------------------DEBUG-----------------------")
 -- Table of All Planets
 Planets = {
-    "Marcadia",
-    "Annihilation",
-    "Aquatos",
-    "Tyhrranosis",
-    "Daxx",
-    "ObaniGemini",
-    "Blackwater",
-    "Holostar",
-    "ObaniDraco",
-    "ZeldrinStarport",
-    "Metropolis",
-    "CrashSite",
-    "Aridia",
-    "QwarksHideout",
-    "Koros",
-    "CommandCenter"
+	"Marcadia",
+	"Annihilation",
+	"Aquatos",
+	"Tyhrranosis",
+	"Daxx",
+	"ObaniGemini",
+	"Blackwater",
+	"Holostar",
+	"ObaniDraco",
+	"ZeldrinStarport",
+	"Metropolis",
+	"CrashSite",
+	"Aridia",
+	"QwarksHideout",
+	"Koros",
+	"CommandCenter"
 }
 print("Planet list: " .. Planets[1])
 for _, name in pairs(Planets) do
-	---@type JsonItem
-	---@diagnostic disable-next-line: assign-type-mismatch
+---@type JsonItem
+---@diagnostic disable-next-line: assign-type-mismatch
 	local infobot = Tracker:FindObjectForCode(name)
 	print("Checking: " .. name)
 	infobot.BadgeText = string.sub(name, 1, 3)
@@ -72,5 +72,5 @@ end
 
 -- AutoTracking for Poptracker
 if PopVersion and PopVersion >= "0.18.0" then
-    ScriptHost:LoadScript("scripts/autotracking.lua")
+	ScriptHost:LoadScript("scripts/autotracking.lua")
 end
