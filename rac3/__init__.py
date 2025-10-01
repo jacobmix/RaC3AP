@@ -1,3 +1,4 @@
+import logging
 from typing import Dict
 from BaseClasses import MultiWorld, Item, ItemClassification, Tutorial
 from worlds.AutoWorld import World, CollectionState, WebWorld
@@ -11,6 +12,9 @@ from .Rules import set_rules
 
 from typing import Dict, Optional, Mapping, Any
 from worlds.LauncherComponents import Component, SuffixIdentifier, Type, components, launch_subprocess
+
+rac3_logger = logging.getLogger("Ratchet & Clank 3")
+rac3_logger.setLevel(logging.DEBUG)
 
 
 def run_client(_url: Optional[str] = None):
@@ -62,6 +66,11 @@ class RaC3World(World):
         super().__init__(multiworld, player)
 
     def generate_early(self):
+        rac3_logger.warning(
+            "INCOMPLETE WORLD! Slot '%s' is using an unfinished alpha world that is not stable yet!",
+            self.player_name)
+        rac3_logger.warning("INCOMPLETE WORLD! Slot '%s' may require send_location/send_item for completion!",
+                            self.player_name)
         starting_weapon = (weapon_type_to_name[WeaponType(self.options.StartingWeapon.value)])
         if self.options.EnableWeaponLevelAsItem.value == EnableWeaponLevelAsItem.option_enable:
             starting_weapon = f"Progressive {starting_weapon}"
