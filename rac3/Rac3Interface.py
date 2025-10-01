@@ -460,7 +460,7 @@ class Rac3Interface(GameInterface):
                 if current_exp < int(target_exp, 0):
                     self._write32(addr, int(target_exp, 0))
                     break
-        else:  # version = 1~5:
+        elif version < 5:  # version = 1~5:
             self._write32(addr, int(exp_list[version - 1], 0))
 
     def ReceivedGadget(self, ap_code):

@@ -23,7 +23,7 @@ def create_regions(world: "RaC3World"):
     annihilation_nation = create_region(world, "Annihilation Nation")
     aquatos = create_region(world, "Aquatos")
     tyhrranosis = create_region(world, "Tyhrranosis")
-    daxx_first_half = create_region(world, "Daxx Region 1")
+    daxx = create_region(world, "Daxx")
     obani_gemini = create_region(world, "Obani Gemini")
     blackwater_city = create_region(world, "Blackwater City")
     obani_draco = create_region(world, "Obani Draco")
@@ -41,7 +41,7 @@ def create_regions(world: "RaC3World"):
     starship_phoenix.connect(annihilation_nation, "Starship Phoenix -> Annihilation Nation")
     starship_phoenix.connect(aquatos, "Starship Phoenix -> Aquatos")
     starship_phoenix.connect(tyhrranosis, "Starship Phoenix -> Tyhrranosis")
-    starship_phoenix.connect(daxx_first_half, "Starship Phoenix -> Daxx")
+    starship_phoenix.connect(daxx, "Starship Phoenix -> Daxx")
     starship_phoenix.connect(obani_gemini, "Starship Phoenix -> Obani Gemini")
     starship_phoenix.connect(blackwater_city, "Starship Phoenix -> Blackwater City")
     starship_phoenix.connect(obani_draco, "Starship Phoenix -> Obani Draco")
@@ -65,17 +65,11 @@ def create_regions(world: "RaC3World"):
     # Annihilation mission is shown after Daxx Region2
     annihilation_nation_second_half = create_region(world, "Annihilation Nation 2")
     annihilation_nation.connect(annihilation_nation_second_half,
-                                rule=lambda state: state.can_reach("Daxx Region 2", player=world.player)),
+                                rule=lambda state: state.can_reach_location("Daxx: Post-Daxx", player=world.player)),
 
     tyhrranosis_second_half = create_region(world, "Tyhrranosis Region 2")
     tyhrranosis.connect(tyhrranosis_second_half,
                         rule=lambda state: state.can_reach("Tyhrranosis", player=world.player)),
-
-    # You can get the charge boots without hacker or hypershot
-    daxx_second_half = create_region(world, "Daxx Region 2")
-    daxx_first_half.connect(daxx_second_half,
-                            rule=lambda state: state.has("Hypershot", world.player)
-                                               and state.has("Hacker", world.player)),
 
     # You can do the Qwark half of Zeldrin Starport with no other requirements
     zeldrin_starport_second_half = create_region(world, "Zeldrin Starport Region 2")
@@ -106,7 +100,7 @@ def create_regions(world: "RaC3World"):
     menu.connect(infector_upgrades, rule=lambda state: state.has("Infector", world.player)),
 
     suck_cannon_upgrades = create_region(world, "Suck Cannon Upgrades")
-    menu.connect(suck_cannon_upgrades, rule=lambda state: state.has("SUCC Cannon", world.player)),
+    menu.connect(suck_cannon_upgrades, rule=lambda state: state.has("Suck Cannon", world.player)),
 
     spitting_hydra_upgrades = create_region(world, "Spitting Hydra Upgrades")
     menu.connect(spitting_hydra_upgrades, rule=lambda state: state.has("Spitting Hydra", world.player)),

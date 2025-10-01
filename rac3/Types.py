@@ -46,27 +46,27 @@ multiplier_to_name ={
     Multiplier.x8: "x8",
     Multiplier.x10: "x10",
 }
-weapon_type_to_name={
-    WeaponType.SB:      "Shock Blaster",
-    WeaponType.NL:      "Nitro Launcher",
-    WeaponType.N60:     "N60 Storm",
-    WeaponType.PW:      "Plasma Whip",
-    WeaponType.INF:     "Infector",
-    WeaponType.SC:      "SUCC Cannon",
-    WeaponType.SH:      "Spitting Hydra",
-    WeaponType.AoD:     "Agents of Doom",
-    WeaponType.FR:      "Flux Rifle",
-    WeaponType.ANH:     "Annihilator",
-    WeaponType.HSG:     "Holo-Shield Glove",
-    WeaponType.DBL:     "Disk-Blade Gun",
-    WeaponType.RI:      "Rift Inducer",
-    WeaponType.QoR:     "Qwack-O-Ray",
-    WeaponType.RY3N0:   "RY3N0",
-    WeaponType.MTG:     "Mini-Turret Glove",
-    WeaponType.LG:      "Lava Gun",
-    WeaponType.TB:      "Shield Charger",
-    WeaponType.HB:      "Bouncer",
-    WeaponType.PC:      "Plasma Coil"
+weapon_type_to_name = {
+    WeaponType.SB: "Shock Blaster",
+    WeaponType.NL: "Nitro Launcher",
+    WeaponType.N60: "N60 Storm",
+    WeaponType.PW: "Plasma Whip",
+    WeaponType.INF: "Infector",
+    WeaponType.SC: "Suck Cannon",
+    WeaponType.SH: "Spitting Hydra",
+    WeaponType.AoD: "Agents of Doom",
+    WeaponType.FR: "Flux Rifle",
+    WeaponType.ANH: "Annihilator",
+    WeaponType.HSG: "Holo-Shield Glove",
+    WeaponType.DBL: "Disk-Blade Gun",
+    WeaponType.RI: "Rift Inducer",
+    WeaponType.QoR: "Qwack-O-Ray",
+    WeaponType.RY3N0: "RY3N0",
+    WeaponType.MTG: "Mini-Turret Glove",
+    WeaponType.LG: "Lava Gun",
+    WeaponType.TB: "Shield Charger",
+    WeaponType.HB: "Bouncer",
+    WeaponType.PC: "Plasma Coil"
 }
 
 weapon_type_to_shortened_name = {

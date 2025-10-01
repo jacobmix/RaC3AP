@@ -11,8 +11,8 @@
             "map": "Veldin",
             "x": 365,
             "y": 425
-        }
-      ],
+          }
+        ],
         "sections": [
           {
             "name": "Received Shock Blaster",
@@ -20,15 +20,15 @@
           }
         ]
       },
-    {
-      "name": "Rangers",
-      "map_locations": [
-        {
-          "map": "Veldin",
+      {
+        "name": "Rangers",
+        "map_locations": [
+          {
+            "map": "Veldin",
             "x": 364,
             "y": 358
-        }
-      ],
+          }
+        ],
         "sections": [
           {
             "name": "Received Nitro Launcher",
@@ -36,15 +36,15 @@
           }
         ]
       },
-    {
-      "name": "Save Veldin!",
-      "map_locations": [
-        {
-          "map": "Veldin",
+      {
+        "name": "Save Veldin!",
+        "map_locations": [
+          {
+            "map": "Veldin",
             "x": 178,
             "y": 102
-        }
-      ],
+          }
+        ],
         "sections": [
           {
             "name": "Infobot: Florana",
@@ -138,7 +138,7 @@
         ],
         "sections": [
           {
-            "name": "Infobot: Starship Phoenix",
+            "name": "Defeat Qwark",
             "item_count": 1
           }
         ]
@@ -161,7 +161,7 @@
         ],
         "sections": [
           {
-            "name": "Received SUCC Cannon",
+            "name": "Received Suck Cannon",
             "item_count": 1
           },
           {
@@ -182,26 +182,44 @@
         "sections": [
           {
             "name": "Gadget Training Titanium Bolt",
-            "item_count": 1
-          },
-          {
-            "name": "Nerves Titanium Bolt",
+            "access_rules": [
+              "Tyhrranosis", "hacker", "hyperShot"
+            ],
             "item_count": 1
           },
           {
             "name": "Beat Helga's Best Time (0:50) (SP)",
+            "access_rules": [
+              "Tyhrranosis", "hacker", "hyperShot"
+            ],
             "item_count": 1
           },
           {
             "name": "VR Gadget Training",
+            "access_rules": [
+              "Tyhrranosis", "hacker", "hyperShot"
+            ],
             "item_count": 1
           },
           {
             "name": "Received Hacker",
+            "access_rules": [
+              "Tyhrranosis", "hacker", "hyperShot"
+            ],
             "item_count": 1
           },
           {
             "name": "Received Hypershot",
+            "access_rules": [
+              "Tyhrranosis", "hacker", "hyperShot"
+            ],
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Daxx",
+            "access_rules": [
+              "Tyhrranosis", "hacker", "hyperShot"
+            ],
             "item_count": 1
           },
           {
@@ -234,6 +252,10 @@
           },
           {
             "name": "Nerves of Titanium",
+            "item_count": 1
+          },
+          {
+            "name": "Nerves Titanium Bolt",
             "item_count": 1
           }
         ]
@@ -297,10 +319,6 @@
             "item_count": 1
           },
           {
-            "name": "Infobot: Daxx",
-            "item_count": 1
-          },
-          {
             "name": "Infobot: Kerwan",
             "item_count": 1
           },
@@ -329,7 +347,7 @@
             "item_count": 1
           },
           {
-            "name": "Qwark Vidcomic 4",
+            "name": "Qwark Vidcomic 5",
             "item_count": 1
           }
         ]
@@ -401,7 +419,7 @@
         ],
         "sections": [
           {
-            "name": "Hit n' Run"  ,
+            "name": "Hit n' Run",
             "item_count": 1
           }
         ]
@@ -580,7 +598,7 @@
   },
   {
     "name": "Annihilation Nation",
-        "chest_unopened_img": "images/Question.png",
+    "chest_unopened_img": "images/Question.png",
     "chest_opened_img": "images/Q_Force.png",
     "access_rules": [
       "Annihilation"
@@ -789,7 +807,7 @@
             "item_count": 1
           },
           {
-            "name": "Time to SUCC",
+            "name": "Time to Suck",
             "item_count": 1
           },
           {
@@ -1214,9 +1232,9 @@
   },
   {
     "name": "Daxx",
-        "access_rules":[
-            "Daxx"
-        ],
+    "access_rules": [
+      "Daxx"
+    ],
     "children": [
       {
         "name": "Around the Island",
@@ -1335,7 +1353,7 @@
         ],
         "sections": [
           {
-            "name": "Received Disk Blade Gun",
+            "name": "Received Disk-Blade Gun",
             "item_count": 1
           }
         ]
@@ -1689,9 +1707,9 @@
     "name": "Metropolis",
     "chest_unopened_img": "images/Question.png",
     "chest_opened_img": "images/Q_Force.png",
-    "access_rules":[
-            "Metropolis"
-        ],
+    "access_rules": [
+      "Metropolis"
+    ],
     "children": [
       {
         "name": "2002 was a good year in the city (SP)",
@@ -1815,9 +1833,9 @@
     "name": "Crash Site",
     "chest_unopened_img": "images/Question.png",
     "chest_opened_img": "images/Q_Force.png",
-    "access_rules":[
-            "CrashSite"
-        ],
+    "access_rules": [
+      "CrashSite"
+    ],
     "children": [
       {
         "name": "Side Route",
@@ -1905,9 +1923,9 @@
     "name": "Aridia",
     "chest_unopened_img": "images/Question.png",
     "chest_opened_img": "images/Q_Force.png",
-    "access_rules":[
-            "Aridia"
-        ],
+    "access_rules": [
+      "Aridia"
+    ],
     "children": [
       {
         "name": "Operation: DEATH VALLEY",
@@ -2031,9 +2049,9 @@
     "name": "Qwark's Hideout",
     "chest_unopened_img": "images/Question.png",
     "chest_opened_img": "images/Q_Force.png",
-    "access_rules":[
-            "QwarksHideout"
-        ],
+    "access_rules": [
+      "QwarksHideout"
+    ],
     "children": [
       {
         "name": "Grav-Ramp Path",
@@ -2089,9 +2107,9 @@
     "name": "Koros",
     "chest_unopened_img": "images/Question.png",
     "chest_opened_img": "images/Q_Force.png",
-    "access_rules":[
-            "Koros"
-        ],
+    "access_rules": [
+      "Koros"
+    ],
     "children": [
       {
         "name": "Behind the Metal Fence",
@@ -2163,9 +2181,9 @@
     "name": "Command Center",
     "chest_unopened_img": "images/Question.png",
     "chest_opened_img": "images/Q_Force.png",
-    "access_rules":[
-            "CommandCenter"
-        ],
+    "access_rules": [
+      "CommandCenter"
+    ],
     "children": [
       {
         "name": "Behind the Forcefield",
