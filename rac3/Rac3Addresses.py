@@ -371,13 +371,6 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Infobot: Obani Gemini",
-        "Id": 50001025,
-        "Address": "0x00142C29", # Infiltrate Daxx Weapon's Facility
-        "CheckType": 0,
-        "AddressBit": 3  # 0x8 = 0b00001000
-    },
-    {
         "Name": "Infobot: Crash Site",
         "Id": 50001026,
         #  "Address": "0x001D5541",
@@ -576,7 +569,7 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Time to Suck",
+        "Name": "Time to SUCC",
         "Id": 50001158,
         "Address": "0x00142781",
         "CheckType": 0,
@@ -839,6 +832,14 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
+        "Name": "Infiltrate Weapons Facility",
+        "Id": 50001323,
+        "Address": "0x001D553B",
+        # Infobot Address: "0x00142C29" bit 3
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
         "Name": "Post-Daxx",
         "Id": 50001323,
         # "Address": "0x00143B39", #  ??
@@ -847,7 +848,7 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Received Disk-Blade Gun",
+        "Name": "Received Disk Blade Gun",
         "Id": 50001340,
         "Address": "0x00142CEF",
         "CheckType": 0,
@@ -1292,7 +1293,7 @@ LOCATIONS = [
         "CheckValue": "121600"
     },
     {
-        "Name": "Suck Cannon: V2",
+        "Name": "SUCC Cannon: V2",
         "Id": 50001520,
         "Address": "0x00142FFC",
         "CompareType": 1,
@@ -1300,7 +1301,7 @@ LOCATIONS = [
         "CheckValue": "6400"
     },
     {
-        "Name": "Suck Cannon: V3",
+        "Name": "SUCC Cannon: V3",
         "Id": 50001521,
         "Address": "0x00142FFC",
         "CompareType": 1,
@@ -1308,7 +1309,7 @@ LOCATIONS = [
         "CheckValue": "19200"
     },
     {
-        "Name": "Suck Cannon: V4",
+        "Name": "SUCC Cannon: V4",
         "Id": 50001522,
         "Address": "0x00142FFC",
         "CompareType": 1,
@@ -1316,7 +1317,7 @@ LOCATIONS = [
         "CheckValue": "38400"
     },
     {
-        "Name": "Suck Cannon: V5",
+        "Name": "SUCC Cannon: V5",
         "Id": 50001523,
         "Address": "0x00142FFC",
         "CompareType": 1,
