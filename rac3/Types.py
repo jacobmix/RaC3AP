@@ -2,33 +2,37 @@ from enum import IntEnum
 from typing import NamedTuple, Optional
 from BaseClasses import Location, Item, ItemClassification
 
+
 class RaC3Location(Location):
     game = "Ratchet and Clank 3 Up your Arsenal"
+
 
 class RaC3Item(Item):
     game = "Ratchet and Clank 3 Up your Arsenal"
 
+
 class WeaponType(IntEnum):
-    SB=1
-    NL=2
-    N60=3
-    PW=4
-    INF=5
-    SC=6
-    SH=7
-    AoD=8
-    FR=9
-    ANH=10
-    HSG=11
-    DBL=12
-    RI=13
-    QoR=14
-    RY3N0=15
-    MTG=16
-    LG=17
-    TB=18
-    HB=19
-    PC=20
+    SB = 1
+    NL = 2
+    N60 = 3
+    PW = 4
+    INF = 5
+    SC = 6
+    SH = 7
+    AoD = 8
+    FR = 9
+    ANH = 10
+    HSG = 11
+    DBL = 12
+    RI = 13
+    QoR = 14
+    RY3N0 = 15
+    MTG = 16
+    LG = 17
+    TB = 18
+    HB = 19
+    PC = 20
+
 
 class Multiplier(IntEnum):
     x1 = 1
@@ -38,7 +42,8 @@ class Multiplier(IntEnum):
     x8 = 5
     x10 = 6
 
-multiplier_to_name ={
+
+multiplier_to_name = {
     Multiplier.x1: "x1",
     Multiplier.x2: "x2",
     Multiplier.x4: "x4",
@@ -70,37 +75,40 @@ weapon_type_to_name = {
 }
 
 weapon_type_to_shortened_name = {
-    WeaponType.SB:      "SB",
-    WeaponType.NL:      "NL",
-    WeaponType.N60:     "N60",
-    WeaponType.PW:      "PW",
-    WeaponType.INF:     "INF",
-    WeaponType.SC:      "SC",
-    WeaponType.SH:      "SH",
-    WeaponType.AoD:     "AOD",
-    WeaponType.FR:      "FR",
-    WeaponType.ANH:     "ANH",
-    WeaponType.HSG:     "HSG",
-    WeaponType.DBL:     "DBL",
-    WeaponType.RI:      "RI",
-    WeaponType.QoR:     "QoR",
-    WeaponType.RY3N0:   "RY3N0",
-    WeaponType.MTG:     "MTG",
-    WeaponType.LG:      "LG",
-    WeaponType.TB:      "TB",
-    WeaponType.HB:      "HB",
-    WeaponType.PC:      "PC"
+    WeaponType.SB: "SB",
+    WeaponType.NL: "NL",
+    WeaponType.N60: "N60",
+    WeaponType.PW: "PW",
+    WeaponType.INF: "INF",
+    WeaponType.SC: "SC",
+    WeaponType.SH: "SH",
+    WeaponType.AoD: "AOD",
+    WeaponType.FR: "FR",
+    WeaponType.ANH: "ANH",
+    WeaponType.HSG: "HSG",
+    WeaponType.DBL: "DBL",
+    WeaponType.RI: "RI",
+    WeaponType.QoR: "QoR",
+    WeaponType.RY3N0: "RY3N0",
+    WeaponType.MTG: "MTG",
+    WeaponType.LG: "LG",
+    WeaponType.TB: "TB",
+    WeaponType.HB: "HB",
+    WeaponType.PC: "PC"
 
 }
+
 
 class ItemData(NamedTuple):
     ap_code: Optional[int]
     classification: ItemClassification
     count: Optional[int] = 1
 
+
 class EventData(NamedTuple):
-    name:       str
-    ap_code:    Optional[int] = None
+    ap_code: Optional[int]
+    region: Optional[str]
+
 
 class LocData(NamedTuple):
     ap_code: Optional[int]

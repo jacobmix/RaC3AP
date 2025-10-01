@@ -1,4 +1,4 @@
-from .Types import LocData, WeaponType
+from .Types import EventData, LocData, WeaponType
 from typing import Dict, TYPE_CHECKING
 
 if TYPE_CHECKING:
@@ -364,6 +364,17 @@ weapon_upgrades = {
 
 nanotech_milestones = {
     "Nanotech Milestone: 11": LocData(50001654, "Veldin"),
+}
+
+rac3_events = {
+    "Cleared Veldin": EventData(50002000, "Veldin"),
+    "Cleared Florana": EventData(50002001, "Florana"),
+    "Cleared Marcadia": EventData(50002002, "Marcadia Region 2"),
+    "Cleared Annihilation Nation 1": EventData(50002003, "Annihilation Nation"),
+    "Cleared Annihilation Nation 2": EventData(50002004, "Annihilation Nation 2"),
+    "Cleared Aquatos": EventData(50002005, "Aquatos"),
+    "Cleared Tyhrranosis": EventData(50002006, "Tyhrranosis"),
+    "Cleared Daxx": EventData(50002006, "Daxx"),
 }
 
 location_table = {
