@@ -245,17 +245,6 @@ class Rac3Interface(GameInterface):
         self.UnlockArmor = {"status": 0, "unlockDelay": 0}
 
         # Proc options
-        ### Starting Weapon
-        for name, weapon_data in self.UnlockWeapons.items():
-            if name == self.startingWeapon:
-                self.UnlockWeapons[name]["status"] = 1
-                # Initial ammo
-                if ADDRESSES[self.current_game]["Weapons"][name]["lv1Ammo"] != 0:
-                    ammo = ADDRESSES[self.current_game]["Weapons"][name]["lv1Ammo"]
-                    addr = ADDRESSES[self.current_game]["Weapons"][name]["ammoAddress"]
-                    addr = self.AddressConvert(addr)
-                    self._write32(addr, ammo)
-        # self.logger.info(f"self.UnlockWeapons.items(): {self.UnlockWeapons.items()}")
         ### Bolt and XPMultiplier
         val = int(self.boltandXPMultiplier[1:])
         self.boltandXPMultiplierValue = val - 1  # 0 = x1, 1 = x2, 3 = x4 ...
