@@ -569,7 +569,7 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Time to SUCC",
+        "Name": "Time to Suck",
         "Id": 50001158,
         "Address": "0x00142781",
         "CheckType": 0,
@@ -1293,7 +1293,7 @@ LOCATIONS = [
         "CheckValue": "121600"
     },
     {
-        "Name": "SUCC Cannon: V2",
+        "Name": "Suck Cannon: V2",
         "Id": 50001520,
         "Address": "0x00142FFC",
         "CompareType": 1,
@@ -1301,7 +1301,7 @@ LOCATIONS = [
         "CheckValue": "6400"
     },
     {
-        "Name": "SUCC Cannon: V3",
+        "Name": "Suck Cannon: V3",
         "Id": 50001521,
         "Address": "0x00142FFC",
         "CompareType": 1,
@@ -1309,7 +1309,7 @@ LOCATIONS = [
         "CheckValue": "19200"
     },
     {
-        "Name": "SUCC Cannon: V4",
+        "Name": "Suck Cannon: V4",
         "Id": 50001522,
         "Address": "0x00142FFC",
         "CompareType": 1,
@@ -1317,7 +1317,7 @@ LOCATIONS = [
         "CheckValue": "38400"
     },
     {
-        "Name": "SUCC Cannon: V5",
+        "Name": "Suck Cannon: V5",
         "Id": 50001523,
         "Address": "0x00142FFC",
         "CompareType": 1,
