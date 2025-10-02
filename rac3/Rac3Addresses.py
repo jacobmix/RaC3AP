@@ -1007,10 +1007,11 @@ LOCATIONS = [
     {
         "Name": "Infobot: Aridia",
         "Id": 50001452,
-        "Address": "0x00142722",
+        "Address": "0x00142C52",
+        #"Address": "0x00142722",
         # Correct Address: 0x00142C52(4bit: 0x07->0x0f) (US), but Event is not happened in some case.
         "CheckType": 0,
-        "AddressBit": 1  # / 0x02: 0000_00X0
+        "AddressBit": 3  # / 0x02: 0000_00X0
     },
     {
         "Name": "Received Warp Pad",
