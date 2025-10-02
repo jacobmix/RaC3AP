@@ -106,7 +106,7 @@ class ItemData(NamedTuple):
 
 
 class EventData(NamedTuple):
-    ap_code: Optional[int]
+    ap_code: None
     region: Optional[str]
 
 

@@ -1,9 +1,8 @@
+from time import time
 from typing import TYPE_CHECKING
-from time import sleep, time
-from random import randint
 
-from NetUtils import ClientStatus
 from CommonClient import logger
+from NetUtils import ClientStatus
 
 ##################################################
 # Only change point: Change filename/Class name  #
@@ -23,15 +22,15 @@ async def update(ctx: 'Context', ap_connected: bool) -> None:
     # probably because of when the game loads stuff.
 
     if ap_connected and ctx.slot_data is not None:
-        # Check recieved items
+        # Check received items
         await handle_received_items(ctx)
-        # Check archieved locations
+        # Check collected locations
         await handle_checked_locations(ctx)
         # Check goal is checked or not
         await handle_check_goal(ctx)
 
-        ctx.game_interface.Update()
-        
+        ctx.game_interface.update()
+
         # logger.info(f"Update is called")
 
 
@@ -39,7 +38,7 @@ async def init(ctx: 'Context', ap_connected: bool) -> None:
     """Called when the player connects to the AP server or enters a new episode"""
     if ap_connected:
         # Initialize all date
-        ctx.game_interface.Init()
+        ctx.game_interface.init()
         pass
 
 
@@ -61,7 +60,7 @@ async def handle_received_items(ctx: 'Context') -> None:
         item_id = item.item
         ctx.game_interface.item_received(item_id, ctx.processed_item_count)
         # logger.info(f"Received item: ({item_id})")
-        
+
     ctx.processed_item_count = len(ctx.items_received)
 
 
@@ -111,5 +110,5 @@ async def handle_check_goal(ctx: 'Context') -> None:
 
     victory_code = ctx.game_interface.get_victory_code()
     if victory_code in ctx.checked_locations:
-        await ctx.send_msgs([{"cmd": "StatusUpdate", "status": ClientStatus.CLIENT_GOAL}]) 
+        await ctx.send_msgs([{"cmd": "StatusUpdate", "status": ClientStatus.CLIENT_GOAL}])
 

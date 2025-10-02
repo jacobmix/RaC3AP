@@ -1,17 +1,17 @@
 import logging
-from typing import Dict
-from BaseClasses import MultiWorld, Item, ItemClassification, Tutorial
-from worlds.AutoWorld import World, CollectionState, WebWorld
-from .Items import (item_table, create_itempool, create_item, weapon_items, progressive_weapons, gadget_items,
-                    post_planets, progressive_armor, t_bolts, filter_item_names)
-from .Locations import get_location_names, get_total_locations, rac3_locations, get_level_locations, get_regions
-from .Rac3Options import EnableWeaponLevelAsItem, RaC3Options, GAME_TITLE_FULL
-from .Regions import create_regions
-from .Types import WeaponType, weapon_type_to_name, RaC3Item, multiplier_to_name, Multiplier
-from .Rules import set_rules
+from typing import Any, Dict, Optional
 
-from typing import Dict, Optional, Mapping, Any
-from worlds.LauncherComponents import Component, SuffixIdentifier, Type, components, launch_subprocess
+from BaseClasses import Item, ItemClassification, MultiWorld, Tutorial
+from worlds.AutoWorld import CollectionState, WebWorld, World
+from worlds.LauncherComponents import Component, components, launch_subprocess, SuffixIdentifier, Type
+
+from .Items import (create_item, create_itempool, filter_item_names, gadget_items, item_table, post_planets,
+                    progressive_armor, progressive_weapons, t_bolts, weapon_items)
+from .Locations import get_level_locations, get_location_names, get_regions, get_total_locations, rac3_locations
+from .Rac3Options import EnableWeaponLevelAsItem, GAME_TITLE_FULL, RaC3Options
+from .Regions import create_regions
+from .Rules import set_rules
+from .Types import Multiplier, multiplier_to_name, RaC3Item, weapon_type_to_name, WeaponType
 
 rac3_logger = logging.getLogger("RatchetAndClank3")
 rac3_logger.setLevel(logging.DEBUG)
@@ -96,7 +96,7 @@ class RaC3World(World):
         slot_data: Dict[str, object] = {
             "options": {
                 "StartingWeapons": [self.preplaced_items[0], self.preplaced_items[1]],
-                "BoltandXPMultiplier": multiplier_to_name[Multiplier(self.options.BoltandXPMultiplier)],
+                "BoltAndXPMultiplier": multiplier_to_name[Multiplier(self.options.BoltAndXPMultiplier)],
                 "EnableWeaponLevelAsItem": self.options.EnableWeaponLevelAsItem.value,
                 "ExtraArmorUpgrade": self.options.ExtraArmorUpgrade.value,
             },
@@ -113,7 +113,7 @@ class RaC3World(World):
     def remove(self, state: "CollectionState", item: "Item") -> bool:
         return super().remove(state, item)
 
-    # For Univesal Tracker integration
+    # For Universal Tracker integration
     @staticmethod
     def interpret_slot_data(slot_data: dict[str, Any]) -> dict[str, Any]:
         # Trigger a regen in UT

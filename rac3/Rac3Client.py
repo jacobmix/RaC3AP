@@ -1,29 +1,34 @@
 # Common import
-from typing import Optional, Dict
 import asyncio
 import multiprocessing
 import traceback
-from CommonClient import get_base_parser, logger, server_loop, gui_enabled
+from typing import Optional
+
 import Utils
+from CommonClient import get_base_parser, gui_enabled, logger, server_loop
+
 # Load Universal Tracker modules with aliases
 tracker_loaded = False
 try:
     from worlds.tracker.TrackerClient import (TrackerCommandProcessor as ClientCommandProcessor,
                                               TrackerGameContext as CommonContext, UT_VERSION)
+
     tracker_loaded = True
 except ImportError:
-    from CommonClient import ClientCommandProcessor, CommonContext
+    from CommonClient import ClientCommandProcessor, CommonContext, UT_VERSION
+
     print("ERROR: Universal Tracker is not loaded")
 
 # Game title dedicated
-from . import Locations, Items
-#from .data.Constants import EPISODES
-from .Rac3Interface import Rac3Interface, Dummy
+from . import Locations
+# from .data.Constants import EPISODES
+from .Rac3Interface import Rac3Interface
 from .Rac3Callbacks import init, update
 from .Rac3Options import GAME_TITLE, GAME_TITLE_FULL
 
-CLIENT_INIT_LOG=f"{GAME_TITLE} Client"
-CLIENT_VERSION="v0.1.0"
+CLIENT_INIT_LOG = f"{GAME_TITLE} Client"
+CLIENT_VERSION = "v0.1.0"
+
 
 class CommandProcessor(ClientCommandProcessor):
     # This is not mandatory for the game. Just a client command implementation.
@@ -33,11 +38,11 @@ class CommandProcessor(ClientCommandProcessor):
     #         self.ctx.game_interface.kill_player()
     def _cmd_weapon_exp_test(self):
         if isinstance(self.ctx, Rac3Context):
-            self.ctx.game_interface.ReceivedOthers(50001492)
+            self.ctx.game_interface.received_others(50001492)
 
     def _cmd_bolt_test(self):
         if isinstance(self.ctx, Rac3Context):
-            self.ctx.game_interface.ReceivedOthers(50001491)
+            self.ctx.game_interface.received_others(50001491)
 
 
 class Rac3Context(CommonContext):
@@ -56,8 +61,9 @@ class Rac3Context(CommonContext):
     deathlink_timestamp: float = 0
     death_link_enabled = False
     queued_deaths: int = 0
-    
-    items_handling = 0b111 # This is mandatory
+    location_table = None
+
+    items_handling = 0b111  # This is mandatory
 
     def __init__(self, server_address, password):
         super().__init__(server_address, password)
@@ -97,7 +103,7 @@ class Rac3Context(CommonContext):
         if cmd == "Connected":
             self.slot_data = args["slot_data"]
             # logger.info(f"Received data: {args}")
-            self.location_table = self.server_locations # list
+            self.location_table = self.server_locations  # list
             self.game_interface.proc_option(self.slot_data)
 
             # Set death link tag if it was requested in options
@@ -108,10 +114,11 @@ class Rac3Context(CommonContext):
                 Utils.async_start(self.send_msgs([{
                     "cmd": "LocationScouts",
                     "locations": [
-                        Locations.location_dict[location].code
+                        Locations.location_table[location].ap_code
                         for location in Locations.location_groups["Purchase"]
                     ]
                 }]))
+
 
 def update_connection_status(ctx: Rac3Context, status: bool):
     if ctx.is_connected_to_game == status:
@@ -123,6 +130,7 @@ def update_connection_status(ctx: Rac3Context, status: bool):
         logger.info("Unable to connect to the PCSX2 instance, attempting to reconnect...")
 
     ctx.is_connected_to_game = status
+
 
 async def pcsx2_sync_task(ctx: Rac3Context):
     logger.info(f"Starting {GAME_TITLE} Connector, attempting to connect to emulator...")
@@ -147,6 +155,7 @@ async def pcsx2_sync_task(ctx: Rac3Context):
             await asyncio.sleep(3)
             continue
 
+
 async def _handle_game_ready(ctx: Rac3Context) -> None:
     connected_to_server = (ctx.server is not None) and (ctx.slot is not None)
 
@@ -154,7 +163,7 @@ async def _handle_game_ready(ctx: Rac3Context) -> None:
     if new_connection:
         await init(ctx, connected_to_server)
         ctx.is_connected_to_server = connected_to_server
-    
+
     await update(ctx, connected_to_server)
 
     if ctx.server:
@@ -168,7 +177,7 @@ async def _handle_game_ready(ctx: Rac3Context) -> None:
             logger.info("Waiting for player to connect to server")
             ctx.last_error_message = message
         await asyncio.sleep(1)
-    
+
     await asyncio.sleep(1)
 
 
@@ -176,6 +185,7 @@ async def _handle_game_not_ready(ctx: Rac3Context):
     """If the game is not connected, this will attempt to retry connecting to the game."""
     ctx.game_interface.connect_to_game()
     await asyncio.sleep(3)
+
 
 def launch_client():
     Utils.init_logging(CLIENT_INIT_LOG)
@@ -219,6 +229,7 @@ def launch_client():
 
     asyncio.run(main())
     colorama.deinit()
+
 
 if __name__ == "__main__":
     launch_client()

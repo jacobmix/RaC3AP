@@ -705,7 +705,7 @@
         ]
       },
       {
-        "name": "Gauntlet Revist Challenges",
+        "name": "Gauntlet Revisit Challenges",
         "map_locations": [
           {
             "map": "Annihilation",
@@ -1085,23 +1085,23 @@
         ],
         "sections": [
           {
-            "name": "Recieved Miniturret Glove",
+            "name": "Received Mini-turret Glove",
             "item_count": 1
           },
           {
-            "name": "Recieved Lava Gun",
+            "name": "Received Lava Gun",
             "item_count": 1
           },
           {
-            "name": "Recieved Bouncer",
+            "name": "Received Bouncer",
             "item_count": 1
           },
           {
-            "name": "Recieved Plasma Coil",
+            "name": "Received Plasma Coil",
             "item_count": 1
           },
           {
-            "name": "Recieved Shield Charger",
+            "name": "Received Shield Charger",
             "item_count": 1
           }
         ]
@@ -1980,7 +1980,7 @@
         ]
       },
       {
-        "name": "Under the Bridge (Assassionation)",
+        "name": "Under the Bridge (Assassination)",
         "map_locations": [
           {
             "map": "Aridia",

@@ -1,8 +1,9 @@
+from typing import Dict, List, TYPE_CHECKING
+
 from BaseClasses import Item, ItemClassification
 
-from .Types import ItemData, RaC3Item, weapon_type_to_name, WeaponType, EventData
 from .Locations import get_total_locations
-from typing import List, Dict, TYPE_CHECKING
+from .Types import ItemData, RaC3Item
 
 if TYPE_CHECKING:
     from . import RaC3World
@@ -128,7 +129,7 @@ gadget_items = {
     "Warp Pad": ItemData(50001448, ItemClassification.progression, 1),
     "Gadgetron PDA": ItemData(50001449, ItemClassification.useful, 1),
     "Charge-Boots": ItemData(50001450, ItemClassification.progression, 1),
-    "Hyperstrike Smash": ItemData(50001451, ItemClassification.progression, 1)
+    "Box Breaker": ItemData(50001451, ItemClassification.progression, 1)
 }
 
 post_planets = {
@@ -195,6 +196,11 @@ item_table = {
     **victory_item
 }
 
+# Todo: Add Item Groups (see location_groups)
+item_group = {
+
+}
+
 # class ItemData(NamedTuple):
 #    ap_code: Optional[int]
 #    classification: ItemClassification
@@ -204,7 +210,7 @@ default_starting_weapons = {name: 1 for name in weapon_items.keys()}
 
 
 def filter_items(classification):
-    return filter(lambda l: l[1].classification == (classification), item_table.items())
+    return filter(lambda l: l[1].classification == classification, item_table.items())
 
 
 def filter_item_names(classification):

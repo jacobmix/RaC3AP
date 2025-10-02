@@ -1,5 +1,6 @@
-from .Types import EventData, LocData, WeaponType
 from typing import Dict, TYPE_CHECKING
+
+from .Types import EventData, LocData
 
 if TYPE_CHECKING:
     from . import RaC3World
@@ -174,7 +175,7 @@ rac3_locations = {
     "Daxx: Received Charge Boots": LocData(50001322, "Daxx"),
     "Daxx: Post-Daxx": LocData(50001323, "Daxx"),
     "Daxx: Skill Point: Bugs to Birdie": LocData(50001616, "Daxx"),
-    # In the vanilla game you get the quack o ray on Aridia, but the skill point is done on Daxx
+    # In the vanilla game you get the quack-o-ray on Aridia, but the skill point is done on Daxx
 
     # ----- Obani Gemini -----#
     "Obani_Gemini: Received Disk-Blade Gun": LocData(50001340, "Obani Gemini"),
@@ -231,7 +232,7 @@ rac3_locations = {
     # ----- Planet Aridia -----#
     "Aridia: Received Warp Pad": LocData(50001470, "Aridia"),
     "Aridia: Received Qwack-O-Ray": LocData(50001471, "Aridia"),
-    "Aridia: T-Bolt: Under the Bridge (Assassionation)": LocData(50001472, "Aridia"),
+    "Aridia: T-Bolt: Under the Bridge (Assassination)": LocData(50001472, "Aridia"),
     "Aridia: T-Bolt: Behind the Base (X12 Endgame)": LocData(50001473, "Aridia"),
     "Aridia: Operation DEATH VALLEY: The Tunnels of Outpost X12": LocData(50001475, "Aridia"),
     "Aridia: Operation DEATH VALLEY: Ambush in Red Rock Valley": LocData(50001476, "Aridia"),
@@ -367,21 +368,52 @@ nanotech_milestones = {
     "Nanotech Milestone: 11": LocData(50001655, "Veldin"),
 }
 
-rac3_events = {
-    "Cleared Veldin": EventData(50002000, "Veldin"),
-    "Cleared Florana": EventData(50002001, "Florana"),
-    "Cleared Marcadia": EventData(50002002, "Marcadia Region 2"),
-    "Cleared Annihilation Nation 1": EventData(50002003, "Annihilation Nation"),
-    "Cleared Annihilation Nation 2": EventData(50002004, "Annihilation Nation 2"),
-    "Cleared Aquatos": EventData(50002005, "Aquatos"),
-    "Cleared Tyhrranosis": EventData(50002006, "Tyhrranosis"),
-    "Cleared Daxx": EventData(50002006, "Daxx"),
+rac3_events = {  # Events have no ap_code
+    "Cleared Veldin": EventData(None, "Veldin"),
+    "Cleared Florana": EventData(None, "Florana"),
+    "Cleared Marcadia": EventData(None, "Marcadia Region 2"),
+    "Cleared Annihilation Nation 1": EventData(None, "Annihilation Nation"),
+    "Cleared Annihilation Nation 2": EventData(None, "Annihilation Nation 2"),
+    "Cleared Aquatos": EventData(None, "Aquatos"),
+    "Cleared Tyhrranosis": EventData(None, "Tyhrranosis"),
+    "Cleared Daxx": EventData(None, "Daxx"),
 }
 
-location_table = {
+location_table: dict[str, LocData] = {
     **rac3_locations,
     **nanotech_milestones
     # **weapon_upgrades
+}
+
+location_groups: dict[str, set[str]] = {
+    "Veldin": set(loc for loc in location_table.keys() if location_table[loc].region is "Veldin"),
+    "Florana": set(loc for loc in location_table.keys() if location_table[loc].region is "Florana"),
+    "Starship Phoenix": set(loc for loc in location_table.keys() if location_table[loc].region is "Starship Phoenix"),
+    "Marcadia": set(loc for loc in location_table.keys() if
+                    location_table[loc].region is "Marcadia Region 1"
+                    or location_table[loc].region is "Marcadia Region 2"),
+    "Annihilation Nation": set(loc for loc in location_table.keys() if
+                               location_table[loc].region is "Annihilation Nation"
+                               or location_table[loc].region is "Annihilation Nation 2"),
+    "Aquatos": set(loc for loc in location_table.keys() if location_table[loc].region is "Aquatos"),
+    "Tyhrranosis": set(loc for loc in location_table.keys() if
+                       location_table[loc].region is "Tyhrranosis"
+                       or location_table[loc].region is "Tyhrranosis Region 2"),
+    "Daxx": set(loc for loc in location_table.keys() if location_table[loc].region is "Daxx"),
+    "Obani Gemini": set(loc for loc in location_table.keys() if location_table[loc].region is "Obani Gemini"),
+    "Blackwater City": set(loc for loc in location_table.keys() if location_table[loc].region is "Blackwater City"),
+    "Holostar Studios": set(loc for loc in location_table.keys() if location_table[loc].region is "Holostar Studios"),
+    "Obani Draco": set(loc for loc in location_table.keys() if location_table[loc].region is "Obani Draco"),
+    "Zeldrin Starport": set(
+        loc for loc in location_table.keys() if location_table[loc].region is "Zeldrin Starport Region 2"),
+    "Metropolis": set(loc for loc in location_table.keys() if
+                      location_table[loc].region is "Metropolis Region 1"
+                      or location_table[loc].region is "Metropolis Region 2"),
+    "Crash Site": set(loc for loc in location_table.keys() if location_table[loc].region is "Crash Site"),
+    "Aridia": set(loc for loc in location_table.keys() if location_table[loc].region is "Aridia"),
+    "Qwarks Hideout": set(loc for loc in location_table.keys() if location_table[loc].region is "Qwarks Hideout"),
+    "Koros": set(loc for loc in location_table.keys() if location_table[loc].region is "Koros"),
+    "Command Center": set(loc for loc in location_table.keys() if location_table[loc].region is "Command Center"),
 }
 
 
@@ -396,4 +428,4 @@ def get_level_locations(region):
 
 
 def get_level_location_data(region):
-    return filter(lambda l: l[1].region == (region), location_table.items())
+    return filter(lambda l: l[1].region == region, location_table.items())

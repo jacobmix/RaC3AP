@@ -1,8 +1,6 @@
-from worlds.generic.Rules import add_rule, set_rule
-from .Types import weapon_type_to_shortened_name
 from typing import TYPE_CHECKING
-from .Locations import rac3_locations
-from .Items import gadget_items
+
+from worlds.generic.Rules import add_rule, set_rule
 
 if TYPE_CHECKING:
     from . import RaC3World
@@ -148,7 +146,7 @@ def set_rules_hard_location(world):
              lambda state: state.has("Progressive Vidcomic", world.player, 4))
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 5 Clear"),
              lambda state: state.has("Progressive Vidcomic", world.player, 5))
-    # Skillpoints
+    # Skill Points
     add_rule(world.get_location("Phoenix: Skill Point: Turn Up The Heat!"),
              lambda state: state.can_reach("Koros", player=world.player))
     add_rule(world.get_location("Phoenix: Skill Point: Strive for Arcade Perfection"),
@@ -182,7 +180,7 @@ def set_rules_hard_location(world):
              lambda state: state.has("Refractor", world.player))
 
     # ----- Annihilation Nation -----#
-    # First visit (when getting Tyhrra-Guise")
+    # First visit (when getting Tyhrra-Guise)
     add_rule(world.get_location("Annihilation: Whip it Good"),
              lambda state: state.has("Plasma Whip", world.player)
                            or state.has("Progressive Plasma Whip", world.player))
@@ -297,7 +295,7 @@ def set_rules_hard_location(world):
                            or state.has("Progressive Flux Rifle", world.player))
 
     # ----- Planet Aridia -----#
-    add_rule(world.get_location("Aridia: T-Bolt: Under the Bridge (Assassionation)"),
+    add_rule(world.get_location("Aridia: T-Bolt: Under the Bridge (Assassination)"),
              lambda state: state.has("Gravity-Boots", world.player))
     add_rule(world.get_location("Aridia: T-Bolt: Behind the Base (X12 Endgame)"),
              lambda state: state.has("Gravity-Boots", world.player))
@@ -312,7 +310,7 @@ def set_rules_hard_location(world):
 
     # ----- Planet Koros -----#
     add_rule(world.multiworld.get_location("Koros: Skill Point: You break it, you win it", world.player),
-             lambda state: state.has("Hyperstrike Smash", world.player))
+             lambda state: state.has("Box Breaker", world.player))
 
     # ----- Planet Command Center -----#
     add_rule(world.multiworld.get_location("Command Center: Skill Point: Spread Your Germs", world.player),

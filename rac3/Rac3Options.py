@@ -30,12 +30,12 @@ class StartingWeapons(ItemDict):
     valid_keys = default_starting_weapons.keys()
 
 
-class BoltandXPMultiplier(Choice):
+class BoltAndXPMultiplier(Choice):
     """
     Determines what your bolts and xp will be multiplied by, recommended to go with x6 if you hate grinding,
     x10 if you're looking to do a sync
     """
-    display_name = "BoltandXPMultiplier"
+    display_name = "BoltAndXPMultiplier"
     option_x1 = 1
     option_x2 = 2
     option_x4 = 3
@@ -71,18 +71,18 @@ class ExtraArmorUpgrade(Choice):
 @dataclass
 class RaC3Options(PerGameCommonOptions):
     StartingWeapons: StartingWeapons
-    BoltandXPMultiplier: BoltandXPMultiplier
+    BoltAndXPMultiplier: BoltAndXPMultiplier
     EnableWeaponLevelAsItem: EnableWeaponLevelAsItem
     ExtraArmorUpgrade: ExtraArmorUpgrade
 
 
 rac3_option_groups: Dict[str, List[Any]] = {
-    "General Options": [StartingWeapons, BoltandXPMultiplier, EnableWeaponLevelAsItem, ExtraArmorUpgrade]
+    "General Options": [StartingWeapons, BoltAndXPMultiplier, EnableWeaponLevelAsItem, ExtraArmorUpgrade]
 }
 
-slot_data_options: List[str] = {
-    "BoltandXPMultiplier",
+slot_data_options: list[str] = [
+    "BoltAndXPMultiplier",
     "StartingWeapons",
     "EnableWeaponLevelAsItem",
     "ExtraArmorUpgrade",
-}
+]

@@ -47,7 +47,7 @@ ADDRESSES = {
             "Tyhrra-Guise": {"unlockAddress": 0x00142CBE, "id": 30, },
             "Gravity-Boots": {"unlockAddress": 0x00142CAD, "id": 0, },
             "Bolt Grabber V2": {"unlockAddress": 0x00142CA7, "id": 0, },
-            "Hyperstrike Smash": {"unlockAddress": 0x00142CBA, "id": 0, },
+            "Box Breaker": {"unlockAddress": 0x00142CBA, "id": 0, },
             "Map-O-Matic": {"unlockAddress": 0x00142CA5, "id": 0, },
             "Nano Pak": {"unlockAddress": 0x00142CC0, "id": 0, },
             "Warp Pad": {"unlockAddress": 0x00142CBF, "id": 31, },
@@ -350,7 +350,7 @@ LOCATIONS = [
         "Name": "Infobot: Aquatos",
         "Id": 50001022,
         # " Address": 0x001426F6, #  Correct Infobot address
-        "Address": "0x0014276F",  # Same as Thyrra-Guise Getting event. This event behinds Phoenix Ship event.
+        "Address": "0x0014276F",  # Same as Tyhrra-Guise Getting event. This event behinds Phoenix Ship event.
         "CheckType": 0,
         "AddressBit": 0
     },
@@ -459,7 +459,7 @@ LOCATIONS = [
     {
         "Name": "Received Tyhrra-Guise",
         "Id": 50001141,
-        "Address": "0x0014276F",  # Same as Grand Prize Bout(Thyrra-Guise Getting event)
+        "Address": "0x0014276F",  # Same as Grand Prize Bout(Tyhrra-Guise Getting event)
         "CheckType": 0,
         "AddressBit": 0
     },
@@ -958,7 +958,7 @@ LOCATIONS = [
         "Name": "Received Map-O-Matic",
         "Id": 50001430,
         #  "Address": "0x00142CA5", #  item flag
-        "Address": "0x00142C64",  # Metropolice Mission Clear
+        "Address": "0x00142C64",  # Metropolis Mission Clear
         "CheckType": 0,
         "AddressBit": 5  # 0x20 : 00X0_0000
     },
@@ -1008,7 +1008,7 @@ LOCATIONS = [
         "Name": "Infobot: Aridia",
         "Id": 50001452,
         "Address": "0x00142722",
-        # Correct Address: 0x00142C52(4bit: 0x07->0x0f) (US), but Event is not happenned in some case.
+        # Correct Address: 0x00142C52(4bit: 0x07->0x0f) (US), but Event is not happened in some case.
         "CheckType": 0,
         "AddressBit": 1  # / 0x02: 0000_00X0
     },

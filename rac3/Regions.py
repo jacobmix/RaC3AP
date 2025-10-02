@@ -126,8 +126,8 @@ def create_regions(world: "RaC3World"):
     qwack_o_ray_upgrades = create_region(world, "Qwack-O-Ray Upgrades")
     menu.connect(qwack_o_ray_upgrades, rule=lambda state: state.has("Qwack-O-Ray", world.player)),
 
-    RY3N0_upgrades = create_region(world, "RY3N0 Upgrades")
-    menu.connect(RY3N0_upgrades, rule=lambda state: state.has("RY3N0", world.player)),
+    ry3no_upgrades = create_region(world, "RY3N0 Upgrades")
+    menu.connect(ry3no_upgrades, rule=lambda state: state.has("RY3N0", world.player)),
 
     mega_turret_glove_upgrades = create_region(world, "Mini-Turret Glove Upgrades")
     menu.connect(mega_turret_glove_upgrades, rule=lambda state: state.has("Mini-Turret Glove", world.player)),
@@ -158,7 +158,7 @@ def create_region(world: "RaC3World", name: str) -> Region:
 
 
 def create_region_and_connect(world: "RaC3World",
-                              name: str, entrancename: str, connected_region: Region) -> Region:
+                              name: str, entrance_name: str, connected_region: Region) -> Region:
     reg: Region = create_region(world, name)
-    connected_region.connect(reg, entrancename)
+    connected_region.connect(reg, entrance_name)
     return reg
