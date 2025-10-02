@@ -73,11 +73,11 @@ rac3_locations = {
     "Phoenix: Skill Point: Strive for Arcade Perfection": LocData(50001612, "Starship Phoenix"),
     "Phoenix: Skill Point: Beat Helga's Best Time": LocData(50001613, "Starship Phoenix"),
     "Phoenix: Skill Point: Monkeying Around": LocData(50001614, "Starship Phoenix"),
-    "Phoenix: Skill Point: Pirate booty - set a new record for qwark": LocData(50001615, "Starship Phoenix"),
-    "Phoenix: Skill Point: Deja Q All over Again - set a new record for qwark": LocData(50001617, "Starship Phoenix"),
-    "Phoenix: Skill Point: Arriba Amoeba! - set a new record for qwark": LocData(50001618, "Starship Phoenix"),
-    "Phoenix: Skill Point: Shadow of the robot - set a new record for qwark": LocData(50001619, "Starship Phoenix"),
-    "Phoenix: Skill Point: The Shaming of the Q - set a new record for qwark": LocData(50001636, "Starship Phoenix"),
+    "Phoenix: Skill Point: Pirate booty - set a new record for qwark": LocData(50001635, "Starship Phoenix"),
+    "Phoenix: Skill Point: Deja Q All over Again - set a new record for qwark": LocData(50001636, "Starship Phoenix"),
+    "Phoenix: Skill Point: Arriba Amoeba! - set a new record for qwark": LocData(50001637, "Starship Phoenix"),
+    "Phoenix: Skill Point: Shadow of the robot - set a new record for qwark": LocData(50001638, "Starship Phoenix"),
+    "Phoenix: Skill Point: The Shaming of the Q - set a new record for qwark": LocData(50001639, "Starship Phoenix"),
 
     # ----- Planet Marcadia -----#
     "Marcadia: Received Spitting Hydra": LocData(50001030, "Marcadia Region 1"),
@@ -91,7 +91,7 @@ rac3_locations = {
     "Marcadia: Operation IRON SHIELD: Turret Command": LocData(50001038, "Marcadia Region 1"),
     "Marcadia: Operation IRON SHIELD: Under the Gun": LocData(50001039, "Marcadia Region 1"),
     "Marcadia: Operation IRON SHIELD: Hit n' Run": LocData(50001040, "Marcadia Region 1"),
-    "Marcadia: Skill Point: Reflect on how to score": LocData(50001637, "Marcadia Region 2"),
+    "Marcadia: Skill Point: Reflect on how to score": LocData(50001615, "Marcadia Region 2"),
 
     # ----- Annihilation Nation -----#
     "Annihilation: Received Agents of Doom": LocData(50001140, "Annihilation Nation"),
@@ -131,10 +131,10 @@ rac3_locations = {
     "Annihilation: The Annihilator (Gauntlet)": LocData(50001174, "Annihilation Nation 2"),
     "Annihilation: Qwark Vidcomic 2": LocData(50001175, "Annihilation Nation"),
     "Annihilation: Qwark Vidcomic 3": LocData(50001176, "Annihilation Nation 2"),
-    "Annihilation: Skill Point: Bash the bug": LocData(50001620, "Annihilation Nation 2"),
-    "Annihilation: Skill Point: Be an eight time champ": LocData(50001638, "Annihilation Nation 2"),
-    "Annihilation: Skill Point: Flee Flawlessly": LocData(50001621, "Annihilation Nation"),
-    "Annihilation: Skill Point: Lights, camera action!": LocData(50001623, "Annihilation Nation"),
+    "Annihilation: Skill Point: Bash the bug": LocData(50001617, "Annihilation Nation 2"),
+    "Annihilation: Skill Point: Be an eight time champ": LocData(50001618, "Annihilation Nation 2"),
+    "Annihilation: Skill Point: Flee Flawlessly": LocData(50001619, "Annihilation Nation"),
+    "Annihilation: Skill Point: Lights, camera action!": LocData(50001620, "Annihilation Nation"),
 
     # ----- Planet Aquatos -----#
     "Aquatos: Received Flux Rifle": LocData(50001090, "Aquatos"),
@@ -147,7 +147,7 @@ rac3_locations = {
     "Aquatos: 5 Sewer Crystals Traded": LocData(50001097, "Aquatos"),
     "Aquatos: 10 Sewer Crystals Traded": LocData(50001098, "Aquatos"),
     "Aquatos: 20 Sewer Crystals Traded": LocData(50001099, "Aquatos"),
-    "Aquatos: Skill Point: Search for sunken treasure": LocData(50001622, "Aquatos"),
+    "Aquatos: Skill Point: Search for sunken treasure": LocData(50001621, "Aquatos"),
     "Aquatos: Skill Point: Hit the motherload": LocData(50001634, "Aquatos"),
     "Aquatos: Received Mini-Turret Glove": LocData(50001649, "Aquatos"),
     "Aquatos: Received Lava Gun": LocData(50001650, "Aquatos"),
@@ -165,7 +165,7 @@ rac3_locations = {
     "Tyhrranosis: Operation ISLAND STRIKE: Dogfight over Kavu Island": LocData(50001607, "Tyhrranosis Region 2"),
     "Tyhrranosis: Operation ISLAND STRIKE: Operation Thunderbolt": LocData(50001608, "Tyhrranosis Region 2"),
     "Tyhrranosis: Operation ISLAND STRIKE: The Final Battle": LocData(50001609, "Tyhrranosis Region 2"),
-    "Tyhrranosis: Skill Point: Be a Sharpshooter": LocData(50001639, "Tyhrranosis"),
+    "Tyhrranosis: Skill Point: Be a Sharpshooter": LocData(50001622, "Tyhrranosis"),
 
     # ----- Planet Daxx -----#
     "Daxx: Infiltrate the Weapons Facility": LocData(50001025, "Daxx"),
@@ -181,7 +181,7 @@ rac3_locations = {
     "Obani_Gemini: T-Bolt: Follow the Lava": LocData(50001341, "Obani Gemini"),
     "Obani_Gemini: T-Bolt: Between the Twin Towers": LocData(50001342, "Obani Gemini"),
     "Obani_Gemini: Infobot: Blackwater City": LocData(50001343, "Obani Gemini"),
-    "Obani_Gemini: Skill Point: Get to the belt": LocData(50001628, "Obani Gemini"),
+    "Obani_Gemini: Skill Point: Get to the belt": LocData(50001623, "Obani Gemini"),
 
     # ----- Planet Blackwater City -----#
     "Blackwater City: Received Gravity Boots": LocData(50001360, "Blackwater City"),
@@ -224,8 +224,8 @@ rac3_locations = {
     "Crash Site: Received Nano-Pak": LocData(50001450, "Crash Site"),
     "Crash Site: T-Bolt: Turn Around": LocData(50001451, "Crash Site"),
     "Crash Site: Infobot: Aridia": LocData(50001452, "Crash Site"),
-    "Crash Site: Skill Point: Suck it up!": LocData(50001629, "Crash Site"),
-    "Crash Site: Skill Point: Aim High": LocData(50001635, "Crash Site"),
+    "Crash Site: Skill Point: Suck it up!": LocData(50001628, "Crash Site"),
+    "Crash Site: Skill Point: Aim High": LocData(50001629, "Crash Site"),
 
     # ----- Planet Aridia -----#
     "Aridia: Received Warp Pad": LocData(50001470, "Aridia"),
