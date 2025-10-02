@@ -15,7 +15,7 @@ try:
 
     tracker_loaded = True
 except ImportError:
-    from CommonClient import ClientCommandProcessor, CommonContext, UT_VERSION
+    from CommonClient import ClientCommandProcessor, CommonContext
 
     print("ERROR: Universal Tracker is not loaded")
 
