@@ -386,34 +386,34 @@ location_table: dict[str, LocData] = {
 }
 
 location_groups: dict[str, set[str]] = {
-    "Veldin": set(loc for loc in location_table.keys() if location_table[loc].region is "Veldin"),
-    "Florana": set(loc for loc in location_table.keys() if location_table[loc].region is "Florana"),
-    "Starship Phoenix": set(loc for loc in location_table.keys() if location_table[loc].region is "Starship Phoenix"),
+    "Veldin": set(loc for loc in location_table.keys() if location_table[loc].region == "Veldin"),
+    "Florana": set(loc for loc in location_table.keys() if location_table[loc].region == "Florana"),
+    "Starship Phoenix": set(loc for loc in location_table.keys() if location_table[loc].region == "Starship Phoenix"),
     "Marcadia": set(loc for loc in location_table.keys() if
-                    location_table[loc].region is "Marcadia Region 1"
-                    or location_table[loc].region is "Marcadia Region 2"),
+                    location_table[loc].region == "Marcadia Region 1"
+                    or location_table[loc].region == "Marcadia Region 2"),
     "Annihilation Nation": set(loc for loc in location_table.keys() if
-                               location_table[loc].region is "Annihilation Nation"
-                               or location_table[loc].region is "Annihilation Nation 2"),
-    "Aquatos": set(loc for loc in location_table.keys() if location_table[loc].region is "Aquatos"),
+                               location_table[loc].region == "Annihilation Nation"
+                               or location_table[loc].region == "Annihilation Nation 2"),
+    "Aquatos": set(loc for loc in location_table.keys() if location_table[loc].region == "Aquatos"),
     "Tyhrranosis": set(loc for loc in location_table.keys() if
-                       location_table[loc].region is "Tyhrranosis"
-                       or location_table[loc].region is "Tyhrranosis Region 2"),
-    "Daxx": set(loc for loc in location_table.keys() if location_table[loc].region is "Daxx"),
-    "Obani Gemini": set(loc for loc in location_table.keys() if location_table[loc].region is "Obani Gemini"),
-    "Blackwater City": set(loc for loc in location_table.keys() if location_table[loc].region is "Blackwater City"),
-    "Holostar Studios": set(loc for loc in location_table.keys() if location_table[loc].region is "Holostar Studios"),
-    "Obani Draco": set(loc for loc in location_table.keys() if location_table[loc].region is "Obani Draco"),
+                       location_table[loc].region == "Tyhrranosis"
+                       or location_table[loc].region == "Tyhrranosis Region 2"),
+    "Daxx": set(loc for loc in location_table.keys() if location_table[loc].region == "Daxx"),
+    "Obani Gemini": set(loc for loc in location_table.keys() if location_table[loc].region == "Obani Gemini"),
+    "Blackwater City": set(loc for loc in location_table.keys() if location_table[loc].region == "Blackwater City"),
+    "Holostar Studios": set(loc for loc in location_table.keys() if location_table[loc].region == "Holostar Studios"),
+    "Obani Draco": set(loc for loc in location_table.keys() if location_table[loc].region == "Obani Draco"),
     "Zeldrin Starport": set(
-        loc for loc in location_table.keys() if location_table[loc].region is "Zeldrin Starport Region 2"),
+        loc for loc in location_table.keys() if location_table[loc].region == "Zeldrin Starport Region 2"),
     "Metropolis": set(loc for loc in location_table.keys() if
-                      location_table[loc].region is "Metropolis Region 1"
-                      or location_table[loc].region is "Metropolis Region 2"),
-    "Crash Site": set(loc for loc in location_table.keys() if location_table[loc].region is "Crash Site"),
-    "Aridia": set(loc for loc in location_table.keys() if location_table[loc].region is "Aridia"),
-    "Qwarks Hideout": set(loc for loc in location_table.keys() if location_table[loc].region is "Qwarks Hideout"),
-    "Koros": set(loc for loc in location_table.keys() if location_table[loc].region is "Koros"),
-    "Command Center": set(loc for loc in location_table.keys() if location_table[loc].region is "Command Center"),
+                      location_table[loc].region == "Metropolis Region 1"
+                      or location_table[loc].region == "Metropolis Region 2"),
+    "Crash Site": set(loc for loc in location_table.keys() if location_table[loc].region == "Crash Site"),
+    "Aridia": set(loc for loc in location_table.keys() if location_table[loc].region == "Aridia"),
+    "Qwarks Hideout": set(loc for loc in location_table.keys() if location_table[loc].region == "Qwarks Hideout"),
+    "Koros": set(loc for loc in location_table.keys() if location_table[loc].region == "Koros"),
+    "Command Center": set(loc for loc in location_table.keys() if location_table[loc].region == "Command Center"),
 }
 
 
