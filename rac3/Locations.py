@@ -226,6 +226,7 @@ rac3_locations = {
     "Crash Site: Infobot: Aridia": LocData(50001452, "Crash Site"),
     "Crash Site: Skill Point: Suck it up!": LocData(50001628, "Crash Site"),
     "Crash Site: Skill Point: Aim High": LocData(50001629, "Crash Site"),
+    "Crash Site: Received Master Plan": LocData(50001654, "Crash Site"),
 
     # ----- Planet Aridia -----#
     "Aridia: Received Warp Pad": LocData(50001470, "Aridia"),
@@ -363,7 +364,7 @@ weapon_upgrades = {
 }
 
 nanotech_milestones = {
-    "Nanotech Milestone: 11": LocData(50001654, "Veldin"),
+    "Nanotech Milestone: 11": LocData(50001655, "Veldin"),
 }
 
 rac3_events = {

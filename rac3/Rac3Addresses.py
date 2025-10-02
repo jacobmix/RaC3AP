@@ -2277,8 +2277,24 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Nanotech Level Up - 11",
+        "Name": "Received The Master Plan",
         "Id": 50001654,
+        "Checks": [
+            {
+                "Address": "0x001D6774",  # Cutscene flag
+                "CheckType": 0,
+                "AddressBit": 0
+            },
+            {
+                "Address": "0x001D545C",  # Current planet
+                "CheckValue": "17",       # Crash Site
+                "CheckType": 0
+            }
+        ]
+    },
+    {
+        "Name": "Nanotech Level Up - 11",
+        "Id": 50001655,
         "Checks": [
             {
                 "Address": "0x001A4E18",
