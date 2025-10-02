@@ -2277,11 +2277,11 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Received The Master Plan",
+        "Name": "Master Plan in the Escape Pod",
         "Id": 50001654,
         "Checks": [
             {
-                "Address": "0x001D6774",  # Cutscene flag
+                "Address": "0x00142CC2",  # Master Plan in inventory
                 "CheckType": 0,
                 "AddressBit": 0
             },
