@@ -49,8 +49,8 @@
   },
   {
     "name": "Aquatos3",
-    "location_size": 28,
-    "location_border_thickness": 4,
+    "location_size": 10,
+    "location_border_thickness": 2,
     "img": "images/maps/Aquatos3.png"
   },
   {
