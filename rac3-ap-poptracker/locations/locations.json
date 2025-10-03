@@ -319,7 +319,7 @@
             "item_count": 1
           },
           {
-            "name": "Infobot: Kerwan",
+            "name": "Infobot: Metropolis",
             "item_count": 1
           },
           {
@@ -1011,11 +1011,11 @@
         ]
       },
       {
-        "name": "Top Left Bolt",
+        "name": "Top Left Bolt",        
         "map_locations": [
           {
             "map": "Aquatos3",
-            "x": 225,
+            "x": 276,
             "y": 64
           }
         ],
@@ -1024,7 +1024,11 @@
             "name": "Titanium Bolt",
             "item_count": 1
           }
+        ],
+        "access_rules": [
+          "gravBoots"
         ]
+        
       },
       {
         "name": "Swinging Bolt",
@@ -1040,6 +1044,9 @@
             "name": "Titanium Bolt",
             "item_count": 1
           }
+        ],
+        "access_rules": [
+          "gravBoots"
         ]
       },
       {
@@ -1070,7 +1077,10 @@
           },
           {
             "name": "Hit the motherload (SP)",
-            "item_count": 1
+            "item_count": 1,
+            "access_rules": [
+              "gravBoots"
+            ]
           }
         ]
       },
@@ -1108,6 +1118,1374 @@
       }
     ]
   },
+  {
+    "name": "Aquatos Crystals ",
+    "chest_unopened_img": "images/Question.png",
+    "chest_opened_img": "images/Q_Force.png",
+    "access_rules": [
+      "Aquatos"
+    ],
+    "children": [
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 75,
+            "y": 309
+          }
+        ],
+        "sections": [
+          {
+            "name": "Rock 1",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 44,
+            "y": 322
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          },
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 90,
+            "y": 322
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 107,
+            "y": 309
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 107,
+            "y": 335
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 118,
+            "y": 361
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 131,
+            "y": 401
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 196,
+            "y": 404
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          },
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 152,
+            "y": 368
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          },
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 169,
+            "y": 363
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          },
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 156,
+            "y": 336
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 131,
+            "y": 312
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          },
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 178,
+            "y": 311
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          },
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 171,
+            "y": 295
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 250,
+            "y": 213
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 277,
+            "y": 187
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 257,
+            "y": 173
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 223,
+            "y": 177
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 250,
+            "y": 151
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          },
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 265,
+            "y": 150
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          },
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 210,
+            "y": 193
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 210,
+            "y": 149
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 224,
+            "y": 124
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          },
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 250,
+            "y": 122
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          },
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 277,
+            "y": 102
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          },
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 234,
+            "y": 92
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 304,
+            "y": 152
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 317,
+            "y": 357
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 319,
+            "y": 322
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 333,
+            "y": 373
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 358,
+            "y": 376
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 356,
+            "y": 401
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 357,
+            "y": 338
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 347,
+            "y": 417
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 327,
+            "y": 410
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 372,
+            "y": 356
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 381,
+            "y": 335
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 400,
+            "y": 371
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 413,
+            "y": 376
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 440,
+            "y": 346
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          },
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 363,
+            "y": 294
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 399,
+            "y": 294
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 440,
+            "y": 295
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          },
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Aquatos Crystal Grav",
+    "chest_unopened_img": "images/Question.png",
+    "chest_opened_img": "images/Q_Force.png",
+    "access_rules": [
+      "Aquatos, gravBoots"
+    ],
+    "children": [
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 118,
+            "y": 214
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 128,
+            "y": 181
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 134,
+            "y": 146
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 114,
+            "y": 113
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 156,
+            "y": 98
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 156,
+            "y": 151
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 169,
+            "y": 109
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 182,
+            "y": 187
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 260,
+            "y": 64
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 317,
+            "y": 94
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          },
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 333,
+            "y": 95
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          },
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 434,
+            "y": 145
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          },
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 437,
+            "y": 213  
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          },
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 413,
+            "y": 176
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 386,
+            "y": 208
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 345,
+            "y": 214
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 337,
+            "y": 172
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 399,
+            "y": 94
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 372,
+            "y": 138
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 317,
+            "y": 115
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          },
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 277,
+            "y": 368
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          },
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 209,
+            "y": 315
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          },
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 251,
+            "y": 348
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          },
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 251,
+            "y": 369
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 251,
+            "y": 390
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 303,
+            "y": 401
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 210,
+            "y": 396
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          },
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          },
+          {
+            "name": "Another King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 210,
+            "y": 396
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          },
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          },
+          {
+            "name": "Another King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 210,
+            "y": 396
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 277,
+            "y": 336
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 223,
+            "y": 335
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 217,
+            "y": 295
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 251,
+            "y": 323
+          }
+        ],
+        "sections": [
+          {
+            "name": "In Rock",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 304,
+            "y": 305
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sewer Crystal",
+        "map_locations": [
+          {
+            "map": "Aquatos3",
+            "x": 283,
+            "y": 295
+          }
+        ],
+        "sections": [
+          {
+            "name": "King Amoeboid",
+            "item_count": 1
+          }
+        ]
+      }
+    ]
+    },
   {
     "name": "Tyhrranosis",
     "chest_unopened_img": "images/Question.png",
@@ -1870,17 +3248,17 @@
         ]
       },
       {
-        "name": "Aim High (SP)",
+        "name": "Explore Crash Site",
         "map_locations": [
           {
             "map": "CrashSite",
-            "x": 425,
-            "y": 323
+            "x": 169,
+            "y": 280
           }
         ],
         "sections": [
           {
-            "name": "Kill 10 Skreeducks",
+            "name": "Master Plan",
             "item_count": 1
           }
         ]
@@ -1890,13 +3268,29 @@
         "map_locations": [
           {
             "map": "CrashSite",
+            "x": 425,
+            "y": 323
+          }
+        ],
+        "sections": [
+          {
+            "name": "Infobot: Aridia",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Aim High (SP)",
+        "map_locations": [
+          {
+            "map": "CrashSite",
             "x": 45,
             "y": 484
           }
         ],
         "sections": [
           {
-            "name": "Infobot: Aridia",
+            "name": "Kill 10 Skreeducks",
             "item_count": 1
           }
         ]

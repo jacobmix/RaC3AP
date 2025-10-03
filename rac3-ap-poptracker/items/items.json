@@ -1,198 +1,278 @@
 [
   {
-    "name": "Toggle",
-    "type": "toggle",
-    "img": "images/items/toggle.png",
-    "codes": "toggle"
-  },
-  {
-    "name": "ShockBlaster",
-    "type": "toggle",
+    "name": "Shock Blaster",
+    "type": "consumable",
+    "max_quantity": 5,
+    "increment": 1,
+     "decrement": 1,
+    "initial_quantity": 0,
     "img": "images/items/weapon/ShockBlaster.png",
     "codes": "ShockBlaster"
   },
   {
-    "name": "NitroLauncher",
-    "type": "toggle",
+    "name": "Nitro Launcher",
+    "type": "consumable",
+    "max_quantity": 5,
+    "increment": 1,
+     "decrement": 1,
+    "initial_quantity": 0,
     "img": "images/items/weapon/NitroLauncher.png",
     "codes": "NitroLauncher"
   },
   {
-    "name": "N60Storm",
-    "type": "toggle",
+    "name": "N60 Storm",
+    "type": "consumable",
+    "max_quantity": 5,
+    "increment": 1,
+     "decrement": 1,
+    "initial_quantity": 0,
     "img": "images/items/weapon/N60Storm.png",
     "codes": "N60Storm"
   },
   {
-    "name": "PlasmaWhip",
-    "type": "toggle",
+    "name": "Plasma Whip",
+    "type": "consumable",
+    "max_quantity": 5,
+    "increment": 1,
+     "decrement": 1,
+    "initial_quantity": 0,
     "img": "images/items/weapon/PlasmaWhip.png",
     "codes": "PlasmaWhip"
   },
   {
     "name": "Infector",
-    "type": "toggle",
+    "type": "consumable",
+    "max_quantity": 5,
+    "increment": 1,
+     "decrement": 1,
+    "initial_quantity": 0,
     "img": "images/items/weapon/Infector.png",
     "codes": "Infector"
   },
   {
-    "name": "SuckCannon",
-    "type": "toggle",
+    "name": "Suck Cannon",
+    "type": "consumable",
+    "max_quantity": 5,
+    "increment": 1,
+     "decrement": 1,
+    "initial_quantity": 0,
     "img": "images/items/weapon/SuckCannon.png",
     "codes": "SuckCannon"
   },
   {
-    "name": "SpittingHydra",
-    "type": "toggle",
+    "name": "Spitting Hydra",
+    "type": "consumable",
+    "max_quantity": 5,
+    "increment": 1,
+     "decrement": 1,
+    "initial_quantity": 0,
     "img": "images/items/weapon/SpittingHydra.png",
     "codes": "SpittingHydra"
   },
   {
-    "name": "AgentsOfDoom",
-    "type": "toggle",
+    "name": "Agents Of Doom",
+    "type": "consumable",
+    "max_quantity": 5,
+    "increment": 1,
+     "decrement": 1,
+    "initial_quantity": 0,
     "img": "images/items/weapon/AgentsOfDoom.png",
     "codes": "AgentsOfDoom"
   },
   {
-    "name": "FluxRifle",
-    "type": "toggle",
+    "name": "Flux Rifle",
+    "type": "consumable",
+    "max_quantity": 5,
+    "increment": 1,
+     "decrement": 1,
+    "initial_quantity": 0,
     "img": "images/items/weapon/FluxRifle.png",
     "codes": "FluxRifle"
   },
   {
     "name": "Annihilator",
-    "type": "toggle",
+    "type": "consumable",
+    "max_quantity": 5,
+    "increment": 1,
+     "decrement": 1,
+    "initial_quantity": 0,
     "img": "images/items/weapon/Annihilator.png",
     "codes": "Annihilator"
   },
   {
-    "name": "HoloShieldGlove",
-    "type": "toggle",
+    "name": "Holo Shield Glove",
+    "type": "consumable",
+    "max_quantity": 5,
+    "increment": 1,
+     "decrement": 1,
+    "initial_quantity": 0,
     "img": "images/items/weapon/HoloShieldGlove.png",
     "codes": "HoloShieldGlove"
   },
   {
-    "name": "DiskBladeGun",
-    "type": "toggle",
+    "name": "Disk Blade Gun",
+    "type": "consumable",
+    "max_quantity": 5,
+    "increment": 1,
+     "decrement": 1,
+    "initial_quantity": 0,
     "img": "images/items/weapon/DiskBladeGun.png",
     "codes": "DiskBladeGun"
   },
   {
-    "name": "RiftInducer",
-    "type": "toggle",
+    "name": "Rift Inducer",
+    "type": "consumable",
+    "max_quantity": 5,
+    "increment": 1,
+     "decrement": 1,
+    "initial_quantity": 0,
     "img": "images/items/weapon/RiftInducer.png",
     "codes": "RiftInducer"
   },
   {
-    "name": "QwackORay",
-    "type": "toggle",
+    "name": "Qwack-O-Ray",
+    "type": "consumable",
+    "max_quantity": 5,
+    "increment": 1,
+     "decrement": 1,
+    "initial_quantity": 0,
     "img": "images/items/weapon/QwackORay.png",
     "codes": "QwackORay"
   },
   {
     "name": "RY3N0",
-    "type": "toggle",
+    "type": "consumable",
+    "max_quantity": 5,
+    "increment": 1,
+     "decrement": 1,
+    "initial_quantity": 0,
     "img": "images/items/weapon/RY3N0.png",
     "codes": "RY3N0"
   },
   {
-    "name": "MegaTurretGlove",
-    "type": "toggle",
-    "img": "images/items/weapon/MegaTurretGlove.png",
+    "name": "Miniturret Glove",
+    "type": "consumable",
+    "max_quantity": 5,
+    "increment": 1,
+     "decrement": 1,
+    "initial_quantity": 0,
+    "img": "images/items/weapon/MiniturretGlove.png",
     "codes": "MegaTurretGlove"
   },
   {
-    "name": "LavaGun",
-    "type": "toggle",
+    "name": "Lava Gun",
+    "type": "consumable",
+    "max_quantity": 5,
+    "increment": 1,
+     "decrement": 1,
+    "initial_quantity": 0,
     "img": "images/items/weapon/LavaGun.png",
     "codes": "LavaGun"
   },
   {
-    "name": "ShieldCharger",
-    "type": "toggle",
+    "name": "Shield Charger",
+    "type": "consumable",
+    "max_quantity": 5,
+    "increment": 1,
+     "decrement": 1,
+    "initial_quantity": 0,
     "img": "images/items/weapon/ShieldCharger.png",
     "codes": "ShieldCharger"
   },
   {
     "name": "Bouncer",
-    "type": "toggle",
+    "type": "consumable",
+    "max_quantity": 5,
+    "increment": 1,
+     "decrement": 1,
+    "initial_quantity": 0,
     "img": "images/items/weapon/Bouncer.png",
     "codes": "Bouncer"
   },
   {
-    "name": "PlasmaCoil",
-    "type": "toggle",
+    "name": "Plasma Coil",
+    "type": "consumable",
+    "max_quantity": 5,
+    "increment": 1,
+     "decrement": 1,
+    "initial_quantity": 0,
     "img": "images/items/weapon/PlasmaCoil.png",
     "codes": "PlasmaCoil"
   },
   {
-    "name": "refractor",
+    "name": "Refractor",
     "type": "toggle",
     "img": "images/items/gadget/refractor.png",
     "codes": "refractor"
   },
   {
-    "name": "warpPad",
+    "name": "Warp Pad",
     "type": "toggle",
     "img": "images/items/gadget/warpPad.png",
     "codes": "warpPad"
   },
   {
-    "name": "hyperShot",
+    "name": "Hypershot",
     "type": "toggle",
     "img": "images/items/gadget/hyperShot.png",
     "codes": "hyperShot"
   },
   {
-    "name": "tyhrraGuise",
+    "name": "Tyhrra-Guise",
     "type": "toggle",
     "img": "images/items/gadget/tyhrraGuise.png",
     "codes": "tyhrraGuise"
   },
   {
-    "name": "pda",
+    "name": "Gadgetron PDA",
     "type": "toggle",
     "img": "images/items/gadget/pda.png",
     "codes": "pda"
   },
   {
-    "name": "gravBoots",
+    "name": "Gravity Boots",
     "type": "toggle",
     "img": "images/items/gadget/gravBoots.png",
     "codes": "gravBoots"
   },
   {
-    "name": "chargeBoots",
+    "name": "Charge Boots",
     "type": "toggle",
     "img": "images/items/gadget/chargeBoots.png",
     "codes": "chargeBoots"
   },
   {
-    "name": "hacker",
+    "name": "Hacker",
     "type": "toggle",
     "img": "images/items/gadget/hacker.png",
     "codes": "hacker"
   },
   {
-    "name": "boltGrabberV2",
+    "name": "Bolt Grabber V2",
     "type": "toggle",
     "img": "images/items/gadget/boltGrabberV2.png",
     "codes": "boltGrabberV2"
   },
   {
-    "name": "mapOMatic",
+    "name": "Box Breaker",
+    "type": "toggle",
+    "img": "images/items/gadget/BoxBreaker.png",
+    "codes": "BoxBreaker"
+  },
+  {
+    "name": "Map-O-Matic",
     "type": "toggle",
     "img": "images/items/gadget/mapOMatic.png",
     "codes": "mapOMatic"
   },
   {
-    "name": "nanoPak",
+    "name": "Nano-Pak",
     "type": "toggle",
     "img": "images/items/gadget/nanoPak.png",
     "codes": "nanoPak"
   },
   {
-    "name": "vidComic",
+    "name": "Progressive Vid-Comic",
     "type": "progressive",
     "stages": [
       {
@@ -214,6 +294,33 @@
       {
         "img": "images/items/gadget/vidComic5.png",
         "codes": "vidComic5"
+      }
+    ]
+  },
+  {
+    "name": "Progressive Armor",
+    "type": "progressive",
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/items/gadget/Armor1.png",
+        "codes": "Armor"
+      },
+      {
+        "img": "images/items/gadget/Armor2.png",
+        "codes": "Armor2"
+      },
+      {
+        "img": "images/items/gadget/Armor3.png",
+        "codes": "Armor3"
+      },
+      {
+        "img": "images/items/gadget/Armor4.png",
+        "codes": "Armor4"
+      },
+      {
+        "img": "images/items/gadget/Armor5.png",
+        "codes": "Armor5"
       }
     ]
   },
