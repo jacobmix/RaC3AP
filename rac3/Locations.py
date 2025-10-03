@@ -31,6 +31,7 @@ rac3_locations = {
     "Florana: Received Plasma Whip": LocData(50020000, "Florana"),
     "Florana: Received N60 Storm": LocData(50020001, "Florana"),
     "Florana: T-Bolt: Below Gadgetron Vendor": LocData(50020002, "Florana"),
+    # Ratchet Trophy
     "Florana: T-Bolt: Path of Death": LocData(50020003, "Florana"),
     "Florana: Defeat Qwark": LocData(50020004, "Florana"),
     "Florana: Skill Point: Stay Squeaky Clean": LocData(50020005, "Florana"),
