@@ -73,114 +73,114 @@ def create_junk_items(world: "RaC3World", count: int, junk_dict: Dict[str, objec
 
 
 weapon_items = {
-    "Shock Blaster": ItemData(50001400, ItemClassification.progression, 1),
-    "Nitro Launcher": ItemData(50001401, ItemClassification.progression, 1),
-    "N60 Storm": ItemData(50001402, ItemClassification.progression, 1),
-    "Plasma Whip": ItemData(50001403, ItemClassification.progression, 1),
-    "Infector": ItemData(50001404, ItemClassification.progression, 1),
-    "Suck Cannon": ItemData(50001405, ItemClassification.progression, 1),
-    "Spitting Hydra": ItemData(50001406, ItemClassification.progression, 1),
-    "Agents of Doom": ItemData(50001407, ItemClassification.progression, 1),
-    "Flux Rifle": ItemData(50001408, ItemClassification.progression, 1),
-    "Annihilator": ItemData(50001409, ItemClassification.progression, 1),
-    "Holo-Shield Glove": ItemData(50001410, ItemClassification.progression, 1),
-    "Disk-Blade Gun": ItemData(50001411, ItemClassification.progression, 1),
-    "Rift Inducer": ItemData(50001412, ItemClassification.progression, 1),
-    "Qwack-O-Ray": ItemData(50001413, ItemClassification.progression, 1),
-    "RY3N0": ItemData(50001414, ItemClassification.progression, 1),
-    "Mini-Turret Glove": ItemData(50001415, ItemClassification.progression, 1),
-    "Lava Gun": ItemData(50001416, ItemClassification.progression, 1),
-    "Shield Charger": ItemData(50001417, ItemClassification.progression, 1),
-    "Bouncer": ItemData(50001418, ItemClassification.progression, 1),
-    "Plasma Coil": ItemData(50001419, ItemClassification.progression, 1)
+    "Shock Blaster": ItemData(50000000, ItemClassification.progression, 1),
+    "Nitro Launcher": ItemData(50000001, ItemClassification.progression, 1),
+    "N60 Storm": ItemData(50000002, ItemClassification.progression, 1),
+    "Plasma Whip": ItemData(50000003, ItemClassification.progression, 1),
+    "Infector": ItemData(50000004, ItemClassification.progression, 1),
+    "Suck Cannon": ItemData(50000005, ItemClassification.progression, 1),
+    "Spitting Hydra": ItemData(50000006, ItemClassification.progression, 1),
+    "Agents of Doom": ItemData(50000007, ItemClassification.progression, 1),
+    "Flux Rifle": ItemData(50000008, ItemClassification.progression, 1),
+    "Annihilator": ItemData(50000009, ItemClassification.progression, 1),
+    "Holo-Shield Glove": ItemData(50000010, ItemClassification.progression, 1),
+    "Disk-Blade Gun": ItemData(50000011, ItemClassification.progression, 1),
+    "Rift Inducer": ItemData(50000012, ItemClassification.progression, 1),
+    "Qwack-O-Ray": ItemData(50000013, ItemClassification.progression, 1),
+    "RY3N0": ItemData(50000014, ItemClassification.progression, 1),
+    "Mini-Turret Glove": ItemData(50000015, ItemClassification.progression, 1),
+    "Lava Gun": ItemData(50000016, ItemClassification.progression, 1),
+    "Shield Charger": ItemData(50000017, ItemClassification.progression, 1),
+    "Bouncer": ItemData(50000018, ItemClassification.progression, 1),
+    "Plasma Coil": ItemData(50000019, ItemClassification.progression, 1)
 }
 
 progressive_weapons = {
-    "Progressive Shock Blaster": ItemData(50001420, ItemClassification.progression, 5),
-    "Progressive Nitro Launcher": ItemData(50001421, ItemClassification.progression, 5),
-    "Progressive N60 Storm": ItemData(50001422, ItemClassification.progression, 5),
-    "Progressive Plasma Whip": ItemData(50001423, ItemClassification.progression, 5),
-    "Progressive Infector": ItemData(50001424, ItemClassification.progression, 5),
-    "Progressive Suck Cannon": ItemData(50001425, ItemClassification.progression, 5),
-    "Progressive Spitting Hydra": ItemData(50001426, ItemClassification.progression, 5),
-    "Progressive Agents of Doom": ItemData(50001427, ItemClassification.progression, 5),
-    "Progressive Flux Rifle": ItemData(50001428, ItemClassification.progression, 5),
-    "Progressive Annihilator": ItemData(50001429, ItemClassification.progression, 5),
-    "Progressive Holo-Shield Glove": ItemData(50001430, ItemClassification.progression, 5),
-    "Progressive Disk-Blade Gun": ItemData(50001431, ItemClassification.progression, 5),
-    "Progressive Rift Inducer": ItemData(50001432, ItemClassification.progression, 5),
-    "Progressive Qwack-O-Ray": ItemData(50001433, ItemClassification.progression, 5),
-    "Progressive RY3N0": ItemData(50001434, ItemClassification.progression, 5),
-    "Progressive Mini-Turret Glove": ItemData(50001435, ItemClassification.progression, 5),
-    "Progressive Lava Gun": ItemData(50001436, ItemClassification.progression, 5),
-    "Progressive Shield Charger": ItemData(50001437, ItemClassification.progression, 5),
-    "Progressive Bouncer": ItemData(50001438, ItemClassification.progression, 5),
-    "Progressive Plasma Coil": ItemData(50001439, ItemClassification.progression, 5)
+    "Progressive Shock Blaster": ItemData(50000020, ItemClassification.progression, 5),
+    "Progressive Nitro Launcher": ItemData(50000021, ItemClassification.progression, 5),
+    "Progressive N60 Storm": ItemData(50000022, ItemClassification.progression, 5),
+    "Progressive Plasma Whip": ItemData(50000023, ItemClassification.progression, 5),
+    "Progressive Infector": ItemData(50000024, ItemClassification.progression, 5),
+    "Progressive Suck Cannon": ItemData(50000025, ItemClassification.progression, 5),
+    "Progressive Spitting Hydra": ItemData(50000026, ItemClassification.progression, 5),
+    "Progressive Agents of Doom": ItemData(50000027, ItemClassification.progression, 5),
+    "Progressive Flux Rifle": ItemData(50000028, ItemClassification.progression, 5),
+    "Progressive Annihilator": ItemData(50000029, ItemClassification.progression, 5),
+    "Progressive Holo-Shield Glove": ItemData(50000030, ItemClassification.progression, 5),
+    "Progressive Disk-Blade Gun": ItemData(50000031, ItemClassification.progression, 5),
+    "Progressive Rift Inducer": ItemData(50000032, ItemClassification.progression, 5),
+    "Progressive Qwack-O-Ray": ItemData(50000033, ItemClassification.progression, 5),
+    "Progressive RY3N0": ItemData(50000034, ItemClassification.progression, 5),
+    "Progressive Mini-Turret Glove": ItemData(50000035, ItemClassification.progression, 5),
+    "Progressive Lava Gun": ItemData(50000036, ItemClassification.progression, 5),
+    "Progressive Shield Charger": ItemData(50000037, ItemClassification.progression, 5),
+    "Progressive Bouncer": ItemData(50000038, ItemClassification.progression, 5),
+    "Progressive Plasma Coil": ItemData(50000039, ItemClassification.progression, 5)
 }
 gadget_items = {
-    "Hacker": ItemData(50001440, ItemClassification.progression, 1),
-    "Hypershot": ItemData(50001441, ItemClassification.progression, 1),
-    "Refractor": ItemData(50001442, ItemClassification.progression, 1),
-    "Tyhrra-Guise": ItemData(50001443, ItemClassification.progression, 1),
-    "Gravity-Boots": ItemData(50001444, ItemClassification.progression, 1),
-    "Bolt Grabber V2": ItemData(50001445, ItemClassification.useful, 1),
-    "Map-O-Matic": ItemData(50001446, ItemClassification.useful, 1),
-    "Nano Pak": ItemData(50001447, ItemClassification.useful, 1),
-    "Warp Pad": ItemData(50001448, ItemClassification.progression, 1),
-    "Gadgetron PDA": ItemData(50001449, ItemClassification.useful, 1),
-    "Charge-Boots": ItemData(50001450, ItemClassification.progression, 1),
-    "Box Breaker": ItemData(50001451, ItemClassification.progression, 1)
+    "Hacker": ItemData(50000040, ItemClassification.progression, 1),
+    "Hypershot": ItemData(50000041, ItemClassification.progression, 1),
+    "Refractor": ItemData(50000042, ItemClassification.progression, 1),
+    "Tyhrra-Guise": ItemData(50000043, ItemClassification.progression, 1),
+    "Gravity-Boots": ItemData(50000044, ItemClassification.progression, 1),
+    "Bolt Grabber V2": ItemData(50000045, ItemClassification.useful, 1),
+    "Map-O-Matic": ItemData(50000046, ItemClassification.useful, 1),
+    "Nano Pak": ItemData(50000047, ItemClassification.useful, 1),
+    "Warp Pad": ItemData(50000048, ItemClassification.progression, 1),
+    "Gadgetron PDA": ItemData(50000049, ItemClassification.useful, 1),
+    "Charge-Boots": ItemData(50000050, ItemClassification.progression, 1),
+    "Box Breaker": ItemData(50000051, ItemClassification.progression, 1)
 }
 
 post_planets = {
-    "Infobot: Florana": ItemData(50001468, ItemClassification.progression, 1),
-    "Infobot: Starship Phoenix": ItemData(50001469, ItemClassification.progression, 1),
-    "Infobot: Marcadia": ItemData(50001452, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 1
-    "Infobot: Annihilation Nation": ItemData(50001453, ItemClassification.progression, 1),
+    "Infobot: Florana": ItemData(50000052, ItemClassification.progression, 1),
+    "Infobot: Starship Phoenix": ItemData(50000053, ItemClassification.progression, 1),
+    "Infobot: Marcadia": ItemData(50000054, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 1
+    "Infobot: Annihilation Nation": ItemData(50000055, ItemClassification.progression, 1),
     # Post Starship Phoenix Visit 2 + Qwark Vidcomic 1
-    "Infobot: Aquatos": ItemData(50001454, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 3
-    "Infobot: Tyhrranosis": ItemData(50001455, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 4
-    "Infobot: Daxx": ItemData(50001456, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 5
-    "Infobot: Obani Gemini": ItemData(50001457, ItemClassification.progression, 1),  # Post Daxx
-    "Infobot: Blackwater City": ItemData(50001458, ItemClassification.progression, 1),  # Post Obani Gemini
-    "Infobot: Holostar Studios": ItemData(50001459, ItemClassification.progression, 1),
+    "Infobot: Aquatos": ItemData(50000056, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 3
+    "Infobot: Tyhrranosis": ItemData(50000057, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 4
+    "Infobot: Daxx": ItemData(50000058, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 5
+    "Infobot: Obani Gemini": ItemData(50000059, ItemClassification.progression, 1),  # Post Daxx
+    "Infobot: Blackwater City": ItemData(50000060, ItemClassification.progression, 1),  # Post Obani Gemini
+    "Infobot: Holostar Studios": ItemData(50000061, ItemClassification.progression, 1),
     # Post Blackwater City + Annihilation Nation Challenges
-    "Infobot: Obani Draco": ItemData(50001460, ItemClassification.progression, 1),  # Post Holostar Studios
-    "Infobot: Zeldrin Starport": ItemData(50001461, ItemClassification.progression, 1),  # Post Obani Draco
-    "Infobot: Metropolis": ItemData(50001462, ItemClassification.progression, 1),
+    "Infobot: Obani Draco": ItemData(50000062, ItemClassification.progression, 1),  # Post Holostar Studios
+    "Infobot: Zeldrin Starport": ItemData(50000063, ItemClassification.progression, 1),  # Post Obani Draco
+    "Infobot: Metropolis": ItemData(50000064, ItemClassification.progression, 1),
     # Post Zeldrin Starport + Qwark Vidcomic 4
-    "Infobot: Crash Site": ItemData(50001463, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 7
-    "Infobot: Aridia": ItemData(50001464, ItemClassification.progression, 1),  # Post Crash Site
-    "Infobot: Qwarks Hideout": ItemData(50001465, ItemClassification.progression, 1),
+    "Infobot: Crash Site": ItemData(50000065, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 7
+    "Infobot: Aridia": ItemData(50000066, ItemClassification.progression, 1),  # Post Crash Site
+    "Infobot: Qwarks Hideout": ItemData(50000067, ItemClassification.progression, 1),
     # Post Starship Phoenix Visit 8 + Qwark Vidcomic 5
-    "Infobot: Koros": ItemData(50001466, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 9
-    "Infobot: Command Center": ItemData(50001467, ItemClassification.progression, 1),  # Post-Koros
+    "Infobot: Koros": ItemData(50000068, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 9
+    "Infobot: Command Center": ItemData(50000069, ItemClassification.progression, 1),  # Post-Koros
 }
 progressive_vidcomics = {
-    "Progressive Vidcomic": ItemData(50001475, ItemClassification.progression, 5),
+    "Progressive Vidcomic": ItemData(50000075, ItemClassification.progression, 5),
 }
 
 progressive_armor = {
-    "Progressive Armor": ItemData(50001480, ItemClassification.useful, 4),
+    "Progressive Armor": ItemData(50000080, ItemClassification.useful, 4),
 }
 
 t_bolts = {
-    "Titanium Bolt": ItemData(50001490, ItemClassification.filler, 0)
+    "Titanium Bolt": ItemData(50000090, ItemClassification.filler, 0)
 }
 
 junk_weapon_exp = {
-    "Weapon EXP": ItemData(50001492, ItemClassification.filler, 0)
+    "Weapon EXP": ItemData(50000092, ItemClassification.filler, 0)
 }
 
 junk_items = {
-    "Bolts": ItemData(50001491, ItemClassification.filler, 0),
-    "Inferno Mode": ItemData(50001493, ItemClassification.filler, 0),
-    "Jackpot Mode": ItemData(50001494, ItemClassification.filler, 0)
+    "Bolts": ItemData(50000091, ItemClassification.filler, 0),
+    "Inferno Mode": ItemData(50000093, ItemClassification.filler, 0),
+    "Jackpot Mode": ItemData(50000094, ItemClassification.filler, 0)
 }
 
 victory_item = {
-    "Dr. Nefarious Defeated!": ItemData(50001500, ItemClassification.progression, 0),
-    "Biobliterator Defeated!": ItemData(50001501, ItemClassification.progression, 0)
+    "Dr. Nefarious Defeated!": ItemData(50000100, ItemClassification.progression, 0),
+    "Biobliterator Defeated!": ItemData(50000101, ItemClassification.progression, 0)
 }
 
 item_table = {

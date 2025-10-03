@@ -364,13 +364,18 @@ class Rac3Interface(GameInterface):
             addr = ADDRESSES[self.current_game]["PlanetSlots"][idx]
             addr = self.address_convert(addr)
             if self.UnlockPlanets[name]["status"] == 1:
+                self.logger.debug(f"{name} is available")
                 self._write8(addr, ADDRESSES[self.current_game]["PlanetValues"][name])
             else:
+                self.logger.debug(f"{name} locked")
                 self._write8(addr, 0)
 
             # For avoiding Deadlock, Holostar is locked until Hacker and HyperShot is unlocked,
             if name == "Holostar Studios":
                 if self.UnlockGadgets["Hacker"]["status"] == 0 or self.UnlockGadgets["Hypershot"]["status"] == 0:
+                    self._write8(addr, 0)
+            if name == "Qwarks Hideout":
+                if self.UnlockGadgets["Refractor"]["status"] == 0 or self.UnlockGadgets["Hypershot"]["status"] == 0:
                     self._write8(addr, 0)
 
     def vidcomic_cycler(self):

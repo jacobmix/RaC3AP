@@ -39,8 +39,8 @@ ADDRESSES = {
             "Plasma Coil": {"unlockAddress": 0x00142CB0, "id": 16, "ammoAddress": 0x00142830, "lv1Ammo": 15, },
         },
         "Gadgets": {
-            # "Heli-Pack":         {"unlockAddress": 0x00142CA2, "id": 0,    },
-            # "Thruster-Pack":     {"unlockAddress": 0x00142CA3, "id": 0,    },
+            # "Heli-Pack": {"unlockAddress": 0x00142CA2, "id": 0, },
+            # "Thruster-Pack": {"unlockAddress": 0x00142CA3, "id": 0, },
             "Hacker": {"unlockAddress": 0x00142CB4, "id": 0, },
             "Hypershot": {"unlockAddress": 0x00142CAB, "id": 11, },
             "Refractor": {"unlockAddress": 0x00142CB2, "id": 18, },
@@ -181,7 +181,7 @@ ADDRESSES = {
 LOCATIONS = [
     {
         "Name": "First Ranger gives weapon",
-        "Id": 50001000,
+        "Id": 50010000,
         "Address": "0x001426E0",
         # Use event flag rather than weapon unlock address to avoid issues with weapon randomizer
         "CheckType": 0,
@@ -189,7 +189,7 @@ LOCATIONS = [
     },
     {
         "Name": "Second Ranger gives weapon",
-        "Id": 50001001,
+        "Id": 50010001,
         "Address": "0x001426E1",
         # Use event flag rather than weapon unlock address to avoid issues with weapon randomizer
         "CheckType": 0,
@@ -197,98 +197,98 @@ LOCATIONS = [
     },
     {
         "Name": "Save Veldin",
-        "Id": 50001003,
+        "Id": 50010002,
         "Address": "0x001426E4",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received Plasma Whip",
-        "Id": 50001004,
+        "Id": 50020000,
         "Address": "0x00142D1F",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received N60 Storm",
-        "Id": 50001005,
+        "Id": 50020001,
         "Address": "0x00142CCF",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Below Gadgetron Vendor",
-        "Id": 50001006,
+        "Id": 50020002,
         "Address": "0x001BBB29",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Path of Death",
-        "Id": 50001007,
+        "Id": 50020003,
         "Address": "0x001BBB2A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Defeat Qwark",
-        "Id": 50001008,
+        "Id": 50020004,
         "Address": "0x001426E7",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received Suck Cannon",
-        "Id": 50001009,
+        "Id": 50030000,
         "Address": "0x00142D27",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received Infector",
-        "Id": 50001010,
+        "Id": 50030001,
         "Address": "0x00142CD7",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: All VR Deck Challenges",
-        "Id": 50001011,
+        "Name": "T-Bolt: Nerves of Titanium",
+        "Id": 50030027,
         "Address": "0x001BBB30",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Complete VR Training",
-        "Id": 50001012,
+        "Name": "T-Bolt: VR Gadget Training",
+        "Id": 50030015,
         "Address": "0x001BBB31",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received Magna Plate Armor",
-        "Id": 50001013,
+        "Id": 50030002,
         "Address": "0x001426A0",
         "CheckValue": "1",
         "CheckType": 3
     },
     {
         "Name": "Received Adamantine Armor",
-        "Id": 50001014,
+        "Id": 50030003,
         "Address": "0x001426A0",
         "CheckValue": "2",
         "CheckType": 3
     },
     {
         "Name": "Received Aegis Mark V Armor",
-        "Id": 50001015,
+        "Id": 50030004,
         "Address": "0x001426A0",
         "CheckValue": "3",
         "CheckType": 3
     },
     {
         "Name": "Received Infernox Armor",
-        "Id": 50001016,
+        "Id": 50030005,
         "Checks": [
             {
                 "Address": "0x001D54B4",
@@ -304,21 +304,21 @@ LOCATIONS = [
     },
     {
         "Name": "Received Hacker",
-        "Id": 50001017,
+        "Id": 50030016,
         "Address": "0x00142CB4",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received Hypershot",
-        "Id": 50001018,
+        "Id": 50030017,
         "Address": "0x00142CAB",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Infobot: Marcadia",
-        "Id": 50001019,
+        "Name": "Marcadia Invaded",
+        "Id": 50030006,
         "Checks": [
             {
                 "Address": "0x001426E9",
@@ -334,21 +334,21 @@ LOCATIONS = [
     },
     {
         "Name": "Infobot: Koros",
-        "Id": 50001020,
+        "Id": 50030007,
         "Address": "0x001D553E",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Infobot: Annihilation Nation",
-        "Id": 50001021,
+        "Id": 50030008,
         "Address": "0x001426EB",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Infobot: Aquatos",
-        "Id": 50001022,
+        "Id": 50030009,
         # " Address": 0x001426F6, #  Correct Infobot address
         "Address": "0x0014276F",  # Same as Tyhrra-Guise Getting event. This event behinds Phoenix Ship event.
         "CheckType": 0,
@@ -356,7 +356,7 @@ LOCATIONS = [
     },
     {
         "Name": "Infobot: Tyhrranosis",
-        "Id": 50001023,
+        "Id": 50030010,
         # "Address": "0x00142C1B",
         "Address": "0x0014275E",  # Same as 1 Sewer Crystal Traded
         "CheckType": 0,
@@ -364,7 +364,7 @@ LOCATIONS = [
     },
     {
         "Name": "Infobot: Daxx",
-        "Id": 50001024,
+        "Id": 50030011,
         #  "Address": "0x00142765",
         "Address": "0x00142765",  # Same as T-Bolt: VR training
         "CheckType": 0,
@@ -372,7 +372,7 @@ LOCATIONS = [
     },
     {
         "Name": "Infobot: Crash Site",
-        "Id": 50001026,
+        "Id": 50030013,
         #  "Address": "0x001D5541",
         "Address": "0x00142708",  # Same as defeat Giant Cronk
         "CheckType": 0,
@@ -380,42 +380,42 @@ LOCATIONS = [
     },
     {
         "Name": "Infobot: Qwarks Hideout",
-        "Id": 50001027,
+        "Id": 50030014,
         "Address": "0x00142734",
         "CheckType": 0,
         "AddressBit": 5  # 3E 00X0_0000
     },
     {
         "Name": "Qwark Vidcomic 4",
-        "Id": 50001413,
+        "Id": 50030028,
         "Address": "0x001D5550",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Qwark Vidcomic 5",
-        "Id": 50001414,
+        "Id": 50030029,
         "Address": "0x001D5553",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Infobot: Metropolis",
-        "Id": 50001415,
+        "Id": 50030012,
         "Address": "0x001D5550",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received Spitting Hydra",
-        "Id": 50001030,
+        "Id": 50040000,
         "Address": "0x00142CE7",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received Refractor",
-        "Id": 50001031,
+        "Id": 50040001,
         # "Address": "0x00142CB2", # item flag
         "Address": "0x00142C29",  # Marcadia Mission event Flag
         "CheckType": 0,
@@ -423,336 +423,336 @@ LOCATIONS = [
     },
     {
         "Name": "T-Bolt: After Pool of Water",
-        "Id": 50001032,
+        "Id": 50040002,
         "Address": "0x001BBB39",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Last Refractor Room",
-        "Id": 50001033,
+        "Id": 50040003,
         "Address": "0x001BBB3A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Ceiling just before Al",
-        "Id": 50001034,
+        "Id": 50040004,
         "Address": "0x001BBB3B",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Qwark Vidcomic 1",
-        "Id": 50001035,
+        "Id": 50040005,
         "Address": "0x001D554F",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received Agents of Doom",
-        "Id": 50001140,
+        "Id": 50070000,
         "Address": "0x00142CF7",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received Tyhrra-Guise",
-        "Id": 50001141,
+        "Id": 50070001,
         "Address": "0x0014276F",  # Same as Grand Prize Bout(Tyhrra-Guise Getting event)
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Heat Street",
-        "Id": 50001142,
+        "Id": 50070002,
         "Address": "0x001BBB51",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Maze of Blaze",
-        "Id": 50001143,
+        "Id": 50070003,
         "Address": "0x001BBB52",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Grand Prize Bout",
-        "Id": 50001144,
+        "Id": 50070004,
         "Address": "0x0014276F",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "The Terrible Two",
-        "Id": 50001145,
+        "Id": 50070005,
         "Address": "0x00142772",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Robot Rampage",
-        "Id": 50001146,
+        "Id": 50070006,
         "Address": "0x00142773",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Two Minute Warning",
-        "Id": 50001147,
+        "Id": 50070007,
         "Address": "0x00142774",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "90 Seconds of Carnage",
-        "Id": 50001148,
+        "Id": 50070008,
         "Address": "0x00142775",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Onslaught",
-        "Id": 50001149,
+        "Id": 50070009,
         "Address": "0x00142776",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Whip It Good",
-        "Id": 50001150,
+        "Id": 50070010,
         "Address": "0x00142777",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Hydra N' Seek",
-        "Id": 50001151,
+        "Id": 50070011,
         "Address": "0x00142778",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Championship Bout",
-        "Id": 50001152,
+        "Id": 50070012,
         "Address": "0x00142779",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Ninja Challenge",
-        "Id": 50001154,
+        "Id": 50070014,
         "Address": "0x0014277D",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Counting Ducks",
-        "Id": 50001155,
+        "Id": 50070015,
         "Address": "0x0014277E",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Cycling Weapons",
-        "Id": 50001156,
+        "Id": 50070016,
         "Address": "0x0014277F",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "One Hit Wonder",
-        "Id": 50001157,
+        "Id": 50070017,
         "Address": "0x00142780",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Time to Suck",
-        "Id": 50001158,
+        "Id": 50070018,
         "Address": "0x00142781",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Naptime",
-        "Id": 50001159,
+        "Id": 50070019,
         "Address": "0x00142782",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Meet Courtney - Arena",
-        "Id": 50001153,
+        "Id": 50070013,
         "Address": "0x00142771",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "More Cycling Weapons",
-        "Id": 50001160,
+        "Id": 50070020,
         "Address": "0x00142783",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Dodge the Twins",
-        "Id": 50001161,
+        "Id": 50070021,
         "Address": "0x00142784",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Chop Chop",
-        "Id": 50001162,
+        "Id": 50070022,
         "Address": "0x00142785",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Sleep Inducer",
-        "Id": 50001163,
+        "Id": 50070023,
         "Address": "0x00142786",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "The Other White Meat",
-        "Id": 50001164,
+        "Id": 50070024,
         "Address": "0x00142787",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Championship Bout II",
-        "Id": 50001165,
+        "Id": 50070025,
         "Address": "0x00142788",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Qwarktastic Battle",
-        "Id": 50001166,
+        "Id": 50070026,
         "Address": "0x00142789",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Heat Street",
-        "Id": 50001167,
+        "Id": 50070027,
         "Address": "0x0014276E",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Crispy Critter",
-        "Id": 50001168,
+        "Id": 50070028,
         "Address": "0x0014277A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Pyro Playground",
-        "Id": 50001169,
+        "Id": 50070029,
         "Address": "0x0014277B",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Suicide Run",
-        "Id": 50001170,
+        "Id": 50070030,
         "Address": "0x0014277C",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "BBQ Boulevard",  # (Meet Courtney - Gauntlet)
-        "Id": 50001171,
+        "Id": 50070031,
         "Address": "0x00142770",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Maze of Blaze",
-        "Id": 50001172,
+        "Id": 50070032,
         "Address": "0x0014278A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Cremation Station",
-        "Id": 50001173,
+        "Id": 50070033,
         "Address": "0x0014278B",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "The Annihilator (Gauntlet)",
-        "Id": 50001174,
+        "Id": 50070034,
         "Address": "0x0014278C",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Qwark Vidcomic 2",
-        "Id": 50001175,
+        "Id": 50070035,
         "Address": "0x001D5551",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Qwark Vidcomic 3",
-        "Id": 50001176,
+        "Id": 50070036,
         "Address": "0x001D5552",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received Flux Rifle",
-        "Id": 50001090,
+        "Id": 50080000,
         "Address": "0x00142D0F",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Under the Bridge",
-        "Id": 50001091,
+        "Id": 50080001,
         "Address": "0x001BBB5A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Underwater Bolt",
-        "Id": 50001092,
+        "Id": 50080002,
         "Address": "0x001BBB5B",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Behind the Locked Gate",
-        "Id": 50001093,
+        "Id": 50080003,
         "Address": "0x001BBB59",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Top Left Bolt",
-        "Id": 50001094,
+        "Id": 50280000,
         "Address": "0x001BBBF9",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Swinging Bolt",
-        "Id": 50001095,
+        "Id": 50280001,
         "Address": "0x001BBBFA",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "1 Sewer Crystal Traded",
-        "Id": 50001096,
+        "Id": 50280002,
         "Address": "0x0014275E",  # JP: 1426DE,
         "CompareType": 1,  # Greater than
         "CheckType": 3,  # Byte type
@@ -760,7 +760,7 @@ LOCATIONS = [
     },
     {
         "Name": "5 Sewer Crystals Traded",
-        "Id": 50001097,
+        "Id": 50280003,
         "Address": "0x0014275E",  # JP: 1426DE,
         "CheckType": 3,  # Byte type
         "CompareType": 1,  # Greater than
@@ -768,7 +768,7 @@ LOCATIONS = [
     },
     {
         "Name": "10 Sewer Crystals Traded",
-        "Id": 50001098,
+        "Id": 50280004,
         "Address": "0x0014275E",  # JP: 1426DE,
         "CheckType": 3,  # Byte type
         "CompareType": 1,  # Greater than
@@ -776,7 +776,7 @@ LOCATIONS = [
     },
     {
         "Name": "20 Sewer Crystals Traded",
-        "Id": 50001099,
+        "Id": 50280005,
         "Address": "0x0014275E",  # JP: 1426DE,
         "CheckType": 3,  # Byte type
         "CompareType": 1,  # Greater than
@@ -784,56 +784,56 @@ LOCATIONS = [
     },
     {
         "Name": "Received Annihilator",
-        "Id": 50001300,
+        "Id": 50090000,
         "Address": "0x00142CDF",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received Holo-Shield Glove",
-        "Id": 50001301,
+        "Id": 50090001,
         "Address": "0x00142D07",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: South East Cannon",
-        "Id": 50001302,
+        "Id": 50090002,
         "Address": "0x001BBB62",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Underground Cave Bolt",
-        "Id": 50001303,
+        "Id": 50090003,
         "Address": "0x001BBB61",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Right of the Taxi",
-        "Id": 50001320,
+        "Id": 50050001,
         "Address": "0x001BBB41",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Time-Sensitive Door",
-        "Id": 50001321,
+        "Id": 50050002,
         "Address": "0x001BBB42",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received Charge Boots",
-        "Id": 50001322,
+        "Id": 50050003,
         "Address": "0x00142CBD",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Infiltrate Weapons Facility",
-        "Id": 50001323,
+        "Id": 50050000,
         "Address": "0x001D553B",
         # Infobot Address: "0x00142C29" bit 3
         "CheckType": 0,
@@ -841,7 +841,7 @@ LOCATIONS = [
     },
     {
         "Name": "Post-Daxx",
-        "Id": 50001323,
+        "Id": 50050004,
         # "Address": "0x00143B39", #  ??
         "Address": "0x0014275B",  # Daxx Courtney Room
         "CheckType": 0,
@@ -849,35 +849,35 @@ LOCATIONS = [
     },
     {
         "Name": "Received Disk Blade Gun",
-        "Id": 50001340,
+        "Id": 50110000,
         "Address": "0x00142CEF",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Follow the Lava",
-        "Id": 50001341,
+        "Id": 50110001,
         "Address": "0x001BBB72",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Between the Twin Towers",
-        "Id": 50001342,
+        "Id": 50110002,
         "Address": "0x001BBB71",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Infobot: Blackwater City",
-        "Id": 50001343,
+        "Id": 50110003,
         "Address": "0x00142BB2",
         "CheckType": 0,
         "AddressBit": 3  # 08: 0000_X000
     },
     {
         "Name": "Received Grav Boots",
-        "Id": 50001360,
+        "Id": 50120000,
         #  "Address": "0x00142CAD",
         "Address": "0x00142C40",
         "CheckType": 0,
@@ -885,7 +885,7 @@ LOCATIONS = [
     },
     {
         "Name": "Infobot: Holostar Studios",
-        "Id": 50001361,
+        "Id": 50120001,
         "Address": "0x00142705",
         #  "Address": "0x00142771", #  WA: Same as Meet Courtney - Arena
         "CheckType": 0,
@@ -893,70 +893,70 @@ LOCATIONS = [
     },
     {
         "Name": "Received Rift Inducer",
-        "Id": 50001390,
+        "Id": 50130000,
         "Address": "0x00142CFF",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Atop the Chairs",
-        "Id": 50001391,
+        "Id": 50130001,
         "Address": "0x001BBB82",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Lot 42's Grav Ramp",
-        "Id": 50001392,
+        "Id": 50130002,
         "Address": "0x001BBB83",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Kamikaze Noids",
-        "Id": 50001393,
+        "Id": 50130003,
         "Address": "0x001BBB81",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Infobot: Obani Draco",
-        "Id": 50001394,
+        "Id": 50130004,
         "Address": "0x00142713",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Infobot: Zeldrin Starport",
-        "Id": 50001370,
+        "Id": 50210000,
         "Address": "0x0014270D",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received Bolt Grabber V2",
-        "Id": 50001410,
+        "Id": 50100000,
         "Address": "0x00142CA7",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Inside the Second Ship",
-        "Id": 50001411,
+        "Id": 50100001,
         "Address": "0x001BBB6A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Atop the Twin Shooters",
-        "Id": 50001412,
+        "Id": 50100002,
         "Address": "0x001BBB69",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received Map-O-Matic",
-        "Id": 50001430,
+        "Id": 50260006,
         #  "Address": "0x00142CA5", #  item flag
         "Address": "0x00142C64",  # Metropolis Mission Clear
         "CheckType": 0,
@@ -964,58 +964,58 @@ LOCATIONS = [
     },
     {
         "Name": "T-Bolt: Across the Gap",
-        "Id": 50001431,
+        "Id": 50160000,
         "Address": "0x001BBB99",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Right of the Balcony",
-        "Id": 50001432,
+        "Id": 50160003,
         "Address": "0x001BBB9A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Tall Tower (Hovership)",
-        "Id": 50001433,
+        "Id": 50260000,
         "Address": "0x001BBBE9",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Metal-Noids",
-        "Id": 50001434,
+        "Id": 50160002,
         "Address": "0x0014275C",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received Nano-Pak",
-        "Id": 50001450,
+        "Id": 50170001,
         "Address": "0x00142CC0",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Turn Around",
-        "Id": 50001451,
+        "Id": 50170000,
         "Address": "0x001BBBA1",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Infobot: Aridia",
-        "Id": 50001452,
+        "Id": 50170003,
         "Address": "0x00142C52",
-        #"Address": "0x00142722",
+        # "Address": "0x00142722",
         # Correct Address: 0x00142C52(4bit: 0x07->0x0f) (US), but Event is not happened in some case.
         "CheckType": 0,
         "AddressBit": 3  # / 0x02: 0000_00X0
     },
     {
         "Name": "Received Warp Pad",
-        "Id": 50001470,
+        "Id": 50180000,
         # "Address": "0x00142CBF", #  Item flag
         "Address": "0x00142C56",  # Clear Aridia
         "CheckType": 0,
@@ -1023,119 +1023,119 @@ LOCATIONS = [
     },
     {
         "Name": "Received Qwack-O-Ray",
-        "Id": 50001471,
+        "Id": 50180001,
         "Address": "0x00142D2F",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Under the Bridge (Assassination)",
-        "Id": 50001472,
+        "Id": 50180002,
         "Address": "0x001BBBAA",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Behind the Base (X12 Endgame)",
-        "Id": 50001473,
+        "Id": 50180003,
         "Address": "0x001BBBA9",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received Gadgetron PDA",
-        "Id": 50001490,
+        "Id": 50190000,
         "Address": "0x00142CC3",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Glide from the Ramp",
-        "Id": 50001491,
+        "Id": 50190001,
         "Address": "0x001BBBB1",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Behind the Metal Fence",
-        "Id": 50001493,
+        "Id": 50140000,
         "Address": "0x001BBB89",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: Pair of Towers",
-        "Id": 50001494,
+        "Id": 50140001,
         "Address": "0x001BBB8A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Infobot: Command Center",
-        "Id": 50001495,
+        "Id": 50140002,
         "Address": "0x00142C49",
         "CheckType": 0,
         "AddressBit": 3  # 04 -> 0C: 0000_X000
     },
     {
         "Name": "T-Bolt: Behind the Forcefield",
-        "Id": 50001496,
+        "Id": 50220000,
         "Address": "0x001BBBC9",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Dr. Nefarious Defeated!",
-        "Id": 50001497,
+        "Id": 50200000,
         "Address": "0x0014270F",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Biobliterator Defeated!",
-        "Id": 50001498,
+        "Id": 50200001,
         "Address": "0x00142BB6",
         "CheckType": 0,
         "AddressBit": 6  # 40: 0X00_0000
     },
     {
         "Name": "T-Bolt: VidComic 1",
-        "Id": 50001201,
+        "Id": 50310001,
         "Address": "0x001BBB32",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: VidComic 2",
-        "Id": 50001202,
+        "Id": 50330001,
         "Address": "0x001BBB33",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: VidComic 3",
-        "Id": 50001203,
+        "Id": 50340001,
         "Address": "0x001BBB34",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: VidComic 4",
-        "Id": 50001204,
+        "Id": 50320001,
         "Address": "0x001BBB35",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "T-Bolt: VidComic 5",
-        "Id": 50001205,
+        "Id": 50350001,
         "Address": "0x001BBB36",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Shock Blaster: V2",
-        "Id": 50001500,
+        "Id": 50150000,
         "Address": "0x00142E7C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1143,7 +1143,7 @@ LOCATIONS = [
     },
     {
         "Name": "Shock Blaster: V3",
-        "Id": 50001501,
+        "Id": 50150001,
         "Address": "0x00142E7C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1151,7 +1151,7 @@ LOCATIONS = [
     },
     {
         "Name": "Shock Blaster: V4",
-        "Id": 50001502,
+        "Id": 50150002,
         "Address": "0x00142E7C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1159,7 +1159,7 @@ LOCATIONS = [
     },
     {
         "Name": "Shock Blaster: V5",
-        "Id": 50001503,
+        "Id": 50150003,
         "Address": "0x001425E7",
         "CompareType": 0,
         "CheckType": 1,
@@ -1167,7 +1167,7 @@ LOCATIONS = [
     },
     {
         "Name": "Nitro Launcher: V2",
-        "Id": 50001504,
+        "Id": 50150004,
         "Address": "0x00142FBC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1175,7 +1175,7 @@ LOCATIONS = [
     },
     {
         "Name": "Nitro Launcher: V3",
-        "Id": 50001505,
+        "Id": 50150005,
         "Address": "0x00142FBC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1183,7 +1183,7 @@ LOCATIONS = [
     },
     {
         "Name": "Nitro Launcher: V4",
-        "Id": 50001506,
+        "Id": 50150006,
         "Address": "0x00142FBC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1191,7 +1191,7 @@ LOCATIONS = [
     },
     {
         "Name": "Nitro Launcher: V5",
-        "Id": 50001507,
+        "Id": 50150007,
         "Address": "0x00142FBC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1199,7 +1199,7 @@ LOCATIONS = [
     },
     {
         "Name": "N60 Storm: V2",
-        "Id": 50001508,
+        "Id": 50150008,
         "Address": "0x00142E9C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1207,7 +1207,7 @@ LOCATIONS = [
     },
     {
         "Name": "N60 Storm: V3",
-        "Id": 50001509,
+        "Id": 50150009,
         "Address": "0x00142E9C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1215,7 +1215,7 @@ LOCATIONS = [
     },
     {
         "Name": "N60 Storm: V4",
-        "Id": 50001510,
+        "Id": 50150010,
         "Address": "0x00142E9C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1223,7 +1223,7 @@ LOCATIONS = [
     },
     {
         "Name": "N60 Storm: V5",
-        "Id": 50001511,
+        "Id": 50150011,
         "Address": "0x00142E9C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1231,7 +1231,7 @@ LOCATIONS = [
     },
     {
         "Name": "Plasma Whip: V2",
-        "Id": 50001512,
+        "Id": 50150012,
         "Address": "0x00142FDC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1239,7 +1239,7 @@ LOCATIONS = [
     },
     {
         "Name": "Plasma Whip: V3",
-        "Id": 50001513,
+        "Id": 50150013,
         "Address": "0x00142FDC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1247,7 +1247,7 @@ LOCATIONS = [
     },
     {
         "Name": "Plasma Whip: V4",
-        "Id": 50001514,
+        "Id": 50150014,
         "Address": "0x00142FDC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1255,7 +1255,7 @@ LOCATIONS = [
     },
     {
         "Name": "Plasma Whip: V5",
-        "Id": 50001515,
+        "Id": 50150015,
         "Address": "0x00142FDC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1263,7 +1263,7 @@ LOCATIONS = [
     },
     {
         "Name": "Infector: V2",
-        "Id": 50001516,
+        "Id": 50150016,
         "Address": "0x00142EBC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1271,7 +1271,7 @@ LOCATIONS = [
     },
     {
         "Name": "Infector: V3",
-        "Id": 50001517,
+        "Id": 50150017,
         "Address": "0x00142EBC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1279,7 +1279,7 @@ LOCATIONS = [
     },
     {
         "Name": "Infector: V4",
-        "Id": 50001518,
+        "Id": 50150018,
         "Address": "0x00142EBC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1287,7 +1287,7 @@ LOCATIONS = [
     },
     {
         "Name": "Infector: V5",
-        "Id": 50001519,
+        "Id": 50150019,
         "Address": "0x00142EBC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1295,7 +1295,7 @@ LOCATIONS = [
     },
     {
         "Name": "Suck Cannon: V2",
-        "Id": 50001520,
+        "Id": 50150020,
         "Address": "0x00142FFC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1303,7 +1303,7 @@ LOCATIONS = [
     },
     {
         "Name": "Suck Cannon: V3",
-        "Id": 50001521,
+        "Id": 50150021,
         "Address": "0x00142FFC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1311,7 +1311,7 @@ LOCATIONS = [
     },
     {
         "Name": "Suck Cannon: V4",
-        "Id": 50001522,
+        "Id": 50150022,
         "Address": "0x00142FFC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1319,7 +1319,7 @@ LOCATIONS = [
     },
     {
         "Name": "Suck Cannon: V5",
-        "Id": 50001523,
+        "Id": 50150023,
         "Address": "0x00142FFC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1327,7 +1327,7 @@ LOCATIONS = [
     },
     {
         "Name": "Spitting Hydra: V2",
-        "Id": 50001524,
+        "Id": 50150024,
         "Address": "0x00142EFC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1335,7 +1335,7 @@ LOCATIONS = [
     },
     {
         "Name": "Spitting Hydra: V3",
-        "Id": 50001525,
+        "Id": 50150025,
         "Address": "0x00142EFC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1343,7 +1343,7 @@ LOCATIONS = [
     },
     {
         "Name": "Spitting Hydra: V4",
-        "Id": 50001526,
+        "Id": 50150026,
         "Address": "0x00142EFC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1351,7 +1351,7 @@ LOCATIONS = [
     },
     {
         "Name": "Spitting Hydra: V5",
-        "Id": 50001527,
+        "Id": 50150027,
         "Address": "0x00142EFC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1359,7 +1359,7 @@ LOCATIONS = [
     },
     {
         "Name": "Agents of Doom: V2",
-        "Id": 50001528,
+        "Id": 50150028,
         "Address": "0x00142F3C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1367,7 +1367,7 @@ LOCATIONS = [
     },
     {
         "Name": "Agents of Doom: V3",
-        "Id": 50001529,
+        "Id": 50150029,
         "Address": "0x00142F3C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1375,7 +1375,7 @@ LOCATIONS = [
     },
     {
         "Name": "Agents of Doom: V4",
-        "Id": 50001530,
+        "Id": 50150030,
         "Address": "0x00142F3C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1383,7 +1383,7 @@ LOCATIONS = [
     },
     {
         "Name": "Agents of Doom: V5",
-        "Id": 50001531,
+        "Id": 50150031,
         "Address": "0x00142F3C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1391,7 +1391,7 @@ LOCATIONS = [
     },
     {
         "Name": "Flux Rifle: V2",
-        "Id": 50001532,
+        "Id": 50150032,
         "Address": "0x00142F9C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1399,7 +1399,7 @@ LOCATIONS = [
     },
     {
         "Name": "Flux Rifle: V3",
-        "Id": 50001533,
+        "Id": 50150033,
         "Address": "0x00142F9C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1407,7 +1407,7 @@ LOCATIONS = [
     },
     {
         "Name": "Flux Rifle: V4",
-        "Id": 50001534,
+        "Id": 50150034,
         "Address": "0x00142F9C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1415,7 +1415,7 @@ LOCATIONS = [
     },
     {
         "Name": "Flux Rifle: V5",
-        "Id": 50001535,
+        "Id": 50150035,
         "Address": "0x00142F9C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1423,7 +1423,7 @@ LOCATIONS = [
     },
     {
         "Name": "Annihilator: V2",
-        "Id": 50001536,
+        "Id": 50150036,
         "Address": "0x00142EDC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1431,7 +1431,7 @@ LOCATIONS = [
     },
     {
         "Name": "Annihilator: V3",
-        "Id": 50001537,
+        "Id": 50150037,
         "Address": "0x00142EDC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1439,7 +1439,7 @@ LOCATIONS = [
     },
     {
         "Name": "Annihilator: V4",
-        "Id": 50001538,
+        "Id": 50150038,
         "Address": "0x00142EDC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1447,7 +1447,7 @@ LOCATIONS = [
     },
     {
         "Name": "Annihilator: V5",
-        "Id": 50001539,
+        "Id": 50150039,
         "Address": "0x00142EDC",
         "CompareType": 1,
         "CheckType": 1,
@@ -1455,7 +1455,7 @@ LOCATIONS = [
     },
     {
         "Name": "Holo-Shield Glove: V2",
-        "Id": 50001540,
+        "Id": 50150040,
         "Address": "0x00142F7C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1463,7 +1463,7 @@ LOCATIONS = [
     },
     {
         "Name": "Holo-Shield Glove: V3",
-        "Id": 50001541,
+        "Id": 50150041,
         "Address": "0x00142F7C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1471,7 +1471,7 @@ LOCATIONS = [
     },
     {
         "Name": "Holo-Shield Glove: V4",
-        "Id": 50001542,
+        "Id": 50150042,
         "Address": "0x00142F7C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1479,7 +1479,7 @@ LOCATIONS = [
     },
     {
         "Name": "Holo-Shield Glove: V5",
-        "Id": 50001543,
+        "Id": 50150043,
         "Address": "0x00142F7C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1487,7 +1487,7 @@ LOCATIONS = [
     },
     {
         "Name": "Disk-Blade Gun: V2",
-        "Id": 50001544,
+        "Id": 50150044,
         "Address": "0x00142F1C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1495,7 +1495,7 @@ LOCATIONS = [
     },
     {
         "Name": "Disk-Blade Gun: V3",
-        "Id": 50001545,
+        "Id": 50150045,
         "Address": "0x00142F1C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1503,7 +1503,7 @@ LOCATIONS = [
     },
     {
         "Name": "Disk-Blade Gun: V4",
-        "Id": 50001546,
+        "Id": 50150046,
         "Address": "0x00142F1C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1511,7 +1511,7 @@ LOCATIONS = [
     },
     {
         "Name": "Disk-Blade Gun: V5",
-        "Id": 50001547,
+        "Id": 50150047,
         "Address": "0x00142F1C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1519,7 +1519,7 @@ LOCATIONS = [
     },
     {
         "Name": "Rift Inducer: V2",
-        "Id": 50001548,
+        "Id": 50150048,
         "Address": "0x00142F5C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1527,7 +1527,7 @@ LOCATIONS = [
     },
     {
         "Name": "Rift Inducer: V3",
-        "Id": 50001549,
+        "Id": 50150049,
         "Address": "0x00142F5C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1535,7 +1535,7 @@ LOCATIONS = [
     },
     {
         "Name": "Rift Inducer: V4",
-        "Id": 50001550,
+        "Id": 50150050,
         "Address": "0x00142F5C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1543,7 +1543,7 @@ LOCATIONS = [
     },
     {
         "Name": "Rift Inducer: V5",
-        "Id": 50001551,
+        "Id": 50150051,
         "Address": "0x00142F5C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1551,7 +1551,7 @@ LOCATIONS = [
     },
     {
         "Name": "Qwack-O-Ray: V2",
-        "Id": 50001552,
+        "Id": 50150052,
         "Address": "0x0014301C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1559,7 +1559,7 @@ LOCATIONS = [
     },
     {
         "Name": "Qwack-O-Ray: V3",
-        "Id": 50001553,
+        "Id": 50150053,
         "Address": "0x0014301C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1567,7 +1567,7 @@ LOCATIONS = [
     },
     {
         "Name": "Qwack-O-Ray: V4",
-        "Id": 50001554,
+        "Id": 50150054,
         "Address": "0x0014301C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1575,7 +1575,7 @@ LOCATIONS = [
     },
     {
         "Name": "Qwack-O-Ray: V5",
-        "Id": 50001555,
+        "Id": 50150055,
         "Address": "0x0014301C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1583,7 +1583,7 @@ LOCATIONS = [
     },
     {
         "Name": "RY3N0: V2",
-        "Id": 50001556,
+        "Id": 50150056,
         "Address": "0x0014303C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1591,7 +1591,7 @@ LOCATIONS = [
     },
     {
         "Name": "RY3N0: V3",
-        "Id": 50001557,
+        "Id": 50150057,
         "Address": "0x0014303C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1599,7 +1599,7 @@ LOCATIONS = [
     },
     {
         "Name": "RY3N0: V4",
-        "Id": 50001558,
+        "Id": 50150058,
         "Address": "0x0014303C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1607,7 +1607,7 @@ LOCATIONS = [
     },
     {
         "Name": "RY3N0: V5",
-        "Id": 50001559,
+        "Id": 50150059,
         "Address": "0x0014303C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1615,7 +1615,7 @@ LOCATIONS = [
     },
     {
         "Name": "Mini-Turret Glove: V2",
-        "Id": 50001560,
+        "Id": 50150060,
         "Address": "0x00142E34",
         "CompareType": 1,
         "CheckType": 1,
@@ -1623,7 +1623,7 @@ LOCATIONS = [
     },
     {
         "Name": "Mini-Turret Glove: V3",
-        "Id": 50001561,
+        "Id": 50150061,
         "Address": "0x00142E34",
         "CompareType": 1,
         "CheckType": 1,
@@ -1631,7 +1631,7 @@ LOCATIONS = [
     },
     {
         "Name": "Mini-Turret Glove: V4",
-        "Id": 50001562,
+        "Id": 50150062,
         "Address": "0x00142E34",
         "CompareType": 1,
         "CheckType": 1,
@@ -1639,7 +1639,7 @@ LOCATIONS = [
     },
     {
         "Name": "Mini-Turret Glove: V5",
-        "Id": 50001563,
+        "Id": 50150063,
         "Address": "0x00142E34",
         "CompareType": 1,
         "CheckType": 1,
@@ -1647,7 +1647,7 @@ LOCATIONS = [
     },
     {
         "Name": "Lava Gun: V2",
-        "Id": 50001564,
+        "Id": 50150064,
         "Address": "0x00142E24",
         "CompareType": 1,
         "CheckType": 1,
@@ -1655,7 +1655,7 @@ LOCATIONS = [
     },
     {
         "Name": "Lava Gun: V3",
-        "Id": 50001565,
+        "Id": 50150065,
         "Address": "0x00142E24",
         "CompareType": 1,
         "CheckType": 1,
@@ -1663,7 +1663,7 @@ LOCATIONS = [
     },
     {
         "Name": "Lava Gun: V4",
-        "Id": 50001566,
+        "Id": 50150066,
         "Address": "0x00142E24",
         "CompareType": 1,
         "CheckType": 1,
@@ -1671,7 +1671,7 @@ LOCATIONS = [
     },
     {
         "Name": "Lava Gun: V5",
-        "Id": 50001567,
+        "Id": 50150067,
         "Address": "0x00142E24",
         "CompareType": 1,
         "CheckType": 1,
@@ -1679,7 +1679,7 @@ LOCATIONS = [
     },
     {
         "Name": "Shield Charger: V2",
-        "Id": 50001568,
+        "Id": 50150068,
         "Address": "0x00142E38",
         "CompareType": 1,
         "CheckType": 1,
@@ -1687,7 +1687,7 @@ LOCATIONS = [
     },
     {
         "Name": "Shield Charger: V3",
-        "Id": 50001569,
+        "Id": 50150069,
         "Address": "0x00142E38",
         "CompareType": 1,
         "CheckType": 1,
@@ -1695,7 +1695,7 @@ LOCATIONS = [
     },
     {
         "Name": "Shield Charger: V4",
-        "Id": 50001570,
+        "Id": 50150070,
         "Address": "0x00142E38",
         "CompareType": 1,
         "CheckType": 1,
@@ -1703,7 +1703,7 @@ LOCATIONS = [
     },
     {
         "Name": "Shield Charger: V5",
-        "Id": 50001571,
+        "Id": 50150071,
         "Address": "0x00142E38",
         "CompareType": 1,
         "CheckType": 1,
@@ -1711,7 +1711,7 @@ LOCATIONS = [
     },
     {
         "Name": "Bouncer: V2",
-        "Id": 50001572,
+        "Id": 50150072,
         "Address": "0x00142E2C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1719,7 +1719,7 @@ LOCATIONS = [
     },
     {
         "Name": "Bouncer: V3",
-        "Id": 50001573,
+        "Id": 50150073,
         "Address": "0x00142E2C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1727,7 +1727,7 @@ LOCATIONS = [
     },
     {
         "Name": "Bouncer: V4",
-        "Id": 50001574,
+        "Id": 50150074,
         "Address": "0x00142E2C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1735,7 +1735,7 @@ LOCATIONS = [
     },
     {
         "Name": "Bouncer: V5",
-        "Id": 50001575,
+        "Id": 50150075,
         "Address": "0x00142E2C",
         "CompareType": 1,
         "CheckType": 1,
@@ -1743,7 +1743,7 @@ LOCATIONS = [
     },
     {
         "Name": "Plasma Coil: V2",
-        "Id": 50001576,
+        "Id": 50150076,
         "Address": "0x00142E20",
         "CompareType": 1,
         "CheckType": 1,
@@ -1751,7 +1751,7 @@ LOCATIONS = [
     },
     {
         "Name": "Plasma Coil: V3",
-        "Id": 50001577,
+        "Id": 50150077,
         "Address": "0x00142E20",
         "CompareType": 1,
         "CheckType": 1,
@@ -1759,7 +1759,7 @@ LOCATIONS = [
     },
     {
         "Name": "Plasma Coil: V4",
-        "Id": 50001578,
+        "Id": 50150078,
         "Address": "0x00142E20",
         "CompareType": 1,
         "CheckType": 1,
@@ -1767,7 +1767,7 @@ LOCATIONS = [
     },
     {
         "Name": "Plasma Coil: V5",
-        "Id": 50001579,
+        "Id": 50150079,
         "Address": "0x00142E20",
         "CompareType": 1,
         "CheckType": 1,
@@ -1775,511 +1775,511 @@ LOCATIONS = [
     },
     {
         "Name": "Operation IRON SHIELD: Secure the Area",
-        "Id": 50001036,
+        "Id": 50040006,
         "Address": "0x00142738",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Operation IRON SHIELD: Air Assault",
-        "Id": 50001037,
+        "Id": 50040007,
         "Address": "0x00142739",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Operation IRON SHIELD: Turret Command",
-        "Id": 50001038,
+        "Id": 50040008,
         "Address": "0x0014273A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Operation IRON SHIELD: Under the Gun",
-        "Id": 50001039,
+        "Id": 50040009,
         "Address": "0x0014273B",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Operation IRON SHIELD: Hit n' Run",
-        "Id": 50001040,
+        "Id": 50040010,
         "Address": "0x0014273C",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Operation BLACK TIDE: The Battle of Blackwater City",
-        "Id": 50001365,
+        "Id": 50120002,
         "Address": "0x0014273D",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Operation BLACK TIDE: The Bridge",
-        "Id": 50001366,
+        "Id": 50120003,
         "Address": "0x0014273E",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Operation BLACK TIDE: Counterattack",
-        "Id": 50001367,
+        "Id": 50120004,
         "Address": "0x00142C40",  # As same as Gravity-Boots event
         "CheckType": 0,
         "AddressBit": 3
     },
     {
         "Name": "Operation URBAN STORM: Countdown",
-        "Id": 50001435,
+        "Id": 50260001,
         "Address": "0x00142747",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Operation URBAN STORM: Urban Combat",
-        "Id": 50001436,
+        "Id": 50260002,
         "Address": "0x00142748",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Operation URBAN STORM: Tower Attack",
-        "Id": 50001437,
+        "Id": 50260003,
         "Address": "0x00142749",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Operation URBAN STORM: Air Superiority",
-        "Id": 50001438,
+        "Id": 50260004,
         "Address": "0x0014274A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Operation URBAN STORM: Turret Command",
-        "Id": 50001439,
+        "Id": 50260005,
         "Address": "0x0014274B",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Operation DEATH VALLEY: The Tunnels of Outpost X12",
-        "Id": 50001475,
+        "Id": 50180004,
         "Address": "0x00142742",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Operation DEATH VALLEY: Ambush in Red Rock Valley",
-        "Id": 50001476,
+        "Id": 50180005,
         "Address": "0x00142743",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Operation DEATH VALLEY: Assassination",
-        "Id": 50001477,
+        "Id": 50180006,
         "Address": "0x00142744",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Operation DEATH VALLEY: Reclaim the Valley",
-        "Id": 50001478,
+        "Id": 50180007,
         "Address": "0x00142745",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Operation DEATH VALLEY: X12 Endgame",
-        "Id": 50001479,
+        "Id": 50180008,
         "Address": "0x00142746",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Qwark Vidcomic 1 Clear",
-        "Id": 50001600,
+        "Id": 50310000,
         "Address": "0x00142734",
         "CheckType": 0,
         "AddressBit": 1
     },
     {
         "Name": "Qwark Vidcomic 2 Clear",
-        "Id": 50001601,
+        "Id": 50330000,
         "Address": "0x00142734",
         "CheckType": 0,
         "AddressBit": 3
     },
     {
         "Name": "Qwark Vidcomic 3 Clear",
-        "Id": 50001602,
+        "Id": 50340000,
         "Address": "0x00142734",
         "CheckType": 0,
         "AddressBit": 2
     },
     {
         "Name": "Qwark Vidcomic 4 Clear",
-        "Id": 50001603,
+        "Id": 50320000,
         "Address": "0x00142734",
         "CheckType": 0,
         "AddressBit": 4
     },
     {
         "Name": "Qwark Vidcomic 5 Clear",
-        "Id": 50001604,
+        "Id": 50350000,
         "Address": "0x00142734",
         "CheckType": 0,
         "AddressBit": 5
     },
     {
         "Name": "Destroy the Momma Tyhrranoid",
-        "Id": 50001605,
+        "Id": 50090004,
         "Address": "0x0014271D",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Operation ISLAND STRIKE: Assault on Kavu Island",
-        "Id": 50001606,
+        "Id": 50290000,
         "Address": "0x0014274C",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Operation ISLAND STRIKE: Dogfight over Kavu Island",
-        "Id": 50001607,
+        "Id": 50290001,
         "Address": "0x0014274D",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Operation ISLAND STRIKE: Operation Thunderbolt",
-        "Id": 50001608,
+        "Id": 50290002,
         "Address": "0x0014274F",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Operation ISLAND STRIKE: The Final Battle",
-        "Id": 50001609,
+        "Id": 50290003,
         "Address": "0x00142750",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Stay Squeaky Clean",
-        "Id": 50001610,
+        "Id": 50020005,
         "Address": "0x001D54B1",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Turn Up The Heat",
-        "Id": 50001611,
+        "Id": 50030030,
         "Address": "0x001D54B4",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Strive for arcade perfection",
-        "Id": 50001612,
+        "Id": 50030031,
         "Address": "0x001D54B2",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Beat Helga's best time",
-        "Id": 50001613,
+        "Id": 50030032,
         "Address": "0x001D54B3",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Monkeying around",
-        "Id": 50001614,
+        "Id": 50030033,
         "Address": "0x001D54B5",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Reflect on how to score",
-        "Id": 50001615,
+        "Id": 50040011,
         "Address": "0x001D54B6",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Bugs to Birdie",
-        "Id": 50001616,
+        "Id": 50050005,
         "Address": "0x001D54B7",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Bash the bug",
-        "Id": 50001617,
+        "Id": 50070037,
         "Address": "0x001D54B8",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Be an eight time champ",
-        "Id": 50001618,
+        "Id": 50070038,
         "Address": "0x001D54B9",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Flee Flawlessly",
-        "Id": 50001619,
+        "Id": 50070039,
         "Address": "0x001D54BA",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Lights, camera action!",
-        "Id": 50001620,
+        "Id": 50070040,
         "Address": "0x001D54BB",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Search for sunken treasure",
-        "Id": 50001621,
+        "Id": 50080004,
         "Address": "0x001D54BC",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Be a Sharpshooter",
-        "Id": 50001622,
+        "Id": 50090005,
         "Address": "0x001D54BD",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Get to the belt",
-        "Id": 50001623,
+        "Id": 50110004,
         "Address": "0x001D54BE",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Bash the party",
-        "Id": 50001624,
+        "Id": 50120005,
         "Address": "0x001D54BF",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Feeling Lucky",
-        "Id": 50001625,
+        "Id": 50130005,
         "Address": "0x001D54C0",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: You break it, you win it",
-        "Id": 50001626,
+        "Id": 50140003,
         "Address": "0x001D54C1",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: 2002 was a good year in the city",
-        "Id": 50001627,
+        "Id": 50160001,
         "Address": "0x001D54C2",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Suck it up!",
-        "Id": 50001628,
+        "Id": 50170004,
         "Address": "0x001D54C3",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Aim High",
-        "Id": 50001629,
+        "Id": 50170005,
         "Address": "0x001D54C4",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Go for hang time",
-        "Id": 50001630,
+        "Id": 50180009,
         "Address": "0x001D54B0",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Zap back at ya'",
-        "Id": 50001631,
+        "Id": 50180010,
         "Address": "0x001D54C5",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Break the Dan",
-        "Id": 50001632,
+        "Id": 50190002,
         "Address": "0x001D54C6",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Spread your germs",
-        "Id": 50001633,
+        "Id": 50220001,
         "Address": "0x001D54C7",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Hit the motherload",
-        "Id": 50001634,
+        "Id": 50280006,
         "Address": "0x001D54C8",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Pirate booty - set a new record for qwark",
-        "Id": 50001635,
+        "Id": 50310003,
         "Address": "0x001D54C9",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Deja Q All over Again - set a new record for qwark",
-        "Id": 50001636,
+        "Id": 50330003,
         "Address": "0x001D54CA",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Arriba Amoeba! - set a new record for qwark",
-        "Id": 50001637,
+        "Id": 50340003,
         "Address": "0x001D54CB",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: Shadow of the robot - set a new record for qwark",
-        "Id": 50001638,
+        "Id": 50320003,
         "Address": "0x001D54CC",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Skill Point: The Shaming of the Q - set a new record for qwark",
-        "Id": 50001639,
+        "Id": 50350003,
         "Address": "0x001D54CD",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "VR Gadget Training",
-        "Id": 50001640,
+        "Id": 50030018,
         "Address": "0x00142765",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "VR: Warm Up",
-        "Id": 50001641,
+        "Id": 50030019,
         "Address": "0x00142766",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "VR: Don't Look Down",
-        "Id": 50001642,
+        "Id": 50030020,
         "Address": "0x00142767",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "VR: Speed Round",
-        "Id": 50001643,
+        "Id": 50030021,
         "Address": "0x00142768",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "VR: Hot Stepper",
-        "Id": 50001644,
+        "Id": 50030022,
         "Address": "0x00142769",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "VR: 90 Second Slayer",
-        "Id": 50001645,
+        "Id": 50030023,
         "Address": "0x0014276A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "VR: The Shocker",
-        "Id": 50001646,
+        "Id": 50030024,
         "Address": "0x0014276B",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "VR: Wrench Beatdown",
-        "Id": 50001647,
+        "Id": 50030025,
         "Address": "0x0014276C",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "VR: Nerves of Titanium",
-        "Id": 50001648,
+        "Id": 50030026,
         "Address": "0x0014276D",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received Mini-Turret Glove",
-        "Id": 50001649,
+        "Id": 50080005,
         "Address": "0x00142CB5",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received Lava Gun",
-        "Id": 50001650,
+        "Id": 50080006,
         "Address": "0x00142CB1",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received Shield Charger",
-        "Id": 50001651,
+        "Id": 50080007,
         "Address": "0x00142CB6",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received Bouncer",
-        "Id": 50001652,
+        "Id": 50080008,
         "Address": "0x00142CB3",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
         "Name": "Received Plasma Coil",
-        "Id": 50001653,
+        "Id": 50080009,
         "Address": "0x00142CB0",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Master Plan in the Escape Pod",
-        "Id": 50001654,
+        "Name": "Escape Pod",
+        "Id": 50170002,
         "Checks": [
             {
                 "Address": "0x00142CC2",  # Master Plan in inventory
@@ -2288,14 +2288,14 @@ LOCATIONS = [
             },
             {
                 "Address": "0x001D545C",  # Current planet
-                "CheckValue": "17",       # Crash Site
+                "CheckValue": "17",  # Crash Site
                 "CheckType": 0
             }
         ]
     },
     {
         "Name": "Nanotech Level Up - 11",
-        "Id": 50001655,
+        "Id": 50250011,
         "Checks": [
             {
                 "Address": "0x001A4E18",

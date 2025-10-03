@@ -28,7 +28,7 @@ def create_regions(world: "RaC3World"):
     blackwater_city = create_region(world, "Blackwater City")
     obani_draco = create_region(world, "Obani Draco")
     holostar_studios = create_region(world, "Holostar Studios")
-    zeldrin_starport_first_half = create_region(world, "Zeldrin Starport Region 1")
+    zeldrin_starport = create_region(world, "Zeldrin Starport")
     metropolis_first_half = create_region(world, "Metropolis Region 1")
     crash_site = create_region(world, "Crash Site")
     aridia = create_region(world, "Aridia")
@@ -46,7 +46,7 @@ def create_regions(world: "RaC3World"):
     starship_phoenix.connect(blackwater_city, "Starship Phoenix -> Blackwater City")
     starship_phoenix.connect(obani_draco, "Starship Phoenix -> Obani Draco")
     starship_phoenix.connect(holostar_studios, "Starship Phoenix -> Holostar Studios")
-    starship_phoenix.connect(zeldrin_starport_first_half, "Starship Phoenix -> Zeldrin Starport")
+    starship_phoenix.connect(zeldrin_starport, "Starship Phoenix -> Zeldrin Starport")
     starship_phoenix.connect(metropolis_first_half, "Starship Phoenix -> Metropolis")
     starship_phoenix.connect(crash_site, "Starship Phoenix -> Crash Site")
     starship_phoenix.connect(aridia, "Starship Phoenix -> Aridia")
@@ -70,11 +70,6 @@ def create_regions(world: "RaC3World"):
     tyhrranosis_second_half = create_region(world, "Tyhrranosis Region 2")
     tyhrranosis.connect(tyhrranosis_second_half,
                         rule=lambda state: state.can_reach("Tyhrranosis", player=world.player)),
-
-    # You can do the Qwark half of Zeldrin Starport with no other requirements
-    zeldrin_starport_second_half = create_region(world, "Zeldrin Starport Region 2")
-    zeldrin_starport_first_half.connect(zeldrin_starport_second_half,
-                                        rule=lambda state: state.has("Hypershot", world.player)),
 
     # You can get Metal-Noids in metropolis with no other requirements
     metropolis_second_half = create_region(world, "Metropolis Region 2")

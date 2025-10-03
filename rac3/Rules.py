@@ -37,7 +37,7 @@ def set_rules_planets(world):
              lambda state: state.has("Infobot: Blackwater City", world.player))
 
     # Getting to Holostar Studios
-    add_rule(world.multiworld.get_entrance("Starship Phoenix -> Holostar Studios", world.player),
+    add_rule(world.multiworld.get_entrance("Starship Phoenix -> Holostar Studios", world.player),  # Softlock Prevention
              lambda state: state.has("Infobot: Holostar Studios", world.player)
                            and state.has("Hacker", world.player)
                            and state.has("Hypershot", world.player))
@@ -53,13 +53,11 @@ def set_rules_planets(world):
 
     # Getting to Metropolis
     add_rule(world.multiworld.get_entrance("Starship Phoenix -> Metropolis", world.player),
-             lambda state: state.has("Infobot: Metropolis", world.player)
-                           and state.has("Progressive Vidcomic", world.player, 4))
+             lambda state: state.has("Infobot: Metropolis", world.player))
 
     # Getting to Crash Site
     add_rule(world.multiworld.get_entrance("Starship Phoenix -> Crash Site", world.player),
-             lambda state: state.has("Infobot: Crash Site", world.player)
-                           and state.has("Hypershot", world.player))
+             lambda state: state.has("Infobot: Crash Site", world.player))
 
     # Getting to Aridia
     add_rule(world.multiworld.get_entrance("Starship Phoenix -> Aridia", world.player),
@@ -69,7 +67,8 @@ def set_rules_planets(world):
     add_rule(world.multiworld.get_entrance("Starship Phoenix -> Qwarks Hideout", world.player),
              lambda state: state.has("Infobot: Qwarks Hideout", world.player)
                            and state.has("Warp Pad", world.player)
-                           and state.has("Hypershot", world.player))
+                           and state.has("Hypershot", world.player)
+                           and state.has("Refractor", world.player))  # Softlock Prevention
 
     # Getting to Koros
     add_rule(world.multiworld.get_entrance("Starship Phoenix -> Koros", world.player),
@@ -78,7 +77,6 @@ def set_rules_planets(world):
     # Getting to Command Center
     add_rule(world.multiworld.get_entrance("Starship Phoenix -> Command Center", world.player),
              lambda state: state.has("Infobot: Command Center", world.player)
-                           and state.has("Hacker", world.player)
                            and state.has("Tyhrra-Guise", world.player)
                            and state.has("Hypershot", world.player)
                            and state.has("Gravity-Boots", world.player))
@@ -89,11 +87,9 @@ def set_rules_hard_location(world):
     # ----- Planet Florana -----# # Nothing
 
     # ----- Starship Phoenix -----#
-    # "Phoenix: Received Suck Cannon": LocData(50001009, "Starship Phoenix"),
-    # "Phoenix: Received Infector": LocData(50001010, "Starship Phoenix"),
-    add_rule(world.get_location("Phoenix: T-Bolt: Nerves of Titanium"),
-             lambda state: state.has("Shock Blaster", world.player)
-                           or state.has("Progressive Shock Blaster", world.player))
+    # "Phoenix: Received Suck Cannon": LocData(, "Starship Phoenix"),
+    # "Phoenix: Received Infector": LocData(, "Starship Phoenix"),
+    #  add_rule(world.get_location("Phoenix: T-Bolt: Nerves of Titanium"), None)
     add_rule(world.get_location("Phoenix: T-Bolt: VR Gadget Training"),
              lambda state: state.can_reach("Tyhrranosis", player=world.player)
                            and state.has("Hacker", player=world.player)
@@ -101,7 +97,7 @@ def set_rules_hard_location(world):
     add_rule(world.get_location("Phoenix: Received Adamantine Armor"),
              lambda state: state.can_reach("Tyhrranosis", player=world.player))
     add_rule(world.get_location("Phoenix: Received Aegis Mark V Armor"),
-             lambda state: state.can_reach("Zeldrin Starport Region 2", player=world.player))
+             lambda state: state.can_reach("Zeldrin Starport", player=world.player))
     add_rule(world.get_location("Phoenix: Received Infernox Armor"),
              lambda state: state.can_reach("Koros", player=world.player))
     add_rule(world.get_location("Phoenix: Received Hacker"),
@@ -112,14 +108,13 @@ def set_rules_hard_location(world):
              lambda state: state.can_reach("Tyhrranosis", player=world.player)
                            and state.has("Hacker", player=world.player)
                            and state.has("Hypershot", player=world.player))
-    # "Phoenix: Infobot: Marcadia": LocData(50001019, "Starship Phoenix"),
+    # "Phoenix: Infobot: Marcadia": LocData(, "Starship Phoenix"),
     add_rule(world.get_location("Phoenix: Infobot: Annihilation Nation"),
              lambda state: state.has("Progressive Vidcomic", world.player, 1))
     add_rule(world.get_location("Phoenix: Infobot: Aquatos"),
              lambda state: state.can_reach("Annihilation Nation", player=world.player))
     add_rule(world.get_location("Phoenix: Infobot: Tyhrranosis"),
-             lambda state: state.can_reach("Aquatos", player=world.player)
-                           and state.can_reach("Aquatos", player=world.player))
+             lambda state: state.can_reach("Aquatos", player=world.player))
     add_rule(world.get_location("Phoenix: Infobot: Daxx"),
              lambda state: state.can_reach("Tyhrranosis", player=world.player)
                            and state.has("Hacker", player=world.player)
@@ -127,24 +122,33 @@ def set_rules_hard_location(world):
     add_rule(world.get_location("Phoenix: Infobot: Crash Site"),
              lambda state: state.can_reach("Metropolis Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: Infobot: Qwarks Hideout"),
-             lambda state: state.has("Progressive Vidcomic", world.player, 5)
-                           and state.can_reach("Crash Site", player=world.player))
+             lambda state: state.has("Progressive Vidcomic", world.player, 5))
     add_rule(world.get_location("Phoenix: Infobot: Koros"),
              lambda state: state.can_reach("Qwarks Hideout", player=world.player))
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 4"),
-             lambda state: state.can_reach("Zeldrin Starport Region 2", player=world.player))
+             lambda state: state.can_reach("Zeldrin Starport", player=world.player))
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 5"),
              lambda state: state.can_reach("Crash Site", player=world.player))
     # Vidcomic clear locations
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 1 Clear"),
              lambda state: state.has("Progressive Vidcomic", world.player, 1))
+    add_rule(world.get_location("Phoenix: T-Bolt: Vidcomic 1 100%"),
+             lambda state: state.has("Progressive Vidcomic", world.player, 1))
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 2 Clear"),
+             lambda state: state.has("Progressive Vidcomic", world.player, 2))
+    add_rule(world.get_location("Phoenix: T-Bolt: Vidcomic 2 100%"),
              lambda state: state.has("Progressive Vidcomic", world.player, 2))
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 3 Clear"),
              lambda state: state.has("Progressive Vidcomic", world.player, 3))
+    add_rule(world.get_location("Phoenix: T-Bolt: Vidcomic 3 100%"),
+             lambda state: state.has("Progressive Vidcomic", world.player, 3))
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 4 Clear"),
              lambda state: state.has("Progressive Vidcomic", world.player, 4))
+    add_rule(world.get_location("Phoenix: T-Bolt: Vidcomic 4 100%"),
+             lambda state: state.has("Progressive Vidcomic", world.player, 4))
     add_rule(world.get_location("Phoenix: Qwark Vidcomic 5 Clear"),
+             lambda state: state.has("Progressive Vidcomic", world.player, 5))
+    add_rule(world.get_location("Phoenix: T-Bolt: Vidcomic 5 100%"),
              lambda state: state.has("Progressive Vidcomic", world.player, 5))
     # Skill Points
     add_rule(world.get_location("Phoenix: Skill Point: Turn Up The Heat!"),
@@ -162,9 +166,9 @@ def set_rules_hard_location(world):
     add_rule(world.get_location("Phoenix: Skill Point: The Shaming of the Q - set a new record for qwark"),
              lambda state: state.has("Progressive Vidcomic", world.player, 5)),
     # VR
-    add_rule(world.get_location("Phoenix: VR: The Shocker"),
-             lambda state: state.has("Shock Blaster", world.player)
-                           or state.has("Progressive Shock Blaster", world.player))
+    # add_rule(world.get_location("Phoenix: VR: The Shocker"),
+    #          lambda state: state.has("Shock Blaster", world.player)
+    #                        or state.has("Progressive Shock Blaster", world.player))
 
     # ----- Planet Marcadia -----#
     # "Marcadia: Received Spitting Hydra": LocData(50001030, "Marcadia Region 1"),
@@ -214,19 +218,30 @@ def set_rules_hard_location(world):
     # "Aquatos: Received Flux Rifle": LocData(50001090, "Aquatos"),
     # "Aquatos: T-Bolt: Under the Bridge": LocData(50001091, "Aquatos"),
     # "Aquatos: T-Bolt: Underwater Bolt": LocData(50001092, "Aquatos"),
+    # "Aquatos: Received Mini-Turret Glove"
+    # "Aquatos: Received Lava Gun"
+    add_rule(world.get_location("Aquatos: Received Shield Charger"),
+             lambda state: state.can_reach("Command Center", player=world.player))
+    add_rule(world.get_location("Aquatos: Received Bouncer"),
+             lambda state: state.can_reach("Qwarks Hideout", player=world.player))
+    add_rule(world.get_location("Aquatos: Received Plasma Coil"),
+             lambda state: state.can_reach("Koros", player=world.player))
+
+    # Sewers
+
+    add_rule(world.get_location("Aquatos: T-Bolt: Behind the Locked Gate"),
+             lambda state: state.has("Hacker", world.player))
     add_rule(world.get_location("Aquatos: T-Bolt: Top Left Bolt"),
              lambda state: state.has("Gravity-Boots", world.player))
     add_rule(world.get_location("Aquatos: T-Bolt: Swinging Bolt"),
              lambda state: state.has("Hypershot", world.player)
                            and state.has("Gravity-Boots", world.player))
-    add_rule(world.get_location("Aquatos: T-Bolt: Behind the Locked Gate"),
-             lambda state: state.has("Hacker", world.player))
-    add_rule(world.get_location("Aquatos: Skill Point: Hit the motherload"),
-             lambda state: state.has("Gravity-Boots", world.player))
     # "Aquatos: 1 Sewer Crystal Traded": LocData(50001096, "Aquatos"),
     # "Aquatos: 5 Sewer Crystals Traded": LocData(50001097, "Aquatos"),
     # "Aquatos: 10 Sewer Crystals Traded": LocData(50001098, "Aquatos"),
     # "Aquatos: 20 Sewer Crystals Traded": LocData(50001099, "Aquatos"),
+    add_rule(world.get_location("Aquatos: Skill Point: Hit the motherload"),
+             lambda state: state.has("Gravity-Boots", world.player))
 
     # ----- Planet Tyhrranosis -----#
     # "Tyhrranosis: Received Annihilator": LocData(50001300, "Tyhrranosis"),
@@ -239,7 +254,7 @@ def set_rules_hard_location(world):
     # "Tyhrranosis: T-Bolt: South East Cannon": LocData(50001302, "Tyhrranosis"),
 
     # ----- Planet Daxx -----#
-    add_rule(world.get_location("Daxx: Infiltrate the Weapons Facility"),
+    add_rule(world.get_location("Daxx: Infiltrate Weapons Facility"),
              lambda state: state.has("Hypershot", world.player)
                            and state.has("Hacker", world.player))
     # "Daxx: Received Charge Boots": LocData(50001322, "Daxx Region 1"),
@@ -266,6 +281,11 @@ def set_rules_hard_location(world):
     # ----- Obani Draco (lol) -----# # Nothing
 
     # ----- Zeldrin Starport -----# # Nothing
+    add_rule(world.get_location("Zeldrin Starport: Received Bolt Grabber V2"),
+             lambda state: state.has("Hypershot", world.player))
+    # "Zeldrin Starport: T-Bolt: Inside the Second Ship"
+    add_rule(world.get_location("Zeldrin Starport: T-Bolt: Atop the Twin Shooters"),
+             lambda state: state.has("Hypershot", world.player))
 
     # ----- Planet Metropolis -----#
     add_rule(world.get_location("Metropolis: T-Bolt: Across the Gap"),
@@ -281,12 +301,18 @@ def set_rules_hard_location(world):
                            or state.has("Progressive Suck Cannon", world.player)
                            or state.has("Disk-Blade Gun", world.player)
                            or state.has("Progressive Disk-Blade Gun", world.player))
+    # Skrunch Trophy
+    # "Metropolis: Metal-Noids"
+    # "Metropolis: T-Bolt: Right of the Balcony"
+    # Todo: Clunk Fight
 
     # ----- Planet Crash Site -----#
-    add_rule(world.get_location("Crash Site: T-Bolt: Turn Around"),
-             lambda state: state.has("Gravity-Boots", world.player))
+    # add_rule(world.get_location("Crash Site: T-Bolt: Turn Around"), None)
     add_rule(world.get_location("Crash Site: Received Nano-Pak"),
-             lambda state: state.has("Gravity-Boots", world.player))
+             lambda state: state.has("Gravity-Boots", world.player) and state.has("Hypershot", world.player))
+    # Escape Pod: None
+    add_rule(world.get_location("Crash Site: Infobot: Aridia"),
+             lambda state: state.has("Gravity-Boots", world.player) and state.has("Hypershot", world.player))
     add_rule(world.get_location("Crash Site: Skill Point: Suck it up!"),
              lambda state: state.has("Suck Cannon", world.player)
                            or state.has("Progressive Suck Cannon", world.player))
@@ -303,19 +329,27 @@ def set_rules_hard_location(world):
              lambda state: state.has("Refractor", world.player))
 
     # ----- Qwark's Hideout -----#
-    add_rule(world.get_location("Qwark's_Hideout: Received Gadgetron PDA"),
+    add_rule(world.get_location("Qwarks Hideout: Received Gadgetron PDA"),
              lambda state: state.has("Gravity-Boots", world.player))
-    add_rule(world.get_location("Qwark's_Hideout: T-Bolt: Glide from the Ramp"),
+    add_rule(world.get_location("Qwarks Hideout: T-Bolt: Glide from the Ramp"),
              lambda state: state.has("Gravity-Boots", world.player))
+    # add_rule(world.get_location("Qwarks Hideout: Skill Point: Break the Dan"),
+    #          lambda state: state.has("Warp pad", world.player) and state.has("Hypershot", world.player))
 
     # ----- Planet Koros -----#
-    add_rule(world.multiworld.get_location("Koros: Skill Point: You break it, you win it", world.player),
+    # Courtney Gears Trophy
+    # "Koros: T-Bolt: Behind the Metal Fence"
+    # "Koros: T-Bolt: Pair of Towers"
+    add_rule(world.get_location("Koros: Skill Point: You break it, you win it"),
              lambda state: state.has("Box Breaker", world.player))
 
     # ----- Planet Command Center -----#
-    add_rule(world.multiworld.get_location("Command Center: Skill Point: Spread Your Germs", world.player),
-             lambda state: state.has("Infector", world.player)
-                           or state.has("Progressive Infector", world.player))
+    add_rule(world.get_location("Command Center: Dr. Nefarious Defeated!"),
+             lambda state: state.has("Hacker", world.player) and state.has("Refractor", world.player))
+    add_rule(world.get_location("Command Center: Biobliterator Defeated!"),
+             lambda state: state.has("Hacker", world.player) and state.has("Refractor", world.player))
+    add_rule(world.get_location("Command Center: Skill Point: Spread Your Germs"),
+             lambda state: state.has("Infector", world.player) or state.has("Progressive Infector", world.player))
 
 
 def set_rules(world: "RaC3World"):
