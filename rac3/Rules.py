@@ -119,6 +119,8 @@ def set_rules_hard_location(world):
              lambda state: state.can_reach("Tyhrranosis", player=world.player)
                            and state.has("Hacker", player=world.player)
                            and state.has("Hypershot", player=world.player))
+    add_rule(world.get_location("Phoenix: Infobot: Metropolis"),
+             lambda state: state.has("Progressive Vidcomic", world.player, 4))
     add_rule(world.get_location("Phoenix: Infobot: Crash Site"),
              lambda state: state.can_reach("Metropolis Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: Infobot: Qwarks Hideout"),
@@ -153,6 +155,12 @@ def set_rules_hard_location(world):
     # Skill Points
     add_rule(world.get_location("Phoenix: Skill Point: Turn Up The Heat!"),
              lambda state: state.can_reach("Koros", player=world.player))
+    add_rule(world.get_location("Phoenix: Skill Point: Beat Helga's Best Time"),
+             lambda state: state.can_reach("Tyhrranosis", player=world.player)
+                           and state.has("Hacker", player=world.player)
+                           and state.has("Hypershot", player=world.player))
+    add_rule(world.get_location("Phoenix: Skill Point: Monkeying Around"),
+             lambda state: state.has("Progressive Vidcomic", world.player, 1))
     add_rule(world.get_location("Phoenix: Skill Point: Strive for Arcade Perfection"),
              lambda state: state.has("Progressive Vidcomic", world.player, 5))
     add_rule(world.get_location("Phoenix: Skill Point: Pirate booty - set a new record for qwark"),
@@ -166,9 +174,10 @@ def set_rules_hard_location(world):
     add_rule(world.get_location("Phoenix: Skill Point: The Shaming of the Q - set a new record for qwark"),
              lambda state: state.has("Progressive Vidcomic", world.player, 5)),
     # VR
-    # add_rule(world.get_location("Phoenix: VR: The Shocker"),
-    #          lambda state: state.has("Shock Blaster", world.player)
-    #                        or state.has("Progressive Shock Blaster", world.player))
+    add_rule(world.get_location("Phoenix: VR: VR Gadget Training"),
+             lambda state: state.can_reach("Tyhrranosis", player=world.player)
+                           and state.has("Hacker", player=world.player)
+                           and state.has("Hypershot", player=world.player))
 
     # ----- Planet Marcadia -----#
     # "Marcadia: Received Spitting Hydra": LocData(50001030, "Marcadia Region 1"),
@@ -311,8 +320,7 @@ def set_rules_hard_location(world):
     add_rule(world.get_location("Crash Site: Received Nano-Pak"),
              lambda state: state.has("Gravity-Boots", world.player) and state.has("Hypershot", world.player))
     # Escape Pod: None
-    add_rule(world.get_location("Crash Site: Infobot: Aridia"),
-             lambda state: state.has("Gravity-Boots", world.player) and state.has("Hypershot", world.player))
+    add_rule(world.get_location("Crash Site: Infobot: Aridia"), lambda state: state.has("Gravity-Boots", world.player))
     add_rule(world.get_location("Crash Site: Skill Point: Suck it up!"),
              lambda state: state.has("Suck Cannon", world.player)
                            or state.has("Progressive Suck Cannon", world.player))

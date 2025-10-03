@@ -412,13 +412,13 @@ class Rac3Interface(GameInterface):
             addr = self.address_convert(addr)
             slot_val = self._read8(addr)
             for weapon_name, weapon_data in ADDRESSES[self.current_game]["Weapons"].items():
-                if slot_val == weapon_data["id"] and self.UnlockWeapons[weapon_name][
-                    "status"] == 0:  # Not unlocked, but set case
+                if slot_val == weapon_data["id"] and self.UnlockWeapons[weapon_name]["status"] == 0:
+                    # Not unlocked, but set case
                     self._write8(addr, 0)
                     continue
             for gadget_name, gadget_data in ADDRESSES[self.current_game]["Gadgets"].items():
-                if slot_val == gadget_data["id"] and self.UnlockGadgets[gadget_name][
-                    "status"] == 0:  # Not unlocked, but set case
+                if slot_val == gadget_data["id"] and self.UnlockGadgets[gadget_name]["status"] == 0:
+                    # Not unlocked, but set case
                     self._write8(addr, 0)
                     continue
 
@@ -438,18 +438,39 @@ class Rac3Interface(GameInterface):
             if correct_version != 0:
                 self.weapon_level_up(weapon_name, version=correct_version)
 
+    # Equip the most recently collected weapon/gadget, update recent uses
+    def update_equip(self, type, name):
+        if ADDRESSES[self.current_game][type][name]["id"]:
+            self._write8(ADDRESSES[self.current_game]["LastUsed"][2],
+                         self._read8(ADDRESSES[self.current_game]["LastUsed"][1]))
+            self._write8(ADDRESSES[self.current_game]["LastUsed"][1],
+                         self._read8(ADDRESSES[self.current_game]["LastUsed"][0]))
+            self._write8(ADDRESSES[self.current_game]["LastUsed"][0], ADDRESSES[self.current_game][type][name]["id"])
+            self._write8(ADDRESSES[self.current_game]["HoldingWeapon"], ADDRESSES[self.current_game][type][name]["id"])
+            for number in range(len(ADDRESSES[self.current_game]["QuickSelectSlots"])):
+                if not self._read8(ADDRESSES[self.current_game]["QuickSelectSlots"][number]):
+                    self._write8(ADDRESSES[self.current_game]["QuickSelectSlots"][number],
+                                 ADDRESSES[self.current_game][type][name]["id"])
+                    break
+            self.verify_quick_select_and_last_used()
+
     def received_weapon(self, ap_code):
         for name, item_data in Items.weapon_items.items():
             if item_data.ap_code == ap_code:
                 self.UnlockWeapons[name]["status"] = 1
+                self._write8(ADDRESSES[self.current_game]["Weapons"][name]["ammoAddress"],
+                             ADDRESSES[self.current_game]["Weapons"][name]["lv1Ammo"])
+                self.update_equip("Weapons", name)
 
     def received_weapon_progressive(self, ap_code):
-        weapon_name = ""
         for name, data in Items.progressive_weapons.items():
             if data.ap_code == ap_code:
                 weapon_name = name.replace("Progressive ", "")
-                break
-        self.UnlockWeapons[weapon_name]["status"] += 1
+                self.UnlockWeapons[weapon_name]["status"] += 1
+                if self.UnlockWeapons[weapon_name]["status"] == 1:
+                    self._write8(ADDRESSES[self.current_game]["Weapons"][weapon_name]["ammoAddress"],
+                                 ADDRESSES[self.current_game]["Weapons"][weapon_name]["lv1Ammo"])
+                    self.update_equip("Weapons", weapon_name)
 
     def weapon_level_up(self, weapon_name, version=0):
         target_weapon_data = [data for data in LOCATIONS if f"{weapon_name}: V" in data["Name"]]
@@ -469,6 +490,7 @@ class Rac3Interface(GameInterface):
         for name, item_data in Items.gadget_items.items():
             if item_data.ap_code == ap_code:
                 self.UnlockGadgets[name]["status"] = 1
+                self.update_equip("Gadgets", name)
 
     def received_planet(self, ap_code):
         for name, item_data in Items.post_planets.items():
