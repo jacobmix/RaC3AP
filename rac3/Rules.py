@@ -160,7 +160,7 @@ def set_rules_hard_location(world):
                            and state.has("Hacker", player=world.player)
                            and state.has("Hypershot", player=world.player))
     add_rule(world.get_location("Phoenix: Skill Point: Monkeying Around"),
-             lambda state: state.can_reach("Annihilation Nation", world.player))
+             lambda state: state.can_reach("Annihilation Nation", player=world.player))
     add_rule(world.get_location("Phoenix: Skill Point: Strive for Arcade Perfection"),
              lambda state: state.has("Progressive Vidcomic", world.player, 5))
     add_rule(world.get_location("Phoenix: Skill Point: Pirate booty - set a new record for qwark"),
