@@ -190,7 +190,7 @@ ADDRESSES = {
             "Obani Gemini: ???": 0x00142701,
             "Save Blackwater City": 0x00142704,
             "Blackwater: Destroy the Base": 0x00142705,
-            "Metropolis: Defeat Clunk": 0x00142708,
+            "Metropolis: Defeat Klunk": 0x00142708,
             "Obani Draco: Defeat Courtney Gears": 0x0014270D,
             "Defeat Dr Nefarious": 0x0014270F,
             "Destroy the Biobliterator": 0x00142710,  # Doesn't get written to

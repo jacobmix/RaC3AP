@@ -308,7 +308,7 @@ def set_rules_hard_location(world):
     # Skrunch Trophy
     # "Metropolis: Metal-Noids"
     # "Metropolis: T-Bolt: Before Grav-Wall"
-    # Clunk Fight
+    # Klunk Fight
 
     # ----- Planet Crash Site -----#
     # add_rule(world.get_location("Crash Site: T-Bolt: Turn Around"), None)

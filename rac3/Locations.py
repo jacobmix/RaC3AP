@@ -229,7 +229,7 @@ rac3_locations = {
     "Metropolis: Skill Point: 2002 was a good year in the city": LocData(50160001, "Metropolis Region 1"),
     "Metropolis: Metal-Noids": LocData(50160002, "Metropolis Region 1"),
     "Metropolis: T-Bolt: Before Grav-wall": LocData(50160003, "Metropolis Region 1"),
-    "Metropolis: Defeat Clunk": LocData(50160004, "Metropolis Region 2"),  # Infobot: Crash Site
+    "Metropolis: Defeat Klunk": LocData(50160004, "Metropolis Region 2"),  # Infobot: Crash Site
     "Metropolis: Trophy: 2nd Building Window": LocData(50160005, "Metropolis Region 1"),  # Skrunch Trophy
     # Missions
     "Metropolis: T-Bolt: Tall Tower (Hovership)": LocData(50260000, "Metropolis Region 2"),
