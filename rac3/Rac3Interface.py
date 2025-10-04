@@ -383,7 +383,7 @@ class Rac3Interface(GameInterface):
         for name in range(5):
             if name + 1 > unlock_status:
                 break
-            addr = ADDRESSES[self.current_game]["VidComics"][f'Qwark Vidcomic {name + 1}']["unlockAddress"]
+            addr = ADDRESSES[self.current_game]["VidComics"][f'Qwark VidComic {name + 1}']["unlockAddress"]
             addr = self.address_convert(addr)
             if self._read8(addr) == 0 and name + 1 == unlock_status:
                 unlock_delay_count = 1
@@ -461,6 +461,7 @@ class Rac3Interface(GameInterface):
                 self._write8(ADDRESSES[self.current_game]["Weapons"][name]["ammoAddress"],
                              ADDRESSES[self.current_game]["Weapons"][name]["lv1Ammo"])
                 self.update_equip("Weapons", name)
+                return
 
     def received_weapon_progressive(self, ap_code):
         for name, data in Items.progressive_weapons.items():
@@ -471,6 +472,7 @@ class Rac3Interface(GameInterface):
                     self._write8(ADDRESSES[self.current_game]["Weapons"][weapon_name]["ammoAddress"],
                                  ADDRESSES[self.current_game]["Weapons"][weapon_name]["lv1Ammo"])
                     self.update_equip("Weapons", weapon_name)
+                return
 
     def weapon_level_up(self, weapon_name, version=0):
         target_weapon_data = [data for data in LOCATIONS if f"{weapon_name}: V" in data["Name"]]

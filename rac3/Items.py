@@ -3,7 +3,7 @@ from typing import Dict, List, TYPE_CHECKING
 from BaseClasses import Item, ItemClassification
 
 from .Locations import get_total_locations
-from .Types import ItemData, RaC3Item
+from .Types import ItemData, GameItem
 
 if TYPE_CHECKING:
     from . import RaC3World
@@ -13,7 +13,7 @@ def create_itempool(world: "RaC3World") -> List[Item]:
     itempool: List[Item] = []
     options = world.options
     junk_dict = junk_items
-    if not options.EnableWeaponLevelAsItem.value:
+    if not options.enable_weapon_level_as_item.value:
         junk_dict.update(junk_weapon_exp)
 
     for name in item_table.keys():
@@ -28,7 +28,7 @@ def create_itempool(world: "RaC3World") -> List[Item]:
                 item_amount -= 1  # remove one from the pool as it has already been placed
 
         # WeaponLevelAsItem option
-        if not options.EnableWeaponLevelAsItem.value:
+        if not options.enable_weapon_level_as_item.value:
             if name in progressive_weapons.keys():
                 continue
         else:  # options.EnableWeaponLevelAsItem.value:
@@ -37,7 +37,7 @@ def create_itempool(world: "RaC3World") -> List[Item]:
 
         # ExtraArmorUpgrade option
         if name == "Progressive Armor":
-            item_amount += options.ExtraArmorUpgrade.value
+            item_amount += options.extra_armor_upgrade.value
 
         itempool += create_multiple_items(world, name, item_amount, item_type)
 
@@ -54,14 +54,14 @@ def create_multiple_items(world: "RaC3World", name: str, count: int = 1,
     itemlist: List[Item] = []
 
     for i in range(count):
-        itemlist += [RaC3Item(name, item_type, data.ap_code, world.player)]
+        itemlist += [GameItem(name, item_type, data.ap_code, world.player)]
 
     return itemlist
 
 
 def create_item(world: "RaC3World", name: str) -> Item:
     data = item_table[name]
-    return RaC3Item(name, data.classification, data.ap_code, world.player)
+    return GameItem(name, data.classification, data.ap_code, world.player)
 
 
 def create_junk_items(world: "RaC3World", count: int, junk_dict: Dict[str, object]) -> List[Item]:
@@ -73,49 +73,49 @@ def create_junk_items(world: "RaC3World", count: int, junk_dict: Dict[str, objec
 
 
 weapon_items = {
-    "Shock Blaster": ItemData(50000000, ItemClassification.progression, 1),
-    "Nitro Launcher": ItemData(50000001, ItemClassification.progression, 1),
-    "N60 Storm": ItemData(50000002, ItemClassification.progression, 1),
+    "Shock Blaster": ItemData(50000000, ItemClassification.useful, 1),
+    "Nitro Launcher": ItemData(50000001, ItemClassification.useful, 1),
+    "N60 Storm": ItemData(50000002, ItemClassification.useful, 1),
     "Plasma Whip": ItemData(50000003, ItemClassification.progression, 1),
     "Infector": ItemData(50000004, ItemClassification.progression, 1),
     "Suck Cannon": ItemData(50000005, ItemClassification.progression, 1),
     "Spitting Hydra": ItemData(50000006, ItemClassification.progression, 1),
-    "Agents of Doom": ItemData(50000007, ItemClassification.progression, 1),
+    "Agents of Doom": ItemData(50000007, ItemClassification.useful, 1),
     "Flux Rifle": ItemData(50000008, ItemClassification.progression, 1),
     "Annihilator": ItemData(50000009, ItemClassification.progression, 1),
-    "Holo-Shield Glove": ItemData(50000010, ItemClassification.progression, 1),
+    "Holo-Shield Glove": ItemData(50000010, ItemClassification.useful, 1),
     "Disk-Blade Gun": ItemData(50000011, ItemClassification.progression, 1),
     "Rift Inducer": ItemData(50000012, ItemClassification.progression, 1),
     "Qwack-O-Ray": ItemData(50000013, ItemClassification.progression, 1),
     "RY3N0": ItemData(50000014, ItemClassification.progression, 1),
-    "Mini-Turret Glove": ItemData(50000015, ItemClassification.progression, 1),
-    "Lava Gun": ItemData(50000016, ItemClassification.progression, 1),
-    "Shield Charger": ItemData(50000017, ItemClassification.progression, 1),
-    "Bouncer": ItemData(50000018, ItemClassification.progression, 1),
-    "Plasma Coil": ItemData(50000019, ItemClassification.progression, 1)
+    "Mini-Turret Glove": ItemData(50000015, ItemClassification.useful, 1),
+    "Lava Gun": ItemData(50000016, ItemClassification.useful, 1),
+    "Shield Charger": ItemData(50000017, ItemClassification.useful, 1),
+    "Bouncer": ItemData(50000018, ItemClassification.useful, 1),
+    "Plasma Coil": ItemData(50000019, ItemClassification.useful, 1)
 }
 
 progressive_weapons = {
-    "Progressive Shock Blaster": ItemData(50000020, ItemClassification.progression, 5),
-    "Progressive Nitro Launcher": ItemData(50000021, ItemClassification.progression, 5),
-    "Progressive N60 Storm": ItemData(50000022, ItemClassification.progression, 5),
+    "Progressive Shock Blaster": ItemData(50000020, ItemClassification.useful, 5),
+    "Progressive Nitro Launcher": ItemData(50000021, ItemClassification.useful, 5),
+    "Progressive N60 Storm": ItemData(50000022, ItemClassification.useful, 5),
     "Progressive Plasma Whip": ItemData(50000023, ItemClassification.progression, 5),
     "Progressive Infector": ItemData(50000024, ItemClassification.progression, 5),
     "Progressive Suck Cannon": ItemData(50000025, ItemClassification.progression, 5),
     "Progressive Spitting Hydra": ItemData(50000026, ItemClassification.progression, 5),
-    "Progressive Agents of Doom": ItemData(50000027, ItemClassification.progression, 5),
+    "Progressive Agents of Doom": ItemData(50000027, ItemClassification.useful, 5),
     "Progressive Flux Rifle": ItemData(50000028, ItemClassification.progression, 5),
     "Progressive Annihilator": ItemData(50000029, ItemClassification.progression, 5),
-    "Progressive Holo-Shield Glove": ItemData(50000030, ItemClassification.progression, 5),
+    "Progressive Holo-Shield Glove": ItemData(50000030, ItemClassification.useful, 5),
     "Progressive Disk-Blade Gun": ItemData(50000031, ItemClassification.progression, 5),
     "Progressive Rift Inducer": ItemData(50000032, ItemClassification.progression, 5),
     "Progressive Qwack-O-Ray": ItemData(50000033, ItemClassification.progression, 5),
     "Progressive RY3N0": ItemData(50000034, ItemClassification.progression, 5),
-    "Progressive Mini-Turret Glove": ItemData(50000035, ItemClassification.progression, 5),
-    "Progressive Lava Gun": ItemData(50000036, ItemClassification.progression, 5),
-    "Progressive Shield Charger": ItemData(50000037, ItemClassification.progression, 5),
-    "Progressive Bouncer": ItemData(50000038, ItemClassification.progression, 5),
-    "Progressive Plasma Coil": ItemData(50000039, ItemClassification.progression, 5)
+    "Progressive Mini-Turret Glove": ItemData(50000035, ItemClassification.useful, 5),
+    "Progressive Lava Gun": ItemData(50000036, ItemClassification.useful, 5),
+    "Progressive Shield Charger": ItemData(50000037, ItemClassification.useful, 5),
+    "Progressive Bouncer": ItemData(50000038, ItemClassification.useful, 5),
+    "Progressive Plasma Coil": ItemData(50000039, ItemClassification.useful, 5)
 }
 gadget_items = {
     "Hacker": ItemData(50000040, ItemClassification.progression, 1),
@@ -129,35 +129,36 @@ gadget_items = {
     "Warp Pad": ItemData(50000048, ItemClassification.progression, 1),
     "Gadgetron PDA": ItemData(50000049, ItemClassification.useful, 1),
     "Charge-Boots": ItemData(50000050, ItemClassification.progression, 1),
-    "Box Breaker": ItemData(50000051, ItemClassification.progression, 1)
+    "Box Breaker": ItemData(50000051, ItemClassification.progression, 1),
+    "Master Plan": ItemData(50000052, ItemClassification.progression, 1)
 }
 
 post_planets = {
-    "Infobot: Florana": ItemData(50000052, ItemClassification.progression, 1),
-    "Infobot: Starship Phoenix": ItemData(50000053, ItemClassification.progression, 1),
-    "Infobot: Marcadia": ItemData(50000054, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 1
-    "Infobot: Annihilation Nation": ItemData(50000055, ItemClassification.progression, 1),
-    # Post Starship Phoenix Visit 2 + Qwark Vidcomic 1
-    "Infobot: Aquatos": ItemData(50000056, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 3
-    "Infobot: Tyhrranosis": ItemData(50000057, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 4
-    "Infobot: Daxx": ItemData(50000058, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 5
-    "Infobot: Obani Gemini": ItemData(50000059, ItemClassification.progression, 1),  # Post Daxx
-    "Infobot: Blackwater City": ItemData(50000060, ItemClassification.progression, 1),  # Post Obani Gemini
-    "Infobot: Holostar Studios": ItemData(50000061, ItemClassification.progression, 1),
+    "Infobot: Florana": ItemData(50000053, ItemClassification.progression, 1),
+    "Infobot: Starship Phoenix": ItemData(50000054, ItemClassification.progression, 1),
+    "Infobot: Marcadia": ItemData(50000055, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 1
+    "Infobot: Annihilation Nation": ItemData(50000056, ItemClassification.progression, 1),
+    # Post Starship Phoenix Visit 2 + Qwark VidComic 1
+    "Infobot: Aquatos": ItemData(50000057, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 3
+    "Infobot: Tyhrranosis": ItemData(50000058, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 4
+    "Infobot: Daxx": ItemData(50000059, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 5
+    "Infobot: Obani Gemini": ItemData(50000060, ItemClassification.progression, 1),  # Post Daxx
+    "Infobot: Blackwater City": ItemData(50000061, ItemClassification.progression, 1),  # Post Obani Gemini
+    "Infobot: Holostar Studios": ItemData(50000062, ItemClassification.progression, 1),
     # Post Blackwater City + Annihilation Nation Challenges
-    "Infobot: Obani Draco": ItemData(50000062, ItemClassification.progression, 1),  # Post Holostar Studios
-    "Infobot: Zeldrin Starport": ItemData(50000063, ItemClassification.progression, 1),  # Post Obani Draco
-    "Infobot: Metropolis": ItemData(50000064, ItemClassification.progression, 1),
-    # Post Zeldrin Starport + Qwark Vidcomic 4
-    "Infobot: Crash Site": ItemData(50000065, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 7
-    "Infobot: Aridia": ItemData(50000066, ItemClassification.progression, 1),  # Post Crash Site
-    "Infobot: Qwarks Hideout": ItemData(50000067, ItemClassification.progression, 1),
-    # Post Starship Phoenix Visit 8 + Qwark Vidcomic 5
-    "Infobot: Koros": ItemData(50000068, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 9
-    "Infobot: Command Center": ItemData(50000069, ItemClassification.progression, 1),  # Post-Koros
+    "Infobot: Obani Draco": ItemData(50000063, ItemClassification.progression, 1),  # Post Holostar Studios
+    "Infobot: Zeldrin Starport": ItemData(50000064, ItemClassification.progression, 1),  # Post Obani Draco
+    "Infobot: Metropolis": ItemData(50000065, ItemClassification.progression, 1),
+    # Post Zeldrin Starport + Qwark VidComic 4
+    "Infobot: Crash Site": ItemData(50000066, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 7
+    "Infobot: Aridia": ItemData(50000067, ItemClassification.progression, 1),  # Post Crash Site
+    "Infobot: Qwarks Hideout": ItemData(50000068, ItemClassification.progression, 1),
+    # Post Starship Phoenix Visit 8 + Qwark VidComic 5
+    "Infobot: Koros": ItemData(50000069, ItemClassification.progression, 1),  # Post Starship Phoenix Visit 9
+    "Infobot: Command Center": ItemData(50000070, ItemClassification.progression, 1),  # Post-Koros
 }
 progressive_vidcomics = {
-    "Progressive Vidcomic": ItemData(50000075, ItemClassification.progression, 5),
+    "Progressive VidComic": ItemData(50000075, ItemClassification.progression, 5),
 }
 
 progressive_armor = {
@@ -223,7 +224,7 @@ def starting_weapons(world, weapon_dict: dict[str, int]) -> list[str]:
         count = weapon_dict[name]
         if count == 0:
             continue
-        if world.options.EnableWeaponLevelAsItem.value:
+        if world.options.enable_weapon_level_as_item.value:
             for i in range(count):
                 weapon_list.append(f"Progressive {name}")
         else:

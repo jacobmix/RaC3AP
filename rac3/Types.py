@@ -3,11 +3,11 @@ from typing import NamedTuple, Optional
 from BaseClasses import Location, Item, ItemClassification
 
 
-class RaC3Location(Location):
+class GameLocation(Location):
     game = "Ratchet and Clank 3 Up your Arsenal"
 
 
-class RaC3Item(Item):
+class GameItem(Item):
     game = "Ratchet and Clank 3 Up your Arsenal"
 
 

@@ -53,13 +53,14 @@ ADDRESSES = {
             "Warp Pad": {"unlockAddress": 0x00142CBF, "id": 31, },
             "Gadgetron PDA": {"unlockAddress": 0x00142CC3, "id": 35, },
             "Charge-Boots": {"unlockAddress": 0x00142CBD, "id": 0, },
+            "Master Plan": {"unlockAddress": 0x00142CC2, "id": 0, },
         },
         "VidComics": {
-            "Qwark Vidcomic 1": {"unlockAddress": 0x001D554F},
-            "Qwark Vidcomic 2": {"unlockAddress": 0x001D5551},
-            "Qwark Vidcomic 3": {"unlockAddress": 0x001D5552},
-            "Qwark Vidcomic 4": {"unlockAddress": 0x001D5550},
-            "Qwark Vidcomic 5": {"unlockAddress": 0x001D5553},
+            "Qwark VidComic 1": {"unlockAddress": 0x001D554F},
+            "Qwark VidComic 2": {"unlockAddress": 0x001D5551},
+            "Qwark VidComic 3": {"unlockAddress": 0x001D5552},
+            "Qwark VidComic 4": {"unlockAddress": 0x001D5550},
+            "Qwark VidComic 5": {"unlockAddress": 0x001D5553},
         },
         "PlanetSlots": [
             0x00143050, 0x00143054, 0x00143058, 0x0014305C,
@@ -97,14 +98,14 @@ ADDRESSES = {
             # "Metropolis Arena": 26,
             # "Aquatos Base": 27,
             # "Aquatos Sewers": 28,
-            # "Tyhrranosis: Arena": 29,
-            # "Qwark Vidcomic Unused 1": 30
-            # "Qwark Vidcomic 1": 31
-            # "Qwark Vidcomic 4": 32
-            # "Qwark Vidcomic 2": 33
-            # "Qwark Vidcomic 3": 34
-            # "Qwark Vidcomic 5": 35
-            # "Qwark Vidcomic Unused 2": 36
+            # "Tyhrranosis: Mission": 29,
+            # "Qwark VidComic Unused 1": 30
+            # "Qwark VidComic 1": 31
+            # "Qwark VidComic 4": 32
+            # "Qwark VidComic 2": 33
+            # "Qwark VidComic 3": 34
+            # "Qwark VidComic 5": 35
+            # "Qwark VidComic Unused 2": 36
             # 40-55 Multiplayer maps
         },
         "QuickSelectSlots": [
@@ -125,6 +126,7 @@ ADDRESSES = {
         "JackpotActive": 0x001A74A8,
         "JackpotTimer": 0x001A4E10,
         "InfernoTimer": 0x001A4E14,
+        "Challenge Mode Count": 0x00142692,
         "NanotechExp": 0x00142694,
         "CurrentHealth": 0x001A7430,
         "MaxHealth": 0x001A7438,
@@ -166,10 +168,38 @@ ADDRESSES = {
         "Missions": {
             "First Ranger gives weapon": 0x001426E0,
             "Second Ranger gives weapon": 0x001426E1,
+            "Zeldrin starport: Find Nefarious": 0x001426E2,
             "Save Veldin": 0x001426E3,
+            "Veldin: Eliminate the Enemy Forces": 0x001426E4,
+            "Florana: Find the mysterious man": 0x001426E5,
+            "Florana: Walk the path of death!": 0x001426E6,
             "Defeat Qwark": 0x001426E7,
             "Take Qwark to Cage": 0x001426E8,
-            "Meet Sasha bridge": 0x001426E9
+            "Meet Sasha bridge": 0x001426E9,
+            "Meet Al on Marcadia": 0x001426EA,
+            "Play VidComic1": 0x001426EB,
+            "Marcadia: Get to the Palace": 0x001426EF,
+            "Marcadia: Repair the LDS": 0x001426F1,
+            "Marcadia: Secure the Area": 0x001426F2,
+            "Annihilation Nation: Return": 0x001426F3,
+            "Phoenix Rescue": 0x001426F4,
+            "Annihilation Nation: Grand Prize Bout": 0x001426F5,
+            "Return to Phoenix after Annihilation Nation 2": 0x001426F6,
+            "Aquatos: Infiltrate the Base": 0x001426F7,
+            "Tyhrranosis: Destroy the Plasma Cannon Turrets": 0x001426F9,
+            "Obani Gemini: ???": 0x00142701,
+            "Save Blackwater City": 0x00142704,
+            "Blackwater: Destroy the Base": 0x00142705,
+            "Metropolis: Defeat Clunk": 0x00142708,
+            "Obani Draco: Defeat Courtney Gears": 0x0014270D,
+            "Defeat Dr Nefarious": 0x0014270F,
+            "Destroy the Biobliterator": 0x00142710,  # Doesn't get written to
+            "Holostar: Film Episode": 0x00142712,
+            "Holostar: Return to your ship": 0x00142713,
+            "Metropolis: Complete Ranger Missions": 0x00142714,
+            "Aquatos: Gather Sewer Crystals": 0x00142715,
+            "Tyhrranosis: Destroy the Encampment": 0x00142717,
+            "Tyhrranosis: Destroy the Momma Tyhrranoid": 0x0014271D,
         },
         "Enemies": {
             "First of two noids - Mylon Landing Point": 0x001C169E,
@@ -340,14 +370,14 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Infobot: Annihilation Nation",
+        "Name": "Play VidComic1",
         "Id": 50030008,
         "Address": "0x001426EB",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Infobot: Aquatos",
+        "Name": "Aquatos Mission Briefing",
         "Id": 50030009,
         # " Address": 0x001426F6, #  Correct Infobot address
         "Address": "0x0014276F",  # Same as Tyhrra-Guise Getting event. This event behinds Phoenix Ship event.
@@ -355,7 +385,7 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Infobot: Tyhrranosis",
+        "Name": "Infiltrate Aquatos Base",
         "Id": 50030010,
         # "Address": "0x00142C1B",
         "Address": "0x0014275E",  # Same as 1 Sewer Crystal Traded
@@ -363,7 +393,7 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Infobot: Daxx",
+        "Name": "VR Gadget Training",
         "Id": 50030011,
         #  "Address": "0x00142765",
         "Address": "0x00142765",  # Same as T-Bolt: VR training
@@ -372,28 +402,28 @@ LOCATIONS = [
     },
     {
         "Name": "Infobot: Crash Site",
-        "Id": 50030013,
+        "Id": 50160004,
         #  "Address": "0x001D5541",
         "Address": "0x00142708",  # Same as defeat Giant Cronk
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Infobot: Qwarks Hideout",
+        "Name": "Learn Qwarks Hideout from VidComic 5",
         "Id": 50030014,
         "Address": "0x00142734",
         "CheckType": 0,
         "AddressBit": 5  # 3E 00X0_0000
     },
     {
-        "Name": "Qwark Vidcomic 4",
-        "Id": 50030028,
-        "Address": "0x001D5550",
+        "Name": "Escape the Leviathan",
+        "Id": 50100003,
+        "Address": "0x001426E2",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Qwark Vidcomic 5",
+        "Name": "Gave Al the Master Plan",
         "Id": 50030029,
         "Address": "0x001D5553",
         "CheckType": 0,
@@ -443,9 +473,9 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Qwark Vidcomic 1",
+        "Name": "Meet Al",
         "Id": 50040005,
-        "Address": "0x001D554F",
+        "Address": "0x001426ea",
         "CheckType": 0,
         "AddressBit": 0
     },
@@ -694,20 +724,20 @@ LOCATIONS = [
         "CheckType": 0,
         "AddressBit": 0
     },
-    {
-        "Name": "Qwark Vidcomic 2",
-        "Id": 50070035,
-        "Address": "0x001D5551",
-        "CheckType": 0,
-        "AddressBit": 0
-    },
-    {
-        "Name": "Qwark Vidcomic 3",
-        "Id": 50070036,
-        "Address": "0x001D5552",
-        "CheckType": 0,
-        "AddressBit": 0
-    },
+    # {
+    #     "Name": "Qwark VidComic 2",
+    #     "Id": 50070035,
+    #     "Address": "0x001D5551",
+    #     "CheckType": 0,
+    #     "AddressBit": 0
+    # },
+    # {
+    #     "Name": "Qwark VidComic 3",
+    #     "Id": 50070036,
+    #     "Address": "0x001D5552",
+    #     "CheckType": 0,
+    #     "AddressBit": 0
+    # },
     {
         "Name": "Received Flux Rifle",
         "Id": 50080000,
@@ -840,7 +870,7 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Post-Daxx",
+        "Name": "Gunship",
         "Id": 50050004,
         # "Address": "0x00143B39", #  ??
         "Address": "0x0014275B",  # Daxx Courtney Room
@@ -927,7 +957,7 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Infobot: Zeldrin Starport",
+        "Name": "Defeat Courtney Gears",
         "Id": 50210000,
         "Address": "0x0014270D",
         "CheckType": 0,
@@ -970,7 +1000,7 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Right of the Balcony",
+        "Name": "T-Bolt: Before Grav-wall",
         "Id": 50160003,
         "Address": "0x001BBB9A",
         "CheckType": 0,
@@ -1900,35 +1930,35 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Qwark Vidcomic 1 Clear",
+        "Name": "Qwark VidComic 1 Clear",
         "Id": 50310000,
         "Address": "0x00142734",
         "CheckType": 0,
         "AddressBit": 1
     },
     {
-        "Name": "Qwark Vidcomic 2 Clear",
+        "Name": "Qwark VidComic 2 Clear",
         "Id": 50330000,
         "Address": "0x00142734",
         "CheckType": 0,
         "AddressBit": 3
     },
     {
-        "Name": "Qwark Vidcomic 3 Clear",
+        "Name": "Qwark VidComic 3 Clear",
         "Id": 50340000,
         "Address": "0x00142734",
         "CheckType": 0,
         "AddressBit": 2
     },
     {
-        "Name": "Qwark Vidcomic 4 Clear",
+        "Name": "Qwark VidComic 4 Clear",
         "Id": 50320000,
         "Address": "0x00142734",
         "CheckType": 0,
         "AddressBit": 4
     },
     {
-        "Name": "Qwark Vidcomic 5 Clear",
+        "Name": "Qwark VidComic 5 Clear",
         "Id": 50350000,
         "Address": "0x00142734",
         "CheckType": 0,
@@ -1991,7 +2021,7 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Beat Helga's best time",
+        "Name": "Skill Point: Beat Helga's best VR time",
         "Id": 50030032,
         "Address": "0x001D54B3",
         "CheckType": 0,
@@ -2293,6 +2323,77 @@ LOCATIONS = [
             }
         ]
     },
+    {
+        "Name": "Ratchet trophy",
+        "Id": 50020006,
+        "Address": "0x00142790",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Clank trophy",
+        "Id": 50130006,
+        "Address": "0x00142791",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Qwark trophy",
+        "Id": 50190003,
+        "Address": "0x00142792",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Dr Nefarious trophy",
+        "Id": 50170006,
+        "Address": "0x00142793",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Skrunch trophy",
+        "Id": 50160005,
+        "Address": "0x00142794",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Lawrence trophy",
+        "Id": 50220001,
+        "Address": "0x00142795",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Plumber trophy",
+        "Id": 50050006,
+        "Address": "0x00142796",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Courtney Gears trophy",
+        "Id": 50140004,
+        "Address": "0x00142797",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "AL trophy",
+        "Id": 50090006,
+        "Address": "0x00142798",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    # Todo: Long term trophies
+    # Titanium collector trophy 0x00142799
+    # Skill master trophy 0x0014279a
+    # Nano Finder trophy 0x0014279b
+    # Annihilation Nation Champion trophy 0x0014279c
+    # Friend of the Rangers trophy 0x0014279d
+    # Omega Arsenal trophy 0x0014279e
+    # Todo: Nanotech levels
     {
         "Name": "Nanotech Level Up - 11",
         "Id": 50250011,

@@ -1,7 +1,7 @@
 from typing import List, Dict, Any
 from dataclasses import dataclass
 from worlds.AutoWorld import PerGameCommonOptions
-from Options import Choice, OptionGroup, Toggle, DefaultOnToggle, ItemDict
+from Options import Choice, OptionGroup, Toggle, DefaultOnToggle, ItemDict, StartInventoryPool
 
 from .Items import default_starting_weapons
 
@@ -70,17 +70,20 @@ class ExtraArmorUpgrade(Choice):
 
 @dataclass
 class RaC3Options(PerGameCommonOptions):
-    StartingWeapons: StartingWeapons
-    BoltAndXPMultiplier: BoltAndXPMultiplier
-    EnableWeaponLevelAsItem: EnableWeaponLevelAsItem
-    ExtraArmorUpgrade: ExtraArmorUpgrade
+    start_inventory_from_pool: StartInventoryPool
+    starting_weapons: StartingWeapons
+    bolt_and_xp_multiplier: BoltAndXPMultiplier
+    enable_weapon_level_as_item: EnableWeaponLevelAsItem
+    extra_armor_upgrade: ExtraArmorUpgrade
 
 
 rac3_option_groups: Dict[str, List[Any]] = {
-    "General Options": [StartingWeapons, BoltAndXPMultiplier, EnableWeaponLevelAsItem, ExtraArmorUpgrade]
+    "General Options": [StartInventoryPool, StartingWeapons, BoltAndXPMultiplier, EnableWeaponLevelAsItem,
+                        ExtraArmorUpgrade]
 }
 
 slot_data_options: list[str] = [
+    "StartInventoryFromPool"
     "BoltAndXPMultiplier",
     "StartingWeapons",
     "EnableWeaponLevelAsItem",

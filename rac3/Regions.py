@@ -1,6 +1,6 @@
 from BaseClasses import Region
 from typing import TYPE_CHECKING
-from .Types import RaC3Location
+from .Types import GameLocation
 from .Locations import location_table
 
 if TYPE_CHECKING:
@@ -26,8 +26,8 @@ def create_regions(world: "RaC3World"):
     daxx = create_region(world, "Daxx")
     obani_gemini = create_region(world, "Obani Gemini")
     blackwater_city = create_region(world, "Blackwater City")
-    obani_draco = create_region(world, "Obani Draco")
     holostar_studios = create_region(world, "Holostar Studios")
+    obani_draco = create_region(world, "Obani Draco")
     zeldrin_starport = create_region(world, "Zeldrin Starport")
     metropolis_first_half = create_region(world, "Metropolis Region 1")
     crash_site = create_region(world, "Crash Site")
@@ -59,17 +59,21 @@ def create_regions(world: "RaC3World"):
     # Marcadia later part requires Grav Boots for titan bolts
     marcadia_second_half = create_region(world, "Marcadia Region 2")
     marcadia_first_half.connect(marcadia_second_half,
-                                rule=lambda state: state.has("Refractor", world.player)
-                                                   and state.has("Gravity-Boots", world.player)),
+                                rule=lambda state: state.has("Refractor", world.player)),
 
     # Annihilation mission is shown after Daxx Region2
     annihilation_nation_second_half = create_region(world, "Annihilation Nation 2")
     annihilation_nation.connect(annihilation_nation_second_half,
-                                rule=lambda state: state.can_reach_location("Daxx: Post-Daxx", player=world.player)),
+                                rule=lambda state: state.can_reach_location("Daxx: Gunship", player=world.player)),
 
     tyhrranosis_second_half = create_region(world, "Tyhrranosis Region 2")
     tyhrranosis.connect(tyhrranosis_second_half,
                         rule=lambda state: state.can_reach("Tyhrranosis", player=world.player)),
+
+    # This cutscene requires beating Holostar and Blackwater in any order:
+    skidd_cutscene = create_region(world, "Skidd Cutscene")
+    holostar_studios.connect(skidd_cutscene, rule=lambda state: state.can_reach("Blackwater City", player=world.player))
+    blackwater_city.connect(skidd_cutscene, rule=lambda state: state.can_reach("Holostar Studios", player=world.player))
 
     # You can get Metal-Noids in metropolis with no other requirements
     metropolis_second_half = create_region(world, "Metropolis Region 2")
@@ -145,7 +149,7 @@ def create_region(world: "RaC3World", name: str) -> Region:
 
     for (key, data) in location_table.items():
         if data.region == name:
-            location = RaC3Location(world.player, key, data.ap_code, reg)
+            location = GameLocation(world.player, key, data.ap_code, reg)
             reg.locations.append(location)
 
     world.multiworld.regions.append(reg)

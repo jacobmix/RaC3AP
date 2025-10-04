@@ -38,9 +38,13 @@ the [Ratchet and Clank 3 Options Page](/games/Ratchet%20and%20Clank%203%20Up%20y
 
 ### Connect to the MultiServer
 
-1. Launch PCSX2 boot your copy of RaC3
+1. Launch PCSX2, boot your copy of RaC3
+    - Start a new file, watch/skip the intro cutscene and pause the game when you load in on Veldin
 
 2. Launch Ratchet and Clank 3 client in the Archipelago Launcher
     - Under address input your archipelago connection address (ie: archipelago.gg:51780)
+
+
     - PCSX2 must be open before the RaC3 client is opened or it will give an error
+    - Items will begin being sent to the player before they are in their save file if the client is connected first
 
