@@ -76,8 +76,10 @@ class RaC3World(World):
         starting_weapons = Items.starting_weapons(self, self.options.starting_weapons.value)
         starting_planets = ["Infobot: Florana", "Infobot: Starship Phoenix"]
         create_regions(self)
-        self.get_location("Veldin: First Ranger").place_locked_item(self.create_item(starting_weapons[0]))
-        self.get_location("Veldin: Second Ranger").place_locked_item(self.create_item(starting_weapons[1]))
+        if len(starting_weapons) > 0:
+            self.get_location("Veldin: First Ranger").place_locked_item(self.create_item(starting_weapons[0]))
+            if len(starting_weapons) > 1:
+                self.get_location("Veldin: Second Ranger").place_locked_item(self.create_item(starting_weapons[1]))
         self.get_location("Veldin: Save Veldin").place_locked_item(self.create_item(starting_planets[0]))
         self.get_location("Florana: Defeat Qwark").place_locked_item(self.create_item(starting_planets[1]))
         self.preplaced_items.extend(starting_weapons)
