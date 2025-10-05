@@ -108,7 +108,8 @@ def set_rules_hard_location(world):
                            and state.has("Hypershot", player=world.player))
     # "Phoenix: Meet Sasha on the Bridge": LocData(, "Starship Phoenix"),
     add_rule(world.get_location("Phoenix: Play VidComic 1"),
-             lambda state: state.has("Progressive VidComic", world.player, 1))
+             lambda state: state.has("Progressive VidComic", world.player, 1)
+                           and state.can_reach("Marcadia Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: Return after winning Grand Prize Bout"),
              lambda state: state.can_reach("Annihilation Nation", player=world.player))
     add_rule(world.get_location("Phoenix: Return after Aquatos Base"),
@@ -118,9 +119,11 @@ def set_rules_hard_location(world):
                            and state.has("Hacker", player=world.player)
                            and state.has("Hypershot", player=world.player))
     add_rule(world.get_location("Phoenix: Play VidComic 4"),
-             lambda state: state.has("Progressive VidComic", world.player, 4))
+             lambda state: state.has("Progressive VidComic", world.player, 4)
+                           and state.can_reach("Marcadia Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: Play VidComic 5"),
-             lambda state: state.has("Progressive VidComic", world.player, 5))
+             lambda state: state.has("Progressive VidComic", world.player, 5)
+                           and state.can_reach("Marcadia Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: Post Hideout Assault"),
              lambda state: state.can_reach("Qwarks Hideout", player=world.player)
                            and state.has("Warp Pad", world.player) and state.has( "Hypershot", world.player))
@@ -128,25 +131,35 @@ def set_rules_hard_location(world):
              lambda state: state.has("Master Plan", player=world.player))
     # VidComic clear locations
     add_rule(world.get_location("Phoenix: Qwark VidComic 1 Clear"),
-             lambda state: state.has("Progressive VidComic", world.player, 1))
+             lambda state: state.has("Progressive VidComic", world.player, 1) 
+                           and state.can_reach("Marcadia Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: T-Bolt: VidComic 1 100%"),
-             lambda state: state.has("Progressive VidComic", world.player, 1))
+             lambda state: state.has("Progressive VidComic", world.player, 1)
+                           and state.can_reach("Marcadia Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: Qwark VidComic 2 Clear"),
-             lambda state: state.has("Progressive VidComic", world.player, 2))
+             lambda state: state.has("Progressive VidComic", world.player, 2)
+                           and state.can_reach("Marcadia Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: T-Bolt: VidComic 2 100%"),
-             lambda state: state.has("Progressive VidComic", world.player, 2))
+             lambda state: state.has("Progressive VidComic", world.player, 2)
+                           and state.can_reach("Marcadia Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: Qwark VidComic 3 Clear"),
-             lambda state: state.has("Progressive VidComic", world.player, 3))
+             lambda state: state.has("Progressive VidComic", world.player, 3)
+                           and state.can_reach("Marcadia Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: T-Bolt: VidComic 3 100%"),
-             lambda state: state.has("Progressive VidComic", world.player, 3))
+             lambda state: state.has("Progressive VidComic", world.player, 3)
+                           and state.can_reach("Marcadia Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: Qwark VidComic 4 Clear"),
-             lambda state: state.has("Progressive VidComic", world.player, 4))
+             lambda state: state.has("Progressive VidComic", world.player, 4)
+                           and state.can_reach("Marcadia Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: T-Bolt: VidComic 4 100%"),
-             lambda state: state.has("Progressive VidComic", world.player, 4))
+             lambda state: state.has("Progressive VidComic", world.player, 4)
+                           and state.can_reach("Marcadia Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: Qwark VidComic 5 Clear"),
-             lambda state: state.has("Progressive VidComic", world.player, 5))
+             lambda state: state.has("Progressive VidComic", world.player, 5)
+                           and state.can_reach("Marcadia Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: T-Bolt: VidComic 5 100%"),
-             lambda state: state.has("Progressive VidComic", world.player, 5))
+             lambda state: state.has("Progressive VidComic", world.player, 5)
+                           and state.can_reach("Marcadia Region 2", player=world.player))
     # Skill Points
     add_rule(world.get_location("Phoenix: Skill Point: Turn Up The Heat!"),
              lambda state: state.can_reach("Koros", player=world.player))
@@ -157,17 +170,23 @@ def set_rules_hard_location(world):
     add_rule(world.get_location("Phoenix: Skill Point: Monkeying Around"),
              lambda state: state.has("Tyhrra-Guise", world.player))
     add_rule(world.get_location("Phoenix: Skill Point: Strive for Arcade Perfection"),
-             lambda state: state.has("Progressive VidComic", world.player, 5))
+             lambda state: state.has("Progressive VidComic", world.player, 5)
+                           and state.can_reach("Marcadia Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: Skill Point: Pirate booty - set a new record for qwark"),
-             lambda state: state.has("Progressive VidComic", world.player, 1))
+             lambda state: state.has("Progressive VidComic", world.player, 1)
+                           and state.can_reach("Marcadia Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: Skill Point: Deja Q All over Again - set a new record for qwark"),
-             lambda state: state.has("Progressive VidComic", world.player, 2)),
+             lambda state: state.has("Progressive VidComic", world.player, 2)
+                           and state.can_reach("Marcadia Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: Skill Point: Arriba Amoeba! - set a new record for qwark"),
-             lambda state: state.has("Progressive VidComic", world.player, 3)),
+             lambda state: state.has("Progressive VidComic", world.player, 3)
+                           and state.can_reach("Marcadia Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: Skill Point: Shadow of the robot - set a new record for qwark"),
-             lambda state: state.has("Progressive VidComic", world.player, 4)),
+             lambda state: state.has("Progressive VidComic", world.player, 4)
+                           and state.can_reach("Marcadia Region 2", player=world.player))
     add_rule(world.get_location("Phoenix: Skill Point: The Shaming of the Q - set a new record for qwark"),
-             lambda state: state.has("Progressive VidComic", world.player, 5)),
+             lambda state: state.has("Progressive VidComic", world.player, 5)
+                           and state.can_reach("Marcadia Region 2", player=world.player))
     # VR
     add_rule(world.get_location("Phoenix: VR: VR Gadget Training"),
              lambda state: state.can_reach("Tyhrranosis", player=world.player)
