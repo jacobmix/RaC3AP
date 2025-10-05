@@ -175,9 +175,9 @@ def set_rules_hard_location(world):
                            and state.has("Hypershot", player=world.player))
 
     # ----- Planet Marcadia -----#
-    # "Marcadia: Received Spitting Hydra": LocData(50001030, "Marcadia Region 1"),
-    # "Marcadia: Received Refractor": LocData(50001031, "Marcadia Region 2"),
-    # "Marcadia: T-Bolt: After Pool of Water": LocData(50001032, "Marcadia Region 1"),
+    # "Marcadia: Received Spitting Hydra": LocData(50001030, "Marcadia"),
+    # "Marcadia: Received Refractor": LocData(50001031, "Marcadia"),
+    # "Marcadia: T-Bolt: After Pool of Water": LocData(50001032, "Marcadia"),
     add_rule(world.get_location("Marcadia: T-Bolt: Last Refractor Room"),
              lambda state: state.has("Refractor", world.player)
                            and state.has("Gravity-Boots", world.player))

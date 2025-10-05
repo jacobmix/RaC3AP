@@ -87,18 +87,18 @@ rac3_locations = {
     "Phoenix: Skill Point: The Shaming of the Q - set a new record for qwark": LocData(50350003, "Starship Phoenix"),
 
     # ----- Planet Marcadia -----#
-    "Marcadia: Received Spitting Hydra": LocData(50040000, "Marcadia Region 1"),
-    "Marcadia: Received Refractor": LocData(50040001, "Marcadia Region 1"),
-    "Marcadia: T-Bolt: After Pool of Water": LocData(50040002, "Marcadia Region 1"),
-    "Marcadia: T-Bolt: Last Refractor Room": LocData(50040003, "Marcadia Region 2"),
-    "Marcadia: T-Bolt: Ceiling just before Al": LocData(50040004, "Marcadia Region 2"),
-    "Marcadia: Meet Al": LocData(50040005, "Marcadia Region 2"),
-    "Marcadia: Operation IRON SHIELD: Secure the Area": LocData(50040006, "Marcadia Region 1"),
-    "Marcadia: Operation IRON SHIELD: Air Assault": LocData(50040007, "Marcadia Region 1"),
-    "Marcadia: Operation IRON SHIELD: Turret Command": LocData(50040008, "Marcadia Region 1"),
-    "Marcadia: Operation IRON SHIELD: Under the Gun": LocData(50040009, "Marcadia Region 1"),
-    "Marcadia: Operation IRON SHIELD: Hit n' Run": LocData(50040010, "Marcadia Region 1"),
-    "Marcadia: Skill Point: Reflect on how to score": LocData(50040011, "Marcadia Region 2"),
+    "Marcadia: Received Spitting Hydra": LocData(50040000, "Marcadia"),
+    "Marcadia: Received Refractor": LocData(50040001, "Marcadia"),
+    "Marcadia: T-Bolt: After Pool of Water": LocData(50040002, "Marcadia"),
+    "Marcadia: T-Bolt: Last Refractor Room": LocData(50040003, "Marcadia"),
+    "Marcadia: T-Bolt: Ceiling just before Al": LocData(50040004, "Marcadia"),
+    "Marcadia: Meet Al": LocData(50040005, "Marcadia"),
+    "Marcadia: Operation IRON SHIELD: Secure the Area": LocData(50040006, "Marcadia"),
+    "Marcadia: Operation IRON SHIELD: Air Assault": LocData(50040007, "Marcadia"),
+    "Marcadia: Operation IRON SHIELD: Turret Command": LocData(50040008, "Marcadia"),
+    "Marcadia: Operation IRON SHIELD: Under the Gun": LocData(50040009, "Marcadia"),
+    "Marcadia: Operation IRON SHIELD: Hit n' Run": LocData(50040010, "Marcadia"),
+    "Marcadia: Skill Point: Reflect on how to score": LocData(50040011, "Marcadia"),
 
     # ----- Annihilation Nation -----#
     "Annihilation: Received Agents of Doom": LocData(50070000, "Annihilation Nation"),
@@ -395,7 +395,7 @@ nanotech_milestones = {
 rac3_events = {  # Events have no ap_code
     "Cleared Veldin": EventData(None, "Veldin"),
     "Cleared Florana": EventData(None, "Florana"),
-    "Cleared Marcadia": EventData(None, "Marcadia Region 2"),
+    "Cleared Marcadia": EventData(None, "Marcadia"),
     "Cleared Annihilation Nation 1": EventData(None, "Annihilation Nation"),
     "Cleared Annihilation Nation 2": EventData(None, "Annihilation Nation 2"),
     "Cleared Aquatos": EventData(None, "Aquatos"),
@@ -413,9 +413,7 @@ location_groups: dict[str, set[str]] = {
     "Veldin": set(loc for loc in location_table.keys() if location_table[loc].region == "Veldin"),
     "Florana": set(loc for loc in location_table.keys() if location_table[loc].region == "Florana"),
     "Starship Phoenix": set(loc for loc in location_table.keys() if location_table[loc].region == "Starship Phoenix"),
-    "Marcadia": set(loc for loc in location_table.keys() if
-                    location_table[loc].region == "Marcadia Region 1"
-                    or location_table[loc].region == "Marcadia Region 2"),
+    "Marcadia": set(loc for loc in location_table.keys() if location_table[loc].region == "Marcadia"),
     "Annihilation Nation": set(loc for loc in location_table.keys() if
                                location_table[loc].region == "Annihilation Nation"
                                or location_table[loc].region == "Annihilation Nation 2"),
