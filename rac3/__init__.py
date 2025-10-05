@@ -53,7 +53,7 @@ class RaC3World(World):
     location_name_groups = location_groups
     preplaced_items: list[str] = []
     # Config for Universal Tracker
-    ut_can_gen_without_yaml = False
+    ut_can_gen_without_yaml = True
     disable_ut = False
 
     for region in get_regions():
@@ -73,9 +73,24 @@ class RaC3World(World):
         rac3_logger.warning("INCOMPLETE WORLD! Slot '%s' may require send_location/send_item for completion!",
                             self.player_name)
         self.preplaced_items = []
+
+        # implement .yaml-less Universal Tracker support
+        if (hasattr(self.multiworld, "generation_is_fake")
+            and hasattr(self.multiworld,"re_gen_passthrough")
+            and self.game in self.multiworld.re_gen_passthrough):
+
+            slot_data = self.multiworld.re_gen_passthrough[self.game]
+            self.options.start_inventory_from_pool.value = slot_data["options"]["start_inventory_from_pool"]
+            self.options.starting_weapons.value = slot_data["options"]["starting_weapons"]
+            self.options.bolt_and_xp_multiplier.value = slot_data["options"]["bolt_and_xp_multiplier"]
+            self.options.enable_weapon_level_as_item.value = slot_data["options"]["enable_weapon_level_as_item"]
+            self.options.extra_armor_upgrade.value = slot_data["options"]["extra_armor_upgrade"]
+
         starting_weapons = Items.starting_weapons(self, self.options.starting_weapons.value)
         starting_planets = ["Infobot: Florana", "Infobot: Starship Phoenix"]
+
         create_regions(self)
+
         if len(starting_weapons) > 0:
             self.get_location("Veldin: First Ranger").place_locked_item(self.create_item(starting_weapons[0]))
             if len(starting_weapons) > 1:
@@ -97,11 +112,11 @@ class RaC3World(World):
     def fill_slot_data(self) -> Dict[str, object]:
         slot_data: Dict[str, object] = {
             "options": {
-                "StartInventoryFromPool": self.options.start_inventory_from_pool.value,
-                "StartingWeapons": [self.preplaced_items[0], self.preplaced_items[1]],
-                "BoltAndXPMultiplier": multiplier_to_name[Multiplier(self.options.bolt_and_xp_multiplier)],
-                "EnableWeaponLevelAsItem": self.options.enable_weapon_level_as_item.value,
-                "ExtraArmorUpgrade": self.options.extra_armor_upgrade.value,
+                "start_inventory_from_pool": self.options.start_inventory_from_pool.value,
+                "starting_weapons": self.options.starting_weapons.value,
+                "bolt_and_xp_multiplier": self.options.bolt_and_xp_multiplier.value,
+                "enable_weapon_level_as_item": self.options.enable_weapon_level_as_item.value,
+                "extra_armor_upgrade": self.options.extra_armor_upgrade.value,
             },
             "Seed": self.multiworld.seed_name,  # to verify the server's multiworld
             "Slot": self.multiworld.player_name[self.player],  # to connect to server

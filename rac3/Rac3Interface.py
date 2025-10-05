@@ -139,8 +139,8 @@ class Rac3Interface(GameInterface):
 
     def proc_option(self, slot_data):
         self.logger.info(f"{slot_data}")
-        self.boltAndXPMultiplier = slot_data["options"]["BoltAndXPMultiplier"]
-        self.weaponLevelLockFlag = slot_data["options"]["EnableWeaponLevelAsItem"]
+        self.boltAndXPMultiplier = slot_data["options"]["bolt_and_xp_multiplier"]
+        self.weaponLevelLockFlag = slot_data["options"]["enable_weapon_level_as_item"]
 
     def item_received(self, item_code, processed_items_count=0):
         # self.logger.info(f"{item_code}")
@@ -250,7 +250,7 @@ class Rac3Interface(GameInterface):
 
         # Proc options
         ### Bolt and XPMultiplier
-        val = int(self.boltAndXPMultiplier[1:])
+        val = int(self.boltAndXPMultiplier)
         self.boltAndXPMultiplierValue = val - 1  # 0 = x1, 1 = x2, 3 = x4 ...
         ### EnableWeaponLevelAsItem: if enabled, EXP disabler is running.
 

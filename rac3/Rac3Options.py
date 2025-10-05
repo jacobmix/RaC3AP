@@ -83,9 +83,9 @@ rac3_option_groups: Dict[str, List[Any]] = {
 }
 
 slot_data_options: list[str] = [
-    "StartInventoryFromPool"
-    "BoltAndXPMultiplier",
-    "StartingWeapons",
-    "EnableWeaponLevelAsItem",
-    "ExtraArmorUpgrade",
+    "start_inventory_from_pool"
+    "starting_weapons",
+    "bolt_and_xp_multiplier",
+    "enable_weapon_level_as_item",
+    "extra_armor_upgrade",
 ]
