@@ -138,6 +138,11 @@ def create_regions(world: "RaC3World"):
     plasma_coil_upgrades = create_region(world, "Plasma Coil Upgrades")
     menu.connect(plasma_coil_upgrades, rule=lambda state: state.has("Plasma Coil", world.player))
 
+    # ----- Long Term Trophy Dummy Regions ----- #
+    
+    long_term_trophy = create_region(world, "Long Term Trophy")
+    menu.connect(long_term_trophy, rule=lambda state: state.can_reach("Starship Phoenix", player=world.player))
+
 
 def create_region(world: "RaC3World", name: str) -> Region:
     reg = Region(name, world.player, world.multiworld)
