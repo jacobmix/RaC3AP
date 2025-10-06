@@ -13,7 +13,7 @@ from .Regions import create_regions
 from .Rules import set_rules
 from .Types import Multiplier, multiplier_to_name, GameItem, weapon_type_to_name, WeaponType
 
-rac3_logger = logging.getLogger("RatchetAndClank3")
+rac3_logger = logging.getLogger("Ratchet & Clank 3")
 rac3_logger.setLevel(logging.DEBUG)
 
 

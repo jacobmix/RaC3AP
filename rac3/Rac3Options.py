@@ -7,7 +7,7 @@ from .Items import default_starting_weapons
 
 # Common variable
 GAME_TITLE = "Rac3"
-GAME_TITLE_FULL = "RatchetAndClank3"
+GAME_TITLE_FULL = "Ratchet & Clank 3"
 
 
 def create_option_groups() -> List[OptionGroup]:

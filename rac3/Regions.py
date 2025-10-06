@@ -19,7 +19,7 @@ def create_regions(world: "RaC3World"):
     starship_phoenix.connect(florana, "Starship Phoenix -> Florana")
 
     # ----- Regions within the game -----#
-    marcadia_first_half = create_region(world, "Marcadia Region 1")
+    marcadia = create_region(world, "Marcadia")
     annihilation_nation = create_region(world, "Annihilation Nation")
     aquatos = create_region(world, "Aquatos")
     tyhrranosis = create_region(world, "Tyhrranosis")
@@ -37,7 +37,7 @@ def create_regions(world: "RaC3World"):
     command_center = create_region(world, "Command Center")  # Victory Location
 
     # ----- Connecting everything to Starship Phoenix -----#
-    starship_phoenix.connect(marcadia_first_half, "Starship Phoenix -> Marcadia")
+    starship_phoenix.connect(marcadia, "Starship Phoenix -> Marcadia")
     starship_phoenix.connect(annihilation_nation, "Starship Phoenix -> Annihilation Nation")
     starship_phoenix.connect(aquatos, "Starship Phoenix -> Aquatos")
     starship_phoenix.connect(tyhrranosis, "Starship Phoenix -> Tyhrranosis")
@@ -55,11 +55,6 @@ def create_regions(world: "RaC3World"):
     starship_phoenix.connect(command_center, "Starship Phoenix -> Command Center")
 
     # ----- Split planet connections for gadget reasons -----#
-
-    # Marcadia later part requires Grav Boots for titan bolts
-    marcadia_second_half = create_region(world, "Marcadia Region 2")
-    marcadia_first_half.connect(marcadia_second_half,
-                                rule=lambda state: state.has("Refractor", world.player)),
 
     # Annihilation mission is shown after Daxx Region2
     annihilation_nation_second_half = create_region(world, "Annihilation Nation 2")
