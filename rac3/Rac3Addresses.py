@@ -2379,12 +2379,36 @@ LOCATIONS = [
         "CheckType": 0,
         "AddressBit": 0
     },
-    # Todo: Long term trophies
-    # Titanium collector trophy 0x00142799
-    # Skill master trophy 0x0014279a
+    {
+        "Name": "Titanium Collector trophy",
+        "Id": 50030034,
+        "Address": "0x00142799",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Friend of the Rangers trophy",
+        "Id": 50030035,
+        "Address": "0x0014279D",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation Champion trophy",
+        "Id": 50030036,
+        "Address": "0x0014279C",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Skill Master trophy",
+        "Id": 50030037,
+        "Address": "0x0014279A",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    # Todo: NG+ Long term trophies
     # Nano Finder trophy 0x0014279b
-    # Annihilation Nation Champion trophy 0x0014279c
-    # Friend of the Rangers trophy 0x0014279d
     # Omega Arsenal trophy 0x0014279e
     # Todo: Nanotech levels
     {

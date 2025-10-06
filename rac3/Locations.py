@@ -69,6 +69,11 @@ rac3_locations = {
     "Phoenix: Skill Point: Strive for Arcade Perfection": LocData(50030031, "Starship Phoenix"),
     "Phoenix: Skill Point: Beat Helga's Best VR Time": LocData(50030032, "Starship Phoenix"),
     "Phoenix: Skill Point: Monkeying Around": LocData(50030033, "Starship Phoenix"),
+    "Phoenix: Long Term Trophy: Titanium Collector": LocData(50030034, "Starship Phoenix"),  # All Titanium Bolts collected
+    "Phoenix: Long Term Trophy: Friend of the Rangers": LocData(50030035, "Starship Phoenix"),  # All optional Ranger missions completed
+    "Phoenix: Long Term Trophy: Annihilation Nation Champion": LocData(50030036, "Starship Phoenix"),  # All Arena completed
+    "Phoenix: Long Term Trophy: Skill Master": LocData(50030037, "Starship Phoenix"), # All Skill Points collected
+
     # VidComics
     "Phoenix: Qwark VidComic 1 Clear": LocData(50310000, "Starship Phoenix"),
     "Phoenix: T-Bolt: VidComic 1 100%": LocData(50310001, "Starship Phoenix"),
@@ -443,6 +448,7 @@ location_groups: dict[str, set[str]] = {
                    or (loc == "Aquatos: Skill Point: Hit the motherload")),
     "VidComic": set(loc for loc in location_table.keys() if "VidComic" in loc),
     "Trophy": set(loc for loc in location_table.keys() if "Trophy" in loc),
+    "Long Term Trophy": set(loc for loc in location_table.keys() if "Long Term" in loc),
     "Rangers": set(loc for loc in location_table.keys() if "Operation" in loc),
     "Arena": set(loc for loc in location_table.keys() if
                  (50070002 <= location_table[loc].ap_code < 50080000) or ("VR" in loc)),
