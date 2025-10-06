@@ -70,6 +70,9 @@ class ExtraArmorUpgrade(Choice):
 class Trophies(Choice):
     """
     Determines which trophies are locations in the world.
+    None: No trophies are locations.
+    Collectables: Only the collectable trophies found on various planets are locations.
+    Every Trophy: All special trophies that do not require NG+ are now also locations.
     """
     display_name = "Trophies"
     option_none = 0
