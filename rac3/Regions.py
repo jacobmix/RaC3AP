@@ -148,10 +148,8 @@ def create_region(world: "RaC3World", name: str) -> Region:
     reg = Region(name, world.player, world.multiworld)
     options = world.options
     for (key, data) in location_table.items():
-        if "Trophy" in key and options.trophies.value == 0:
-            continue # Skip trophy locations if trophies are disabled
-        elif "Long Term" in key and options.trophies.value < 2:
-            continue # Skip long term trophies if not set to every trophy
+        if should_skip_location(key, options): # Skip locations based on options
+            continue
 
         if data.region == name:
             location = GameLocation(world.player, key, data.ap_code, reg)
@@ -166,3 +164,14 @@ def create_region_and_connect(world: "RaC3World",
     reg: Region = create_region(world, name)
     connected_region.connect(reg, entrance_name)
     return reg
+
+def should_skip_location(key: str, options) -> bool:
+    """Return False if the location should be skipped based on options."""
+    if "Trophy" in key and options.trophies.value == 0:
+        return True  # Skip trophy locations if trophies are disabled
+    if "Long Term" in key and options.trophies.value < 2:
+        return True  # Skip long term trophies if not set to every trophy
+    
+    # Add more conditions here if needed in the future
+
+    return False
