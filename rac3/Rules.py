@@ -204,6 +204,49 @@ def set_rules_hard_location(world):
                            and state.can_reach("Metropolis Region 2", player=world.player)
                            and state.can_reach("Aridia", player=world.player)
                            and state.can_reach("Blackwater City", player=world.player))
+    
+    # Same rule as Qwarktastic Battle as you usually get it after that
+    add_rule(world.get_location("Phoenix: Long Term Trophy: Annihilation Nation Champion"),
+             lambda state: state.has("Progressive VidComic", world.player, 5)
+                           and state.has("Hacker", world.player)
+                           and state.has("Tyhrra-Guise", world.player)
+                           and state.has("Hypershot", world.player)
+                           and state.has("Gravity-Boots", world.player))
+    
+    add_rule(world.get_location("Phoenix: Long Term Trophy: Skill Master"),
+             lambda state: state.has("Progressive VidComic", world.player, 5)
+                           # Gadgets
+                           and state.has("Gravity-Boots", world.player)
+                           and state.has("Hacker", world.player)
+                           and state.has("Hypershot", world.player)
+                           and state.has("Refractor", world.player)
+                           and state.has("Tyhrra-Guise", world.player)
+                           # Planets
+                           and state.can_reach("Florana", player=world.player)
+                           and state.can_reach("Starship Phoenix", player=world.player)
+                           and state.can_reach("Marcadia Region 2", player=world.player)
+                           and state.can_reach("Annihilation Nation 2", player=world.player)
+                           and state.can_reach("Aquatos", player=world.player)
+                           and state.can_reach("Tyhrranosis", player=world.player)
+                           and state.can_reach("Daxx", player=world.player)
+                           and state.can_reach("Obani Gemini", player=world.player)
+                           and state.can_reach("Blackwater City", player=world.player)
+                           and state.can_reach("Holostar Studios", player=world.player)
+                           and state.can_reach("Metropolis Region 1", player=world.player)
+                           and state.can_reach("Crash Site", player=world.player)
+                           and state.can_reach("Aridia", player=world.player)
+                           and state.can_reach("Qwarks Hideout", player=world.player)
+                           and state.can_reach("Koros", player=world.player)
+                           and state.can_reach("Command Center", player=world.player)
+                           # Weapons
+                           and state.has("Plasma Whip", world.player)
+                           and state.has("Spitting Hydra", world.player)
+                           and state.has("Suck Cannon", world.player)
+                           and state.has("Disk-Blade Gun", world.player)
+                           and state.has("Flux Rifle", world.player)
+                           and state.has("Qwack-O-Ray", world.player)
+                           and state.has("Annihilator", world.player)
+                           and state.has("Infector", world.player))
 
     # ----- Planet Marcadia -----#
     # "Marcadia: Received Spitting Hydra": LocData(50001030, "Marcadia Region 1"),
