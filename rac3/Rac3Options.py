@@ -75,12 +75,12 @@ class SkillPoints(Choice):
     - Stay Squeaky Clean
     - Monkeying Around
     - Reflect on how to score
-    - Lights, camera, action!
+    - Lights, camera action!
     - Flee Flawlessly
     - Search for sunken treasure
     - Be a sharpshooter
     - Beat Helga's Best Time
-    - Bugs to birds
+    - Bugs to Birdie
     - Feeling Lucky?
     - 2002 was a good year in the city
     - Aim High
