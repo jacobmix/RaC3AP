@@ -50,7 +50,7 @@ async def handle_planet_changed(ctx: 'Context') -> None:
     if ctx.slot_data is None:
         return
     ctx.current_planet = ctx.game_interface.new_planet()
-    await ctx.send_msgs([{"cmd": 'set',
+    await ctx.send_msgs([{"cmd": 'Set',
                           "key": f'rac3_current_planet_{ctx.slot}_{ctx.team}',
                           "default": "Starship Phoenix",
                           "want_reply": False,
