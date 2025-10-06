@@ -214,7 +214,7 @@ rac3_locations = {
     "Holostar: T-Bolt: Atop the Chairs": LocData(50130001, "Holostar Studios"),
     "Holostar: T-Bolt: Lot 42's Gravity Ramp": LocData(50130002, "Holostar Studios"),
     "Holostar: T-Bolt: Kamikaze Noids": LocData(50130003, "Holostar Studios"),
-    "Holostar: Skill Point: Feeling Lucky": LocData(50130005, "Holostar Studios"),
+    "Holostar: Skill Point: Feeling Lucky?": LocData(50130005, "Holostar Studios"),
     "Holostar: Trophy: After tall Elevator": LocData(50130006, "Holostar Studios"),  # Clank Trophy
 
     # ----- Skidd Cutscene -----#
