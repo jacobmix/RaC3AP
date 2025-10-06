@@ -199,7 +199,7 @@ def set_rules_hard_location(world):
                            and state.can_reach("Command Center", player=world.player))
     
     add_rule(world.get_location("Phoenix: Long Term Trophy: Friend of the Rangers"),
-             lambda state: state.can_reach("Marcadia Region 2", player=world.player)
+             lambda state: state.can_reach("Marcadia Region 1", player=world.player)
                            and state.can_reach("Tyhrranosis Region 2", player=world.player)
                            and state.can_reach("Metropolis Region 2", player=world.player)
                            and state.can_reach("Aridia", player=world.player)
