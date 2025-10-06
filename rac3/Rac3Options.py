@@ -67,6 +67,16 @@ class ExtraArmorUpgrade(Choice):
     option_extra_4 = 4
     default = 0
 
+class Trophies(Choice):
+    """
+    Determines which trophies are locations in the world.
+    """
+    display_name = "Trophies"
+    option_none = 0
+    option_collectables = 1
+    option_every_trophy = 2
+    default = 1
+
 
 @dataclass
 class RaC3Options(PerGameCommonOptions):
@@ -75,11 +85,12 @@ class RaC3Options(PerGameCommonOptions):
     bolt_and_xp_multiplier: BoltAndXPMultiplier
     enable_weapon_level_as_item: EnableWeaponLevelAsItem
     extra_armor_upgrade: ExtraArmorUpgrade
+    trophies: Trophies
 
 
 rac3_option_groups: Dict[str, List[Any]] = {
     "General Options": [StartInventoryPool, StartingWeapons, BoltAndXPMultiplier, EnableWeaponLevelAsItem,
-                        ExtraArmorUpgrade]
+                        ExtraArmorUpgrade, Trophies]
 }
 
 slot_data_options: list[str] = [
@@ -88,4 +99,5 @@ slot_data_options: list[str] = [
     "StartingWeapons",
     "EnableWeaponLevelAsItem",
     "ExtraArmorUpgrade",
+    "Trophies",
 ]
