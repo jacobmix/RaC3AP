@@ -131,6 +131,7 @@ class Rac3Interface(GameInterface):
             self.weapon_exp_cycler()
         # Logic Fixes
         self.logic_fixes()
+        self.tracker_update()
 
     @staticmethod
     def get_victory_code():
@@ -141,6 +142,11 @@ class Rac3Interface(GameInterface):
         self.logger.info(f"{slot_data}")
         self.boltAndXPMultiplier = slot_data["options"]["bolt_and_xp_multiplier"]
         self.weaponLevelLockFlag = slot_data["options"]["enable_weapon_level_as_item"]
+
+    def new_planet(self):
+        planet = self._read8(ADDRESSES[self.current_game]["CurrentPlanet"])
+        self.logger.debug(f"Current Planet from memory: {planet}")
+        return planet
 
     def item_received(self, item_code, processed_items_count=0):
         # self.logger.info(f"{item_code}")
@@ -245,7 +251,7 @@ class Rac3Interface(GameInterface):
                               ADDRESSES[self.current_game]["Gadgets"].keys()}
         self.UnlockVidComics = {"status": 0, "unlockDelay": 0}
         self.UnlockPlanets = {name: {"status": 0, "unlockDelay": 0} for name in
-                              ADDRESSES[self.current_game]["PlanetValues"].keys()}
+                              ADDRESSES[self.current_game]["ShipPlanets"].keys()}
         self.UnlockArmor = {"status": 0, "unlockDelay": 0}
 
         # Proc options
@@ -369,24 +375,26 @@ class Rac3Interface(GameInterface):
 
     def planet_cycler(self):
         self.logger.debug("---------PlanetCycler Start---------")
-        for idx, name in enumerate(self.UnlockPlanets.keys()):
-            addr = ADDRESSES[self.current_game]["PlanetSlots"][idx]
-            addr = self.address_convert(addr)
-            if self.UnlockPlanets[name]["status"] == 1:
-                self.logger.debug(f"{name} is available")
-                self._write8(addr, ADDRESSES[self.current_game]["PlanetValues"][name])
+        address_list: list[int] = ADDRESSES[self.current_game]["PlanetSlots"]
+        planet_names: list[str] = list(ADDRESSES[self.current_game]["ShipPlanets"].keys())
+        planet_ids: list[int] = list(ADDRESSES[self.current_game]["ShipPlanets"].values())
+
+        for i in range(len(address_list)):
+            if self.UnlockPlanets[planet_names[i]]["status"]:
+                if self.UnlockPlanets[planet_names[i]]["unlockDelay"]:
+                    self._write8(address_list[i], planet_ids[i])
+                else:
+                    self.UnlockPlanets[planet_names[i]]["unlockDelay"] += 1
             else:
-                self.logger.debug(f"{name} locked")
-                self._write8(addr, 0)
+                self._write8(address_list[i], 0)
 
             # For avoiding Deadlock, Holostar is locked until Hacker and HyperShot is unlocked,
-            if name == "Holostar Studios":
+            if planet_names[i] == "Holostar Studios":
                 if self.UnlockGadgets["Hacker"]["status"] == 0 or self.UnlockGadgets["Hypershot"]["status"] == 0:
-                    self._write8(addr, 0)
-            if name == "Qwarks Hideout":
+                    self._write8(address_list[i], 0)
+            if planet_names[i] == "Qwarks Hideout":
                 if self.UnlockGadgets["Refractor"]["status"] == 0 or self.UnlockGadgets["Hypershot"]["status"] == 0:
-                    self._write8(addr, 0)
-        self.logger.debug("---------PlanetCycler End---------")
+                    self._write8(address_list[i], 0)
 
     def vidcomic_cycler(self):
         self.logger.debug("---------VidComicCycler Start---------")
@@ -577,6 +585,24 @@ class Rac3Interface(GameInterface):
                 weapon_num = random.randint(0, len(unlocked_weapon_names) - 1)
                 weapon_name = unlocked_weapon_names[weapon_num]
                 self.weapon_level_up(weapon_name)
+
+    def dump_info(self, ctx):
+        print(f'Weapons Tracker: {self.UnlockWeapons}')
+        print(f'Gadgets Tracker: {self.UnlockGadgets}')
+        print(f'VidComics Tracker: {self.UnlockVidComics}')
+        print(f'Planets Tracker: {self.UnlockPlanets}')
+        print(f'Armor Tracker: {self.UnlockArmor}')
+        count = 0
+        planet_lookup = list(ADDRESSES[self.current_game]["PlanetValues"].keys())
+        for addr in ADDRESSES[self.current_game]["PlanetSlots"]:
+            print(f'Planet{count}: {planet_lookup[self._read8(addr)]}')
+            count += 1
+        print(f'Current planet Tracked: {planet_lookup[ctx.current_planet]}')
+        print(r'Slot:{player}current_planet')
+        print(f'Slot Data: {ctx.slot_data}')
+
+    def tracker_update(self):
+        pass
 
     # Todo: Deathlink
     def alive(self):

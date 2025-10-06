@@ -96,6 +96,22 @@
         ]
       },
       {
+        "name": "2nd Building Upper",
+        "map_locations": [
+          {
+            "map": "Florana",
+            "x": 185,
+            "y": 230
+          }
+        ],
+        "sections": [
+          {
+            "name": "Ratchet trophy",
+            "item_count": 1
+          }
+        ]
+      },
+      {
         "name": "Path of Death",
         "map_locations": [
           {
@@ -154,7 +170,7 @@
         "name": "Vendor",
         "map_locations": [
           {
-            "map": "Phoenix1",
+            "map": "Starship Phoenix",
             "x": 429,
             "y": 400
           }
@@ -174,7 +190,7 @@
         "name": "VR Training",
         "map_locations": [
           {
-            "map": "Phoenix1",
+            "map": "Starship Phoenix",
             "x": 310,
             "y": 336
           }
@@ -183,42 +199,54 @@
           {
             "name": "Gadget Training Titanium Bolt",
             "access_rules": [
-              "Tyhrranosis", "hacker", "hyperShot"
+              "Tyhrranosis",
+              "hacker",
+              "hyperShot"
             ],
             "item_count": 1
           },
           {
             "name": "Beat Helga's Best Time (0:50) (SP)",
             "access_rules": [
-              "Tyhrranosis", "hacker", "hyperShot"
+              "Tyhrranosis",
+              "hacker",
+              "hyperShot"
             ],
             "item_count": 1
           },
           {
             "name": "VR Gadget Training",
             "access_rules": [
-              "Tyhrranosis", "hacker", "hyperShot"
+              "Tyhrranosis",
+              "hacker",
+              "hyperShot"
             ],
             "item_count": 1
           },
           {
             "name": "Received Hacker",
             "access_rules": [
-              "Tyhrranosis", "hacker", "hyperShot"
+              "Tyhrranosis",
+              "hacker",
+              "hyperShot"
             ],
             "item_count": 1
           },
           {
             "name": "Received Hypershot",
             "access_rules": [
-              "Tyhrranosis", "hacker", "hyperShot"
+              "Tyhrranosis",
+              "hacker",
+              "hyperShot"
             ],
             "item_count": 1
           },
           {
             "name": "Infobot: Daxx",
             "access_rules": [
-              "Tyhrranosis", "hacker", "hyperShot"
+              "Tyhrranosis",
+              "hacker",
+              "hyperShot"
             ],
             "item_count": 1
           },
@@ -264,7 +292,7 @@
         "name": "Armor Vendor",
         "map_locations": [
           {
-            "map": "Phoenix1",
+            "map": "Starship Phoenix",
             "x": 429,
             "y": 361
           }
@@ -296,7 +324,7 @@
         "name": "Phoenix Infobots",
         "map_locations": [
           {
-            "map": "Phoenix1",
+            "map": "Starship Phoenix",
             "x": 382,
             "y": 494
           }
@@ -336,7 +364,7 @@
         "name": "Received Vid Comics",
         "map_locations": [
           {
-            "map": "Phoenix1",
+            "map": "Starship Phoenix",
             "x": 381,
             "y": 315
           }
@@ -356,7 +384,7 @@
         "name": "Qwark Vid Comics",
         "map_locations": [
           {
-            "map": "Phoenix1",
+            "map": "Starship Phoenix",
             "x": 241,
             "y": 362
           }
@@ -371,11 +399,19 @@
             "item_count": 1
           },
           {
+            "name": "VC1 - All Tokens Titanium Bolt",
+            "item_count": 1
+          },
+          {
             "name": "Qwark Vidcomic 2 Clear",
             "item_count": 1
           },
           {
             "name": "VC2 - Set a new record for Qwark (2:10) (SP)",
+            "item_count": 1
+          },
+          {
+            "name": "VC2 - All Tokens Titanium Bolt",
             "item_count": 1
           },
           {
@@ -387,6 +423,10 @@
             "item_count": 1
           },
           {
+            "name": "VC3 - All Tokens Titanium Bolt",
+            "item_count": 1
+          },
+          {
             "name": "Qwark Vidcomic 4 Clear",
             "item_count": 1
           },
@@ -395,11 +435,19 @@
             "item_count": 1
           },
           {
+            "name": "VC4 - All Tokens Titanium Bolt",
+            "item_count": 1
+          },
+          {
             "name": "Qwark Vidcomic 5 Clear",
             "item_count": 1
           },
           {
             "name": "VC5 - Set a new record for Qwark (2:00) (SP)",
+            "item_count": 1
+          },
+          {
+            "name": "VC5 - All Tokens Titanium Bolt",
             "item_count": 1
           },
           {
@@ -412,7 +460,7 @@
         "name": "Monkeying Around (SP)",
         "map_locations": [
           {
-            "map": "Phoenix1",
+            "map": "Starship Phoenix",
             "x": 382,
             "y": 40
           }
@@ -428,7 +476,7 @@
         "name": "Get to the Bridge",
         "map_locations": [
           {
-            "map": "Phoenix2",
+            "map": "Phoenix Assault",
             "x": 382,
             "y": 40
           }
@@ -608,7 +656,7 @@
         "name": "Vendor",
         "map_locations": [
           {
-            "map": "Annihilation",
+            "map": "Annihilation Nation",
             "x": 395,
             "y": 459
           }
@@ -624,7 +672,7 @@
         "name": "Prizes",
         "map_locations": [
           {
-            "map": "Annihilation",
+            "map": "Annihilation Nation",
             "x": 395,
             "y": 368
           }
@@ -648,7 +696,7 @@
         "name": "Heat Street Bolt",
         "map_locations": [
           {
-            "map": "Annihilation",
+            "map": "Annihilation Nation",
             "x": 104,
             "y": 242
           }
@@ -664,7 +712,7 @@
         "name": "Maze of Blaze Bolt",
         "map_locations": [
           {
-            "map": "Annihilation",
+            "map": "Annihilation Nation",
             "x": 162,
             "y": 130
           }
@@ -680,7 +728,7 @@
         "name": "Gauntlet Challenges",
         "map_locations": [
           {
-            "map": "Annihilation",
+            "map": "Annihilation Nation",
             "x": 129,
             "y": 24
           }
@@ -708,7 +756,7 @@
         "name": "Gauntlet Revisit Challenges",
         "map_locations": [
           {
-            "map": "Annihilation",
+            "map": "Annihilation Nation",
             "x": 193,
             "y": 29
           }
@@ -736,7 +784,7 @@
         "name": "Arena Challenges",
         "map_locations": [
           {
-            "map": "Annihilation",
+            "map": "Annihilation Nation",
             "x": 345,
             "y": 195
           }
@@ -748,6 +796,10 @@
           },
           {
             "name": "The Terrible Two",
+            "item_count": 1
+          },
+          {
+            "name": "Robot Rampage",
             "item_count": 1
           },
           {
@@ -780,7 +832,7 @@
         "name": "Arena Revisit Challenges",
         "map_locations": [
           {
-            "map": "Annihilation",
+            "map": "Annihilation Nation",
             "x": 440,
             "y": 195
           }
@@ -844,7 +896,7 @@
         "name": "Qwarktastic Battle",
         "map_locations": [
           {
-            "map": "Annihilation",
+            "map": "Annihilation Nation",
             "x": 392,
             "y": 164
           }
@@ -860,7 +912,7 @@
         "name": "Bash the bug (SP)",
         "map_locations": [
           {
-            "map": "Annihilation",
+            "map": "Annihilation Nation",
             "x": 392,
             "y": 108
           }
@@ -876,7 +928,7 @@
         "name": "Be an eight time champ (SP)",
         "map_locations": [
           {
-            "map": "Annihilation",
+            "map": "Annihilation Nation",
             "x": 281,
             "y": 33
           }
@@ -892,7 +944,7 @@
         "name": "Flee Flawlessly (SP)",
         "map_locations": [
           {
-            "map": "Annihilation",
+            "map": "Annihilation Nation",
             "x": 281,
             "y": 83
           }
@@ -908,7 +960,7 @@
         "name": "Lights, camera action! (SP)",
         "map_locations": [
           {
-            "map": "Annihilation",
+            "map": "Annihilation Nation",
             "x": 281,
             "y": 133
           }
@@ -934,7 +986,7 @@
         "name": "Vendor",
         "map_locations": [
           {
-            "map": "Aquatos1",
+            "map": "Aquatos",
             "x": 45,
             "y": 371
           }
@@ -950,7 +1002,7 @@
         "name": "Under the Bridge",
         "map_locations": [
           {
-            "map": "Aquatos1",
+            "map": "Aquatos",
             "x": 414,
             "y": 316
           }
@@ -966,7 +1018,7 @@
         "name": "Underwater Bolt",
         "map_locations": [
           {
-            "map": "Aquatos1",
+            "map": "Aquatos",
             "x": 477,
             "y": 279
           }
@@ -982,7 +1034,7 @@
         "name": "Search for sunken treasure (SP)",
         "map_locations": [
           {
-            "map": "Aquatos1",
+            "map": "Aquatos",
             "x": 446,
             "y": 210
           }
@@ -998,7 +1050,7 @@
         "name": "Behind the Locked Gate",
         "map_locations": [
           {
-            "map": "Aquatos1",
+            "map": "Aquatos",
             "x": 222,
             "y": 196
           }
@@ -1011,10 +1063,10 @@
         ]
       },
       {
-        "name": "Top Left Bolt",        
+        "name": "Top Left Bolt",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 276,
             "y": 64
           }
@@ -1028,13 +1080,12 @@
         "access_rules": [
           "gravBoots"
         ]
-        
       },
       {
         "name": "Swinging Bolt",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 358,
             "y": 255
           }
@@ -1053,7 +1104,7 @@
         "name": "Gather Sewer Crystals",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 39,
             "y": 295
           }
@@ -1088,7 +1139,7 @@
         "name": "Slim Cognito",
         "map_locations": [
           {
-            "map": "Aquatos1",
+            "map": "Aquatos",
             "x": 347,
             "y": 70
           }
@@ -1130,7 +1181,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 75,
             "y": 309
           }
@@ -1146,7 +1197,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 44,
             "y": 322
           }
@@ -1166,7 +1217,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 90,
             "y": 322
           }
@@ -1182,7 +1233,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 107,
             "y": 309
           }
@@ -1198,7 +1249,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 107,
             "y": 335
           }
@@ -1214,7 +1265,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 118,
             "y": 361
           }
@@ -1230,7 +1281,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 131,
             "y": 401
           }
@@ -1246,7 +1297,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 196,
             "y": 404
           }
@@ -1266,7 +1317,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 152,
             "y": 368
           }
@@ -1286,7 +1337,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 169,
             "y": 363
           }
@@ -1306,7 +1357,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 156,
             "y": 336
           }
@@ -1322,7 +1373,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 131,
             "y": 312
           }
@@ -1342,7 +1393,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 178,
             "y": 311
           }
@@ -1362,7 +1413,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 171,
             "y": 295
           }
@@ -1378,7 +1429,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 250,
             "y": 213
           }
@@ -1394,7 +1445,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 277,
             "y": 187
           }
@@ -1410,7 +1461,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 257,
             "y": 173
           }
@@ -1426,7 +1477,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 223,
             "y": 177
           }
@@ -1442,7 +1493,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 250,
             "y": 151
           }
@@ -1462,7 +1513,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 265,
             "y": 150
           }
@@ -1482,7 +1533,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 210,
             "y": 193
           }
@@ -1498,7 +1549,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 210,
             "y": 149
           }
@@ -1514,7 +1565,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 224,
             "y": 124
           }
@@ -1534,7 +1585,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 250,
             "y": 122
           }
@@ -1554,7 +1605,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 277,
             "y": 102
           }
@@ -1574,7 +1625,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 234,
             "y": 92
           }
@@ -1590,7 +1641,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 304,
             "y": 152
           }
@@ -1606,7 +1657,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 317,
             "y": 357
           }
@@ -1622,7 +1673,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 319,
             "y": 322
           }
@@ -1638,7 +1689,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 333,
             "y": 373
           }
@@ -1654,7 +1705,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 358,
             "y": 376
           }
@@ -1670,7 +1721,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 356,
             "y": 401
           }
@@ -1686,7 +1737,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 357,
             "y": 338
           }
@@ -1702,7 +1753,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 347,
             "y": 417
           }
@@ -1718,7 +1769,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 327,
             "y": 410
           }
@@ -1734,7 +1785,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 372,
             "y": 356
           }
@@ -1750,7 +1801,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 381,
             "y": 335
           }
@@ -1766,7 +1817,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 400,
             "y": 371
           }
@@ -1782,7 +1833,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 413,
             "y": 376
           }
@@ -1798,7 +1849,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 440,
             "y": 346
           }
@@ -1818,7 +1869,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 363,
             "y": 294
           }
@@ -1834,7 +1885,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 399,
             "y": 294
           }
@@ -1850,7 +1901,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 440,
             "y": 295
           }
@@ -1880,7 +1931,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 118,
             "y": 214
           }
@@ -1896,7 +1947,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 128,
             "y": 181
           }
@@ -1912,7 +1963,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 134,
             "y": 146
           }
@@ -1928,7 +1979,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 114,
             "y": 113
           }
@@ -1944,7 +1995,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 156,
             "y": 98
           }
@@ -1960,7 +2011,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 156,
             "y": 151
           }
@@ -1976,7 +2027,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 169,
             "y": 109
           }
@@ -1992,7 +2043,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 182,
             "y": 187
           }
@@ -2008,7 +2059,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 260,
             "y": 64
           }
@@ -2024,7 +2075,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 317,
             "y": 94
           }
@@ -2044,7 +2095,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 333,
             "y": 95
           }
@@ -2064,7 +2115,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 434,
             "y": 145
           }
@@ -2084,9 +2135,9 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 437,
-            "y": 213  
+            "y": 213
           }
         ],
         "sections": [
@@ -2104,7 +2155,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 413,
             "y": 176
           }
@@ -2120,7 +2171,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 386,
             "y": 208
           }
@@ -2136,7 +2187,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 345,
             "y": 214
           }
@@ -2152,7 +2203,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 337,
             "y": 172
           }
@@ -2168,7 +2219,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 399,
             "y": 94
           }
@@ -2184,7 +2235,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 372,
             "y": 138
           }
@@ -2200,7 +2251,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 317,
             "y": 115
           }
@@ -2220,7 +2271,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 277,
             "y": 368
           }
@@ -2240,7 +2291,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 209,
             "y": 315
           }
@@ -2260,7 +2311,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 251,
             "y": 348
           }
@@ -2280,7 +2331,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 251,
             "y": 369
           }
@@ -2296,7 +2347,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 251,
             "y": 390
           }
@@ -2312,7 +2363,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 303,
             "y": 401
           }
@@ -2328,7 +2379,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 210,
             "y": 396
           }
@@ -2352,7 +2403,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 210,
             "y": 396
           }
@@ -2376,7 +2427,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 210,
             "y": 396
           }
@@ -2392,7 +2443,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 277,
             "y": 336
           }
@@ -2408,7 +2459,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 223,
             "y": 335
           }
@@ -2424,7 +2475,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 217,
             "y": 295
           }
@@ -2440,7 +2491,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 251,
             "y": 323
           }
@@ -2456,7 +2507,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 304,
             "y": 305
           }
@@ -2472,7 +2523,7 @@
         "name": "Sewer Crystal",
         "map_locations": [
           {
-            "map": "Aquatos3",
+            "map": "Aquatos Sewers",
             "x": 283,
             "y": 295
           }
@@ -2485,7 +2536,7 @@
         ]
       }
     ]
-    },
+  },
   {
     "name": "Tyhrranosis",
     "chest_unopened_img": "images/Question.png",
@@ -2498,7 +2549,7 @@
         "name": "Vendor",
         "map_locations": [
           {
-            "map": "Tyhrranosis1",
+            "map": "Tyhrranosis",
             "x": 264,
             "y": 326
           }
@@ -2518,7 +2569,7 @@
         "name": "Be a Sharpshooter (SP)",
         "map_locations": [
           {
-            "map": "Tyhrranosis1",
+            "map": "Tyhrranosis",
             "x": 234,
             "y": 172
           }
@@ -2531,10 +2582,26 @@
         ]
       },
       {
+        "name": "Atop the pillar",
+        "map_locations": [
+          {
+            "map": "Tyhrranosis",
+            "x": 395,
+            "y": 150
+          }
+        ],
+        "sections": [
+          {
+            "name": "AL trophy",
+            "item_count": 1
+          }
+        ]
+      },
+      {
         "name": "Destroy the Momma Tyhrranoid",
         "map_locations": [
           {
-            "map": "Tyhrranosis1",
+            "map": "Tyhrranosis",
             "x": 210,
             "y": 83
           }
@@ -2550,7 +2617,7 @@
         "name": "South East Cannon",
         "map_locations": [
           {
-            "map": "Tyhrranosis1",
+            "map": "Tyhrranosis",
             "x": 465,
             "y": 339
           }
@@ -2566,7 +2633,7 @@
         "name": "Underground Cave Bolt",
         "map_locations": [
           {
-            "map": "Tyhrranosis1",
+            "map": "Tyhrranosis",
             "x": 55,
             "y": 110
           }
@@ -2582,7 +2649,7 @@
         "name": "Operation: ISLAND STRIKE",
         "map_locations": [
           {
-            "map": "Tyhrranosis2",
+            "map": "Tyhrranosis: Mission",
             "x": 250,
             "y": 179
           }
@@ -2610,6 +2677,8 @@
   },
   {
     "name": "Daxx",
+    "chest_unopened_img": "images/Question.png",
+    "chest_opened_img": "images/Q_Force.png",
     "access_rules": [
       "Daxx"
     ],
@@ -2626,6 +2695,10 @@
         "sections": [
           {
             "name": "Received Charge Boots",
+            "item_count": 1
+          },
+          {
+            "name": "Plumber trophy",
             "item_count": 1
           }
         ]
@@ -2724,7 +2797,7 @@
         "name": "Vendor",
         "map_locations": [
           {
-            "map": "Gemini",
+            "map": "Obani Gemini",
             "x": 383,
             "y": 280
           }
@@ -2740,7 +2813,7 @@
         "name": "Follow the Lava",
         "map_locations": [
           {
-            "map": "Gemini",
+            "map": "Obani Gemini",
             "x": 365,
             "y": 411
           }
@@ -2759,7 +2832,7 @@
         "name": "Get to the belt (SP)",
         "map_locations": [
           {
-            "map": "Gemini",
+            "map": "Obani Gemini",
             "x": 35,
             "y": 110
           }
@@ -2775,8 +2848,8 @@
         "name": "Between the Twin Towers",
         "map_locations": [
           {
-            "map": "Pollux",
-            "x": 384,
+            "map": "Obani Gemini",
+            "x": 984,
             "y": 224
           }
         ],
@@ -2791,8 +2864,8 @@
         "name": "Explore the Second Moon",
         "map_locations": [
           {
-            "map": "Pollux",
-            "x": 138,
+            "map": "Obani Gemini",
+            "x": 738,
             "y": 471
           }
         ],
@@ -2806,7 +2879,7 @@
     ]
   },
   {
-    "name": "Blackwater",
+    "name": "Blackwater City",
     "chest_unopened_img": "images/Question.png",
     "chest_opened_img": "images/Q_Force.png",
     "access_rules": [
@@ -2817,7 +2890,7 @@
         "name": "Bash the party (SP)",
         "map_locations": [
           {
-            "map": "Blackwater",
+            "map": "Blackwater City",
             "x": 256,
             "y": 430
           }
@@ -2833,7 +2906,7 @@
         "name": "Save Blackwater City",
         "map_locations": [
           {
-            "map": "Blackwater",
+            "map": "Blackwater City",
             "x": 256,
             "y": 203
           }
@@ -2853,7 +2926,7 @@
         "name": "Operation: BLACK TIDE",
         "map_locations": [
           {
-            "map": "Blackwater",
+            "map": "Blackwater City",
             "x": 256,
             "y": 60
           }
@@ -2887,7 +2960,7 @@
         "name": "Feeling Lucky (SP)",
         "map_locations": [
           {
-            "map": "Holostar2",
+            "map": "Holostar Studios Clank",
             "x": 22,
             "y": 242
           }
@@ -2903,15 +2976,14 @@
         "name": "Feeling Lucky (SP)",
         "map_locations": [
           {
-            "map": "Holostar1",
+            "map": "Holostar Studios",
             "x": 334,
             "y": 234
           }
         ],
         "sections": [
           {
-            "name": "Win the jackpot",
-            "item_count": 1
+            "ref": "Feeling Lucky (SP)/Win the jackpot"
           }
         ]
       },
@@ -2919,7 +2991,7 @@
         "name": "Vendor",
         "map_locations": [
           {
-            "map": "Holostar1",
+            "map": "Holostar Studios",
             "x": 154,
             "y": 156
           }
@@ -2935,7 +3007,7 @@
         "name": "Atop the Chairs",
         "map_locations": [
           {
-            "map": "Holostar1",
+            "map": "Holostar Studios",
             "x": 298,
             "y": 239
           }
@@ -2948,10 +3020,26 @@
         ]
       },
       {
+        "name": "Above the tall elevator",
+        "map_locations": [
+          {
+            "map": "Holostar Studios",
+            "x": 280,
+            "y": 215
+          }
+        ],
+        "sections": [
+          {
+            "name": "Clank trophy",
+            "item_count": 1
+          }
+        ]
+      },
+      {
         "name": "Lot 42's Grav Ramp",
         "map_locations": [
           {
-            "map": "Holostar1",
+            "map": "Holostar Studios",
             "x": 56,
             "y": 186
           }
@@ -2967,7 +3055,7 @@
         "name": "Kamikaze Noids",
         "map_locations": [
           {
-            "map": "Holostar1",
+            "map": "Holostar Studios",
             "x": 117,
             "y": 162
           }
@@ -2983,7 +3071,7 @@
         "name": "Escape the Tyhrranoid Ambush",
         "map_locations": [
           {
-            "map": "Holostar1",
+            "map": "Holostar Studios",
             "x": 122,
             "y": 297
           }
@@ -3009,7 +3097,7 @@
         "name": "Beat Courtney Gears",
         "map_locations": [
           {
-            "map": "ObaniDraco",
+            "map": "Obani Draco",
             "x": 401,
             "y": 191
           }
@@ -3035,7 +3123,7 @@
         "name": "Go to the Zeldrin Starport",
         "map_locations": [
           {
-            "map": "ZeldrinStarport",
+            "map": "Zeldrin Starport",
             "x": 334,
             "y": 352
           }
@@ -3051,7 +3139,7 @@
         "name": "Inside the Second Ship",
         "map_locations": [
           {
-            "map": "ZeldrinStarport",
+            "map": "Zeldrin Starport",
             "x": 92,
             "y": 165
           }
@@ -3067,7 +3155,7 @@
         "name": "Atop the Twin Shooters",
         "map_locations": [
           {
-            "map": "ZeldrinStarport",
+            "map": "Zeldrin Starport",
             "x": 19,
             "y": 339
           }
@@ -3093,7 +3181,7 @@
         "name": "2002 was a good year in the city (SP)",
         "map_locations": [
           {
-            "map": "Metropolis1",
+            "map": "Metropolis",
             "x": 279,
             "y": 484
           }
@@ -3109,9 +3197,9 @@
         "name": "Metal-Noids",
         "map_locations": [
           {
-            "map": "Metropolis1",
-            "x": 301,
-            "y": 313
+            "map": "Metropolis",
+            "x": 302,
+            "y": 280
           }
         ],
         "sections": [
@@ -3122,10 +3210,26 @@
         ]
       },
       {
+        "name": "In the Window",
+        "map_locations": [
+          {
+            "map": "Metropolis",
+            "x": 302,
+            "y": 350
+          }
+        ],
+        "sections": [
+          {
+            "name": "Skrunch trophy",
+            "item_count": 1
+          }
+        ]
+      },
+      {
         "name": "Across the Gap",
         "map_locations": [
           {
-            "map": "Metropolis1",
+            "map": "Metropolis",
             "x": 84,
             "y": 395
           }
@@ -3141,7 +3245,7 @@
         "name": "Tall Tower (Hovership) ",
         "map_locations": [
           {
-            "map": "Metropolis2",
+            "map": "Metropolis: Mission",
             "x": 443,
             "y": 368
           }
@@ -3157,7 +3261,7 @@
         "name": "Right of the Balcony",
         "map_locations": [
           {
-            "map": "Metropolis2",
+            "map": "Metropolis",
             "x": 439,
             "y": 205
           }
@@ -3173,7 +3277,7 @@
         "name": "Operation: URBAN STORM",
         "map_locations": [
           {
-            "map": "Metropolis2",
+            "map": "Metropolis: Mission",
             "x": 182,
             "y": 182
           }
@@ -3219,7 +3323,7 @@
         "name": "Side Route",
         "map_locations": [
           {
-            "map": "CrashSite",
+            "map": "Crash Site",
             "x": 268,
             "y": 52
           }
@@ -3232,10 +3336,26 @@
         ]
       },
       {
+        "name": "First Corner",
+        "map_locations": [
+          {
+            "map": "Crash Site",
+            "x": 480,
+            "y": 150
+          }
+        ],
+        "sections": [
+          {
+            "name": "Dr Nefarious trophy",
+            "item_count": 1
+          }
+        ]
+      },
+      {
         "name": "Turn Around",
         "map_locations": [
           {
-            "map": "CrashSite",
+            "map": "Crash Site",
             "x": 465,
             "y": 332
           }
@@ -3251,7 +3371,7 @@
         "name": "Explore Crash Site",
         "map_locations": [
           {
-            "map": "CrashSite",
+            "map": "Crash Site",
             "x": 169,
             "y": 280
           }
@@ -3267,7 +3387,7 @@
         "name": "Post Explore Crash Site",
         "map_locations": [
           {
-            "map": "CrashSite",
+            "map": "Crash Site",
             "x": 425,
             "y": 323
           }
@@ -3283,7 +3403,7 @@
         "name": "Aim High (SP)",
         "map_locations": [
           {
-            "map": "CrashSite",
+            "map": "Crash Site",
             "x": 45,
             "y": 484
           }
@@ -3299,7 +3419,7 @@
         "name": "Suck it up! (SP)",
         "map_locations": [
           {
-            "map": "CrashSite",
+            "map": "Crash Site",
             "x": 340,
             "y": 194
           }
@@ -3451,7 +3571,7 @@
         "name": "Grav-Ramp Path",
         "map_locations": [
           {
-            "map": "QwarksHideout",
+            "map": "Qwarks Hideout",
             "x": 332,
             "y": 321
           }
@@ -3467,7 +3587,7 @@
         "name": "Glide from the Ramp",
         "map_locations": [
           {
-            "map": "QwarksHideout",
+            "map": "Qwarks Hideout",
             "x": 415,
             "y": 399
           }
@@ -3483,7 +3603,7 @@
         "name": "Break the Dan (SP)",
         "map_locations": [
           {
-            "map": "QwarksHideout",
+            "map": "Qwarks Hideout",
             "x": 48,
             "y": 143
           }
@@ -3491,6 +3611,22 @@
         "sections": [
           {
             "name": "Break the Dan o7",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Before Qwark's room",
+        "map_locations": [
+          {
+            "map": "Qwarks Hideout",
+            "x": 110,
+            "y": 230
+          }
+        ],
+        "sections": [
+          {
+            "name": "Qwark trophy",
             "item_count": 1
           }
         ]
@@ -3517,6 +3653,22 @@
         "sections": [
           {
             "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "In the Glass House",
+        "map_locations": [
+          {
+            "map": "Koros",
+            "x": 110,
+            "y": 210
+          }
+        ],
+        "sections": [
+          {
+            "name": "Courtney Gears trophy",
             "item_count": 1
           }
         ]
@@ -3583,7 +3735,7 @@
         "name": "Behind the Forcefield",
         "map_locations": [
           {
-            "map": "CommandCenter1",
+            "map": "Command Center",
             "x": 195,
             "y": 153
           }
@@ -3596,10 +3748,26 @@
         ]
       },
       {
+        "name": "Atop the ladder",
+        "map_locations": [
+          {
+            "map": "Command Center",
+            "x": 90,
+            "y": 250
+          }
+        ],
+        "sections": [
+          {
+            "name": "Lawrence trophy",
+            "item_count": 1
+          }
+        ]
+      },
+      {
         "name": "Spread Your Germs (SP)",
         "map_locations": [
           {
-            "map": "CommandCenter1",
+            "map": "Command Center",
             "x": 72,
             "y": 300
           }
@@ -3615,7 +3783,7 @@
         "name": "Defeat Dr. Nefarious",
         "map_locations": [
           {
-            "map": "CommandCenter2",
+            "map": "Command Center 2",
             "x": 337,
             "y": 192
           }
@@ -3631,7 +3799,7 @@
         "name": "Defeat the Biobliterator",
         "map_locations": [
           {
-            "map": "CommandCenter2",
+            "map": "Command Center 2",
             "x": 299,
             "y": 307
           }

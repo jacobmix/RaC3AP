@@ -69,13 +69,12 @@ ADDRESSES = {
             0x00143080, 0x00143084, 0x00143088, 0x0014308C,
             0x00143090, 0x00143094, 0x00143098, 0x0014309C,
         ],
-        "PlanetValues": {
+        "ShipPlanets": {
             "Veldin": 1,
             "Florana": 2,
             "Starship Phoenix": 3,
             "Marcadia": 4,
             "Daxx": 5,
-            # "Phoenix Assault" : 6,
             "Annihilation Nation": 7,
             "Aquatos": 8,
             "Tyhrranosis": 9,
@@ -84,21 +83,45 @@ ADDRESSES = {
             "Blackwater City": 12,
             "Holostar Studios": 13,
             "Koros": 14,
-            # "Unused": 15,
             "Metropolis": 16,
             "Crash Site": 17,
             "Aridia": 18,
             "Qwarks Hideout": 19,
-            # "Command Center 2": 20,
             "Obani Draco": 21,
             "Command Center": 22,
-            # "Holostar Studios Clank": 23,
             "Museum": 24,
-            # "Unused": 25,
-            # "Metropolis Arena": 26,
-            # "Aquatos Base": 27,
-            # "Aquatos Sewers": 28,
-            # "Tyhrranosis: Mission": 29,
+        },
+        "PlanetValues": {
+            "Galaxy": 0,
+            "Veldin": 1,
+            "Florana": 2,
+            "Starship Phoenix": 3,
+            "Marcadia": 4,
+            "Daxx": 5,
+            "Phoenix Assault": 6,
+            "Annihilation Nation": 7,
+            "Aquatos": 8,
+            "Tyhrranosis": 9,
+            "Zeldrin Starport": 10,
+            "Obani Gemini": 11,
+            "Blackwater City": 12,
+            "Holostar Studios": 13,
+            "Koros": 14,
+            "Unused": 15,
+            "Metropolis": 16,
+            "Crash Site": 17,
+            "Aridia": 18,
+            "Qwarks Hideout": 19,
+            "Command Center 2": 20,
+            "Obani Draco": 21,
+            "Command Center": 22,
+            "Holostar Studios Clank": 23,
+            "Museum": 24,
+            "Unused2": 25,
+            "Metropolis: Mission": 26,
+            "Aquatos Base": 27,
+            "Aquatos Sewers": 28,
+            "Tyhrranosis: Mission": 29,
             # "Qwark VidComic Unused 1": 30
             # "Qwark VidComic 1": 31
             # "Qwark VidComic 4": 32
@@ -133,6 +156,7 @@ ADDRESSES = {
         "CurrentPlanet": 0x001D545C,
         "SewerCrystalsInPossession": 0x001426A2,
         "Robonoids active": 0x0014275C,
+        "Allowed in Ship": 0x001D5533,
         "Skill Points": {
             "Go for hang time": 0x001D54B0,
             "Stay Squeaky Clean": 0x001D54B1,
@@ -210,7 +234,7 @@ ADDRESSES = {
 
 LOCATIONS = [
     {
-        "Name": "First Ranger gives weapon",
+        "Name": "Recruitment/Received Shock Blaster",
         "Id": 50010000,
         "Address": "0x001426E0",
         # Use event flag rather than weapon unlock address to avoid issues with weapon randomizer
@@ -218,7 +242,7 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Second Ranger gives weapon",
+        "Name": "Rangers/Received Nitro Launcher",
         "Id": 50010001,
         "Address": "0x001426E1",
         # Use event flag rather than weapon unlock address to avoid issues with weapon randomizer
@@ -226,98 +250,98 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Save Veldin",
+        "Name": "Save Veldin!/Infobot: Florana",
         "Id": 50010002,
         "Address": "0x001426E4",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received Plasma Whip",
+        "Name": "Vendor/Received Plasma Whip",
         "Id": 50020000,
         "Address": "0x00142D1F",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received N60 Storm",
+        "Name": "Vendor/Received N60 Storm",
         "Id": 50020001,
         "Address": "0x00142CCF",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Below Gadgetron Vendor",
+        "Name": "Below Vendor/Titanium Bolt",
         "Id": 50020002,
         "Address": "0x001BBB29",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Path of Death",
+        "Name": "Path of Death/Titanium Bolt",
         "Id": 50020003,
         "Address": "0x001BBB2A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Defeat Qwark",
+        "Name": "Walk the PATH OF DEATH!/Defeat Qwark",
         "Id": 50020004,
         "Address": "0x001426E7",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received Suck Cannon",
+        "Name": "Vendor/Received Suck Cannon",
         "Id": 50030000,
         "Address": "0x00142D27",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received Infector",
+        "Name": "Vendor/Received Infector",
         "Id": 50030001,
         "Address": "0x00142CD7",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Nerves of Titanium",
+        "Name": "VR Training/Nerves of Titanium Bolt",
         "Id": 50030027,
         "Address": "0x001BBB30",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: VR Gadget Training",
+        "Name": "VR Training/ Gadget Training Titanium Bolt",
         "Id": 50030015,
         "Address": "0x001BBB31",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received Magna Plate Armor",
+        "Name": "Armor Vendor/Received Magna Plate Armor",
         "Id": 50030002,
         "Address": "0x001426A0",
         "CheckValue": "1",
         "CheckType": 3
     },
     {
-        "Name": "Received Adamantine Armor",
+        "Name": "Armor Vendor/Received Adamantine Armor",
         "Id": 50030003,
         "Address": "0x001426A0",
         "CheckValue": "2",
         "CheckType": 3
     },
     {
-        "Name": "Received Aegis Mark V Armor",
+        "Name": "Armor Vendor/Received Aegis Mark V Armor",
         "Id": 50030004,
         "Address": "0x001426A0",
         "CheckValue": "3",
         "CheckType": 3
     },
     {
-        "Name": "Received Infernox Armor",
+        "Name": "Armor Vendor/Received Infernox Armor",
         "Id": 50030005,
         "Checks": [
             {
@@ -333,23 +357,23 @@ LOCATIONS = [
         ]
     },
     {
-        "Name": "Received Hacker",
+        "Name": "VR Training/Received Hacker",
         "Id": 50030016,
-        #"Address": "0x00142CB4",
+        # "Address": "0x00142CB4",
         "Address": "0x00142765",  # Same as VR Gadget Training mission completion
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received Hypershot",
+        "Name": "VR Training/Received Hypershot",
         "Id": 50030017,
-        #"Address": "0x00142CAB",
+        # "Address": "0x00142CAB",
         "Address": "0x00142765",  # Same as VR Gadget Training mission completion
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Marcadia Invaded",
+        "Name": "Phoenix Infobots/Infobot: Marcadia",
         "Id": 50030006,
         "Checks": [
             {
@@ -365,21 +389,21 @@ LOCATIONS = [
         ]
     },
     {
-        "Name": "Infobot: Koros",
+        "Name": "Get to the Bridge/Infobot: Koros",
         "Id": 50030007,
         "Address": "0x001D553E",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Play VidComic1",
+        "Name": "Phoenix Infobots/Infobot: Annihilation Nation",
         "Id": 50030008,
         "Address": "0x001426EB",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Aquatos Mission Briefing",
+        "Name": "Phoenix Infobots/Infobot: Aquatos",
         "Id": 50030009,
         # " Address": 0x001426F6, #  Correct Infobot address
         "Address": "0x0014276F",  # Same as Tyhrra-Guise Getting event. This event behinds Phoenix Ship event.
@@ -387,7 +411,7 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Infiltrate Aquatos Base",
+        "Name": "Phoenix Infobots/Infobot: Tyhrranosis",
         "Id": 50030010,
         # "Address": "0x00142C1B",
         "Address": "0x0014275E",  # Same as 1 Sewer Crystal Traded
@@ -395,7 +419,7 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "VR Gadget Training",
+        "Name": "VR Training/Infobot: Daxx",
         "Id": 50030011,
         #  "Address": "0x00142765",
         "Address": "0x00142765",  # Same as T-Bolt: VR training
@@ -403,7 +427,7 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Infobot: Crash Site",
+        "Name": "Phoenix Infobots/Infobot: Crash Site",
         "Id": 50160004,
         #  "Address": "0x001D5541",
         "Address": "0x00142708",  # Same as defeat Giant Cronk
@@ -411,42 +435,42 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Learn Qwarks Hideout from VidComic 5",
+        "Name": "Phoenix Infobots/Infobot: Qwarks Hideout",
         "Id": 50030014,
         "Address": "0x00142734",
         "CheckType": 0,
         "AddressBit": 5  # 3E 00X0_0000
     },
     {
-        "Name": "Escape the Leviathan",
+        "Name": "Received Vid Comics/Qwark Vidcomic 4",
         "Id": 50100003,
         "Address": "0x001426E2",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Gave Al the Master Plan",
+        "Name": "Received Vid Comics/Qwark Vidcomic 5",
         "Id": 50030029,
         "Address": "0x001D5553",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Infobot: Metropolis",
+        "Name": "Phoenix Infobots/Infobot: Metropolis",
         "Id": 50030012,
         "Address": "0x001D5550",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received Spitting Hydra",
+        "Name": "Vendor/Received Spitting Hydra",
         "Id": 50040000,
         "Address": "0x00142CE7",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received Refractor",
+        "Name": "Laser Defense Facility/Received Refractor",
         "Id": 50040001,
         # "Address": "0x00142CB2", # item flag
         "Address": "0x00142C29",  # Marcadia Mission event Flag
@@ -454,336 +478,336 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: After Pool of Water",
+        "Name": "After Pool of Water/Titanium Bolt",
         "Id": 50040002,
         "Address": "0x001BBB39",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Last Refractor Room",
+        "Name": "Last Refractor Room/Titanium Bolt",
         "Id": 50040003,
         "Address": "0x001BBB3A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Ceiling just before Al",
+        "Name": "Ceiling just before Al/Titanium Bolt",
         "Id": 50040004,
         "Address": "0x001BBB3B",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Meet Al",
+        "Name": "Repair the Laser Defense Shield/Qwark Vidcomic 1",
         "Id": 50040005,
         "Address": "0x001426ea",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received Agents of Doom",
+        "Name": "Vendor/Received Agents of Doom",
         "Id": 50070000,
         "Address": "0x00142CF7",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received Tyhrra-Guise",
+        "Name": "Prizes/Received Tyhrra-Guise",
         "Id": 50070001,
         "Address": "0x0014276F",  # Same as Grand Prize Bout(Tyhrra-Guise Getting event)
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Heat Street",
+        "Name": "Heat Street Bolt/Titanium Bolt",
         "Id": 50070002,
         "Address": "0x001BBB51",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Maze of Blaze",
+        "Name": "Maze of Blaze Bolt/Titanium Bolt",
         "Id": 50070003,
         "Address": "0x001BBB52",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Grand Prize Bout",
+        "Name": "Arena Challenges/Grand Prize Bout",
         "Id": 50070004,
         "Address": "0x0014276F",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "The Terrible Two",
+        "Name": "Arena Challenges/The Terrible Two",
         "Id": 50070005,
         "Address": "0x00142772",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Robot Rampage",
+        "Name": "Arena Challenges/Robot Rampage",
         "Id": 50070006,
         "Address": "0x00142773",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Two Minute Warning",
+        "Name": "Arena Challenges/Two Minute Warning",
         "Id": 50070007,
         "Address": "0x00142774",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "90 Seconds of Carnage",
+        "Name": "Arena Challenges/90 Seconds of Carnage",
         "Id": 50070008,
         "Address": "0x00142775",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Onslaught",
+        "Name": "Arena Challenges/Onslaught",
         "Id": 50070009,
         "Address": "0x00142776",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Whip It Good",
+        "Name": "Arena Challenges/Whip It Good",
         "Id": 50070010,
         "Address": "0x00142777",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Hydra N' Seek",
+        "Name": "Arena Challenges/Hydra'n Seek",
         "Id": 50070011,
         "Address": "0x00142778",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Championship Bout",
+        "Name": "Arena Challenges/Championship Bout",
         "Id": 50070012,
         "Address": "0x00142779",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Ninja Challenge",
+        "Name": "Arena Revisit Challenges/Ninja Challenge",
         "Id": 50070014,
         "Address": "0x0014277D",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Counting Ducks",
+        "Name": "Arena Revisit Challenges/Counting Ducks",
         "Id": 50070015,
         "Address": "0x0014277E",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Cycling Weapons",
+        "Name": "Arena Revisit Challenges/Cycling Weapons",
         "Id": 50070016,
         "Address": "0x0014277F",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "One Hit Wonder",
+        "Name": "Arena Revisit Challenges/One Hit Wonder",
         "Id": 50070017,
         "Address": "0x00142780",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Time to Suck",
+        "Name": "Arena Revisit Challenges/Time to Suck",
         "Id": 50070018,
         "Address": "0x00142781",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Naptime",
+        "Name": "Arena Revisit Challenges/Naptime",
         "Id": 50070019,
         "Address": "0x00142782",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Meet Courtney - Arena",
+        "Name": "Arena Revisit Challenges/Meet Courtney - Arena",
         "Id": 50070013,
         "Address": "0x00142771",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "More Cycling Weapons",
+        "Name": "Arena Revisit Challenges/More Cycling Weapons",
         "Id": 50070020,
         "Address": "0x00142783",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Dodge the Twins",
+        "Name": "Arena Revisit Challenges/Dodge the Twins",
         "Id": 50070021,
         "Address": "0x00142784",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Chop Chop",
+        "Name": "Arena Revisit Challenges/Chop Chop",
         "Id": 50070022,
         "Address": "0x00142785",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Sleep Inducer",
+        "Name": "Arena Revisit Challenges/Sleep Inducer",
         "Id": 50070023,
         "Address": "0x00142786",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "The Other White Meat",
+        "Name": "Arena Revisit Challenges/The Other White Meat",
         "Id": 50070024,
         "Address": "0x00142787",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Championship Bout II",
+        "Name": "Arena Revisit Challenges/Championship Bout II",
         "Id": 50070025,
         "Address": "0x00142788",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Qwarktastic Battle",
+        "Name": "Qwarktastic Battle/It's Qwarktastic!",
         "Id": 50070026,
         "Address": "0x00142789",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Heat Street",
+        "Name": "Gauntlet Challenges/Heat Street",
         "Id": 50070027,
         "Address": "0x0014276E",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Crispy Critter",
+        "Name": "Gauntlet Challenges/Crispy Critter",
         "Id": 50070028,
         "Address": "0x0014277A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Pyro Playground",
+        "Name": "Gauntlet Challenges/Pyro Playground",
         "Id": 50070029,
         "Address": "0x0014277B",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Suicide Run",
+        "Name": "Gauntlet Challenges/Suicide Run",
         "Id": 50070030,
         "Address": "0x0014277C",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "BBQ Boulevard",  # (Meet Courtney - Gauntlet)
+        "Name": "Gauntlet Revisit Challenges/BBQ Boulevard",  # (Meet Courtney - Gauntlet)
         "Id": 50070031,
         "Address": "0x00142770",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Maze of Blaze",
+        "Name": "Gauntlet Revisit Challenges/Maze of Blaze",
         "Id": 50070032,
         "Address": "0x0014278A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Cremation Station",
+        "Name": "Gauntlet Revisit Challenges/Cremation Station",
         "Id": 50070033,
         "Address": "0x0014278B",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "The Annihilator (Gauntlet)",
+        "Name": "Gauntlet Revisit Challenges/The Annihilator",
         "Id": 50070034,
         "Address": "0x0014278C",
         "CheckType": 0,
         "AddressBit": 0
     },
     # {
-    #     "Name": "Qwark VidComic 2",
+    #     "Name": "Prizes/Qwark VidComic 2",
     #     "Id": 50070035,
     #     "Address": "0x001D5551",
     #     "CheckType": 0,
     #     "AddressBit": 0
     # },
     # {
-    #     "Name": "Qwark VidComic 3",
+    #     "Name": "Prizes/Qwark VidComic 3",
     #     "Id": 50070036,
     #     "Address": "0x001D5552",
     #     "CheckType": 0,
     #     "AddressBit": 0
     # },
     {
-        "Name": "Received Flux Rifle",
+        "Name": "Vendor/Received Flux Rifle",
         "Id": 50080000,
         "Address": "0x00142D0F",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Under the Bridge",
+        "Name": "Under the Bridge/Titanium Bolt",
         "Id": 50080001,
         "Address": "0x001BBB5A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Underwater Bolt",
+        "Name": "Underwater Bolt/Titanium Bolt",
         "Id": 50080002,
         "Address": "0x001BBB5B",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Behind the Locked Gate",
+        "Name": "Behind the Locked Gate/Titanium Bolt",
         "Id": 50080003,
         "Address": "0x001BBB59",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Top Left Bolt",
+        "Name": "Top Left Bolt/Titanium Bolt",
         "Id": 50280000,
         "Address": "0x001BBBF9",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Swinging Bolt",
+        "Name": "Swinging Bolt/Titanium Bolt",
         "Id": 50280001,
         "Address": "0x001BBBFA",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "1 Sewer Crystal Traded",
+        "Name": "Gather Sewer Crystals/1 Sewer Crystal Traded",
         "Id": 50280002,
         "Address": "0x0014275E",  # JP: 1426DE,
         "CompareType": 1,  # Greater than
@@ -791,7 +815,7 @@ LOCATIONS = [
         "CheckValue": "0"
     },
     {
-        "Name": "5 Sewer Crystals Traded",
+        "Name": "Gather Sewer Crystals/5 Sewer Crystals Traded",
         "Id": 50280003,
         "Address": "0x0014275E",  # JP: 1426DE,
         "CheckType": 3,  # Byte type
@@ -799,7 +823,7 @@ LOCATIONS = [
         "CheckValue": "4"
     },
     {
-        "Name": "10 Sewer Crystals Traded",
+        "Name": "Gather Sewer Crystals/10 Sewer Crystals Traded",
         "Id": 50280004,
         "Address": "0x0014275E",  # JP: 1426DE,
         "CheckType": 3,  # Byte type
@@ -807,7 +831,7 @@ LOCATIONS = [
         "CheckValue": "9"  # 0x9
     },
     {
-        "Name": "20 Sewer Crystals Traded",
+        "Name": "Gather Sewer Crystals/20 Sewer Crystals Traded",
         "Id": 50280005,
         "Address": "0x0014275E",  # JP: 1426DE,
         "CheckType": 3,  # Byte type
@@ -815,56 +839,56 @@ LOCATIONS = [
         "CheckValue": "19"  # 0x13
     },
     {
-        "Name": "Received Annihilator",
+        "Name": "Vendor/Received Annihilator",
         "Id": 50090000,
         "Address": "0x00142CDF",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received Holo-Shield Glove",
+        "Name": "Vendor/Received Holo-Shield Glove",
         "Id": 50090001,
         "Address": "0x00142D07",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: South East Cannon",
+        "Name": "South East Cannon/Titanium Bolt",
         "Id": 50090002,
         "Address": "0x001BBB62",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Underground Cave Bolt",
+        "Name": "Underground Cave Bolt/Titanium Bolt",
         "Id": 50090003,
         "Address": "0x001BBB61",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Right of the Taxi",
+        "Name": "Right of the Taxi/Titanium Bolt",
         "Id": 50050001,
         "Address": "0x001BBB41",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Time-Sensitive Door",
+        "Name": "Time Sensitive Door/Titanium Bolt",
         "Id": 50050002,
         "Address": "0x001BBB42",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received Charge Boots",
+        "Name": "Around the Island/Received Charge Boots",
         "Id": 50050003,
         "Address": "0x00142CBD",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Infiltrate Weapons Facility",
+        "Name": "Infiltrate the Weapons Facility/Infobot: Obani Gemini",
         "Id": 50050000,
         "Address": "0x001D553B",
         # Infobot Address: "0x00142C29" bit 3
@@ -872,7 +896,7 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Gunship",
+        "Name": "Explore the Docks/Courtney's Music Vid",
         "Id": 50050004,
         # "Address": "0x00143B39", #  ??
         "Address": "0x0014275B",  # Daxx Courtney Room
@@ -880,35 +904,35 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Received Disk Blade Gun",
+        "Name": "Vendor/Received Disk Blade Gun",
         "Id": 50110000,
         "Address": "0x00142CEF",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Follow the Lava",
+        "Name": "Follow the Lava/Titanium Bolt",
         "Id": 50110001,
         "Address": "0x001BBB72",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Between the Twin Towers",
+        "Name": "Between the Twin Towers/Titanium Bolt",
         "Id": 50110002,
         "Address": "0x001BBB71",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Infobot: Blackwater City",
+        "Name": "Explore the Second Moon/Infobot: Blackwater City",
         "Id": 50110003,
         "Address": "0x00142BB2",
         "CheckType": 0,
         "AddressBit": 3  # 08: 0000_X000
     },
     {
-        "Name": "Received Grav Boots",
+        "Name": "Save Blackwater City/Received Grav Boots",
         "Id": 50120000,
         #  "Address": "0x00142CAD",
         "Address": "0x00142C40",
@@ -916,7 +940,7 @@ LOCATIONS = [
         "AddressBit": 3  # 0x08: 0000_X000
     },
     {
-        "Name": "Infobot: Holostar Studios",
+        "Name": "Save Blackwater City/Infobot: Holostar Studios",
         "Id": 50120001,
         "Address": "0x00142705",
         #  "Address": "0x00142771", #  WA: Same as Meet Courtney - Arena
@@ -924,70 +948,70 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Received Rift Inducer",
+        "Name": "Vendor/Received Rift Inducer",
         "Id": 50130000,
         "Address": "0x00142CFF",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Atop the Chairs",
+        "Name": "Atop the Chairs/Titanium Bolt",
         "Id": 50130001,
         "Address": "0x001BBB82",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Lot 42's Grav Ramp",
+        "Name": "Lot 42's Grav Ramp/Titanium Bolt",
         "Id": 50130002,
         "Address": "0x001BBB83",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Kamikaze Noids",
+        "Name": "Kamikaze Noids/Titanium Bolt",
         "Id": 50130003,
         "Address": "0x001BBB81",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Infobot: Obani Draco",
+        "Name": "Escape the Tyhrranoid Ambush/Infobot: Obani Draco",
         "Id": 50130004,
         "Address": "0x00142713",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Defeat Courtney Gears",
+        "Name": "Beat Courtney Gears/Infobot: Zeldrin Starport",
         "Id": 50210000,
         "Address": "0x0014270D",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received Bolt Grabber V2",
+        "Name": "Go to the Zeldrin Starport/Received Bolt Grabber V2",
         "Id": 50100000,
         "Address": "0x00142CA7",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Inside the Second Ship",
+        "Name": "Inside the Second Ship/Titanium Bolt",
         "Id": 50100001,
         "Address": "0x001BBB6A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Atop the Twin Shooters",
+        "Name": "Atop the Twin Shooters/Titanium Bolt",
         "Id": 50100002,
         "Address": "0x001BBB69",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received Map-O-Matic",
+        "Name": "Operation: URBAN STORM/Received Map-O-Matic",
         "Id": 50260006,
         #  "Address": "0x00142CA5", #  item flag
         "Address": "0x00142C64",  # Metropolis Mission Clear
@@ -995,49 +1019,49 @@ LOCATIONS = [
         "AddressBit": 5  # 0x20 : 00X0_0000
     },
     {
-        "Name": "T-Bolt: Across the Gap",
+        "Name": "Across the Gap/Titanium Bolt",
         "Id": 50160000,
         "Address": "0x001BBB99",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Before Grav-wall",
+        "Name": "Right of the Balcony/Titanium Bolt",
         "Id": 50160003,
         "Address": "0x001BBB9A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Tall Tower (Hovership)",
+        "Name": "Tall Tower (Hovership) /Titanium Bolt",
         "Id": 50260000,
         "Address": "0x001BBBE9",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Metal-Noids",
+        "Name": "Metal-Noids/The AAAAGE OF ROBOTS!!!",
         "Id": 50160002,
         "Address": "0x0014275C",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received Nano-Pak",
+        "Name": "Side Route/Received Nano-Pak",
         "Id": 50170001,
         "Address": "0x00142CC0",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Turn Around",
+        "Name": "Turn Around/Titanium Bolt",
         "Id": 50170000,
         "Address": "0x001BBBA1",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Infobot: Aridia",
+        "Name": "Post Explore Crash Site/Infobot: Aridia",
         "Id": 50170003,
         "Address": "0x00142C52",
         # "Address": "0x00142722",
@@ -1046,7 +1070,7 @@ LOCATIONS = [
         "AddressBit": 3  # / 0x02: 0000_00X0
     },
     {
-        "Name": "Received Warp Pad",
+        "Name": "Operation: DEATH VALLEY/Received Warp Pad",
         "Id": 50180000,
         # "Address": "0x00142CBF", #  Item flag
         "Address": "0x00142C56",  # Clear Aridia
@@ -1054,112 +1078,112 @@ LOCATIONS = [
         "AddressBit": 4  # 0x10: 000X_0000
     },
     {
-        "Name": "Received Qwack-O-Ray",
+        "Name": "Vendor/Received Qwack-O-Ray",
         "Id": 50180001,
         "Address": "0x00142D2F",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Under the Bridge (Assassination)",
+        "Name": "Under the Bridge (Assassination)/Titanium Bolt",
         "Id": 50180002,
         "Address": "0x001BBBAA",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Behind the Base (X12 Endgame)",
+        "Name": "Behind the Base (X12 Endgame)/Titanium Bolt",
         "Id": 50180003,
         "Address": "0x001BBBA9",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received Gadgetron PDA",
+        "Name": "Grav-Ramp Path/Received Gadgetron PDA",
         "Id": 50190000,
         "Address": "0x00142CC3",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Glide from the Ramp",
+        "Name": "Glide from the Ramp/Titanium Bolt",
         "Id": 50190001,
         "Address": "0x001BBBB1",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Behind the Metal Fence",
+        "Name": "Behind the Metal Fence/Titanium Bolt",
         "Id": 50140000,
         "Address": "0x001BBB89",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: Pair of Towers",
+        "Name": "Pair of Towers/Titanium Bolt",
         "Id": 50140001,
         "Address": "0x001BBB8A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Infobot: Command Center",
+        "Name": "Access big gun control panel/Infobot: Command Center",
         "Id": 50140002,
         "Address": "0x00142C49",
         "CheckType": 0,
         "AddressBit": 3  # 04 -> 0C: 0000_X000
     },
     {
-        "Name": "T-Bolt: Behind the Forcefield",
+        "Name": "Behind the Forcefield/Titanium Bolt",
         "Id": 50220000,
         "Address": "0x001BBBC9",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Dr. Nefarious Defeated!",
+        "Name": "Defeat Dr. Nefarious/Dr. Nefarious Defeated!",
         "Id": 50200000,
         "Address": "0x0014270F",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Biobliterator Defeated!",
+        "Name": "Defeat the Biobliterator/Biobliterator Defeated!",
         "Id": 50200001,
         "Address": "0x00142BB6",
         "CheckType": 0,
         "AddressBit": 6  # 40: 0X00_0000
     },
     {
-        "Name": "T-Bolt: VidComic 1",
+        "Name": "Qwark Vid Comics/VC1 - All Tokens Titanium Bolt",
         "Id": 50310001,
         "Address": "0x001BBB32",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: VidComic 2",
+        "Name": "Qwark Vid Comics/VC2 - All Tokens Titanium Bolt",
         "Id": 50330001,
-        "Address": "0x001BBB33",
-        "CheckType": 0,
-        "AddressBit": 0
-    },
-    {
-        "Name": "T-Bolt: VidComic 3",
-        "Id": 50340001,
         "Address": "0x001BBB34",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: VidComic 4",
+        "Name": "Qwark Vid Comics/VC3 - All Tokens Titanium Bolt",
+        "Id": 50340001,
+        "Address": "0x001BBB33",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Qwark Vid Comics/VC4 - All Tokens Titanium Bolt",
         "Id": 50320001,
         "Address": "0x001BBB35",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "T-Bolt: VidComic 5",
+        "Name": "Qwark Vid Comics/VC5 - All Tokens Titanium Bolt",
         "Id": 50350001,
         "Address": "0x001BBB36",
         "CheckType": 0,
@@ -1806,574 +1830,574 @@ LOCATIONS = [
         "CheckValue": "1408000"
     },
     {
-        "Name": "Operation IRON SHIELD: Secure the Area",
+        "Name": "Operation: IRON SHIELD/Secure the Area",
         "Id": 50040006,
         "Address": "0x00142738",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation IRON SHIELD: Air Assault",
+        "Name": "Operation: IRON SHIELD/Air Assault",
         "Id": 50040007,
         "Address": "0x00142739",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation IRON SHIELD: Turret Command",
+        "Name": "Operation: IRON SHIELD/ Turret Command",
         "Id": 50040008,
         "Address": "0x0014273A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation IRON SHIELD: Under the Gun",
+        "Name": "Operation: IRON SHIELD/ Under the Gun",
         "Id": 50040009,
         "Address": "0x0014273B",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation IRON SHIELD: Hit n' Run",
+        "Name": "Operation: IRON SHIELD/ Hit n' Run",
         "Id": 50040010,
         "Address": "0x0014273C",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation BLACK TIDE: The Battle of Blackwater City",
+        "Name": "Operation: BLACK TIDE/ The Battle of Blackwater City",
         "Id": 50120002,
         "Address": "0x0014273D",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation BLACK TIDE: The Bridge",
+        "Name": "Operation: BLACK TIDE/ The Bridge",
         "Id": 50120003,
         "Address": "0x0014273E",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation BLACK TIDE: Counterattack",
+        "Name": "Operation: BLACK TIDE/ Counterattack",
         "Id": 50120004,
         "Address": "0x00142C40",  # As same as Gravity-Boots event
         "CheckType": 0,
         "AddressBit": 3
     },
     {
-        "Name": "Operation URBAN STORM: Countdown",
+        "Name": "Operation: URBAN STORM/ Countdown",
         "Id": 50260001,
         "Address": "0x00142747",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation URBAN STORM: Urban Combat",
+        "Name": "Operation: URBAN STORM/ Urban Combat",
         "Id": 50260002,
         "Address": "0x00142748",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation URBAN STORM: Tower Attack",
+        "Name": "Operation: URBAN STORM/ Tower Attack",
         "Id": 50260003,
         "Address": "0x00142749",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation URBAN STORM: Air Superiority",
+        "Name": "Operation: URBAN STORM/ Air Superiority",
         "Id": 50260004,
         "Address": "0x0014274A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation URBAN STORM: Turret Command",
+        "Name": "Operation: URBAN STORM/ Turret Command",
         "Id": 50260005,
         "Address": "0x0014274B",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation DEATH VALLEY: The Tunnels of Outpost X12",
+        "Name": "Operation: DEATH VALLEY/ The Tunnels of Outpost X12",
         "Id": 50180004,
         "Address": "0x00142742",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation DEATH VALLEY: Ambush in Red Rock Valley",
+        "Name": "Operation: DEATH VALLEY/ Ambush in Red Rock Valley",
         "Id": 50180005,
         "Address": "0x00142743",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation DEATH VALLEY: Assassination",
+        "Name": "Operation: DEATH VALLEY/ Assassination",
         "Id": 50180006,
         "Address": "0x00142744",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation DEATH VALLEY: Reclaim the Valley",
+        "Name": "Operation: DEATH VALLEY/ Reclaim the Valley",
         "Id": 50180007,
         "Address": "0x00142745",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation DEATH VALLEY: X12 Endgame",
+        "Name": "Operation: DEATH VALLEY/ X12 Endgame",
         "Id": 50180008,
         "Address": "0x00142746",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Qwark VidComic 1 Clear",
+        "Name": "Qwark Vid Comics/Qwark VidComic 1 Clear",
         "Id": 50310000,
         "Address": "0x00142734",
         "CheckType": 0,
         "AddressBit": 1
     },
     {
-        "Name": "Qwark VidComic 2 Clear",
+        "Name": "Qwark Vid Comics/Qwark VidComic 2 Clear",
         "Id": 50330000,
         "Address": "0x00142734",
         "CheckType": 0,
         "AddressBit": 3
     },
     {
-        "Name": "Qwark VidComic 3 Clear",
+        "Name": "Qwark Vid Comics/Qwark VidComic 3 Clear",
         "Id": 50340000,
         "Address": "0x00142734",
         "CheckType": 0,
         "AddressBit": 2
     },
     {
-        "Name": "Qwark VidComic 4 Clear",
+        "Name": "Qwark Vid Comics/Qwark VidComic 4 Clear",
         "Id": 50320000,
         "Address": "0x00142734",
         "CheckType": 0,
         "AddressBit": 4
     },
     {
-        "Name": "Qwark VidComic 5 Clear",
+        "Name": "Qwark Vid Comics/Qwark VidComic 5 Clear",
         "Id": 50350000,
         "Address": "0x00142734",
         "CheckType": 0,
         "AddressBit": 5
     },
     {
-        "Name": "Destroy the Momma Tyhrranoid",
+        "Name": "Destroy the Momma Tyhrranoid/IRON. HARD. ABS.",
         "Id": 50090004,
         "Address": "0x0014271D",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation ISLAND STRIKE: Assault on Kavu Island",
+        "Name": "Operation: ISLAND STRIKE: Assault on Kavu Island",
         "Id": 50290000,
         "Address": "0x0014274C",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation ISLAND STRIKE: Dogfight over Kavu Island",
+        "Name": "Operation: ISLAND STRIKE: Dogfight over Kavu Island",
         "Id": 50290001,
         "Address": "0x0014274D",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation ISLAND STRIKE: Operation Thunderbolt",
+        "Name": "Operation: ISLAND STRIKE: Operation Thunderbolt",
         "Id": 50290002,
         "Address": "0x0014274F",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation ISLAND STRIKE: The Final Battle",
+        "Name": "Operation: ISLAND STRIKE: The Final Battle",
         "Id": 50290003,
         "Address": "0x00142750",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Stay Squeaky Clean",
+        "Name": "Stay Squeaky Clean (SP)/Complete the Path of Death without a hit",
         "Id": 50020005,
         "Address": "0x001D54B1",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Turn Up The Heat",
+        "Name": "Armor Vendor/Turn Up The Heat! (SP)",
         "Id": 50030030,
         "Address": "0x001D54B4",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Strive for arcade perfection",
+        "Name": "Qwark Vid Comics/Strive for arcade perfection (SP)",
         "Id": 50030031,
         "Address": "0x001D54B2",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Beat Helga's best VR time",
+        "Name": "VR Training/Beat Helga's Best Time (0:50) (SP)",
         "Id": 50030032,
         "Address": "0x001D54B3",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Monkeying around",
+        "Name": "Monkeying Around (SP)/Hit n' Run",
         "Id": 50030033,
         "Address": "0x001D54B5",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Reflect on how to score",
+        "Name": "Reflect on how to score (SP)/Kill 25 enemies with the Refractor",
         "Id": 50040011,
         "Address": "0x001D54B6",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Bugs to Birdie",
+        "Name": "Bugs to Birds (SP)/Turn 15 Floranian Blood Flies into ducks.",
         "Id": 50050005,
         "Address": "0x001D54B7",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Bash the bug",
+        "Name": "Bash the bug (SP)/Beat Scorpio using only the wrench",
         "Id": 50070037,
         "Address": "0x001D54B8",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Be an eight time champ",
+        "Name": "Be an eight time champ (SP)/Beat all the Gauntlet challenges",
         "Id": 50070038,
         "Address": "0x001D54B9",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Flee Flawlessly",
+        "Name": "Flee Flawlessly (SP)/Complete a Gauntlet without taking a hit",
         "Id": 50070039,
         "Address": "0x001D54BA",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Lights, camera action!",
+        "Name": "Lights, camera action! (SP)/Destroy 5 Floating Cameras in the gauntlet.",
         "Id": 50070040,
         "Address": "0x001D54BB",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Search for sunken treasure",
+        "Name": "Search for sunken treasure (SP)/Blow up 40 underwater crates",
         "Id": 50080004,
         "Address": "0x001D54BC",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Be a Sharpshooter",
+        "Name": "Be a Sharpshooter (SP)/Snipe 10 Tyhrranoids in the towers",
         "Id": 50090005,
         "Address": "0x001D54BD",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Get to the belt",
+        "Name": "Get to the belt (SP)/Get onto the floating asteroid ring",
         "Id": 50110004,
         "Address": "0x001D54BE",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Bash the party",
+        "Name": "Bash the party (SP)/Kill 20 enemies with the wrench",
         "Id": 50120005,
         "Address": "0x001D54BF",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Feeling Lucky",
+        "Name": "Feeling Lucky (SP)/Win the jackpot",
         "Id": 50130005,
         "Address": "0x001D54C0",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: You break it, you win it",
+        "Name": "You break it, you win it (SP)/Smash up the Robot Base",
         "Id": 50140003,
         "Address": "0x001D54C1",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: 2002 was a good year in the city",
+        "Name": "2002 was a good year in the city (SP)/Destroy the blimp",
         "Id": 50160001,
         "Address": "0x001D54C2",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Suck it up!",
+        "Name": "Suck it up! (SP)/Kill 40 enemies using the Suck Cannon",
         "Id": 50170004,
         "Address": "0x001D54C3",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Aim High",
+        "Name": "Aim High (SP)/Kill 10 Skreeducks",
         "Id": 50170005,
         "Address": "0x001D54C4",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Go for hang time",
+        "Name": "Go for hang time (SP)/Get 2 seconds of air with the Turbo Slider",
         "Id": 50180009,
         "Address": "0x001D54B0",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Zap back at ya'",
+        "Name": "Zap back at ya' (SP)/Kill 10 enemies with the Refractor",
         "Id": 50180010,
         "Address": "0x001D54C5",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Break the Dan",
+        "Name": "Break the Dan (SP)/Break the Dan o7",
         "Id": 50190002,
         "Address": "0x001D54C6",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Spread your germs",
+        "Name": "Spread Your Germs (SP)/Infect 30 enemies.",
         "Id": 50220001,
         "Address": "0x001D54C7",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Hit the motherload",
+        "Name": "Gather Sewer Crystals/Hit the motherload (SP)",
         "Id": 50280006,
         "Address": "0x001D54C8",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Pirate booty - set a new record for qwark",
+        "Name": "Qwark Vid Comics/VC1 - Set a new record for Qwark (2:40) (SP)",
         "Id": 50310003,
         "Address": "0x001D54C9",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Deja Q All over Again - set a new record for qwark",
+        "Name": "Qwark Vid Comics/VC2 - Set a new record for Qwark (2:10) (SP)",
         "Id": 50330003,
-        "Address": "0x001D54CA",
-        "CheckType": 0,
-        "AddressBit": 0
-    },
-    {
-        "Name": "Skill Point: Arriba Amoeba! - set a new record for qwark",
-        "Id": 50340003,
         "Address": "0x001D54CB",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: Shadow of the robot - set a new record for qwark",
+        "Name": "Qwark Vid Comics/VC3 - Set a new record for Qwark (1:50) (SP)",
+        "Id": 50340003,
+        "Address": "0x001D54CA",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Qwark Vid Comics/VC4 - Set a new record for Qwark (4:45) (SP)",
         "Id": 50320003,
         "Address": "0x001D54CC",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skill Point: The Shaming of the Q - set a new record for qwark",
+        "Name": "Qwark Vid Comics/VC5 - Set a new record for Qwark (2:00) (SP)",
         "Id": 50350003,
         "Address": "0x001D54CD",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "VR Gadget Training",
+        "Name": "VR Training/VR Gadget Training",
         "Id": 50030018,
         "Address": "0x00142765",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "VR: Warm Up",
+        "Name": "VR Training/ Warm Up",
         "Id": 50030019,
         "Address": "0x00142766",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "VR: Don't Look Down",
+        "Name": "VR Training/ Don't Look Down",
         "Id": 50030020,
         "Address": "0x00142767",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "VR: Speed Round",
+        "Name": "VR Training/ Speed Round",
         "Id": 50030021,
         "Address": "0x00142768",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "VR: Hot Stepper",
+        "Name": "VR Training/ Hot Stepper",
         "Id": 50030022,
         "Address": "0x00142769",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "VR: 90 Second Slayer",
+        "Name": "VR Training/ 90 Second Slayer",
         "Id": 50030023,
         "Address": "0x0014276A",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "VR: The Shocker",
+        "Name": "VR Training/ The Shocker",
         "Id": 50030024,
         "Address": "0x0014276B",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "VR: Wrench Beatdown",
+        "Name": "VR Training/ Wrench Beatdown",
         "Id": 50030025,
         "Address": "0x0014276C",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "VR: Nerves of Titanium",
+        "Name": "VR Training/ Nerves of Titanium",
         "Id": 50030026,
         "Address": "0x0014276D",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received Mini-Turret Glove",
+        "Name": "Slim Cognito/Received Mini-Turret Glove",
         "Id": 50080005,
         "Address": "0x00142CB5",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received Lava Gun",
+        "Name": "Slim Cognito/Received Lava Gun",
         "Id": 50080006,
         "Address": "0x00142CB1",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received Shield Charger",
+        "Name": "Slim Cognito/Received Shield Charger",
         "Id": 50080007,
         "Address": "0x00142CB6",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received Bouncer",
+        "Name": "Slim Cognito/Received Bouncer",
         "Id": 50080008,
         "Address": "0x00142CB3",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received Plasma Coil",
+        "Name": "Slim Cognito/Received Plasma Coil",
         "Id": 50080009,
         "Address": "0x00142CB0",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Escape Pod",
+        "Name": "Explore Crash Site/Master Plan",
         "Id": 50170002,
         "Address": "0x00142C52",  # weird address but it's correct
         "CheckType": 0,
         "AddressBit": 2
     },
     {
-        "Name": "Ratchet trophy",
+        "Name": "2nd Building Upper/Ratchet trophy",
         "Id": 50020006,
         "Address": "0x00142790",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Clank trophy",
+        "Name": "Above the tall elevator/Clank trophy",
         "Id": 50130006,
         "Address": "0x00142791",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Qwark trophy",
+        "Name": "Before Qwark's room/Qwark trophy",
         "Id": 50190003,
         "Address": "0x00142792",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Dr Nefarious trophy",
+        "Name": "First Corner/Dr Nefarious trophy",
         "Id": 50170006,
         "Address": "0x00142793",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Skrunch trophy",
+        "Name": "In the Window/Skrunch trophy",
         "Id": 50160005,
         "Address": "0x00142794",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Lawrence trophy",
+        "Name": "Atop the ladder/Lawrence trophy",
         "Id": 50220001,
         "Address": "0x00142795",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Plumber trophy",
+        "Name": "Around the Island/Plumber trophy",
         "Id": 50050006,
         "Address": "0x00142796",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Courtney Gears trophy",
+        "Name": "In the Glass House/Courtney Gears trophy",
         "Id": 50140004,
         "Address": "0x00142797",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "AL trophy",
+        "Name": "Atop the pillar/AL trophy",
         "Id": 50090006,
         "Address": "0x00142798",
         "CheckType": 0,

@@ -157,7 +157,7 @@
      "decrement": 1,
     "initial_quantity": 0,
     "img": "images/items/weapon/MiniturretGlove.png",
-    "codes": "MegaTurretGlove"
+    "codes": "MiniTurretGlove"
   },
   {
     "name": "Lava Gun",

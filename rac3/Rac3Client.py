@@ -24,7 +24,7 @@ from . import Locations
 # from .data.Constants import EPISODES
 from .Rac3Interface import Rac3Interface
 from .Rac3Callbacks import init, update
-from .Rac3Options import GAME_TITLE, GAME_TITLE_FULL
+from .Rac3Options import GAME_TITLE, GAME_TITLE_FULL, slot_data_options
 
 CLIENT_INIT_LOG = f"{GAME_TITLE} Client"
 CLIENT_VERSION = "0.1.0"
@@ -44,12 +44,21 @@ class CommandProcessor(ClientCommandProcessor):
         if isinstance(self.ctx, Rac3Context):
             self.ctx.game_interface.received_others(50000091)
 
+    def _cmd_rac3_info(self):
+        if isinstance(self.ctx, Rac3Context):
+            self.ctx.game_interface.dump_info(self.ctx)
+
+    def _cmd_force_update(self):
+        if isinstance(self.ctx, Rac3Context):
+            self.ctx.game_interface.update()
+
 
 class Rac3Context(CommonContext):
     # Client variables
     command_processor = CommandProcessor
     game_interface: Rac3Interface
     game = f"{GAME_TITLE_FULL}"
+    team = f'Team #1'
     pcsx2_sync_task: Optional[asyncio.Task] = None
     is_connected_to_game: bool = False
     is_connected_to_server: bool = False
@@ -62,6 +71,7 @@ class Rac3Context(CommonContext):
     death_link_enabled = False
     queued_deaths: int = 0
     location_table = None
+    current_planet: int = 0
 
     items_handling = 0b111  # This is mandatory
 

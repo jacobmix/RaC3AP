@@ -9,6 +9,8 @@ from NetUtils import ClientStatus
 ##################################################
 if TYPE_CHECKING:
     from .Rac3Client import Rac3Context as Context
+
+
 ##################################################
 # Only change point: Change filename/Class name  #
 ##################################################
@@ -28,6 +30,8 @@ async def update(ctx: 'Context', ap_connected: bool) -> None:
         await handle_checked_locations(ctx)
         # Check goal is checked or not
         await handle_check_goal(ctx)
+        # Check planet id
+        await handle_planet_changed(ctx)
 
         ctx.game_interface.update()
 
@@ -40,6 +44,20 @@ async def init(ctx: 'Context', ap_connected: bool) -> None:
         # Initialize all date
         ctx.game_interface.init()
         pass
+
+
+async def handle_planet_changed(ctx: 'Context') -> None:
+    if ctx.slot_data is None:
+        return
+    ctx.current_planet = ctx.game_interface.new_planet()
+    await ctx.send_msgs([{"cmd": 'set',
+                          "key": f'rac3_current_planet_{ctx.slot_data["Slot"]}_{ctx.team}',
+                          "default": 0,
+                          "want_reply": False,
+                          "operations": [{
+                              "operation": 'replace',
+                              "value": ctx.current_planet}]
+                          }])
 
 
 async def handle_received_items(ctx: 'Context') -> None:
@@ -91,7 +109,7 @@ async def handle_deathlink(ctx: 'Context') -> None:
     if not ctx.death_link_enabled:
         return
 
-    if time()-ctx.deathlink_timestamp > 10:
+    if time() - ctx.deathlink_timestamp > 10:
         if ctx.game_interface.alive():
             if ctx.queued_deaths > 0:
                 ctx.game_interface.kill_player()
@@ -111,4 +129,3 @@ async def handle_check_goal(ctx: 'Context') -> None:
     victory_code = ctx.game_interface.get_victory_code()
     if victory_code in ctx.checked_locations:
         await ctx.send_msgs([{"cmd": "StatusUpdate", "status": ClientStatus.CLIENT_GOAL}])
-

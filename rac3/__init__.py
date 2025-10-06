@@ -1,10 +1,11 @@
 import logging
-from typing import Any, Dict, Optional
+from typing import Any, ClassVar, Dict, Optional
 
 from BaseClasses import Item, ItemClassification, MultiWorld, Tutorial
 from worlds.AutoWorld import CollectionState, WebWorld, World
 from worlds.LauncherComponents import Component, components, launch_subprocess, SuffixIdentifier, Type
 
+from . import UniversalTracker
 from .Items import (create_item, create_itempool, filter_item_names, gadget_items, item_table)
 from .Locations import get_level_locations, get_location_names, get_regions, get_total_locations, location_groups
 
@@ -53,8 +54,12 @@ class RaC3World(World):
     location_name_groups = location_groups
     preplaced_items: list[str] = []
     # Config for Universal Tracker
+
+    using_ut: bool  # so we can check if we're using UT only once
+    passthrough: dict[str, Any]
     ut_can_gen_without_yaml = True
     disable_ut = False
+    tracker_world: ClassVar = UniversalTracker.tracker_world
 
     for region in get_regions():
         location_name_groups[region] = set(get_level_locations(region))
@@ -75,16 +80,7 @@ class RaC3World(World):
         self.preplaced_items = []
 
         # implement .yaml-less Universal Tracker support
-        if (hasattr(self.multiworld, "generation_is_fake")
-            and hasattr(self.multiworld,"re_gen_passthrough")
-            and self.game in self.multiworld.re_gen_passthrough):
-
-            slot_data = self.multiworld.re_gen_passthrough[self.game]
-            self.options.start_inventory_from_pool.value = slot_data["options"]["start_inventory_from_pool"]
-            self.options.starting_weapons.value = slot_data["options"]["starting_weapons"]
-            self.options.bolt_and_xp_multiplier.value = slot_data["options"]["bolt_and_xp_multiplier"]
-            self.options.enable_weapon_level_as_item.value = slot_data["options"]["enable_weapon_level_as_item"]
-            self.options.extra_armor_upgrade.value = slot_data["options"]["extra_armor_upgrade"]
+        UniversalTracker.setup_options_from_slot_data(self)
 
         starting_weapons = Items.starting_weapons(self, self.options.starting_weapons.value)
         starting_planets = ["Infobot: Florana", "Infobot: Starship Phoenix"]
