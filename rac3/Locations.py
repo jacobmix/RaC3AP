@@ -447,8 +447,8 @@ location_groups: dict[str, set[str]] = {
     "Crystal": set(loc for loc in location_table.keys() if ("Sewer" in loc)
                    or (loc == "Aquatos: Skill Point: Hit the motherload")),
     "VidComic": set(loc for loc in location_table.keys() if "VidComic" in loc),
-    "Trophy": set(loc for loc in location_table.keys() if "Trophy" in loc),
-    "Long Term Trophy": set(loc for loc in location_table.keys() if "Long Term" in loc),
+    "Trophy": set(loc for loc in location_table.keys() if "Trophy" in loc), # All trophies including long term
+    "Long Term Trophy": set(loc for loc in location_table.keys() if "Long Term" in loc), # Long Term trophies only
     "Rangers": set(loc for loc in location_table.keys() if "Operation" in loc),
     "Arena": set(loc for loc in location_table.keys() if
                  (50070002 <= location_table[loc].ap_code < 50080000) or ("VR" in loc)),
