@@ -6,6 +6,24 @@ from .Locations import location_table
 if TYPE_CHECKING:
     from . import RaC3World
 
+# TODO: move to constants file once Myth is done with that
+SIMPLE_SKILL_POINTS = [
+    "Stay squeaky clean",
+    "Beat Helga's Best VR Time",
+    "Monkeying Around",
+    "Reflect on how to score",
+    "Flee Flawlessly",
+    "Lights, camera action!",
+    "Search for sunken treasure",
+    "Be a sharpshooter",
+    "Bugs to Birdie",
+    "Feeling Lucky?",
+    "2002 was a good year in the city",
+    "Aim High",
+    "Go for hang time",
+    "You break it, you win it",
+    "Break the Dan"
+]
 
 def create_regions(world: "RaC3World"):
     # ----- Introduction Sequence -----#
@@ -167,11 +185,27 @@ def create_region_and_connect(world: "RaC3World",
 
 def should_skip_location(key: str, options) -> bool:
     """Return False if the location should be skipped based on options."""
+
+    # Skip trophy locations if trophies are disabled
     if "Trophy" in key and options.trophies.value == 0:
-        return True  # Skip trophy locations if trophies are disabled
-    if "Long Term" in key and options.trophies.value < 2:
-        return True  # Skip long term trophies if not set to every trophy
+        return True  
     
+    # Skip long term trophies if not set to every trophy
+    if "Long Term" in key and options.trophies.value < 2:
+        return True  
+
+    # Skip skill point locations if not set to every skill point
+    if "Skill Point" in key and options.skill_points.value == 0:
+        return True  
+    
+    # Skip skill points not in the simple list
+    if "Skill Point" in key and options.skill_points.value == 1:
+        for simple_skill in SIMPLE_SKILL_POINTS:
+            if simple_skill.lower() in key.lower():
+                return False
+        return True
+    
+
     # Add more conditions here if needed in the future
 
     return False

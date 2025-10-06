@@ -100,6 +100,7 @@ class RaC3World(World):
                 "BoltAndXPMultiplier": multiplier_to_name[Multiplier(self.options.bolt_and_xp_multiplier)],
                 "EnableWeaponLevelAsItem": self.options.enable_weapon_level_as_item.value,
                 "ExtraArmorUpgrade": self.options.extra_armor_upgrade.value,
+                "SkillPoints": self.options.skill_points.value,
                 "Trophies": self.options.trophies.value,
             },
             "Seed": self.multiworld.seed_name,  # to verify the server's multiworld

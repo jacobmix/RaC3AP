@@ -67,6 +67,34 @@ class ExtraArmorUpgrade(Choice):
     option_extra_4 = 4
     default = 0
 
+class SkillPoints(Choice):
+    """
+    Determines which skill points are locations in the world.
+    None: No skill points are locations.
+    Simple: 15 simple skill points are locations.
+    - Stay Squeaky Clean
+    - Monkeying Around
+    - Reflect on how to score
+    - Lights, camera, action!
+    - Flee Flawlessly
+    - Search for sunken treasure
+    - Be a sharpshooter
+    - Beat Helga's Best Time
+    - Bugs to birds
+    - Feeling Lucky?
+    - 2002 was a good year in the city
+    - Aim High
+    - Go for hang time
+    - Break the Dan
+    - You break it, you win it
+    Every Skill Point: All 30 skill points are locations.
+    """
+    display_name = "Skill Points"
+    option_none = 0
+    option_simple = 1
+    option_every_skill_point = 2
+    default = 1
+
 class Trophies(Choice):
     """
     Determines which trophies are locations in the world.
@@ -88,12 +116,13 @@ class RaC3Options(PerGameCommonOptions):
     bolt_and_xp_multiplier: BoltAndXPMultiplier
     enable_weapon_level_as_item: EnableWeaponLevelAsItem
     extra_armor_upgrade: ExtraArmorUpgrade
+    skill_points: SkillPoints
     trophies: Trophies
 
 
 rac3_option_groups: Dict[str, List[Any]] = {
     "General Options": [StartInventoryPool, StartingWeapons, BoltAndXPMultiplier, EnableWeaponLevelAsItem,
-                        ExtraArmorUpgrade, Trophies]
+                        ExtraArmorUpgrade, SkillPoints, Trophies]
 }
 
 slot_data_options: list[str] = [
@@ -102,5 +131,6 @@ slot_data_options: list[str] = [
     "StartingWeapons",
     "EnableWeaponLevelAsItem",
     "ExtraArmorUpgrade",
+    "SkillPoints",
     "Trophies",
 ]
