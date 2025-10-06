@@ -175,7 +175,9 @@ def set_rules_hard_location(world):
                            and state.has("Hypershot", player=world.player))
     # Long Term Trophies
     add_rule(world.get_location("Phoenix: Long Term Trophy: Titanium Collector"),
-             lambda state: state.has("Gravity-Boots", world.player)
+             lambda state: state.has("Progressive VidComic", world.player, 5)
+                           and state.has("Refractor", world.player)
+                           and state.has("Gravity-Boots", world.player)
                            and state.has("Hacker", world.player)
                            and state.has("Hypershot", world.player)
                            and state.has("Tyhrra-Guise", world.player)
