@@ -145,7 +145,6 @@ class Rac3Interface(GameInterface):
 
     def new_planet(self):
         planet = self._read8(ADDRESSES[self.current_game]["CurrentPlanet"])
-        self.logger.debug(f"Current Planet from memory: {planet}")
         return list(ADDRESSES[self.current_game]["PlanetValues"])[planet]
 
     def item_received(self, item_code, processed_items_count=0):
@@ -598,7 +597,6 @@ class Rac3Interface(GameInterface):
             print(f'Planet{count}: {planet_lookup[self._read8(addr)]}')
             count += 1
         print(f'Current planet Tracked: {ctx.current_planet}')
-        print(r'Slot:{player}current_planet')
         print(f'Slot Data: {ctx.slot_data}')
 
     def tracker_update(self):

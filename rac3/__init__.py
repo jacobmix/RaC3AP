@@ -114,8 +114,6 @@ class RaC3World(World):
                 "enable_weapon_level_as_item": self.options.enable_weapon_level_as_item.value,
                 "extra_armor_upgrade": self.options.extra_armor_upgrade.value,
             },
-            "Seed": self.multiworld.seed_name,  # to verify the server's multiworld
-            "Slot": self.multiworld.player_name[self.player],  # to connect to server
             "TotalLocations": get_total_locations(self)
         }
 
