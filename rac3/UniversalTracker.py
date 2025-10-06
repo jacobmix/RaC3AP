@@ -27,7 +27,7 @@ def setup_options_from_slot_data(world: "RaC3World") -> None:
 
 def map_page_index(data: Any) -> int:
     planet_values = ADDRESSES["SCUS-97353"]["PlanetValues"]
-    return planet_values.get(data, 0)
+    return planet_values.get(data, 3)
 
 
 def poptracker_data() -> dict[str, int]:
