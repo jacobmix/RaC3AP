@@ -181,6 +181,7 @@ def set_rules_hard_location(world):
                            and state.has("Hacker", world.player)
                            and state.has("Hypershot", world.player)
                            and state.has("Tyhrra-Guise", world.player)
+                           and state.has("Warp Pad", world.player)
                            and state.can_reach("Florana", player=world.player)
                            and state.can_reach("Starship Phoenix", player=world.player)
                            and state.can_reach("Marcadia Region 2", player=world.player)
@@ -221,6 +222,7 @@ def set_rules_hard_location(world):
                            and state.has("Hypershot", world.player)
                            and state.has("Refractor", world.player)
                            and state.has("Tyhrra-Guise", world.player)
+                           and state.has("Warp Pad", world.player)
                            # Planets
                            and state.can_reach("Florana", player=world.player)
                            and state.can_reach("Starship Phoenix", player=world.player)
