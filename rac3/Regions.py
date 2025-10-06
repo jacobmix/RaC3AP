@@ -139,15 +139,20 @@ def create_regions(world: "RaC3World"):
     menu.connect(plasma_coil_upgrades, rule=lambda state: state.has("Plasma Coil", world.player))
 
     # ----- Long Term Trophy Dummy Regions ----- #
-    
-    long_term_trophy = create_region(world, "Long Term Trophy")
-    menu.connect(long_term_trophy, rule=lambda state: state.can_reach("Starship Phoenix", player=world.player))
+    if world.options.trophies.value == 2:
+        long_term_trophy = create_region(world, "Long Term Trophy")
+        menu.connect(long_term_trophy, rule=lambda state: state.can_reach("Starship Phoenix", player=world.player))
 
 
 def create_region(world: "RaC3World", name: str) -> Region:
     reg = Region(name, world.player, world.multiworld)
-
+    options = world.options
     for (key, data) in location_table.items():
+        if "Trophy" in key and options.trophies.value == 0:
+            continue # Skip trophy locations if trophies are disabled
+        elif "Long Term" in key and options.trophies.value < 2:
+            continue # Skip long term trophies if not set to every trophy
+
         if data.region == name:
             location = GameLocation(world.player, key, data.ap_code, reg)
             reg.locations.append(location)
