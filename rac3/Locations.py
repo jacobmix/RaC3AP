@@ -194,11 +194,11 @@ rac3_locations = {
     "Daxx: Trophy: Ledge overlooking Ship": LocData(50050006, "Daxx"),  # Plumber Trophy
 
     # ----- Obani Gemini -----#
-    "Obani_Gemini: Received Disk-Blade Gun": LocData(50110000, "Obani Gemini"),
-    "Obani_Gemini: T-Bolt: Follow the Lava": LocData(50110001, "Obani Gemini"),
-    "Obani_Gemini: T-Bolt: Between the Twin Towers": LocData(50110002, "Obani Gemini"),
-    "Obani_Gemini: Infobot: Blackwater City": LocData(50110003, "Obani Gemini"),
-    "Obani_Gemini: Skill Point: Get to the belt": LocData(50110004, "Obani Gemini"),
+    "Obani Gemini: Received Disk-Blade Gun": LocData(50110000, "Obani Gemini"),
+    "Obani Gemini: T-Bolt: Follow the Lava": LocData(50110001, "Obani Gemini"),
+    "Obani Gemini: T-Bolt: Between the Twin Towers": LocData(50110002, "Obani Gemini"),
+    "Obani Gemini: Infobot: Blackwater City": LocData(50110003, "Obani Gemini"),
+    "Obani Gemini: Skill Point: Get to the belt": LocData(50110004, "Obani Gemini"),
 
     # ----- Planet Blackwater City -----#
     "Blackwater City: Received Gravity Boots": LocData(50120000, "Blackwater City"),
@@ -221,7 +221,7 @@ rac3_locations = {
     "Skidd is captured": LocData(50130004, "Skidd Cutscene"),  # Blackwater City and Holostar completed
 
     # ----- Obani Draco (lol) -----#
-    "Obani_Draco: Defeat Courtney Gears": LocData(50210000, "Obani Draco"),  # Infobot: Zeldrin Starport
+    "Obani Draco: Defeat Courtney Gears": LocData(50210000, "Obani Draco"),  # Infobot: Zeldrin Starport
 
     # ----- Zeldrin Starport -----#
     "Zeldrin Starport: Received Bolt Grabber V2": LocData(50100000, "Zeldrin Starport"),

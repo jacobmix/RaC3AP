@@ -362,7 +362,7 @@ def set_rules_hard_location(world):
                             or state.has("Progressive Qwack-O-Ray", world.player))
 
     # ----- Obani Gemini -----#
-    add_rule(world.get_location("Obani_Gemini: T-Bolt: Follow the Lava"),
+    add_rule(world.get_location("Obani Gemini: T-Bolt: Follow the Lava"),
              lambda state: state.has("Hypershot", world.player))
 
     # ----- Planet Blackwater City -----# # Nothing
