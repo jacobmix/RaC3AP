@@ -69,6 +69,11 @@ rac3_locations = {
     "Phoenix: Skill Point: Strive for Arcade Perfection": LocData(50030031, "Starship Phoenix"),
     "Phoenix: Skill Point: Beat Helga's Best VR Time": LocData(50030032, "Starship Phoenix"),
     "Phoenix: Skill Point: Monkeying Around": LocData(50030033, "Starship Phoenix"),
+    "Phoenix: Long Term Trophy: Titanium Collector": LocData(50030034, "Long Term Trophy"),  # All Titanium Bolts collected
+    "Phoenix: Long Term Trophy: Friend of the Rangers": LocData(50030035, "Long Term Trophy"),  # All optional Ranger missions completed
+    "Phoenix: Long Term Trophy: Annihilation Nation Champion": LocData(50030036, "Long Term Trophy"),  # All Arena completed
+    "Phoenix: Long Term Trophy: Skill Master": LocData(50030037, "Long Term Trophy"), # All Skill Points collected
+
     # VidComics
     "Phoenix: Qwark VidComic 1 Clear": LocData(50310000, "Starship Phoenix"),
     "Phoenix: T-Bolt: VidComic 1 100%": LocData(50310001, "Starship Phoenix"),
@@ -209,7 +214,7 @@ rac3_locations = {
     "Holostar: T-Bolt: Atop the Chairs": LocData(50130001, "Holostar Studios"),
     "Holostar: T-Bolt: Lot 42's Gravity Ramp": LocData(50130002, "Holostar Studios"),
     "Holostar: T-Bolt: Kamikaze Noids": LocData(50130003, "Holostar Studios"),
-    "Holostar: Skill Point: Feeling Lucky": LocData(50130005, "Holostar Studios"),
+    "Holostar: Skill Point: Feeling Lucky?": LocData(50130005, "Holostar Studios"),
     "Holostar: Trophy: After tall Elevator": LocData(50130006, "Holostar Studios"),  # Clank Trophy
 
     # ----- Skidd Cutscene -----#
@@ -440,7 +445,8 @@ location_groups: dict[str, set[str]] = {
     "Crystal": set(loc for loc in location_table.keys() if ("Sewer" in loc)
                    or (loc == "Aquatos: Skill Point: Hit the motherload")),
     "VidComic": set(loc for loc in location_table.keys() if "VidComic" in loc),
-    "Trophy": set(loc for loc in location_table.keys() if "Trophy" in loc),
+    "Trophy": set(loc for loc in location_table.keys() if "Trophy" in loc), # All trophies including long term
+    "Long Term Trophy": set(loc for loc in location_table.keys() if "Long Term" in loc), # Long Term trophies only
     "Rangers": set(loc for loc in location_table.keys() if "Operation" in loc),
     "Arena": set(loc for loc in location_table.keys() if
                  (50070002 <= location_table[loc].ap_code < 50080000) or ("VR" in loc)),

@@ -6,6 +6,24 @@ from .Locations import location_table
 if TYPE_CHECKING:
     from . import RaC3World
 
+# TODO: move to constants file once Myth is done with that
+SIMPLE_SKILL_POINTS = [
+    "Stay squeaky clean",
+    "Beat Helga's Best VR Time",
+    "Monkeying Around",
+    "Reflect on how to score",
+    "Flee Flawlessly",
+    "Lights, camera action!",
+    "Search for sunken treasure",
+    "Be a sharpshooter",
+    "Bugs to Birdie",
+    "Feeling Lucky?",
+    "2002 was a good year in the city",
+    "Aim High",
+    "Go for hang time",
+    "You break it, you win it",
+    "Break the Dan"
+]
 
 def create_regions(world: "RaC3World"):
     # ----- Introduction Sequence -----#
@@ -138,11 +156,19 @@ def create_regions(world: "RaC3World"):
     plasma_coil_upgrades = create_region(world, "Plasma Coil Upgrades")
     menu.connect(plasma_coil_upgrades, rule=lambda state: state.has("Plasma Coil", world.player))
 
+    # ----- Long Term Trophy Dummy Regions ----- #
+    if world.options.trophies.value == 2:
+        long_term_trophy = create_region(world, "Long Term Trophy")
+        menu.connect(long_term_trophy, rule=lambda state: state.can_reach("Starship Phoenix", player=world.player))
+
 
 def create_region(world: "RaC3World", name: str) -> Region:
     reg = Region(name, world.player, world.multiworld)
-
+    options = world.options
     for (key, data) in location_table.items():
+        if should_skip_location(key, options): # Skip locations based on options
+            continue
+
         if data.region == name:
             location = GameLocation(world.player, key, data.ap_code, reg)
             reg.locations.append(location)
@@ -156,3 +182,30 @@ def create_region_and_connect(world: "RaC3World",
     reg: Region = create_region(world, name)
     connected_region.connect(reg, entrance_name)
     return reg
+
+def should_skip_location(key: str, options) -> bool:
+    """Return False if the location should be skipped based on options."""
+
+    # Skip trophy locations if trophies are disabled
+    if "Trophy" in key and options.trophies.value == 0:
+        return True  
+    
+    # Skip long term trophies if not set to every trophy
+    if "Long Term" in key and options.trophies.value < 2:
+        return True  
+
+    # Skip skill point locations if not set to every skill point
+    if "Skill Point" in key and options.skill_points.value == 0:
+        return True  
+    
+    # Skip skill points not in the simple list
+    if "Skill Point" in key and options.skill_points.value == 1:
+        for simple_skill in SIMPLE_SKILL_POINTS:
+            if simple_skill.lower() in key.lower():
+                return False
+        return True
+    
+
+    # Add more conditions here if needed in the future
+
+    return False

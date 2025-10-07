@@ -147,32 +147,114 @@ def set_rules_hard_location(world):
              lambda state: state.has("Progressive VidComic", world.player, 5))
     add_rule(world.get_location("Phoenix: T-Bolt: VidComic 5 100%"),
              lambda state: state.has("Progressive VidComic", world.player, 5))
+    
     # Skill Points
-    add_rule(world.get_location("Phoenix: Skill Point: Turn Up The Heat!"),
-             lambda state: state.can_reach("Koros", player=world.player))
-    add_rule(world.get_location("Phoenix: Skill Point: Beat Helga's Best VR Time"),
-             lambda state: state.can_reach("Tyhrranosis", player=world.player)
-                           and state.has("Hacker", player=world.player)
-                           and state.has("Hypershot", player=world.player))
-    add_rule(world.get_location("Phoenix: Skill Point: Monkeying Around"),
-             lambda state: state.has("Tyhrra-Guise", world.player))
-    add_rule(world.get_location("Phoenix: Skill Point: Strive for Arcade Perfection"),
-             lambda state: state.has("Progressive VidComic", world.player, 5))
-    add_rule(world.get_location("Phoenix: Skill Point: Pirate booty - set a new record for qwark"),
-             lambda state: state.has("Progressive VidComic", world.player, 1))
-    add_rule(world.get_location("Phoenix: Skill Point: Deja Q All over Again - set a new record for qwark"),
-             lambda state: state.has("Progressive VidComic", world.player, 2)),
-    add_rule(world.get_location("Phoenix: Skill Point: Arriba Amoeba! - set a new record for qwark"),
-             lambda state: state.has("Progressive VidComic", world.player, 3)),
-    add_rule(world.get_location("Phoenix: Skill Point: Shadow of the robot - set a new record for qwark"),
-             lambda state: state.has("Progressive VidComic", world.player, 4)),
-    add_rule(world.get_location("Phoenix: Skill Point: The Shaming of the Q - set a new record for qwark"),
-             lambda state: state.has("Progressive VidComic", world.player, 5)),
+    if world.options.skill_points.value > 0: # Simple or Every Skill Point
+        add_rule(world.get_location("Phoenix: Skill Point: Monkeying Around"),
+                    lambda state: state.has("Tyhrra-Guise", world.player))
+        add_rule(world.get_location("Phoenix: Skill Point: Beat Helga's Best VR Time"),
+                lambda state: state.can_reach("Tyhrranosis", player=world.player)
+                            and state.has("Hacker", player=world.player)
+                            and state.has("Hypershot", player=world.player))
+        
+    if world.options.skill_points.value > 1: # Every Skill Point
+        add_rule(world.get_location("Phoenix: Skill Point: Turn Up The Heat!"),
+                lambda state: state.can_reach("Koros", player=world.player))
+        add_rule(world.get_location("Phoenix: Skill Point: Strive for Arcade Perfection"),
+                lambda state: state.has("Progressive VidComic", world.player, 5))
+        add_rule(world.get_location("Phoenix: Skill Point: Pirate booty - set a new record for qwark"),
+                lambda state: state.has("Progressive VidComic", world.player, 1))
+        add_rule(world.get_location("Phoenix: Skill Point: Deja Q All over Again - set a new record for qwark"),
+                lambda state: state.has("Progressive VidComic", world.player, 2)),
+        add_rule(world.get_location("Phoenix: Skill Point: Arriba Amoeba! - set a new record for qwark"),
+                lambda state: state.has("Progressive VidComic", world.player, 3)),
+        add_rule(world.get_location("Phoenix: Skill Point: Shadow of the robot - set a new record for qwark"),
+                lambda state: state.has("Progressive VidComic", world.player, 4)),
+        add_rule(world.get_location("Phoenix: Skill Point: The Shaming of the Q - set a new record for qwark"),
+                lambda state: state.has("Progressive VidComic", world.player, 5)),
     # VR
     add_rule(world.get_location("Phoenix: VR: VR Gadget Training"),
              lambda state: state.can_reach("Tyhrranosis", player=world.player)
                            and state.has("Hacker", player=world.player)
                            and state.has("Hypershot", player=world.player))
+    
+    # Long Term Trophies
+    if world.options.trophies.value == 2:
+        add_rule(world.get_location("Phoenix: Long Term Trophy: Titanium Collector"),
+                lambda state: state.has("Progressive VidComic", world.player, 5)
+                            and state.has("Refractor", world.player)
+                            and state.has("Gravity-Boots", world.player)
+                            and state.has("Hacker", world.player)
+                            and state.has("Hypershot", world.player)
+                            and state.has("Tyhrra-Guise", world.player)
+                            and state.has("Warp Pad", world.player)
+                            and state.can_reach("Florana", player=world.player)
+                            and state.can_reach("Starship Phoenix", player=world.player)
+                            and state.can_reach("Marcadia", player=world.player)
+                            and state.can_reach("Annihilation Nation 2", player=world.player)
+                            and state.can_reach("Aquatos", player=world.player)
+                            and state.can_reach("Tyhrranosis", player=world.player)
+                            and state.can_reach("Daxx", player=world.player)
+                            and state.can_reach("Obani Gemini", player=world.player)
+                            and state.can_reach("Holostar Studios", player=world.player)
+                            and state.can_reach("Zeldrin Starport", player=world.player)
+                            and state.can_reach("Metropolis Region 2", player=world.player)
+                            and state.can_reach("Crash Site", player=world.player)
+                            and state.can_reach("Aridia", player=world.player)
+                            and state.can_reach("Qwarks Hideout", player=world.player)
+                            and state.can_reach("Koros", player=world.player)
+                            and state.can_reach("Command Center", player=world.player))
+        
+        add_rule(world.get_location("Phoenix: Long Term Trophy: Friend of the Rangers"),
+                lambda state: state.can_reach("Marcadia", player=world.player)
+                            and state.can_reach("Tyhrranosis Region 2", player=world.player)
+                            and state.can_reach("Metropolis Region 2", player=world.player)
+                            and state.can_reach("Aridia", player=world.player)
+                            and state.can_reach("Blackwater City", player=world.player))
+        
+        # Same rule as Qwarktastic Battle as you usually get it after that
+        add_rule(world.get_location("Phoenix: Long Term Trophy: Annihilation Nation Champion"),
+                lambda state: state.has("Progressive VidComic", world.player, 5)
+                            and state.has("Hacker", world.player)
+                            and state.has("Tyhrra-Guise", world.player)
+                            and state.has("Hypershot", world.player)
+                            and state.has("Gravity-Boots", world.player))
+        
+        add_rule(world.get_location("Phoenix: Long Term Trophy: Skill Master"),
+                lambda state: state.has("Progressive VidComic", world.player, 5)
+                            # Gadgets
+                            and state.has("Gravity-Boots", world.player)
+                            and state.has("Hacker", world.player)
+                            and state.has("Hypershot", world.player)
+                            and state.has("Refractor", world.player)
+                            and state.has("Tyhrra-Guise", world.player)
+                            and state.has("Warp Pad", world.player)
+                            # Planets
+                            and state.can_reach("Florana", player=world.player)
+                            and state.can_reach("Starship Phoenix", player=world.player)
+                            and state.can_reach("Marcadia", player=world.player)
+                            and state.can_reach("Annihilation Nation 2", player=world.player)
+                            and state.can_reach("Aquatos", player=world.player)
+                            and state.can_reach("Tyhrranosis", player=world.player)
+                            and state.can_reach("Daxx", player=world.player)
+                            and state.can_reach("Obani Gemini", player=world.player)
+                            and state.can_reach("Blackwater City", player=world.player)
+                            and state.can_reach("Holostar Studios", player=world.player)
+                            and state.can_reach("Metropolis Region 1", player=world.player)
+                            and state.can_reach("Crash Site", player=world.player)
+                            and state.can_reach("Aridia", player=world.player)
+                            and state.can_reach("Qwarks Hideout", player=world.player)
+                            and state.can_reach("Koros", player=world.player)
+                            and state.can_reach("Command Center", player=world.player)
+                            # Weapons
+                            and state.has("Plasma Whip", world.player)
+                            and state.has("Spitting Hydra", world.player)
+                            and state.has("Suck Cannon", world.player)
+                            and state.has("Disk-Blade Gun", world.player)
+                            and state.has("Flux Rifle", world.player)
+                            and state.has("Qwack-O-Ray", world.player)
+                            and state.has("Annihilator", world.player)
+                            and state.has("Infector", world.player))
 
     # ----- Planet Marcadia -----#
     # "Marcadia: Received Spitting Hydra": LocData(50001030, "Marcadia"),
@@ -244,17 +326,20 @@ def set_rules_hard_location(world):
     # "Aquatos: 5 Sewer Crystals Traded": LocData(50001097, "Aquatos"),
     # "Aquatos: 10 Sewer Crystals Traded": LocData(50001098, "Aquatos"),
     # "Aquatos: 20 Sewer Crystals Traded": LocData(50001099, "Aquatos"),
-    add_rule(world.get_location("Aquatos: Skill Point: Hit the motherload"),
-             lambda state: state.has("Gravity-Boots", world.player))
+
+    if world.options.skill_points.value > 1:  # Every Skill Point
+        add_rule(world.get_location("Aquatos: Skill Point: Hit the motherload"),
+                lambda state: state.has("Gravity-Boots", world.player))
 
     # ----- Planet Tyhrranosis -----#
     # "Tyhrranosis: Received Annihilator": LocData(50001300, "Tyhrranosis"),
     # "Tyhrranosis: Received Holo-Shield Glove": LocData(50001301, "Tyhrranosis"),
     add_rule(world.get_location("Tyhrranosis: T-Bolt: Underground Cave Bolt"),
              lambda state: state.has("Hypershot", world.player))
-    add_rule(world.get_location("Tyhrranosis: Skill Point: Be a Sharpshooter"),
-             lambda state: state.has("Flux Rifle", world.player)
-                           or state.has("Progressive Flux Rifle", world.player))
+    if world.options.skill_points.value > 0: # Simple or Every Skill Point
+        add_rule(world.get_location("Tyhrranosis: Skill Point: Be a Sharpshooter"),
+                lambda state: state.has("Flux Rifle", world.player)
+                            or state.has("Progressive Flux Rifle", world.player))
     # "Tyhrranosis: T-Bolt: South East Cannon": LocData(50001302, "Tyhrranosis"),
 
     # ----- Planet Daxx -----#
@@ -270,9 +355,11 @@ def set_rules_hard_location(world):
                            and state.has("Hacker", world.player))
     add_rule(world.get_location("Daxx: Gunship"),
              lambda state: state.has("Hypershot", world.player))
-    add_rule(world.get_location("Daxx: Skill Point: Bugs to Birdie"),
-             lambda state: state.has("Qwack-O-Ray", world.player)
-                           or state.has("Progressive Qwack-O-Ray", world.player))
+    
+    if world.options.skill_points.value > 0: # Simple or Every Skill Point
+        add_rule(world.get_location("Daxx: Skill Point: Bugs to Birdie"),
+                lambda state: state.has("Qwack-O-Ray", world.player)
+                            or state.has("Progressive Qwack-O-Ray", world.player))
 
     # ----- Obani Gemini -----#
     add_rule(world.get_location("Obani_Gemini: T-Bolt: Follow the Lava"),
@@ -294,17 +381,19 @@ def set_rules_hard_location(world):
     # ----- Planet Metropolis -----#
     add_rule(world.get_location("Metropolis: T-Bolt: Across the Gap"),
              lambda state: state.has("Hypershot", world.player))
-    add_rule(world.get_location("Metropolis: Skill Point: 2002 was a good year in the city"),
-             lambda state: state.has("Flux Rifle", world.player)
-                           or state.has("Progressive Flux Rifle", world.player)
-                           or state.has("Annihilator", world.player)
-                           or state.has("Progressive Annihilator", world.player)
-                           or state.has("RY3N0", world.player)
-                           or state.has("Progressive RY3N0", world.player)
-                           or state.has("Suck Cannon", world.player)
-                           or state.has("Progressive Suck Cannon", world.player)
-                           or state.has("Disk-Blade Gun", world.player)
-                           or state.has("Progressive Disk-Blade Gun", world.player))
+    
+    if world.options.skill_points.value > 0: # Simple or Every Skill Point
+        add_rule(world.get_location("Metropolis: Skill Point: 2002 was a good year in the city"),
+                lambda state: state.has("Flux Rifle", world.player)
+                            or state.has("Progressive Flux Rifle", world.player)
+                            or state.has("Annihilator", world.player)
+                            or state.has("Progressive Annihilator", world.player)
+                            or state.has("RY3N0", world.player)
+                            or state.has("Progressive RY3N0", world.player)
+                            or state.has("Suck Cannon", world.player)
+                            or state.has("Progressive Suck Cannon", world.player)
+                            or state.has("Disk-Blade Gun", world.player)
+                            or state.has("Progressive Disk-Blade Gun", world.player))
     # Skrunch Trophy
     # "Metropolis: Metal-Noids"
     # "Metropolis: T-Bolt: Before Grav-Wall"
@@ -316,45 +405,58 @@ def set_rules_hard_location(world):
              lambda state: state.has("Gravity-Boots", world.player) and state.has("Hypershot", world.player))
     # Escape Pod: None
     add_rule(world.get_location("Crash Site: Infobot: Aridia"), lambda state: state.has("Gravity-Boots", world.player))
-    add_rule(world.get_location("Crash Site: Skill Point: Suck it up!"),
-             lambda state: state.has("Suck Cannon", world.player)
-                           or state.has("Progressive Suck Cannon", world.player))
-    add_rule(world.get_location("Crash Site: Skill Point: Aim High"),
-             lambda state: state.has("Flux Rifle", world.player)
-                           or state.has("Progressive Flux Rifle", world.player))
+
+    if world.options.skill_points.value > 0: # Simple or Every Skill Point
+        add_rule(world.get_location("Crash Site: Skill Point: Aim High"),
+                lambda state: state.has("Flux Rifle", world.player)
+                            or state.has("Progressive Flux Rifle", world.player))
+
+    if world.options.skill_points.value > 1: # Every Skill Point
+        add_rule(world.get_location("Crash Site: Skill Point: Suck it up!"),
+                lambda state: state.has("Suck Cannon", world.player)
+                            or state.has("Progressive Suck Cannon", world.player))
+
 
     # ----- Planet Aridia -----#
     add_rule(world.get_location("Aridia: T-Bolt: Under the Bridge (Assassination)"),
              lambda state: state.has("Gravity-Boots", world.player))
     add_rule(world.get_location("Aridia: T-Bolt: Behind the Base (X12 Endgame)"),
              lambda state: state.has("Gravity-Boots", world.player))
-    add_rule(world.get_location("Aridia: Skill Point: Zap back at ya'"),
-             lambda state: state.has("Refractor", world.player))
+    
+    if world.options.skill_points.value > 1: # Every Skill Point
+        add_rule(world.get_location("Aridia: Skill Point: Zap back at ya'"),
+                lambda state: state.has("Refractor", world.player))
 
     # ----- Qwark's Hideout -----#
     add_rule(world.get_location("Qwarks Hideout: Received Gadgetron PDA"),
              lambda state: state.has("Gravity-Boots", world.player))
     add_rule(world.get_location("Qwarks Hideout: T-Bolt: Glide from the Ramp"),
              lambda state: state.has("Gravity-Boots", world.player))
-    add_rule(world.get_location("Qwarks Hideout: Skill Point: Break the Dan"),
-             lambda state: state.has("Warp Pad", world.player) and state.has("Hypershot", world.player))
-    add_rule(world.get_location("Qwarks Hideout: Trophy: Outside Qwarks Room"),
-             lambda state: state.has("Warp Pad", world.player) and state.has("Hypershot", world.player))
+
+    if world.options.skill_points.value > 0: # Simple or Every Skill Point
+        add_rule(world.get_location("Qwarks Hideout: Skill Point: Break the Dan"),
+                 lambda state: state.has("Warp Pad", world.player) and state.has("Hypershot", world.player))
+    if world.options.trophies.value > 0:
+        add_rule(world.get_location("Qwarks Hideout: Trophy: Outside Qwarks Room"),
+                lambda state: state.has("Warp Pad", world.player) and state.has("Hypershot", world.player))
 
     # ----- Planet Koros -----#
     # Courtney Gears Trophy
     # "Koros: T-Bolt: Behind the Metal Fence"
     # "Koros: T-Bolt: Pair of Towers"
-    add_rule(world.get_location("Koros: Skill Point: You break it, you win it"),
-             lambda state: state.has("Box Breaker", world.player))
+
+    if world.options.skill_points.value > 0: # Simple or Every Skill Point
+        add_rule(world.get_location("Koros: Skill Point: You break it, you win it"),
+                lambda state: state.has("Box Breaker", world.player))
 
     # ----- Planet Command Center -----#
     add_rule(world.get_location("Command Center: Dr. Nefarious Defeated!"),
              lambda state: state.has("Hacker", world.player) and state.has("Refractor", world.player))
     add_rule(world.get_location("Command Center: Biobliterator Defeated!"),
              lambda state: state.has("Hacker", world.player) and state.has("Refractor", world.player))
-    add_rule(world.get_location("Command Center: Skill Point: Spread Your Germs"),
-             lambda state: state.has("Infector", world.player) or state.has("Progressive Infector", world.player))
+    if world.options.skill_points.value > 1: # Every Skill Point
+        add_rule(world.get_location("Command Center: Skill Point: Spread Your Germs"),
+                lambda state: state.has("Infector", world.player) or state.has("Progressive Infector", world.player))
 
 
 def set_rules(world: "RaC3World"):

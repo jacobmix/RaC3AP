@@ -113,6 +113,8 @@ class RaC3World(World):
                 "bolt_and_xp_multiplier": self.options.bolt_and_xp_multiplier.value,
                 "enable_weapon_level_as_item": self.options.enable_weapon_level_as_item.value,
                 "extra_armor_upgrade": self.options.extra_armor_upgrade.value,
+                "skill_points": self.options.skill_points.value,
+                "trophies": self.options.trophies.value,
             },
             "TotalLocations": get_total_locations(self)
         }
