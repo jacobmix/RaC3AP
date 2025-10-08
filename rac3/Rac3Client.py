@@ -71,6 +71,7 @@ class Rac3Context(CommonContext):
     queued_deaths: int = 0
     location_table = None
     current_planet: str = 'Veldin'
+    current_planet: str = 'Galaxy'
 
     items_handling = 0b111  # This is mandatory
 

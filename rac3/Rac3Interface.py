@@ -146,6 +146,12 @@ class Rac3Interface(GameInterface):
     def new_planet(self):
         planet = self._read8(ADDRESSES[self.current_game]["CurrentPlanet"])
         return list(ADDRESSES[self.current_game]["PlanetValues"])[planet]
+        planet = self._read8(self.addresses["CurrentPlanet"])
+        if planet > 55 or not self._read8(self.addresses["MapCheck"]):
+            planet = 0
+        elif planet > 29:
+            planet = 3
+        return list(self.addresses["PlanetValues"])[planet]
 
     def item_received(self, item_code, processed_items_count=0):
         # self.logger.info(f"{item_code}")

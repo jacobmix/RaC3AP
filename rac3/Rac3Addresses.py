@@ -2452,4 +2452,1566 @@ LOCATIONS = [
             }
         ]
     },
+    # Map Tracker duplicates
+    {
+        "Name": "Veldin/Received Shock Blaster",
+        "Id": 50010000,
+        "Address": "0x001426E0",
+        # Use event flag rather than weapon unlock address to avoid issues with weapon randomizer
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Veldin/Received Nitro Launcher",
+        "Id": 50010001,
+        "Address": "0x001426E1",
+        # Use event flag rather than weapon unlock address to avoid issues with weapon randomizer
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Veldin/Infobot: Florana",
+        "Id": 50010002,
+        "Address": "0x001426E4",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Florana/Received Plasma Whip",
+        "Id": 50020000,
+        "Address": "0x00142D1F",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Florana/Received N60 Storm",
+        "Id": 50020001,
+        "Address": "0x00142CCF",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Florana/Titanium Bolt 1",
+        "Id": 50020002,
+        "Address": "0x001BBB29",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Florana/Titanium Bolt 2",
+        "Id": 50020003,
+        "Address": "0x001BBB2A",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Florana/Defeat Qwark",
+        "Id": 50020004,
+        "Address": "0x001426E7",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Received Suck Cannon",
+        "Id": 50030000,
+        "Address": "0x00142D27",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Received Infector",
+        "Id": 50030001,
+        "Address": "0x00142CD7",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Nerves of Titanium Bolt",
+        "Id": 50030027,
+        "Address": "0x001BBB30",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Gadget Training Titanium Bolt",
+        "Id": 50030015,
+        "Address": "0x001BBB31",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Received Magna Plate Armor",
+        "Id": 50030002,
+        "Address": "0x001426A0",
+        "CheckValue": 1,
+        "CheckType": 3
+    },
+    {
+        "Name": "Phoenix/Received Adamantine Armor",
+        "Id": 50030003,
+        "Address": "0x001426A0",
+        "CheckValue": 2,
+        "CheckType": 3
+    },
+    {
+        "Name": "Phoenix/Received Aegis Mark V Armor",
+        "Id": 50030004,
+        "Address": "0x001426A0",
+        "CheckValue": 3,
+        "CheckType": 3
+    },
+    {
+        "Name": "Phoenix/Received Infernox Armor",
+        "Id": 50030005,
+        "Checks": [
+            {
+                "Address": "0x001D54B4",
+                "CheckType": 0,
+                "AddressBit": 0
+            },
+            {
+                "Address": "0x001D545C",
+                "CheckValue": 3,
+                "CheckType": 0
+            }
+        ]
+    },
+    {
+        "Name": "Phoenix/Received Hacker",
+        "Id": 50030016,
+        # "Address": "0x00142CB4",
+        "Address": "0x00142765",  # Same as VR Gadget Training mission completion
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Received Hypershot",
+        "Id": 50030017,
+        # "Address": "0x00142CAB",
+        "Address": "0x00142765",  # Same as VR Gadget Training mission completion
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Infobot: Marcadia",
+        "Id": 50030006,
+        "Checks": [
+            {
+                "Address": "0x001426E9",
+                "CheckValue": 1,
+                "CheckType": 0
+            },
+            {
+                "Address": "0x001D545C",
+                "CheckValue": 3,
+                "CheckType": 0
+            }
+        ]
+    },
+    {
+        "Name": "Phoenix/Infobot: Koros",
+        "Id": 50030007,
+        "Address": "0x001D553E",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Infobot: Annihilation Nation",
+        "Id": 50030008,
+        "Address": "0x001426EB",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Infobot: Aquatos",
+        "Id": 50030009,
+        # " Address": 0x001426F6, #  Correct Infobot address
+        "Address": "0x0014276F",  # Same as Tyhrra-Guise Getting event. This event behinds Phoenix Ship event.
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Infobot: Tyhrranosis",
+        "Id": 50030010,
+        # "Address": "0x00142C1B",
+        "Address": "0x0014275E",  # Same as 1 Sewer Crystal Traded
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Infobot: Daxx",
+        "Id": 50030011,
+        #  "Address": "0x00142765",
+        "Address": "0x00142765",  # Same as T-Bolt: VR training
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Metropolis/Infobot: Crash Site",
+        "Id": 50160004,
+        #  "Address": "0x001D5541",
+        "Address": "0x00142708",  # Same as defeat Giant Cronk
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Infobot: Qwarks Hideout",
+        "Id": 50030014,
+        "Address": "0x00142734",
+        "CheckType": 0,
+        "AddressBit": 5  # 3E 00X0_0000
+    },
+    {
+        "Name": "Zeldrin Starport/Qwark Vidcomic 4",
+        "Id": 50100003,
+        "Address": "0x001426E2",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Qwark Vidcomic 5",
+        "Id": 50030029,
+        "Address": "0x001D5553",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Infobot: Metropolis",
+        "Id": 50030012,
+        "Address": "0x001D5550",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Marcadia/Received Spitting Hydra",
+        "Id": 50040000,
+        "Address": "0x00142CE7",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Marcadia/Received Refractor",
+        "Id": 50040001,
+        # "Address": "0x00142CB2", # item flag
+        "Address": "0x00142C29",  # Marcadia Mission event Flag
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Marcadia/Titanium Bolt 1",
+        "Id": 50040002,
+        "Address": "0x001BBB39",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Marcadia/Titanium Bolt 2",
+        "Id": 50040003,
+        "Address": "0x001BBB3A",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Marcadia/Titanium Bolt 3",
+        "Id": 50040004,
+        "Address": "0x001BBB3B",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Marcadia/Qwark Vidcomic 1",
+        "Id": 50040005,
+        "Address": "0x001426ea",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Received Agents of Doom",
+        "Id": 50070000,
+        "Address": "0x00142CF7",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Received Tyhrra-Guise",
+        "Id": 50070001,
+        "Address": "0x0014276F",  # Same as Grand Prize Bout(Tyhrra-Guise Getting event)
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Titanium Bolt 1",
+        "Id": 50070002,
+        "Address": "0x001BBB51",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Titanium Bolt 2",
+        "Id": 50070003,
+        "Address": "0x001BBB52",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Grand Prize Bout",
+        "Id": 50070004,
+        "Address": "0x0014276F",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/The Terrible Two",
+        "Id": 50070005,
+        "Address": "0x00142772",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Robot Rampage",
+        "Id": 50070006,
+        "Address": "0x00142773",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Two Minute Warning",
+        "Id": 50070007,
+        "Address": "0x00142774",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/90 Seconds of Carnage",
+        "Id": 50070008,
+        "Address": "0x00142775",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Onslaught",
+        "Id": 50070009,
+        "Address": "0x00142776",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Whip It Good",
+        "Id": 50070010,
+        "Address": "0x00142777",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Hydra'n Seek",
+        "Id": 50070011,
+        "Address": "0x00142778",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Championship Bout",
+        "Id": 50070012,
+        "Address": "0x00142779",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Ninja Challenge",
+        "Id": 50070014,
+        "Address": "0x0014277D",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Counting Ducks",
+        "Id": 50070015,
+        "Address": "0x0014277E",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Cycling Weapons",
+        "Id": 50070016,
+        "Address": "0x0014277F",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/One Hit Wonder",
+        "Id": 50070017,
+        "Address": "0x00142780",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Time to Suck",
+        "Id": 50070018,
+        "Address": "0x00142781",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Naptime",
+        "Id": 50070019,
+        "Address": "0x00142782",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Meet Courtney - Arena",
+        "Id": 50070013,
+        "Address": "0x00142771",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/More Cycling Weapons",
+        "Id": 50070020,
+        "Address": "0x00142783",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Dodge the Twins",
+        "Id": 50070021,
+        "Address": "0x00142784",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Chop Chop",
+        "Id": 50070022,
+        "Address": "0x00142785",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Sleep Inducer",
+        "Id": 50070023,
+        "Address": "0x00142786",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/The Other White Meat",
+        "Id": 50070024,
+        "Address": "0x00142787",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Championship Bout II",
+        "Id": 50070025,
+        "Address": "0x00142788",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/It's Qwarktastic!",
+        "Id": 50070026,
+        "Address": "0x00142789",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Heat Street",
+        "Id": 50070027,
+        "Address": "0x0014276E",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Crispy Critter",
+        "Id": 50070028,
+        "Address": "0x0014277A",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Pyro Playground",
+        "Id": 50070029,
+        "Address": "0x0014277B",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Suicide Run",
+        "Id": 50070030,
+        "Address": "0x0014277C",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/BBQ Boulevard",  # (Meet Courtney - Gauntlet)
+        "Id": 50070031,
+        "Address": "0x00142770",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Maze of Blaze",
+        "Id": 50070032,
+        "Address": "0x0014278A",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Cremation Station",
+        "Id": 50070033,
+        "Address": "0x0014278B",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/The Annihilator",
+        "Id": 50070034,
+        "Address": "0x0014278C",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    # {
+    #     "Name": "Annihilation Nation/Qwark VidComic 2",
+    #     "Id": 50070035,
+    #     "Address": "0x001D5551",
+    #     "CheckType": 0,
+    #     "AddressBit": 0
+    # },
+    # {
+    #     "Name": "Annihilation Nation/Qwark VidComic 3",
+    #     "Id": 50070036,
+    #     "Address": "0x001D5552",
+    #     "CheckType": 0,
+    #     "AddressBit": 0
+    # },
+    {
+        "Name": "Aquatos/Received Flux Rifle",
+        "Id": 50080000,
+        "Address": "0x00142D0F",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Aquatos/Titanium Bolt 1",
+        "Id": 50080001,
+        "Address": "0x001BBB5A",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Aquatos/Titanium Bolt 2",
+        "Id": 50080002,
+        "Address": "0x001BBB5B",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Aquatos/Titanium Bolt 3",
+        "Id": 50080003,
+        "Address": "0x001BBB59",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Aquatos/Titanium Bolt 4",
+        "Id": 50280000,
+        "Address": "0x001BBBF9",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Aquatos/Titanium Bolt 5",
+        "Id": 50280001,
+        "Address": "0x001BBBFA",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Aquatos/1 Sewer Crystal Traded",
+        "Id": 50280002,
+        "Address": "0x0014275E",  # JP: 1426DE,
+        "CompareType": 1,  # Greater than
+        "CheckType": 3,  # Byte type
+        "CheckValue": 0
+    },
+    {
+        "Name": "Aquatos/5 Sewer Crystals Traded",
+        "Id": 50280003,
+        "Address": "0x0014275E",  # JP: 1426DE,
+        "CheckType": 3,  # Byte type
+        "CompareType": 1,  # Greater than
+        "CheckValue": 4
+    },
+    {
+        "Name": "Aquatos/10 Sewer Crystals Traded",
+        "Id": 50280004,
+        "Address": "0x0014275E",  # JP: 1426DE,
+        "CheckType": 3,  # Byte type
+        "CompareType": 1,  # Greater than
+        "CheckValue": 9  # 0x9
+    },
+    {
+        "Name": "Aquatos/20 Sewer Crystals Traded",
+        "Id": 50280005,
+        "Address": "0x0014275E",  # JP: 1426DE,
+        "CheckType": 3,  # Byte type
+        "CompareType": 1,  # Greater than
+        "CheckValue": 19  # 0x13
+    },
+    {
+        "Name": "Tyhrranosis/Received Annihilator",
+        "Id": 50090000,
+        "Address": "0x00142CDF",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Tyhrranosis/Received Holo-Shield Glove",
+        "Id": 50090001,
+        "Address": "0x00142D07",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Tyhrranosis/Titanium Bolt 1",
+        "Id": 50090002,
+        "Address": "0x001BBB62",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Tyhrranosis/Titanium Bolt 2",
+        "Id": 50090003,
+        "Address": "0x001BBB61",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Daxx/Titanium Bolt 1",
+        "Id": 50050001,
+        "Address": "0x001BBB41",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Daxx/Titanium Bolt 2",
+        "Id": 50050002,
+        "Address": "0x001BBB42",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Daxx/Received Charge Boots",
+        "Id": 50050003,
+        "Address": "0x00142CBD",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Daxx/Infobot: Obani Gemini",
+        "Id": 50050000,
+        "Address": "0x001D553B",
+        # Infobot Address: "0x00142C29" bit 3
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Daxx/Courtney's Music Vid",
+        "Id": 50050004,
+        # "Address": "0x00143B39", #  ??
+        "Address": "0x0014275B",  # Daxx Courtney Room
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Obani Gemini/Received Disk Blade Gun",
+        "Id": 50110000,
+        "Address": "0x00142CEF",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Obani Gemini/Titanium Bolt 1",
+        "Id": 50110001,
+        "Address": "0x001BBB72",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Obani Gemini/Titanium Bolt 2",
+        "Id": 50110002,
+        "Address": "0x001BBB71",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Obani Gemini/Infobot: Blackwater City",
+        "Id": 50110003,
+        "Address": "0x00142BB2",
+        "CheckType": 0,
+        "AddressBit": 3  # 08: 0000_X000
+    },
+    {
+        "Name": "Blackwater/Received Grav Boots",
+        "Id": 50120000,
+        #  "Address": "0x00142CAD",
+        "Address": "0x00142C40",
+        "CheckType": 0,
+        "AddressBit": 3  # 0x08: 0000_X000
+    },
+    {
+        "Name": "Blackwater/Infobot: Holostar Studios",
+        "Id": 50120001,
+        "Address": "0x00142705",
+        #  "Address": "0x00142771", #  WA: Same as Meet Courtney - Arena
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Holostar/Received Rift Inducer",
+        "Id": 50130000,
+        "Address": "0x00142CFF",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Holostar/Titanium Bolt 1",
+        "Id": 50130001,
+        "Address": "0x001BBB82",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Holostar/Titanium Bolt 2",
+        "Id": 50130002,
+        "Address": "0x001BBB83",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Holostar/Titanium Bolt 3",
+        "Id": 50130003,
+        "Address": "0x001BBB81",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Holostar/Infobot: Obani Draco",
+        "Id": 50130004,
+        "Address": "0x00142713",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Obani Draco/Infobot: Zeldrin Starport",
+        "Id": 50210000,
+        "Address": "0x0014270D",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Zeldrin Starport/Received Bolt Grabber V2",
+        "Id": 50100000,
+        "Address": "0x00142CA7",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Zeldrin Starport/Titanium Bolt 1",
+        "Id": 50100001,
+        "Address": "0x001BBB6A",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Zeldrin Starport/Titanium Bolt 2",
+        "Id": 50100002,
+        "Address": "0x001BBB69",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Metropolis/Received Map-O-Matic",
+        "Id": 50260006,
+        #  "Address": "0x00142CA5", #  item flag
+        "Address": "0x00142C64",  # Metropolis Mission Clear
+        "CheckType": 0,
+        "AddressBit": 5  # 0x20 : 00X0_0000
+    },
+    {
+        "Name": "Metropolis/Titanium Bolt 1",
+        "Id": 50160000,
+        "Address": "0x001BBB99",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Metropolis/Titanium Bolt 2",
+        "Id": 50160003,
+        "Address": "0x001BBB9A",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Metropolis/Titanium Bolt 3",
+        "Id": 50260000,
+        "Address": "0x001BBBE9",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Metropolis/The AAAAGE OF ROBOTS!!!",
+        "Id": 50160002,
+        "Address": "0x0014275C",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Crash Site/Received Nano-Pak",
+        "Id": 50170001,
+        "Address": "0x00142CC0",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Crash Site/Titanium Bolt",
+        "Id": 50170000,
+        "Address": "0x001BBBA1",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Crash Site/Infobot: Aridia",
+        "Id": 50170003,
+        "Address": "0x00142C52",
+        # "Address": "0x00142722",
+        # Correct Address: 0x00142C52(4bit: 0x07->0x0f) (US), but Event is not happened in some case.
+        "CheckType": 0,
+        "AddressBit": 3  # / 0x02: 0000_00X0
+    },
+    {
+        "Name": "Aridia/Received Warp Pad",
+        "Id": 50180000,
+        # "Address": "0x00142CBF", #  Item flag
+        "Address": "0x00142C56",  # Clear Aridia
+        "CheckType": 0,
+        "AddressBit": 4  # 0x10: 000X_0000
+    },
+    {
+        "Name": "Aridia/Received Qwack-O-Ray",
+        "Id": 50180001,
+        "Address": "0x00142D2F",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Aridia/Titanium Bolt 1",
+        "Id": 50180002,
+        "Address": "0x001BBBAA",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Aridia/Titanium Bolt 2",
+        "Id": 50180003,
+        "Address": "0x001BBBA9",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Hideout/Received Gadgetron PDA",
+        "Id": 50190000,
+        "Address": "0x00142CC3",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Hideout/Titanium Bolt",
+        "Id": 50190001,
+        "Address": "0x001BBBB1",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Koros/Titanium Bolt 1",
+        "Id": 50140000,
+        "Address": "0x001BBB89",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Koros/Titanium Bolt 2",
+        "Id": 50140001,
+        "Address": "0x001BBB8A",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Koros/Infobot: Command Center",
+        "Id": 50140002,
+        "Address": "0x00142C49",
+        "CheckType": 0,
+        "AddressBit": 3  # 04 -> 0C: 0000_X000
+    },
+    {
+        "Name": "Command Center/Titanium Bolt",
+        "Id": 50220000,
+        "Address": "0x001BBBC9",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Command Center/Dr. Nefarious Defeated!",
+        "Id": 50200000,
+        "Address": "0x0014270F",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Command Center/Biobliterator Defeated!",
+        "Id": 50200001,
+        "Address": "0x00142BB6",
+        "CheckType": 0,
+        "AddressBit": 6  # 40: 0X00_0000
+    },
+    {
+        "Name": "Phoenix/VC1 - All Tokens Titanium Bolt",
+        "Id": 50310001,
+        "Address": "0x001BBB32",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/VC2 - All Tokens Titanium Bolt",
+        "Id": 50330001,
+        "Address": "0x001BBB34",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/VC3 - All Tokens Titanium Bolt",
+        "Id": 50340001,
+        "Address": "0x001BBB33",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/VC4 - All Tokens Titanium Bolt",
+        "Id": 50320001,
+        "Address": "0x001BBB35",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/VC5 - All Tokens Titanium Bolt",
+        "Id": 50350001,
+        "Address": "0x001BBB36",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Marcadia/Secure the Area",
+        "Id": 50040006,
+        "Address": "0x00142738",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Marcadia/Air Assault",
+        "Id": 50040007,
+        "Address": "0x00142739",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Marcadia/Turret Command",
+        "Id": 50040008,
+        "Address": "0x0014273A",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Marcadia/Under the Gun",
+        "Id": 50040009,
+        "Address": "0x0014273B",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Marcadia/Hit n' Run",
+        "Id": 50040010,
+        "Address": "0x0014273C",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Blackwater/The Battle of Blackwater City",
+        "Id": 50120002,
+        "Address": "0x0014273D",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Blackwater/The Bridge",
+        "Id": 50120003,
+        "Address": "0x0014273E",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Blackwater/Counterattack",
+        "Id": 50120004,
+        "Address": "0x00142C40",  # As same as Gravity-Boots event
+        "CheckType": 0,
+        "AddressBit": 3
+    },
+    {
+        "Name": "Metropolis/Countdown",
+        "Id": 50260001,
+        "Address": "0x00142747",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Metropolis/Urban Combat",
+        "Id": 50260002,
+        "Address": "0x00142748",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Metropolis/Tower Attack",
+        "Id": 50260003,
+        "Address": "0x00142749",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Metropolis/Air Superiority",
+        "Id": 50260004,
+        "Address": "0x0014274A",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Metropolis/Turret Command",
+        "Id": 50260005,
+        "Address": "0x0014274B",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Aridia/The Tunnels of Outpost X12",
+        "Id": 50180004,
+        "Address": "0x00142742",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Aridia/Ambush in Red Rock Valley",
+        "Id": 50180005,
+        "Address": "0x00142743",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Aridia/Assassination",
+        "Id": 50180006,
+        "Address": "0x00142744",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Aridia/Reclaim the Valley",
+        "Id": 50180007,
+        "Address": "0x00142745",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Aridia/X12 Endgame",
+        "Id": 50180008,
+        "Address": "0x00142746",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Qwark VidComic 1 Clear",
+        "Id": 50310000,
+        "Address": "0x00142734",
+        "CheckType": 0,
+        "AddressBit": 1
+    },
+    {
+        "Name": "Phoenix/Qwark VidComic 2 Clear",
+        "Id": 50330000,
+        "Address": "0x00142734",
+        "CheckType": 0,
+        "AddressBit": 3
+    },
+    {
+        "Name": "Phoenix/Qwark VidComic 3 Clear",
+        "Id": 50340000,
+        "Address": "0x00142734",
+        "CheckType": 0,
+        "AddressBit": 2
+    },
+    {
+        "Name": "Phoenix/Qwark VidComic 4 Clear",
+        "Id": 50320000,
+        "Address": "0x00142734",
+        "CheckType": 0,
+        "AddressBit": 4
+    },
+    {
+        "Name": "Phoenix/Qwark VidComic 5 Clear",
+        "Id": 50350000,
+        "Address": "0x00142734",
+        "CheckType": 0,
+        "AddressBit": 5
+    },
+    {
+        "Name": "Tyhrranosis/IRON. HARD. ABS.",
+        "Id": 50090004,
+        "Address": "0x0014271D",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Tyhrranosis/Assault on Kavu Island",
+        "Id": 50290000,
+        "Address": "0x0014274C",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Tyhrranosis/Dogfight over Kavu Island",
+        "Id": 50290001,
+        "Address": "0x0014274D",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Tyhrranosis/Operation Thunderbolt",
+        "Id": 50290002,
+        "Address": "0x0014274F",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Tyhrranosis/The Final Battle",
+        "Id": 50290003,
+        "Address": "0x00142750",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Florana/Complete the Path of Death without a hit",
+        "Id": 50020005,
+        "Address": "0x001D54B1",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Turn Up The Heat! (SP)",
+        "Id": 50030030,
+        "Address": "0x001D54B4",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Strive for arcade perfection (SP)",
+        "Id": 50030031,
+        "Address": "0x001D54B2",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Beat Helga's Best Time (0:50) (SP)",
+        "Id": 50030032,
+        "Address": "0x001D54B3",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Hit n' Run",
+        "Id": 50030033,
+        "Address": "0x001D54B5",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Marcadia/Kill 25 enemies with the Refractor",
+        "Id": 50040011,
+        "Address": "0x001D54B6",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Daxx/Turn 15 Floranian Blood Flies into ducks.",
+        "Id": 50050005,
+        "Address": "0x001D54B7",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Beat Scorpio using only the wrench",
+        "Id": 50070037,
+        "Address": "0x001D54B8",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Beat all the Gauntlet challenges",
+        "Id": 50070038,
+        "Address": "0x001D54B9",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Complete a Gauntlet without taking a hit",
+        "Id": 50070039,
+        "Address": "0x001D54BA",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Annihilation Nation/Destroy 5 Floating Cameras in the gauntlet.",
+        "Id": 50070040,
+        "Address": "0x001D54BB",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Aquatos/Blow up 40 underwater crates",
+        "Id": 50080004,
+        "Address": "0x001D54BC",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Tyhrranosis/Snipe 10 Tyhrranoids in the towers",
+        "Id": 50090005,
+        "Address": "0x001D54BD",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Obani Gemini/Get onto the floating asteroid ring",
+        "Id": 50110004,
+        "Address": "0x001D54BE",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Blackwater/Kill 20 enemies with the wrench",
+        "Id": 50120005,
+        "Address": "0x001D54BF",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Holostar/Win the jackpot",
+        "Id": 50130005,
+        "Address": "0x001D54C0",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Koros/Smash up the Robot Base",
+        "Id": 50140003,
+        "Address": "0x001D54C1",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Metropolis/Destroy the blimp",
+        "Id": 50160001,
+        "Address": "0x001D54C2",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Crash Site/Kill 40 enemies using the Suck Cannon",
+        "Id": 50170004,
+        "Address": "0x001D54C3",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Crash Site/Kill 10 Skreeducks",
+        "Id": 50170005,
+        "Address": "0x001D54C4",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Aridia/Get 2 seconds of air with the Turbo Slider",
+        "Id": 50180009,
+        "Address": "0x001D54B0",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Aridia/Kill 10 enemies with the Refractor",
+        "Id": 50180010,
+        "Address": "0x001D54C5",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Hideout/Break the Dan o7",
+        "Id": 50190002,
+        "Address": "0x001D54C6",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Command Center/Infect 30 enemies.",
+        "Id": 50220001,
+        "Address": "0x001D54C7",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Aquatos/Hit the motherload (SP)",
+        "Id": 50280006,
+        "Address": "0x001D54C8",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/VC1 - Set a new record for Qwark (2:40) (SP)",
+        "Id": 50310003,
+        "Address": "0x001D54C9",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/VC2 - Set a new record for Qwark (2:10) (SP)",
+        "Id": 50330003,
+        "Address": "0x001D54CB",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/VC3 - Set a new record for Qwark (1:50) (SP)",
+        "Id": 50340003,
+        "Address": "0x001D54CA",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/VC4 - Set a new record for Qwark (4:45) (SP)",
+        "Id": 50320003,
+        "Address": "0x001D54CC",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/VC5 - Set a new record for Qwark (2:00) (SP)",
+        "Id": 50350003,
+        "Address": "0x001D54CD",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/VR Gadget Training",
+        "Id": 50030018,
+        "Address": "0x00142765",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Warm Up",
+        "Id": 50030019,
+        "Address": "0x00142766",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Don't Look Down",
+        "Id": 50030020,
+        "Address": "0x00142767",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Speed Round",
+        "Id": 50030021,
+        "Address": "0x00142768",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Hot Stepper",
+        "Id": 50030022,
+        "Address": "0x00142769",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/90 Second Slayer",
+        "Id": 50030023,
+        "Address": "0x0014276A",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/The Shocker",
+        "Id": 50030024,
+        "Address": "0x0014276B",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Wrench Beatdown",
+        "Id": 50030025,
+        "Address": "0x0014276C",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Nerves of Titanium",
+        "Id": 50030026,
+        "Address": "0x0014276D",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Received Mini-Turret Glove",
+        "Id": 50080005,
+        "Address": "0x00142CB5",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Received Lava Gun",
+        "Id": 50080006,
+        "Address": "0x00142CB1",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Received Shield Charger",
+        "Id": 50080007,
+        "Address": "0x00142CB6",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Received Bouncer",
+        "Id": 50080008,
+        "Address": "0x00142CB3",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Phoenix/Received Plasma Coil",
+        "Id": 50080009,
+        "Address": "0x00142CB0",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Crash Site/Master Plan",
+        "Id": 50170002,
+        "Address": "0x00142C52",  # weird address but it's correct
+        "CheckType": 0,
+        "AddressBit": 2
+    },
+    {
+        "Name": "Florana/Ratchet trophy",
+        "Id": 50020006,
+        "Address": "0x00142790",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Holostar/Clank trophy",
+        "Id": 50130006,
+        "Address": "0x00142791",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Hideout/Qwark trophy",
+        "Id": 50190003,
+        "Address": "0x00142792",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Crash Site/Dr Nefarious trophy",
+        "Id": 50170006,
+        "Address": "0x00142793",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Metropolis/Skrunch trophy",
+        "Id": 50160005,
+        "Address": "0x00142794",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Command Center/Lawrence trophy",
+        "Id": 50220002,
+        "Address": "0x00142795",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Daxx/Plumber trophy",
+        "Id": 50050006,
+        "Address": "0x00142796",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Koros/Courtney Gears trophy",
+        "Id": 50140004,
+        "Address": "0x00142797",
+        "CheckType": 0,
+        "AddressBit": 0
+    },
+    {
+        "Name": "Tyhrranosis/AL trophy",
+        "Id": 50090006,
+        "Address": "0x00142798",
+        "CheckType": 0,
+        "AddressBit": 0
+    }
+    # {
+    #     "Name": "Titanium Collector trophy",
+    #     "Id": 50030034,
+    #     "Address": "0x00142799",
+    #     "CheckType": 0,
+    #     "AddressBit": 0
+    # },
+    # {
+    #     "Name": "Friend of the Rangers trophy",
+    #     "Id": 50030035,
+    #     "Address": "0x0014279D",
+    #     "CheckType": 0,
+    #     "AddressBit": 0
+    # },
+    # {
+    #     "Name": "Annihilation Nation Champion trophy",
+    #     "Id": 50030036,
+    #     "Address": "0x0014279C",
+    #     "CheckType": 0,
+    #     "AddressBit": 0
+    # },
+    # {
+    #     "Name": "Skill Master trophy",
+    #     "Id": 50030037,
+    #     "Address": "0x0014279A",
+    #     "CheckType": 0,
+    #     "AddressBit": 0
+    # },
+    # Todo: NG+ Long term trophies
+    # Nano Finder trophy 0x0014279b
+    # Omega Arsenal trophy 0x0014279e
 ]

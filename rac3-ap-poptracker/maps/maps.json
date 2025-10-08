@@ -1,9 +1,9 @@
 [
   {
     "name": "Galaxy",
-    "location_size": 20,
-    "location_border_thickness": 3,
-    "img": "images/maps/Gemini.png"
+    "location_size": 40,
+    "location_border_thickness": 5,
+    "img": "images/maps/Galaxy.png"
   },
   {
     "name": "Veldin",

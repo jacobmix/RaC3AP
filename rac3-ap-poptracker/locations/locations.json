@@ -1,5 +1,1663 @@
 [
   {
+    "name": "Galaxy",
+    "chest_unopened_img": "images/Question.png",
+    "chest_opened_img": "images/Q_Force.png",
+    "children": [
+      {
+        "name": "Veldin",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 78,
+            "y": 442
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Shock Blaster",
+            "item_count": 1
+          },
+          {
+            "name": "Received Nitro Launcher",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Florana",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Florana",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 704,
+            "y": 516
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Plasma Whip",
+            "item_count": 1
+          },
+          {
+            "name": "Received, N60 Storm",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 1",
+            "item_count": 1
+          },
+          {
+            "name": "Ratchet trophy",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 2",
+            "item_count": 1
+          },
+          {
+            "name": "Complete the Path of Death without a hit",
+            "item_count": 1
+          },
+          {
+            "name": "Defeat Qwark",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Phoenix",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 312,
+            "y": 508
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Suck Cannon",
+            "item_count": 1
+          },
+          {
+            "name": "Received Infector",
+            "item_count": 1
+          },
+          {
+            "name": "Gadget Training Titanium Bolt",
+            "item_count": 1
+          },
+          {
+            "name": "Beat Helga's Best Time (0:50) (SP)",
+            "item_count": 1
+          },
+          {
+            "name": "VR Gadget Training",
+            "item_count": 1
+          },
+          {
+            "name": "Received Hacker",
+            "item_count": 1
+          },
+          {
+            "name": "Received Hypershot",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Daxx",
+            "item_count": 1
+          },
+          {
+            "name": "Warm Up",
+            "item_count": 1
+          },
+          {
+            "name": "Don't Look Down",
+            "item_count": 1
+          },
+          {
+            "name": "Speed Round",
+            "item_count": 1
+          },
+          {
+            "name": "Hot Stepper",
+            "item_count": 1
+          },
+          {
+            "name": "90 Second Slayer",
+            "item_count": 1
+          },
+          {
+            "name": "The Shocker",
+            "item_count": 1
+          },
+          {
+            "name": "Wrench Beatdown",
+            "item_count": 1
+          },
+          {
+            "name": "Nerves of Titanium",
+            "item_count": 1
+          },
+          {
+            "name": "Nerves Titanium Bolt",
+            "item_count": 1
+          },
+          {
+            "name": "Received Magna Plate Armor",
+            "item_count": 1
+          },
+          {
+            "name": "Received Adamantine Armor",
+            "item_count": 1
+          },
+          {
+            "name": "Received Aegis Mark V Armor",
+            "item_count": 1
+          },
+          {
+            "name": "Received Infernox Armor",
+            "item_count": 1
+          },
+          {
+            "name": "Turn Up The Heat! (SP)",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Marcadia",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Annihilation Nation",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Aquatos",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Tyhrranosis",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Metropolis",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Qwarks Hideout",
+            "item_count": 1
+          },
+          {
+            "name": "Qwark Vidcomic 5",
+            "item_count": 1
+          },
+          {
+            "name": "Qwark Vidcomic 1 Clear",
+            "item_count": 1
+          },
+          {
+            "name": "VC1 - Set a new record for Qwark (2:40) (SP)",
+            "item_count": 1
+          },
+          {
+            "name": "VC1 - All Tokens Titanium Bolt",
+            "item_count": 1
+          },
+          {
+            "name": "Qwark Vidcomic 2 Clear",
+            "item_count": 1
+          },
+          {
+            "name": "VC2 - Set a new record for Qwark (2:10) (SP)",
+            "item_count": 1
+          },
+          {
+            "name": "VC2 - All Tokens Titanium Bolt",
+            "item_count": 1
+          },
+          {
+            "name": "Qwark Vidcomic 3 Clear",
+            "item_count": 1
+          },
+          {
+            "name": "VC3 - Set a new record for Qwark (1:50) (SP)",
+            "item_count": 1
+          },
+          {
+            "name": "VC3 - All Tokens Titanium Bolt",
+            "item_count": 1
+          },
+          {
+            "name": "Qwark Vidcomic 4 Clear",
+            "item_count": 1
+          },
+          {
+            "name": "VC4 - Set a new record for Qwark (4:45) (SP)",
+            "item_count": 1
+          },
+          {
+            "name": "VC4 - All Tokens Titanium Bolt",
+            "item_count": 1
+          },
+          {
+            "name": "Qwark Vidcomic 5 Clear",
+            "item_count": 1
+          },
+          {
+            "name": "VC5 - Set a new record for Qwark (2:00) (SP)",
+            "item_count": 1
+          },
+          {
+            "name": "VC5 - All Tokens Titanium Bolt",
+            "item_count": 1
+          },
+          {
+            "name": "Strive for arcade perfection (SP)",
+            "item_count": 1
+          },
+          {
+            "name": "Hit n' Run",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Koros",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Marcadia",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 210,
+            "y": 460
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Spitting Hydra",
+            "item_count": 1
+          },
+          {
+            "name": "Received Refractor",
+            "item_count": 1
+          },
+          {
+            "name": "Qwark Vidcomic 1",
+            "item_count": 1
+          },
+          {
+            "name": "Kill 25 enemies with the Refractor",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 1",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 2",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 3",
+            "item_count": 1
+          },
+          {
+            "name": "Secure the Area",
+            "item_count": 1
+          },
+          {
+            "name": "Air Assault",
+            "item_count": 1
+          },
+          {
+            "name": "Turret Command",
+            "item_count": 1
+          },
+          {
+            "name": "Under the Gun",
+            "item_count": 1
+          },
+          {
+            "name": "Hit n' Run",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Annihilation Nation",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 586,
+            "y": 328
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Agents of Doom",
+            "item_count": 1
+          },
+          {
+            "name": "Received Tyhrra-Guise",
+            "item_count": 1
+          },
+          {
+            "name": "Qwark Vidcomic 2",
+            "item_count": 1
+          },
+          {
+            "name": "Qwark Vidcomic 3",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 1",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 2",
+            "item_count": 1
+          },
+          {
+            "name": "Heat Street",
+            "item_count": 1
+          },
+          {
+            "name": "Crispy Critter",
+            "item_count": 1
+          },
+          {
+            "name": "Pyro Playground",
+            "item_count": 1
+          },
+          {
+            "name": "Suicide Run",
+            "item_count": 1
+          },
+          {
+            "name": "BBQ Boulevard",
+            "item_count": 1
+          },
+          {
+            "name": "Maze of Blaze",
+            "item_count": 1
+          },
+          {
+            "name": "Cremation Station",
+            "item_count": 1
+          },
+          {
+            "name": "The Annihilator",
+            "item_count": 1
+          },
+          {
+            "name": "Grand Prize Bout",
+            "item_count": 1
+          },
+          {
+            "name": "The Terrible Two",
+            "item_count": 1
+          },
+          {
+            "name": "Two Minute Warning",
+            "item_count": 1
+          },
+          {
+            "name": "90 Seconds of Carnage",
+            "item_count": 1
+          },
+          {
+            "name": "Onslaught",
+            "item_count": 1
+          },
+          {
+            "name": "Whip it Good",
+            "item_count": 1
+          },
+          {
+            "name": "Hydra'n Seek",
+            "item_count": 1
+          },
+          {
+            "name": "Championship Bout",
+            "item_count": 1
+          },
+          {
+            "name": "Meet Courtney - Arena",
+            "item_count": 1
+          },
+          {
+            "name": "Ninja Challenge",
+            "item_count": 1
+          },
+          {
+            "name": "Counting Ducks",
+            "item_count": 1
+          },
+          {
+            "name": "Cycling Weapons",
+            "item_count": 1
+          },
+          {
+            "name": "One Hit Wonder",
+            "item_count": 1
+          },
+          {
+            "name": "Time to Suck",
+            "item_count": 1
+          },
+          {
+            "name": "Naptime",
+            "item_count": 1
+          },
+          {
+            "name": "More Cycling Weapons",
+            "item_count": 1
+          },
+          {
+            "name": "Dodge the Twins",
+            "item_count": 1
+          },
+          {
+            "name": "Chop Chop",
+            "item_count": 1
+          },
+          {
+            "name": "Sleep Inducer",
+            "item_count": 1
+          },
+          {
+            "name": "The Other White Meat",
+            "item_count": 1
+          },
+          {
+            "name": "Championship Bout II",
+            "item_count": 1
+          },
+          {
+            "name": "It's Qwarktastic!",
+            "item_count": 1
+          },
+          {
+            "name": "Beat Scorpio using only the wrench",
+            "item_count": 1
+          },
+          {
+            "name": "Beat all the Gauntlet challenges",
+            "item_count": 1
+          },
+          {
+            "name": "Complete a Gauntlet without taking a hit",
+            "item_count": 1
+          },
+          {
+            "name": "Destroy 5 Floating Cameras in the gauntlet.",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Aquatos",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 390,
+            "y": 242
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Flux Rifle",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 1",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 2",
+            "item_count": 1
+          },
+          {
+            "name": "Blow up 40 underwater crates",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 3",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 4",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 5",
+            "item_count": 1
+          },
+          {
+            "name": "1 Sewer Crystal Traded",
+            "item_count": 1
+          },
+          {
+            "name": "5 Sewer Crystals Traded",
+            "item_count": 1
+          },
+          {
+            "name": "10 Sewer Crystals Traded",
+            "item_count": 1
+          },
+          {
+            "name": "20 Sewer Crystals Traded",
+            "item_count": 1
+          },
+          {
+            "name": "Hit the motherload (SP)",
+            "item_count": 1
+          },
+          {
+            "name": "Received Mini-turret Glove",
+            "item_count": 1
+          },
+          {
+            "name": "Received Lava Gun",
+            "item_count": 1
+          },
+          {
+            "name": "Received Bouncer",
+            "item_count": 1
+          },
+          {
+            "name": "Received Plasma Coil",
+            "item_count": 1
+          },
+          {
+            "name": "Received Shield Charger",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Tyhrranosis",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 308,
+            "y": 266
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Annihilator",
+            "item_count": 1
+          },
+          {
+            "name": "Received Holo-Shield Glove",
+            "item_count": 1
+          },
+          {
+            "name": "Snipe 10 Tyhrranoids in the towers",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 1",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 2",
+            "item_count": 1
+          },
+          {
+            "name": "AL trophy",
+            "item_count": 1
+          },
+          {
+            "name": "IRON. HARD. ABS.",
+            "item_count": 1
+          },
+          {
+            "name": "Assault on Kavu Island",
+            "item_count": 1
+          },
+          {
+            "name": "Dogfight over Kavu Island",
+            "item_count": 1
+          },
+          {
+            "name": "Operation Thunderbolt",
+            "item_count": 1
+          },
+          {
+            "name": "The Final Battle",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Daxx",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 425,
+            "y": 322
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Charge Boots",
+            "item_count": 1
+          },
+          {
+            "name": "Plumber trophy",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 1",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 2",
+            "item_count": 1
+          },
+          {
+            "name": "Courtney's Music Vid",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Obani Gemini",
+            "item_count": 1
+          },
+          {
+            "name": "Turn 15 Floranian Blood Flies into ducks.",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Obani Gemini",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 545,
+            "y": 190
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Disk-Blade Gun",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 1",
+            "item_count": 1
+          },
+          {
+            "name": "Get onto the floating asteroid ring",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 2",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Blackwater City",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Blackwater",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 190,
+            "y": 745
+          }
+        ],
+        "sections": [
+          {
+            "name": "Kill 20 enemies with the wrench",
+            "item_count": 1
+          },
+          {
+            "name": "Received Grav Boots",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Holostar Studios",
+            "item_count": 1
+          },
+          {
+            "name": "The Battle of Blackwater City",
+            "item_count": 1
+          },
+          {
+            "name": "The Bridge",
+            "item_count": 1
+          },
+          {
+            "name": "Counterattack",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Holostar",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 722,
+            "y": 350
+          }
+        ],
+        "sections": [
+          {
+            "name": "Win the jackpot",
+            "item_count": 1
+          },
+          {
+            "name": "Received Rift Inducer",
+            "item_count": 1
+          },
+          {
+            "name": "Clank trophy",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 1",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 2",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 3",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Obani Draco",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Obani Draco",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 680,
+            "y": 110
+          }
+        ],
+        "sections": [
+          {
+            "name": "Infobot: Zeldrin Starport",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Zeldrin Starport",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 442,
+            "y": 702
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Bolt Grabber V2",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 1",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 2",
+            "item_count": 1
+          },
+          {
+            "name": "Qwark Vidcomic 4",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Metropolis",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 795,
+            "y": 395
+          }
+        ],
+        "sections": [
+          {
+            "name": "Destroy the blimp",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 1",
+            "item_count": 1
+          },
+          {
+            "name": "Skrunch trophy",
+            "item_count": 1
+          },
+          {
+            "name": "The AAAAGE OF ROBOTS!!!",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 2",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Crash Site",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 3",
+            "item_count": 1
+          },
+          {
+            "name": "Countdown",
+            "item_count": 1
+          },
+          {
+            "name": "Urban Combat",
+            "item_count": 1
+          },
+          {
+            "name": "Tower Attack",
+            "item_count": 1
+          },
+          {
+            "name": "Air Superiority",
+            "item_count": 1
+          },
+          {
+            "name": "Turret Command",
+            "item_count": 1
+          },
+          {
+            "name": "Received Map-O-Matic",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Crash Site",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 505,
+            "y": 645
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          },
+          {
+            "name": "Dr Nefarious trophy",
+            "item_count": 1
+          },
+          {
+            "name": "Received Nano-Pak",
+            "item_count": 1
+          },
+          {
+            "name": "Master Plan",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Aridia",
+            "item_count": 1
+          },
+          {
+            "name": "Kill 10 Skreeducks",
+            "item_count": 1
+          },
+          {
+            "name": "Kill 40 enemies using the Suck Cannon",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Aridia",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 625,
+            "y": 570
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Qwack-O-Ray",
+            "item_count": 1
+          },
+          {
+            "name": "The Tunnels of Outpost X12",
+            "item_count": 1
+          },
+          {
+            "name": "Ambush in Red Rock Valley",
+            "item_count": 1
+          },
+          {
+            "name": "Assassination",
+            "item_count": 1
+          },
+          {
+            "name": "Reclaim the Valley",
+            "item_count": 1
+          },
+          {
+            "name": "X12 Endgame",
+            "item_count": 1
+          },
+          {
+            "name": "Received Warp Pad",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 1",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 2",
+            "item_count": 1
+          },
+          {
+            "name": "Get 2 seconds of air with the Turbo Slider",
+            "item_count": 1
+          },
+          {
+            "name": "Kill 10 enemies with the Refractor",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Hideout",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 442,
+            "y": 124
+          }
+        ],
+        "sections": [
+          {
+            "name": "Received Gadgetron PDA",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          },
+          {
+            "name": "Break the Dan o7",
+            "item_count": 1
+          },
+          {
+            "name": "Qwark trophy",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Koros",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 160,
+            "y": 660
+          }
+        ],
+        "sections": [
+          {
+            "name": "Courtney Gears trophy",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 1",
+            "item_count": 1
+          },
+          {
+            "name": "Titanium Bolt 2",
+            "item_count": 1
+          },
+          {
+            "name": "Smash up the Robot Base",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Command Center",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Command Center",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 452,
+            "y": 575
+          }
+        ],
+        "sections": [
+          {
+            "name": "Titanium Bolt",
+            "item_count": 1
+          },
+          {
+            "name": "Lawrence trophy",
+            "item_count": 1
+          },
+          {
+            "name": "Infect 30 enemies.",
+            "item_count": 1
+          },
+          {
+            "name": "Dr. Nefarious Defeated!",
+            "item_count": 1
+          },
+          {
+            "name": "Biobliterator Defeated!",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Nanotech Levels 11-15",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 50,
+            "y": 50
+          }
+        ],
+        "sections": [
+          {
+            "name": "Nanotech Milestone: 11",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 12",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 13",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 14",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 15",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Nanotech Levels 16-20",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 100,
+            "y": 50
+          }
+        ],
+        "sections": [
+          {
+            "name": "Nanotech Milestone: 16",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 17",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 18",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 19",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 20",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Nanotech Levels 21-25",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 150,
+            "y": 50
+          }
+        ],
+        "sections": [
+          {
+            "name": "Nanotech Milestone: 21",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 22",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 23",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 24",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 25",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Nanotech Levels 26-30",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 200,
+            "y": 50
+          }
+        ],
+        "sections": [
+          {
+            "name": "Nanotech Milestone: 26",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 27",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 28",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 29",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 30",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Nanotech Levels 31-35",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 250,
+            "y": 50
+          }
+        ],
+        "sections": [
+          {
+            "name": "Nanotech Milestone: 31",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 32",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 33",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 34",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 35",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Nanotech Levels 36-40",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 300,
+            "y": 50
+          }
+        ],
+        "sections": [
+          {
+            "name": "Nanotech Milestone: 36",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 37",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 38",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 39",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 40",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Nanotech Levels 41-45",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 50,
+            "y": 100
+          }
+        ],
+        "sections": [
+          {
+            "name": "Nanotech Milestone: 41",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 42",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 43",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 44",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 45",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Nanotech Levels 46-50",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 100,
+            "y": 100
+          }
+        ],
+        "sections": [
+          {
+            "name": "Nanotech Milestone: 46",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 47",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 48",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 49",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 50",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Nanotech Levels 51-55",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 150,
+            "y": 100
+          }
+        ],
+        "sections": [
+          {
+            "name": "Nanotech Milestone: 51",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 52",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 53",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 54",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 55",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Nanotech Levels 56-60",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 200,
+            "y": 100
+          }
+        ],
+        "sections": [
+          {
+            "name": "Nanotech Milestone: 56",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 57",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 58",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 59",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 60",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Nanotech Levels 61-65",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 250,
+            "y": 100
+          }
+        ],
+        "sections": [
+          {
+            "name": "Nanotech Milestone: 61",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 62",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 63",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 64",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 65",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Nanotech Levels 66-70",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 300,
+            "y": 100
+          }
+        ],
+        "sections": [
+          {
+            "name": "Nanotech Milestone: 66",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 67",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 68",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 69",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 70",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Nanotech Levels 71-75",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 50,
+            "y": 150
+          }
+        ],
+        "sections": [
+          {
+            "name": "Nanotech Milestone: 71",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 72",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 73",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 74",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 75",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Nanotech Levels 76-80",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 100,
+            "y": 150
+          }
+        ],
+        "sections": [
+          {
+            "name": "Nanotech Milestone: 76",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 77",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 78",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 79",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 80",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Nanotech Levels 81-85",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 150,
+            "y": 150
+          }
+        ],
+        "sections": [
+          {
+            "name": "Nanotech Milestone: 81",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 82",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 83",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 84",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 85",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Nanotech Levels 86-90",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 200,
+            "y": 150
+          }
+        ],
+        "sections": [
+          {
+            "name": "Nanotech Milestone: 86",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 87",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 88",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 89",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 90",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Nanotech Levels 91-95",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 250,
+            "y": 150
+          }
+        ],
+        "sections": [
+          {
+            "name": "Nanotech Milestone: 91",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 92",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 93",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 94",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 95",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Nanotech Levels 96-100",
+        "map_locations": [
+          {
+            "map": "Galaxy",
+            "x": 300,
+            "y": 150
+          }
+        ],
+        "sections": [
+          {
+            "name": "Nanotech Milestone: 96",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 97",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 98",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 99",
+            "item_count": 1
+          },
+          {
+            "name": "Nanotech Milestone: 100"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "Veldin",
     "chest_unopened_img": "images/Question.png",
     "chest_opened_img": "images/Q_Force.png",
@@ -331,47 +1989,11 @@
         ],
         "sections": [
           {
-            "name": "Infobot: Marcadia",
-            "item_count": 1
-          },
-          {
-            "name": "Infobot: Annihilation Nation",
-            "item_count": 1
-          },
-          {
             "name": "Infobot: Aquatos",
             "item_count": 1
           },
           {
             "name": "Infobot: Tyhrranosis",
-            "item_count": 1
-          },
-          {
-            "name": "Infobot: Metropolis",
-            "item_count": 1
-          },
-          {
-            "name": "Infobot: Crash Site",
-            "item_count": 1
-          },
-          {
-            "name": "Infobot: Qwarks Hideout",
-            "item_count": 1
-          }
-        ]
-      },
-      {
-        "name": "Received Vid Comics",
-        "map_locations": [
-          {
-            "map": "Starship Phoenix",
-            "x": 381,
-            "y": 315
-          }
-        ],
-        "sections": [
-          {
-            "name": "Qwark Vidcomic 4",
             "item_count": 1
           },
           {
@@ -390,6 +2012,10 @@
           }
         ],
         "sections": [
+          {
+            "name": "Infobot: Annihilation Nation",
+            "item_count": 1
+          },
           {
             "name": "Qwark Vidcomic 1 Clear",
             "item_count": 1
@@ -427,6 +2053,10 @@
             "item_count": 1
           },
           {
+            "name": "Infobot: Metropolis",
+            "item_count": 1
+          },
+          {
             "name": "Qwark Vidcomic 4 Clear",
             "item_count": 1
           },
@@ -436,6 +2066,10 @@
           },
           {
             "name": "VC4 - All Tokens Titanium Bolt",
+            "item_count": 1
+          },
+          {
+            "name": "Infobot: Qwarks Hideout",
             "item_count": 1
           },
           {
@@ -457,7 +2091,7 @@
         ]
       },
       {
-        "name": "Monkeying Around (SP)",
+        "name": "Bridge",
         "map_locations": [
           {
             "map": "Starship Phoenix",
@@ -467,7 +2101,11 @@
         ],
         "sections": [
           {
-            "name": "Hit n' Run",
+            "name": "Infobot: Marcadia",
+            "item_count": 1
+          },
+          {
+            "name": "Monkeying Around (SP)",
             "item_count": 1
           }
         ]
@@ -2963,18 +4601,7 @@
             "map": "Holostar Studios Clank",
             "x": 22,
             "y": 242
-          }
-        ],
-        "sections": [
-          {
-            "name": "Win the jackpot",
-            "item_count": 1
-          }
-        ]
-      },
-      {
-        "name": "Feeling Lucky (SP)",
-        "map_locations": [
+          },
           {
             "map": "Holostar Studios",
             "x": 334,
@@ -2983,7 +4610,8 @@
         ],
         "sections": [
           {
-            "ref": "Feeling Lucky (SP)/Win the jackpot"
+            "name": "Win the jackpot",
+            "item_count": 1
           }
         ]
       },
@@ -3166,6 +4794,22 @@
             "item_count": 1
           }
         ]
+      },
+      {
+        "name": "The Leviathan",
+        "map_locations": [
+          {
+            "map": "Zeldrin Starport",
+            "x": 330,
+            "y": 180
+          }
+        ],
+        "sections": [
+          {
+            "name": "Qwark Vidcomic 4",
+            "item_count": 1
+          }
+        ]
       }
     ]
   },
@@ -3269,6 +4913,22 @@
         "sections": [
           {
             "name": "Titanium Bolt",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Klunk Fight",
+        "map_locations": [
+          {
+            "map": "Metropolis",
+            "x": 250,
+            "y": 20
+          }
+        ],
+        "sections": [
+          {
+            "name": "Infobot: Crash Site",
             "item_count": 1
           }
         ]
@@ -3388,8 +5048,8 @@
         "map_locations": [
           {
             "map": "Crash Site",
-            "x": 425,
-            "y": 323
+            "x": 45,
+            "y": 484
           }
         ],
         "sections": [
@@ -3404,8 +5064,8 @@
         "map_locations": [
           {
             "map": "Crash Site",
-            "x": 45,
-            "y": 484
+            "x": 425,
+            "y": 323
           }
         ],
         "sections": [
