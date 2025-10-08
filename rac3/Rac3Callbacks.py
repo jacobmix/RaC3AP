@@ -24,18 +24,22 @@ async def update(ctx: 'Context', ap_connected: bool) -> None:
     # probably because of when the game loads stuff.
 
     if ap_connected and ctx.slot_data is not None:
-        # Check received items
-        await handle_received_items(ctx)
-        # Check collected locations
-        await handle_checked_locations(ctx)
-        # Check goal is checked or not
-        await handle_check_goal(ctx)
-        # Check planet id
-        await handle_planet_changed(ctx)
+        # Check if exit to main menu
+        await handle_main_menu(ctx)
 
-        ctx.game_interface.update()
+        if not ctx.main_menu:
+            # Check received items
+            await handle_received_items(ctx)
+            # Check collected locations
+            await handle_checked_locations(ctx)
+            # Check goal is checked or not
+            await handle_check_goal(ctx)
+            # Check planet id
+            await handle_planet_changed(ctx)
 
-        # logger.info(f"Update is called")
+            ctx.game_interface.update()
+
+            # logger.info(f"Update is called")
 
 
 async def init(ctx: 'Context', ap_connected: bool) -> None:
@@ -51,15 +55,10 @@ async def handle_planet_changed(ctx: 'Context') -> None:
         return
     planet = ctx.current_planet
     ctx.current_planet = ctx.game_interface.new_planet()
-    await ctx.send_msgs([{"cmd": 'Set',
-                          "key": f'rac3_current_planet_{ctx.slot}_{ctx.team}',
-                          "default": "Starship Phoenix",
-                          "want_reply": False,
-                          "operations": [{
-                              "operation": 'replace',
-                              "value": ctx.current_planet}]
-                          }])
     if planet is not ctx.current_planet:
+
+        if ctx.current_planet == "Tyhrranosis":
+            ctx.game_interface.tyhrranosis_fix()
 
         await ctx.send_msgs([{"cmd": 'Set',
                               "key": f'rac3_current_planet_{ctx.slot}_{ctx.team}',
@@ -140,3 +139,11 @@ async def handle_check_goal(ctx: 'Context') -> None:
     victory_code = ctx.game_interface.get_victory_code()
     if victory_code in ctx.checked_locations:
         await ctx.send_msgs([{"cmd": "StatusUpdate", "status": ClientStatus.CLIENT_GOAL}])
+
+
+async def handle_main_menu(ctx: 'Context') -> None:
+    """Checks if the player has exited to the main menu"""
+    if ctx.slot_data is None:
+        return
+
+    ctx.main_menu = ctx.game_interface.check_main_menu()

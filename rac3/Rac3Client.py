@@ -70,8 +70,8 @@ class Rac3Context(CommonContext):
     death_link_enabled = False
     queued_deaths: int = 0
     location_table = None
-    current_planet: str = 'Veldin'
     current_planet: str = 'Galaxy'
+    main_menu: bool = True
 
     items_handling = 0b111  # This is mandatory
 

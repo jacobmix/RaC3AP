@@ -93,7 +93,7 @@ def set_rules_hard_location(world):
                            and state.has("Hacker", player=world.player)
                            and state.has("Hypershot", player=world.player))
     add_rule(world.get_location("Phoenix: Received Adamantine Armor"),
-             lambda state: state.can_reach("Tyhrranosis", player=world.player))
+             lambda state: state.can_reach("Aquatos", player=world.player))
     add_rule(world.get_location("Phoenix: Received Aegis Mark V Armor"),
              lambda state: state.can_reach("Zeldrin Starport", player=world.player))
     add_rule(world.get_location("Phoenix: Received Infernox Armor"),

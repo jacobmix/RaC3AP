@@ -1,7 +1,7 @@
 import logging
 from typing import Any, ClassVar, Dict, Optional
 
-from BaseClasses import Item, ItemClassification, MultiWorld, Tutorial
+from BaseClasses import Item, MultiWorld, Tutorial
 from worlds.AutoWorld import CollectionState, WebWorld, World
 from worlds.LauncherComponents import Component, components, launch_subprocess, SuffixIdentifier, Type
 
@@ -9,10 +9,10 @@ from . import UniversalTracker
 from .Items import (create_item, create_itempool, filter_item_names, gadget_items, item_table)
 from .Locations import get_level_locations, get_location_names, get_regions, get_total_locations, location_groups
 
-from .Rac3Options import EnableWeaponLevelAsItem, GAME_TITLE_FULL, RaC3Options
+from .Rac3Options import GAME_TITLE_FULL, RaC3Options
 from .Regions import create_regions
 from .Rules import set_rules
-from .Types import Multiplier, multiplier_to_name, GameItem, weapon_type_to_name, WeaponType
+from .Types import Multiplier
 
 rac3_logger = logging.getLogger("Ratchet & Clank 3")
 rac3_logger.setLevel(logging.DEBUG)

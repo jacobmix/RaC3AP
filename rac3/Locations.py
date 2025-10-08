@@ -284,7 +284,7 @@ rac3_locations = {
     # ----- Planet Command Center -----#
     "Command Center: T-Bolt: Behind the Forcefield": LocData(50220000, "Command Center"),
     "Command Center: Skill Point: Spread Your Germs": LocData(50220001, "Command Center"),
-    "Command Center: Trophy: Up a Ladder": LocData(50220001, "Command Center"),  # Lawrence Trophy
+    "Command Center: Trophy: Up a Ladder": LocData(50220002, "Command Center"),  # Lawrence Trophy
     "Command Center: Dr. Nefarious Defeated!": LocData(50200000, "Command Center"),
     "Command Center: Biobliterator Defeated!": LocData(50200001, "Command Center")
 }
@@ -414,6 +414,62 @@ location_table: dict[str, LocData] = {
     # **weapon_upgrades
 }
 
+rangers: list[str] = [
+    "Marcadia: Operation IRON SHIELD: Secure the Area",
+    "Marcadia: Operation IRON SHIELD: Air Assault",
+    "Marcadia: Operation IRON SHIELD: Turret Command",
+    "Marcadia: Operation IRON SHIELD: Under the Gun",
+    "Marcadia: Operation IRON SHIELD: Hit n' Run",
+    "Marcadia: Received Refractor",
+    "Marcadia: Meet Al",
+    "Marcadia: Skill Point: Reflect on how to score",
+    "Marcadia: T-Bolt: Last Refractor Room",
+    "Marcadia: T-Bolt: Ceiling just before Al",
+    "Tyhrranosis: Operation ISLAND STRIKE: Assault on Kavu Island",
+    "Tyhrranosis: Operation ISLAND STRIKE: Dogfight over Kavu Island",
+    "Tyhrranosis: Operation ISLAND STRIKE: Operation Thunderbolt",
+    "Tyhrranosis: Operation ISLAND STRIKE: The Final Battle",
+    "Blackwater City: Received Gravity Boots",
+    "Blackwater City: Infobot: Holostar Studios",
+    "Blackwater City: Operation BLACK TIDE: The Battle of Blackwater City",
+    "Blackwater City: Operation BLACK TIDE: The Bridge",
+    "Blackwater City: Operation BLACK TIDE: Counterattack",
+    "Blackwater City: Skill Point: Bash the party",
+    "Metropolis: T-Bolt: Tall Tower (Hovership)",
+    "Metropolis: Operation URBAN STORM: Countdown",
+    "Metropolis: Operation URBAN STORM: Urban Combat",
+    "Metropolis: Operation URBAN STORM: Tower Attack",
+    "Metropolis: Operation URBAN STORM: Air Superiority",
+    "Metropolis: Operation URBAN STORM: Turret Command",
+    "Metropolis: Received Map-O-Matic",
+    "Aridia: Received Warp Pad",
+    "Aridia: T-Bolt: Under the Bridge (Assassination)",
+    "Aridia: T-Bolt: Behind the Base (X12 Endgame)",
+    "Aridia: Operation DEATH VALLEY: The Tunnels of Outpost X12",
+    "Aridia: Operation DEATH VALLEY: Ambush in Red Rock Valley",
+    "Aridia: Operation DEATH VALLEY: Assassination",
+    "Aridia: Operation DEATH VALLEY: Reclaim the Valley",
+    "Aridia: Operation DEATH VALLEY: X12 Endgame",
+    "Aridia: Skill Point: Go for hang time",
+    "Aridia: Skill Point: Zap back at ya'",
+    "Phoenix: Long Term Trophy: Friend of the Rangers"
+]
+
+unstable: list[str] = [
+    "Phoenix: Received Magna Plate Armor",
+    "Phoenix: Received Adamantine Armor",
+    "Phoenix: Received Aegis Mark V Armor",
+    "Phoenix: Received Infernox Armor",
+    "Phoenix: Meet Sasha on the Bridge",
+    "Phoenix: Return after winning Grand Prize Bout",
+    "Phoenix: Return after Aquatos Base",
+    "Phoenix: VR Training after Noid Queen",
+    "Phoenix: T-Bolt: VR Gadget Training",
+    "Phoenix: Received Hacker",
+    "Phoenix: Received Hypershot",
+    "Phoenix: VR: VR Gadget Training"
+]
+
 location_groups: dict[str, set[str]] = {
     "Veldin": set(loc for loc in location_table.keys() if location_table[loc].region == "Veldin"),
     "Florana": set(loc for loc in location_table.keys() if location_table[loc].region == "Florana"),
@@ -440,16 +496,17 @@ location_groups: dict[str, set[str]] = {
     "Qwarks Hideout": set(loc for loc in location_table.keys() if location_table[loc].region == "Qwarks Hideout"),
     "Koros": set(loc for loc in location_table.keys() if location_table[loc].region == "Koros"),
     "Command Center": set(loc for loc in location_table.keys() if location_table[loc].region == "Command Center"),
-    "Skill Point": set(loc for loc in location_table.keys() if "Skill Point" in loc),
+    "Skill Point": set(loc for loc in location_table.keys() if "Skill" in loc),
     "T-Bolt": set(loc for loc in location_table.keys() if "T-Bolt" in loc),
     "Crystal": set(loc for loc in location_table.keys() if ("Sewer" in loc)
                    or (loc == "Aquatos: Skill Point: Hit the motherload")),
     "VidComic": set(loc for loc in location_table.keys() if "VidComic" in loc),
-    "Trophy": set(loc for loc in location_table.keys() if "Trophy" in loc), # All trophies including long term
-    "Long Term Trophy": set(loc for loc in location_table.keys() if "Long Term" in loc), # Long Term trophies only
-    "Rangers": set(loc for loc in location_table.keys() if "Operation" in loc),
+    "Trophy": set(loc for loc in location_table.keys() if "Trophy" in loc),  # All trophies including long term
+    "Long Term Trophy": set(loc for loc in location_table.keys() if "Long Term" in loc),  # Long Term trophies only
+    "Rangers": set(loc for loc in rangers),
     "Arena": set(loc for loc in location_table.keys() if
-                 (50070002 <= location_table[loc].ap_code < 50080000) or ("VR" in loc)),
+                 (50070002 <= location_table[loc].ap_code < 50080000) or ("VR" in loc) or ("Grand" in loc)),
+    "Unstable": set(loc for loc in unstable)
 }
 
 

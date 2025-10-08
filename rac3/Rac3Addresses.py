@@ -156,7 +156,8 @@ ADDRESSES = {
         "CurrentPlanet": 0x001D545C,
         "SewerCrystalsInPossession": 0x001426A2,
         "Robonoids active": 0x0014275C,
-        "Allowed in Ship": 0x001D5533,
+        "AllowedInShip": 0x001D5533,
+        "MapCheck": 0x0016C5A0,
         "Skill Points": {
             "Go for hang time": 0x001D54B0,
             "Stay Squeaky Clean": 0x001D54B1,
@@ -373,7 +374,7 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Phoenix Infobots/Infobot: Marcadia",
+        "Name": "Bridge/Infobot: Marcadia",
         "Id": 50030006,
         "Checks": [
             {
@@ -396,7 +397,7 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Phoenix Infobots/Infobot: Annihilation Nation",
+        "Name": "Qwark Vid Comics/Infobot: Annihilation Nation",
         "Id": 50030008,
         "Address": "0x001426EB",
         "CheckType": 0,
@@ -427,7 +428,7 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Phoenix Infobots/Infobot: Crash Site",
+        "Name": "Klunk Fight/Infobot: Crash Site",
         "Id": 50160004,
         #  "Address": "0x001D5541",
         "Address": "0x00142708",  # Same as defeat Giant Cronk
@@ -435,28 +436,28 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Phoenix Infobots/Infobot: Qwarks Hideout",
+        "Name": "Qwark Vid Comics/Infobot: Qwarks Hideout",
         "Id": 50030014,
         "Address": "0x00142734",
         "CheckType": 0,
         "AddressBit": 5  # 3E 00X0_0000
     },
     {
-        "Name": "Received Vid Comics/Qwark Vidcomic 4",
+        "Name": "The Leviathan/Qwark Vidcomic 4",
         "Id": 50100003,
         "Address": "0x001426E2",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Received Vid Comics/Qwark Vidcomic 5",
+        "Name": "Phoenix Infobots/Qwark Vidcomic 5",
         "Id": 50030029,
         "Address": "0x001D5553",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Phoenix Infobots/Infobot: Metropolis",
+        "Name": "Qwark Vid Comics/Infobot: Metropolis",
         "Id": 50030012,
         "Address": "0x001D5550",
         "CheckType": 0,
@@ -1949,7 +1950,7 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Operation: DEATH VALLEY/ X12 Endgame",
+        "Name": "Operation: DEATH VALLEY/X12 Endgame",
         "Id": 50180008,
         "Address": "0x00142746",
         "CheckType": 0,
@@ -1998,28 +1999,28 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Operation: ISLAND STRIKE: Assault on Kavu Island",
+        "Name": "Operation: ISLAND STRIKE/Assault on Kavu Island",
         "Id": 50290000,
         "Address": "0x0014274C",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation: ISLAND STRIKE: Dogfight over Kavu Island",
+        "Name": "Operation: ISLAND STRIKE/Dogfight over Kavu Island",
         "Id": 50290001,
         "Address": "0x0014274D",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation: ISLAND STRIKE: Operation Thunderbolt",
+        "Name": "Operation: ISLAND STRIKE/Operation Thunderbolt",
         "Id": 50290002,
         "Address": "0x0014274F",
         "CheckType": 0,
         "AddressBit": 0
     },
     {
-        "Name": "Operation: ISLAND STRIKE: The Final Battle",
+        "Name": "Operation: ISLAND STRIKE/The Final Battle",
         "Id": 50290003,
         "Address": "0x00142750",
         "CheckType": 0,
@@ -2054,7 +2055,7 @@ LOCATIONS = [
         "AddressBit": 0
     },
     {
-        "Name": "Monkeying Around (SP)/Hit n' Run",
+        "Name": "Bridge/Monkeying Around (SP)",
         "Id": 50030033,
         "Address": "0x001D54B5",
         "CheckType": 0,
@@ -2377,7 +2378,7 @@ LOCATIONS = [
     },
     {
         "Name": "Atop the ladder/Lawrence trophy",
-        "Id": 50220001,
+        "Id": 50220002,
         "Address": "0x00142795",
         "CheckType": 0,
         "AddressBit": 0

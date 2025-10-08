@@ -38,10 +38,10 @@ class BoltAndXPMultiplier(Choice):
     display_name = "BoltAndXPMultiplier"
     option_x1 = 1
     option_x2 = 2
-    option_x4 = 3
-    option_x6 = 4
-    option_x8 = 5
-    option_x10 = 6
+    option_x4 = 4
+    option_x6 = 6
+    option_x8 = 8
+    option_x10 = 10
     default = 1
 
 
