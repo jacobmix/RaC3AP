@@ -25,6 +25,7 @@ SIMPLE_SKILL_POINTS = [
     "Break the Dan"
 ]
 
+
 def create_regions(world: "RaC3World"):
     # ----- Introduction Sequence -----#
     menu = create_region(world, "Menu")
@@ -96,6 +97,9 @@ def create_regions(world: "RaC3World"):
 
     # ----- Dummy regions for weapon upgrade organization -----#
 
+    nanotech_levels = create_region(world, "Nanotech Levels")
+    menu.connect(nanotech_levels)
+
     shock_blaster_upgrades = create_region(world, "Shock Blaster Upgrades")
     menu.connect(shock_blaster_upgrades, rule=lambda state: state.has("Shock Blaster", world.player)),
 
@@ -166,7 +170,7 @@ def create_region(world: "RaC3World", name: str) -> Region:
     reg = Region(name, world.player, world.multiworld)
     options = world.options
     for (key, data) in location_table.items():
-        if should_skip_location(key, options): # Skip locations based on options
+        if should_skip_location(key, options):  # Skip locations based on options
             continue
 
         if data.region == name:
@@ -183,28 +187,28 @@ def create_region_and_connect(world: "RaC3World",
     connected_region.connect(reg, entrance_name)
     return reg
 
+
 def should_skip_location(key: str, options) -> bool:
     """Return False if the location should be skipped based on options."""
 
     # Skip trophy locations if trophies are disabled
     if "Trophy" in key and options.trophies.value == 0:
-        return True  
-    
-    # Skip long term trophies if not set to every trophy
-    if "Long Term" in key and options.trophies.value < 2:
-        return True  
+        return True
 
-    # Skip skill point locations if not set to every skill point
+        # Skip long term trophies if not set to every trophy
+    if "Long Term" in key and options.trophies.value < 2:
+        return True
+
+        # Skip skill point locations if not set to every skill point
     if "Skill Point" in key and options.skill_points.value == 0:
-        return True  
-    
-    # Skip skill points not in the simple list
+        return True
+
+        # Skip skill points not in the simple list
     if "Skill Point" in key and options.skill_points.value == 1:
         for simple_skill in SIMPLE_SKILL_POINTS:
             if simple_skill.lower() in key.lower():
                 return False
         return True
-    
 
     # Add more conditions here if needed in the future
 

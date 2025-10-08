@@ -69,10 +69,13 @@ rac3_locations = {
     "Phoenix: Skill Point: Strive for Arcade Perfection": LocData(50030031, "Starship Phoenix"),
     "Phoenix: Skill Point: Beat Helga's Best VR Time": LocData(50030032, "Starship Phoenix"),
     "Phoenix: Skill Point: Monkeying Around": LocData(50030033, "Starship Phoenix"),
-    "Phoenix: Long Term Trophy: Titanium Collector": LocData(50030034, "Long Term Trophy"),  # All Titanium Bolts collected
-    "Phoenix: Long Term Trophy: Friend of the Rangers": LocData(50030035, "Long Term Trophy"),  # All optional Ranger missions completed
-    "Phoenix: Long Term Trophy: Annihilation Nation Champion": LocData(50030036, "Long Term Trophy"),  # All Arena completed
-    "Phoenix: Long Term Trophy: Skill Master": LocData(50030037, "Long Term Trophy"), # All Skill Points collected
+    "Phoenix: Long Term Trophy: Titanium Collector": LocData(50030034, "Long Term Trophy"),
+    # All Titanium Bolts collected
+    "Phoenix: Long Term Trophy: Friend of the Rangers": LocData(50030035, "Long Term Trophy"),
+    # All optional Ranger missions completed
+    "Phoenix: Long Term Trophy: Annihilation Nation Champion": LocData(50030036, "Long Term Trophy"),
+    # All Arena completed
+    "Phoenix: Long Term Trophy: Skill Master": LocData(50030037, "Long Term Trophy"),  # All Skill Points collected
 
     # VidComics
     "Phoenix: Qwark VidComic 1 Clear": LocData(50310000, "Starship Phoenix"),
@@ -394,7 +397,96 @@ weapon_upgrades = {
 }
 
 nanotech_milestones = {
-    "Nanotech Milestone: 11": LocData(50250011, "Veldin"),
+    "Nanotech Milestone: 11": LocData(50250011, "Nanotech Levels"),
+    "Nanotech Milestone: 12": LocData(50250012, "Nanotech Levels"),
+    "Nanotech Milestone: 13": LocData(50250013, "Nanotech Levels"),
+    "Nanotech Milestone: 14": LocData(50250014, "Nanotech Levels"),
+    "Nanotech Milestone: 15": LocData(50250015, "Nanotech Levels"),
+    "Nanotech Milestone: 16": LocData(50250016, "Nanotech Levels"),
+    "Nanotech Milestone: 17": LocData(50250017, "Nanotech Levels"),
+    "Nanotech Milestone: 18": LocData(50250018, "Nanotech Levels"),
+    "Nanotech Milestone: 19": LocData(50250019, "Nanotech Levels"),
+    "Nanotech Milestone: 20": LocData(50250020, "Nanotech Levels"),
+    "Nanotech Milestone: 21": LocData(50250021, "Nanotech Levels"),
+    "Nanotech Milestone: 22": LocData(50250022, "Nanotech Levels"),
+    "Nanotech Milestone: 23": LocData(50250023, "Nanotech Levels"),
+    "Nanotech Milestone: 24": LocData(50250024, "Nanotech Levels"),
+    "Nanotech Milestone: 25": LocData(50250025, "Nanotech Levels"),
+    "Nanotech Milestone: 26": LocData(50250026, "Nanotech Levels"),
+    "Nanotech Milestone: 27": LocData(50250027, "Nanotech Levels"),
+    "Nanotech Milestone: 28": LocData(50250028, "Nanotech Levels"),
+    "Nanotech Milestone: 29": LocData(50250029, "Nanotech Levels"),
+    "Nanotech Milestone: 30": LocData(50250030, "Nanotech Levels"),
+    "Nanotech Milestone: 31": LocData(50250031, "Nanotech Levels"),
+    "Nanotech Milestone: 32": LocData(50250032, "Nanotech Levels"),
+    "Nanotech Milestone: 33": LocData(50250033, "Nanotech Levels"),
+    "Nanotech Milestone: 34": LocData(50250034, "Nanotech Levels"),
+    "Nanotech Milestone: 35": LocData(50250035, "Nanotech Levels"),
+    "Nanotech Milestone: 36": LocData(50250036, "Nanotech Levels"),
+    "Nanotech Milestone: 37": LocData(50250037, "Nanotech Levels"),
+    "Nanotech Milestone: 38": LocData(50250038, "Nanotech Levels"),
+    "Nanotech Milestone: 39": LocData(50250039, "Nanotech Levels"),
+    "Nanotech Milestone: 40": LocData(50250040, "Nanotech Levels"),
+    "Nanotech Milestone: 41": LocData(50250041, "Nanotech Levels"),
+    "Nanotech Milestone: 42": LocData(50250042, "Nanotech Levels"),
+    "Nanotech Milestone: 43": LocData(50250043, "Nanotech Levels"),
+    "Nanotech Milestone: 44": LocData(50250044, "Nanotech Levels"),
+    "Nanotech Milestone: 45": LocData(50250045, "Nanotech Levels"),
+    "Nanotech Milestone: 46": LocData(50250046, "Nanotech Levels"),
+    "Nanotech Milestone: 47": LocData(50250047, "Nanotech Levels"),
+    "Nanotech Milestone: 48": LocData(50250048, "Nanotech Levels"),
+    "Nanotech Milestone: 49": LocData(50250049, "Nanotech Levels"),
+    "Nanotech Milestone: 50": LocData(50250050, "Nanotech Levels"),
+    "Nanotech Milestone: 51": LocData(50250051, "Nanotech Levels"),
+    "Nanotech Milestone: 52": LocData(50250052, "Nanotech Levels"),
+    "Nanotech Milestone: 53": LocData(50250053, "Nanotech Levels"),
+    "Nanotech Milestone: 54": LocData(50250054, "Nanotech Levels"),
+    "Nanotech Milestone: 55": LocData(50250055, "Nanotech Levels"),
+    "Nanotech Milestone: 56": LocData(50250056, "Nanotech Levels"),
+    "Nanotech Milestone: 57": LocData(50250057, "Nanotech Levels"),
+    "Nanotech Milestone: 58": LocData(50250058, "Nanotech Levels"),
+    "Nanotech Milestone: 59": LocData(50250059, "Nanotech Levels"),
+    "Nanotech Milestone: 60": LocData(50250060, "Nanotech Levels"),
+    "Nanotech Milestone: 61": LocData(50250061, "Nanotech Levels"),
+    "Nanotech Milestone: 62": LocData(50250062, "Nanotech Levels"),
+    "Nanotech Milestone: 63": LocData(50250063, "Nanotech Levels"),
+    "Nanotech Milestone: 64": LocData(50250064, "Nanotech Levels"),
+    "Nanotech Milestone: 65": LocData(50250065, "Nanotech Levels"),
+    "Nanotech Milestone: 66": LocData(50250066, "Nanotech Levels"),
+    "Nanotech Milestone: 67": LocData(50250067, "Nanotech Levels"),
+    "Nanotech Milestone: 68": LocData(50250068, "Nanotech Levels"),
+    "Nanotech Milestone: 69": LocData(50250069, "Nanotech Levels"),
+    "Nanotech Milestone: 70": LocData(50250070, "Nanotech Levels"),
+    "Nanotech Milestone: 71": LocData(50250071, "Nanotech Levels"),
+    "Nanotech Milestone: 72": LocData(50250072, "Nanotech Levels"),
+    "Nanotech Milestone: 73": LocData(50250073, "Nanotech Levels"),
+    "Nanotech Milestone: 74": LocData(50250074, "Nanotech Levels"),
+    "Nanotech Milestone: 75": LocData(50250075, "Nanotech Levels"),
+    "Nanotech Milestone: 76": LocData(50250076, "Nanotech Levels"),
+    "Nanotech Milestone: 77": LocData(50250077, "Nanotech Levels"),
+    "Nanotech Milestone: 78": LocData(50250078, "Nanotech Levels"),
+    "Nanotech Milestone: 79": LocData(50250079, "Nanotech Levels"),
+    "Nanotech Milestone: 80": LocData(50250080, "Nanotech Levels"),
+    "Nanotech Milestone: 81": LocData(50250081, "Nanotech Levels"),
+    "Nanotech Milestone: 82": LocData(50250082, "Nanotech Levels"),
+    "Nanotech Milestone: 83": LocData(50250083, "Nanotech Levels"),
+    "Nanotech Milestone: 84": LocData(50250084, "Nanotech Levels"),
+    "Nanotech Milestone: 85": LocData(50250085, "Nanotech Levels"),
+    "Nanotech Milestone: 86": LocData(50250086, "Nanotech Levels"),
+    "Nanotech Milestone: 87": LocData(50250087, "Nanotech Levels"),
+    "Nanotech Milestone: 88": LocData(50250088, "Nanotech Levels"),
+    "Nanotech Milestone: 89": LocData(50250089, "Nanotech Levels"),
+    "Nanotech Milestone: 90": LocData(50250090, "Nanotech Levels"),
+    "Nanotech Milestone: 91": LocData(50250091, "Nanotech Levels"),
+    "Nanotech Milestone: 92": LocData(50250092, "Nanotech Levels"),
+    "Nanotech Milestone: 93": LocData(50250093, "Nanotech Levels"),
+    "Nanotech Milestone: 94": LocData(50250094, "Nanotech Levels"),
+    "Nanotech Milestone: 95": LocData(50250095, "Nanotech Levels"),
+    "Nanotech Milestone: 96": LocData(50250096, "Nanotech Levels"),
+    "Nanotech Milestone: 97": LocData(50250097, "Nanotech Levels"),
+    "Nanotech Milestone: 98": LocData(50250098, "Nanotech Levels"),
+    "Nanotech Milestone: 99": LocData(50250099, "Nanotech Levels"),
+    "Nanotech Milestone: 100": LocData(50250100, "Nanotech Levels")
 }
 
 rac3_events = {  # Events have no ap_code
@@ -506,6 +598,7 @@ location_groups: dict[str, set[str]] = {
     "Rangers": set(loc for loc in rangers),
     "Arena": set(loc for loc in location_table.keys() if
                  (50070002 <= location_table[loc].ap_code < 50080000) or ("VR" in loc) or ("Grand" in loc)),
+    "Nanotech": set(loc for loc in location_table.keys() if "Nanotech" in loc),
     "Unstable": set(loc for loc in unstable)
 }
 
