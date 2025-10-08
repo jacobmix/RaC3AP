@@ -6,7 +6,7 @@ from worlds.AutoWorld import CollectionState, WebWorld, World
 from worlds.LauncherComponents import Component, components, launch_subprocess, SuffixIdentifier, Type
 
 from . import UniversalTracker
-from .Items import (create_item, create_itempool, filter_item_names, gadget_items, item_table)
+from .Items import create_item, create_itempool, get_filler_item_selection, item_table
 from .Locations import get_level_locations, get_location_names, get_regions, get_total_locations, location_groups
 
 from .Rac3Options import GAME_TITLE_FULL, RaC3Options
@@ -53,6 +53,7 @@ class RaC3World(World):
     location_name_to_id = get_location_names()
     location_name_groups = location_groups
     preplaced_items: list[str] = []
+    filler_items: list[str] = []
     # Config for Universal Tracker
 
     using_ut: bool  # so we can check if we're using UT only once
@@ -97,7 +98,16 @@ class RaC3World(World):
         self.preplaced_items.extend(starting_planets)
 
     def create_items(self):
-        self.multiworld.itempool += create_itempool(self)
+        itempool = create_itempool(self)
+        self.multiworld.itempool.extend(itempool)
+        filler = [self.create_filler() for _ in
+                  range(get_total_locations(self) - len(self.preplaced_items) - len(itempool) - 1)]
+        self.multiworld.itempool.extend(filler)
+
+    def get_filler_item_name(self) -> str:
+        if not len(self.filler_items):
+            self.filler_items = get_filler_item_selection(self)
+        return self.random.choice(self.filler_items)
 
     def set_rules(self):
         set_rules(self)
