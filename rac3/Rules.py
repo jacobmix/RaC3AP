@@ -1,9 +1,13 @@
+import logging
 from typing import TYPE_CHECKING
 
 from worlds.generic.Rules import add_rule, set_rule
 
 if TYPE_CHECKING:
     from . import RaC3World
+
+rac3_logger = logging.getLogger("Ratchet & Clank 3")
+rac3_logger.setLevel(logging.DEBUG)
 
 
 def set_rules_planets(world):
@@ -481,7 +485,8 @@ def set_rules_hard_location(world):
     for level in range(11, 101):
         check = (level - 10) // 5
         add_rule(world.get_location(f"Nanotech Milestone: {level}"),
-                 lambda state: state.has_from_list(*[planet_list], world.player, check))
+                 lambda state: state.has_from_list(planet_list, world.player, check))
+        # rac3_logger.debug(f"Nanotech Level {level} requires {check} planet(s) to be in logic")
 
 
 def set_rules(world: "RaC3World"):
