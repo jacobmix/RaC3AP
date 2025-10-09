@@ -374,6 +374,12 @@ def set_rules_hard_location(world):
     # ----- Planet Blackwater City -----# # Nothing
 
     # ----- Holostar Studios -----# # Nothing
+    # "Holostar: T-Bolt: Lot 42's Gravity Ramp"
+    # "Holostar: T-Bolt: Kamikaze Noids"
+    add_rule(world.get_location("Holostar: T-Bolt: Lot 42's Gravity Ramp"),
+             lambda state: state.has("Gravity-Boots", world.player))
+    add_rule(world.get_location("Holostar: T-Bolt: Kamikaze Noids"),
+             lambda state: state.has("Gravity-Boots", world.player))
 
     # ----- Obani Draco (lol) -----# # Nothing
 
