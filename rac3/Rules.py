@@ -272,6 +272,8 @@ def set_rules_hard_location(world):
                            and state.has("Gravity-Boots", world.player))
     add_rule(world.get_location("Marcadia: Meet Al"),
              lambda state: state.has("Refractor", world.player))
+    add_rule(world.get_location("Marcadia: Skill Point: Reflect on how to score"),
+             lambda state: state.has("Refractor", world.player))
 
     # ----- Annihilation Nation -----#
     # First visit (when getting Tyhrra-Guise)
