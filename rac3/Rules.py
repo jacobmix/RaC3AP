@@ -78,10 +78,7 @@ def set_rules_planets(world):
 
     # Getting to Command Center
     add_rule(world.multiworld.get_entrance("Starship Phoenix -> Command Center", world.player),
-             lambda state: state.has("Infobot: Command Center", world.player)
-                           and state.has("Tyhrra-Guise", world.player)
-                           and state.has("Hypershot", world.player)
-                           and state.has("Gravity-Boots", world.player))
+             lambda state: state.has("Infobot: Command Center", world.player))
 
 
 def set_rules_hard_location(world):
@@ -463,13 +460,21 @@ def set_rules_hard_location(world):
                  lambda state: state.has("Box Breaker", world.player))
 
     # ----- Planet Command Center -----#
+    add_rule(world.get_location("Command Center: T-Bolt: Behind the Forcefield"),
+             lambda state: state.has_all(["Hypershot", "Gravity-Boots", "Tyhrra-Guise"], world.player))
+    add_rule(world.get_location("Command Center: Trophy: Up a Ladder"),
+             lambda state: state.has_all(["Hypershot", "Gravity-Boots", "Tyhrra-Guise"], world.player))
     add_rule(world.get_location("Command Center: Dr. Nefarious Defeated!"),
-             lambda state: state.has("Hacker", world.player) and state.has("Refractor", world.player))
+             lambda state: state.has_all(["Hypershot", "Gravity-Boots", "Tyhrra-Guise",
+                                          "Hacker", "Refractor"], world.player))
     add_rule(world.get_location("Command Center: Biobliterator Defeated!"),
-             lambda state: state.has("Hacker", world.player) and state.has("Refractor", world.player))
+             lambda state: state.has_all(["Hypershot", "Gravity-Boots", "Tyhrra-Guise",
+                                          "Hacker", "Refractor"], world.player))
+
     if world.options.skill_points.value > 1:  # Every Skill Point
         add_rule(world.get_location("Command Center: Skill Point: Spread Your Germs"),
-                 lambda state: state.has("Infector", world.player) or state.has("Progressive Infector", world.player))
+                 lambda state: state.has("Infector", world.player) or state.has("Progressive Infector", world.player)
+                               and state.has_all(["Hypershot", "Gravity-Boots", "Tyhrra-Guise"], world.player))
 
     # ----- Nanotech -----#
     planet_list: list[str] = [
