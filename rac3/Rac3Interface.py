@@ -401,7 +401,7 @@ class Rac3Interface(GameInterface):
                 if self.UnlockGadgets["Hacker"]["status"] == 0 or self.UnlockGadgets["Hypershot"]["status"] == 0:
                     self._write8(address_list[i], 0)
             if planet_names[i] == "Qwarks Hideout":
-                if self.UnlockGadgets["Refractor"]["status"] == 0 or self.UnlockGadgets["Hypershot"]["status"] == 0:
+                if self.UnlockGadgets["Refractor"]["status"] == 0:
                     self._write8(address_list[i], 0)
 
     def vidcomic_cycler(self):
