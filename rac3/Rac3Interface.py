@@ -408,11 +408,14 @@ class Rac3Interface(GameInterface):
         # self.logger.debug("---------VidComicCycler Start---------")
         unlock_status = self.UnlockVidComics["status"]
         for name in range(5):
-            if name + 1 > unlock_status:
-                break
             addr = self.addresses["VidComics"][f'Qwark VidComic {name + 1}']["unlockAddress"]
             addr = self.address_convert(addr)
-            if self._read8(addr) == 0 and name + 1 <= unlock_status:
+            read_value = self._read8(addr)
+            if name + 1 > unlock_status:
+                if read_value == 1:
+                    self._write8(addr, 0)  # Disable Vidcomics not unlocked yet
+                break
+            if read_value == 0 and name + 1 <= unlock_status:
                 unlock_delay_count = 1
                 if name == 2:
                     unlock_delay_count = 30  # WA for Annihilation Nation Proceeding
