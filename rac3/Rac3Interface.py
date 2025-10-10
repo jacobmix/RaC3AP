@@ -109,6 +109,8 @@ class Rac3Interface(GameInterface):
     # Called at once when client started
     def init(self):
         self.init_variables()
+
+    def file_load(self, locations):
         self.remove_all_weapons()
         self.remove_all_gadgets()
         self.remove_all_planets()
@@ -147,7 +149,7 @@ class Rac3Interface(GameInterface):
         self.boltAndXPMultiplier = slot_data["options"]["bolt_and_xp_multiplier"]
         self.weaponLevelLockFlag = slot_data["options"]["enable_weapon_level_as_item"]
 
-    def new_planet(self):
+    def map_switch(self):
         planet = self._read8(self.addresses["CurrentPlanet"])
         if planet > 55 or not self._read8(self.addresses["MapCheck"]):
             planet = 0
@@ -593,7 +595,7 @@ class Rac3Interface(GameInterface):
                 weapon_name = unlocked_weapon_names[weapon_num]
                 self.weapon_level_up(weapon_name)
 
-    def dump_info(self, ctx):
+    def dump_info(self, current_planet, slot_data):
         print(f'Weapons Tracker: {self.UnlockWeapons}')
         print(f'Gadgets Tracker: {self.UnlockGadgets}')
         print(f'VidComics Tracker: {self.UnlockVidComics}')
@@ -604,8 +606,8 @@ class Rac3Interface(GameInterface):
         for addr in self.addresses["PlanetSlots"]:
             print(f'Planet{count}: {planet_lookup[self._read8(addr)]}')
             count += 1
-        print(f'Current planet Tracked: {ctx.current_planet}')
-        print(f'Slot Data: {ctx.slot_data}')
+        print(f'Current planet Tracked: {current_planet}')
+        print(f'Slot Data: {slot_data}')
 
     def tracker_update(self):
         pass
