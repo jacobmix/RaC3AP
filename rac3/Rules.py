@@ -88,11 +88,7 @@ def set_rules_hard_location(world):
     # "Phoenix: Received Suck Cannon": LocData(, "Starship Phoenix"),
     # "Phoenix: Received Infector": LocData(, "Starship Phoenix"),
     #  add_rule(world.get_location("Phoenix: T-Bolt: VR Nerves of Titanium"), None)
-    if world.options.titanium_bolts.value == 1:
-        add_rule(world.get_location("Phoenix: T-Bolt: VR Gadget Training"),
-             lambda state: state.can_reach("Tyhrranosis", player=world.player)
-                           and state.has("Hacker", player=world.player)
-                           and state.has("Hypershot", player=world.player))
+    
     add_rule(world.get_location("Phoenix: Received Adamantine Armor"),
              lambda state: state.can_reach("Aquatos", player=world.player))
     add_rule(world.get_location("Phoenix: Received Aegis Mark V Armor"),
@@ -136,17 +132,7 @@ def set_rules_hard_location(world):
              lambda state: state.has("Progressive VidComic", world.player, 4))
     add_rule(world.get_location("Phoenix: Qwark VidComic 5 Clear"),
              lambda state: state.has("Progressive VidComic", world.player, 5))
-    if world.options.titanium_bolts.value == 1:
-        add_rule(world.get_location("Phoenix: T-Bolt: VidComic 1 100%"),
-                lambda state: state.has("Progressive VidComic", world.player, 1))
-        add_rule(world.get_location("Phoenix: T-Bolt: VidComic 2 100%"),
-                lambda state: state.has("Progressive VidComic", world.player, 2))
-        add_rule(world.get_location("Phoenix: T-Bolt: VidComic 3 100%"),
-                 lambda state: state.has("Progressive VidComic", world.player, 3))
-        add_rule(world.get_location("Phoenix: T-Bolt: VidComic 4 100%"),
-                lambda state: state.has("Progressive VidComic", world.player, 4))
-        add_rule(world.get_location("Phoenix: T-Bolt: VidComic 5 100%"),
-                lambda state: state.has("Progressive VidComic", world.player, 5))
+        
     
     # Skill Points
     if world.options.skill_points.value > 0:  # Simple or Every Skill Point
@@ -260,13 +246,7 @@ def set_rules_hard_location(world):
     # "Marcadia: Received Spitting Hydra": LocData(50001030, "Marcadia"),
     # "Marcadia: Received Refractor": LocData(50001031, "Marcadia"),
     # "Marcadia: T-Bolt: After Pool of Water": LocData(50001032, "Marcadia"),
-    if world.options.titanium_bolts.value == 1:
-        add_rule(world.get_location("Marcadia: T-Bolt: Last Refractor Room"),
-                lambda state: state.has("Refractor", world.player)
-                            and state.has("Gravity-Boots", world.player))
-        add_rule(world.get_location("Marcadia: T-Bolt: Ceiling just before Al"),
-                lambda state: state.has("Refractor", world.player)
-                            and state.has("Gravity-Boots", world.player))
+
     add_rule(world.get_location("Marcadia: Meet Al"),
              lambda state: state.has("Refractor", world.player))
 
@@ -315,14 +295,7 @@ def set_rules_hard_location(world):
              lambda state: state.can_reach("Koros", player=world.player))
 
     # Sewers
-    if world.options.titanium_bolts.value == 1:
-        add_rule(world.get_location("Aquatos: T-Bolt: Behind the Locked Gate"),
-                 lambda state: state.has("Hacker", world.player))
-        add_rule(world.get_location("Aquatos: T-Bolt: Top Left Bolt"),
-                 lambda state: state.has("Gravity-Boots", world.player))
-        add_rule(world.get_location("Aquatos: T-Bolt: Swinging Bolt"),
-                 lambda state: state.has("Hypershot", world.player)
-                             and state.has("Gravity-Boots", world.player))
+        
     # "Aquatos: 1 Sewer Crystal Traded": LocData(50001096, "Aquatos"),
     # "Aquatos: 5 Sewer Crystals Traded": LocData(50001097, "Aquatos"),
     # "Aquatos: 10 Sewer Crystals Traded": LocData(50001098, "Aquatos"),
@@ -335,9 +308,7 @@ def set_rules_hard_location(world):
     # ----- Planet Tyhrranosis -----#
     # "Tyhrranosis: Received Annihilator": LocData(50001300, "Tyhrranosis"),
     # "Tyhrranosis: Received Holo-Shield Glove": LocData(50001301, "Tyhrranosis"),
-    if world.options.titanium_bolts.value == 1:
-        add_rule(world.get_location("Tyhrranosis: T-Bolt: Underground Cave Bolt"),
-                 lambda state: state.has("Hypershot", world.player))
+        
     if world.options.skill_points.value > 0:  # Simple or Every Skill Point
         add_rule(world.get_location("Tyhrranosis: Skill Point: Be a Sharpshooter"),
                  lambda state: state.has("Flux Rifle", world.player)
@@ -349,13 +320,7 @@ def set_rules_hard_location(world):
              lambda state: state.has("Hypershot", world.player)
                            and state.has("Hacker", world.player))
     # "Daxx: Received Charge Boots": LocData(50001322, "Daxx Region 1"),
-    if world.options.titanium_bolts.value == 1:
-        add_rule(world.get_location("Daxx: T-Bolt: Right of the Taxi"),
-                 lambda state: state.has("Hypershot", world.player))
-        add_rule(world.get_location("Daxx: T-Bolt: Time Sensitive Door"),
-                lambda state: state.has("Hypershot", world.player)
-                             and state.has("Charge-Boots", world.player)
-                             and state.has("Hacker", world.player))
+        
     add_rule(world.get_location("Daxx: Gunship"),
              lambda state: state.has("Hypershot", world.player))
 
@@ -364,10 +329,7 @@ def set_rules_hard_location(world):
                  lambda state: state.has("Qwack-O-Ray", world.player)
                                or state.has("Progressive Qwack-O-Ray", world.player))
 
-    # ----- Obani Gemini -----#
-    if world.options.titanium_bolts.value == 1:
-         add_rule(world.get_location("Obani Gemini: T-Bolt: Follow the Lava"),
-                 lambda state: state.has("Hypershot", world.player))
+    # ----- Obani Gemini -----# # Nothing
 
     # ----- Planet Blackwater City -----# # Nothing
 
@@ -379,14 +341,8 @@ def set_rules_hard_location(world):
     add_rule(world.get_location("Zeldrin Starport: Received Bolt Grabber V2"),
              lambda state: state.has("Hypershot", world.player))
     # "Zeldrin Starport: T-Bolt: Inside the Second Ship"
-    if world.options.titanium_bolts.value == 1:
-         add_rule(world.get_location("Zeldrin Starport: T-Bolt: Atop the Twin Shooters"),
-                 lambda state: state.has("Hypershot", world.player))
 
     # ----- Planet Metropolis -----#
-    if world.options.titanium_bolts.value == 1:
-        add_rule(world.get_location("Metropolis: T-Bolt: Across the Gap"),
-                 lambda state: state.has("Hypershot", world.player))
 
     if world.options.skill_points.value > 0:  # Simple or Every Skill Point
         add_rule(world.get_location("Metropolis: Skill Point: 2002 was a good year in the city"),
@@ -423,22 +379,13 @@ def set_rules_hard_location(world):
                                or state.has("Progressive Suck Cannon", world.player))
 
     # ----- Planet Aridia -----#
-    if world.options.titanium_bolts.value == 1:
-        add_rule(world.get_location("Aridia: T-Bolt: Under the Bridge (Assassination)"),
-                 lambda state: state.has("Gravity-Boots", world.player))
-        add_rule(world.get_location("Aridia: T-Bolt: Behind the Base (X12 Endgame)"),
-                 lambda state: state.has("Gravity-Boots", world.player))
-
     if world.options.skill_points.value > 1:  # Every Skill Point
         add_rule(world.get_location("Aridia: Skill Point: Zap back at ya'"),
                  lambda state: state.has("Refractor", world.player))
 
     # ----- Qwark's Hideout -----#
     add_rule(world.get_location("Qwarks Hideout: Received Gadgetron PDA"),
-             lambda state: state.has("Gravity-Boots", world.player))
-    if world.options.titanium_bolts.value == 1:
-         add_rule(world.get_location("Qwarks Hideout: T-Bolt: Glide from the Ramp"),
-                 lambda state: state.has("Gravity-Boots", world.player))
+             lambda state: state.has("Gravity-Boots", world.player))  
 
     if world.options.skill_points.value > 0:  # Simple or Every Skill Point
         add_rule(world.get_location("Qwarks Hideout: Skill Point: Break the Dan"),
@@ -464,6 +411,58 @@ def set_rules_hard_location(world):
     if world.options.skill_points.value > 1:  # Every Skill Point
         add_rule(world.get_location("Command Center: Skill Point: Spread Your Germs"),
                  lambda state: state.has("Infector", world.player) or state.has("Progressive Infector", world.player))
+
+    # ----- Titanium Bolts -----#
+    if world.options.titanium_bolts.value == 1:
+        add_rule(world.get_location("Phoenix: T-Bolt: VR Gadget Training"),
+             lambda state: state.can_reach("Tyhrranosis", player=world.player)
+                           and state.has("Hacker", player=world.player)
+                           and state.has("Hypershot", player=world.player))
+        add_rule(world.get_location("Phoenix: T-Bolt: VidComic 1 100%"),
+                lambda state: state.has("Progressive VidComic", world.player, 1))
+        add_rule(world.get_location("Phoenix: T-Bolt: VidComic 2 100%"),
+                lambda state: state.has("Progressive VidComic", world.player, 2))
+        add_rule(world.get_location("Phoenix: T-Bolt: VidComic 3 100%"),
+                 lambda state: state.has("Progressive VidComic", world.player, 3))
+        add_rule(world.get_location("Phoenix: T-Bolt: VidComic 4 100%"),
+                lambda state: state.has("Progressive VidComic", world.player, 4))
+        add_rule(world.get_location("Phoenix: T-Bolt: VidComic 5 100%"),
+                lambda state: state.has("Progressive VidComic", world.player, 5))
+        add_rule(world.get_location("Marcadia: T-Bolt: Last Refractor Room"),
+                lambda state: state.has("Refractor", world.player)
+                            and state.has("Gravity-Boots", world.player))
+        add_rule(world.get_location("Marcadia: T-Bolt: Ceiling just before Al"),
+                lambda state: state.has("Refractor", world.player)
+                            and state.has("Gravity-Boots", world.player))
+        add_rule(world.get_location("Aquatos: T-Bolt: Behind the Locked Gate"),
+                 lambda state: state.has("Hacker", world.player))
+        add_rule(world.get_location("Aquatos: T-Bolt: Top Left Bolt"),
+                 lambda state: state.has("Gravity-Boots", world.player))
+        add_rule(world.get_location("Aquatos: T-Bolt: Swinging Bolt"),
+                 lambda state: state.has("Hypershot", world.player)
+                             and state.has("Gravity-Boots", world.player))
+        add_rule(world.get_location("Tyhrranosis: T-Bolt: Underground Cave Bolt"),
+                 lambda state: state.has("Hypershot", world.player))
+        add_rule(world.get_location("Daxx: T-Bolt: Right of the Taxi"),
+                 lambda state: state.has("Hypershot", world.player))
+        add_rule(world.get_location("Daxx: T-Bolt: Time Sensitive Door"),
+                lambda state: state.has("Hypershot", world.player)
+                             and state.has("Charge-Boots", world.player)
+                             and state.has("Hacker", world.player))
+        add_rule(world.get_location("Obani Gemini: T-Bolt: Follow the Lava"),
+                 lambda state: state.has("Hypershot", world.player))
+        add_rule(world.get_location("Zeldrin Starport: T-Bolt: Atop the Twin Shooters"),
+                 lambda state: state.has("Hypershot", world.player))
+        add_rule(world.get_location("Metropolis: T-Bolt: Across the Gap"),
+                 lambda state: state.has("Hypershot", world.player))
+        add_rule(world.get_location("Aridia: T-Bolt: Under the Bridge (Assassination)"),
+                 lambda state: state.has("Gravity-Boots", world.player))
+        add_rule(world.get_location("Aridia: T-Bolt: Behind the Base (X12 Endgame)"),
+                 lambda state: state.has("Gravity-Boots", world.player))
+        add_rule(world.get_location("Qwarks Hideout: T-Bolt: Glide from the Ramp"),
+                 lambda state: state.has("Gravity-Boots", world.player))
+        
+
 
     # ----- Nanotech -----#
     planet_list: list[str] = [
