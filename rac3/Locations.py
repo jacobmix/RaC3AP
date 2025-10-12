@@ -590,6 +590,7 @@ unstable: list[str] = [
     "Phoenix: Received Hacker",
     "Phoenix: Received Hypershot",
     "Phoenix: VR: VR Gadget Training",
+    "Obani Gemini: Infobot: Blackwater City",
     "Crash Site: Infobot: Aridia"
 ]
 
