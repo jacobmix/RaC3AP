@@ -506,6 +506,36 @@ location_table: dict[str, LocData] = {
     # **weapon_upgrades
 }
 
+weapons: list[str] = [
+    "Florana: Received Plasma Whip",
+    "Florana: Received N60 Storm",
+    "Phoenix: Received Suck Cannon",
+    "Phoenix: Received Infector",
+    "Marcadia: Received Spitting Hydra",
+    "Annihilation: Received Agents of Doom",
+    "Aquatos: Received Flux Rifle",
+    "Aquatos: Received Mini-Turret Glove",
+    "Aquatos: Received Lava Gun",
+    "Aquatos: Received Shield Charger",
+    "Aquatos: Received Bouncer",
+    "Aquatos: Received Plasma Coil",
+    "Tyhrranosis: Received Annihilator",
+    "Tyhrranosis: Received Holo-Shield Glove",
+    "Obani Gemini: Received Disk-Blade Gun",
+    "Holostar: Received Rift Inducer",
+    "Aridia: Received Qwack-O-Ray",
+]
+
+gadgets: list[str] = [
+    "Marcadia: Received Refractor",
+    "Annihilation: Received Tyhrra-Guise",
+    "Daxx: Received Charge Boots",
+    "Blackwater City: Received Gravity Boots",
+    "Zeldrin Starport: Received Bolt Grabber V2",
+    "Aridia: Received Warp Pad",
+    "Qwarks Hideout: Received Gadgetron PDA",
+]
+
 rangers: list[str] = [
     "Marcadia: Operation IRON SHIELD: Secure the Area",
     "Marcadia: Operation IRON SHIELD: Air Assault",
@@ -559,7 +589,8 @@ unstable: list[str] = [
     "Phoenix: T-Bolt: VR Gadget Training",
     "Phoenix: Received Hacker",
     "Phoenix: Received Hypershot",
-    "Phoenix: VR: VR Gadget Training"
+    "Phoenix: VR: VR Gadget Training",
+    "Crash Site: Infobot: Aridia"
 ]
 
 location_groups: dict[str, set[str]] = {
@@ -599,7 +630,9 @@ location_groups: dict[str, set[str]] = {
     "Arena": set(loc for loc in location_table.keys() if
                  (50070002 <= location_table[loc].ap_code < 50080000) or ("VR" in loc) or ("Grand" in loc)),
     "Nanotech": set(loc for loc in location_table.keys() if "Nanotech" in loc),
-    "Unstable": set(loc for loc in unstable)
+    "Unstable": set(loc for loc in unstable),
+    "Weapons": set(loc for loc in weapons),
+    "Gadgets": set(loc for loc in gadgets)
 }
 
 
