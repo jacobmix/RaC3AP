@@ -1,0 +1,46 @@
+name: Sync Fork with Upstream
+
+on:
+  schedule:
+    - cron: '0 3,15 * * *'  # 3 AM and 3 PM UTC
+  workflow_dispatch:          # allow manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # full history for merging
+
+      - name: Set up Git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Add upstream remote
+        run: |
+          git remote add upstream https://github.com/Taoshix/RaC3AP.git
+          git fetch upstream
+
+      - name: Merge upstream changes into main and staging
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for branch in main staging; do
+            echo "🔄 Syncing branch: $branch"
+
+            if git show-ref --quiet refs/heads/$branch; then
+              git checkout $branch
+              if git show-ref --quiet refs/remotes/upstream/$branch; then
+                git merge upstream/$branch --no-edit || true
+                git push origin $branch
+              else
+                echo "⚠️ Upstream branch '$branch' does not exist — skipping."
+              fi
+            else
+              echo "⚠️ Local branch '$branch' does not exist — skipping."
+            fi
+          done
