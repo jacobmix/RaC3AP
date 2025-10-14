@@ -1,0 +1,58 @@
+name: Build and Release APWorld
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+  workflow_dispatch:  # Allow manual runs too
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run PowerShell build script
+        run: ./build_apworld.ps1
+        shell: pwsh
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rac3.apworld
+          path: ./rac3.apworld
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/staging'
+
+    steps:
+      - name: Download built artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: rac3.apworld
+          path: .
+
+      - name: Determine release type
+        id: release_type
+        run: |
+          if [[ "${GITHUB_REF}" == "refs/heads/staging" ]]; then
+            echo "prerelease=true" >> $GITHUB_OUTPUT
+            echo "tag=pre-$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
+          else
+            echo "prerelease=false" >> $GITHUB_OUTPUT
+            echo "tag=release-$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: rac3.apworld
+          prerelease: ${{ steps.release_type.outputs.prerelease }}
+          tag_name: ${{ steps.release_type.outputs.tag }}
+          name: "RaC3 APWorld ${{ steps.release_type.outputs.tag }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
