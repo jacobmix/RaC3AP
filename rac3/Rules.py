@@ -129,7 +129,7 @@ def set_rules_hard_location(world):
     # VR
     add_rule(world.get_location("Phoenix: VR: VR Gadget Training"),
              lambda state: state.can_reach("Tyhrranosis", player=world.player)
-                           and state.has(["Hacker", "Hypershot"], player=world.player))
+                           and state.has_all(["Hacker", "Hypershot"], player=world.player))
 
     # ----- Planet Marcadia -----#
     # "Marcadia: Received Spitting Hydra": LocData(50001030, "Marcadia"),
@@ -162,8 +162,8 @@ def set_rules_hard_location(world):
 
     # Maybe difficult and long(100 rounds ...), so it restrict after getting items for clear the game.
     add_rule(world.get_location("Annihilation: Qwarktastic Battle"),
-             lambda state: state.has_all(["Progressive VidComic", "Hacker", "Tyhrra-Guise", "Hypershot", "Gravity-Boots"],
-                                         world.player, 5)),
+             lambda state: state.has_all(["Hacker", "Tyhrra-Guise", "Hypershot", "Gravity-Boots"], world.player)
+                           and state.has("Progressive VidComic", world.player, 5)),
 
     # ----- Planet Aquatos -----#
     # "Aquatos: Received Flux Rifle": LocData(50001090, "Aquatos"),
