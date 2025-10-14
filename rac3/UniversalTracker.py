@@ -20,6 +20,10 @@ def setup_options_from_slot_data(world: "RaC3World") -> None:
             world.options.enable_weapon_level_as_item.value = world.passthrough["options"][
                 "enable_weapon_level_as_item"]
             world.options.extra_armor_upgrade.value = world.passthrough["options"]["extra_armor_upgrade"]
+            world.options.skill_points.value = world.passthrough["options"]["skill_points"]
+            world.options.trophies.value = world.passthrough["options"]["trophies"]
+            world.options.titanium_bolts.value = world.passthrough["options"]["titanium_bolts"]
+            world.options.nanotech_milestones.value = world.passthrough["options"]["nanotech_milestones"]
         else:
             world.using_ut = False
     else:
