@@ -5,7 +5,7 @@ on:
     branches:
       - main
       - staging
-  workflow_dispatch:  # Allow manual runs too
+  workflow_dispatch:
 
 jobs:
   build:
@@ -30,29 +30,83 @@ jobs:
     if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/staging'
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Download built artifact
         uses: actions/download-artifact@v4
         with:
           name: rac3.apworld
           path: .
 
-      - name: Determine release type
-        id: release_type
+      # Determine next semantic version
+      - name: Determine next semantic version
+        id: semver
         run: |
-          if [[ "${GITHUB_REF}" == "refs/heads/staging" ]]; then
-            echo "prerelease=true" >> $GITHUB_OUTPUT
-            echo "tag=pre-$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
-          else
-            echo "prerelease=false" >> $GITHUB_OUTPUT
-            echo "tag=release-$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
+          git fetch --tags
+          latest_tag=$(git describe --tags `git rev-list --tags --max-count=1` 2>/dev/null || echo "0.0.0")
+
+          echo "Latest tag: $latest_tag"
+
+          IFS='.' read -r major minor patch <<< "${latest_tag//v/}"
+
+          if [ -z "$major" ]; then
+            major=0; minor=0; patch=0
           fi
+
+          if [[ "${GITHUB_REF}" == "refs/heads/staging" ]]; then
+            patch=$((patch + 1))
+            version="${major}.${minor}.${patch}-pre"
+          else
+            patch=$((patch + 1))
+            version="${major}.${minor}.${patch}"
+          fi
+
+          echo "version=$version" >> $GITHUB_OUTPUT
+          echo "latest_tag=$latest_tag" >> $GITHUB_OUTPUT
+
+      - name: Create release notes
+        id: notes
+        run: |
+          repo_url="https://github.com/${{ github.repository }}"
+          prev_tag="${{ steps.semver.outputs.latest_tag }}"
+          new_tag="v${{ steps.semver.outputs.version }}"
+
+          short_sha=$(git rev-parse --short HEAD)
+          commit_msg=$(git log -1 --pretty=%B)
+          branch_name=${GITHUB_REF#refs/heads/}
+
+          # Build changelog link only if there is a previous tag
+          if [ "$prev_tag" != "0.0.0" ]; then
+            changelog="**Changelog:** ${repo_url}/compare/${prev_tag}...${new_tag}"
+          else
+            changelog="*(First release – no changelog available)*"
+          fi
+
+          cat <<EOF > release_notes.md
+          ## RaC3 APWorld ${new_tag}
+
+          **Branch:** ${branch_name}  
+          **Commit:** ${short_sha}  
+          **Date:** $(date -u +"%Y-%m-%d %H:%M UTC")
+
+          ### Summary
+          - Commit message: ${commit_msg}
+
+          ### Notes
+          This release was automatically generated from the **${branch_name}** branch.  
+          For pre-releases (staging), builds may contain experimental or in-progress changes.
+
+          ${changelog}
+          EOF
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           files: rac3.apworld
-          prerelease: ${{ steps.release_type.outputs.prerelease }}
-          tag_name: ${{ steps.release_type.outputs.tag }}
-          name: "RaC3 APWorld ${{ steps.release_type.outputs.tag }}"
+          tag_name: v${{ steps.semver.outputs.version }}
+          name: "RaC3 APWorld v${{ steps.semver.outputs.version }}"
+          body_path: release_notes.md
+          prerelease: ${{ contains(steps.semver.outputs.version, '-pre') }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
