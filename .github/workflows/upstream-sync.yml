@@ -2,8 +2,8 @@ name: Sync Fork with Upstream
 
 on:
   schedule:
-    - cron: '0 3,15 * * *'  # 3 AM and 3 PM UTC
-  workflow_dispatch:          # allow manual trigger
+    - cron: '0 3,15 * * *'    # 3 AM and 3 PM UTC
+  workflow_dispatch:          # allow manual runs
 
 jobs:
   sync:
@@ -13,7 +13,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # full history for merging
+          fetch-depth: 0   # full history for merging
+          ref: main        # ensure we start from main branch
 
       - name: Set up Git identity
         run: |
@@ -25,6 +26,11 @@ jobs:
           git remote add upstream https://github.com/Taoshix/RaC3AP.git
           git fetch upstream
 
+      - name: Fetch all branches from origin
+        run: |
+          git fetch origin
+          git branch -r
+
       - name: Merge upstream changes into main and staging
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -32,15 +38,25 @@ jobs:
           for branch in main staging; do
             echo "🔄 Syncing branch: $branch"
 
-            if git show-ref --quiet refs/heads/$branch; then
+            # Try to checkout local branch; create it if missing
+            if git show-ref --verify --quiet refs/heads/$branch; then
               git checkout $branch
-              if git show-ref --quiet refs/remotes/upstream/$branch; then
-                git merge upstream/$branch --no-edit || true
-                git push origin $branch
-              else
-                echo "⚠️ Upstream branch '$branch' does not exist — skipping."
-              fi
             else
-              echo "⚠️ Local branch '$branch' does not exist — skipping."
+              echo "ℹ️ Local branch '$branch' missing. Creating from origin/$branch (if exists)..."
+              if git show-ref --verify --quiet refs/remotes/origin/$branch; then
+                git checkout -b $branch origin/$branch
+              else
+                echo "⚠️ No local or remote branch '$branch' — skipping."
+                continue
+              fi
+            fi
+
+            # Merge upstream branch if it exists
+            if git show-ref --verify --quiet refs/remotes/upstream/$branch; then
+              git merge upstream/$branch --no-edit || true
+              git push origin $branch
+              echo "✅ Synced branch: $branch"
+            else
+              echo "⚠️ Upstream branch '$branch' does not exist — skipping."
             fi
           done
