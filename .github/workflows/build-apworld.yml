@@ -18,7 +18,7 @@ jobs:
         id: branch
         shell: bash
         run: |
-          # If triggered via repository_dispatch, use payload branch; otherwise fallback to current ref
+          # Use repository_dispatch payload branch if available, otherwise fallback to current ref
           branch="${{ github.event.client_payload.branch }}"
           if [ -z "$branch" ]; then
             branch="${GITHUB_REF#refs/heads/}"
@@ -71,7 +71,11 @@ jobs:
             major=0; minor=0; patch=0
           fi
 
-          branch="${{ github.event.client_payload.branch || github.ref_name }}"
+          # Determine branch for release
+          branch="${{ github.event.client_payload.branch }}"
+          if [ -z "$branch" ]; then
+            branch="${GITHUB_REF#refs/heads/}"
+          fi
 
           if [[ "$branch" == "staging" ]]; then
             patch=$((patch + 1))
@@ -96,7 +100,6 @@ jobs:
           short_sha=$(git rev-parse --short HEAD)
           commit_msg=$(git log -1 --pretty=%B)
 
-          # Build changelog link only if there is a previous tag
           if [ "$prev_tag" != "0.0.0" ]; then
             changelog="**Changelog:** ${repo_url}/compare/${prev_tag}...${new_tag}"
           else
