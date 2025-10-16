@@ -6,6 +6,8 @@ on:
       - main
       - staging
   workflow_dispatch:
+  repository_dispatch:
+    types: [trigger-build-apworld]
 
 jobs:
   build:
