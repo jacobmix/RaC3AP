@@ -12,9 +12,24 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+
     steps:
+      - name: Determine branch to build
+        id: branch
+        shell: bash
+        run: |
+          # Use repository_dispatch payload branch if available, otherwise fallback to current ref
+          branch="${{ github.event.client_payload.branch }}"
+          if [ -z "$branch" ]; then
+            branch="${GITHUB_REF#refs/heads/}"
+          fi
+          echo "Branch to build: $branch"
+          echo "branch=$branch" >> $GITHUB_OUTPUT
+
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.branch.outputs.branch }}
 
       - name: Run PowerShell build script
         run: ./build_apworld.ps1
@@ -29,11 +44,13 @@ jobs:
   release:
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/staging'
+    if: needs.build.outputs.branch == 'main' || needs.build.outputs.branch == 'staging'
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.build.outputs.branch }}
 
       - name: Download built artifact
         uses: actions/download-artifact@v4
@@ -41,22 +58,26 @@ jobs:
           name: rac3.apworld
           path: .
 
-      # Determine next semantic version
       - name: Determine next semantic version
         id: semver
         run: |
           git fetch --tags
-          latest_tag=$(git describe --tags `git rev-list --tags --max-count=1` 2>/dev/null || echo "0.0.0")
+          latest_tag=$(git describe --tags "$(git rev-list --tags --max-count=1)" 2>/dev/null || echo "0.0.0")
 
           echo "Latest tag: $latest_tag"
 
           IFS='.' read -r major minor patch <<< "${latest_tag//v/}"
-
           if [ -z "$major" ]; then
             major=0; minor=0; patch=0
           fi
 
-          if [[ "${GITHUB_REF}" == "refs/heads/staging" ]]; then
+          # Determine branch for release
+          branch="${{ github.event.client_payload.branch }}"
+          if [ -z "$branch" ]; then
+            branch="${GITHUB_REF#refs/heads/}"
+          fi
+
+          if [[ "$branch" == "staging" ]]; then
             patch=$((patch + 1))
             version="${major}.${minor}.${patch}-pre"
           else
@@ -65,6 +86,7 @@ jobs:
           fi
 
           echo "version=$version" >> $GITHUB_OUTPUT
+          echo "branch=$branch" >> $GITHUB_OUTPUT
           echo "latest_tag=$latest_tag" >> $GITHUB_OUTPUT
 
       - name: Create release notes
@@ -73,12 +95,11 @@ jobs:
           repo_url="https://github.com/${{ github.repository }}"
           prev_tag="${{ steps.semver.outputs.latest_tag }}"
           new_tag="v${{ steps.semver.outputs.version }}"
+          branch="${{ steps.semver.outputs.branch }}"
 
           short_sha=$(git rev-parse --short HEAD)
           commit_msg=$(git log -1 --pretty=%B)
-          branch_name=${GITHUB_REF#refs/heads/}
 
-          # Build changelog link only if there is a previous tag
           if [ "$prev_tag" != "0.0.0" ]; then
             changelog="**Changelog:** ${repo_url}/compare/${prev_tag}...${new_tag}"
           else
@@ -88,7 +109,7 @@ jobs:
           cat <<EOF > release_notes.md
           ## RaC3 APWorld ${new_tag}
 
-          **Branch:** ${branch_name}  
+          **Branch:** ${branch}  
           **Commit:** ${short_sha}  
           **Date:** $(date -u +"%Y-%m-%d %H:%M UTC")
 
@@ -96,7 +117,7 @@ jobs:
           - Commit message: ${commit_msg}
 
           ### Notes
-          This release was automatically generated from the **${branch_name}** branch.  
+          This release was automatically generated from the **${branch}** branch.  
           For pre-releases (staging), builds may contain experimental or in-progress changes.
 
           ${changelog}
