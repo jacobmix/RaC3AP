@@ -74,9 +74,9 @@ jobs:
 
       - name: Trigger Build Workflow
         if: env.changes_detected == 'true'
-        uses: peter-evans/workflow-dispatch@v2
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
-          workflow: build-apworld.yml
+          event-type: trigger-build-apworld
           ref: main
