@@ -2,22 +2,22 @@ name: Sync Fork with Upstream
 
 on:
   schedule:
-    - cron: '0 3,15 * * *'     # Runs at 3 AM and 3 PM UTC
-  workflow_dispatch:           # Allow manual runs
+    - cron: '0 3,15 * * *'    # 3 AM and 3 PM UTC
+  workflow_dispatch:          # allow manual runs
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     permissions:
-      contents: write          # Needed to push changes
-      actions: write           # Needed to trigger other workflows
+      contents: write          # Allow pushing updates
+      actions: write           # Allow triggering other workflows
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0       # Fetch full history
-          ref: main
+          fetch-depth: 0       # fetch full history
+          ref: main            # start from main branch
 
       - name: Set up Git identity
         run: |
@@ -34,11 +34,12 @@ jobs:
           git fetch origin
           git branch -r
 
-      - name: Sync upstream changes into main and staging
+      - name: Merge upstream changes into main and staging
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          changes_detected=false
+          # Authenticate gh CLI for API calls
+          echo "${GITHUB_TOKEN}" | gh auth login --with-token
 
           for branch in main staging; do
             echo "🔄 Syncing branch: $branch"
@@ -56,22 +57,23 @@ jobs:
               fi
             fi
 
+            # Save commit before merging
             before_commit=$(git rev-parse HEAD)
 
-            # Merge upstream changes if upstream branch exists
+            # Merge upstream branch if available
             if git show-ref --verify --quiet refs/remotes/upstream/$branch; then
               git merge upstream/$branch --no-edit || true
               after_commit=$(git rev-parse HEAD)
 
+              # Push and trigger build only if new commits were merged
               if [ "$before_commit" != "$after_commit" ]; then
                 echo "✅ Pushed updated $branch"
                 git push origin $branch
-                changes_detected=true
 
                 echo "🚀 Triggering build for $branch"
                 gh api repos/${{ github.repository }}/dispatches \
                   -f event_type=trigger-build-apworld \
-                  -f client_payload="{\"branch\":\"$branch\"}"
+                  -f client_payload="{\"branch\":\"$branch\"}" || echo "⚠️ Dispatch failed for $branch"
               else
                 echo "ℹ️ No new commits for $branch"
               fi
@@ -79,5 +81,3 @@ jobs:
               echo "⚠️ Upstream branch '$branch' does not exist — skipping."
             fi
           done
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
