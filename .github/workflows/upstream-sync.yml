@@ -8,13 +8,16 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write          # Allow pushing updates
+      actions: write           # Allow triggering other workflows
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # fetch full history
-          ref: main        # start from main branch
+          fetch-depth: 0       # fetch full history
+          ref: main            # start from main branch
 
       - name: Set up Git identity
         run: |
@@ -35,6 +38,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # Authenticate gh CLI for API calls
+          echo "${GITHUB_TOKEN}" | gh auth login --with-token
+
           for branch in main staging; do
             echo "🔄 Syncing branch: $branch"
 
@@ -51,19 +57,23 @@ jobs:
               fi
             fi
 
-            # Save commits before merge for comparison
+            # Save commit before merging
             before_commit=$(git rev-parse HEAD)
 
-            # Merge upstream branch if it exists
+            # Merge upstream branch if available
             if git show-ref --verify --quiet refs/remotes/upstream/$branch; then
               git merge upstream/$branch --no-edit || true
               after_commit=$(git rev-parse HEAD)
 
-              # Push only if new commits were merged
+              # Push and trigger build only if new commits were merged
               if [ "$before_commit" != "$after_commit" ]; then
-                git push origin $branch
                 echo "✅ Pushed updated $branch"
-                echo "changes_detected=true" >> $GITHUB_ENV
+                git push origin $branch
+
+                echo "🚀 Triggering build for $branch"
+                gh api repos/${{ github.repository }}/dispatches \
+                  -f event_type=trigger-build-apworld \
+                  -f client_payload="{\"branch\":\"$branch\"}" || echo "⚠️ Dispatch failed for $branch"
               else
                 echo "ℹ️ No new commits for $branch"
               fi
@@ -71,12 +81,3 @@ jobs:
               echo "⚠️ Upstream branch '$branch' does not exist — skipping."
             fi
           done
-
-      - name: Trigger Build Workflow
-        if: env.changes_detected == 'true'
-        uses: peter-evans/repository-dispatch@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          repository: ${{ github.repository }}
-          event-type: trigger-build-apworld
-          ref: main
