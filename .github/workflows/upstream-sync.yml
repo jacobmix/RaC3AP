@@ -74,7 +74,7 @@ jobs:
 
       - name: Trigger Build Workflow
         if: env.changes_detected == 'true'
-        uses: peter-evans/workflow-dispatch@v1
+        uses: peter-evans/workflow-dispatch@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
