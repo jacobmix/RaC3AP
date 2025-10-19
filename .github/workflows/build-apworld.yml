@@ -21,6 +21,7 @@ jobs:
         id: branch
         shell: bash
         run: |
+          # Prefer repository_dispatch payload branch; fallback to current ref
           branch="${{ github.event.client_payload.branch }}"
           if [ -z "$branch" ]; then
             branch="${GITHUB_REF#refs/heads/}"
@@ -34,8 +35,8 @@ jobs:
           ref: ${{ steps.branch.outputs.branch }}
 
       - name: Run PowerShell build script
-        run: ./build_apworld.ps1
         shell: pwsh
+        run: ./build_apworld.ps1
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
@@ -65,52 +66,46 @@ jobs:
         shell: bash
         run: |
           git fetch --tags
-          latest_tag=$(git describe --tags "$(git rev-list --tags --max-count=1)" 2>/dev/null || echo "0.0.0")
-          echo "Latest tag: $latest_tag"
-
-          # Split tag into numbers
-          IFS='.' read -r major minor patch <<< "${latest_tag//v/}"
-          if [ -z "$major" ]; then
-            major=0; minor=0; patch=0
-          fi
-
           branch="${{ needs.build.outputs.branch }}"
           echo "Branch for versioning: $branch"
 
-          # Increment version:
-          # - main → bump minor (e.g. 0.1.2 → 0.2.0)
-          # - staging → bump patch (e.g. 0.1.2 → 0.1.3-pre)
-          if [[ "$branch" == "main" ]]; then
+          if [[ "$branch" == "staging" ]]; then
+            # Find latest pre-release (ending in -pre)
+            latest_pre=$(git tag --sort=-v:refname | grep -- '-pre$' | head -n 1)
+            base_tag=${latest_pre:-"v0.0.0-pre"}
+            echo "Latest pre-release: $base_tag"
+
+            IFS='.' read -r major minor patch <<< "${base_tag//[!0-9.]/}"
+            patch=$((patch + 1))
+            version="${major}.${minor}.${patch}-pre"
+
+          else
+            # Find latest stable release (no -pre)
+            latest_tag=$(git tag --sort=-v:refname | grep -v '\-pre$' | head -n 1)
+            base_tag=${latest_tag:-"v0.0.0"}
+            echo "Latest stable release: $base_tag"
+
+            IFS='.' read -r major minor patch <<< "${base_tag//[!0-9.]/}"
             minor=$((minor + 1))
             patch=0
             version="${major}.${minor}.0"
-          else
-            patch=$((patch + 1))
-            version="${major}.${minor}.${patch}-pre"
           fi
 
           echo "version=$version" >> $GITHUB_OUTPUT
-          echo "latest_tag=$latest_tag" >> $GITHUB_OUTPUT
           echo "branch=$branch" >> $GITHUB_OUTPUT
           echo "✅ New version: v$version"
 
       - name: Create release notes
         id: notes
-        shell: bash
         run: |
           repo_url="https://github.com/${{ github.repository }}"
-          prev_tag="${{ steps.semver.outputs.latest_tag }}"
           new_tag="v${{ steps.semver.outputs.version }}"
           branch="${{ steps.semver.outputs.branch }}"
 
           short_sha=$(git rev-parse --short HEAD)
           commit_msg=$(git log -1 --pretty=%B)
 
-          if [ "$prev_tag" != "0.0.0" ]; then
-            changelog="**Changelog:** ${repo_url}/compare/${prev_tag}...${new_tag}"
-          else
-            changelog="*(First release – no changelog available)*"
-          fi
+          changelog="*(Automatic build – see commit history for details)*"
 
           cat <<EOF > release_notes.md
           ## RaC3 APWorld ${new_tag}
@@ -124,7 +119,7 @@ jobs:
 
           ### Notes
           This release was automatically generated from the **${branch}** branch.  
-          For pre-releases (staging), builds may contain experimental or in-progress changes.
+          Pre-releases (staging) may contain experimental or in-progress changes.
 
           ${changelog}
           EOF
@@ -137,6 +132,7 @@ jobs:
           name: "RaC3 APWorld v${{ steps.semver.outputs.version }}"
           body_path: release_notes.md
           prerelease: ${{ contains(steps.semver.outputs.version, '-pre') }}
+          make_latest: ${{ !contains(steps.semver.outputs.version, '-pre') }}
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
