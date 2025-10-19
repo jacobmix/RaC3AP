@@ -149,18 +149,22 @@ def set_rules_hard_location(world):
     # First visit (when getting Tyhrra-Guise)
     add_rule(world.get_location("Annihilation: Whip it Good"),
              lambda state: state.has_any(["Plasma Whip", "Progressive Plasma Whip"], world.player))
-    add_rule(world.get_location("Annihilation: Hydra'n Seek"),
-             lambda state: state.has_any(["Spitting Hydra", "Progressive Spitting Hydra"], world.player))
+    add_rule(world.get_location("Annihilation: Hydra'n Seek"), # you need to complete whip it good before you can do this mission
+             lambda state: state.has_any(["Spitting Hydra", "Progressive Spitting Hydra"], world.player)
+                           and state.has_any(["Plasma Whip", "Progressive Plasma Whip"], world.player))
 
     # Second visit: Post-Dax(Meeting Courtney)
     add_rule(world.get_location("Annihilation: Time to Suck"),
              lambda state: state.has_any(["Suck Cannon", "Progressive Suck Cannon"], world.player))
     add_rule(world.get_location("Annihilation: Chop Chop"),
              lambda state: state.has_any(["Disk-Blade Gun", "Progressive Disk-Blade Gun"], world.player))
-    add_rule(world.get_location("Annihilation: Sleep Inducer"),
-             lambda state: state.has_any(["Rift Inducer", "Progressive Rift Inducer"], world.player))
-    add_rule(world.get_location("Annihilation: The Other White Meat"),
-             lambda state: state.has_any(["Qwack-O-Ray", "Progressive Qwack-O-Ray"], world.player))
+    add_rule(world.get_location("Annihilation: Sleep Inducer"), # you need to complete chop chop before you can do this mission
+             lambda state: state.has_any(["Disk-Blade Gun", "Progressive Disk-Blade Gun"], world.player)
+                           and state.has_any(["Rift Inducer", "Progressive Rift Inducer"], world.player)) 
+    add_rule(world.get_location("Annihilation: The Other White Meat"), # you need to complete sleep inducer before you can do this mission
+             lambda state: state.has_any(["Qwack-O-Ray", "Progressive Qwack-O-Ray"], world.player)
+                           and state.has_any(["Disk-Blade Gun", "Progressive Disk-Blade Gun"], world.player)
+                           and state.has_any(["Rift Inducer", "Progressive Rift Inducer"], world.player))
 
     # Maybe difficult and long(100 rounds ...), so it restrict after getting items for clear the game.
     add_rule(world.get_location("Annihilation: Qwarktastic Battle"),
