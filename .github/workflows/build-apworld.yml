@@ -13,12 +13,14 @@ jobs:
   build:
     runs-on: windows-latest
 
+    outputs:
+      branch: ${{ steps.branch.outputs.branch }}
+
     steps:
       - name: Determine branch to build
         id: branch
         shell: bash
         run: |
-          # Use repository_dispatch payload branch if available, otherwise fallback to current ref
           branch="${{ github.event.client_payload.branch }}"
           if [ -z "$branch" ]; then
             branch="${GITHUB_REF#refs/heads/}"
@@ -60,37 +62,41 @@ jobs:
 
       - name: Determine next semantic version
         id: semver
+        shell: bash
         run: |
           git fetch --tags
           latest_tag=$(git describe --tags "$(git rev-list --tags --max-count=1)" 2>/dev/null || echo "0.0.0")
-
           echo "Latest tag: $latest_tag"
 
+          # Split tag into numbers
           IFS='.' read -r major minor patch <<< "${latest_tag//v/}"
           if [ -z "$major" ]; then
             major=0; minor=0; patch=0
           fi
 
-          # Determine branch for release
-          branch="${{ github.event.client_payload.branch }}"
-          if [ -z "$branch" ]; then
-            branch="${GITHUB_REF#refs/heads/}"
-          fi
+          branch="${{ needs.build.outputs.branch }}"
+          echo "Branch for versioning: $branch"
 
-          if [[ "$branch" == "staging" ]]; then
-            patch=$((patch + 1))
-            version="${major}.${minor}.${patch}-pre"
+          # Increment version:
+          # - main → bump minor (e.g. 0.1.2 → 0.2.0)
+          # - staging → bump patch (e.g. 0.1.2 → 0.1.3-pre)
+          if [[ "$branch" == "main" ]]; then
+            minor=$((minor + 1))
+            patch=0
+            version="${major}.${minor}.0"
           else
             patch=$((patch + 1))
-            version="${major}.${minor}.${patch}"
+            version="${major}.${minor}.${patch}-pre"
           fi
 
           echo "version=$version" >> $GITHUB_OUTPUT
-          echo "branch=$branch" >> $GITHUB_OUTPUT
           echo "latest_tag=$latest_tag" >> $GITHUB_OUTPUT
+          echo "branch=$branch" >> $GITHUB_OUTPUT
+          echo "✅ New version: v$version"
 
       - name: Create release notes
         id: notes
+        shell: bash
         run: |
           repo_url="https://github.com/${{ github.repository }}"
           prev_tag="${{ steps.semver.outputs.latest_tag }}"
@@ -131,5 +137,6 @@ jobs:
           name: "RaC3 APWorld v${{ steps.semver.outputs.version }}"
           body_path: release_notes.md
           prerelease: ${{ contains(steps.semver.outputs.version, '-pre') }}
+          generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
