@@ -35,6 +35,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          changes_detected=false
+
           for branch in main staging; do
             echo "🔄 Syncing branch: $branch"
 
@@ -63,7 +65,7 @@ jobs:
               if [ "$before_commit" != "$after_commit" ]; then
                 git push origin $branch
                 echo "✅ Pushed updated $branch"
-                echo "changes_detected=true" >> $GITHUB_ENV
+                changes_detected=true
                 echo "updated_branch=$branch" >> $GITHUB_ENV
               else
                 echo "ℹ️ No new commits for $branch"
@@ -73,19 +75,14 @@ jobs:
             fi
           done
 
+          echo "changes_detected=$changes_detected" >> $GITHUB_ENV
+
       - name: Install GitHub CLI
         if: env.changes_detected == 'true'
         run: |
           sudo apt-get update
           sudo apt-get install -y gh
           echo "✅ GitHub CLI installed"
-
-      - name: Authenticate GitHub CLI
-        if: env.changes_detected == 'true'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "${GITHUB_TOKEN}" | gh auth login --with-token
 
       - name: Trigger Build Workflow
         if: env.changes_detected == 'true'
@@ -97,6 +94,6 @@ jobs:
             gh api repos/${{ github.repository }}/dispatches \
               --method POST \
               --field event_type=trigger-build-apworld \
-              --field client_payload="{\"branch\":\"$branch\"}" \
+              --raw-field client_payload="{\"branch\":\"$branch\"}" \
               || echo "⚠️ Dispatch failed for $branch"
           done
