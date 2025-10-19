@@ -76,7 +76,6 @@ class SkillPoints(Choice):
     None: No skill points are locations.
     Simple: 15 simple skill points are locations. Still taking feedback on the selection:
     - Stay Squeaky Clean
-    - Monkeying Around
     - Reflect on how to score
     - Lights, camera action!
     - Flee Flawlessly
@@ -84,6 +83,7 @@ class SkillPoints(Choice):
     - Be a sharpshooter
     - Beat Helga's Best Time
     - Bugs to Birdie
+    - Get to the belt
     - Feeling Lucky?
     - 2002 was a good year in the city
     - Aim High
