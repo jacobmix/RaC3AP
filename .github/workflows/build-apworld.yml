@@ -32,7 +32,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 2
           ref: ${{ steps.branch.outputs.branch }}
 
       - name: Check if relevant files changed
@@ -40,18 +40,27 @@ jobs:
         shell: bash
         run: |
           branch="${{ steps.branch.outputs.branch }}"
-          git fetch origin $branch --depth=2
+          
+          echo "🔍 Checking for relevant changes in branch: $branch"
+          
+          # Get current and previous commits
+          current_commit=$(git rev-parse HEAD)
+          previous_commit=$(git rev-parse HEAD^)
 
-          echo "🔍 Checking for relevant changes since last origin/$branch..."
-          changed_files=$(git diff --name-only origin/${branch}..HEAD || true)
+          echo "Current:  $current_commit"
+          echo "Previous: $previous_commit"
+
+          # Show changed files
+          changed_files=$(git diff --name-only "$previous_commit" "$current_commit" || true)
           echo "Changed files:"
           echo "$changed_files"
 
+          # Check if anything other than workflows changed
           if echo "$changed_files" | grep -Eqv '^\.github/workflows/'; then
-            echo "✅ Relevant changes detected — proceed with build/release."
+            echo "✅ Relevant code/content changes detected — proceed with build/release."
             echo "should_release=true" >> $GITHUB_OUTPUT
           else
-            echo "⚠️ Only workflow files changed — skip build/release."
+            echo "⚠️ Only workflow files changed — skipping build/release."
             echo "should_release=false" >> $GITHUB_OUTPUT
           fi
 
@@ -94,7 +103,6 @@ jobs:
 
           echo "📦 Determining next version for branch: $branch"
 
-          # For main, ignore pre-releases when checking latest
           if [[ "$branch" == "main" ]]; then
             latest_tag=$(git tag --sort=-v:refname | grep -v -- '-pre' | head -n 1)
           else
