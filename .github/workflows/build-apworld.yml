@@ -16,6 +16,7 @@ jobs:
     outputs:
       branch: ${{ steps.branch.outputs.branch }}
       proceed: ${{ steps.changes.outputs.proceed }}
+      skip_reason: ${{ steps.changes.outputs.skip_reason }}
 
     steps:
       - name: Determine branch to build
@@ -66,23 +67,41 @@ jobs:
           echo "Changed files:"
           echo "$changed_files"
 
-          # Ignore commits that only change workflow files
+          # Ignore commits that only change workflow or README files
           relevant_changes=false
+          skip_reason=""
           for file in $changed_files; do
-            if [[ ! "$file" =~ ^\.github/workflows/ ]]; then
+            if [[ ! "$file" =~ ^\.github/workflows/ && "$file" != "README.md" ]]; then
               relevant_changes=true
               break
             fi
           done
 
           if [ "$relevant_changes" = false ]; then
-            echo "🛑 Only workflow files changed — skipping build & release."
+            if echo "$changed_files" | grep -q "^\.github/workflows/"; then
+              skip_reason="Workflow-only changes"
+            elif echo "$changed_files" | grep -q "^README.md"; then
+              skip_reason="README-only changes"
+            else
+              skip_reason="No relevant code changes"
+            fi
+            echo "🟡 Skipping build — reason: $skip_reason"
             echo "proceed=false" >> $GITHUB_OUTPUT
+            echo "skip_reason=$skip_reason" >> $GITHUB_OUTPUT
             exit 0
           fi
 
           echo "✅ Relevant changes detected — proceed with build/release."
           echo "proceed=true" >> $GITHUB_OUTPUT
+          echo "skip_reason=" >> $GITHUB_OUTPUT
+
+      - name: Log skipped build
+        if: steps.changes.outputs.proceed == 'false'
+        run: |
+          echo "### 🟡 Build Skipped" >> $GITHUB_STEP_SUMMARY
+          echo "**Reason:** ${{ steps.changes.outputs.skip_reason }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "This commit only changed ignored files (e.g., workflows or README). No build or release was triggered." >> $GITHUB_STEP_SUMMARY
 
       - name: Run PowerShell build script
         if: steps.changes.outputs.proceed == 'true'
