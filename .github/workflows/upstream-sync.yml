@@ -24,7 +24,7 @@ jobs:
       - name: Add upstream remote
         run: |
           git remote add upstream https://github.com/Taoshix/RaC3AP.git
-          git fetch upstream
+          git fetch upstream --no-tags --prune "+refs/heads/*:refs/remotes/upstream/*"
 
       - name: Fetch all branches from origin
         run: |
