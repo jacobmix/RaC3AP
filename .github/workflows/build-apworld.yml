@@ -15,6 +15,7 @@ jobs:
 
     outputs:
       branch: ${{ steps.branch.outputs.branch }}
+      should_release: ${{ steps.changes.outputs.should_release }}
 
     steps:
       - name: Determine branch to build
@@ -31,13 +32,36 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           ref: ${{ steps.branch.outputs.branch }}
 
+      - name: Check if relevant files changed
+        id: changes
+        shell: bash
+        run: |
+          branch="${{ steps.branch.outputs.branch }}"
+          git fetch origin $branch --depth=2
+
+          echo "🔍 Checking for relevant changes since last origin/$branch..."
+          changed_files=$(git diff --name-only origin/${branch}..HEAD || true)
+          echo "Changed files:"
+          echo "$changed_files"
+
+          if echo "$changed_files" | grep -Eqv '^\.github/workflows/'; then
+            echo "✅ Relevant changes detected — proceed with build/release."
+            echo "should_release=true" >> $GITHUB_OUTPUT
+          else
+            echo "⚠️ Only workflow files changed — skip build/release."
+            echo "should_release=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Run PowerShell build script
+        if: steps.changes.outputs.should_release == 'true'
         run: ./build_apworld.ps1
         shell: pwsh
 
       - name: Upload build artifact
+        if: steps.changes.outputs.should_release == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: rac3.apworld
@@ -46,10 +70,13 @@ jobs:
   release:
     needs: build
     runs-on: ubuntu-latest
+    if: needs.build.outputs.should_release == 'true'
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           ref: ${{ needs.build.outputs.branch }}
 
       - name: Download built artifact
@@ -65,8 +92,15 @@ jobs:
           branch="${{ needs.build.outputs.branch }}"
           git fetch --tags
 
-          # Get latest version (ignore pre-releases for main)
-          latest_tag=$(git tag --sort=-v:refname | grep -v -- '-pre' | head -n 1)
+          echo "📦 Determining next version for branch: $branch"
+
+          # For main, ignore pre-releases when checking latest
+          if [[ "$branch" == "main" ]]; then
+            latest_tag=$(git tag --sort=-v:refname | grep -v -- '-pre' | head -n 1)
+          else
+            latest_tag=$(git tag --sort=-v:refname | head -n 1)
+          fi
+
           [ -z "$latest_tag" ] && latest_tag="v0.0.0"
           echo "Latest tag: $latest_tag"
 
@@ -77,9 +111,6 @@ jobs:
             patch=0
             version="${major}.${minor}.${patch}"
           else
-            # For staging, bump from the *latest tag (including pre-releases)*
-            latest_tag=$(git tag --sort=-v:refname | head -n 1)
-            IFS='.' read -r major minor patch <<< "${latest_tag//v/}"
             patch=$((patch + 1))
             version="${major}.${minor}.${patch}-pre"
           fi
@@ -111,7 +142,14 @@ jobs:
 
           ### Notes
           This release was automatically generated from the **${branch}** branch.  
+          Latest (main) releases are recommended — pre-releases (staging) may contain experimental or in-progress changes.
+
           ${changelog}
+
+          ### If a location is broken and does not get sent out
+          Go to the server console either locally or on the room's page on the Archipelago website to force the location to be sent out:  
+          \`/send_location <player_name> <location>\`  
+          Example: \`/send_location TaoshiRaC3 "Crash Site: Infobot: Aridia"\`
           EOF
 
       - name: Create GitHub Release
