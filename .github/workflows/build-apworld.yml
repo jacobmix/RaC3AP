@@ -1,0 +1,131 @@
+name: Build and Release APWorld
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+  workflow_dispatch:
+  repository_dispatch:
+    types: [trigger-build-apworld]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    outputs:
+      branch: ${{ steps.branch.outputs.branch }}
+
+    steps:
+      - name: Determine branch to build
+        id: branch
+        shell: bash
+        run: |
+          branch="${{ github.event.client_payload.branch }}"
+          if [ -z "$branch" ]; then
+            branch="${GITHUB_REF#refs/heads/}"
+          fi
+          echo "branch=$branch" >> $GITHUB_OUTPUT
+          echo "🏗️ Building branch: $branch"
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.branch.outputs.branch }}
+
+      - name: Run PowerShell build script
+        run: ./build_apworld.ps1
+        shell: pwsh
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rac3.apworld
+          path: ./rac3.apworld
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.build.outputs.branch }}
+
+      - name: Download built artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: rac3.apworld
+          path: .
+
+      - name: Determine next semantic version
+        id: semver
+        shell: bash
+        run: |
+          branch="${{ needs.build.outputs.branch }}"
+          git fetch --tags
+
+          # Get latest version (ignore pre-releases for main)
+          latest_tag=$(git tag --sort=-v:refname | grep -v -- '-pre' | head -n 1)
+          [ -z "$latest_tag" ] && latest_tag="v0.0.0"
+          echo "Latest tag: $latest_tag"
+
+          IFS='.' read -r major minor patch <<< "${latest_tag//v/}"
+
+          if [[ "$branch" == "main" ]]; then
+            minor=$((minor + 1))
+            patch=0
+            version="${major}.${minor}.${patch}"
+          else
+            # For staging, bump from the *latest tag (including pre-releases)*
+            latest_tag=$(git tag --sort=-v:refname | head -n 1)
+            IFS='.' read -r major minor patch <<< "${latest_tag//v/}"
+            patch=$((patch + 1))
+            version="${major}.${minor}.${patch}-pre"
+          fi
+
+          echo "✅ Next version: $version"
+          echo "version=$version" >> $GITHUB_OUTPUT
+          echo "branch=$branch" >> $GITHUB_OUTPUT
+
+      - name: Create release notes
+        id: notes
+        run: |
+          repo_url="https://github.com/${{ github.repository }}"
+          branch="${{ steps.semver.outputs.branch }}"
+          new_tag="v${{ steps.semver.outputs.version }}"
+          short_sha=$(git rev-parse --short HEAD)
+          commit_msg=$(git log -1 --pretty=%B)
+
+          changelog="**Changelog:** ${repo_url}/commits/${branch}"
+
+          cat <<EOF > release_notes.md
+          ## RaC3 APWorld ${new_tag}
+
+          **Branch:** ${branch}  
+          **Commit:** ${short_sha}  
+          **Date:** $(date -u +"%Y-%m-%d %H:%M UTC")
+
+          ### Summary
+          - ${commit_msg}
+
+          ### Notes
+          This release was automatically generated from the **${branch}** branch.  
+          Latest (main) releases is recommended as pre-releases (staging) contain experimental or in-progress changes that might be unstable.  
+          ${changelog}
+
+          ### If a location is broken and does not get sent out
+          Go to the server console either locally if hosting locally or on the room's page on the archipelago website to force the location to get sent out:  
+          `/send_location <player_name> <location>` example `/send_location TaoshiRaC3 Crash Site: Infobot: Aridia`
+          EOF
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: rac3.apworld
+          tag_name: v${{ steps.semver.outputs.version }}
+          name: "RaC3 APWorld v${{ steps.semver.outputs.version }}"
+          body_path: release_notes.md
+          prerelease: ${{ contains(steps.semver.outputs.version, '-pre') }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
